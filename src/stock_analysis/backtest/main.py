@@ -8,6 +8,8 @@ from pathlib import Path
 
 from stock_analysis.config import Settings
 
+from . import portfolio as portfolio_mod
+from .portfolio import PortfolioConfig
 from .runner import Backtester
 from .scorer import Scorer
 
@@ -59,8 +61,8 @@ def cli():
     parser.add_argument(
         "--debate-model",
         choices=["haiku", "sonnet", "opus"],
-        default="haiku",
-        help="Model for debate agents (default: haiku — cost control).",
+        default="sonnet",
+        help="Model for debate agents (default: sonnet — haiku is too unreliable for structured output).",
     )
     parser.add_argument(
         "--synthesis-model",
@@ -77,6 +79,23 @@ def cli():
         "--no-resume",
         action="store_true",
         help="Ignore cached briefings and re-run every trial.",
+    )
+    parser.add_argument(
+        "--starting-balance",
+        type=float,
+        default=10_000.0,
+        help="Simulated starting cash for portfolio simulation (default: 10000).",
+    )
+    parser.add_argument(
+        "--position-size",
+        type=float,
+        default=0.10,
+        help="Fraction of current cash allocated per trade (default: 0.10).",
+    )
+    parser.add_argument(
+        "--allow-short",
+        action="store_true",
+        help="Take short positions on sell/strong_sell signals (default: skip).",
     )
     parser.add_argument("--verbose", "-v", action="store_true")
 
@@ -124,6 +143,15 @@ def cli():
     report = Scorer.score(result)
     markdown = Scorer.to_markdown(result, report)
 
+    portfolio_config = PortfolioConfig(
+        starting_balance=args.starting_balance,
+        position_size_pct=args.position_size,
+        allow_short=args.allow_short,
+    )
+    portfolio_report = portfolio_mod.simulate(result, portfolio_config)
+    portfolio_md = portfolio_mod.to_markdown(portfolio_report)
+    markdown += "\n" + portfolio_md
+
     out_json = Path(f"{args.output}.json")
     out_md = Path(f"{args.output}.md")
     out_json.write_text(
@@ -132,6 +160,8 @@ def cli():
             + result.model_dump_json(indent=2)
             + ', "report": '
             + report.model_dump_json(indent=2)
+            + ', "portfolio": '
+            + portfolio_report.model_dump_json(indent=2)
             + "}"
         )
     )
