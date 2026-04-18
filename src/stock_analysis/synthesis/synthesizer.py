@@ -143,7 +143,10 @@ class SynthesizerAgent:
                 "You are a senior investment strategist producing a final briefing. "
                 "You have access to fundamental, technical, sentiment, and macro analyses, "
                 "plus a bull/bear adversarial debate. Synthesize everything into an actionable, "
-                "balanced briefing. Be direct and specific."
+                "balanced briefing. Be direct and specific.\n\n"
+                "Scope: focus on the thesis — signal, conviction, bull/bear cases, catalysts, "
+                "uncertainties. Do NOT invent specific entry/stop/target prices in prose; a "
+                "deterministic post-step attaches concrete levels to the briefing."
             ),
             permission_mode="bypassPermissions",
             output_format={"type": "json_schema", "schema": BRIEFING_OUTPUT_SCHEMA},

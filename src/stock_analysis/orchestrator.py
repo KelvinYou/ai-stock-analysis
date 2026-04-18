@@ -99,6 +99,7 @@ class AnalysisPipeline:
 
         risk_checker = RiskChecker()
         briefing.risk_assessment = risk_checker.assess(ticker_data, briefing)
+        briefing.action_plan = risk_checker.plan_action(ticker_data, briefing)
 
         self.store.save_briefing(ticker, briefing, self.as_of_date)
         logger.info(
