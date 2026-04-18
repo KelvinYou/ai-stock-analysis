@@ -47,7 +47,6 @@ class AnalysisPipeline:
         # === Layer 1: Data Ingestion (deterministic) ===
         logger.info(f"[Layer 1] Fetching market data for {ticker}...")
         ticker_data = self.fetcher.fetch(ticker)
-        self.store.save_market_data(ticker, ticker_data, self.as_of_date)
         logger.info(
             f"[Layer 1] Got {len(ticker_data.price_history)} price bars, "
             f"financials={'yes' if ticker_data.financials else 'no'}"

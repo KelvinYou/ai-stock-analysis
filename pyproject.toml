@@ -23,6 +23,7 @@ dev = [
 
 [project.scripts]
 stock-analysis = "stock_analysis.main:cli"
+stock-fetch = "stock_analysis.fetch:cli"
 stock-analysis-backtest = "stock_analysis.backtest.main:cli"
 
 [build-system]

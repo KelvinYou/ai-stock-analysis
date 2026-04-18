@@ -47,6 +47,46 @@ class TickerInfo(BaseModel):
     fifty_two_week_low: float | None = None
 
 
+class TechnicalSnapshot(BaseModel):
+    """Latest technical indicator values computed from price history."""
+
+    ticker: str
+    as_of_date: date
+
+    close: float
+
+    sma_20: float | None = None
+    sma_50: float | None = None
+    sma_200: float | None = None
+    ema_20: float | None = None
+
+    rsi_14: float | None = None
+
+    macd_line: float | None = None
+    macd_signal: float | None = None
+    macd_histogram: float | None = None
+
+    bb_upper: float | None = None
+    bb_middle: float | None = None
+    bb_lower: float | None = None
+    bb_pct: float | None = None  # 0 = at lower band, 1 = at upper band
+
+    atr_14: float | None = None
+
+    volume: int
+    volume_sma_20: float | None = None
+    volume_ratio: float | None = None  # current / sma_20
+
+    high_52w: float | None = None
+    low_52w: float | None = None
+    pct_from_52w_high: float | None = None  # negative = below high
+    pct_from_52w_low: float | None = None   # positive = above low
+
+    above_sma_20: bool | None = None
+    above_sma_50: bool | None = None
+    above_sma_200: bool | None = None
+
+
 class TickerData(BaseModel):
     """Complete data package for one ticker on one date — input to all agents."""
 
