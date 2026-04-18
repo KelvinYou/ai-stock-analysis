@@ -13,8 +13,8 @@ async def query_with_retry(
     *,
     prompt: str,
     options: ClaudeAgentOptions,
-    attempts: int = 3,
-    backoff_s: float = 2.0,
+    attempts: int = 5,
+    backoff_s: float = 3.0,
     label: str = "query",
 ) -> ResultMessage:
     """Run an SDK query, retrying on transient CLI subprocess failures.
