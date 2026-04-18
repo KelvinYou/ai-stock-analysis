@@ -20,6 +20,24 @@ class RiskAssessment(BaseModel):
     risk_reward_ratio: str | None = None
 
 
+class ActionPlan(BaseModel):
+    """Concrete order levels so a user can place limit orders with their broker.
+
+    All price fields are nullable. When conviction is too low to justify precise
+    levels, prices are None and `note` explains why.
+    """
+
+    entry_limit: float | None = None
+    entry_rationale: str | None = None
+    stop_loss: float | None = None
+    stop_rationale: str | None = None
+    take_profit_1: float | None = None
+    take_profit_2: float | None = None
+    target_rationale: str | None = None
+    horizon: str = "swing (2-8 weeks)"
+    note: str | None = None
+
+
 class Briefing(BaseModel):
     ticker: str
     date: str
@@ -31,6 +49,7 @@ class Briefing(BaseModel):
     key_uncertainties: list[str]
     catalysts_upcoming: list[str]
     risk_assessment: RiskAssessment
+    action_plan: ActionPlan | None = None
     agent_signal_breakdown: dict[str, str]
 
     @field_validator("agent_signal_breakdown", mode="before")
