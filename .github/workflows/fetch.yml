@@ -1,0 +1,33 @@
+name: Daily Market Data Fetch
+
+on:
+  schedule:
+    # 10:30pm UTC = 6:30pm ET, 30 min after US market close
+    - cron: '30 22 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Fetch market data
+        run: stock-fetch --from-file tickers.txt
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "data: daily fetch $(date -u +%Y-%m-%d)"
+          git push
