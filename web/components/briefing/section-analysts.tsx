@@ -1,6 +1,6 @@
 import { BarChart3, Globe, Newspaper, TrendingUp } from "lucide-react";
-import { SectionCard } from "./section-card";
-import { SignalBadge } from "@/components/signal-badge";
+import { SectionCard } from "@/components/shared/section-card";
+import { SignalBadge } from "./signal-badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { AnalystReports } from "@/lib/types";
 
@@ -8,33 +8,35 @@ const TABS = [
   { key: "fundamentals", label: "Fundamentals", Icon: BarChart3 },
   { key: "technical", label: "Technical", Icon: TrendingUp },
   { key: "sentiment", label: "Sentiment", Icon: Newspaper },
-  { key: "macro", label: "Macro / FX", Icon: Globe },
+  { key: "macro", label: "Macro · FX", Icon: Globe },
 ] as const;
 
 export function AnalystSection({ data }: { data: AnalystReports }) {
   return (
     <SectionCard
       id="analysts"
-      title="Analyst agents"
-      description="Four specialist agents read the raw data independently"
+      chapter="03"
+      title="Specialist Desks"
+      description="Four analysts read the tape independently"
     >
       <Tabs defaultValue="fundamentals">
-        <TabsList className="flex w-full flex-wrap">
-          {TABS.map(({ key, label, Icon }) => {
-            const r = data[key as keyof AnalystReports];
-            return (
-              <TabsTrigger key={key} value={key} className="flex items-center gap-2">
-                <Icon className="size-3.5" />
-                <span>{label}</span>
-                <span className="ml-1 hidden sm:inline">
-                  <SignalBadge signal={r.signal} size="sm" />
-                </span>
-              </TabsTrigger>
-            );
-          })}
+        <TabsList className="flex h-auto w-full flex-wrap items-stretch justify-start rounded-none bg-transparent p-0 border-b hairline">
+          {TABS.map(({ key, label, Icon }, i) => (
+            <TabsTrigger
+              key={key}
+              value={key}
+              className="relative flex h-auto items-center gap-2 rounded-none border-b-2 border-transparent bg-transparent px-4 py-3 text-muted-foreground data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none"
+            >
+              <span className="num hidden text-[10px] uppercase tracking-[0.22em] opacity-70 sm:inline">
+                0{i + 1}
+              </span>
+              <Icon className="size-3.5" />
+              <span className="text-[13px]">{label}</span>
+            </TabsTrigger>
+          ))}
         </TabsList>
 
-        <TabsContent value="fundamentals">
+        <TabsContent value="fundamentals" className="mt-6">
           <ReportView
             summary={data.fundamentals.summary}
             signal={data.fundamentals.signal}
@@ -52,7 +54,7 @@ export function AnalystSection({ data }: { data: AnalystReports }) {
           />
         </TabsContent>
 
-        <TabsContent value="technical">
+        <TabsContent value="technical" className="mt-6">
           <ReportView
             summary={data.technical.summary}
             signal={data.technical.signal}
@@ -78,7 +80,7 @@ export function AnalystSection({ data }: { data: AnalystReports }) {
           />
         </TabsContent>
 
-        <TabsContent value="sentiment">
+        <TabsContent value="sentiment" className="mt-6">
           <ReportView
             summary={data.sentiment.summary}
             signal={data.sentiment.signal}
@@ -95,7 +97,7 @@ export function AnalystSection({ data }: { data: AnalystReports }) {
           />
         </TabsContent>
 
-        <TabsContent value="macro">
+        <TabsContent value="macro" className="mt-6">
           <ReportView
             summary={data.macro.summary}
             signal={data.macro.signal}
@@ -130,53 +132,56 @@ function ReportView({
   lists: Array<[string, string[], ("up" | "down")?]>;
 }) {
   return (
-    <div className="space-y-5 animate-fade-in">
+    <div className="space-y-6 animate-fade-in">
       <div className="flex flex-wrap items-center gap-3">
         <SignalBadge signal={signal} confidence={confidence} size="lg" />
       </div>
-      <p className="text-sm leading-relaxed text-foreground/90">{summary}</p>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <p className="display text-base leading-relaxed text-foreground/95 md:text-[17px]">
+        {summary}
+      </p>
+
+      <div className="grid gap-px overflow-hidden rounded-sm border hairline bg-border/40 md:grid-cols-2">
         {rows.map(([k, v]) => (
-          <div key={k} className="rounded-lg border border-border/50 bg-muted/20 p-4">
-            <div className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+          <div key={k} className="bg-background/80 p-4">
+            <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
               {k}
             </div>
-            <p className="mt-1.5 text-sm leading-relaxed">{v || "—"}</p>
+            <p className="mt-1.5 text-sm leading-relaxed text-foreground/95">{v || "—"}</p>
           </div>
         ))}
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        {lists.map(([k, items, tone]) => (
-          <div key={k}>
-            <h4 className="mb-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-              {k}
-            </h4>
-            {items && items.length > 0 ? (
-              <ul className="space-y-1.5 text-sm">
-                {items.map((it, i) => (
-                  <li key={i} className="flex gap-2">
-                    <span
-                      className={
-                        tone === "up"
-                          ? "text-emerald-400"
-                          : tone === "down"
-                            ? "text-rose-400"
-                            : "text-muted-foreground"
-                      }
-                    >
-                      •
-                    </span>
-                    <span className="leading-relaxed">{it}</span>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-sm text-muted-foreground">None reported</p>
-            )}
-          </div>
-        ))}
+      <div className="grid gap-6 md:grid-cols-2">
+        {lists.map(([k, items, tone]) => {
+          const marker =
+            tone === "up"
+              ? "text-emerald-400"
+              : tone === "down"
+                ? "text-rose-400"
+                : "text-primary/70";
+          return (
+            <div key={k}>
+              <h4 className="mb-3 text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
+                {k}
+              </h4>
+              {items && items.length > 0 ? (
+                <ul className="space-y-2 text-sm">
+                  {items.map((it, i) => (
+                    <li key={i} className="flex gap-3">
+                      <span className={`num mt-0.5 text-[10px] ${marker}`}>
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="leading-relaxed text-foreground/95">{it}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-sm italic text-muted-foreground/70">None reported</p>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
