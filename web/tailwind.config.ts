@@ -13,6 +13,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        display: ["var(--font-display)", "ui-serif", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -50,6 +51,7 @@ const config: Config = {
         },
         bull: "hsl(var(--bull))",
         bear: "hsl(var(--bear))",
+        paper: "hsl(var(--paper))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -61,9 +63,14 @@ const config: Config = {
           from: { opacity: "0", transform: "translateY(4px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "pulse-soft": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.6" },
+        },
       },
       animation: {
         "fade-in": "fade-in 0.4s ease-out",
+        "pulse-soft": "pulse-soft 2.5s ease-in-out infinite",
       },
     },
   },

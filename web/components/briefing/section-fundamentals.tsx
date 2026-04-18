@@ -1,5 +1,5 @@
-import { SectionCard } from "./section-card";
-import { Stat } from "@/components/stat";
+import { SectionCard } from "@/components/shared/section-card";
+import { Stat } from "@/components/shared/stat";
 import { fmtCompact, fmtNumber, fmtPercent } from "@/lib/format";
 import type { Fundamentals } from "@/lib/types";
 
@@ -13,10 +13,11 @@ export function FundamentalsSection({ data }: { data: Fundamentals }) {
   return (
     <SectionCard
       id="fundamentals"
-      title="Fundamentals snapshot"
+      chapter="05"
+      title="Fundamentals"
       description="Raw financial profile and analyst consensus"
     >
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border hairline bg-border/40 md:grid-cols-4">
         <Stat label="Market Cap" value={fmtCompact(info.market_cap, info.currency)} />
         <Stat label="P/E (TTM)" value={fmtNumber(info.pe_ratio, 1)} />
         <Stat label="Forward P/E" value={fmtNumber(info.forward_pe, 1)} />
@@ -39,8 +40,10 @@ export function FundamentalsSection({ data }: { data: Fundamentals }) {
       </div>
 
       {latestRec && recTotal > 0 && (
-        <div className="mt-6">
-          <h3 className="mb-3 text-sm font-medium text-muted-foreground">Analyst consensus</h3>
+        <div className="mt-8">
+          <h3 className="mb-3 text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
+            Street consensus · n = {recTotal}
+          </h3>
           <RecBar rec={latestRec} total={recTotal} />
         </div>
       )}
@@ -76,9 +79,11 @@ function RecBar({
       </div>
       <div className="mt-3 grid grid-cols-5 gap-2 text-[11px]">
         {parts.map((p) => (
-          <div key={p.key} className="flex flex-col items-center gap-0.5">
+          <div key={p.key} className="flex flex-col items-center gap-0.5 border-t hairline pt-2">
             <span className="num font-semibold">{p.count}</span>
-            <span className="text-muted-foreground">{p.key}</span>
+            <span className="text-[9px] uppercase tracking-[0.18em] text-muted-foreground">
+              {p.key}
+            </span>
           </div>
         ))}
       </div>

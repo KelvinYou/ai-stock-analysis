@@ -45,30 +45,40 @@ export function PriceChart({
   const changePct = first ? (change / first) * 100 : 0;
   const up = change >= 0;
 
-  const stroke = up ? "hsl(152 70% 48%)" : "hsl(0 70% 56%)";
+  const stroke = up ? "hsl(152 64% 52%)" : "hsl(358 72% 62%)";
   const gradientId = React.useId();
 
   return (
     <div>
-      <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
+      <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <div className="text-3xl font-semibold num tracking-tight">
-            {fmtCurrency(last, currency)}
+          <div className="text-[10px] uppercase tracking-[0.24em] text-muted-foreground/80">
+            Range · {range}
           </div>
-          <div className={cn("num text-sm", up ? "text-emerald-400" : "text-rose-400")}>
-            {up ? "▲" : "▼"} {fmtCurrency(Math.abs(change), currency)} · {fmtSignedPercent(changePct)}
-            <span className="ml-1 text-muted-foreground">· {range}</span>
+          <div className="mt-2 flex items-baseline gap-3">
+            <span className="num text-4xl font-semibold leading-none tracking-tight md:text-5xl">
+              {fmtCurrency(last, currency)}
+            </span>
+            <span
+              className={cn(
+                "num text-sm",
+                up ? "text-emerald-400" : "text-rose-400",
+              )}
+            >
+              {up ? "▲" : "▼"} {fmtCurrency(Math.abs(change), currency)} ·{" "}
+              {fmtSignedPercent(changePct)}
+            </span>
           </div>
         </div>
-        <div className="inline-flex rounded-lg bg-muted/60 p-0.5">
+        <div className="inline-flex items-stretch overflow-hidden rounded-sm border hairline bg-muted/20">
           {RANGES.map((r) => (
             <button
               key={r.key}
               onClick={() => setRange(r.key)}
               className={cn(
-                "px-2.5 py-1 text-xs font-medium rounded-md transition-colors",
+                "num px-3 py-1.5 text-[11px] uppercase tracking-[0.18em] transition-colors",
                 range === r.key
-                  ? "bg-card text-foreground shadow"
+                  ? "bg-primary/15 text-primary"
                   : "text-muted-foreground hover:text-foreground",
               )}
             >
@@ -82,11 +92,11 @@ export function PriceChart({
           <AreaChart data={sliced} margin={{ top: 5, right: 8, left: 0, bottom: 0 }}>
             <defs>
               <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor={stroke} stopOpacity={0.35} />
+                <stop offset="0%" stopColor={stroke} stopOpacity={0.3} />
                 <stop offset="100%" stopColor={stroke} stopOpacity={0} />
               </linearGradient>
             </defs>
-            <CartesianGrid stroke="hsl(var(--border))" strokeOpacity={0.4} vertical={false} />
+            <CartesianGrid stroke="hsl(var(--border))" strokeOpacity={0.35} vertical={false} />
             <XAxis
               dataKey="date"
               tickFormatter={fmtDateShort}
@@ -106,14 +116,14 @@ export function PriceChart({
               fontSize={11}
             />
             <Tooltip
-              cursor={{ stroke: "hsl(var(--border))", strokeDasharray: "3 3" }}
+              cursor={{ stroke: "hsl(var(--primary))", strokeOpacity: 0.4, strokeDasharray: "3 3" }}
               content={<ChartTooltip currency={currency} />}
             />
             <Area
               type="monotone"
               dataKey="close"
               stroke={stroke}
-              strokeWidth={2}
+              strokeWidth={1.75}
               fill={`url(#${gradientId})`}
               isAnimationActive={false}
             />
@@ -136,10 +146,12 @@ function ChartTooltip({
   if (!active || !payload?.length) return null;
   const p = payload[0].payload;
   return (
-    <div className="rounded-md border border-border/60 bg-popover/95 px-3 py-2 text-xs shadow-xl backdrop-blur">
-      <div className="text-muted-foreground">{fmtDateShort(p.date)}</div>
-      <div className="num mt-1 flex items-center gap-3">
-        <span>Close</span>
+    <div className="rounded-sm border hairline bg-popover/95 px-3 py-2 text-xs shadow-xl backdrop-blur">
+      <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+        {fmtDateShort(p.date)}
+      </div>
+      <div className="num mt-1.5 flex items-center gap-3">
+        <span className="text-muted-foreground">Close</span>
         <span className="font-semibold">{fmtCurrency(p.close, currency)}</span>
       </div>
       <div className="num mt-0.5 flex items-center gap-3 text-muted-foreground">

@@ -1,6 +1,6 @@
 import { Check, X } from "lucide-react";
-import { SectionCard } from "./section-card";
-import { Stat } from "@/components/stat";
+import { SectionCard } from "@/components/shared/section-card";
+import { Stat } from "@/components/shared/stat";
 import { fmtNumber, fmtPercent } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { Technicals } from "@/lib/types";
@@ -8,17 +8,20 @@ import type { Technicals } from "@/lib/types";
 export function TechnicalsSection({ data }: { data: Technicals }) {
   const rsi = data.rsi_14;
   const rsiStatus =
-    rsi >= 70 ? { label: "Overbought", cls: "text-rose-400" } :
-    rsi <= 30 ? { label: "Oversold", cls: "text-emerald-400" } :
-    { label: "Neutral", cls: "text-muted-foreground" };
+    rsi >= 70
+      ? { label: "Overbought", cls: "text-rose-400" }
+      : rsi <= 30
+        ? { label: "Oversold", cls: "text-emerald-400" }
+        : { label: "Neutral", cls: "text-muted-foreground" };
 
   return (
     <SectionCard
       id="technicals"
-      title="Technical indicators"
+      chapter="06"
+      title="Technicals"
       description={`As of ${data.as_of_date}`}
     >
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border hairline bg-border/40 md:grid-cols-4">
         <Stat
           label="RSI (14)"
           value={fmtNumber(rsi, 1)}
@@ -41,9 +44,9 @@ export function TechnicalsSection({ data }: { data: Technicals }) {
         />
       </div>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
-        <div className="rounded-lg border border-border/50 bg-muted/20 p-4">
-          <h3 className="mb-3 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+      <div className="mt-6 grid gap-5 md:grid-cols-2">
+        <div className="rounded-sm border hairline bg-muted/10 p-5">
+          <h3 className="mb-4 text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
             Moving Averages
           </h3>
           <MaRow label="SMA 20" value={data.sma_20} above={data.above_sma_20} />
@@ -51,31 +54,29 @@ export function TechnicalsSection({ data }: { data: Technicals }) {
           <MaRow label="SMA 200" value={data.sma_200} above={data.above_sma_200} />
           <MaRow label="EMA 20" value={data.ema_20} />
         </div>
-        <div className="rounded-lg border border-border/50 bg-muted/20 p-4">
-          <h3 className="mb-3 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+        <div className="rounded-sm border hairline bg-muted/10 p-5">
+          <h3 className="mb-4 text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
             52-Week Range
           </h3>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">High</span>
-              <span className="num font-medium">{fmtNumber(data.high_52w)}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Low</span>
-              <span className="num font-medium">{fmtNumber(data.low_52w)}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">From high</span>
-              <span className="num font-medium text-rose-400">
-                {fmtPercent(data.pct_from_52w_high, 2, true)}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">From low</span>
-              <span className="num font-medium text-emerald-400">
-                {fmtPercent(data.pct_from_52w_low, 2, true)}
-              </span>
-            </div>
+          <div className="space-y-2.5 text-sm">
+            <Row label="High" value={fmtNumber(data.high_52w)} />
+            <Row label="Low" value={fmtNumber(data.low_52w)} />
+            <Row
+              label="From high"
+              value={
+                <span className="text-rose-400">
+                  {fmtPercent(data.pct_from_52w_high, 2, true)}
+                </span>
+              }
+            />
+            <Row
+              label="From low"
+              value={
+                <span className="text-emerald-400">
+                  {fmtPercent(data.pct_from_52w_low, 2, true)}
+                </span>
+              }
+            />
             <RangeBar low={data.low_52w} high={data.high_52w} current={data.close} />
           </div>
         </div>
@@ -84,9 +85,20 @@ export function TechnicalsSection({ data }: { data: Technicals }) {
   );
 }
 
+function Row({ label, value }: { label: string; value: React.ReactNode }) {
+  return (
+    <div className="flex items-baseline justify-between">
+      <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
+        {label}
+      </span>
+      <span className="num font-medium">{value}</span>
+    </div>
+  );
+}
+
 function MaRow({ label, value, above }: { label: string; value: number; above?: boolean }) {
   return (
-    <div className="flex items-center justify-between py-1.5 text-sm">
+    <div className="flex items-center justify-between border-b hairline py-2 text-sm last:border-none">
       <div className="flex items-center gap-2">
         {above != null ? (
           above ? (
@@ -97,7 +109,9 @@ function MaRow({ label, value, above }: { label: string; value: number; above?: 
         ) : (
           <span className="size-3.5" />
         )}
-        <span className="text-muted-foreground">{label}</span>
+        <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+          {label}
+        </span>
       </div>
       <span className={cn("num font-medium")}>{fmtNumber(value, 2)}</span>
     </div>
@@ -107,16 +121,21 @@ function MaRow({ label, value, above }: { label: string; value: number; above?: 
 function RangeBar({ low, high, current }: { low: number; high: number; current: number }) {
   const pct = ((current - low) / (high - low)) * 100;
   return (
-    <div className="mt-3">
-      <div className="relative h-2 w-full rounded-full bg-muted">
+    <div className="mt-4">
+      <div className="relative h-1.5 w-full rounded-full bg-muted">
         <div
-          className="absolute top-0 h-full rounded-full bg-gradient-to-r from-rose-500/40 via-amber-400/40 to-emerald-500/40"
+          className="absolute top-0 h-full rounded-full bg-gradient-to-r from-rose-500/60 via-amber-400/60 to-emerald-500/60"
           style={{ width: "100%" }}
         />
         <div
           className="absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground ring-2 ring-background"
           style={{ left: `${Math.max(0, Math.min(100, pct))}%` }}
         />
+      </div>
+      <div className="mt-1.5 flex justify-between text-[9px] uppercase tracking-[0.18em] text-muted-foreground/70">
+        <span>Low</span>
+        <span className="num text-foreground/80">{fmtNumber(current, 2)}</span>
+        <span>High</span>
       </div>
     </div>
   );

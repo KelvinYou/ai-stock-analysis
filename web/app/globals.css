@@ -4,28 +4,29 @@
 
 @layer base {
   :root {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
-    --card: 240 8% 7%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 8% 7%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 210 100% 66%;
-    --primary-foreground: 240 6% 10%;
-    --secondary: 240 6% 14%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 5% 12%;
-    --muted-foreground: 240 5% 65%;
-    --accent: 240 6% 16%;
-    --accent-foreground: 0 0% 98%;
+    --background: 30 10% 5%;
+    --foreground: 36 25% 94%;
+    --card: 28 9% 8%;
+    --card-foreground: 36 25% 94%;
+    --popover: 28 9% 8%;
+    --popover-foreground: 36 25% 94%;
+    --primary: 36 75% 67%;
+    --primary-foreground: 28 30% 10%;
+    --secondary: 28 8% 13%;
+    --secondary-foreground: 36 25% 94%;
+    --muted: 28 7% 11%;
+    --muted-foreground: 36 10% 62%;
+    --accent: 28 10% 16%;
+    --accent-foreground: 36 25% 94%;
     --destructive: 0 70% 56%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 6% 16%;
-    --input: 240 6% 16%;
-    --ring: 210 100% 66%;
-    --bull: 152 70% 48%;
-    --bear: 0 70% 56%;
-    --radius: 0.75rem;
+    --destructive-foreground: 36 25% 94%;
+    --border: 28 8% 18%;
+    --input: 28 8% 18%;
+    --ring: 36 75% 67%;
+    --bull: 152 64% 52%;
+    --bear: 358 72% 62%;
+    --paper: 40 30% 90%;
+    --radius: 0.5rem;
   }
 
   * {
@@ -35,29 +36,129 @@
   html,
   body {
     @apply bg-background text-foreground antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1, "cv11" 1;
+    font-feature-settings: "ss01" 1, "cv11" 1, "calt" 1;
   }
 
   body {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    background-color: hsl(var(--background));
     background-image:
-      radial-gradient(ellipse 80% 60% at 50% -10%, hsl(210 100% 66% / 0.12), transparent 70%),
-      radial-gradient(ellipse 60% 50% at 90% 10%, hsl(280 80% 60% / 0.08), transparent 70%);
+      radial-gradient(1200px 600px at 85% -10%, hsl(36 75% 67% / 0.10), transparent 60%),
+      radial-gradient(900px 500px at 10% 10%, hsl(20 60% 40% / 0.06), transparent 65%),
+      repeating-linear-gradient(
+        0deg,
+        hsl(28 10% 7% / 0) 0px,
+        hsl(28 10% 7% / 0) 2px,
+        hsl(28 10% 7% / 0.35) 3px,
+        hsl(28 10% 7% / 0) 4px
+      );
     background-attachment: fixed;
   }
 
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.85  0 0 0 0 0.65  0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity: 0.55;
+    mix-blend-mode: overlay;
+  }
+
   ::selection {
-    background: hsl(var(--primary) / 0.3);
+    background: hsl(var(--primary) / 0.35);
+    color: hsl(var(--foreground));
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 999px;
+    border: 2px solid hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
   }
 }
 
 @layer utilities {
   .num {
+    font-family: var(--font-mono), ui-monospace, monospace;
     font-variant-numeric: tabular-nums;
-    font-feature-settings: "tnum";
+    font-feature-settings: "tnum", "ss01";
+    letter-spacing: -0.01em;
+  }
+  .display {
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-feature-settings: "ss01", "ss02";
   }
   .glass {
-    background: hsl(var(--card) / 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: hsl(var(--card) / 0.55);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+  .ruler {
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--border)) 0,
+      hsl(var(--border)) 40%,
+      hsl(var(--primary) / 0.6) 40%,
+      hsl(var(--primary) / 0.6) 42%,
+      hsl(var(--border)) 42%,
+      hsl(var(--border)) 100%
+    );
+    height: 1px;
+    width: 100%;
+  }
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.35) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.35) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .hairline {
+    border-color: hsl(var(--border) / 0.6);
+  }
+  .shimmer {
+    background: linear-gradient(
+      110deg,
+      transparent 20%,
+      hsl(var(--primary) / 0.08) 50%,
+      transparent 80%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3.5s ease-in-out infinite;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .rise-in {
+    animation: rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  @keyframes draw {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  .draw-in {
+    transform-origin: left;
+    animation: draw 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
   }
 }
