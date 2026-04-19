@@ -44,3 +44,11 @@ htmlcov/
 
 # mypy
 .mypy_cache/
+
+# Claude Code / agent tooling (local only)
+.claude/
+.agents/
+skills-lock.json
+
+# Runtime logs
+logs/
