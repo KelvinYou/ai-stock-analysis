@@ -1,6 +1,7 @@
 import { TickerCard } from "@/components/ticker-list/ticker-card";
 import { EmptyState } from "@/components/shared/empty-state";
 import { listTickerSummaries } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 export const revalidate = 0;
 
@@ -17,87 +18,62 @@ export default async function HomePage() {
   const bearish = tickers.filter(
     (t) => t.signal === "sell" || t.signal === "strong_sell",
   ).length;
+  const withConviction = tickers.filter((t) => t.conviction != null);
   const avgConviction =
-    tickers.filter((t) => t.conviction != null).length > 0
-      ? tickers.reduce((s, t) => s + (t.conviction ?? 0), 0) /
-        tickers.filter((t) => t.conviction != null).length
+    withConviction.length > 0
+      ? withConviction.reduce((s, t) => s + (t.conviction ?? 0), 0) /
+        withConviction.length
       : 0;
-  const today = new Date().toLocaleDateString("en-US", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
 
   return (
-    <div className="space-y-14">
-      {/* Masthead */}
-      <section className="rise-in">
-        <div className="mb-5 flex items-center justify-between gap-4 text-[10px] uppercase tracking-[0.28em] text-muted-foreground/80">
-          <span>Vol. 01 · No. {String(tickers.length).padStart(3, "0")}</span>
-          <span className="hidden sm:inline">{today}</span>
-          <span className="num text-primary">Edition · Daily</span>
-        </div>
-        <div className="ruler mb-6" />
-        <div className="grid gap-8 md:grid-cols-[1.3fr_1fr] md:items-end">
-          <div>
-            <h1 className="display text-[clamp(2.75rem,7vw,5.5rem)] font-light leading-[0.95] tracking-tight">
-              The briefing, <br />
-              <span className="italic text-primary">condensed.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-muted-foreground">
-              Four specialist agents — fundamentals, technicals, sentiment, macro — read the tape
-              independently. A bull and bear researcher debate across three rounds. A synthesizer
-              arbitrates. A risk checker calibrates.
-            </p>
-          </div>
+    <div className="space-y-10">
+      <section className="fade-up">
+        <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+          Briefings
+        </h1>
+        <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
+          Four specialist agents — fundamentals, technicals, sentiment, macro — read the tape
+          independently. Bull and bear debate. A synthesizer arbitrates.
+        </p>
 
-          <div className="grid grid-cols-3 gap-px overflow-hidden rounded-sm border hairline bg-border/40">
-            <PulseStat
-              label="Coverage"
-              value={String(tickers.length).padStart(2, "0")}
-              hint="tickers live"
-            />
-            <PulseStat
-              label="Bull · Bear"
-              value={`${bullish}·${bearish}`}
-              hint="signals split"
-              tone={bullish >= bearish ? "bull" : "bear"}
-            />
-            <PulseStat
-              label="Conviction"
-              value={`${avgConviction >= 0 ? "+" : ""}${avgConviction.toFixed(2)}`}
-              hint="mean score"
-              tone={avgConviction > 0.15 ? "bull" : avgConviction < -0.15 ? "bear" : "muted"}
-            />
-          </div>
+        <div className="mt-6 grid max-w-md grid-cols-3 gap-3">
+          <SummaryStat label="Tickers" value={String(tickers.length)} />
+          <SummaryStat
+            label="Bull / Bear"
+            value={`${bullish} / ${bearish}`}
+            tone={bullish >= bearish ? "bull" : "bear"}
+          />
+          <SummaryStat
+            label="Conviction"
+            value={`${avgConviction >= 0 ? "+" : ""}${avgConviction.toFixed(2)}`}
+            tone={
+              avgConviction > 0.15 ? "bull" : avgConviction < -0.15 ? "bear" : "muted"
+            }
+          />
         </div>
       </section>
 
-      {/* Grid */}
       <section aria-labelledby="all-tickers">
-        <header className="mb-6 flex items-end justify-between gap-4 border-b hairline pb-3">
-          <div className="flex items-baseline gap-4">
-            <span className="num text-xs uppercase tracking-[0.24em] text-primary">§ 01</span>
-            <h2 id="all-tickers" className="display text-2xl tracking-tight md:text-3xl">
-              Coverage universe
-            </h2>
-          </div>
-          <span className="hidden text-[10px] uppercase tracking-[0.22em] text-muted-foreground sm:inline">
-            Sorted alphabetically
-          </span>
-        </header>
+        <div className="mb-4 flex items-end justify-between">
+          <h2
+            id="all-tickers"
+            className="text-sm font-semibold tracking-tight text-foreground"
+          >
+            All tickers
+          </h2>
+          <span className="text-xs text-muted-foreground">{tickers.length} total</span>
+        </div>
         <div
           aria-label="Ticker list"
-          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
           {tickers.map((t, i) => (
             <div
               key={t.symbol}
-              className="rise-in"
-              style={{ animationDelay: `${Math.min(i * 60, 400)}ms` }}
+              className="fade-up"
+              style={{ animationDelay: `${Math.min(i * 40, 300)}ms` }}
             >
-              <TickerCard t={t} index={i + 1} />
+              <TickerCard t={t} />
             </div>
           ))}
         </div>
@@ -106,34 +82,27 @@ export default async function HomePage() {
   );
 }
 
-function PulseStat({
+function SummaryStat({
   label,
   value,
-  hint,
   tone,
 }: {
   label: string;
   value: string;
-  hint: string;
   tone?: "bull" | "bear" | "muted";
 }) {
   const tint =
     tone === "bull"
-      ? "text-emerald-400"
+      ? "text-emerald-600"
       : tone === "bear"
-        ? "text-rose-400"
+        ? "text-rose-600"
         : "text-foreground";
   return (
-    <div className="flex flex-col justify-between gap-3 bg-background/80 px-4 py-4">
-      <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
-        {label}
-      </span>
-      <span className={`num text-3xl font-semibold leading-none tracking-tight ${tint}`}>
+    <div className="rounded-lg border bg-card p-3">
+      <div className="text-[11px] font-medium text-muted-foreground">{label}</div>
+      <div className={cn("num mt-1 text-base font-semibold tracking-tight", tint)}>
         {value}
-      </span>
-      <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground/70">
-        {hint}
-      </span>
+      </div>
     </div>
   );
 }

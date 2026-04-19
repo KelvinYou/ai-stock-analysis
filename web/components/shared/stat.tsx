@@ -16,18 +16,16 @@ export function Stat({
   return (
     <div
       className={cn(
-        "relative flex flex-col gap-2 border-l-2 border-border/40 bg-muted/20 p-4 transition-colors hover:border-primary/60",
+        "flex flex-col gap-1.5 rounded-lg border bg-background p-4 transition-colors hover:bg-muted/40",
         className,
       )}
     >
-      <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
-        {label}
-      </div>
+      <div className="text-[11px] font-medium text-muted-foreground">{label}</div>
       <div
         className={cn(
-          "num text-[22px] font-semibold leading-none tracking-tight",
-          accent === "up" && "text-emerald-400",
-          accent === "down" && "text-rose-400",
+          "num text-lg font-semibold leading-tight tracking-tight text-foreground",
+          accent === "up" && "text-emerald-600",
+          accent === "down" && "text-rose-600",
           accent === "muted" && "text-muted-foreground",
         )}
       >

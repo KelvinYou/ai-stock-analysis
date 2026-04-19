@@ -13,11 +13,10 @@ export function FundamentalsSection({ data }: { data: Fundamentals }) {
   return (
     <SectionCard
       id="fundamentals"
-      chapter="05"
       title="Fundamentals"
-      description="Raw financial profile and analyst consensus"
+      description="Financial profile and analyst consensus"
     >
-      <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border hairline bg-border/40 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         <Stat label="Market Cap" value={fmtCompact(info.market_cap, info.currency)} />
         <Stat label="P/E (TTM)" value={fmtNumber(info.pe_ratio, 1)} />
         <Stat label="Forward P/E" value={fmtNumber(info.forward_pe, 1)} />
@@ -32,7 +31,10 @@ export function FundamentalsSection({ data }: { data: Fundamentals }) {
           }
         />
         <Stat label="Net Income" value={fmtCompact(financials.net_income, info.currency)} />
-        <Stat label="Free Cash Flow" value={fmtCompact(financials.free_cash_flow, info.currency)} />
+        <Stat
+          label="Free Cash Flow"
+          value={fmtCompact(financials.free_cash_flow, info.currency)}
+        />
         <Stat
           label="Dividend Yield"
           value={info.dividend_yield != null ? `${info.dividend_yield.toFixed(2)}%` : "—"}
@@ -40,8 +42,8 @@ export function FundamentalsSection({ data }: { data: Fundamentals }) {
       </div>
 
       {latestRec && recTotal > 0 && (
-        <div className="mt-8">
-          <h3 className="mb-3 text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
+        <div className="mt-6">
+          <h3 className="mb-2.5 text-[11px] font-medium text-muted-foreground">
             Street consensus · n = {recTotal}
           </h3>
           <RecBar rec={latestRec} total={recTotal} />
@@ -59,11 +61,11 @@ function RecBar({
   total: number;
 }) {
   const parts = [
-    { key: "Strong Buy", count: rec.strongBuy, cls: "bg-emerald-500" },
-    { key: "Buy", count: rec.buy, cls: "bg-emerald-400/80" },
-    { key: "Hold", count: rec.hold, cls: "bg-zinc-400/80" },
-    { key: "Sell", count: rec.sell, cls: "bg-rose-400/80" },
-    { key: "Strong Sell", count: rec.strongSell, cls: "bg-rose-500" },
+    { key: "Strong Buy", count: rec.strongBuy, cls: "bg-emerald-600" },
+    { key: "Buy", count: rec.buy, cls: "bg-emerald-500/80" },
+    { key: "Hold", count: rec.hold, cls: "bg-zinc-400" },
+    { key: "Sell", count: rec.sell, cls: "bg-rose-500/80" },
+    { key: "Strong Sell", count: rec.strongSell, cls: "bg-rose-600" },
   ];
   return (
     <div>
@@ -79,11 +81,9 @@ function RecBar({
       </div>
       <div className="mt-3 grid grid-cols-5 gap-2 text-[11px]">
         {parts.map((p) => (
-          <div key={p.key} className="flex flex-col items-center gap-0.5 border-t hairline pt-2">
-            <span className="num font-semibold">{p.count}</span>
-            <span className="text-[9px] uppercase tracking-[0.18em] text-muted-foreground">
-              {p.key}
-            </span>
+          <div key={p.key} className="flex flex-col items-center gap-0.5">
+            <span className="num font-semibold text-foreground">{p.count}</span>
+            <span className="text-[10px] text-muted-foreground">{p.key}</span>
           </div>
         ))}
       </div>

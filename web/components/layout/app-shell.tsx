@@ -31,11 +31,11 @@ export function AppShell({
   }, [mobileNavOpen]);
 
   return (
-    <div className="relative z-10 flex min-h-dvh">
+    <div className="flex min-h-dvh">
       <div
         onClick={() => setMobileNavOpen(false)}
         className={cn(
-          "fixed inset-0 z-40 bg-black/70 backdrop-blur-sm transition-opacity lg:hidden",
+          "fixed inset-0 z-40 bg-foreground/40 backdrop-blur-sm transition-opacity lg:hidden",
           mobileNavOpen ? "opacity-100" : "pointer-events-none opacity-0",
         )}
         aria-hidden={!mobileNavOpen}
@@ -48,17 +48,17 @@ export function AppShell({
       />
 
       <div className="flex min-w-0 flex-1 flex-col">
-        <Topbar tickers={tickers} onMenuClick={() => setMobileNavOpen(true)} />
+        <Topbar onMenuClick={() => setMobileNavOpen(true)} tickers={tickers} />
         <main id="main" className="flex-1">
-          <div className="mx-auto w-full max-w-[1320px] px-5 py-8 md:px-10 md:py-12">
+          <div className="mx-auto w-full max-w-[1280px] px-5 py-8 md:px-10 md:py-10">
             {children}
           </div>
         </main>
-        <footer className="border-t hairline px-5 py-5 text-[10px] uppercase tracking-[0.22em] text-muted-foreground/70 md:px-10">
-          <div className="mx-auto flex max-w-[1320px] flex-wrap items-center justify-between gap-2">
-            <span>The Desk · Multi-Agent Research</span>
-            <span className="display italic tracking-normal text-muted-foreground/60">
-              Not investment advice · for research &amp; backtest only
+        <footer className="border-t px-5 py-6 text-xs text-muted-foreground md:px-10">
+          <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-2">
+            <span>Desk · Multi-Agent Research</span>
+            <span className="text-muted-foreground/70">
+              Not investment advice — for research only
             </span>
           </div>
         </footer>

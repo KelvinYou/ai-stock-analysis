@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 
 export function SectionCard({
   id,
-  chapter,
   title,
   description,
   action,
@@ -21,25 +20,23 @@ export function SectionCard({
 }) {
   return (
     <section id={id} className={cn("scroll-mt-24", className)}>
-      <header className="mb-6 flex flex-wrap items-end justify-between gap-4 border-b hairline pb-4">
-        <div className="flex items-baseline gap-4">
-          {chapter && (
-            <span className="num shrink-0 text-xs uppercase tracking-[0.24em] text-primary">
-              § {chapter}
-            </span>
+      <header className="mb-4 flex flex-wrap items-end justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="text-base font-semibold tracking-tight text-foreground md:text-lg">
+            {title}
+          </h2>
+          {description && (
+            <p className="mt-1 text-xs text-muted-foreground">{description}</p>
           )}
-          <div>
-            <h2 className="display text-2xl leading-tight tracking-tight md:text-3xl">
-              {title}
-            </h2>
-            {description && (
-              <p className="mt-1.5 text-sm text-muted-foreground">{description}</p>
-            )}
-          </div>
         </div>
         {action}
       </header>
-      <div className={cn("rounded-sm border hairline bg-card/40", flush ? "p-0" : "p-6 md:p-8")}>
+      <div
+        className={cn(
+          "rounded-xl border bg-card",
+          flush ? "p-0" : "p-5 md:p-6",
+        )}
+      >
         {children}
       </div>
     </section>
