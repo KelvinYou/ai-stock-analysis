@@ -3,7 +3,7 @@ import { EmptyState } from "@/components/shared/empty-state";
 import { listTickerSummaries } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
-export const revalidate = 0;
+export const revalidate = 3600;
 
 export default async function HomePage() {
   const tickers = await listTickerSummaries();
