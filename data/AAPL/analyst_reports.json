@@ -1,0 +1,84 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Elevated at 34.25x trailing P/E vs. Technology sector average of 22-26x. Forward P/E of 28.92x suggests market has priced in meaningful earnings growth. Stock trades near 52-week highs with limited margin of safety; vulnerable to growth disappointments.",
+    "margin_analysis": "Best-in-class profitability: gross margin 46.9%, operating margin 32.0%, net margin 26.9%. Exceptional pricing power and operational efficiency. Margins are sustainable given ecosystem moat but fully valued into current stock price.",
+    "debt_analysis": "Debt-to-Equity of 1.34x is elevated but manageable. Total debt of $98.66B is covered 1x by annual free cash flow ($98.77B). Strong interest coverage; debt not a material risk. Company prioritizes buybacks over debt reduction.",
+    "growth_outlook": "Mature large-cap with mid-single-digit revenue growth (~5-7%). iPhone dependency (~50% of revenue) limits growth given smartphone market saturation. Services segment (15-20% of revenue) offers higher margins and faster growth. Vision Pro and AI features provide upside catalysts but not imminent drivers.",
+    "key_risks": [
+      "Valuation stretched at 34.25x P/E with limited upside cushion",
+      "iPhone market saturation in developed markets; emerging market Android dominance",
+      "China exposure and geopolitical risk",
+      "Beta 1.109 implies above-average macro sensitivity",
+      "Elevated D/E ratio vulnerable to rising rates",
+      "Services monetization execution risk"
+    ],
+    "key_strengths": [
+      "Unmatched ecosystem moat and brand loyalty",
+      "Fortress profitability: 46.9% gross margin, 26.9% net margin",
+      "Exceptional FCF generation ($98.77B) funds shareholder returns and resilience",
+      "Overwhelming analyst support: 93.6% buy/strong buy (31 of 47 analysts)",
+      "Shareholder-friendly capital allocation via $110B+ annual buybacks"
+    ],
+    "summary": "Apple is a best-in-class franchise with unmatched profitability and cash generation, but the 34.25x P/E is stretched relative to sector and history, limiting upside. Buy-and-hold investors should accumulate; tactical traders should await pullback."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "neutral",
+    "news_summary": "Analyst consensus remains bullish at 74%, with 31 of 47 analysts on the buy side. However, conviction is moderating: Strong Buy ratings declined from 7 to 5 over two months, and Hold recommendations increased from 14 to 16. This pattern suggests support for AAPL but with muted upside expectations typical of mature mega-cap tech. News headlines unavailable for narrative assessment.",
+    "key_themes": [
+      "Mature growth positioning",
+      "Stable but non-extreme bullishness",
+      "Growing defensive positioning (Hold uptick)",
+      "Minimal bearish dissent (asymmetric risk)",
+      "Moderated analyst conviction"
+    ],
+    "notable_headlines": [
+      "Analyst consensus 74% bullish (31/47 analysts)",
+      "Strong Buy declining: 7 current vs 5 two months ago",
+      "Hold ratings increasing: 14 to 16 over two months",
+      "Bearish dissent minimal at 2 analysts total"
+    ],
+    "social_sentiment": null,
+    "summary": "Apple remains broadly supported by analysts (74% buy/strong buy), but conviction is softening modestly. The shift toward Hold ratings and declining Strong Buy suggest balanced sentiment lacking extreme momentum—typical for a mega-cap navigating AI adoption and services growth amid macro uncertainty."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "Strong uptrend; price +8.97% in 4 weeks, above SMA-50 (+3.71%) and SMA-200 (+7.31%)",
+    "rsi_14": 73.36,
+    "rsi_assessment": "Overbought at 73.36 (>70). Signals near-term pullback risk, but elevated RSI can persist in strong uptrends. Monitor support at SMA-50 ($260.55) for pullback entry.",
+    "macd_assessment": "Strongly bullish. Positive histogram (+3.82) with MACD line (4.79) well above signal line (0.97), indicating sustained upside momentum.",
+    "volume_assessment": "Volume above 30-day average (61.3M vs 41.1M on latest close). Higher volume confirms buying pressure and trend validity.",
+    "support_levels": [
+      260.55,
+      251.83
+    ],
+    "resistance_levels": [
+      285.92
+    ],
+    "summary": "AAPL is in a strong uptrend with bullish MACD momentum and proper moving average alignment. RSI overbought signals near-term caution; watch for pullback to SMA-50 ($260.55) before advance toward $285.92 resistance."
+  },
+  "macro": {
+    "signal": "sell",
+    "confidence": "medium",
+    "fed_impact": "Steady Fed policy at 4.25-4.50% provides rate stability but does not support multiple expansion. Inflation trending toward 2% target reduces hike risk, but higher-for-longer rate environment maintains elevated cost of capital and caps tech valuation upside.",
+    "interest_rate_outlook": "Fed likely to hold steady through 2026; inflation trending toward target reduces near-term hiking pressure. However, rates expected to remain elevated (4%+) longer than previously anticipated, keeping cost of capital restrictive for growth-dependent tech.",
+    "fx_impact": "Strong USD headwind reduces international revenue translation; with ~50% of revenue from non-US markets, current USD strength creates 2-4% annual headwind on consolidated revenue. Particularly impacts Europe, Asia-Pacific, Japan operations.",
+    "sector_macro_factors": [
+      "Tech valuations remain sensitive to rate expectations and AI capex cycle maturation",
+      "Consumer discretionary spending moderating with only 2% GDP growth and 4% unemployment baseline",
+      "Apple's strong FCF yield (~7%) provides downside support but limits upside in stable rate regime",
+      "Moderate US growth insufficient to drive premium valuation multiples for consumer electronics"
+    ],
+    "geopolitical_risks": [
+      "Elevated US-China trade tensions directly threaten Apple's supply chain and manufacturing base in China",
+      "Taiwan semiconductor dependency (TSMC) creates single-point-of-failure risk for chip supply",
+      "Potential US tariffs or export controls on advanced semiconductors could impact margins and product costs",
+      "Retaliation risk on international revenue (~50% non-US) from trade escalation"
+    ],
+    "summary": "Stable Fed policy prevents further multiple compression, but elevated geopolitical risks to supply chains, USD strength headwinds, and moderate growth environment create near-term headwinds. Trade tensions pose material tail risk to margins given Apple's China manufacturing and Taiwan TSMC exposure."
+  }
+}
