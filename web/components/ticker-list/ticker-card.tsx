@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SignalBadge } from "@/components/briefing/signal-badge";
+import { StarButton } from "@/components/ticker-list/star-button";
 import { fmtCurrency, fmtSignedPercent } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { TickerSummary } from "@/lib/types";
@@ -36,7 +37,19 @@ export function TickerCard({ t }: { t: TickerSummary; index?: number }) {
             </div>
             <p className="mt-1 truncate text-xs text-muted-foreground">{t.name}</p>
           </div>
-          {t.signal && <SignalBadge signal={t.signal} size="sm" />}
+          <div className="flex items-center gap-1">
+            <StarButton symbol={t.symbol} />
+            {t.signal ? (
+              <SignalBadge signal={t.signal} size="sm" />
+            ) : (
+              <span
+                className="inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-medium text-muted-foreground/60"
+                title="Not yet analyzed"
+              >
+                Data only
+              </span>
+            )}
+          </div>
         </header>
 
         <div className="flex items-end justify-between gap-3">
