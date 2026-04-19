@@ -6,6 +6,7 @@ import json
 import logging
 import sys
 
+from stock_analysis import __version__
 from stock_analysis.config import Settings
 from stock_analysis.orchestrator import AnalysisPipeline
 
@@ -14,6 +15,7 @@ def cli():
     parser = argparse.ArgumentParser(
         description="AI Stock Analysis — multi-agent investment research"
     )
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument(
         "ticker", help="Stock ticker symbol (e.g., AAPL, MSFT, MAYBANK, 1155)"
     )

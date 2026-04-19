@@ -1,6 +1,6 @@
 [project]
 name = "ai-stock-analysis"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Multi-agent AI stock analysis system"
 requires-python = ">=3.12"
 dependencies = [
@@ -28,8 +28,14 @@ stock-fetch = "stock_analysis.fetch:cli"
 stock-analysis-backtest = "stock_analysis.backtest.main:cli"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/stock_analysis/_version.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/stock_analysis"]
