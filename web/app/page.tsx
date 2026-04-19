@@ -1,108 +1,200 @@
-import { TickerCard } from "@/components/ticker-list/ticker-card";
-import { EmptyState } from "@/components/shared/empty-state";
+import Link from "next/link";
+import { ArrowRight, TrendingUp, TrendingDown } from "lucide-react";
 import { listTickerSummaries } from "@/lib/data";
+import { SignalBadge } from "@/components/briefing/signal-badge";
+import { fmtCurrency, fmtSignedPercent, signalLabel } from "@/lib/format";
 import { cn } from "@/lib/utils";
+import type { TickerSummary } from "@/lib/types";
 
 export const revalidate = 3600;
 
-export default async function HomePage() {
+const AGENTS = [
+  {
+    step: "01",
+    name: "Four analysts",
+    desc: "Fundamentals, technicals, sentiment, and macro agents each read the tape independently and file a typed report with a signal and confidence score.",
+  },
+  {
+    step: "02",
+    name: "Adversarial debate",
+    desc: "A bull researcher and a bear researcher argue N rounds, citing the analyst reports. Points of agreement, disagreement, and unresolved uncertainties are surfaced.",
+  },
+  {
+    step: "03",
+    name: "Synthesis",
+    desc: "A synthesizer reads all four reports plus the debate and produces a final briefing: overall signal, conviction score, entry / stop / target levels.",
+  },
+];
+
+export default async function LandingPage() {
   const tickers = await listTickerSummaries();
 
-  if (tickers.length === 0) {
-    return <EmptyState />;
-  }
-
-  const bullish = tickers.filter(
-    (t) => t.signal === "buy" || t.signal === "strong_buy",
-  ).length;
-  const bearish = tickers.filter(
-    (t) => t.signal === "sell" || t.signal === "strong_sell",
-  ).length;
-  const withConviction = tickers.filter((t) => t.conviction != null);
-  const avgConviction =
-    withConviction.length > 0
-      ? withConviction.reduce((s, t) => s + (t.conviction ?? 0), 0) /
-        withConviction.length
-      : 0;
+  const briefed = tickers.filter((t) => t.signal != null);
+  const byConviction = [...briefed].sort(
+    (a, b) => (b.conviction ?? 0) - (a.conviction ?? 0),
+  );
+  const topBuys = byConviction
+    .filter((t) => t.signal === "strong_buy" || t.signal === "buy")
+    .slice(0, 5);
+  const topSells = [...briefed]
+    .sort((a, b) => (a.conviction ?? 0) - (b.conviction ?? 0))
+    .filter((t) => t.signal === "strong_sell" || t.signal === "sell")
+    .slice(0, 5);
 
   return (
-    <div className="space-y-10">
-      <section className="fade-up">
-        <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
-          Briefings
-        </h1>
-        <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
-          Four specialist agents — fundamentals, technicals, sentiment, macro — read the tape
-          independently. Bull and bear debate. A synthesizer arbitrates.
-        </p>
-
-        <div className="mt-6 grid max-w-md grid-cols-3 gap-3">
-          <SummaryStat label="Tickers" value={String(tickers.length)} />
-          <SummaryStat
-            label="Bull / Bear"
-            value={`${bullish} / ${bearish}`}
-            tone={bullish >= bearish ? "bull" : "bear"}
-          />
-          <SummaryStat
-            label="Conviction"
-            value={`${avgConviction >= 0 ? "+" : ""}${avgConviction.toFixed(2)}`}
-            tone={
-              avgConviction > 0.15 ? "bull" : avgConviction < -0.15 ? "bear" : "muted"
-            }
-          />
+    <div className="space-y-20">
+      {/* Hero */}
+      <section className="fade-up pt-6 md:pt-10">
+        <div className="max-w-2xl">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border bg-muted px-3 py-1 text-[11px] font-medium text-muted-foreground">
+            <span className="size-1.5 rounded-full bg-emerald-500" aria-hidden />
+            {briefed.length} tickers analyzed today
+          </div>
+          <h1 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+            AI reads the tape.{" "}
+            <span className="text-muted-foreground">You make the call.</span>
+          </h1>
+          <p className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground">
+            Four specialist agents debate every ticker. One synthesizer turns the noise into a
+            briefing with conviction scores, entry levels, and stop-losses — updated daily.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              href="/dashboard"
+              className="inline-flex h-10 items-center gap-2 rounded-lg bg-foreground px-5 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+            >
+              Browse all tickers
+              <ArrowRight className="size-4" />
+            </Link>
+            {topBuys[0] && (
+              <Link
+                href={`/${topBuys[0].symbol}`}
+                className="inline-flex h-10 items-center gap-2 rounded-lg border bg-background px-5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+              >
+                Top conviction: {topBuys[0].symbol}
+              </Link>
+            )}
+          </div>
         </div>
       </section>
 
-      <section aria-labelledby="all-tickers">
-        <div className="mb-4 flex items-end justify-between">
-          <h2
-            id="all-tickers"
-            className="text-sm font-semibold tracking-tight text-foreground"
-          >
-            All tickers
-          </h2>
-          <span className="text-xs text-muted-foreground">{tickers.length} total</span>
-        </div>
-        <div
-          aria-label="Ticker list"
-          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+      {/* How it works */}
+      <section aria-labelledby="how-it-works">
+        <h2
+          id="how-it-works"
+          className="mb-8 text-xs font-semibold uppercase tracking-widest text-muted-foreground"
         >
-          {tickers.map((t, i) => (
-            <div
-              key={t.symbol}
-              className="fade-up"
-              style={{ animationDelay: `${Math.min(i * 40, 300)}ms` }}
-            >
-              <TickerCard t={t} />
+          How it works
+        </h2>
+        <div className="grid gap-6 sm:grid-cols-3">
+          {AGENTS.map((a) => (
+            <div key={a.step} className="rounded-xl border bg-card p-6">
+              <div className="num mb-3 text-[11px] font-medium text-muted-foreground/60">
+                {a.step}
+              </div>
+              <div className="mb-2 text-sm font-semibold text-foreground">{a.name}</div>
+              <p className="text-xs leading-relaxed text-muted-foreground">{a.desc}</p>
             </div>
           ))}
         </div>
       </section>
+
+      {/* Conviction leaders */}
+      {(topBuys.length > 0 || topSells.length > 0) && (
+        <section aria-labelledby="leaders">
+          <div className="mb-6 flex items-center justify-between">
+            <h2
+              id="leaders"
+              className="text-xs font-semibold uppercase tracking-widest text-muted-foreground"
+            >
+              Today&apos;s conviction leaders
+            </h2>
+            <Link
+              href="/dashboard"
+              className="text-xs text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+            >
+              Browse all →
+            </Link>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {topBuys.length > 0 && (
+              <LeaderColumn
+                title="Bullish"
+                icon={<TrendingUp className="size-3.5 text-emerald-600" />}
+                tickers={topBuys}
+              />
+            )}
+            {topSells.length > 0 && (
+              <LeaderColumn
+                title="Bearish"
+                icon={<TrendingDown className="size-3.5 text-rose-600" />}
+                tickers={topSells}
+              />
+            )}
+          </div>
+        </section>
+      )}
     </div>
   );
 }
 
-function SummaryStat({
-  label,
-  value,
-  tone,
+function LeaderColumn({
+  title,
+  icon,
+  tickers,
 }: {
-  label: string;
-  value: string;
-  tone?: "bull" | "bear" | "muted";
+  title: string;
+  icon: React.ReactNode;
+  tickers: TickerSummary[];
 }) {
-  const tint =
-    tone === "bull"
-      ? "text-emerald-600"
-      : tone === "bear"
-        ? "text-rose-600"
-        : "text-foreground";
   return (
-    <div className="rounded-lg border bg-card p-3">
-      <div className="text-[11px] font-medium text-muted-foreground">{label}</div>
-      <div className={cn("num mt-1 text-base font-semibold tracking-tight", tint)}>
-        {value}
+    <div className="rounded-xl border bg-card p-5">
+      <div className="mb-4 flex items-center gap-1.5 text-[11px] font-semibold text-muted-foreground">
+        {icon}
+        {title}
+      </div>
+      <div className="space-y-1">
+        {tickers.map((t) => (
+          <LeaderRow key={t.symbol} t={t} />
+        ))}
       </div>
     </div>
+  );
+}
+
+function LeaderRow({ t }: { t: TickerSummary }) {
+  const up = (t.priceChangePct ?? 0) >= 0;
+  return (
+    <Link
+      href={`/${t.symbol}`}
+      className="group flex items-center gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-muted"
+    >
+      <div className="min-w-0 flex-1">
+        <div className="flex items-center gap-2">
+          <span className="num text-sm font-semibold text-foreground">{t.symbol}</span>
+          <span className="truncate text-[11px] text-muted-foreground">{t.name}</span>
+        </div>
+      </div>
+      <div className="flex shrink-0 items-center gap-3">
+        {t.priceChangePct != null && (
+          <span
+            className={cn(
+              "num text-xs font-medium",
+              up ? "text-emerald-600" : "text-rose-600",
+            )}
+          >
+            {up ? "+" : ""}
+            {fmtSignedPercent(t.priceChangePct)}
+          </span>
+        )}
+        {t.signal && <SignalBadge signal={t.signal} size="sm" />}
+        {t.conviction != null && (
+          <span className="num text-[11px] text-muted-foreground">
+            {t.conviction >= 0 ? "+" : ""}
+            {t.conviction.toFixed(2)}
+          </span>
+        )}
+      </div>
+    </Link>
   );
 }
