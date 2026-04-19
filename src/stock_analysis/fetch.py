@@ -29,7 +29,11 @@ def _parse_tickers(lines: list[str]) -> list[tuple[str, str]]:
         if not line or line.startswith("#"):
             continue
         if line.startswith("@"):
-            pairs = resolve_universe(line)
+            try:
+                pairs = resolve_universe(line)
+            except Exception as e:
+                print(f"WARN could not expand {line}: {e}", file=sys.stderr)
+                continue
         elif line.upper().startswith("MY:"):
             pairs = [(line[3:].upper(), "MY")]
         else:
@@ -89,8 +93,15 @@ def cli():
                 seen.add(p)
                 pairs.append(p)
 
+    def _safe_resolve(name: str) -> list[tuple[str, str]]:
+        try:
+            return resolve_universe(name)
+        except Exception as e:
+            print(f"WARN could not expand {name}: {e}", file=sys.stderr)
+            return []
+
     for name in args.universe:
-        _extend(resolve_universe(name))
+        _extend(_safe_resolve(name))
 
     if args.tickers:
         for raw in args.tickers:
@@ -98,7 +109,7 @@ def cli():
             if not token:
                 continue
             if token.startswith("@"):
-                _extend(resolve_universe(token))
+                _extend(_safe_resolve(token))
             elif token.upper().startswith("MY:"):
                 _extend([(token[3:].upper(), "MY")])
             elif ":" in token:
@@ -111,9 +122,10 @@ def cli():
             print(f"ERR no tickers given and {ticker_file} not found", file=sys.stderr)
             sys.exit(1)
         _extend(_parse_tickers(ticker_file.read_text().splitlines()))
-        if not pairs:
-            print(f"ERR {ticker_file} is empty", file=sys.stderr)
-            sys.exit(1)
+
+    if not pairs:
+        print("ERR no tickers resolved (all universe expansions failed?)", file=sys.stderr)
+        sys.exit(1)
 
     settings = Settings()
     store = DataStore(settings.data_dir)

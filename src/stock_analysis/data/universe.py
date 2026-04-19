@@ -19,7 +19,17 @@ SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
 NASDAQ100_URL = "https://en.wikipedia.org/wiki/Nasdaq-100"
 FBMKLCI_URL = "https://en.wikipedia.org/wiki/FTSE_Bursa_Malaysia_KLCI"
 
-_HEADERS = {"User-Agent": "Mozilla/5.0 (ai-stock-analysis; daily-fetch)"}
+# Wikipedia's UA policy requires a descriptive agent with a contact URL.
+# See https://meta.wikimedia.org/wiki/User-Agent_policy
+_HEADERS = {
+    "User-Agent": (
+        "ai-stock-analysis/0.1 "
+        "(+https://github.com/KelvinYou/ai-stock-analysis) "
+        "httpx/0.27"
+    ),
+    "Accept": "text/html,application/xhtml+xml",
+    "Accept-Language": "en-US,en;q=0.9",
+}
 
 
 def _read_tables(url: str) -> list[pd.DataFrame]:
