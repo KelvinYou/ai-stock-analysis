@@ -18,7 +18,7 @@ from .fetcher_base import BaseFetcher
 class USMarketFetcher(BaseFetcher):
     """Fetches US market data via yfinance."""
 
-    def __init__(self, period: str = "1y"):
+    def __init__(self, period: str = "10y"):
         self.period = period
 
     def fetch(self, ticker: str) -> TickerData:

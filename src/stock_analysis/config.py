@@ -7,4 +7,4 @@ class Settings(BaseModel):
     synthesis_model: str = "sonnet"
     debate_rounds: int = 3
     data_dir: str = "data"
-    price_history_period: str = "1y"
+    price_history_period: str = "10y"
