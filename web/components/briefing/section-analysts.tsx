@@ -15,28 +15,24 @@ export function AnalystSection({ data }: { data: AnalystReports }) {
   return (
     <SectionCard
       id="analysts"
-      chapter="03"
-      title="Specialist Desks"
+      title="Specialist desks"
       description="Four analysts read the tape independently"
     >
       <Tabs defaultValue="fundamentals">
-        <TabsList className="flex h-auto w-full flex-wrap items-stretch justify-start rounded-none bg-transparent p-0 border-b hairline">
-          {TABS.map(({ key, label, Icon }, i) => (
+        <TabsList className="flex h-auto w-full flex-wrap items-stretch justify-start gap-1 rounded-lg bg-muted/40 p-1">
+          {TABS.map(({ key, label, Icon }) => (
             <TabsTrigger
               key={key}
               value={key}
-              className="relative flex h-auto items-center gap-2 rounded-none border-b-2 border-transparent bg-transparent px-4 py-3 text-muted-foreground data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-foreground data-[state=active]:shadow-none"
+              className="flex h-auto items-center gap-1.5 rounded-md px-3 py-1.5 text-[13px] font-medium text-muted-foreground data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
             >
-              <span className="num hidden text-[10px] uppercase tracking-[0.22em] opacity-70 sm:inline">
-                0{i + 1}
-              </span>
               <Icon className="size-3.5" />
-              <span className="text-[13px]">{label}</span>
+              <span>{label}</span>
             </TabsTrigger>
           ))}
         </TabsList>
 
-        <TabsContent value="fundamentals" className="mt-6">
+        <TabsContent value="fundamentals" className="mt-5">
           <ReportView
             summary={data.fundamentals.summary}
             signal={data.fundamentals.signal}
@@ -54,7 +50,7 @@ export function AnalystSection({ data }: { data: AnalystReports }) {
           />
         </TabsContent>
 
-        <TabsContent value="technical" className="mt-6">
+        <TabsContent value="technical" className="mt-5">
           <ReportView
             summary={data.technical.summary}
             signal={data.technical.signal}
@@ -66,21 +62,13 @@ export function AnalystSection({ data }: { data: AnalystReports }) {
               ["Volume", data.technical.volume_assessment],
             ]}
             lists={[
-              [
-                "Support",
-                data.technical.support_levels.map((n) => n.toFixed(2)),
-                "up",
-              ],
-              [
-                "Resistance",
-                data.technical.resistance_levels.map((n) => n.toFixed(2)),
-                "down",
-              ],
+              ["Support", data.technical.support_levels.map((n) => n.toFixed(2)), "up"],
+              ["Resistance", data.technical.resistance_levels.map((n) => n.toFixed(2)), "down"],
             ]}
           />
         </TabsContent>
 
-        <TabsContent value="sentiment" className="mt-6">
+        <TabsContent value="sentiment" className="mt-5">
           <ReportView
             summary={data.sentiment.summary}
             signal={data.sentiment.signal}
@@ -97,7 +85,7 @@ export function AnalystSection({ data }: { data: AnalystReports }) {
           />
         </TabsContent>
 
-        <TabsContent value="macro" className="mt-6">
+        <TabsContent value="macro" className="mt-5">
           <ReportView
             summary={data.macro.summary}
             signal={data.macro.signal}
@@ -132,52 +120,46 @@ function ReportView({
   lists: Array<[string, string[], ("up" | "down")?]>;
 }) {
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-5">
       <div className="flex flex-wrap items-center gap-3">
         <SignalBadge signal={signal} confidence={confidence} size="lg" />
       </div>
 
-      <p className="display text-base leading-relaxed text-foreground/95 md:text-[17px]">
-        {summary}
-      </p>
+      <p className="text-[15px] leading-relaxed text-foreground">{summary}</p>
 
-      <div className="grid gap-px overflow-hidden rounded-sm border hairline bg-border/40 md:grid-cols-2">
+      <div className="grid gap-3 md:grid-cols-2">
         {rows.map(([k, v]) => (
-          <div key={k} className="bg-background/80 p-4">
-            <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
-              {k}
-            </div>
-            <p className="mt-1.5 text-sm leading-relaxed text-foreground/95">{v || "—"}</p>
+          <div key={k} className="rounded-lg border bg-background p-4">
+            <div className="text-[11px] font-medium text-muted-foreground">{k}</div>
+            <p className="mt-1 text-sm leading-relaxed text-foreground">{v || "—"}</p>
           </div>
         ))}
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-5 md:grid-cols-2">
         {lists.map(([k, items, tone]) => {
           const marker =
             tone === "up"
-              ? "text-emerald-400"
+              ? "bg-emerald-500"
               : tone === "down"
-                ? "text-rose-400"
-                : "text-primary/70";
+                ? "bg-rose-500"
+                : "bg-foreground/40";
           return (
             <div key={k}>
-              <h4 className="mb-3 text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
-                {k}
-              </h4>
+              <h4 className="mb-2 text-[11px] font-medium text-muted-foreground">{k}</h4>
               {items && items.length > 0 ? (
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-1.5 text-sm">
                   {items.map((it, i) => (
-                    <li key={i} className="flex gap-3">
-                      <span className={`num mt-0.5 text-[10px] ${marker}`}>
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="leading-relaxed text-foreground/95">{it}</span>
+                    <li key={i} className="flex gap-2.5">
+                      <span
+                        className={`mt-1.5 inline-block size-1 shrink-0 rounded-full ${marker}`}
+                      />
+                      <span className="leading-relaxed text-foreground">{it}</span>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="text-sm italic text-muted-foreground/70">None reported</p>
+                <p className="text-sm text-muted-foreground">None reported</p>
               )}
             </div>
           );

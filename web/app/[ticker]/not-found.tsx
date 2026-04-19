@@ -3,20 +3,20 @@ import { ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="mx-auto max-w-xl rounded-sm border hairline bg-card/40 p-12 text-center">
-      <p className="display text-xs uppercase tracking-[0.3em] text-primary">404 · Off-tape</p>
-      <h2 className="display mt-3 text-3xl italic tracking-tight">
-        This ticker hasn&rsquo;t crossed the wire.
+    <div className="mx-auto max-w-xl rounded-xl border bg-card p-10 text-center md:p-12">
+      <p className="text-xs font-medium text-muted-foreground">404</p>
+      <h2 className="mt-2 text-lg font-semibold tracking-tight text-foreground md:text-xl">
+        Ticker not found
       </h2>
-      <p className="mt-4 text-sm text-muted-foreground">
+      <p className="mt-2 text-sm text-muted-foreground">
         Run the pipeline to generate its briefing, then check back.
       </p>
       <Link
         href="/"
-        className="mt-7 inline-flex items-center gap-2 rounded-sm border hairline bg-muted/40 px-4 py-2 text-sm transition-colors hover:bg-muted"
+        className="mt-6 inline-flex items-center gap-2 rounded-md border bg-background px-3.5 py-2 text-sm font-medium transition-colors hover:bg-muted"
       >
         <ArrowLeft className="size-3.5" />
-        Back to the desk
+        Back to dashboard
       </Link>
     </div>
   );
