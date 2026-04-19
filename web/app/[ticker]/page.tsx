@@ -7,6 +7,8 @@ import { DebateSection } from "@/components/briefing/section-debate";
 import { FundamentalsSection } from "@/components/briefing/section-fundamentals";
 import { TechnicalsSection } from "@/components/briefing/section-technicals";
 import { SectionCard } from "@/components/shared/section-card";
+import { TrackVisit } from "@/components/shared/track-visit";
+import { StarButton } from "@/components/ticker-list/star-button";
 import { listTickers, loadTicker } from "@/lib/data";
 import { fmtCurrency, fmtSignedPercent } from "@/lib/format";
 import { cn } from "@/lib/utils";
@@ -51,6 +53,7 @@ export default async function TickerPage({
 
   return (
     <div className="space-y-8">
+      <TrackVisit symbol={bundle.symbol} />
       <header className="fade-up space-y-5">
         <div className="flex flex-wrap items-start justify-between gap-6">
           <div className="min-w-0">
@@ -58,6 +61,7 @@ export default async function TickerPage({
               <h1 className="num text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
                 {bundle.symbol}
               </h1>
+              <StarButton symbol={bundle.symbol} />
               {info?.market && (
                 <span className="rounded-md bg-muted px-1.5 py-0.5 text-[11px] font-medium text-muted-foreground">
                   {info.market}
