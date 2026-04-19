@@ -43,7 +43,7 @@ BURSA_ALIASES: dict[str, str] = {
 class MYMarketFetcher(BaseFetcher):
     """Fetches Bursa Malaysia (KLSE) data via yfinance (.KL suffix)."""
 
-    def __init__(self, period: str = "1y"):
+    def __init__(self, period: str = "10y"):
         self.period = period
 
     def _resolve_ticker(self, ticker: str) -> str:
