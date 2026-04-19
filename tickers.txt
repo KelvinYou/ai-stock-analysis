@@ -1,11 +1,9 @@
-# Magnificent 7 (US)
-AAPL
-MSFT
-NVDA
-GOOGL
-AMZN
-META
-TSLA
+# US universe: S&P 500 ∪ Nasdaq 100 (~600 tickers, fetched from Wikipedia)
+@us-major
 
-# Bursa Malaysia — prefix MY: for non-US tickers
-MY:MAYBANK
+# MY universe: FTSE Bursa Malaysia KLCI (30 tickers, fetched from Wikipedia)
+@my-klci
+
+# Extras — add individual tickers below if needed
+# AAPL
+# MY:MAYBANK
