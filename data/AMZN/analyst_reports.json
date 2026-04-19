@@ -1,0 +1,88 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Trailing P/E of 34.95x is premium to sector; forward P/E of 26.65x is defensible given implied 30% EPS growth and strong margin expansion trajectory. Market pricing in earnings catch-up over next 12 months.",
+    "margin_analysis": "Exceptional margins across all three metrics: gross margin 50.3% (pricing power in AWS/ads), operating margin 11.16% (improving discipline), net margin 10.83% (strong profitability). All three margins trending healthily—indicates successful pivot to profitable growth rather than growth-at-all-costs model.",
+    "debt_analysis": "Conservative balance sheet with 0.37x debt/equity ratio and $153B debt vs. $411B equity. Ample borrowing capacity. Concern: Free cash flow of $7.7B is only 9.9% of $77.7B net income—unusually low, suggesting heavy capex (AWS data centers, logistics). Requires monitoring for ROI adequacy, but likely reflects high-return infrastructure investments.",
+    "growth_outlook": "Positive. Diversified revenue (AWS, retail, advertising) provides multiple growth vectors. AWS continues cloud market share gains; advertising platform accelerating; retail maintains dominance. Analyst consensus 93% bullish (63 of 68 buy/strong buy). Forward P/E compression suggests confidence in near-term earnings growth.",
+    "key_risks": [
+      "Trailing P/E of 34.95x is elevated; vulnerable to earnings misses or macro deterioration",
+      "Free cash flow weakness ($7.7B vs. $77.7B NI) raises capex efficiency questions",
+      "Economic sensitivity as consumer cyclical; e-commerce demand declines in recessions",
+      "Antitrust/regulatory headwinds (US/EU scrutiny; potential margin compression)",
+      "High beta of 1.38 amplifies volatility in market corrections",
+      "Intense competition in cloud, retail, and advertising segments"
+    ],
+    "key_strengths": [
+      "Exceptional gross margin of 50.3% demonstrates pricing power across AWS, retail, advertising",
+      "Operating leverage: 11.16% operating margin improving—shows disciplined capital allocation",
+      "Diversified revenue reduces single-point-of-failure risk",
+      "Best-in-class market positions (AWS ~32% share, leading e-commerce, fast-growing ads)",
+      "Conservative balance sheet (0.37x debt/equity) enables strategic flexibility",
+      "Near-universal analyst endorsement: 93% bullish consensus signals broad conviction"
+    ],
+    "summary": "Amazon is a best-in-class operator with exceptional margins, scale, and diversified revenue. Forward P/E of 26.65x is justified by margin expansion and AWS/advertising growth, though trailing P/E of 34.95x leaves limited room for error. 93% analyst bullish consensus supports a BUY, with valuation defensible if earnings growth materializes."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "neutral",
+    "news_summary": "Recent news headlines unavailable in data feed. Sentiment assessment based primarily on analyst recommendation trends showing 92.6% buy-side consensus with minor cooling from 97.1% three months prior.",
+    "key_themes": [
+      "Analyst consensus",
+      "Strong institutional support",
+      "Cooling enthusiasm",
+      "Zero sell-side dissent",
+      "Contrarian signal risk",
+      "Consumer cyclical positioning"
+    ],
+    "notable_headlines": [
+      "Analyst consensus overwhelmingly bullish (63/68 buy-side)",
+      "Strong Buy ratings decline from 15 to 14 month-over-month",
+      "Hold positions increasing from 4 to 5",
+      "No sell-side ratings present (0 Sell, 0 Strong Sell)"
+    ],
+    "social_sentiment": null,
+    "summary": "Amazon maintains exceptional 92.6% analyst buy-side consensus, but recent cooling (97.1% → 92.6% over 3 months) and extreme consensus with zero dissent suggest sentiment may be priced in. Bullish case supported but execution risk elevated due to lack of bearish hedge positions."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "Strong uptrend; price +16.95% above SMA-50 ($214.24) and +11.07% above SMA-200 ($225.58)",
+    "rsi_14": 97.55,
+    "rsi_assessment": "Extremely overbought at 97.55 (>70 is overbought, 100 is maximum). Warns of near-term pullback or consolidation risk; limited room for additional gains without cooling first.",
+    "macd_assessment": "Positive histogram (+8.55) with MACD line well above signal line. Confirms strong bullish momentum, though combined with extreme RSI suggests inflection point may be near.",
+    "volume_assessment": "Recent volume spike (72.7M on April 14) confirms strong buying pressure; 30-day average 45.4M; latest (51.9M) above average. Accumulation pattern intact.",
+    "support_levels": [
+      225.58,
+      238.38,
+      249.0
+    ],
+    "resistance_levels": [
+      254.0
+    ],
+    "summary": "AMZN rallied +22% in 28 days with price above both key moving averages, signaling a robust uptrend. However, RSI at extreme 97.55 warns of imminent pullback or consolidation. Intermediate bullish bias favors holding, but new entries should target dips toward $238–245 where RSI cools and risk/reward improves."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Fed holding at 4.25-4.50% removes tail risk of further tightening, but sustained elevated rates continue to weigh on consumer discretionary spending and increase AMZN's cost of capital for capex-heavy infrastructure projects. Quantitative tightening ongoing but at reduced pace.",
+    "interest_rate_outlook": "Rates likely to remain elevated (4.0-4.5%) through 2026. Inflation trending toward 2% target removes cut urgency. No imminent rate hikes expected, but cuts also unlikely until sustained inflation proof. Higher-for-longer regime pressures consumer cyclical demand but reduces refinancing risk.",
+    "fx_impact": "USD strength from rate premium creates mild headwind on international revenue translation (~40% of revenue). MYR weakness (BNM accommodative stance) and EUR/INR weakness from emerging market capital outflows pressures Asian and European segment growth.",
+    "sector_macro_factors": [
+      "Consumer spending suppressed by elevated rates despite low unemployment",
+      "AWS growth less rate-sensitive, benefiting from AI capex cycle",
+      "E-commerce resilient in moderate 2% GDP growth environment",
+      "High beta (1.383) amplifies downside in recession scenario",
+      "Logistics/warehouse capex faces higher financing costs"
+    ],
+    "geopolitical_risks": [
+      "Trade tensions elevated with tariff risks hitting supply chain margins",
+      "Imported goods (electronics, merchandise) vulnerable to tariff escalation",
+      "China sourcing exposure in retail fulfillment",
+      "AWS (15-20% revenue) less geopolitical-exposed, provides partial hedge"
+    ],
+    "summary": "AMZN faces a mixed macro setup: moderating inflation and low unemployment support baseline demand, but 4.25% rates remain structurally headwind for consumer discretionary. AWS AI capex growth and Fed hold remove tail risks, but trade tensions and consumer spending fragility warrant caution. Conviction medium due to unresolved tariff uncertainty and rate durability."
+  }
+}

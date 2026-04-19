@@ -1,0 +1,83 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "high",
+    "pe_assessment": "Current P/E of 29.3x is elevated, but forward P/E of 19.3x is fair for a software platform with 30% net margins and $46B free cash flow. The 10-point gap suggests near-term moderation priced in. For long-term holders, forward valuation is reasonable.",
+    "margin_analysis": "Exceptional: 82% gross margin, 41.4% operating margin, 30.1% net margin. These are elite-tier numbers indicating strong pricing power, operating leverage, and capital efficiency. Well above sector averages.",
+    "debt_analysis": "Conservative balance sheet with debt/equity of 0.39x and $83.9B total debt vs $217B equity. Given $60.5B annual net income, debt is highly manageable. Ample capacity to fund AI capex and shareholder returns.",
+    "growth_outlook": "Stable to modest. The 10-point P/E compression (current vs forward) hints at analyst expectations for near-term earnings stability rather than acceleration. AI/Reality Labs monetization is the key upside catalyst; margin pressure if capex doesn't drive proportional revenue growth.",
+    "key_risks": [
+      "Regulatory overhang: Ongoing antitrust and data privacy scrutiny",
+      "Advertising cyclicality: Revenue vulnerable to economic downturns",
+      "AI capex execution: Heavy investment in AI/Reality Labs may pressure margins without clear ROI timeline",
+      "Competitive threats: Google and Amazon in ads; TikTok in engagement",
+      "Higher volatility: Beta of 1.31 means amplified drawdowns in market corrections"
+    ],
+    "key_strengths": [
+      "Elite profitability: 30.1% net margin and 41.4% operating margin",
+      "Strong cash generation: $46.1B free cash flow with high conversion quality",
+      "Conservative balance sheet: 0.39x debt/equity provides strategic flexibility",
+      "Overwhelming analyst consensus: 84% buy ratings with no sell recommendations",
+      "Scale advantages: $201B revenue base and advertising network moat"
+    ],
+    "summary": "Meta demonstrates exceptional fundamental strength with 30% net margins, $46B free cash flow, and a fortress balance sheet (0.39x D/E). The 84% analyst buy consensus reflects confidence, but current valuation at 29.3x P/E leaves limited upside unless AI monetization accelerates. Forward P/E of 19.3x is fair value—suitable for long-term exposure, though near-term caution is warranted given regulatory risks and advertising market cyclicality."
+  },
+  "sentiment": {
+    "signal": "strong_buy",
+    "confidence": "high",
+    "news_tone": "unavailable",
+    "news_summary": "News data unavailable; analysis based on analyst consensus. Meta shows overwhelming bullish analyst coverage with 90.6% of ratings at \"Buy\" or \"Strong Buy\" (58 of 64 analysts), stable through the review period despite slight moderation in Buy ratings (51→47 over 3 months).",
+    "key_themes": [
+      "Overwhelming bullish consensus",
+      "Analyst stability (11 strong buys unchanged)",
+      "Slight moderation in Buy ratings",
+      "Zero sell-side ratings",
+      "Strong industry positioning"
+    ],
+    "notable_headlines": [
+      "Analyst consensus: 58 of 64 analysts rate META as Buy or Strong Buy (90.6%)",
+      "No sell or strong sell ratings among tracked analysts",
+      "Strong buy core holding steady at 11 analysts despite market volatility"
+    ],
+    "social_sentiment": null,
+    "summary": "Meta trades with exceptional analyst bullishness (90.6% buy/strong buy), representing strong fundamental confidence. The slight decline in Buy ratings (51→47) over 3 months suggests measured caution, while zero sell ratings indicate no credible downside thesis among tracked analysts."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "high",
+    "trend": "strong uptrend, overbought near-term",
+    "rsi_14": null,
+    "rsi_assessment": "RSI-14 at 96.46 is critically overbought, indicating momentum exhaustion and imminent pullback risk. Normal overbought threshold is 70; 96.46 represents extreme overextension.",
+    "macd_assessment": "MACD histogram positive at 32.69 with MACD line (17.96) above signal line (-14.73), confirming bullish momentum. However, this positive signal is undermined by the extreme RSI reading.",
+    "volume_assessment": "30-day average volume 16.5M shares. Recent activity above average (spike to 35.7M on March 26, 32M on April 8) confirms institutional participation in the rally. Volume supports the uptrend structure.",
+    "support_levels": [
+      629.56,
+      572.13,
+      547.54
+    ],
+    "resistance_levels": [
+      688.55,
+      788.15
+    ],
+    "summary": "META is in a strong uptrend (price above both SMA-50 and SMA-200) with bullish momentum (positive MACD), but critically overbought (RSI 96.46). Short-term pullback to $629–$572 is likely; consider waiting for consolidation before new longs. Uptrend structure remains intact for longer-term holders."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Fed's 4.25-4.50% rate hold significantly increases META's cost of capital for its $25B+ annual AI capex cycle. Rate cuts expected in H2 2026 (as inflation trends toward 2%) would ease financing pressure, but capex burden remains elevated in near term.",
+    "interest_rate_outlook": "Rates likely to decline mid-to-late 2026 as inflation converges toward 2% target. Current level (4.25-4.50%) above historical growth-stage norms; each 25bp cut reduces capex financing costs by ~$250M annually for META, supporting medium-term valuations.",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "AI capex intensity: META's data center/chip spending becomes increasingly expensive in higher-rate regime",
+      "Strong USD headwind: ~75% international revenue translates to fewer USD in elevated-dollar environment",
+      "Rate sensitivity: Tech sector's 1.309 beta amplifies capex and valuation pressure in rate-rising scenarios",
+      "AI capex cycle tailwind: Robust demand for compute justifies capex spend despite financing costs"
+    ],
+    "geopolitical_risks": [
+      "US-China chip export controls: Threatens sourcing and cost structure for GPU/AI chip procurement",
+      "EU regulatory pressure: GDPR, Digital Markets Act create compliance costs and revenue risk in key market",
+      "Taiwan semiconductor dependency: TSMC concentration risk amid rising cross-strait tensions affects supply reliability"
+    ],
+    "summary": "META faces near-term macro headwinds from elevated rates (increasing capex financing costs) and strong USD (pressuring international revenue), offset partially by robust AI demand and expected rate cuts in H2 2026. Geopolitical risks around US-China chip tensions and EU regulation remain material downside catalysts requiring monitoring."
+  }
+}
