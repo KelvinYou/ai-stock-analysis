@@ -16,8 +16,11 @@ export interface ConvictionSummary {
 
 export function signalDirection(signal: string | null | undefined): Direction {
   if (!signal) return "neutral";
-  if (signal === "strong_buy" || signal === "buy") return "bull";
-  if (signal === "strong_sell" || signal === "sell") return "bear";
+  const token = signal.trim().toLowerCase().match(/^(strong[ _]buy|strong[ _]sell|buy|sell|hold|neutral)/)?.[1];
+  if (!token) return "neutral";
+  const normalized = token.replace(" ", "_");
+  if (normalized === "strong_buy" || normalized === "buy") return "bull";
+  if (normalized === "strong_sell" || normalized === "sell") return "bear";
   return "neutral";
 }
 
