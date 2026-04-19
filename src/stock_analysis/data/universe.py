@@ -9,6 +9,7 @@ Results are cached in-process to avoid repeat HTTP during one fetch run.
 
 from __future__ import annotations
 
+import io
 from collections.abc import Callable
 from functools import lru_cache
 
@@ -35,7 +36,8 @@ _HEADERS = {
 def _read_tables(url: str) -> list[pd.DataFrame]:
     resp = httpx.get(url, headers=_HEADERS, timeout=30.0, follow_redirects=True)
     resp.raise_for_status()
-    return pd.read_html(resp.text)
+    # pandas.read_html treats a bare string as a path; wrap in StringIO.
+    return pd.read_html(io.StringIO(resp.text))
 
 
 def _find_table_with_column(tables: list[pd.DataFrame], column: str) -> pd.DataFrame:
