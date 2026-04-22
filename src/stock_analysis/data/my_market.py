@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import date, datetime
 
 import yfinance as yf
 
@@ -12,7 +12,7 @@ from stock_analysis.models.market_data import (
     TickerInfo,
 )
 
-from .fetcher_base import BaseFetcher
+from .fetcher_base import BaseFetcher, has_splits_since
 
 # Common Bursa Malaysia ticker aliases — map friendly names to stock codes
 BURSA_ALIASES: dict[str, str] = {
@@ -58,15 +58,19 @@ class MYMarketFetcher(BaseFetcher):
             return f"{BURSA_ALIASES[t]}.KL"
         return f"{t}.KL"
 
-    def fetch(self, ticker: str) -> TickerData:
+    def resolve_symbol(self, ticker: str) -> str:
+        t = ticker.upper().strip()
+        if t.endswith(".KL"):
+            return t[:-3]
+        return t
+
+    def fetch(self, ticker: str, start_date: date | None = None) -> TickerData:
         yf_ticker = self._resolve_ticker(ticker)
         stock = yf.Ticker(yf_ticker)
         info = stock.info
 
         # Use the original user-supplied ticker as display symbol
-        display_symbol = ticker.upper().strip()
-        if display_symbol.endswith(".KL"):
-            display_symbol = display_symbol[:-3]
+        display_symbol = self.resolve_symbol(ticker)
 
         ticker_info = TickerInfo(
             symbol=display_symbol,
@@ -84,7 +88,14 @@ class MYMarketFetcher(BaseFetcher):
             fifty_two_week_low=info.get("fiftyTwoWeekLow"),
         )
 
-        hist = stock.history(period=self.period)
+        if start_date is not None and has_splits_since(stock, start_date):
+            start_date = None
+
+        hist = (
+            stock.history(start=start_date.isoformat())
+            if start_date is not None
+            else stock.history(period=self.period)
+        )
         price_history = [
             PriceBar(
                 date=idx.date(),

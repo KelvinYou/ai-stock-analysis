@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import date, datetime
 
 import yfinance as yf
 
@@ -12,7 +12,7 @@ from stock_analysis.models.market_data import (
     TickerInfo,
 )
 
-from .fetcher_base import BaseFetcher
+from .fetcher_base import BaseFetcher, has_splits_since
 
 
 class USMarketFetcher(BaseFetcher):
@@ -21,7 +21,7 @@ class USMarketFetcher(BaseFetcher):
     def __init__(self, period: str = "10y"):
         self.period = period
 
-    def fetch(self, ticker: str) -> TickerData:
+    def fetch(self, ticker: str, start_date: date | None = None) -> TickerData:
         stock = yf.Ticker(ticker)
         info = stock.info
 
@@ -41,7 +41,16 @@ class USMarketFetcher(BaseFetcher):
             fifty_two_week_low=info.get("fiftyTwoWeekLow"),
         )
 
-        hist = stock.history(period=self.period)
+        # yfinance returns split-adjusted closes, so any split since start_date
+        # invalidates stored historical prices — fall back to a full refetch.
+        if start_date is not None and has_splits_since(stock, start_date):
+            start_date = None
+
+        hist = (
+            stock.history(start=start_date.isoformat())
+            if start_date is not None
+            else stock.history(period=self.period)
+        )
         price_history = [
             PriceBar(
                 date=idx.date(),
