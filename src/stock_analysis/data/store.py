@@ -62,6 +62,59 @@ class DataStore:
 
         return csv_path
 
+    def last_price_bar_date(self, ticker: str) -> date | None:
+        """Return the most recent bar date in price_history.csv, or None if absent."""
+        csv_path = self.base / ticker.upper() / "price_history.csv"
+        if not csv_path.exists():
+            return None
+        last: str | None = None
+        with csv_path.open() as f:
+            for row in csv.DictReader(f):
+                last = row["date"]
+        if last is None:
+            return None
+        return date.fromisoformat(last)
+
+    def merge_market_data(self, ticker: str, data: TickerData) -> list[PriceBar]:
+        """Merge new bars into the on-disk CSV (dedup by date; newer wins).
+
+        Always overwrites fundamentals.json with the latest snapshot.
+        Returns the full merged price history so callers can feed downstream
+        consumers (e.g. technicals) without a second read.
+        """
+        d = self._flat_dir(ticker)
+        csv_path = d / "price_history.csv"
+
+        bars_by_date: dict[date, PriceBar] = {}
+        if csv_path.exists():
+            with csv_path.open() as f:
+                for row in csv.DictReader(f):
+                    bd = date.fromisoformat(row["date"])
+                    bars_by_date[bd] = PriceBar(
+                        date=bd,
+                        open=float(row["open"]),
+                        high=float(row["high"]),
+                        low=float(row["low"]),
+                        close=float(row["close"]),
+                        volume=int(row["volume"]),
+                    )
+        for bar in data.price_history:
+            bars_by_date[bar.date] = bar
+
+        merged = sorted(bars_by_date.values(), key=lambda b: b.date)
+
+        with csv_path.open("w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(["date", "open", "high", "low", "close", "volume"])
+            for bar in merged:
+                writer.writerow([bar.date, bar.open, bar.high, bar.low, bar.close, bar.volume])
+
+        fund_dict = json.loads(data.model_dump_json())
+        del fund_dict["price_history"]
+        (d / "fundamentals.json").write_text(json.dumps(fund_dict, indent=2))
+
+        return merged
+
     def load_market_data(self, ticker: str) -> TickerData | None:
         d = self.base / ticker.upper()
         csv_path = d / "price_history.csv"

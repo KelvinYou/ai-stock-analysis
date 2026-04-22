@@ -2,35 +2,111 @@ name: Daily Market Data Fetch
 
 on:
   schedule:
-    # 10:30pm UTC = 6:30pm ET, 30 min after US market close
+    # US: 6:30pm ET (30 min after 4pm close). Run twice so it fires post-close
+    # in both DST (22:30 UTC, Mar–Nov) and standard time (23:30 UTC, Nov–Mar).
     - cron: '30 22 * * 1-5'
+    - cron: '30 23 * * 1-5'
+    # MY (Bursa, UTC+8): close 5pm MYT = 9am UTC. Fetch 1h later.
+    - cron: '0 10 * * 1-5'
+    # Saturday 02:00 UTC: weekly full resync for both markets. yfinance returns
+    # split/dividend-adjusted closes, so incremental appends slowly drift out of
+    # sync with the live adjustment; this refetch repairs the historical series.
+    - cron: '0 2 * * 6'
   workflow_dispatch:
+    inputs:
+      market:
+        description: Market to fetch
+        type: choice
+        options: [all, us, my]
+        default: all
+      full:
+        description: Force full history refetch (skip incremental append)
+        type: boolean
+        default: false
 
 permissions:
   contents: write
 
 jobs:
   fetch:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: us
+            universe: us-major
+          - name: my
+            universe: my-klci
+
+    if: >-
+      (github.event_name == 'workflow_dispatch' &&
+        (github.event.inputs.market == 'all' || github.event.inputs.market == matrix.name))
+      || github.event.schedule == '0 2 * * 6'
+      || (matrix.name == 'us' &&
+          (github.event.schedule == '30 22 * * 1-5' || github.event.schedule == '30 23 * * 1-5'))
+      || (matrix.name == 'my' && github.event.schedule == '0 10 * * 1-5')
+
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    concurrency:
+      group: fetch-${{ matrix.name }}
+      cancel-in-progress: false
 
     steps:
       - uses: actions/checkout@v4
 
+      - uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: pip
 
       - name: Install dependencies
-        run: pip install -e .
+        run: uv pip install --system -e .
 
       - name: Fetch market data
-        run: stock-fetch --from-file tickers.txt
+        id: fetch
+        env:
+          UNIVERSE: ${{ matrix.universe }}
+          SCHEDULE: ${{ github.event.schedule }}
+          FULL_INPUT: ${{ github.event.inputs.full }}
+        run: |
+          set -euo pipefail
+          FLAGS=""
+          if [ "$SCHEDULE" = "0 2 * * 6" ] || [ "$FULL_INPUT" = "true" ]; then
+            FLAGS="--full"
+          fi
+          stock-fetch --universe "$UNIVERSE" --workers 8 $FLAGS -v
 
       - name: Commit updated data
+        if: always() && steps.fetch.outcome != 'cancelled'
+        env:
+          MARKET: ${{ matrix.name }}
+          OK: ${{ steps.fetch.outputs.success_count }}
+          TOTAL: ${{ steps.fetch.outputs.total_count }}
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || git commit -m "data: daily fetch $(date -u +%Y-%m-%d)"
-          git push
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          COUNTS=""
+          if [ -n "${OK:-}" ] && [ -n "${TOTAL:-}" ]; then
+            COUNTS=" (${OK}/${TOTAL} ok)"
+          fi
+          git commit -m "data: ${MARKET} fetch $(date -u +%Y-%m-%d)${COUNTS}"
+          for i in 1 2 3; do
+            if git pull --rebase origin main && git push; then
+              exit 0
+            fi
+            echo "push attempt $i failed, retrying in $((i * 5))s..."
+            sleep $((i * 5))
+          done
+          echo "ERR: push failed after 3 attempts" >&2
+          exit 1
