@@ -200,16 +200,26 @@ src/stock_analysis/
 ├── fetch.py             # stock-fetch CLI entry point
 └── main.py              # stock-analysis CLI entry point
 
+pipeline.json            # Canonical pipeline shape — feeds /about + architecture.md
+scripts/
+└── sync_architecture.py # Regenerates the mermaid block from pipeline.json
+
 web/                     # Next.js dashboard
 ├── app/
-│   ├── page.tsx         # Ticker browser / home
-│   ├── dashboard/       # Portfolio dashboard
+│   ├── page.tsx         # Screener — one sortable row per watchlist ticker
+│   ├── about/           # Pipeline flowchart (SVG from pipeline.json) + glossary
+│   ├── dashboard/       # Redirect to / (the screener moved there)
 │   └── [ticker]/        # Per-ticker analysis view
+├── lib/
+│   ├── data.ts          # Reads data/<TICKER>/*.json into TickerSummary rows
+│   ├── watchlist.ts     # Parses tickers.txt incl. #group / #theme markers
+│   ├── screener.ts      # Column defs, sorting, at-entry / stale predicates
+│   └── pipeline.ts      # Loads pipeline.json + computes the flowchart layout
 └── components/
     ├── briefing/        # Conviction meter, decision card, analyst/debate sections
     ├── chart/           # Price chart
-    ├── ticker-list/     # Ticker browser, cards, star/watchlist
-    └── shared/          # Reusable UI primitives
+    ├── ticker-list/     # Screener table, cards, filters, star/watchlist
+    └── shared/          # Data-status strip and other UI primitives
 ```
 
 Data is stored as JSON files organized by ticker and date:
@@ -227,6 +237,16 @@ data/
 ---
 
 ## Development
+
+`pipeline.json` at the repo root is the single source of truth for the pipeline's shape.
+The `/about` page renders it as an SVG flowchart, and `scripts/sync_architecture.py`
+renders it as the mermaid block in [`architecture.md`](architecture.md) — so edit
+`pipeline.json`, never the diagram:
+
+```bash
+python scripts/sync_architecture.py           # rewrite architecture.md
+python scripts/sync_architecture.py --check   # exit 1 if out of date (for CI)
+```
 
 ```bash
 # Lint
