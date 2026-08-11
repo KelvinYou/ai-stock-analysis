@@ -1,11 +1,51 @@
 # Watchlist — holdings + actively-tracked candidates. No @us-major/@my-klci.
-MY:5398
-MY:5258
+# NOTE: inline comments are NOT supported — fetch.py:81 only skips whole-line #.
+# "MY:0166 # Inari" would parse as the ticker "0166 # INARI" and fail silently.
+
+# --- MY: holdings ---
 MY:1155
+MY:4197
+MY:5258
+MY:5398
+
+# --- MY: diversified candidates (added 2026-08-11) ---
+# 0215 Solarvest / 5225 IHH / 5296 MR D.I.Y.
+MY:0215
+MY:5225
+MY:5296
+
+# --- MY: semiconductor / OSAT candidates (added 2026-08-11) ---
+# Watch-only at add time: P/E 37-49x, sector at a 21-month high, earnings not
+# yet caught up to the re-rating. Same pattern as GAMUDA — wait for a pullback.
+# 0166 Inari Amertron / 0128 Frontken / 0097 ViTrox / 5005 Unisem
+MY:0097
+MY:0128
+MY:0166
+MY:5005
+
+# --- MY: sector-gap candidates (added 2026-08-11) ---
+# 6947 CelcomDigi (telco — zero coverage)
+# 5249 IOI Properties (real estate; IOIPG REIT listing due end-2026, RM7.58B)
+MY:5249
+MY:6947
+
+# --- US: holdings ---
 META
 MSFT
 NVDA
+
+# --- US: mega-cap candidates ---
 AAPL
 AMZN
 GOOGL
 TSLA
+
+# --- US: diversified candidates (added 2026-08-11) ---
+AVGO
+UNH
+V
+
+# --- US: AI supply-chain upstream (added 2026-08-11) ---
+# TSM is upstream of the MY OSAT thesis — its capex guidance is the cross-check
+# on Frontken's "earnings visibility" claim.
+TSM
