@@ -26,6 +26,11 @@ uvicorn stock_analysis.api.app:app --reload
 
 ## Architecture
 
+`pipeline.json` (repo root) is the single source of truth for the pipeline's shape.
+`web/app/about` renders it as an SVG flowchart; `scripts/sync_architecture.py` renders
+it as the mermaid block in `architecture.md`. Change the pipeline → edit `pipeline.json`
+and run the script; never hand-edit the mermaid or the diagram component.
+
 This is a 4-layer multi-agent pipeline for AI-driven stock analysis. Each layer feeds into the next and outputs structured Pydantic models persisted as JSON under `data/<TICKER>/<DATE>/`.
 
 ### Layer 1 — Data Ingestion (`data/`)
