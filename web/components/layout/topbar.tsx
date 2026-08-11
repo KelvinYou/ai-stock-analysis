@@ -246,7 +246,8 @@ interface Crumb {
 
 function buildCrumbs(pathname: string): Crumb[] {
   const segments = pathname.split("/").filter(Boolean);
-  const crumbs: Crumb[] = [{ label: "Dashboard", href: "/" }];
+  const crumbs: Crumb[] = [{ label: "Screener", href: "/" }];
+  if (segments[0] === "about") return [...crumbs, { label: "How it works", href: "/about" }];
   if (segments.length > 0) {
     const symbol = decodeURIComponent(segments[0]);
     crumbs.push({ label: symbol, href: `/${symbol}` });

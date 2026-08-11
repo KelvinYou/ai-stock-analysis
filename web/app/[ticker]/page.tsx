@@ -13,7 +13,7 @@ import { listTickers, loadTicker } from "@/lib/data";
 import { fmtCurrency, fmtSignedPercent } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   const tickers = await listTickers();

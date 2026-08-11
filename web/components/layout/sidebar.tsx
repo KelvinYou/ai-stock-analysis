@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight, LayoutDashboard } from "lucide-react";
+import { ArrowUpRight, BookOpen, LayoutDashboard } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getMyList, getRecentlyViewed } from "@/lib/client-storage";
 import type { Signal, TickerSummary } from "@/lib/types";
@@ -88,8 +88,11 @@ export function Sidebar({
 
       <nav className="flex-1 overflow-y-auto px-3 py-4 text-sm">
         <Section label="Overview">
-          <NavItem href="/dashboard" icon={LayoutDashboard} onNavigate={onClose}>
-            Dashboard
+          <NavItem href="/" icon={LayoutDashboard} onNavigate={onClose}>
+            Screener
+          </NavItem>
+          <NavItem href="/about" icon={BookOpen} onNavigate={onClose}>
+            How it works
           </NavItem>
         </Section>
 
@@ -124,7 +127,7 @@ export function Sidebar({
 
       <div className="shrink-0 border-t px-5 py-4">
         <Link
-          href="/dashboard"
+          href="/"
           onClick={onClose}
           className="text-[11px] text-muted-foreground transition-colors hover:text-foreground"
         >
