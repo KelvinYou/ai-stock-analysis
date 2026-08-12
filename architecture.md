@@ -6,12 +6,12 @@ flowchart TD
     subgraph L1["Layer 1 — Data Ingestion (Deterministic fetchers — no LLM)"]
         UNI["<b>Ticker universes</b><br/>S&amp;P 500 · NASDAQ 100 · FBM KLCI<br/>scraped from Wikipedia"]
         US["<b>US market data</b><br/>yfinance · price history<br/>financials · analyst recs · news"]
-        MY["<b>Bursa / KLSE</b><br/>stub — planned"]
+        MY["<b>Bursa / KLSE</b><br/>yfinance via .KL suffix<br/>BURSA_ALIASES name → code"]
     end
 
     UNI -.->|"drives bulk fetch"| US
     UNI -.->|"drives bulk fetch"| MY
-    SDL["<b>DataStore</b><br/>structured JSON per ticker<br/>market_data · reports · briefing"]
+    SDL["<b>DataStore</b><br/>flat per-ticker layout<br/>price_history.csv · fundamentals · technicals<br/>reports · verdict · briefing · outcomes"]
     US --> SDL
     MY --> SDL
 
@@ -34,16 +34,34 @@ flowchart TD
 
     L2 --> L3
 
-    subgraph L4["Layer 4 — Synthesis + Portfolio Risk (synthesis_model = Sonnet)"]
-        direction LR
-        SYN["<b>SynthesizerAgent</b><br/>merges reports + debate<br/>signal · conviction · convergence"]
-        RISK["<b>RiskChecker</b><br/>position sizing<br/>drawdown scenarios"]
+    subgraph L35["Layer 3.5 — Research Manager (research_manager_model = Sonnet)"]
+        RM["<b>ResearchManager</b><br/>winning side · thesis<br/>strongest counterexample<br/>invalidation conditions · evidence gaps"]
     end
 
-    L3 --> L4
+    L3 --> RM
 
-    OUT["<b>Briefing</b><br/>overall signal · conviction −1.00…+1.00<br/>entry limit · stop loss · TP1 / TP2 · position size"]
-    L4 --> OUT
+    subgraph L4["Layer 4 — Synthesis (synthesis_model = Sonnet)"]
+        direction LR
+        SYN["<b>SynthesizerAgent</b><br/>merges reports + verdict + memory<br/>research view · conviction"]
+        RISK["<b>RiskChecker</b><br/>deterministic entry/stop/target<br/>drawdown · risk-reward"]
+    end
+
+    RM --> L4
+
+    subgraph L5["Layer 5 — Portfolio Risk Gate (deterministic — reads real holdings)"]
+        GATE["<b>PortfolioGate</b><br/>risk budget → stop distance → size<br/>single / sector / USD exposure caps<br/>APPROVE · WATCH · REDUCE · REJECT"]
+    end
+
+    L4 --> GATE
+
+    subgraph L6["Layer 6 — Outcome Memory (deterministic — closes the loop; exit-date gated against leakage)"]
+        MEM["<b>OutcomeStore</b><br/>realized return per resolved call<br/>hit rate · conviction calibration<br/>feeds back into Layer 4"]
+    end
+
+    GATE --> MEM
+
+    OUT["<b>Briefing</b><br/>research view · conviction −1.00…+1.00<br/>trade decision · entry · stop · TP1 / TP2<br/>position size as % of equity sleeve"]
+    MEM --> OUT
 
     subgraph CONSUMERS["Consumers"]
         direction LR
@@ -54,9 +72,9 @@ flowchart TD
     OUT --> CONSUMERS
 
     style UNI fill:#fafaf9,stroke:#d6d3d1,color:#57534e
-    style MY fill:#fafaf9,stroke:#d6d3d1,color:#57534e
     style BULL fill:#dcfce7,stroke:#16a34a,color:#14532d
     style BEAR fill:#fee2e2,stroke:#dc2626,color:#7f1d1d
+    style MEM fill:#fafaf9,stroke:#d6d3d1,color:#57534e
     style OUT fill:#f5f5f4,stroke:#57534e,color:#1c1917
     style DASH fill:#fafaf9,stroke:#d6d3d1,color:#57534e
     style API fill:#fafaf9,stroke:#d6d3d1,color:#57534e
