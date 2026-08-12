@@ -2,14 +2,14 @@ from __future__ import annotations
 
 from typing import Any
 
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, Field, field_validator
 
 from .agent_reports import Signal
 
 
 class ConvictionScore(BaseModel):
-    score: float  # -1.0 (strong sell) to +1.0 (strong buy)
-    signal_convergence: float  # 0.0 (agents disagree) to 1.0 (full agreement)
+    score: float = Field(ge=-1.0, le=1.0)  # -1.0 (strong sell) to +1.0 (strong buy)
+    signal_convergence: float = Field(ge=0.0, le=1.0)  # 0.0 (disagree) to 1.0 (agreement)
     explanation: str
 
 

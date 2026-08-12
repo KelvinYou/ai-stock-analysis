@@ -19,7 +19,7 @@ def _extract_result(message: ResultMessage) -> dict | None:
     return None
 
 from stock_analysis.config import Settings
-from stock_analysis.models.agent_reports import AnalystReports, Signal
+from stock_analysis.models.agent_reports import AnalystReports, Confidence, Signal
 from stock_analysis.models.debate import DebateResult
 from stock_analysis.models.market_data import TickerData
 from stock_analysis.models.synthesis import Briefing, ConvictionScore
@@ -34,6 +34,69 @@ _SIGNAL_SIGN: dict[Signal, int] = {
     Signal.SELL: -1,
     Signal.STRONG_SELL: -1,
 }
+
+_CONFIDENCE_WEIGHT: dict[Confidence, float] = {
+    Confidence.HIGH: 1.0,
+    Confidence.MEDIUM: 0.75,
+    Confidence.LOW: 0.5,
+}
+
+
+def _weighted_directional_totals(analyst_reports: AnalystReports) -> tuple[float, float, float]:
+    reports = (
+        analyst_reports.fundamentals,
+        analyst_reports.sentiment,
+        analyst_reports.technical,
+        analyst_reports.macro,
+    )
+    directional_weights = {1: 0.0, -1: 0.0}
+    total_weight = 0.0
+    for report in reports:
+        weight = _CONFIDENCE_WEIGHT[report.confidence]
+        total_weight += weight
+        direction = _SIGNAL_SIGN[report.signal]
+        if direction:
+            directional_weights[direction] += weight
+    return directional_weights[1], directional_weights[-1], total_weight
+
+
+def compute_directional_consensus(analyst_reports: AnalystReports) -> float:
+    """Return net confidence-weighted direction in ``[-1, 1]``."""
+    buy_weight, sell_weight, total_weight = _weighted_directional_totals(analyst_reports)
+    if total_weight == 0:
+        return 0.0
+    return round((buy_weight - sell_weight) / total_weight, 4)
+
+
+def compute_signal_convergence(analyst_reports: AnalystReports) -> float:
+    """Compute confidence-weighted directional agreement deterministically.
+
+    Neutral reports remain in the denominator, so missing or non-directional
+    evidence lowers convergence instead of being silently ignored. Strong and
+    weak buy/sell labels share the same direction because convergence measures
+    agreement, not signal magnitude.
+    """
+    buy_weight, sell_weight, total_weight = _weighted_directional_totals(analyst_reports)
+    if total_weight == 0:
+        return 0.0
+    return round(max(buy_weight, sell_weight) / total_weight, 4)
+
+
+def calibrate_conviction_score(
+    signal: Signal,
+    model_score: float,
+    directional_consensus: float,
+) -> float:
+    """Cap model conviction by analyst consensus and zero conflicting views."""
+    required_direction = _SIGNAL_SIGN[signal]
+    if required_direction == 0:
+        return 0.0
+    if required_direction * directional_consensus <= 0:
+        return 0.0
+    return round(
+        required_direction * min(abs(model_score), abs(directional_consensus)),
+        4,
+    )
 
 
 def _reconcile_conviction(signal: Signal, conviction: ConvictionScore) -> ConvictionScore:
@@ -71,11 +134,11 @@ BRIEFING_OUTPUT_SCHEMA = {
                 },
                 "signal_convergence": {
                     "type": "number",
-                    "description": "0.0 (agents disagree) to 1.0 (full agreement)",
+                    "description": "Optional legacy field; ignored and recomputed from analyst reports",
                 },
                 "explanation": {"type": "string"},
             },
-            "required": ["score", "signal_convergence", "explanation"],
+            "required": ["score", "explanation"],
         },
         "executive_summary": {
             "type": "string",
@@ -128,8 +191,10 @@ class SynthesizerAgent:
             f"{context}\n\n"
             "Synthesize all the above into a final investment briefing. "
             "Weigh the analyst reports and debate arguments to form your overall signal. "
-            "Never default to 'neutral' — take a position while acknowledging uncertainty. "
-            "The conviction score should reflect how strongly the signals converge.\n\n"
+            "Neutral is a valid result when the evidence is mixed; do not manufacture a "
+            "direction just to avoid neutral. The conviction score should reflect the "
+            "strength of your thesis. Signal convergence is computed deterministically "
+            "from the analyst reports after this response.\n\n"
             "CRITICAL — score sign must match signal direction:\n"
             "  strong_buy/buy  → score in (0, 1]\n"
             "  neutral          → score near 0 (roughly [-0.1, 0.1])\n"
@@ -143,7 +208,8 @@ class SynthesizerAgent:
                 "You are a senior investment strategist producing a final briefing. "
                 "You have access to fundamental, technical, sentiment, and macro analyses, "
                 "plus a bull/bear adversarial debate. Synthesize everything into an actionable, "
-                "balanced briefing. Be direct and specific.\n\n"
+                "balanced briefing. Be direct and specific. Neutral is acceptable when "
+                "the evidence does not support a directional view.\n\n"
                 "Scope: focus on the thesis — signal, conviction, bull/bear cases, catalysts, "
                 "uncertainties. Do NOT invent specific entry/stop/target prices in prose; a "
                 "deterministic post-step attaches concrete levels to the briefing."
@@ -161,16 +227,25 @@ class SynthesizerAgent:
         if result is None:
             raise RuntimeError("Synthesis agent failed to produce output")
 
-        from datetime import date
-
         from stock_analysis.models.synthesis import RiskAssessment
 
         signal = Signal(result["overall_signal"])
-        conviction = _reconcile_conviction(signal, ConvictionScore(**result["conviction"]))
+        raw_conviction = result["conviction"]
+        directional_consensus = compute_directional_consensus(analyst_reports)
+        conviction = ConvictionScore(
+            score=calibrate_conviction_score(
+                signal,
+                raw_conviction["score"],
+                directional_consensus,
+            ),
+            signal_convergence=compute_signal_convergence(analyst_reports),
+            explanation=raw_conviction["explanation"],
+        )
+        conviction = _reconcile_conviction(signal, conviction)
 
         return Briefing(
             ticker=ticker_data.info.symbol,
-            date=date.today().isoformat(),
+            date=ticker_data.fetched_at.date().isoformat(),
             overall_signal=signal,
             conviction=conviction,
             executive_summary=result["executive_summary"],
