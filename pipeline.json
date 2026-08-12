@@ -34,15 +34,19 @@
           {
             "id": "MY",
             "label": "Bursa / KLSE",
-            "lines": ["stub — planned"],
-            "tone": "muted"
+            "lines": ["yfinance via .KL suffix", "BURSA_ALIASES name → code"],
+            "tone": "data"
           }
         ]
       ],
       "sink": {
         "id": "SDL",
         "label": "DataStore",
-        "lines": ["structured JSON per ticker", "market_data · reports · briefing"],
+        "lines": [
+          "flat per-ticker layout",
+          "price_history.csv · fundamentals · technicals",
+          "reports · verdict · briefing · outcomes"
+        ],
         "tone": "data"
       }
     },
@@ -108,10 +112,32 @@
       ]
     },
     {
+      "id": "L35",
+      "layer": "Layer 3.5",
+      "title": "Research Manager",
+      "note": "rules on the debate — does not re-argue it",
+      "model": "Sonnet",
+      "modelKey": "research_manager_model",
+      "rows": [
+        [
+          {
+            "id": "RM",
+            "label": "ResearchManager",
+            "lines": [
+              "winning side · thesis",
+              "strongest counterexample",
+              "invalidation conditions · evidence gaps"
+            ],
+            "tone": "agent"
+          }
+        ]
+      ]
+    },
+    {
       "id": "L4",
       "layer": "Layer 4",
-      "title": "Synthesis + Portfolio Risk",
-      "note": "arbitrates the debate",
+      "title": "Synthesis",
+      "note": "writes the briefing; convergence is computed, not authored",
       "model": "Sonnet",
       "modelKey": "synthesis_model",
       "rows": [
@@ -119,14 +145,54 @@
           {
             "id": "SYN",
             "label": "SynthesizerAgent",
-            "lines": ["merges reports + debate", "signal · conviction · convergence"],
+            "lines": ["merges reports + verdict + memory", "research view · conviction"],
             "tone": "agent"
           },
           {
             "id": "RISK",
             "label": "RiskChecker",
-            "lines": ["position sizing", "drawdown scenarios"],
-            "tone": "agent"
+            "lines": ["deterministic entry/stop/target", "drawdown · risk-reward"],
+            "tone": "data"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "L5",
+      "layer": "Layer 5",
+      "title": "Portfolio Risk Gate",
+      "note": "deterministic — reads real holdings",
+      "rows": [
+        [
+          {
+            "id": "GATE",
+            "label": "PortfolioGate",
+            "lines": [
+              "risk budget → stop distance → size",
+              "single / sector / USD exposure caps",
+              "APPROVE · WATCH · REDUCE · REJECT"
+            ],
+            "tone": "data"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "L6",
+      "layer": "Layer 6",
+      "title": "Outcome Memory",
+      "note": "deterministic — closes the loop; exit-date gated against leakage",
+      "rows": [
+        [
+          {
+            "id": "MEM",
+            "label": "OutcomeStore",
+            "lines": [
+              "realized return per resolved call",
+              "hit rate · conviction calibration",
+              "feeds back into Layer 4"
+            ],
+            "tone": "muted"
           }
         ]
       ]
@@ -136,8 +202,9 @@
     "id": "OUT",
     "label": "Briefing",
     "lines": [
-      "overall signal · conviction −1.00…+1.00",
-      "entry limit · stop loss · TP1 / TP2 · position size"
+      "research view · conviction −1.00…+1.00",
+      "trade decision · entry · stop · TP1 / TP2",
+      "position size as % of equity sleeve"
     ],
     "tone": "output"
   },
