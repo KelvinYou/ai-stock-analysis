@@ -20,6 +20,12 @@ app = FastAPI(title="AI Stock Analysis", version="0.1.0")
 # In-memory job tracker
 jobs: dict[str, Job] = {}
 
+# Strong references to in-flight analysis tasks. asyncio holds only a weak
+# reference to a bare `create_task` result, so without this the event loop may
+# garbage-collect a running analysis mid-pipeline and the job silently never
+# completes.
+_background_tasks: set[asyncio.Task] = set()
+
 
 class JobStatus(str, Enum):
     PENDING = "pending"
@@ -54,7 +60,9 @@ async def start_analysis(ticker: str, req: AnalyzeRequest | None = None):
         debate_rounds=req.rounds,
     )
 
-    asyncio.create_task(_run_analysis(job_id, ticker.upper(), settings))
+    task = asyncio.create_task(_run_analysis(job_id, ticker.upper(), settings))
+    _background_tasks.add(task)
+    task.add_done_callback(_background_tasks.discard)
     return {"job_id": job_id, "ticker": ticker.upper(), "status": "pending"}
 
 
