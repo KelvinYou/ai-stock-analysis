@@ -7,40 +7,37 @@ from mcp.types import ToolAnnotations
 from pydantic import BaseModel
 
 from stock_analysis.config import Settings
-from stock_analysis.models.agent_reports import MacroFXReport
+from stock_analysis.models.agent_reports import Confidence, MacroFXReport, Signal
 from stock_analysis.models.market_data import TickerData
 
 from .base import BaseAnalystAgent
 
-# Initial hardcoded macro context — will be replaced with live API data later
-MACRO_CONTEXT = """
-## Current Macro Environment (as of April 2026)
+def build_macro_snapshot(ticker_data: TickerData) -> dict:
+    """Build a point-in-time macro envelope without inventing unavailable facts.
 
-### US Federal Reserve
-- Fed funds rate: 4.25-4.50% (holding steady)
-- Inflation (CPI): trending toward 2% target
-- Next FOMC meeting: upcoming — market expects hold
-- Quantitative tightening: ongoing, pace reduced
-
-### Global
-- US GDP growth: moderate (~2%)
-- US unemployment: low (~4%)
-- China: mixed recovery signals
-- Geopolitical: trade tensions remain elevated
-
-### Malaysia (BNM)
-- OPR: 3.00%
-- MYR/USD: ~4.30-4.40 range
-- BNM stance: accommodative, focused on growth
-- Inflation: moderate
-
-### Sector Sensitivity Notes
-- Tech: sensitive to rate expectations, AI capex cycle
-- Financials: benefit from higher-for-longer rates
-- Energy: oil price volatility, geopolitical premium
-- Consumer: inflation impact on spending
-- Healthcare: defensive, less rate-sensitive
-"""
+    The project does not currently ingest dated Fed/BNM/FX observations. An
+    explicit unavailable snapshot is safer than feeding every historical trial
+    a stale present-day paragraph, which would create both leakage and false
+    confidence.
+    """
+    as_of = ticker_data.fetched_at.date().isoformat()
+    return {
+        "status": "unavailable",
+        "as_of": as_of,
+        "source": "not_configured",
+        "freshness": "unknown",
+        "fed": {
+            "fed_funds_rate": None,
+            "inflation": None,
+        },
+        "bnm": {"opr": None},
+        "fx": {"usd_myr": None},
+        "sector": ticker_data.info.sector,
+        "notice": (
+            "No dated macro snapshot is configured. Do not infer current or "
+            "historical rates, FX, inflation, or geopolitical facts from memory."
+        ),
+    }
 
 
 class MacroFXAgent(BaseAnalystAgent):
@@ -50,6 +47,22 @@ class MacroFXAgent(BaseAnalystAgent):
     def __init__(self, settings: Settings | None = None):
         s = settings or Settings()
         self.model = s.quick_think_model
+
+    async def analyze(self, ticker_data: TickerData) -> MacroFXReport:
+        """Return an explicit neutral report until dated macro data is available."""
+        snapshot = build_macro_snapshot(ticker_data)
+        if snapshot["status"] != "available":
+            return MacroFXReport(
+                signal=Signal.NEUTRAL,
+                confidence=Confidence.LOW,
+                fed_impact="Unavailable: no dated Fed snapshot is configured.",
+                interest_rate_outlook="Unavailable: no dated rate snapshot is configured.",
+                fx_impact="Unavailable: no dated FX snapshot is configured.",
+                sector_macro_factors=[],
+                geopolitical_risks=[],
+                summary="Macro/FX data is unavailable; no directional view is assigned.",
+            )
+        return await super().analyze(ticker_data)
 
     def system_prompt(self) -> str:
         return (
@@ -61,6 +74,8 @@ class MacroFXAgent(BaseAnalystAgent):
             "- Assess how current rate environment affects the company's cost of capital\n"
             "- Identify geopolitical risks relevant to the company's operations/supply chain\n"
             "- For Malaysian stocks, specifically consider MYR/USD impact and BNM policy\n"
+            "- If the macro tool reports an unavailable snapshot, do not invent facts; "
+            "use neutral/low confidence unless dated macro evidence is present\n"
             "- Provide a clear signal with confidence level\n"
             "- Keep your summary concise (2-3 sentences)"
         )
@@ -88,11 +103,16 @@ class MacroFXAgent(BaseAnalystAgent):
 
         @tool(
             "get_macro_context",
-            "Get current macroeconomic environment: Fed/BNM rates, inflation, GDP, FX, geopolitical factors",
+            "Get the point-in-time macro snapshot; it may explicitly report unavailable data",
             {"ticker": str},
             annotations=ToolAnnotations(readOnlyHint=True),
         )
         async def get_macro_context(args: dict) -> dict:
-            return {"content": [{"type": "text", "text": MACRO_CONTEXT}]}
+            snapshot = build_macro_snapshot(ticker_data)
+            return {
+                "content": [
+                    {"type": "text", "text": json.dumps(snapshot, ensure_ascii=False)}
+                ]
+            }
 
         return [get_ticker_sector, get_macro_context]

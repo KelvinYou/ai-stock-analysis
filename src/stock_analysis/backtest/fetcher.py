@@ -185,17 +185,11 @@ class BacktestFetcher(BaseFetcher):
         lo = min((p.low for p in last_year), default=None)
         last_close = price_history[-1].close
 
-        # Rough PE: last_close * shares_outstanding / net_income (if both available)
+        # Current `stock.info` shares are not point-in-time. Do not derive
+        # historical market cap/P-E from a future share count; leave valuation
+        # fields unknown until a dated shares source is available.
         pe_ratio: float | None = None
         market_cap: float | None = None
-        shares = raw_info.get("sharesOutstanding") or raw_info.get("impliedSharesOutstanding")
-        if shares and financials and financials.net_income:
-            try:
-                market_cap = float(shares) * last_close
-                if financials.net_income > 0:
-                    pe_ratio = market_cap / financials.net_income
-            except Exception:
-                pass
 
         # Normalize display symbol for MY
         sym = display_symbol.upper().strip()

@@ -7,7 +7,7 @@ from mcp.types import ToolAnnotations
 from pydantic import BaseModel
 
 from stock_analysis.config import Settings
-from stock_analysis.models.agent_reports import SentimentReport
+from stock_analysis.models.agent_reports import Confidence, SentimentReport, Signal
 from stock_analysis.models.market_data import TickerData
 
 from .base import BaseAnalystAgent
@@ -21,6 +21,21 @@ class SentimentAgent(BaseAnalystAgent):
         s = settings or Settings()
         self.model = s.quick_think_model
 
+    async def analyze(self, ticker_data: TickerData) -> SentimentReport:
+        """Do not ask an LLM to invent sentiment when no dated evidence exists."""
+        if not ticker_data.news_headlines and not ticker_data.analyst_recommendations:
+            return SentimentReport(
+                signal=Signal.NEUTRAL,
+                confidence=Confidence.LOW,
+                news_tone="unavailable",
+                news_summary="No point-in-time news or analyst recommendations available.",
+                key_themes=[],
+                notable_headlines=[],
+                social_sentiment=None,
+                summary="Sentiment is unavailable; no directional view is assigned.",
+            )
+        return await super().analyze(ticker_data)
+
     def system_prompt(self) -> str:
         return (
             "You are a market sentiment analyst. You evaluate investor sentiment by analyzing "
@@ -30,6 +45,7 @@ class SentimentAgent(BaseAnalystAgent):
             "- Identify recurring themes across headlines (e.g., 'AI expansion', 'margin pressure')\n"
             "- Note whether sentiment appears ahead of or behind the fundamentals\n"
             "- Highlight any contrarian signals (e.g., extreme bullishness as a warning)\n"
+            "- If no dated news or recommendations are available, use neutral/low confidence\n"
             "- Provide a clear signal with confidence level\n"
             "- Keep your summary concise (2-3 sentences)"
         )
