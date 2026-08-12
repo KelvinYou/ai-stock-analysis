@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import asyncio
 import logging
-
 from datetime import date
 
 from stock_analysis.agents.fundamentals import FundamentalsAgent
@@ -11,12 +10,16 @@ from stock_analysis.agents.sentiment import SentimentAgent
 from stock_analysis.agents.technical import TechnicalAgent
 from stock_analysis.config import Settings
 from stock_analysis.data.fetcher_base import BaseFetcher
-from stock_analysis.data.store import DataStore
 from stock_analysis.data.my_market import MYMarketFetcher
+from stock_analysis.data.store import DataStore
 from stock_analysis.data.us_market import USMarketFetcher
 from stock_analysis.debate.engine import DebateEngine
+from stock_analysis.debate.research_manager import ResearchManager
+from stock_analysis.memory.outcomes import OutcomeStore, build_memory_context
 from stock_analysis.models.agent_reports import AnalystReports
+from stock_analysis.models.debate import ResearchVerdict
 from stock_analysis.models.synthesis import Briefing
+from stock_analysis.synthesis.portfolio_gate import PortfolioGate
 from stock_analysis.synthesis.risk_checker import RiskChecker
 from stock_analysis.synthesis.synthesizer import SynthesizerAgent
 
@@ -90,22 +93,72 @@ class AnalysisPipeline:
         self.store.save_debate_result(ticker, debate_result, self.as_of_date)
         logger.info("[Layer 3] Debate complete.")
 
+        # === Layer 3.5: Research Manager (adjudicates the debate) ===
+        research_verdict: ResearchVerdict | None = None
+        if self.settings.enable_research_manager:
+            logger.info("[Layer 3.5] Adjudicating debate...")
+            research_verdict = await ResearchManager(self.settings).adjudicate(
+                ticker_data, analyst_reports, debate_result
+            )
+            self.store.save_research_verdict(ticker, research_verdict, self.as_of_date)
+            logger.info(
+                f"[Layer 3.5] Verdict: {research_verdict.judged_view.value} "
+                f"(winning side: {research_verdict.winning_side})"
+            )
+
+        # === Layer 6 read: prior outcomes for this ticker ===
+        # Read before synthesis because it is an input to it. Gated on
+        # `as_of_date` so a backtest never sees an outcome that had not resolved
+        # yet — without that filter the "track record" is future knowledge.
+        memory_context: str | None = None
+        if self.settings.enable_outcome_memory:
+            outcome_store = OutcomeStore(self.settings.data_dir)
+            prior = outcome_store.load(ticker, before=self.as_of_date)
+            if prior:
+                memory_context = build_memory_context(
+                    prior, outcome_store.calibration(ticker, before=self.as_of_date)
+                )
+                logger.info(f"[Layer 6] Injected {len(prior)} prior outcome(s).")
+
         # === Layer 4: Synthesis + Risk ===
         logger.info("[Layer 4] Synthesizing final briefing...")
         synthesizer = SynthesizerAgent(self.settings)
         briefing = await synthesizer.synthesize(
-            ticker_data, analyst_reports, debate_result
+            ticker_data,
+            analyst_reports,
+            debate_result,
+            research_verdict=research_verdict,
+            memory_context=memory_context,
         )
 
         risk_checker = RiskChecker()
         briefing.action_plan = risk_checker.plan_action(ticker_data, briefing)
+
+        # === Layer 5: Portfolio Risk Gate ===
+        # Runs after the action plan (it sizes off the stop distance) and before
+        # `assess`, which reports the gate's size rather than deriving its own.
+        if self.settings.enable_portfolio_gate:
+            logger.info("[Layer 5] Checking portfolio exposure...")
+            gate = PortfolioGate(
+                data_dir=self.settings.data_dir,
+                risk_budget_pct=self.settings.per_trade_risk_budget_pct,
+            )
+            briefing.portfolio_gate = gate.evaluate(ticker_data, briefing)
+            briefing.trade_decision = briefing.portfolio_gate.decision
+            logger.info(
+                f"[Layer 5] Gate: {briefing.portfolio_gate.decision.value.upper()} — "
+                f"{briefing.portfolio_gate.reasons[0] if briefing.portfolio_gate.reasons else ''}"
+            )
+
         briefing.risk_assessment = risk_checker.assess(ticker_data, briefing)
 
         self.store.save_briefing(ticker, briefing, self.as_of_date)
         logger.info(
-            f"[Layer 4] Final signal: {briefing.overall_signal.value} "
+            f"[Layer 4] Research view: {briefing.overall_signal.value} "
             f"(conviction: {briefing.conviction.score:+.2f}, "
-            f"convergence: {briefing.conviction.signal_convergence:.2f})"
+            f"convergence: {briefing.conviction.signal_convergence:.2f}) | "
+            f"trade decision: "
+            f"{briefing.trade_decision.value if briefing.trade_decision else 'not gated'}"
         )
 
         return briefing
