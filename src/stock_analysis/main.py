@@ -2,9 +2,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
-import json
 import logging
-import sys
 
 from stock_analysis import __version__
 from stock_analysis.config import Settings

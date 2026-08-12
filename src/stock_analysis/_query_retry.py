@@ -34,7 +34,7 @@ async def query_with_retry(
             if result_msg is None:
                 raise RuntimeError(f"{label}: no ResultMessage returned")
             return result_msg
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             last_exc = exc
             if attempt == attempts:
                 break

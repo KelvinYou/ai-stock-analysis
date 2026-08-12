@@ -48,3 +48,38 @@ pythonpath = ["src"]
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+
+# Selected explicitly rather than relying on ruff's defaults: the default rule
+# set shifts between ruff releases, so an unpinned gate reports a different
+# number of problems on every upgrade and stops being a gate.
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # import sorting
+    "UP",   # pyupgrade
+    "B",    # bugbear
+    "SIM",  # simplify
+    "ISC",  # implicit string concat — catches missing commas in list literals
+    "RUF",
+]
+ignore = [
+    # Naive dates and datetimes are deliberate: market data is dated by trading
+    # day, and attaching timezones would imply a precision the sources lack.
+    "DTZ",
+    # Long prompt strings are more readable unwrapped than split.
+    "E501",
+    # `class Signal(str, Enum)` must NOT become `StrEnum`: `str(Signal.BUY)`
+    # returns "Signal.BUY" under the former and "buy" under the latter, and
+    # `Briefing.coerce_signal_values` plus every persisted briefing.json depend
+    # on the current behaviour.
+    "UP042",
+    # Chinese text and em dashes in prose are intentional, not homoglyph typos.
+    "RUF001",
+    "RUF002",
+    "RUF003",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Test fixtures use class-level dict literals as fake API payloads.
+"tests/**" = ["RUF012"]

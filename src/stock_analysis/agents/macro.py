@@ -12,6 +12,7 @@ from stock_analysis.models.market_data import TickerData
 
 from .base import BaseAnalystAgent
 
+
 def build_macro_snapshot(ticker_data: TickerData) -> dict:
     """Build a point-in-time macro envelope without inventing unavailable facts.
 

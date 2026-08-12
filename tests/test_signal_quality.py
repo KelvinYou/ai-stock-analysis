@@ -1,14 +1,21 @@
-from datetime import date, datetime, timedelta
 import asyncio
 import unittest
+from datetime import date, datetime, timedelta
 from unittest.mock import patch
 
 from pydantic import ValidationError
 
-from stock_analysis.agents.macro import build_macro_snapshot
-from stock_analysis.agents.macro import MacroFXAgent
+from stock_analysis.agents.macro import MacroFXAgent, build_macro_snapshot
 from stock_analysis.agents.sentiment import SentimentAgent
 from stock_analysis.agents.technical import build_indicator_payload
+from stock_analysis.backtest.fetcher import BacktestFetcher
+from stock_analysis.backtest.runner import execution_signal
+from stock_analysis.backtest.session import (
+    SessionPrediction,
+    calibrate_session_prediction,
+    compute_session_consensus_score,
+    compute_session_convergence,
+)
 from stock_analysis.data.technicals import compute_technicals
 from stock_analysis.models.agent_reports import (
     AnalystReports,
@@ -27,14 +34,6 @@ from stock_analysis.models.market_data import (
     TickerInfo,
 )
 from stock_analysis.models.synthesis import ConvictionScore
-from stock_analysis.backtest.session import (
-    SessionPrediction,
-    calibrate_session_prediction,
-    compute_session_consensus_score,
-    compute_session_convergence,
-)
-from stock_analysis.backtest.fetcher import BacktestFetcher
-from stock_analysis.backtest.runner import execution_signal
 from stock_analysis.synthesis.synthesizer import (
     calibrate_conviction_score,
     compute_directional_consensus,

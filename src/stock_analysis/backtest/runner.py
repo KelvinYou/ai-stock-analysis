@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 import logging
+from collections.abc import Iterable
 from datetime import date, timedelta
 from pathlib import Path
-from typing import Iterable
 
 import pandas as pd
 import yfinance as yf
@@ -109,7 +109,7 @@ class Backtester:
             for as_of in as_of_dates:
                 try:
                     trial = await self._run_one(ticker, as_of, forward_series[ticker], resume)
-                except Exception as exc:  # noqa: BLE001
+                except Exception as exc:
                     logger.exception("Trial failed: %s @ %s", ticker, as_of)
                     trial = BacktestTrial(
                         ticker=ticker,

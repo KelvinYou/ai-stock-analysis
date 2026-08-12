@@ -18,9 +18,9 @@ four analyst directions needed for attribution.
 from __future__ import annotations
 
 import json
+from collections.abc import Iterable
 from datetime import date, timedelta
 from pathlib import Path
-from typing import Iterable
 
 from pydantic import BaseModel, Field
 
@@ -29,8 +29,7 @@ from stock_analysis.models.agent_reports import Confidence, Signal
 from stock_analysis.synthesis.risk_checker import is_actionable
 
 from .fetcher import BacktestFetcher
-from .runner import BacktestResult, BacktestTrial, Backtester
-
+from .runner import Backtester, BacktestResult, BacktestTrial
 
 SESSION_MODE = "in-session-claude-code"
 
@@ -356,7 +355,7 @@ def score_session_bundle(session_dir: Path) -> BacktestResult:
             macro_available=macro_available,
         )
 
-        entry_price, entry_date = backtester._price_on_or_after(
+        entry_price, _entry_date = backtester._price_on_or_after(
             forward_series[key[0]], key[1]
         )
         exit_price, exit_date = backtester._price_on_or_after(
