@@ -25,7 +25,7 @@ Built on the [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk) 
 <tr><td width="30%"><b>🧑‍💼 Four parallel analyst agents</b></td><td>Fundamentals, Sentiment, Technical, and Macro/FX run concurrently. Each returns a typed report with a signal (strong buy → strong sell) and a confidence score.</td></tr>
 <tr><td><b>⚖️ Adversarial bull/bear debate</b></td><td>Multi-round researcher debate surfaces points of agreement, disagreement, and unresolved uncertainty — not a single averaged take.</td></tr>
 <tr><td><b>🎯 Actionable price levels</b></td><td>Briefings include entry, stop, and target levels gated on conviction. No abstract signals that tell you nothing.</td></tr>
-<tr><td><b>📊 Conviction & convergence metrics</b></td><td>Every briefing reports a conviction score (−1.0 to +1.0) and a signal-convergence score showing how much the four agents actually agreed.</td></tr>
+<tr><td><b>📊 Conviction & convergence metrics</b></td><td>Every briefing reports a conviction score (−1.0 to +1.0) capped by the confidence-weighted net consensus of the four agents, plus a deterministic convergence score.</td></tr>
 <tr><td><b>⏮️ Historical backtesting</b></td><td>Replay the full pipeline over any date range. Score hit rate and directional accuracy against realized price moves.</td></tr>
 <tr><td><b>🖥️ Web dashboard + REST API</b></td><td>Next.js portfolio view with per-ticker drill-down. FastAPI job queue for programmatic runs. Conviction meter, debate transcript, watchlist.</td></tr>
 <tr><td><b>💸 Cost-tuned model routing</b></td><td>Haiku for analyst agents, Opus for debate, Sonnet for synthesis. Configurable per layer in <code>config.py</code>.</td></tr>
@@ -149,6 +149,38 @@ stock-analysis AAPL --market US --rounds 3 --model haiku --debate-model opus -v
 ```bash
 stock-analysis-backtest --tickers AAPL,MSFT --start 2024-01-01 --end 2024-12-31
 ```
+
+### Run backtests in the current session (no API key)
+
+The Python process cannot call the current Claude/Codex conversation directly.
+Use the two-stage session mode instead: the first command writes point-in-time
+input packets without future prices; the current session writes the compact
+`SessionPrediction` records; the second command runs the normal scorer and
+portfolio simulation.
+
+```bash
+stock-analysis-backtest --mode session-prepare \
+  --tickers AAPL,MSFT --start 2025-08-01 --end 2026-07-01 \
+  --session-dir /tmp/aapl-msft-session
+
+# Write predictions.json in the session directory, then:
+stock-analysis-backtest --mode session-score \
+  --session-dir /tmp/aapl-msft-session \
+  --output /tmp/aapl-msft-backtest
+```
+
+Session predictions must contain `ticker`, `as_of_date`, `overall_signal`,
+`conviction_score`, `signal_convergence`, and optional `agent_signals` (whose
+values are exact `strong_buy`, `buy`, `neutral`, `sell`, or `strong_sell`
+signals). During scoring, convergence is recomputed from the analyst signals;
+the conviction score is recalibrated to the net analyst consensus, and
+directional predictions that disagree with that consensus or do not clear the
+deterministic conviction/convergence execution gate are scored as `neutral`.
+Optional `agent_confidences` can provide `high`, `medium`, or `low` weights.
+Session packets also declare point-in-time evidence availability; when dated
+news/recommendations or macro data are unavailable, scoring forces those
+analysts to `neutral` with `low` confidence instead of trusting unsupported
+directional output.
 
 ### Web dashboard
 
