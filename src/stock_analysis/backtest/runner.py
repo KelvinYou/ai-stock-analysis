@@ -20,6 +20,27 @@ from .fetcher import BacktestFetcher
 logger = logging.getLogger(__name__)
 
 
+_SIGNAL_NAMES = {signal.value for signal in Signal}
+
+
+def _normalise_agent_signals(signals: dict[str, str]) -> dict[str, str]:
+    """Make agent attribution compatible with portfolio strategy names."""
+    normalised: dict[str, str] = {}
+    for name, raw_signal in signals.items():
+        strategy = "macro" if name == "macro_fx" else name
+        signal = str(raw_signal).strip().split(maxsplit=1)[0].lower()
+        if signal in _SIGNAL_NAMES:
+            normalised[strategy] = signal
+    return normalised
+
+
+def execution_signal(briefing: Briefing) -> Signal:
+    """Return the signal that has a valid deterministic execution plan."""
+    if briefing.action_plan is not None and briefing.action_plan.note:
+        return Signal.NEUTRAL
+    return briefing.overall_signal
+
+
 class BacktestTrial(BaseModel):
     """Result of a single (ticker, as_of_date) trial."""
 
@@ -114,6 +135,7 @@ class Backtester:
                 "lookback_days": self.lookback_days,
                 "quick_think_model": self.settings.quick_think_model,
                 "deep_think_model": self.settings.deep_think_model,
+                "synthesis_model": self.settings.synthesis_model,
                 "debate_rounds": self.settings.debate_rounds,
             },
             started_at=started_at,
@@ -170,10 +192,12 @@ class Backtester:
             exit_date=exit_date,
             exit_price=exit_price,
             realized_return=realized,
-            overall_signal=briefing.overall_signal,
+            overall_signal=execution_signal(briefing),
             conviction_score=briefing.conviction.score,
             signal_convergence=briefing.conviction.signal_convergence,
-            agent_signals=dict(briefing.agent_signal_breakdown),
+            agent_signals=_normalise_agent_signals(
+                dict(briefing.agent_signal_breakdown)
+            ),
         )
 
     # ------------------------------------------------------------------
