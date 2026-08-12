@@ -106,6 +106,7 @@ class Scorer:
             f"- Horizon: {horizon} calendar days",
             f"- Trials: {report.total_trials} "
             f"({report.completed_trials} completed, {report.errored_trials} errored)",
+            f"- Pipeline mode: {result.settings.get('pipeline_mode', 'api')}",
             f"- Models: quick={result.settings.get('quick_think_model')} "
             f"deep={result.settings.get('deep_think_model')} "
             f"rounds={result.settings.get('debate_rounds')}",
