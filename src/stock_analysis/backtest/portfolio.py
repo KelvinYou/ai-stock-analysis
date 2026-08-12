@@ -122,7 +122,7 @@ def _simulate_one(
     def flush_exits_up_to(d: date) -> None:
         nonlocal cash
         # Close any positions whose exit_date is on or before d
-        due_dates = sorted(k for k in pending_exits.keys() if k <= d)
+        due_dates = sorted(k for k in pending_exits if k <= d)
         for ed in due_dates:
             for pos in pending_exits.pop(ed):
                 pnl = pos.stake * pos.direction * pos.realized_return
@@ -174,7 +174,7 @@ def _buy_and_hold(trials: list[BacktestTrial], config: PortfolioConfig) -> Strat
 
     def flush_up_to(d: date) -> None:
         nonlocal cash
-        for ed in sorted(k for k in pending_exits.keys() if k <= d):
+        for ed in sorted(k for k in pending_exits if k <= d):
             for pos in pending_exits.pop(ed):
                 pnl = pos.stake * pos.realized_return
                 cash += pos.stake + pnl

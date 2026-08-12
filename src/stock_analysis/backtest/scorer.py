@@ -104,12 +104,12 @@ class Scorer:
             "# Backtest Report",
             "",
             f"- Horizon: {horizon} calendar days",
-            f"- Trials: {report.total_trials} "
-            f"({report.completed_trials} completed, {report.errored_trials} errored)",
+            (f"- Trials: {report.total_trials} "
+            f"({report.completed_trials} completed, {report.errored_trials} errored)"),
             f"- Pipeline mode: {result.settings.get('pipeline_mode', 'api')}",
-            f"- Models: quick={result.settings.get('quick_think_model')} "
+            (f"- Models: quick={result.settings.get('quick_think_model')} "
             f"deep={result.settings.get('deep_think_model')} "
-            f"rounds={result.settings.get('debate_rounds')}",
+            f"rounds={result.settings.get('debate_rounds')}"),
         ]
         if report.effective_cutoff is not None:
             lines.append(
@@ -129,30 +129,30 @@ class Scorer:
                 "",
                 "## Training-cutoff-aware split",
                 "",
-                "Trials at or before the cutoff may be contaminated by model training data. "
-                "Only the post-cutoff slice is a clean out-of-sample test.",
+                ("Trials at or before the cutoff may be contaminated by model training data. "
+                "Only the post-cutoff slice is a clean out-of-sample test."),
                 "",
                 f"### Pre-cutoff (≤ {report.effective_cutoff.isoformat()}) — potentially contaminated",
                 "",
-                f"- Trials: {report.pre_cutoff.total_trials} "
+                (f"- Trials: {report.pre_cutoff.total_trials} "
                 f"({report.pre_cutoff.completed_trials} completed, "
-                f"{report.pre_cutoff.errored_trials} errored)",
+                f"{report.pre_cutoff.errored_trials} errored)"),
             ]
             lines += _metric_lines(report.pre_cutoff)
             lines += [
                 "",
                 f"### Post-cutoff (> {report.effective_cutoff.isoformat()}) — clean out-of-sample",
                 "",
-                f"- Trials: {report.post_cutoff.total_trials} "
+                (f"- Trials: {report.post_cutoff.total_trials} "
                 f"({report.post_cutoff.completed_trials} completed, "
-                f"{report.post_cutoff.errored_trials} errored)",
+                f"{report.post_cutoff.errored_trials} errored)"),
             ]
             lines += _metric_lines(report.post_cutoff)
             if report.post_cutoff.completed_trials < 10:
                 lines += [
                     "",
-                    f"> ⚠ Only {report.post_cutoff.completed_trials} clean trials — "
-                    "sample too small for statistical inference. Extend the date range past the cutoff.",
+                    (f"> ⚠ Only {report.post_cutoff.completed_trials} clean trials — "
+                    "sample too small for statistical inference. Extend the date range past the cutoff."),
                 ]
 
         return "\n".join(lines) + "\n"
@@ -295,7 +295,7 @@ def _safe_sharpe(values: list[float]) -> float | None:
 
 
 def _correlation(xs: list[float], ys: list[float]) -> float | None:
-    pairs = [(x, y) for x, y in zip(xs, ys) if x is not None and y is not None]
+    pairs = [(x, y) for x, y in zip(xs, ys, strict=False) if x is not None and y is not None]
     if len(pairs) < 2:
         return None
     xs_c = [p[0] for p in pairs]

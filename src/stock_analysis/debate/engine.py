@@ -5,6 +5,10 @@ import json
 from claude_agent_sdk import ClaudeAgentOptions, ResultMessage
 
 from stock_analysis._query_retry import query_with_retry
+from stock_analysis.config import Settings
+from stock_analysis.models.agent_reports import AnalystReports
+from stock_analysis.models.debate import DebateArgument, DebateResult, DebateRound
+from stock_analysis.models.market_data import TickerData
 
 
 def _extract_result(message: ResultMessage) -> dict | None:
@@ -18,10 +22,6 @@ def _extract_result(message: ResultMessage) -> dict | None:
             pass
     return None
 
-from stock_analysis.config import Settings
-from stock_analysis.models.agent_reports import AnalystReports
-from stock_analysis.models.debate import DebateArgument, DebateResult, DebateRound
-from stock_analysis.models.market_data import TickerData
 
 BULL_SYSTEM = (
     "You are an optimistic equity researcher building the strongest possible investment case. "

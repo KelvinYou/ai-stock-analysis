@@ -183,7 +183,6 @@ class BacktestFetcher(BaseFetcher):
         ]
         hi = max((p.high for p in last_year), default=None)
         lo = min((p.low for p in last_year), default=None)
-        last_close = price_history[-1].close
 
         # Current `stock.info` shares are not point-in-time. Do not derive
         # historical market cap/P-E from a future share count; leave valuation
@@ -231,10 +230,7 @@ class BacktestFetcher(BaseFetcher):
     @staticmethod
     def _safe_get(series, key: str) -> float | None:
         try:
-            if hasattr(series, "get"):
-                val = series.get(key)
-            else:
-                val = None
+            val = series.get(key) if hasattr(series, "get") else None
             if val is not None and str(val) != "nan":
                 return float(val)
         except (KeyError, TypeError, ValueError):
