@@ -9,7 +9,7 @@ from typing import TypeVar
 from pydantic import BaseModel
 
 from stock_analysis.models.agent_reports import AnalystReports
-from stock_analysis.models.debate import DebateResult
+from stock_analysis.models.debate import DebateResult, ResearchVerdict
 from stock_analysis.models.market_data import PriceBar, TechnicalSnapshot, TickerData
 from stock_analysis.models.synthesis import Briefing
 
@@ -23,9 +23,13 @@ class DataStore:
         data/AAPL/
             price_history.csv       # full OHLCV history, overwritten on each fetch
             fundamentals.json       # TickerInfo + financials + news snapshot
+            technicals.json         # computed indicator snapshot (no LLM)
             analyst_reports.json
             debate_result.json
+            research_verdict.json   # Layer 3.5 adjudication
             briefing.json
+            outcomes.jsonl          # Layer 6 append-only outcome log
+            calibration.json        # Layer 6 computed track record
 
     Backtest paths (for_date set) fall back to the legacy per-date subdirectory layout:
         data/AAPL/2026-04-18/market_data.json
@@ -180,6 +184,25 @@ class DataStore:
         if not path.exists():
             return None
         return DebateResult.model_validate_json(path.read_text())
+
+    # --- Layer 3.5 ---
+
+    def save_research_verdict(
+        self, ticker: str, verdict: ResearchVerdict, for_date: date | None = None
+    ) -> Path:
+        d = self._dated_dir(ticker, for_date) if for_date else self._flat_dir(ticker)
+        path = d / "research_verdict.json"
+        path.write_text(verdict.model_dump_json(indent=2))
+        return path
+
+    def load_research_verdict(
+        self, ticker: str, for_date: date | None = None
+    ) -> ResearchVerdict | None:
+        d = (self.base / ticker.upper() / for_date.isoformat()) if for_date else (self.base / ticker.upper())
+        path = d / "research_verdict.json"
+        if not path.exists():
+            return None
+        return ResearchVerdict.model_validate_json(path.read_text())
 
     # --- Layer 4 ---
 

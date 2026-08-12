@@ -6,6 +6,13 @@ import logging
 from claude_agent_sdk import ClaudeAgentOptions, ResultMessage
 
 from stock_analysis._query_retry import query_with_retry
+from stock_analysis.config import Settings
+from stock_analysis.models.agent_reports import AnalystReports, Confidence, Signal
+from stock_analysis.models.debate import DebateResult, ResearchVerdict
+from stock_analysis.models.market_data import TickerData
+from stock_analysis.models.synthesis import Briefing, ConvictionScore
+
+logger = logging.getLogger(__name__)
 
 
 def _extract_result(message: ResultMessage) -> dict | None:
@@ -17,14 +24,6 @@ def _extract_result(message: ResultMessage) -> dict | None:
         except json.JSONDecodeError:
             pass
     return None
-
-from stock_analysis.config import Settings
-from stock_analysis.models.agent_reports import AnalystReports, Confidence, Signal
-from stock_analysis.models.debate import DebateResult
-from stock_analysis.models.market_data import TickerData
-from stock_analysis.models.synthesis import Briefing, ConvictionScore
-
-logger = logging.getLogger(__name__)
 
 # Required sign of conviction.score for each signal. 0 = no constraint.
 _SIGNAL_SIGN: dict[Signal, int] = {
@@ -184,8 +183,16 @@ class SynthesizerAgent:
         ticker_data: TickerData,
         analyst_reports: AnalystReports,
         debate_result: DebateResult,
+        research_verdict: ResearchVerdict | None = None,
+        memory_context: str | None = None,
     ) -> Briefing:
-        context = self._build_full_context(ticker_data, analyst_reports, debate_result)
+        context = self._build_full_context(
+            ticker_data,
+            analyst_reports,
+            debate_result,
+            research_verdict,
+            memory_context,
+        )
 
         prompt = (
             f"{context}\n\n"
@@ -247,12 +254,16 @@ class SynthesizerAgent:
             ticker=ticker_data.info.symbol,
             date=ticker_data.fetched_at.date().isoformat(),
             overall_signal=signal,
+            # The research layer's honest read. `trade_decision` is filled in by
+            # Layer 5, which is the only layer allowed to say "act on this".
+            research_view=signal,
             conviction=conviction,
             executive_summary=result["executive_summary"],
             bull_case=result["bull_case"],
             bear_case=result["bear_case"],
             key_uncertainties=result["key_uncertainties"],
             catalysts_upcoming=result["catalysts_upcoming"],
+            research_verdict=research_verdict,
             risk_assessment=RiskAssessment(
                 position_size_suggestion="pending",
                 correlation_notes=[],
@@ -266,6 +277,8 @@ class SynthesizerAgent:
         ticker_data: TickerData,
         analyst_reports: AnalystReports,
         debate_result: DebateResult,
+        research_verdict: ResearchVerdict | None = None,
+        memory_context: str | None = None,
     ) -> str:
         info = ticker_data.info
         sections = [
@@ -318,5 +331,31 @@ class SynthesizerAgent:
             f"**Points of disagreement:** {', '.join(debate_result.key_points_of_disagreement)}",
             f"**Unresolved:** {', '.join(debate_result.unresolved_uncertainties)}",
         ])
+
+        if research_verdict is not None:
+            sections.extend([
+                "",
+                "---",
+                "",
+                "## Research Manager Verdict (debate already adjudicated)",
+                (f"Ruling: **{research_verdict.judged_view.value}** "
+                f"(confidence {research_verdict.confidence.value}, "
+                f"winning side: {research_verdict.winning_side})"),
+                f"Thesis: {research_verdict.thesis}",
+                f"Strongest counterexample: {research_verdict.strongest_counterexample}",
+                (f"Invalidation conditions: "
+                f"{'; '.join(research_verdict.invalidation_conditions) or 'none stated'}"),
+                (f"Evidence gaps: "
+                f"{'; '.join(research_verdict.evidence_gaps) or 'none stated'}"),
+                (f"Decisive factors: "
+                f"{'; '.join(research_verdict.decisive_factors) or 'none stated'}"),
+                "",
+                ("The debate is already ruled on — do not re-argue it. Carry the "
+                "invalidation conditions into your key uncertainties. If you depart "
+                "from the ruling, state why in your explanation."),
+            ])
+
+        if memory_context:
+            sections.extend(["", "---", "", memory_context])
 
         return "\n".join(sections)

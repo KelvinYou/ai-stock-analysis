@@ -7,6 +7,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from stock_analysis.config import Settings
+from stock_analysis.memory.outcomes import OutcomeStore, records_from_backtest
 
 from . import portfolio as portfolio_mod
 from .portfolio import PortfolioConfig
@@ -89,6 +90,20 @@ def cli():
         type=Path,
         default=Path("backtest_session"),
         help="Directory for session packets, predictions, and outcomes.",
+    )
+    parser.add_argument(
+        "--record-outcomes",
+        action="store_true",
+        help=(
+            "Append realized outcomes to data/<TICKER>/outcomes.jsonl so future runs "
+            "see this track record (Layer 6). Off by default: recording changes what "
+            "later runs read, so back-to-back backtests would stop being comparable."
+        ),
+    )
+    parser.add_argument(
+        "--data-dir",
+        default="data",
+        help="Where per-ticker data lives — used by --record-outcomes (default: data).",
     )
     parser.add_argument(
         "--no-resume",
@@ -204,7 +219,7 @@ def _score_and_write(result, args) -> None:
     out_json = Path(f"{args.output}.json")
     out_md = Path(f"{args.output}.md")
     out_json.write_text(
-        (
+        
             '{"result": '
             + result.model_dump_json(indent=2)
             + ', "report": '
@@ -212,7 +227,7 @@ def _score_and_write(result, args) -> None:
             + ', "portfolio": '
             + portfolio_report.model_dump_json(indent=2)
             + "}"
-        )
+        
     )
     out_md.write_text(markdown)
 
@@ -220,6 +235,13 @@ def _score_and_write(result, args) -> None:
     print(markdown)
     print(f"Raw results: {out_json}")
     print(f"Report:      {out_md}")
+
+    if getattr(args, "record_outcomes", False):
+        store = OutcomeStore(args.data_dir)
+        written = store.append(records_from_backtest(result))
+        for ticker in sorted({t.ticker for t in result.trials}):
+            store.save_calibration(ticker)
+        print(f"Outcomes:    +{written} record(s) into {args.data_dir}/<TICKER>/outcomes.jsonl")
 
 
 def _parse_date(s: str) -> date:

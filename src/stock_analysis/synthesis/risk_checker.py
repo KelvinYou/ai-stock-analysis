@@ -26,10 +26,8 @@ class RiskChecker:
 
     def assess(self, ticker_data: TickerData, briefing: Briefing) -> RiskAssessment:
         volatility = self._compute_volatility(ticker_data)
-        conviction_abs = abs(briefing.conviction.score)
-        convergence = briefing.conviction.signal_convergence
 
-        position_pct = self._suggest_position_size(conviction_abs, convergence, volatility)
+        position_size = self._describe_position_size(briefing)
         max_dd = self._estimate_max_drawdown(ticker_data, volatility)
         correlation_notes = self._check_correlations(ticker_data)
 
@@ -49,7 +47,7 @@ class RiskChecker:
             risk_reward = "N/A (bearish signal)"
 
         return RiskAssessment(
-            position_size_suggestion=f"{position_pct}% of portfolio",
+            position_size_suggestion=position_size,
             correlation_notes=correlation_notes,
             max_drawdown_scenario=max_dd,
             risk_reward_ratio=risk_reward,
@@ -70,18 +68,32 @@ class RiskChecker:
         annualized = daily_vol * math.sqrt(252)
         return round(annualized, 4)
 
-    def _suggest_position_size(
-        self, conviction: float, convergence: float, volatility: float
-    ) -> float:
-        # Base: 2% of portfolio
-        # Scale up with conviction and convergence, down with volatility
-        base = 2.0
-        conviction_mult = 0.5 + conviction  # 0.5 to 1.5
-        convergence_mult = 0.5 + (convergence * 0.5)  # 0.5 to 1.0
-        vol_mult = max(0.3, 1.0 - volatility)  # higher vol = smaller position
+    def _describe_position_size(self, briefing: Briefing) -> str:
+        """Report the portfolio gate's size rather than inventing a second one.
 
-        size = base * conviction_mult * convergence_mult * vol_mult
-        return round(min(max(size, 0.5), 5.0), 1)  # clamp 0.5% - 5%
+        Sizing used to be `conviction x convergence x volatility` computed here,
+        which yielded a percentage of nothing in particular and disagreed with
+        the stop-based size a trader would actually use. The single owner is now
+        `PortfolioGate` (Layer 5); when it has not run, say so instead of
+        substituting a formula.
+        """
+        gate = briefing.portfolio_gate
+        if gate is None:
+            return "Not sized — portfolio gate (Layer 5) did not run."
+
+        sizing = gate.sizing
+        if sizing.suggested_position_pct is None:
+            reason = sizing.notes[0] if sizing.notes else "no usable stop distance"
+            return f"Not sized — {reason}"
+
+        text = (
+            f"{sizing.suggested_position_pct}% of priced equity sleeve "
+            f"(risking {sizing.risk_budget_pct}% on a "
+            f"{sizing.stop_distance_pct:.2f}% stop distance)"
+        )
+        if sizing.capped_by:
+            text = f"{text}; capped by {sizing.capped_by}"
+        return f"{text} — gate: {gate.decision.value.upper()}"
 
     def _estimate_max_drawdown(self, ticker_data: TickerData, volatility: float) -> str:
         closes = [bar.close for bar in ticker_data.price_history]
