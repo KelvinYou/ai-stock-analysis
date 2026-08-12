@@ -7,57 +7,67 @@ from mcp.types import ToolAnnotations
 from pydantic import BaseModel
 
 from stock_analysis.config import Settings
+from stock_analysis.data.technicals import compute_technicals
 from stock_analysis.models.agent_reports import TechnicalReport
-from stock_analysis.models.market_data import PriceBar, TickerData
+from stock_analysis.models.market_data import TickerData
 
 from .base import BaseAnalystAgent
 
 
-def compute_sma(closes: list[float], period: int) -> float | None:
-    if len(closes) < period:
-        return None
-    return sum(closes[-period:]) / period
+def build_indicator_payload(ticker_data: TickerData) -> dict:
+    """Return the exact deterministic indicator snapshot used downstream.
 
-
-def compute_rsi(closes: list[float], period: int = 14) -> float | None:
-    if len(closes) < period + 1:
-        return None
-    deltas = [closes[i] - closes[i - 1] for i in range(1, len(closes))]
-    recent = deltas[-period:]
-    gains = [d for d in recent if d > 0]
-    losses = [-d for d in recent if d < 0]
-    avg_gain = sum(gains) / period if gains else 0
-    avg_loss = sum(losses) / period if losses else 0
-    if avg_loss == 0:
-        return 100.0
-    rs = avg_gain / avg_loss
-    return round(100 - (100 / (1 + rs)), 2)
-
-
-def compute_macd(closes: list[float]) -> dict:
-    """Compute MACD (12, 26, 9) using simple moving averages as approximation."""
-    if len(closes) < 26:
-        return {"macd_line": None, "signal_line": None, "histogram": None}
-    ema12 = sum(closes[-12:]) / 12
-    ema26 = sum(closes[-26:]) / 26
-    macd_line = round(ema12 - ema26, 4)
-    # Signal line approximated from last 9 MACD values
-    if len(closes) >= 35:
-        macd_values = []
-        for i in range(9):
-            offset = 8 - i
-            sl = closes[: len(closes) - offset] if offset > 0 else closes
-            e12 = sum(sl[-12:]) / 12
-            e26 = sum(sl[-26:]) / 26
-            macd_values.append(e12 - e26)
-        signal_line = round(sum(macd_values) / 9, 4)
-    else:
-        signal_line = macd_line
-    histogram = round(macd_line - signal_line, 4)
+    Keeping this adapter next to the analyst tool makes it impossible for the
+    LLM-facing layer and the deterministic risk layer to silently use two
+    different MACD/RSI implementations.
+    """
+    snapshot = compute_technicals(
+        ticker_data.info.symbol,
+        ticker_data.price_history,
+    )
     return {
-        "macd_line": macd_line,
-        "signal_line": signal_line,
-        "histogram": histogram,
+        "as_of_date": snapshot.as_of_date.isoformat(),
+        "rsi_14": snapshot.rsi_14,
+        "macd": {
+            "macd_line": snapshot.macd_line,
+            "signal_line": snapshot.macd_signal,
+            "histogram": snapshot.macd_histogram,
+        },
+        "sma_20": snapshot.sma_20,
+        "sma_50": snapshot.sma_50,
+        "sma_200": snapshot.sma_200,
+        "ema_20": snapshot.ema_20,
+        "current_price": snapshot.close,
+        "price_vs_sma50": (
+            f"{'above' if snapshot.above_sma_50 else 'below'} by "
+            f"{abs(round((snapshot.close / snapshot.sma_50 - 1) * 100, 2))}%"
+            if snapshot.sma_50 is not None
+            else None
+        ),
+        "price_vs_sma200": (
+            f"{'above' if snapshot.above_sma_200 else 'below'} by "
+            f"{abs(round((snapshot.close / snapshot.sma_200 - 1) * 100, 2))}%"
+            if snapshot.sma_200 is not None
+            else None
+        ),
+        "atr_14": snapshot.atr_14,
+        "bollinger": {
+            "upper": snapshot.bb_upper,
+            "middle": snapshot.bb_middle,
+            "lower": snapshot.bb_lower,
+            "pct": snapshot.bb_pct,
+        },
+        "volume": {
+            "current": snapshot.volume,
+            "sma_20": snapshot.volume_sma_20,
+            "ratio": snapshot.volume_ratio,
+        },
+        "52_week": {
+            "high": snapshot.high_52w,
+            "low": snapshot.low_52w,
+            "pct_from_high": snapshot.pct_from_52w_high,
+            "pct_from_low": snapshot.pct_from_52w_low,
+        },
     }
 
 
@@ -78,6 +88,8 @@ class TechnicalAgent(BaseAnalystAgent):
             "- Interpret RSI: >70 overbought, <30 oversold, context matters\n"
             "- Interpret MACD: positive histogram = bullish momentum, negative = bearish\n"
             "- Compare current price to SMA-50 and SMA-200 for trend direction\n"
+            "- Use ATR-14 and Bollinger Bands to distinguish volatility from trend\n"
+            "- Check volume ratio and 52-week distance for confirmation, not as standalone signals\n"
             "- Identify key support/resistance from recent highs/lows\n"
             "- Provide a clear signal with confidence level\n"
             "- Keep your summary concise (2-3 sentences)"
@@ -89,6 +101,7 @@ class TechnicalAgent(BaseAnalystAgent):
     def build_tools(self, ticker_data: TickerData) -> list[SdkMcpTool]:
         closes = [bar.close for bar in ticker_data.price_history]
         volumes = [bar.volume for bar in ticker_data.price_history]
+        indicators = build_indicator_payload(ticker_data)
 
         @tool(
             "get_price_summary",
@@ -123,23 +136,6 @@ class TechnicalAgent(BaseAnalystAgent):
             annotations=ToolAnnotations(readOnlyHint=True),
         )
         async def get_computed_indicators(args: dict) -> dict:
-            indicators = {
-                "rsi_14": compute_rsi(closes),
-                "macd": compute_macd(closes),
-                "sma_50": round(compute_sma(closes, 50), 4) if compute_sma(closes, 50) else None,
-                "sma_200": round(compute_sma(closes, 200), 4) if compute_sma(closes, 200) else None,
-                "current_price": closes[-1] if closes else None,
-                "price_vs_sma50": (
-                    f"{'above' if closes[-1] > sma50 else 'below'} by {abs(round((closes[-1] / sma50 - 1) * 100, 2))}%"
-                    if (sma50 := compute_sma(closes, 50)) and closes
-                    else None
-                ),
-                "price_vs_sma200": (
-                    f"{'above' if closes[-1] > sma200 else 'below'} by {abs(round((closes[-1] / sma200 - 1) * 100, 2))}%"
-                    if (sma200 := compute_sma(closes, 200)) and closes
-                    else None
-                ),
-            }
             return {"content": [{"type": "text", "text": json.dumps(indicators, default=str)}]}
 
         return [get_price_summary, get_computed_indicators]
