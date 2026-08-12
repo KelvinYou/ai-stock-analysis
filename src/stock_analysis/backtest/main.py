@@ -12,6 +12,7 @@ from . import portfolio as portfolio_mod
 from .portfolio import PortfolioConfig
 from .runner import Backtester
 from .scorer import Scorer
+from .session import prepare_session_bundle, score_session_bundle
 
 logger = logging.getLogger(__name__)
 
@@ -21,12 +22,20 @@ def cli():
         description="Backtest the AI stock analysis pipeline against historical prices."
     )
     parser.add_argument(
+        "--mode",
+        choices=["api", "session-prepare", "session-score"],
+        default="api",
+        help=(
+            "api runs the SDK pipeline; session-prepare writes point-in-time packets; "
+            "session-score scores session predictions (default: api)."
+        ),
+    )
+    parser.add_argument(
         "--tickers",
-        required=True,
         help="Comma-separated list of tickers (e.g., AAPL,NVDA,MSFT).",
     )
-    parser.add_argument("--start", required=True, help="Start date YYYY-MM-DD.")
-    parser.add_argument("--end", required=True, help="End date YYYY-MM-DD.")
+    parser.add_argument("--start", help="Start date YYYY-MM-DD.")
+    parser.add_argument("--end", help="End date YYYY-MM-DD.")
     parser.add_argument(
         "--interval",
         choices=["weekly", "biweekly", "monthly", "quarterly"],
@@ -76,6 +85,12 @@ def cli():
         help="Output file prefix — writes <prefix>.json and <prefix>.md.",
     )
     parser.add_argument(
+        "--session-dir",
+        type=Path,
+        default=Path("backtest_session"),
+        help="Directory for session packets, predictions, and outcomes.",
+    )
+    parser.add_argument(
         "--no-resume",
         action="store_true",
         help="Ignore cached briefings and re-run every trial.",
@@ -106,6 +121,14 @@ def cli():
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     )
 
+    if args.mode == "session-score":
+        result = score_session_bundle(args.session_dir)
+        _score_and_write(result, args)
+        return
+
+    if not args.tickers or not args.start or not args.end:
+        parser.error("--tickers, --start, and --end are required for this mode")
+
     start = _parse_date(args.start)
     end = _parse_date(args.end)
     if start >= end:
@@ -118,6 +141,28 @@ def cli():
     tickers = [t.strip().upper() for t in args.tickers.split(",") if t.strip()]
     if not tickers:
         parser.error("--tickers is empty")
+
+    if args.mode == "session-prepare":
+        manifest = prepare_session_bundle(
+            tickers=tickers,
+            as_of_dates=dates,
+            output_dir=args.session_dir,
+            market=args.market,
+            horizon_days=args.horizon,
+            lookback_days=args.lookback,
+        )
+        print(
+            f"Prepared {len(manifest.trials)} session trials in {args.session_dir}."
+        )
+        print(
+            "Have the current session write SessionPrediction JSON objects to "
+            f"{args.session_dir / manifest.predictions_file}, then run:"
+        )
+        print(
+            "  stock-analysis-backtest --mode session-score "
+            f"--session-dir {args.session_dir}"
+        )
+        return
 
     settings = Settings(
         quick_think_model=args.model,
@@ -140,6 +185,10 @@ def cli():
     result = asyncio.run(
         backtester.run(tickers, dates, resume=not args.no_resume)
     )
+    _score_and_write(result, args)
+
+
+def _score_and_write(result, args) -> None:
     report = Scorer.score(result)
     markdown = Scorer.to_markdown(result, report)
 
