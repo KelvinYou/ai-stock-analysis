@@ -13,6 +13,14 @@ _MIN_CONVICTION_FOR_LEVELS = 0.3
 _MIN_CONVERGENCE_FOR_LEVELS = 0.4
 
 
+def is_actionable(conviction_score: float, signal_convergence: float) -> bool:
+    """Return whether a directional signal clears the execution gate."""
+    return (
+        abs(conviction_score) > _MIN_CONVICTION_FOR_LEVELS
+        and signal_convergence >= _MIN_CONVERGENCE_FOR_LEVELS
+    )
+
+
 class RiskChecker:
     """Deterministic risk assessment — no LLM, pure computation."""
 
@@ -26,8 +34,17 @@ class RiskChecker:
         correlation_notes = self._check_correlations(ticker_data)
 
         risk_reward = None
-        if briefing.conviction.score > 0 and volatility > 0:
-            risk_reward = f"{round(conviction_abs / volatility, 2)}:1"
+        action_plan = briefing.action_plan
+        if (
+            action_plan
+            and action_plan.entry_limit is not None
+            and action_plan.stop_loss is not None
+            and action_plan.take_profit_1 is not None
+        ):
+            risk = abs(action_plan.entry_limit - action_plan.stop_loss)
+            reward = abs(action_plan.take_profit_1 - action_plan.entry_limit)
+            if risk > 0:
+                risk_reward = f"{round(reward / risk, 2)}:1"
         elif briefing.conviction.score < 0:
             risk_reward = "N/A (bearish signal)"
 
@@ -71,7 +88,7 @@ class RiskChecker:
         if not closes:
             return "Insufficient data"
 
-        # Historical max drawdown
+        # Historical max drawdown over the available price history.
         peak = closes[0]
         max_dd = 0.0
         for c in closes:
@@ -85,7 +102,7 @@ class RiskChecker:
         projected_dd = round(volatility * 2 * 100, 1)  # 2-sigma move
 
         return (
-            f"Historical max drawdown: {round(max_dd * 100, 1)}% over past year. "
+            f"Historical max drawdown: {round(max_dd * 100, 1)}% over available price history. "
             f"Projected worst case (2-sigma): ~{projected_dd}% from current ${current:.2f}."
         )
 
@@ -121,10 +138,7 @@ class RiskChecker:
         score = briefing.conviction.score
         convergence = briefing.conviction.signal_convergence
 
-        if (
-            abs(score) <= _MIN_CONVICTION_FOR_LEVELS
-            or convergence < _MIN_CONVERGENCE_FOR_LEVELS
-        ):
+        if not is_actionable(score, convergence):
             return ActionPlan(
                 note=(
                     "Signal too mixed for precise levels "
