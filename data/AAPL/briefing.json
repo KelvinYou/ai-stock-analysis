@@ -1,58 +1,73 @@
 {
   "ticker": "AAPL",
-  "date": "2026-08-12",
-  "overall_signal": "buy",
+  "date": "2026-08-14",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": 0.32,
-    "signal_convergence": 0.55,
-    "explanation": "Three of four analyst agents (Fundamentals-high, Sentiment-medium, Technical-medium) rate AAPL buy; only MacroFX (medium) dissents, and even it concedes the cash-flow/AI offset — it's a timing objection, not a thesis rejection. That gives directional convergence. But the adversarial debate exposed real, unresolved tension: the technical 'reversal' the bulls lean on has NOT confirmed (MACD still bearish, RSI 36.61 is developing-not-classic oversold, $313/positive-MACD trigger unfired), and the bear's valuation math (PEG ~3.5, 2.2% FCF yield, 20-31% de-rating risk to sector multiples) was never actually rebutted, only reframed. Net: a real edge exists but it's a quality-franchise-at-a-full-price setup, not a high-conviction mispricing, hence a moderate positive score rather than a strong one."
+    "score": -0.14,
+    "signal_convergence": 0.45,
+    "explanation": "Current-session English batch refresh. Financial quality supports the bull case, but valuation, mixed sentiment, and weak short-term technicals keep the overall view neutral."
   },
-  "executive_summary": "AAPL presents as a top-tier franchise (26.9% net margin, $98.77B FCF, dominant ecosystem moat) trading at a full price (34.97x trailing / 32.07x forward P/E, a 46-59% premium to the ~22-24x sector) after a 10.3% pullback from its July 28 high. Three of four specialist agents call it a buy — Fundamentals with the highest confidence in the stack — while MacroFX is the lone dissenter on restrictive rates and tariff/China exposure, explicitly framing its objection as a matter of timing rather than business quality. The three-round bull/bear debate sharpened rather than resolved the core disagreement: is $98.77B of FCF an cash machine that self-funds buybacks and the AI roadmap through any macro regime, or is it, priced as a 2.2% yield in a restrictive-rate world, a mediocre return for a stock still carrying a growth-inconsistent premium?\n\nOur read: the fundamental quality case is not in serious dispute by either side — even the bear concedes no earnings-impairment, balance-sheet, or competitive-displacement risk to the core business, conceding the debate to \"great company, price/timing uncertain.\" That asymmetry (no one is calling this business broken) is the basis for a buy rather than neutral or sell. However, conviction is tempered materially by two things the bear surfaced and the bull only partially answered: (1) the technical setup being sold as \"an entry on sale\" has not actually triggered — MACD remains bearish and the reversal is explicitly conditional on an unconfirmed $313 break; buying now is buying an unconfirmed downtrend, not a confirmed reversal, and (2) the valuation premium requires ~9% sustained forward growth against a company both sides agree is only capable of \"modest growth at scale\" — a slip to 5% growth would compound with multiple compression rather than offset it. Newly raised late-round risks (Services revenue dependency on contestable Google search-default payments and App Store commissions under active US/EU regulatory attack) were never quantified by either side and remain a genuine tail risk to the margin structure the entire premium rests on.\n\nThis nets out to a constructive-but-not-aggressive buy: own the quality franchise, but size it modestly rather than aggressively, treating the current level as a legitimate but unconfirmed entry rather than a high-conviction dislocation.",
-  "bull_case": "Apple is a best-in-class compounder (46.91% gross / 31.97% operating / 26.9% net margins, $98.77B annual FCF) trading 10.3% below its July high with technical signs of seller exhaustion (contracting volume, developing oversold RSI) and a clearly defined confirmation trigger at $313 with a positive MACD histogram. The FCF funds buybacks, absorbs tariff costs, and self-funds AI/silicon investment without needing external capital in a high-rate environment — a structural advantage over less cash-generative peers. The forward P/E compression (34.97x → 32.07x) implies the premium is partly self-liquidating through ~9% embedded earnings growth, and Apple's capital-light, negative-working-capital growth profile arguably deserves a structurally different (higher) multiple than the capital-hungry sector average, making straight PEG comparisons misleading. Broad sell-side support (27/46 bullish, only 5 bearish) and beta near 1.0 mean this isn't a speculative name exposed to idiosyncratic blow-up risk — it trades with the market. The macro objection is best read as a timing call: waiting for Fed cuts or tariff \"clarity\" means buying after the re-rating has already happened, so a scaled starter position now, sized modestly with adds on $313 confirmation, captures the discount while managing the unconfirmed-technical risk through position size rather than a fragile stop.",
-  "bear_case": "This is a great business at a bad price. Repriced as a yield, $98.77B FCF on a $4.45T cap is just 2.2% — dominated by risk-free alternatives in a restrictive-rate regime, and buybacks executed at a ~2.9% earnings yield are capital deployed at a negative spread to Treasuries. At 34.97x versus a 22-24x sector, buyers are paying a 46-59% premium (PEG ~3.5-3.9) for growth both sides agree is \"modest at scale\" — and the multiple itself, not future earnings, has been the entirety of the stock's return over the last decade (mid-teens P/E in the late 2010s re-rating to ~35x while growth decelerated), meaning mean reversion toward 24-28x has a real base rate while further expansion requires a genuine new catalyst (Apple is currently an AI follower, not a leader). That reversion alone implies -20% to -31% with no bad news required, and there are live impairment mechanisms the bull never quantified: Services margin — the segment underpinning the premium — depends on the Google search-default payment and App Store commissions, both under active US/EU regulatory attack, plus dual-sided China exposure (demand market and manufacturing base) making tariffs a direct, unhedgeable margin tax. The technical \"entry\" has not actually confirmed: MACD is still bearish, RSI 36.61 is merely developing-oversold (not the classical <30), and the $313/positive-MACD trigger the bulls cite as validation simply hasn't printed — buying now is buying an unconfirmed downtrend. Correct posture: wait for the $313 confirmation, tariff/regulatory clarity, or a multiple reset toward 24-28x before committing capital.",
+  "executive_summary": "Apple generates a 26.9% net margin and $98.8B free cash flow, but trades at 34.7x trailing earnings and 31.8x forward earnings with debt-to-equity of about 1.34. Price is below the 20- and 50-day averages but above the 200-day average; RSI is 37.2 and the MACD histogram is negative.",
+  "bull_case": "Strong cash generation, substantial margins, and support above the 200-day average leave room for a recovery if earnings remain resilient.",
+  "bear_case": "Rich valuation, relatively high leverage, weak short-term momentum, and mixed analyst recommendations limit the margin of safety.",
   "key_uncertainties": [
-    "Whether ~9% forward earnings growth is actually delivered vs. a 5% outcome that would produce a simultaneous earnings miss and multiple de-rate",
-    "Timing and outcome of US/EU regulatory action against the Google search-default payment and App Store commission revenue — unresolved and unquantified, yet central to the Services margin that underpins the premium",
-    "Whether and when AAPL's multiple mean-reverts toward the sector's 22-24x — no side established a triggering event or timeline",
-    "Actual tariff pass-through to Apple's margins given dual-sided China exposure (demand + manufacturing), and whether that risk ever resolves or stays a permanent discount",
-    "Sequencing of Fed rate cuts relative to consumer demand deterioration — whether multiple relief arrives before or alongside earnings damage from a weakening discretionary consumer",
-    "Whether the $313 breakout with a positive MACD histogram actually prints, versus a breakdown below the 50-day moving average",
-    "Whether the sentiment signal (strong buys declining 7→6 of 46 analysts) is early-stage trend deterioration or single-data-point noise",
-    "Apple's actual competitive standing in AI as a platform follower dependent on third-party models, versus the bull's framing that FCF alone secures the roadmap"
+    "Whether forward earnings growth can justify the valuation",
+    "Whether cash generation remains strong relative to debt",
+    "The absence of current news headlines in the local snapshot"
   ],
   "catalysts_upcoming": [
-    "Price action at/through $313 with MACD histogram turning positive (agreed bull/bear technical confirmation trigger)",
-    "Next FOMC decision and any signal on timing of rate cuts from the current 4.25-4.50% restrictive stance",
-    "Progress or resolution of US/EU tariff policy affecting China-manufactured Apple hardware",
-    "US/EU regulatory rulings on the Google search-default payment and App Store commission structure (Services revenue risk)",
-    "Next quarterly earnings print — particularly Services growth/margin and any signal on whether ~9% forward growth consensus is tracking or slipping toward mid-single digits",
-    "Further shifts in sell-side sentiment (strong-buy count trend beyond the recent 7→6 decline) and analyst target revisions",
-    "Any concrete Apple AI/Services product announcements that could support multiple expansion versus continued 'AI follower' positioning"
+    "Next earnings update for revenue, margins, and free cash flow",
+    "Recovery above the 50-day average",
+    "Positive analyst estimate revisions"
   ],
   "risk_assessment": {
-    "position_size_suggestion": "0.9% of portfolio",
     "correlation_notes": [
-      "Sector: Technology — check existing portfolio exposure to this sector."
+      "Sector: Technology — use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 38.5% over past year. Projected worst case (2-sigma): ~64.1% from current $304.91.",
-    "risk_reward_ratio": "1.0:1"
+    "max_drawdown_scenario": "Historical max drawdown: 38.5% over available price history. Projected worst case (2-sigma): ~64.2% from current $302.25.",
+    "risk_reward_ratio": "N/A (bearish signal)"
   },
   "action_plan": {
-    "entry_limit": 301.33,
-    "entry_rationale": "Midway between current ($304.91) and Bollinger lower band ($297.75)",
-    "stop_loss": 282.27,
-    "stop_rationale": "2x ATR-14 ($9.53) below entry — invalidates the setup",
-    "take_profit_1": 344.27,
-    "take_profit_2": 350.65,
-    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": null
+    "note": "Signal too mixed for precise levels (conviction -0.14, convergence 0.45). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "AAPL",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Apple remains financially strong, but the valuation and weakening short-term trend require clearer earnings support before a bullish conclusion is justified.",
+    "winning_side": "bear",
+    "strongest_counterexample": "The decline may be a technical pullback rather than a fundamental deterioration because price remains above the 200-day average and free cash flow is substantial.",
+    "invalidation_conditions": [
+      "A sustained break below the 200-day average",
+      "Deterioration in margins or free cash flow",
+      "Further analyst downgrades or lower earnings estimates"
+    ],
+    "evidence_gaps": [
+      "No current news data",
+      "No detailed forward earnings assumptions",
+      "No breakdown of debt maturity or cash-flow allocation"
+    ],
+    "decisive_factors": [
+      "34.7x trailing P/E and 31.8x forward P/E",
+      "$98.8B free cash flow alongside elevated leverage",
+      "Price below the 20- and 50-day averages with negative MACD"
+    ]
   },
   "agent_signal_breakdown": {
-    "Fundamentals": "buy (high confidence) — dominant margin profile and FCF generation justify premium despite modest growth outlook",
-    "Sentiment": "buy (medium confidence) — broad analyst support (27/46 bullish) but moderating momentum (strong-buys 7→6)",
-    "Technical": "buy (medium confidence) — oversold-developing tactical setup, but reversal unconfirmed (MACD bearish, trigger at $313 not yet hit)",
-    "MacroFX": "sell (medium confidence) — restrictive Fed policy, tariff/China exposure, and discretionary demand weakness argue for waiting, though it concedes cash flow and AI tailwinds as offsets",
-    "Debate synthesis": "bull edge on business quality and asymmetric no-earnings-impairment concession from bear; bear edge on valuation mechanics and unconfirmed technical trigger — net modestly bullish"
-  }
+    "fundamentals": "buy",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "sell"
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
 }

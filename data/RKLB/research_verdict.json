@@ -1,0 +1,26 @@
+{
+  "ticker": "RKLB",
+  "judged_view": "neutral",
+  "confidence": "medium",
+  "thesis": "The operating business shows traction, but negative profitability, negative free cash flow, and extreme forward valuation make the risk-reward unfavorable until execution improves.",
+  "winning_side": "bear",
+  "strongest_counterexample": "If revenue scales rapidly while gross margin holds and free cash flow turns positive, the current earnings-based valuation could become less restrictive.",
+  "invalidation_conditions": [
+    "Free cash flow turns positive and remains positive",
+    "Operating margin improves materially",
+    "Price recovers above the 50-day moving average with stronger volume"
+  ],
+  "evidence_gaps": [
+    "No non-empty current news headlines",
+    "No detailed forward earnings composition",
+    "Latest technical snapshot is dated 2026-08-13"
+  ],
+  "decisive_factors": [
+    "Negative net income and negative free cash flow",
+    "1,602x forward P/E",
+    "Price below the 50-day moving average despite positive short-term momentum"
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

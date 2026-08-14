@@ -1,40 +1,31 @@
 {
   "ticker": "META",
-  "date": "2026-08-12",
-  "overall_signal": "buy",
+  "date": "2026-08-14",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": 0.3,
-    "signal_convergence": 0.35,
-    "explanation": "Only one of four analyst signals (fundamentals) carries high confidence; sentiment (medium, self-flagged as peak/crowded), technical (medium sell, self-tempered), and macro (medium neutral, explicitly abstaining pending clarity) pull in different directions and horizons. The adversarial debate was substantive on both sides and the bull was forced to concede his strongest valuation catalyst (the trailing-multiple re-rating), while the bear's capex/depreciation and crowded-positioning arguments held up under scrutiny. That said, the surviving fundamental case — exceptional margins, fortress balance sheet, post-capex FCF generation, and a forward multiple that is not obviously stretched for the quality on offer — is real and high-confidence, and the technical/sentiment concerns are shorter-horizon and self-qualified rather than structural. Net: a modest, not-neutral buy tilt, sized and entered cautiously rather than aggressively, given genuinely low cross-signal convergence."
+    "score": 0.04,
+    "signal_convergence": 0.4,
+    "explanation": "Current-session English batch refresh. Fundamentals and analyst sentiment favor the bull case, but the technical sell signal is strong enough to keep the overall research view neutral."
   },
-  "executive_summary": "Meta screens as a high-quality, fairly-to-attractively valued mega-cap (17.2x forward P/E, 30% net margins, $46B post-capex free cash flow, 0.39x D/E) whose near-term setup is muddied by a technical downtrend and peak-level, low-dissent sentiment. The fundamentals report is the only high-confidence signal in the stack and describes genuine operational strength; the sentiment, technical, and macro reads are all medium-confidence and partially self-qualified (the sell signal concedes price is fractionally above the 50-day with stabilizing volume; the macro neutral is an explicit \"wait for clarity\" rather than a bearish call). The three-round bull/bear debate sharpened rather than resolved the core disagreement: the trailing-to-forward P/E spread implies roughly 31% EPS growth is required, and both sides agree on that arithmetic — they disagree only on whether it is a cushion (bull: growth is what you're buying) or a hurdle (bear: it's what you owe). The bull was forced to concede and withdraw his strongest re-rating catalyst (applying the trailing multiple to forward earnings double-counts growth), which meaningfully weakens the aggressive case; the bear's depreciation/capex-ramp argument and crowded-sentiment/distribution read both held up as serious, unresolved risks.\n\nOn balance, the surviving fundamental case is strong enough, and the bearish technical/sentiment signals narrow and short-horizon enough, to justify a buy rather than sitting on the sidelines — but conviction should be moderate, not high, and signal convergence is genuinely low. This is a name to accumulate into weakness (the 50-day cluster both debate sides implicitly treated as the relevant near-term zone) rather than chase, with an explicit, shared falsification trigger: if the next capex guide rises again while revenue growth decelerates below the mid-teens, the risk/reward shifts decisively toward the bear case and the position should be reassessed. Regulatory outcomes (DMA, antitrust) and the realized path of AI-capex ROI remain the two structural swing factors that neither analyst layer nor the debate could resolve with available data.",
-  "bull_case": "Meta trades at 17.2x forward earnings — a market-average multiple — for a 30% net-margin franchise with an 82% gross margin, a fortress balance sheet (0.39x D/E), and $46B of free cash flow that is already net of AI capex. The fundamentals desk, the only high-confidence rating in the stack, calls this \"operational excellence.\" The bear's claim that capex pain is still ahead is weakened by the fact that FCF is by construction post-capex, and that consensus forward EPS is built directly off company-guided capex, meaning depreciation is already embedded rather than a hidden future charge. Management proved in 2023 it will cut spend when ROI disappoints, and the prior AI investment cycle (ranking/targeting) delivered measurable, attributable ad-revenue lift after the 2022 ATT/Reels shock — a real precedent, even if the current frontier-model buildout is larger in scale. The technical sell signal is short-horizon and self-tempered (price is fractionally above the 50-day, volume stabilizing, RSI mid-range, not oversold), and the macro \"neutral\" is an abstention pending clarity rather than a bearish call — so three of four underlying signals are constructive or non-hostile once you sort by conviction and horizon rather than headline label. Base case: clip a mid-single-digit forward earnings yield while mid-teens-plus EPS growth compounds; a soft year is a drawdown inside an uptrend, not a broken thesis. Rate normalization (disinflationary, not recessionary) is an additional re-rating lever, even though the bull's original \"trailing-multiple re-rating\" math was correctly challenged and should be discounted.",
-  "bear_case": "The 17.2x forward multiple is not a discount — it is already pricing in roughly 31% EPS growth relative to the 22.6x trailing base, and that growth is a hurdle to clear, not a cushion. Merely good (mid-teens) growth implies double-digit downside even with no de-rating, and worse (high-20s%) if the multiple normalizes toward the low-to-mid teens appropriate for a maturing, single-revenue-line advertiser with rising depreciation. The AI capex program has no disclosed terminal year or hurdle rate, every hyperscaler peer has guided capex up (not down) this cycle, and the incremental D&A (~$11B+ after-tax annually) lands directly against the earnings denominator the bull's multiple depends on — with useful-life extensions across the industry possibly flattering current estimates. The 2023 capex discipline only arrived after a ~75% drawdown and activist pressure, and applied to conventional data-center build, not today's frontier-model arms race where cutting reads as competitive concession. Sentiment is at an extreme (89% sell-side buy consensus, zero dissent) with the sentiment agent itself flagging \"peak sentiment\" and disclosing its read rests on absent news data — a classic distribution setup when overlaid on price sitting 4.76% below the 200-day with negative MACD. Realized (trailing) earnings yield of ~4.4% barely clears the 4.25–4.50% policy rate, a compressed risk premium for a beta-1.243 name with concentrated regulatory (DMA/antitrust) and single-revenue-line cyclicality risk, as evidenced by the 2022 revenue decline. Signal convergence is low: one high-confidence buy against three hedged, medium-confidence-or-abstaining calls.",
+  "executive_summary": "Meta has a 30.1% net margin, $46.1B free cash flow, debt-to-equity of about 0.39, and a 17.2x forward P/E below its 22.6x trailing P/E. Price is below the 20- and 200-day averages but slightly above the 50-day average; RSI is 40.8 and the MACD histogram is negative.",
+  "bull_case": "Strong profitability, cash generation, low leverage, and highly positive analyst recommendations support a longer-term recovery case.",
+  "bear_case": "Weak medium-term price structure and negative MACD could signal that the apparently attractive forward valuation reflects lower earnings expectations.",
   "key_uncertainties": [
-    "Whether realized forward EPS growth lands near the ~31% the current multiple requires, or merely mid-teens — the single variable both debate sides agree the entire thesis turns on",
-    "Terminal size, peak year, and hurdle rate of the AI/frontier-model capex program — undisclosed by management and by any hyperscaler peer to date",
-    "Whether depreciation embedded in consensus forward EPS reflects realistic useful-life assumptions or is flattered by industry-wide server-life extensions",
-    "Whether AI infrastructure spend converts into attributable ad-revenue/margin lift on a visible timeline, as the prior ranking/targeting cycle did, or remains open-ended",
-    "Path of rates: disinflationary easing (bull's re-rating catalyst) vs. recessionary cuts that would hit ad budgets first (bear's trap) — macro agent stays neutral pending clarity",
-    "Whether the technical downtrend (price below 200-day, negative MACD) resolves as consolidation near the 50-day or breaks lower",
-    "True sentiment picture — the constructive sentiment read leans almost entirely on unanimous sell-side ratings with underlying news data absent",
-    "Regulatory outcomes (DMA, antitrust, pay-or-consent) — whether they stay multiple events or become earnings events"
+    "Whether forward earnings growth is sustainable",
+    "Whether price can recover the 200-day average",
+    "The absence of current news headlines in the local snapshot"
   ],
   "catalysts_upcoming": [
-    "Next quarterly capex guide — a raise alongside decelerating (sub-mid-teens) revenue growth is the explicit, shared bull/bear falsification trigger that would flip the thesis bearish",
-    "Evidence (or absence) of AI capex translating into measurable ad-targeting yield, engagement, or margin accretion",
-    "Rate-path clarification from the Fed — a confirmed disinflationary cut path vs. signs of recessionary easing",
-    "Resolution of the technical setup around the 50-day moving average — sustained reclaim of the 200-day vs. breakdown",
-    "Regulatory developments (EU DMA enforcement, antitrust rulings, pay-or-consent decisions) that could shift risk from a multiple event toward an earnings event",
-    "Any shift in sell-side positioning away from the current 89% buy consensus, which would reduce peak-sentiment/crowding risk"
+    "Next earnings update for revenue, margins, and free cash flow",
+    "Positive forward earnings revisions",
+    "Recovery above the 200-day average with positive MACD"
   ],
   "risk_assessment": {
-    "position_size_suggestion": "0.6% of portfolio",
     "correlation_notes": [
-      "Sector: Communication Services — check existing portfolio exposure to this sector."
+      "Sector: Communication Services — use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 76.7% over past year. Projected worst case (2-sigma): ~93.2% from current $599.12.",
-    "risk_reward_ratio": "0.64:1"
+    "max_drawdown_scenario": "Historical max drawdown: 76.7% over available price history. Projected worst case (2-sigma): ~93.2% from current $599.12.",
+    "risk_reward_ratio": null
   },
   "action_plan": {
     "entry_limit": null,
@@ -45,14 +36,38 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.30, convergence 0.35). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.04, convergence 0.40). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "META",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "The valuation, profitability, and analyst consensus are constructive, but price below the 200-day average and negative momentum prevent a confirmed buy signal.",
+    "winning_side": "bull",
+    "strongest_counterexample": "If earnings estimates fall while the stock remains below the 200-day average, the 17.2x forward P/E may represent deteriorating fundamentals rather than undervaluation.",
+    "invalidation_conditions": [
+      "A sustained break below the 50-day average",
+      "Deterioration in margins or free cash flow",
+      "Broad analyst downgrades or lower earnings estimates"
+    ],
+    "evidence_gaps": [
+      "No current news data",
+      "No detailed forward earnings assumptions",
+      "No explicit macroeconomic or advertising-demand data"
+    ],
+    "decisive_factors": [
+      "30.1% net margin and $46.1B free cash flow",
+      "17.2x forward P/E versus 22.6x trailing P/E",
+      "Price below the 200-day average with negative MACD"
+    ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "buy (high confidence)",
-    "sentiment": "buy (medium confidence, peak-sentiment caveat)",
-    "technical": "sell (medium confidence, self-tempered)",
-    "macro_fx": "neutral (medium confidence, pending rate clarity)",
-    "debate_bull": "buy, scaled entry",
-    "debate_bear": "avoid"
-  }
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
 }

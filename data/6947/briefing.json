@@ -1,45 +1,32 @@
 {
   "ticker": "6947",
-  "date": "2026-08-12",
-  "overall_signal": "buy",
+  "date": "2026-08-14",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": 0.3,
-    "signal_convergence": 0.35,
-    "explanation": "Two of four analyst signals are constructive (fundamentals-buy at high confidence, sentiment-buy at medium), one is neutral (macro), and one is sell (technical, medium confidence, self-disclosed low conviction). The debate narrowed rather than resolved the central dispute: the bear's 'payout ratio >100%' attack was substantially defused once cash math was run (bull showed ~1.4x FCF dividend coverage; bear conceded a double-counted-capex error), but the bear retains undefeated points -- inconsistent use of the amortization argument, an unsourced re-rating multiple, an unresolved consensus-table contradiction (80% vs 57/29/14), and a real, unrebutted technical downtrend. Net: a fundamentals-led buy case that survived adversarial pressure better than the bear case did, but with low signal convergence (2 buy / 1 neutral / 1 sell) and real unresolved balance-sheet unknowns, so conviction is modest and positive rather than high."
+    "score": 0.1,
+    "signal_convergence": 0.4,
+    "explanation": "Current-session English batch refresh. Cash flow, yield, and analyst breadth support the bull case, while the breakdown below SMA-200, negative MACD, leverage, and dissenting ratings support the bear case. The absence of fresh headlines prevents a high-conviction resolution."
   },
-  "executive_summary": "CDB (CelcomDigi) is a mature Malaysian telecom offering a 4.69% dividend yield on 29.69% operating margins and 17.4% FCF margins, trading at 22.23x trailing / 18.28x forward P/E after a ~30% YTD de-rating. The analyst layer splits 2-1-1: fundamentals (buy, high confidence) and sentiment (buy, medium) are constructive; macro/FX is neutral, flagging MYR weakness and a higher-for-longer Fed as real but rate-driven (not franchise) headwinds; technical is the lone sell (medium confidence), with price 6.2% below the 200-day SMA, failed rallies off $2.85, and negative MACD -- though its own author concedes neutral RSI prevents a high-conviction bearish call.\n\nThe three-round bull/bear debate is the decisive input, and it moved the needle toward the bull. The bear's headline attack -- a \"104% earnings payout ratio\" implying an uncovered, fragile dividend -- was substantially rebutted once cash flow arithmetic was actually run: net income (~1.53bn) understates cash generation because of post-merger purchase-price amortization on spectrum/licences/intangibles, and against ~2.2-2.3bn of free cash flow the dividend (~1.59bn) is covered roughly 1.4x, with the bear explicitly conceding it had double-counted capex already netted into the FCF margin. That is a meaningful concession in a debate the bear otherwise controlled on tone. The bear's remaining points are real but softer: the amortization logic is used inconsistently (fictional for coverage, real for multiple re-rating) and never fully reconciled by the bull; the 14x \"peer-normal\" downside anchor is unsourced; the fundamentals report's \"80% bullish\" claim doesn't reconcile with sentiment's 57/29/14 read of the same table, casting some doubt on the one high-confidence signal; and the technical downtrend, absence of any near-term catalyst, and idiosyncratic (not macro-forced) nature of the 30% drawdown argue against urgency. Both sides agree operating actuals (margins, FCF) have not deteriorated even as price has, favoring a \"de-rated, not impaired\" read, but neither side has the actual cash flow statement, capex schedule, or debt maturity profile -- a real gap.\n\nNet-net: this looks like a defensible income-oriented buy, not a high-conviction one. The fundamentals case (high-confidence signal, corroborated cash coverage once the debate's math was corrected) outweighs a technical setup that is negative but self-admittedly not high-conviction, and a macro backdrop that is a headwind but rated neutral, not negative. The right framing is a staged/scaled entry into a defensive-income position, sized modestly given low cross-signal convergence and the unresolved consensus-table and payout-durability questions, rather than either an aggressive add or standing fully aside.",
-  "bull_case": "CDB is a cash-generative, near-monopoly-grade telecom (29.69% operating margin, 17.4% post-capex FCF margin) trading at a de-rated 18.28x forward P/E after a 30% YTD decline, with a 4.69% yield the fundamentals analyst (the only high-confidence signal in the file) calls underpinned by solid fundamentals. The \"unsafe dividend\" bear thesis weakens materially once cash math is applied: net income of ~1.53bn is suppressed by non-cash post-merger amortization on spectrum/licences/intangibles, while free cash flow of ~2.2-2.3bn covers the ~1.59bn dividend roughly 1.4x, leaving ~650m retained annually -- the bear itself conceded double-counting capex already netted into the FCF margin. A 0.232 beta means the 30% drawdown was idiosyncratic/flow-driven (foreign income-fund outflows tied to MYR weakness and Fed positioning) rather than a franchise impairment -- reported margins, the actual operating data, did not move even as price fell. Three of four signals are constructive; the sole bearish signal is medium-confidence and self-disclosed as low-conviction (neutral RSI, SMA-50 still holding as support). Simple multiple recovery to 22.23x is roughly +21% plus the running coupon, with MYR normalization and merger-synergy delivery as additional free options. Correct posture: a defensive income position, staged in to respect the technical damage rather than bought aggressively all at once.",
-  "bear_case": "The only reason to own CDB is the coupon, and the coupon has no error budget: on reported earnings the payout ratio is ~104%, and even on the corrected FCF basis the company distributes ~70% of post-capex free cash flow, retaining only ~650m/year against 5G capex, FX-inflated imported equipment costs, debt amortization, and an eventual spectrum re-auction that sits outside any single year's capex line. The bull's amortization defense is internally inconsistent -- treating the earnings/FCF gap as a non-cash artifact to defend coverage, then as a real, roll-off-able charge to justify the forward multiple compression to 18.28x. 22.23x trailing may be a premium, not de-rated, multiple for a no-growth, single-market operator; a peer-normal re-rate (bear's anchor: ~14x forward) implies ~23% downside before any dividend action, compounding toward 35-40% if the payout is rebased. A 0.232-beta stock that just suffered a 30% single-name drawdown has invalidated its own risk model -- it cannot be sized as a defensive/bond-proxy holding on a beta that failed by 30%. The macro backdrop (Fed higher-for-longer, MYR weakness) is a real, unhedged headwind, not a mean-reverting curiosity, and technicals confirm rather than contradict it (below 200-day SMA, failed $2.85 rallies, negative MACD). The sole high-confidence signal contains a demonstrable internal contradiction (80% bullish vs. the same table read as 57/29/14 by sentiment), and three months of frozen bullish ratings through a 30% decline looks like stale, un-revised estimates rather than conviction. With two buys, one neutral, and one sell, there is no real signal convergence, and the equity risk premium on offer (single-country regulatory/competitive risk, FX translation risk, payout risk) is not clearly compensated by a coupon barely above the implied risk-free rate. Correct action: no new position; if already held, do not add.",
+  "executive_summary": "CelcomDigi offers strong cash generation of MYR2.26 billion, a 4.69% dividend yield, and a 29.7% operating margin at an 18.3x forward P/E. However, price is below SMA-20 and SMA-200, MACD is negative, leverage is about 0.87 debt-to-equity, and analyst recommendations include three sell or strong-sell ratings.",
+  "bull_case": "Defensive telecom cash flow, a substantial dividend, low beta, and modest forward earnings growth could support a valuation recovery.",
+  "bear_case": "The breakdown below SMA-200, negative MACD, leverage, and dissenting analyst ratings indicate that capital intensity, competition, or dividend coverage may be limiting the thesis.",
   "key_uncertainties": [
-    "True dividend coverage on a normalized cash basis -- neither side had the actual cash flow statement, capex schedule, or debt maturity profile",
-    "Whether purchase-price amortization on merger intangibles genuinely explains the earnings/FCF gap, and its magnitude -- asserted by the bull but absent from the underlying report set",
-    "Timing and size of spectrum licence renewal/re-auction cash outlays, which fall outside any single year's capex line",
-    "Whether the 18.28x forward P/E reflects contracted cost normalization/banked synergies or stale, not-yet-cut estimates",
-    "The real sell-side consensus -- fundamentals' '80% bullish' and sentiment's 57%/29%/14% reading of the same table do not reconcile",
-    "Root cause of the 30% idiosyncratic drawdown -- foreign-holder outflows, a regulatory/competitive development, or something not captured in the four reports",
-    "Trajectory of MYR and Fed policy, on which the bull's multiple-recovery thesis partly depends",
-    "The appropriate normalized peer multiple for a high-payout, single-market, FX-exposed telecom (bear's 14x anchor is unsourced)",
-    "Whether current price marks a base after de-rating or a continuation of the downtrend -- technical evidence is genuinely two-sided (SMA-50 support vs. failed rallies/negative MACD)",
-    "Malaysia's 5G rollout structure (shared wholesale network vs. a second network operator) and its implications for capex and price competition"
+    "Dividend coverage after network, spectrum, and 5G capital expenditure",
+    "The cause of the recent price weakness in the absence of current headlines",
+    "Competitive and regulatory effects on margins and cash flow"
   ],
   "catalysts_upcoming": [
-    "Next quarterly earnings print -- will show whether the payout ratio, FCF margin, and net income trend actually validate or undercut the amortization/coverage thesis",
-    "Any Fed policy pivot or signal of near-term rate cuts, which would ease MYR pressure and remove the bear's core macro headwind",
-    "MYR trajectory versus USD -- continued weakness pressures capex/debt servicing costs, a reversal would support multiple re-rating",
-    "Sell-side estimate revisions -- a break in the three-month-stable 57/29/14 consensus (up or down) would resolve whether ratings are anchored or overdue for a cut",
-    "Technical confirmation -- a sustained close back above the 200-day SMA or a fresh failed rally off $2.85 would validate one side of the current two-sided chart read",
-    "Any dividend policy announcement (maintenance, cut, or explicit coverage guidance) directly settling the central bull/bear dispute",
-    "Spectrum licence renewal/re-auction news or timeline disclosure, clarifying the size of an unmodeled future cash outflow",
-    "Regulatory developments on Malaysia's 5G network structure (single wholesale vs. second network operator), which bear on future capex and competitive intensity"
+    "Quarterly earnings, free cash flow, and dividend-policy updates",
+    "Price reclaiming SMA-20 and SMA-200 with positive MACD",
+    "5G network, spectrum, and operating-efficiency milestones"
   ],
   "risk_assessment": {
-    "position_size_suggestion": "0.8% of portfolio",
     "correlation_notes": [
-      "Low beta (0.23) — defensive characteristic. Good for portfolio diversification.",
-      "Sector: Communication Services — check existing portfolio exposure to this sector."
+      "Low beta (0.23) — historically less sensitive to broad-market moves.",
+      "Sector: Communication Services — use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 34.3% over past year. Projected worst case (2-sigma): ~56.7% from current $2.90.",
-    "risk_reward_ratio": "1.06:1"
+    "max_drawdown_scenario": "Historical max drawdown: 34.3% over available price history. Projected worst case (2-sigma): ~56.7% from current $2.90.",
+    "risk_reward_ratio": null
   },
   "action_plan": {
     "entry_limit": null,
@@ -50,13 +37,38 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.30, convergence 0.35). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.10, convergence 0.40). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "6947",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "The business is financially supportive, but the price trend and capital-intensity risks prevent the fresh snapshot from confirming a buy.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Stable free cash flow and dividend coverage, followed by a reclaim of SMA-200, could turn the current weakness into a valuation-recovery setup.",
+    "invalidation_conditions": [
+      "Free cash flow or dividend coverage deteriorates materially",
+      "Debt and capital expenditure rise without corresponding operating improvement",
+      "Price remains below SMA-200 and makes a new 52-week low"
+    ],
+    "evidence_gaps": [
+      "No current news headlines in the local Layer 1 snapshot",
+      "No complete capex, debt-maturity, or dividend-coverage detail",
+      "Price history and technical indicators end on 2026-08-10"
+    ],
+    "decisive_factors": [
+      "MYR2.26 billion free cash flow, 29.7% operating margin, and 4.69% dividend yield",
+      "18.3x forward P/E but debt-to-equity near 0.87",
+      "Price below SMA-20 and SMA-200 with negative MACD"
+    ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "buy (high confidence)",
-    "sentiment": "buy (medium confidence)",
-    "technical": "sell (medium confidence, self-disclosed low conviction)",
-    "macro_fx": "neutral (medium confidence)",
-    "debate_lean": "bull edges ahead on the dividend-coverage math exchange; bear retains valid points on multiple, momentum, and evidence discipline"
-  }
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
 }

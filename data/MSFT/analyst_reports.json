@@ -20,10 +20,10 @@
       "Dominant market positions in Azure cloud and enterprise software (Microsoft 365)",
       "Forward P/E of 21.39x reasonable given expected 31% earnings growth"
     ],
-    "summary": "Microsoft presents a compelling fundamental story: fortress balance sheet, world-class profitability (40% net margin), $67B free cash flow, and 87% analyst buy consensus. Current valuation of 28x P/E is elevated but supported by 31% implied earnings growth. The buy signal reflects operational excellence and competitive moat, tempered to medium confidence due to high current valuation and execution risks on AI monetization."
+    "summary": "Current-session signal: buy. Microsoft has a 40.3% net margin, $67.0B free cash flow, debt-to-equity of about 0.13, and a 20.9x forward P/E below its 28.1x trailing P/E. Price is above all major moving averages and MACD is positive, but RSI at 85.9 indicates an overbought short-term condition."
   },
   "sentiment": {
-    "signal": "strong_buy",
+    "signal": "buy",
     "confidence": "high",
     "news_tone": "positive",
     "news_summary": "Microsoft commands overwhelming analyst consensus with 94.6% buy/strong-buy ratings (53 of 56 analysts). Strong Buy ratings rising from 12 to 14 over three months while Hold ratings remain stable at 3. Zero sell-side dissent indicates strong conviction in AI leadership, Azure growth, and enterprise software dominance. Analyst sentiment reflects optimism around Copilot integration and cloud infrastructure expansion.",
@@ -42,7 +42,7 @@
       "Enterprise software leadership narrative dominates sentiment"
     ],
     "social_sentiment": null,
-    "summary": "Microsoft displays exceptional analyst bullishness with strong convergence around AI and cloud themes. Rising Strong Buy momentum and zero dissent suggest high conviction, but the extreme consensus warrants caution regarding assumption concentration. Fundamentals appear strong with dominant enterprise positioning, though execution against AI roadmap and Azure growth projections will be critical validation points."
+    "summary": "Current-session signal: buy. Microsoft has a 40.3% net margin, $67.0B free cash flow, debt-to-equity of about 0.13, and a 20.9x forward P/E below its 28.1x trailing P/E. Price is above all major moving averages and MACD is positive, but RSI at 85.9 indicates an overbought short-term condition."
   },
   "technical": {
     "signal": "neutral",
@@ -61,7 +61,7 @@
       506.06,
       538.66
     ],
-    "summary": "MSFT is in a confirmed uptrend with positive MACD momentum, but critically overbought RSI (87.37) and declining volume into the rally create a near-term pullback setup. Price has extended 23% above SMA-50; near-term consolidation or retracement to $487–$451 is likely before further upside."
+    "summary": "Current-session signal: neutral. Microsoft has a 40.3% net margin, $67.0B free cash flow, debt-to-equity of about 0.13, and a 20.9x forward P/E below its 28.1x trailing P/E. Price is above all major moving averages and MACD is positive, but RSI at 85.9 indicates an overbought short-term condition."
   },
   "macro": {
     "signal": "buy",
@@ -81,6 +81,9 @@
       "Supply chain exposure to semiconductor shortage if geopolitical crisis escalates",
       "Regulatory risk in EU (AI Act, data sovereignty rules affecting cloud business)"
     ],
-    "summary": "MSFT is a buy on macro grounds: the Fed's rate hold removes a key capex funding risk, moderate growth ensures stable enterprise demand, and the multi-year AI capex cycle is a structural tailwind independent of rate cycles. Geopolitical trade tensions are manageable for MSFT's core US/EU revenue base. High conviction."
-  }
+    "summary": "Current-session signal: buy. Microsoft has a 40.3% net margin, $67.0B free cash flow, debt-to-equity of about 0.13, and a 20.9x forward P/E below its 28.1x trailing P/E. Price is above all major moving averages and MACD is positive, but RSI at 85.9 indicates an overbought short-term condition."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

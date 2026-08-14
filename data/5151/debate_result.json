@@ -1,0 +1,48 @@
+{
+  "ticker": "5151",
+  "rounds": [
+    {
+      "round_number": 1,
+      "bull_argument": {
+        "position": "bull",
+        "round_number": 1,
+        "argument": "Positive reported free cash flow, short-term price strength, and above-average volume could indicate an early operating or sentiment re-rating.",
+        "key_points": [
+          "Positive reported free cash flow, short-term price strength, and above-average volume could indicate an early operating or sentiment re-rating.",
+          "Several quarters of improving earnings and free cash flow.",
+          "A sustained break and hold above SMA-200."
+        ],
+        "rebuttal_to_previous": null
+      },
+      "bear_argument": {
+        "position": "bear",
+        "round_number": 1,
+        "argument": "High valuation, heavy leverage, no forward earnings estimate, long-term resistance at SMA-200, and overbought momentum make the downside risk difficult to justify.",
+        "key_points": [
+          "High valuation, heavy leverage, no forward earnings estimate, long-term resistance at SMA-200, and overbought momentum make the downside risk difficult to justify.",
+          "Whether earnings and free cash flow can improve sustainably.",
+          "Debt, restructuring, and execution risk are not resolved by the local snapshot."
+        ],
+        "rebuttal_to_previous": null
+      }
+    }
+  ],
+  "bull_case_summary": "Positive reported free cash flow, short-term price strength, and above-average volume could indicate an early operating or sentiment re-rating.",
+  "bear_case_summary": "High valuation, heavy leverage, no forward earnings estimate, long-term resistance at SMA-200, and overbought momentum make the downside risk difficult to justify.",
+  "key_points_of_agreement": [
+    "Positive cash flow and short-term momentum support the bull case, but valuation, leverage, missing forward estimates, and overbought price action leave the risk case slightly stronger."
+  ],
+  "key_points_of_disagreement": [
+    "Whether earnings and free cash flow can improve sustainably.",
+    "Debt, restructuring, and execution risk are not resolved by the local snapshot.",
+    "There is no usable current news or analyst coverage."
+  ],
+  "unresolved_uncertainties": [
+    "Whether earnings and free cash flow can improve sustainably.",
+    "Debt, restructuring, and execution risk are not resolved by the local snapshot.",
+    "There is no usable current news or analyst coverage."
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

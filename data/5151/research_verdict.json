@@ -1,0 +1,26 @@
+{
+  "ticker": "5151",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Hextar is a neutral watch with a bearish risk tilt: the short-term chart has improved, but the local fundamentals do not provide enough evidence to support the valuation or leverage.",
+  "winning_side": "bear",
+  "strongest_counterexample": "A sustained earnings recovery could make the current trailing multiple less relevant and validate the recent price and volume strength.",
+  "invalidation_conditions": [
+    "Price loses SMA-20 and SMA-50 with MACD turning negative.",
+    "Reported free cash flow reverses or leverage worsens.",
+    "A break above SMA-200 is not sustained."
+  ],
+  "evidence_gaps": [
+    "Forward earnings estimates and earnings-recovery path.",
+    "Debt maturity, restructuring, and corporate-action details.",
+    "Usable current news and analyst coverage."
+  ],
+  "decisive_factors": [
+    "39.5x trailing P/E with no forward P/E.",
+    "1.77 debt-to-equity ratio and 7.0% reported net margin.",
+    "RSI 75.0, price above the upper Bollinger band, and below SMA-200."
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

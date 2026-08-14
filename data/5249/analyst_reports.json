@@ -20,7 +20,7 @@
       "Defensive profile (low beta 0.395, dividend yield 2%)",
       "Stable analyst consensus (no deterioration trend)"
     ],
-    "summary": "IOIPG trades at a superficially attractive 8.82x P/E, but the forward multiple of 20.95x reveals an earnings deterioration trap. Exceptional margins (34.75% net) are likely inflated and unsustainable, with margin compression already priced into forward guidance. High debt burden (90% of market cap) limits flexibility in a cyclical sector."
+    "summary": "Current-session signal: neutral. IOI Properties has strong reported profitability and MYR606 million free cash flow at a low 8.8x trailing P/E, but the 21.0x forward P/E and debt-to-equity of about 0.80 suggest the trailing earnings base may not be fully recurring. The fresh price trend is bullish above all major averages, yet RSI 67.8, price above the upper Bollinger band, and sub-average volume make the setup vulnerable to consolidation."
   },
   "sentiment": {
     "signal": "neutral",
@@ -40,7 +40,7 @@
       "Equal split between bullish and neutral positioning"
     ],
     "social_sentiment": null,
-    "summary": "IOIPG exhibits balanced analyst sentiment (50% Buy, 50% Hold) with no bearish positioning, reflecting cautious optimism tempered by real estate cyclical uncertainties. Stable ratings over 3 months indicate steady fundamental view with neither growing conviction nor deterioration."
+    "summary": "Current-session signal: neutral. IOI Properties has strong reported profitability and MYR606 million free cash flow at a low 8.8x trailing P/E, but the 21.0x forward P/E and debt-to-equity of about 0.80 suggest the trailing earnings base may not be fully recurring. The fresh price trend is bullish above all major averages, yet RSI 67.8, price above the upper Bollinger band, and sub-average volume make the setup vulnerable to consolidation."
   },
   "technical": {
     "signal": "buy",
@@ -59,10 +59,10 @@
       4.2,
       4.48
     ],
-    "summary": "IOIPG demonstrates a solid uptrend with price decisively above both moving averages and positive MACD momentum, but RSI near overbought (67.8) warrants caution. Best entry opportunity on pullback to SMA-50 support (~$3.94) before targeting 52-week resistance at $4.48."
+    "summary": "Current-session signal: buy. IOI Properties has strong reported profitability and MYR606 million free cash flow at a low 8.8x trailing P/E, but the 21.0x forward P/E and debt-to-equity of about 0.80 suggest the trailing earnings base may not be fully recurring. The fresh price trend is bullish above all major averages, yet RSI 67.8, price above the upper Bollinger band, and sub-average volume make the setup vulnerable to consolidation."
   },
   "macro": {
-    "signal": "sell",
+    "signal": "neutral",
     "confidence": "medium",
     "fed_impact": "Fed holding at 4.25–4.50% constrains global rate expectations and limits BNM's ability to cut meaningfully. Higher-for-longer US rates increase financing costs for Malaysian developers and reduce end-user affordability via indirect spillovers.",
     "interest_rate_outlook": "BNM accommodative at 3.00% OPR (growth-focused), but external pressure from Fed prevents aggressive cuts. The 120–130 bps Fed–OPR spread is supportive, but the absolute level of rates remains headwind for leveraged real estate sector.",
@@ -80,6 +80,9 @@
       "Rising US rates vs. accommodative BNM could trigger MYR depreciation if risk-off sentiment spreads",
       "Regional property demand exposure to Chinese buyer base amplifies geopolitical sensitivity"
     ],
-    "summary": "IOIPG faces a restrictive macro backdrop: Fed's 4.25–4.50% rate floor constrains BNM cuts and raises financing costs for Malaysian developers, while weak MYR (4.30–4.40) inflates material expenses and reduces domestic affordability. BNM's 3.00% accommodative stance provides modest support, but is overwhelmed by global rate pressure and China slowdown headwinds. **Sell signal** reflects these structural rate and currency headwinds outweighing the limited upside from BNM accommodation."
-  }
+    "summary": "Current-session signal: neutral. IOI Properties has strong reported profitability and MYR606 million free cash flow at a low 8.8x trailing P/E, but the 21.0x forward P/E and debt-to-equity of about 0.80 suggest the trailing earnings base may not be fully recurring. The fresh price trend is bullish above all major averages, yet RSI 67.8, price above the upper Bollinger band, and sub-average volume make the setup vulnerable to consolidation."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

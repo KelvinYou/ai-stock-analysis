@@ -1,0 +1,26 @@
+{
+  "ticker": "0215",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "SLVEST has the clearest aligned positive signal in this batch after accounting for the forward valuation, but the case remains dependent on earnings and project execution that are not yet visible in the local snapshot.",
+  "winning_side": "bull",
+  "strongest_counterexample": "If forecast earnings fail to materialize, the 34.3x trailing P/E and weak volume could lead to rapid multiple compression.",
+  "invalidation_conditions": [
+    "Price falls below SMA-50 and SMA-200 with negative MACD.",
+    "Earnings or free cash flow materially miss the implied growth path.",
+    "Forward earnings estimates are revised down persistently."
+  ],
+  "evidence_gaps": [
+    "Order book, project pipeline, and execution detail.",
+    "The assumptions behind forward earnings.",
+    "Updated technical data and usable current news after 2026-08-10."
+  ],
+  "decisive_factors": [
+    "19.0x forward P/E versus 34.3x trailing P/E.",
+    "10 buy and 1 hold recommendations.",
+    "Price above SMA-20, SMA-50, and SMA-200 with positive MACD."
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

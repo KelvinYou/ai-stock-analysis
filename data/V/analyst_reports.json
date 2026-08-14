@@ -20,10 +20,10 @@
       "Defensive business model: low beta (0.759), resilient through cycles",
       "Overwhelming analyst consensus: 37 of 40 rated Buy/Strong Buy (92.5%)"
     ],
-    "summary": "Visa is a best-in-class payment network with fortress economics (50% net margins), market-leading positioning, and exceptional cash generation ($21.6B FCF). While current P/E of 30.9x is elevated, forward P/E of 24.23x is justified by 22-28% growth expectations and structural advantages. A quality growth story at a premium valuation suitable for growth-oriented portfolios."
+    "summary": "Current-session signal: buy. Visa has a 50.1% net margin, positive free cash flow, a 24.0x forward P/E, and analyst support of 37 buys versus 3 holds. The price is above the 50- and 200-day moving averages but below the 20-day average, with a negative MACD histogram, RSI of 59.6, and very low volume."
   },
   "sentiment": {
-    "signal": "strong_buy",
+    "signal": "buy",
     "confidence": "high",
     "news_tone": "neutral",
     "news_summary": "Recent news headlines unavailable; sentiment driven by analyst consensus. No negative catalysts evident in recommendation data.",
@@ -38,10 +38,10 @@
       "No negative analyst calls — absence of contrarian voices"
     ],
     "social_sentiment": null,
-    "summary": "Visa shows textbook strong-buy analyst sentiment with 92.5% bullish consensus and rising conviction. However, zero sell-side ratings and extreme agreement warrant caution against sentiment crowding—a risk in defensive credit-services plays during macro inflection points."
+    "summary": "Current-session signal: buy. Visa has a 50.1% net margin, positive free cash flow, a 24.0x forward P/E, and analyst support of 37 buys versus 3 holds. The price is above the 50- and 200-day moving averages but below the 20-day average, with a negative MACD histogram, RSI of 59.6, and very low volume."
   },
   "technical": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "trend": "Uptrend (price above SMA-50 and SMA-200)",
     "rsi_14": 61.88,
@@ -55,10 +55,10 @@
     "resistance_levels": [
       370.47
     ],
-    "summary": "Visa is in a confirmed uptrend with price 9.84% above the 200-day moving average and positive MACD momentum. However, the stock is consolidating near recent highs with declining volume, creating a **buy signal with caution**. The RSI shows room to run (not overbought), but breakout confirmation is needed above $370.47 resistance with volume support."
+    "summary": "Current-session signal: neutral. Visa has a 50.1% net margin, positive free cash flow, a 24.0x forward P/E, and analyst support of 37 buys versus 3 holds. The price is above the 50- and 200-day moving averages but below the 20-day average, with a negative MACD histogram, RSI of 59.6, and very low volume."
   },
   "macro": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "fed_impact": "Positive. The Fed's steady 4.25-4.50% rate environment supports consumer spending and transaction volumes without creating rate-sensitive headwinds for Visa. Unlike banks, Visa's payment processing model benefits from higher-for-longer rates as it encourages credit card activity. Low unemployment (4%) underpins sustained consumer spending and transaction growth.",
     "interest_rate_outlook": "Rates expected to hold steady at 4.25-4.50%. This is benign for Visa's business; moderate rates support economic activity without crushing demand. Quantitative tightening at reduced pace aids equity valuations. Visa's low-leverage balance sheet benefits from the stable rate environment.",
@@ -74,6 +74,9 @@
       "China's mixed recovery signals may dampen emerging market growth in Asia-Pacific region",
       "Tariff escalation could affect merchant margins and discretionary spending, indirectly impacting transaction volumes"
     ],
-    "summary": "Visa benefits from the Fed's higher-for-longer stance and low unemployment environment, which drive consumer spending and card transaction growth. Trade tensions pose a mild headwind to international flows, but Visa's diversified global footprint and defensive business model (beta 0.759) position it well in the current macro regime. The steady rate environment supports cash flow and buybacks without material debt refinancing risk."
-  }
+    "summary": "Current-session signal: neutral. Visa has a 50.1% net margin, positive free cash flow, a 24.0x forward P/E, and analyst support of 37 buys versus 3 holds. The price is above the 50- and 200-day moving averages but below the 20-day average, with a negative MACD histogram, RSI of 59.6, and very low volume."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

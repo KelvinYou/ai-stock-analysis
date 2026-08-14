@@ -1,41 +1,32 @@
 {
   "ticker": "AMZN",
-  "date": "2026-08-12",
+  "date": "2026-08-14",
   "overall_signal": "buy",
   "conviction": {
-    "score": 0.35,
-    "signal_convergence": 0.45,
-    "explanation": "Nominal convergence looks strong (buy/strong_buy/buy/neutral, no sell anywhere), but the debate materially degrades that read: Fundamentals and Sentiment collapse into largely the same analyst-survey input (conceded by the bull), leaving effectively ~2.5 independent tracks rather than four. The one surviving independent signal, Technical, is itself contested — bull frames it as a confirmed high-volume breakout at a discount, bear frames the same data as a failed breakout with price back below the level and no identified support. Macro, the only non-positive read, explicitly names the capex cycle, trade tensions, and consumer weakening as downside risks. Compounding this, the bull conceded the trailing P/E of 21.9x does not reconcile with reported net income and that the AI-capex return case (FCF, ROIC, growth, depreciation) is entirely undocumented in the stack — real, unresolved holes rather than manufactured bear noise. Net: a moderate, not high, buy lean — good business quality and no outright sell signal argue against neutral or negative positioning, but unresolved valuation and capex-return uncertainty cap conviction well short of a strong buy."
+    "score": 0.4,
+    "signal_convergence": 0.63,
+    "explanation": "Current-session English batch refresh. Analyst sentiment, scale, and technical momentum favor the bull case, while weak cash conversion and forward valuation limit conviction."
   },
-  "executive_summary": "Amazon screens as a moderate buy on the balance of four analyst reports and a three-round adversarial debate, but the conviction is meaningfully lower than the raw signal count (buy, strong_buy, buy, neutral) suggests. The fundamental case is genuinely strong — ~50% gross margins, a $77.7B+ net income base, and a conservative 37% debt-to-equity balance sheet funding AWS/AI capex out of operating cash flow rather than leverage — and no agent in the stack produced an outright sell. However, the debate surfaced three unresolved issues that a disciplined investor should weight heavily: (1) the quoted 21.9x trailing P/E does not reconcile with the reported $77.7B net income against a $2.937T market cap (which implies ~37.8x), and the bull conceded this without fully resolving which figure is live; (2) the AI-capex build that partly explains the forward-above-trailing multiple spread has zero supporting ROIC, utilization, FCF, or AWS-growth data anywhere in the analyst stack, making the \"self-funded, monetizing demand\" bull narrative a plausible story rather than a demonstrated return; and (3) the Fundamentals and Sentiment signals substantially double-count the same 96-98% analyst-bullishness input, reducing effective signal independence from four tracks to roughly two-and-a-half.\n\nThe technical setup is the most contested single data point — the bull reads the pullback to $272 as a discounted entry after a confirmed institutional breakout above $284, while the bear reads the same print as a failed breakout with no identified support or stop. Macro is the most consistently sober voice in the stack: it never turns bearish, but it is the only agent whose explicit mandate is exogenous risk, and it independently names capex intensity, trade tensions, and consumer softening as material downside factors tied to Amazon's 1.454 beta. On net, the fortress balance sheet, margin quality, and absence of any sell signal justify a buy lean over neutral or sell, but the unresolved valuation arithmetic, the undocumented capex-return case, and the crowded 98%-bullish/zero-bear sentiment positioning (which leaves far more room for downgrades than upgrades) argue against high conviction. The single highest-value next step both sides of the debate agree on is re-underwriting the position against the next AWS earnings print, when capex ROIC, utilization, and growth-rate data should become available.",
-  "bull_case": "Amazon is the highest-quality asset in the mega-cap complex: ~50% gross margins, $77.7B+ net income, a conservative 37% debt-to-equity balance sheet, and a high-margin AWS franchise, with zero sell signal across four independently-run analyst tracks. The technical setup — a 130M-share breakout above $284 followed by an orderly ~4% pullback to $272 on lighter volume — reads as realized institutional accumulation rather than analyst-survey noise, giving the one signal that can't be dismissed as consensus double-counting. On valuation, once the trailing-multiple dispute is resolved in the bear's favor, the honest number is 26.4x forward — roughly a 30% premium to a ~20x market multiple for the best cloud/retail compounder available, financed out of operating cash flow rather than debt. The AI capex build carries the same accounting signature as the 2015-2019 AWS build: reported earnings compress temporarily while cash is converted into monetizable capacity against visible, competitively-contested demand. The bear's downside math freezes EPS while re-rating the multiple; even modest mid-teens forward EPS growth over two years largely offsets a de-rate to a market multiple. Macro's worst read is neutral, not bearish, with stated inputs (low unemployment, moderating inflation, stable Fed) that are supportive, not hostile.",
-  "bear_case": "The bull conceded every load-bearing input over three rounds: the trailing 21.9x multiple doesn't reconcile with reported net income ($2.937T cap / $77.7B = 37.8x, not 21.9x); the \"cheap\" earnings base is contaminated by non-operating investment marks, making 26.4x forward the more honest — and less flattering — number; the four-signal convergence collapses to roughly 2.5 independent tracks once the Fundamentals/Sentiment analyst-survey overlap is stripped out; and the entire AI-capex returns case is undocumented (no FCF, ROIC, AWS growth rate, utilization, or depreciation schedule anywhere in the stack). Amazon is a Consumer Cyclical name with a 1.454 beta being priced at a multiple that assumes durable, low-volatility quality earnings — a mismatch. The AI capex is explicitly competitive spend to defend share against Azure/Google Cloud (and increasingly customer-designed silicon), which is margin-compressing arms-race spend, not monopoly-style capacity building — a structurally different setup than the 2015-2019 AWS analogy. Sentiment at 98% positive with zero bears among 60 analysts and three months of moderating revisions is a sign of an exhausted marginal buyer, not safety. The $272 print sits below the $284 breakout it's meant to confirm — a failed breakout with no identified support, floor, or stop. Payoff skews poorly: roughly flat in the bull's own best case (no dividend/buyback yield cited) versus -24% on a simple de-rate and 30-40% on an AWS deceleration print or tariff shock transmitted through the high beta. The disciplined move is to wait for the next AWS print to get the missing capex-ROIC data before underwriting the position.",
+  "executive_summary": "Amazon has $716.9B revenue, a 10.8% net margin, and a 21.9x trailing P/E, but free cash flow is only $7.7B and the 26.4x forward P/E is higher than the trailing multiple. Price is above all major moving averages with RSI at 63.9 and a positive MACD histogram, although volume is only 59% of its 20-day average.",
+  "bull_case": "Large-scale revenue, strong analyst sentiment, and positive technical momentum support further earnings growth.",
+  "bear_case": "Low free-cash-flow conversion and a forward P/E above the trailing P/E leave the valuation exposed if earnings estimates weaken.",
   "key_uncertainties": [
-    "Which earnings figure is actually live — reported $77.7B net income vs. the ~$134B implied by the quoted 21.9x trailing P/E on a $2.937T market cap; this discrepancy was never resolved, only debated over which side it favors",
-    "How much of trailing GAAP earnings is durable operating profit vs. non-operating equity mark-to-market gains, which determines the true clean multiple",
-    "AI/AWS capex economics: no ROIC, utilization, depreciation schedule, or incremental revenue attribution exists anywhere in the analyst stack",
-    "Whether AWS market share and economics accrue to Amazon or leak to Azure, Google Cloud, and hyperscaler in-house silicon",
-    "Whether the 98%-bullish/zero-bear sentiment reading represents healthy de-risking of a crowded trade or the early stage of a revision-momentum rollover",
-    "Recent news flow — the Sentiment agent explicitly ran without current news context",
-    "Whether $272 represents a genuine discount to a confirmed breakout or a failed breakout with $284 buyers as overhead supply — no support level or stop was identified in the technical report",
-    "Realized forward EPS growth over the holding period, which is the swing factor between a roughly flat and a ~-24% outcome under multiple compression",
-    "Tariff/trade policy trajectory and consumer resilience, and how forcefully the 1.454 beta transmits either into the stock"
+    "Whether free-cash-flow conversion improves",
+    "Whether forward earnings estimates are achievable",
+    "Sensitivity to consumer-cycle and interest-rate conditions"
   ],
   "catalysts_upcoming": [
-    "Next AWS earnings print — both bull and bear agree this is the decisive event to re-underwrite capex ROIC, utilization, and growth-rate data currently missing from the stack",
-    "Any incremental analyst downgrade off the current 98%-bullish/zero-bear base, which would signal the revision cycle has turned",
-    "Fed policy path — a shift off the current 'stable, higher-for-longer' baseline (either a cut that eases WACC or a delay that further pressures capex-heavy AWS returns)",
-    "Tariff/trade-policy developments given explicit macro-flagged exposure",
-    "Confirmation or failure of the $284 breakout level — a reclaim would support the bull's 'confirmed breakout, discounted entry' read; continued failure to retake it would support the bear's 'failed breakout, overhead supply' read"
+    "Next earnings update for revenue, margins, and free cash flow",
+    "Improved free-cash-flow conversion",
+    "Continued support above the 50- and 200-day averages"
   ],
   "risk_assessment": {
-    "position_size_suggestion": "0.7% of portfolio",
     "correlation_notes": [
-      "High beta (1.45) — amplifies market moves. Consider reducing if portfolio is already tech/growth heavy.",
-      "Sector: Consumer Cyclical — check existing portfolio exposure to this sector."
+      "High beta (1.45) — price may amplify broad-market moves.",
+      "Sector: Consumer Cyclical — use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 56.1% over past year. Projected worst case (2-sigma): ~89.8% from current $272.27.",
-    "risk_reward_ratio": "0.78:1"
+    "max_drawdown_scenario": "Historical max drawdown: 56.1% over available price history. Projected worst case (2-sigma): ~89.8% from current $272.27.",
+    "risk_reward_ratio": "1.59:1"
   },
   "action_plan": {
     "entry_limit": 254.37,
@@ -48,10 +39,36 @@
     "horizon": "swing (2-8 weeks)",
     "note": null
   },
+  "research_verdict": {
+    "ticker": "AMZN",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "The operating scale and positive trend support a buy view, but the low free-cash-flow conversion means the thesis depends on improved cash profitability.",
+    "winning_side": "bull",
+    "strongest_counterexample": "If capital intensity remains high and forward earnings decline, the 26.4x forward P/E may not provide adequate valuation support.",
+    "invalidation_conditions": [
+      "A sustained break below the 200-day average",
+      "Continued deterioration in free cash flow",
+      "Downward revisions to forward earnings"
+    ],
+    "evidence_gaps": [
+      "No current news data",
+      "No segment-level profitability or cash-flow detail",
+      "No explicit macroeconomic data"
+    ],
+    "decisive_factors": [
+      "$716.9B revenue scale",
+      "Positive price trend above all major moving averages",
+      "58 buy or strong-buy recommendations versus 2 holds"
+    ]
+  },
   "agent_signal_breakdown": {
-    "fundamentals": "buy (high confidence) — exceptional margins, healthy balance sheet, but explicitly flags growth already priced into forward multiple",
-    "sentiment": "buy (medium confidence) — 98% analyst bullishness but admits no recent news context and detects 3-month revision moderation",
-    "technical": "strong_buy (high confidence) — uptrend intact, but debate reframes the setup as a failed breakout (price below the $284 breakout level) rather than a confirmed discount",
-    "macro": "neutral (medium confidence) — the only non-positive read; explicitly names capex intensity, trade tensions, and consumer weakening as material downside risks"
-  }
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "buy",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
 }

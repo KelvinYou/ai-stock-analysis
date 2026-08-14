@@ -1,0 +1,26 @@
+{
+  "ticker": "0128",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Frontken's operating quality and positive trend support a buy view, but the valuation requires continued semiconductor growth and earnings execution.",
+  "winning_side": "bull",
+  "strongest_counterexample": "A semiconductor slowdown or customer-specific order loss could compress both earnings expectations and the premium multiple.",
+  "invalidation_conditions": [
+    "Revenue, margins, or free cash flow deteriorate for multiple periods",
+    "Analyst estimates begin to move lower",
+    "Price breaks below SMA-50 and SMA-200 with negative MACD"
+  ],
+  "evidence_gaps": [
+    "No current news headlines in the local Layer 1 snapshot",
+    "No customer concentration, backlog, or contract-duration detail",
+    "Price history and technical indicators end on 2026-08-10"
+  ],
+  "decisive_factors": [
+    "25.4% net margin, 36.9% operating margin, and debt-to-equity near 2.8%",
+    "Price above SMA-20, SMA-50, and SMA-200 with positive MACD",
+    "47.8x trailing P/E and 38.7x forward P/E near the 52-week high"
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

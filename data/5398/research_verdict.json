@@ -1,0 +1,26 @@
+{
+  "ticker": "5398",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Gamuda has a constructive trend and strong analyst support, but the buy view depends on forward earnings and project execution converting into cash flow.",
+  "winning_side": "bull",
+  "strongest_counterexample": "A failure to convert revenue into cash, or a normalisation of project earnings, could make the 19.7x forward P/E look expensive.",
+  "invalidation_conditions": [
+    "The price closes below SMA-200 with negative momentum.",
+    "Free cash flow and project margins deteriorate further.",
+    "Analyst recommendations or forward earnings estimates are materially revised down."
+  ],
+  "evidence_gaps": [
+    "Project backlog quality, timing, and margin detail.",
+    "The drivers and duration of negative reported free cash flow.",
+    "Usable current news and macro inputs."
+  ],
+  "decisive_factors": [
+    "16 buy and 2 hold recommendations.",
+    "Price above all three major moving averages with positive MACD.",
+    "19.7x forward P/E versus negative reported free cash flow."
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

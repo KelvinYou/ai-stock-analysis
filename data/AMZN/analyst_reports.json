@@ -22,7 +22,7 @@
       "Overwhelming analyst support: 58 of 60 analysts bullish (96.7%)",
       "Consistent profitability: $77.7B net income on $716.9B revenue"
     ],
-    "summary": "Amazon is a fundamentally sound mega-cap with exceptional margins (50% gross), strong profitability ($77.7B net income), and a diversified business anchored by high-margin AWS. At 21.9x trailing P/E the stock is fairly valued, though 26.4x forward P/E reflects elevated growth expectations that must be achieved. Analyst consensus is almost unanimously bullish (96.7%), and the balance sheet is healthy (37% debt-to-equity). Buy on strength for long-term exposure to a market leader, but acknowledge that significant growth is already priced in."
+    "summary": "Current-session signal: buy. Amazon has $716.9B revenue, a 10.8% net margin, and a 21.9x trailing P/E, but free cash flow is only $7.7B and the 26.4x forward P/E is higher than the trailing multiple. Price is above all major moving averages with RSI at 63.9 and a positive MACD histogram, although volume is only 59% of its 20-day average."
   },
   "sentiment": {
     "signal": "buy",
@@ -39,10 +39,10 @@
       "No recent headlines retrieved"
     ],
     "social_sentiment": null,
-    "summary": "Amazon shows consensus bullish analyst sentiment (98% positive, 60 analysts), but slight moderation over 3 months suggests marginal cooling despite overwhelming positivity. The extreme agreement and zero bearish calls warrant caution—sentiment may be ahead of fundamentals or pricing in unvalidated upside. Without recent news context, conviction is moderate."
+    "summary": "Current-session signal: buy. Amazon has $716.9B revenue, a 10.8% net margin, and a 21.9x trailing P/E, but free cash flow is only $7.7B and the 26.4x forward P/E is higher than the trailing multiple. Price is above all major moving averages with RSI at 63.9 and a positive MACD histogram, although volume is only 59% of its 20-day average."
   },
   "technical": {
-    "signal": "strong_buy",
+    "signal": "buy",
     "confidence": "high",
     "trend": "Strong uptrend; price above SMA-50 and SMA-200 with momentum continuation",
     "rsi_14": 63.85,
@@ -56,7 +56,7 @@
     "resistance_levels": [
       284.02
     ],
-    "summary": "AMZN is in a strong uptrend with positive momentum across all indicators. The stock broke above $284 on exceptional volume (130M shares), and the current consolidation pullback to $272 represents a healthy entry opportunity. Buy signals are confirmed by above-trend moving averages, positive MACD histogram, and healthy RSI."
+    "summary": "Current-session signal: buy. Amazon has $716.9B revenue, a 10.8% net margin, and a 21.9x trailing P/E, but free cash flow is only $7.7B and the 26.4x forward P/E is higher than the trailing multiple. Price is above all major moving averages with RSI at 63.9 and a positive MACD histogram, although volume is only 59% of its 20-day average."
   },
   "macro": {
     "signal": "neutral",
@@ -76,6 +76,9 @@
       "Trade war risk could trigger USD strength (flight to safety), headwinding Amazon's ~30% non-US revenue when translated to dollars",
       "Supply chain disruption risk from tariff escalation impacts logistics efficiency and third-party seller economics"
     ],
-    "summary": "Stable Fed rates and solid consumer fundamentals (low unemployment, moderating inflation) support Amazon's retail and AWS segments. However, elevated trade tensions, rising capex intensity for AI infrastructure, and high cyclical beta (1.454) create material downside risk if consumer sentiment weakens or tariff pressures accelerate. Macro setup is neutral—balanced between supportive demand and offsetting geopolitical/capital headwinds."
-  }
+    "summary": "Current-session signal: neutral. Amazon has $716.9B revenue, a 10.8% net margin, and a 21.9x trailing P/E, but free cash flow is only $7.7B and the 26.4x forward P/E is higher than the trailing multiple. Price is above all major moving averages with RSI at 63.9 and a positive MACD histogram, although volume is only 59% of its 20-day average."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

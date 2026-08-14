@@ -1,0 +1,26 @@
+{
+  "ticker": "TSLA",
+  "judged_view": "sell",
+  "confidence": "medium",
+  "thesis": "The combination of a 305.3x trailing P/E, 150.0x forward P/E, 4.0% net margin, and price below all major moving averages outweighs positive free cash flow and mixed analyst support.",
+  "winning_side": "bear",
+  "strongest_counterexample": "An oversold RSI, positive MACD histogram, and materially lower forward P/E could signal that the current weakness is temporary rather than structural.",
+  "invalidation_conditions": [
+    "Sustained improvement in revenue, margin, and free cash flow",
+    "Price recovery above the 50- and 200-day moving averages",
+    "Evidence that future earnings can justify the current valuation"
+  ],
+  "evidence_gaps": [
+    "No non-empty current news headlines",
+    "No breakdown of forward earnings assumptions",
+    "Latest technical snapshot is dated 2026-08-11"
+  ],
+  "decisive_factors": [
+    "305.3x trailing P/E and 150.0x forward P/E",
+    "4.0% net margin",
+    "Price below all three major moving averages"
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

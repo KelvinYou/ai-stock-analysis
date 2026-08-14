@@ -20,10 +20,10 @@
       "Overwhelming analyst consensus: 58 buy/strong-buy vs 3 hold/sell (95% positive recommendations)",
       "Secular AI tailwind with expanding use cases across enterprise, automotive, and cloud infrastructure"
     ],
-    "summary": "NVIDIA is the dominant infrastructure play for the AI era with fortress financials (56% net margins, $97B FCF) and conservative capital structure (0.07x leverage). Forward P/E of 16.9x is justified by expected 40%+ growth and competitive moat, though offers limited margin of safety if AI capex cycle decelerates. Strong buy signal for growth investors with medium-term horizon and risk tolerance for 2.2x beta volatility."
+    "summary": "Current-session signal: buy. NVIDIA reports a 55.6% net margin, $96.7B free cash flow, debt-to-equity of about 0.07, and a 17.5x forward P/E versus a 34.4x trailing P/E. Price is above all major moving averages with RSI at 61.4 and a positive MACD histogram, but beta at 2.22 and a Bollinger position near the upper band indicate elevated volatility."
   },
   "sentiment": {
-    "signal": "strong_buy",
+    "signal": "buy",
     "confidence": "high",
     "news_tone": "neutral",
     "news_summary": "Analyst recommendations show overwhelming bullish consensus with 95.1% of analysts rating NVDA as Buy or Strong Buy (58 of 61). This distribution has remained completely stable for the past 3 months, indicating no deterioration in conviction. Only 1 Sell and 2 Hold ratings exist, with zero Strong Sell recommendations, reflecting sustained confidence in NVIDIA's semiconductor and AI infrastructure dominance.",
@@ -41,7 +41,7 @@
       "Only Single Dissent Among 61 Analysts Suggests Balanced Risk View"
     ],
     "social_sentiment": null,
-    "summary": "NVDA commands near-total analyst support with 95.1% bullish sentiment and zero conviction breaks over 3 months, reflecting sustained confidence in AI/data center dominance. The extreme consensus is a strong buy signal but represents binary risk—monitor for first signs of analyst dissent. Sentiment is aligned with fundamentals in high-growth semiconductor/AI sector positioning."
+    "summary": "Current-session signal: buy. NVIDIA reports a 55.6% net margin, $96.7B free cash flow, debt-to-equity of about 0.07, and a 17.5x forward P/E versus a 34.4x trailing P/E. Price is above all major moving averages with RSI at 61.4 and a positive MACD histogram, but beta at 2.22 and a Bollinger position near the upper band indicate elevated volatility."
   },
   "technical": {
     "signal": "buy",
@@ -60,7 +60,7 @@
       223.96,
       235.47
     ],
-    "summary": "NVDA is in a solid uptrend with price 12% above the 200-day MA, but momentum indicators are plateauing. RSI shows room to run higher, but MACD histogram is minimal and recent volume is below average. Buy on dips to the 50-day MA, but monitor for momentum confirmation on volume breakouts above $223.96 resistance."
+    "summary": "Current-session signal: buy. NVIDIA reports a 55.6% net margin, $96.7B free cash flow, debt-to-equity of about 0.07, and a 17.5x forward P/E versus a 34.4x trailing P/E. Price is above all major moving averages with RSI at 61.4 and a positive MACD histogram, but beta at 2.22 and a Bollinger position near the upper band indicate elevated volatility."
   },
   "macro": {
     "signal": "neutral",
@@ -80,6 +80,9 @@
       "Iran-related energy price volatility adds cost pressures to chip manufacturing",
       "Supply chain resilience efforts ongoing but not yet diversified enough; geographic concentration risk remains"
     ],
-    "summary": "NVDA faces a macro headwind from inflation re-acceleration and expected Fed rate hikes by end-2026, which compress growth-stock valuations; high beta (2.215x market) amplifies downside. AI capex demand remains structural tailwind, but geopolitical risks (Taiwan supply, tariffs) and energy cost inflation create near-term execution risk. Neutral bias with caution on rate/tariff surprises."
-  }
+    "summary": "Current-session signal: neutral. NVIDIA reports a 55.6% net margin, $96.7B free cash flow, debt-to-equity of about 0.07, and a 17.5x forward P/E versus a 34.4x trailing P/E. Price is above all major moving averages with RSI at 61.4 and a positive MACD histogram, but beta at 2.22 and a Bollinger position near the upper band indicate elevated volatility."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

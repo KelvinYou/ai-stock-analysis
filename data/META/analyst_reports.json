@@ -20,7 +20,7 @@
       "Analyst consensus overwhelming — 88.7% buy/strong-buy, zero sell ratings",
       "Operational excellence — margin expansion despite AI/compute investment intensity"
     ],
-    "summary": "Meta trades at fair value (17.2x forward P/E) with fortress balance sheet, exceptional margins (30% net), and robust cash generation ($46B FCF). Regulatory and AI capex risks are real but manageable given financial strength and margin quality; analyst consensus strongly bullish. Buy on valuation and operational excellence, but monitor macro sensitivity and regulatory developments."
+    "summary": "Current-session signal: buy. Meta has a 30.1% net margin, $46.1B free cash flow, debt-to-equity of about 0.39, and a 17.2x forward P/E below its 22.6x trailing P/E. Price is below the 20- and 200-day averages but slightly above the 50-day average; RSI is 40.8 and the MACD histogram is negative."
   },
   "sentiment": {
     "signal": "buy",
@@ -39,7 +39,7 @@
       "Sentiment unchanged for 3 consecutive months"
     ],
     "social_sentiment": null,
-    "summary": "Meta shows overwhelming analyst bullishness (89% buy consensus), but the lack of any dissenting voices and extreme concentration—combined with absent news data—signals peak sentiment conditions. Medium confidence due to data limitations and contrarian risk that extreme consensus poses."
+    "summary": "Current-session signal: buy. Meta has a 30.1% net margin, $46.1B free cash flow, debt-to-equity of about 0.39, and a 17.2x forward P/E below its 22.6x trailing P/E. Price is below the 20- and 200-day averages but slightly above the 50-day average; RSI is 40.8 and the MACD histogram is negative."
   },
   "technical": {
     "signal": "sell",
@@ -58,7 +58,7 @@
       681.0,
       787.0
     ],
-    "summary": "META is in a technical downtrend with fragile recovery. Price sits just 0.16% above the 50-day MA and 4.76% below the 200-day MA, signaling longer-term weakness. MACD histogram remains negative, confirming bearish momentum has not reversed. RSI at 40.82 leaves room for further decline. A SELL is warranted with medium confidence; conviction is tempered by recent stabilization in volume and price clustering near the 50-day MA, which could act as a pivot."
+    "summary": "Current-session signal: sell. Meta has a 30.1% net margin, $46.1B free cash flow, debt-to-equity of about 0.39, and a 17.2x forward P/E below its 22.6x trailing P/E. Price is below the 20- and 200-day averages but slightly above the 50-day average; RSI is 40.8 and the MACD histogram is negative."
   },
   "macro": {
     "signal": "neutral",
@@ -77,6 +77,9 @@
       "Supply chain vulnerability in AI chip procurement",
       "Advertising revenue concentration risk in markets affected by trade tensions (EU, India, Asia-Pacific)"
     ],
-    "summary": "META faces a macro headwind from persistent elevated rates (4.25-4.50%) that compress growth multiples, offset partially by inflation normalization and stable rate hold. AI capex momentum offers upside optionality, but ROI remains unproven; geopolitical trade tensions add downside risk to ad spending. Stance: **Neutral** until rate trajectory clarifies or AI capex demonstrates tangible margin accretion."
-  }
+    "summary": "Current-session signal: neutral. Meta has a 30.1% net margin, $46.1B free cash flow, debt-to-equity of about 0.39, and a 17.2x forward P/E below its 22.6x trailing P/E. Price is below the 20- and 200-day averages but slightly above the 50-day average; RSI is 40.8 and the MACD histogram is negative."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

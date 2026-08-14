@@ -1,39 +1,31 @@
 {
   "ticker": "5005",
-  "date": "2026-08-12",
-  "overall_signal": "buy",
+  "date": "2026-08-14",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": 0.22,
-    "signal_convergence": 0.35,
-    "explanation": "Panel-level signals are split 2 buy (sentiment, macro-conditional) / 2 neutral (fundamentals, technical) with zero sell ratings and no high-confidence reads — a mild positive tilt, not consensus. The three-round debate was genuinely close: the bull's inflection/capex-ahead-of-demand thesis is directionally plausible and partially corroborated by two independent agents (named MPS anchor customer, AI upcycle, FX/rate offsets), but the bear's valuation discipline lands real blows — the forward multiple already prices in the inflection, three of four reports contain literal 'wait' instructions, the FCF runway is unquantified, and no technical entry trigger has fired. This isn't a coin-flip neutral (the weight of evidence and the debate's final exchanges favor initiating exposure over avoiding it), but conviction is low-to-modest and calls for a partial/staged position rather than full sizing."
+    "score": -0.16,
+    "signal_convergence": 0.55,
+    "explanation": "Current-session English batch refresh. The bull case depends on a cyclical recovery, while the bear case is supported by current cash burn, weak operating leverage, expensive trailing valuation, and short-term technical weakness. The evidence favors caution, but the stock remains above SMA-200 and a recovery could change the balance."
   },
-  "executive_summary": "UNISEM (5005) presents as a cyclical semiconductor OSAT at an unconfirmed earnings inflection point. The headline valuation signature — a 109.75x trailing P/E compressing to a 33.66x forward P/E — is either evidence that the market is pricing a trough-to-recovery earnings tripling (bull) or evidence that the recovery is already fully paid for, leaving no margin of safety against a normalization to the sector's 15-25x through-cycle band (bear). Four independent analyst agents produced a mildly constructive but unconvinced panel: Sentiment and Macro/FX rate buy (medium confidence), while Fundamentals and Technical sit neutral (medium confidence) — critically, three of the four reports contain explicit \"wait\" language (monitor FCF before upgrading; hold for a break above 4.86 or an RSI bounce; sentiment already fairly priced in). No agent issued a sell or a high-confidence rating in either direction.\n\nThe three-round adversarial debate sharpened rather than resolved the disagreement. The bull's strongest points — a named anchor customer (MPS) linking sector AI tailwinds to company-specific capacity, a healthy low-leverage balance sheet funding the capex burn, and FX/rate dynamics that MacroFX already netted into its own buy call — survived scrutiny reasonably well. The bear's strongest points — that the forward multiple already prices in the earnings tripling so returns require beating consensus, that \"weak operating leverage\" is a structural (not merely cyclical) red flag, that the FCF runway is entirely unquantified, and that none of the panel's own stated entry triggers (technical breakout, FCF inflection, trade-policy clarity) have actually fired — also survived scrutiny and were never fully answered. Both sides conceded ground: the bull withdrew his sentiment \"room to upgrade\" reading and accepted the technical triggers are unfired; the bear conceded his own downside math depends on an outside peer-multiple import no agent in the dossier actually cites.\n\nNet-net, this is a name with a real, evidence-supported bull thesis that has not yet been confirmed by price action, cash flow, or policy resolution — the classic setup for a small, rule-bound starter position rather than either full conviction or avoidance. The signal leans buy, but conviction is modest and should be expressed through staged sizing tied to the panel's own stated triggers (FCF inflection, a close above 4.86 or an oversold RSI bounce, and trade-policy clarity) rather than a full-size commitment today.",
-  "bull_case": "UNISEM is a cyclical OSAT priced off a broken trailing denominator: the 109.75x trailing P/E vs. 33.65x forward P/E (~69% compression) is consensus signaling an earnings inflection off a utilization trough, not a valuation red flag. The negative FCF is the standard signature of capex landing 12–24 months ahead of revenue — funded by a balance sheet the fundamentals agent itself calls \"healthy\" — aimed at demand two independent agents corroborate (AI-driven semiconductor upcycle per MacroFX; MPS's expansion, a named anchor customer in AI server power delivery, per Sentiment). The thesis doesn't require CoWoS-class advanced-packaging economics, only rising analog/power content per AI rack landing in this tier of assembly and test. MYR weakness (4.30–4.40) against USD-billed revenue on a Malaysian cost base, plus BNM's accommodative stance funding exactly the capex causing the burn, directly offset the two headline bear concerns — and MacroFX netted the offsets itself and still called it a buy. A beta of 1.249 is empirically inconsistent with a fragile 100x \"story stock\" (those typically run 1.8–2.5). On the bear's own downside framework, applying a normalized 20x multiple to a second year of merely-decent (40%) EPS growth — rather than freezing earnings at the inflection year — implies roughly -17%, not -41%, a materially smaller and more realistic downside. Panel scoreboard across four independent, uncorrelated agents: zero sell signals, two buys, two neutrals whose operative language is \"wait,\" not \"avoid.\" The rational response to unfired technical triggers is not zero exposure but staged, rule-bound sizing: a partial position now, adding on an RSI-sub-30 bounce or a close above 4.86, with a stop below the recent correction low.",
-  "bear_case": "The 109.75x trailing multiple is a distraction; the number that matters is the 33.65x forward multiple, because that is the price paid AFTER consensus earnings have already tripled — i.e., after the bull's success scenario is fully delivered. Against an unrebutted 15–25x through-cycle Malaysian OSAT peer band, a normalization to 20x on schedule-perfect earnings implies roughly 41% downside; merely holding today's price requires the tripling plus another ~68% of growth on top. Because a forward multiple already embeds consensus growth by definition, the bull's thesis has never established that UNISEM beats consensus or that 33.65x is cheap for what it buys — only that it might grow into what's already priced. The \"capex ahead of confirmed demand\" framing is also the classic pattern behind OSAT losses: capacity lands into normalized utilization and ASP deflation 12–24 months later, and no agent cites UNISEM-specific AI revenue — the MPS link is sourced from the sentiment agent, which in the same breath called it \"fairly priced... with limited upside surprise potential,\" with the AI-server-power supply chain reasoning supplied outside the dossier. The fundamentals agent's finding of \"weak operating leverage\" is a structural (not cyclical) red flag that undercuts the very mechanism needed to triple earnings, and the negative FCF is an unquantified clock consuming a \"healthy\" balance sheet with no stated runway. Read literally, three of four reports contain explicit wait instructions (FCF must inflect before upgrading; hold for a break above 4.86 or an RSI bounce; sentiment already priced in), zero strong buys, zero high-confidence ratings, a bearish MACD, and the one unambiguous buy (MacroFX) is explicitly conditional on trade-policy clarity nobody has established. Confirmation costs far less than a 41% drawdown.",
+  "executive_summary": "Unisem has a long-term semiconductor recovery angle, but the fresh snapshot shows only 4.2% operating margin, 4.6% net margin, negative MYR164 million free cash flow, and a 109.8x trailing P/E despite a lower 33.7x forward P/E. Price is below SMA-20 and SMA-50 with RSI 31.8 and negative MACD, although it remains above SMA-200.",
+  "bull_case": "Higher utilization, MPS expansion, and stronger AI-related semiconductor demand could improve margins and turn free cash flow positive.",
+  "bear_case": "Negative free cash flow, low operating leverage, high trailing valuation, and short-term technical weakness leave the recovery thesis dependent on evidence that is not yet visible.",
   "key_uncertainties": [
-    "The FCF runway is completely unquantified by any agent or debate side — no cash balance, capex schedule, break-even utilization rate, or funding-window estimate exists in the dossier",
-    "Whether 'weak operating leverage' (per Fundamentals) is a temporary cyclical under-absorption issue that resolves as capacity fills, or a structural feature of commodity-tier OSAT pricing power that caps the earnings-tripling thesis permanently",
-    "Whether UNISEM has any actual company-specific AI-linked revenue exposure — the MPS/AI-server-power link is an inference layered on top of the sentiment agent's report, not a disclosed fact, and MPS's share of UNISEM's revenue is unknown",
-    "Estimate quality behind the 33.65x forward P/E — neither analyst reports nor debate examined consensus dispersion, recent revision direction, or the number of analysts contributing to that forward estimate",
-    "The correct through-cycle peer multiple for a Malaysian OSAT in year two of an AI-linked capex cycle — the bear's 15-25x band is an outside import unsupported by any of the four agents",
-    "Resolution timing and probability of the trade-policy clarity condition explicitly attached to MacroFX's buy rating",
-    "Whether the current technical correction resolves as a pullback within the intact long-term uptrend or develops into a trend break — both stated entry/exit triggers remain unfired"
+    "Timing of free-cash-flow and margin recovery",
+    "Actual contribution from MPS expansion and customer orders",
+    "Whether the 33.7x forward P/E rests on achievable earnings normalization"
   ],
   "catalysts_upcoming": [
-    "FCF inflection to positive (fundamentals agent's explicit pre-condition for an upgrade)",
-    "Technical trigger: daily close above MYR 4.86 resistance, or an RSI-14 bounce from sub-30 oversold territory",
-    "Trade-policy clarity — the explicit condition attached to MacroFX's buy rating",
-    "Next 1-2 quarterly earnings prints testing whether consensus forward EPS (implying the 33.65x forward P/E) is tracking, holding, or being revised down",
-    "Analyst rating shifts from the current 4 Hold / 3 Buy street split, which would confirm or refute the sentiment agent's 'improving momentum' read",
-    "Disclosure of MPS-specific revenue contribution or capacity utilization rates, which would resolve whether AI-linked demand is company-specific or a sector-level narrative"
+    "Quarterly operating-margin and free-cash-flow data",
+    "MPS expansion, utilization, and customer-order updates",
+    "Price reclaiming SMA-20 and SMA-50 with improving MACD"
   ],
   "risk_assessment": {
-    "position_size_suggestion": "0.5% of portfolio",
     "correlation_notes": [
-      "Sector: Technology — check existing portfolio exposure to this sector."
+      "Sector: Technology — use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 59.3% over past year. Projected worst case (2-sigma): ~105.1% from current $4.38.",
-    "risk_reward_ratio": "0.42:1"
+    "max_drawdown_scenario": "Historical max drawdown: 59.3% over available price history. Projected worst case (2-sigma): ~105.1% from current $4.38.",
+    "risk_reward_ratio": "N/A (bearish signal)"
   },
   "action_plan": {
     "entry_limit": null,
@@ -44,13 +36,38 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.22, convergence 0.35). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction -0.16, convergence 0.55). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "5005",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Recovery optionality is not yet reflected in cash generation or margins, so the stock remains neutral with a downside bias until operating evidence improves.",
+    "winning_side": "bear",
+    "strongest_counterexample": "The gap between the 109.8x trailing and 33.7x forward P/E could reflect a real earnings inflection if orders and utilization recover quickly.",
+    "invalidation_conditions": [
+      "Free cash flow turns positive and expands",
+      "Operating margin improves materially without a revenue-quality deterioration",
+      "Price reclaims SMA-20 and SMA-50 with positive MACD"
+    ],
+    "evidence_gaps": [
+      "No current news headlines in the local Layer 1 snapshot",
+      "No customer-order, capex, or utilization detail",
+      "Price history and technical indicators end on 2026-08-10"
+    ],
+    "decisive_factors": [
+      "Negative MYR164 million free cash flow and 4.2% operating margin",
+      "109.8x trailing P/E despite a 33.7x forward P/E",
+      "Price below SMA-20 and SMA-50 with RSI 31.8 and negative MACD"
+    ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "neutral (medium confidence) — healthy balance sheet, reasonable forward P/E, but negative FCF and weak operating leverage; explicit 'wait for FCF inflection before upgrading'",
-    "sentiment": "buy (medium confidence) — improving momentum from MPS expansion, but agent itself flags upside as largely priced in, street split 4 Hold/3 Buy",
-    "technical": "neutral (medium confidence) — intact long-term uptrend but near-term correction, bearish MACD, unfired entry triggers at 4.86 or RSI<30 bounce",
-    "macro_fx": "buy (medium confidence) — AI upcycle and MYR weakness/BNM support are tailwinds, but explicitly conditional on trade-policy clarity not yet established",
-    "debate_synthesis": "Bull wins the direction-of-thesis argument (earnings inflection, capex-ahead-of-demand, named anchor customer, FX/rate offsets); bear wins the valuation-discipline and timing argument (forward multiple already prices the inflection, no agent fired a buy trigger, FCF runway unquantified). Net: thesis is real but unconfirmed — supports a small, staged position rather than full conviction."
-  }
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
 }
