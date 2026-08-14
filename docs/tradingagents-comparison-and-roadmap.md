@@ -3,9 +3,14 @@
 日期: 2026-08-12
 参考: [TradingAgents README](https://github.com/TauricResearch/TradingAgents/blob/main/README.md) · [graph/setup.py](https://github.com/TauricResearch/TradingAgents/blob/main/tradingagents/graph/setup.py) · [dataflows/market_data_validator.py](https://github.com/TauricResearch/TradingAgents/blob/main/tradingagents/dataflows/market_data_validator.py) · [agents/utils/memory.py](https://github.com/TauricResearch/TradingAgents/blob/main/tradingagents/agents/utils/memory.py) · [graph/reflection.py](https://github.com/TauricResearch/TradingAgents/blob/main/tradingagents/graph/reflection.py)
 
+> **架构决策更新（2026-08-14）**：本文是历史对比/路线图。文中原先提出的
+> `personal-os` portfolio gate 已被明确否决：这个 public repo 只输出股票研究，
+> 不读取 private holdings；portfolio valuation、concentration 和 sizing 由 `personal-os`
+> 自己负责。下文涉及该 gate 的旧建议以此边界为准。
+
 ## 结论
 
-**不整体迁移到 TradingAgents。** 本仓库的 deterministic 基础（typed backtest scorer、point-in-time fetcher、独立 RiskChecker）已经比 TradingAgents 文档描述的更严谨。但当前 pipeline 存在几个**实际会影响信号质量的 bug**，且缺一层"研究裁决 → 交易计划 → portfolio gate → outcome memory"的分层。以下所有代码问题均已逐条对照源码核实（非转述猜测）。
+**不整体迁移到 TradingAgents。** 本仓库的 deterministic 基础（typed backtest scorer、point-in-time fetcher、独立 RiskChecker）已经比 TradingAgents 文档描述的更严谨。当前 pipeline 的公共边界是"研究裁决 → 交易计划 → outcome memory"；portfolio gate 不属于这个 public repo。以下所有代码问题均已逐条对照源码核实（非转述猜测）。
 
 ---
 
@@ -17,7 +22,7 @@
 | Debate | Bull/Bear，多轮 | Bull/Bear，多轮 (`debate/engine.py`) | 打平 |
 | 研究裁决 | 有 Research Manager 汇总 debate | **没有**，debate 直接喂给 Synthesizer | TradingAgents 多一层 |
 | 交易执行层 | 独立 Trader agent 生成 entry/stop/target | `RiskChecker.plan_action()` deterministic 生成 (`risk_checker.py:114`) | 本仓库更可靠（非 LLM 捏造数字） |
-| Portfolio Gate | Portfolio Manager 读真实持仓，approve/reject | `RiskChecker` 只看单票 beta/sector，**不读真实持仓** | TradingAgents 更完整 |
+| Portfolio Gate | Portfolio Manager 读真实持仓，approve/reject | **不属于本仓库**；private consumer 自己处理组合规则 | 保持 public/private 隔离 |
 | 跨次记忆/reflection | 持久化 decision memory + 事后 reflection 注入 prompt | **没有** — 每次 run 都是冷启动 | TradingAgents 明显更强，值得抄 |
 | Point-in-time 数据 | 有 market_data_validator | `BacktestFetcher` 已实现 truncation + financial lag (`backtest/fetcher.py:19`)，但 sector/shares outstanding 仍用当前值 | 本仓库基础更好，细节有漏洞 |
 | Backtest 指标 | 无 training-cutoff 处理 | hit rate / Sharpe / info coefficient / training-cutoff split (`backtest/scorer.py`) | 本仓库明显更严谨 |
@@ -49,7 +54,7 @@
 
 这与实际数据矛盾：`RiskChecker.plan_action()` 在 `_MIN_CONVICTION_FOR_LEVELS=0.3` / `_MIN_CONVERGENCE_FOR_LEVELS=0.4` 以下会返回"too mixed, wait"（`risk_checker.py:124-134`）——也就是说**系统内部已经有一层在纠正 forced-direction 造成的假信号**，说明这个约束本身是错的，只是被下游悄悄兜住了。
 
-**修复**：拆成两个字段 `research_view: buy/neutral/sell`（LLM 的诚实判断）和 `trade_decision: approve/watch/reject`（是否要据此行动）。neutral/watch 是正确结果，不是失败。
+**架构决定**：保留单一的 `overall_signal` 作为研究判断；是否行动、是否适合当前组合由 consuming application 决定，不把 portfolio decision 写进 public briefing contract。neutral 是正确结果，不是失败。
 
 ### 2.4 `signal_convergence` 由 LLM 自报，无范围校验
 
@@ -62,9 +67,9 @@
 `synthesis/risk_checker.py:69-90` 的 `_estimate_max_drawdown()`：
 - 遍历的是 **整个 `price_history`**（本仓库 AAPL 历史数据是 2016–2026，10 年），但输出文案硬写 `"Historical max drawdown: ... over past year"`（`risk_checker.py:88`）—— 文案与实际计算窗口不符。
 - `risk_reward = conviction_abs / volatility`（`risk_checker.py:29-32`）是"conviction 除以年化波动率"，跟真实的 entry→stop / entry→target 距离比完全无关，命名成 `risk_reward_ratio` 会误导使用者。
-- `_suggest_position_size()`（`risk_checker.py:56-67`）只用 conviction/convergence/volatility 三个数字算仓位百分比，**不读取真实持仓、不做 stop distance 反推仓位、没有 sector/ticker exposure cap**。
+- 旧版曾在 research briefing 中混入 position-size 文案，**不读取真实持仓也不应承担组合层 cap**。
 
-**修复**：改成 `portfolio risk budget → stop distance → position size → sector/ticker exposure cap → approve/watch/reject` 的链路，并读取 `personal-os` 里 `data/finance/portfolio` 的真实持仓做 exposure 检查（这一步正好能把这个工具和 `wealth-manager` skill 打通）。
+**架构决定**：RiskChecker 只负责公开、可复现的 entry/stop/target、drawdown 和 risk/reward；portfolio risk budget、position size、sector/ticker exposure cap 留给 `personal-os`。
 
 ### 2.6 Backtest 的历史 briefing 日期字段是"今天"，不是 as_of_date
 
@@ -113,12 +118,10 @@ L3  Research Manager / Debate Judge（在 bull/bear debate 之上加一层裁决
         ↓
 L4  Trader Proposal（entry / stop / target / horizon / catalyst —— 沿用现有 deterministic RiskChecker 思路）
         ↓
-L5  Portfolio Risk Gate（读真实持仓，输出 APPROVE / WATCH / REDUCE / REJECT）
-        ↓
-L6  Outcome Log + Calibration（到期回填 realized return，形成下次分析的记忆）
+Outcome Memory context（到期回填 realized return，形成下次分析的记忆）
 ```
 
-L0/L1/L4 本仓库已经有对应实现的骨架（`BacktestFetcher`、screener 页面、`RiskChecker.plan_action`），主要缺 L3（Research Manager）、L5 的组合层 gate、L6 的记忆回灌。
+L0/L1/L4 本仓库已经有对应实现的骨架（`BacktestFetcher`、screener 页面、`RiskChecker.plan_action`）；研究裁决与 outcome memory 已接入，组合层 gate 不在本仓库范围内。
 
 ---
 
@@ -127,15 +130,15 @@ L0/L1/L4 本仓库已经有对应实现的骨架（`BacktestFetcher`、screener 
 **P0 — 先修正确性（不改架构，纯 bug fix）**
 1. 移除 `macro.py` 里的硬编码 `MACRO_CONTEXT`，换成带 `as_of`/`source`/`freshness` 的结构化 snapshot。
 2. 删掉 `agents/technical.py` 里那套近似 MACD，统一用 `data/technicals.py::compute_technicals()`。
-3. 去掉 synthesizer 里 "Never default to neutral"，拆成 `research_view` / `trade_decision` 两个字段。
+3. 去掉 synthesizer 里 "Never default to neutral"，保持 research-only briefing contract。
 4. `signal_convergence` 改成 deterministic 计算，不再由 LLM 自报。
 5. 修 `Briefing.date`（用 `as_of_date` 而非 `date.today()`）、backtest settings 补 `synthesis_model`、`_estimate_max_drawdown` 的文案改成"整段历史"或真的裁成一年、`risk_reward_ratio` 改成基于真实 entry/stop/target 距离计算。
 
 **P1 — 补分层**
-1. 加 Research Manager → Trader → Portfolio Gate 三个模块。
+1. 加 Research Manager → deterministic trade-plan → outcome memory 三个模块；不把 private portfolio gate 放回 public repo。
 2. 拆分 screener mode（便宜、跑全 watchlist）和 deep-dive mode（贵、只跑 shortlist）。
 3. 给每条 analyst claim 标 evidence/source/as-of。
-4. `RiskChecker` 接入 `personal-os` 里的真实持仓（`data/finance/portfolio`）做组合层 exposure/相关性检查，并算 benchmark alpha。
+4. 保持 `RiskChecker` 与 `personal-os` holdings 解耦；benchmark alpha 等组合级分析在 private consumer 实现。
 
 **P2 — 基建打磨**
 1. 加 run manifest、cost/latency tracking、pipeline 断点续跑（backtest 已有基于文件的 resume，可以扩展到主 pipeline）。

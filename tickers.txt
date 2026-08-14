@@ -1,15 +1,15 @@
-# Watchlist — holdings + actively-tracked candidates. No @us-major/@my-klci.
+# Watchlist — actively tracked tickers + candidates. No @us-major/@my-klci.
 # NOTE: inline comments are NOT supported — fetch.py:81 only skips whole-line #.
 # "MY:0166 # Inari" would parse as the ticker "0166 # INARI" and fail silently.
 #
 # MACHINE-READABLE MARKERS (parsed by web/lib/watchlist.ts, ignored by fetch.py
 # because they are whole-line comments):
-#   #group: holding | candidate   — applies to every ticker below it
+#   #group: tracked | candidate   — applies to every ticker below it
 #   #theme: <free text>           — applies to every ticker below it
 # Both persist until the next marker of the same kind. Keep them in sync when
 # you move a ticker between blocks, otherwise the dashboard mislabels it.
 
-#group: holding
+#group: tracked
 #theme: MY core banks & construction
 MY:1155
 MY:5258
@@ -17,8 +17,10 @@ MY:5398
 
 #group: candidate
 #theme: MY conglomerate
-# 4197 Sime Darby — 于 2026-08-12 前清仓，保留为 candidate 继续跟踪。
+# 4197 Sime Darby — actively tracked ticker.
 MY:4197
+# 5151 Hextar Global Berhad — Hextar Group candidate.
+MY:5151
 
 #theme: MY diversified
 # 0215 Solarvest / 5225 IHH / 5296 MR D.I.Y.
@@ -41,7 +43,7 @@ MY:5005
 MY:5249
 MY:6947
 
-#group: holding
+#group: tracked
 #theme: US mega-cap
 GOOGL
 MSFT
@@ -49,7 +51,7 @@ NVDA
 
 #group: candidate
 #theme: US mega-cap
-# META — 于 2026-08-12 前清仓（GOOGL 接替其美股第三仓位），保留为 candidate。
+# META — actively tracked candidate.
 AAPL
 AMZN
 META
@@ -64,3 +66,7 @@ V
 # TSM is upstream of the MY OSAT thesis — its capex guidance is the cross-check
 # on Frontken's "earnings visibility" claim.
 TSM
+
+#theme: US space / aerospace
+# RKLB Rocket Lab — space launch and systems candidate.
+RKLB

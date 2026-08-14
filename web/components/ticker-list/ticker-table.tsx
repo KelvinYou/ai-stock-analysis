@@ -16,7 +16,6 @@ import {
   fmtAge,
   fmtNumber,
   fmtSignedPercent,
-  shortPositionSize,
 } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { TickerSummary } from "@/lib/types";
@@ -122,9 +121,9 @@ export function TickerTable({
               </Td>
 
               <Td col="group">
-                {t.group === "holding" ? (
+                {t.group === "tracked" ? (
                   <span className="rounded bg-foreground px-1.5 py-px text-[9px] font-semibold uppercase text-background">
-                    Held
+                    Tracked
                   </span>
                 ) : t.group === "candidate" ? (
                   <span className="text-[10px] text-muted-foreground">Cand</span>
@@ -226,10 +225,6 @@ export function TickerTable({
 
               <Td col="riskReward" className="num text-right tabular-nums text-muted-foreground">
                 {t.riskReward == null ? "—" : `${t.riskReward.toFixed(2)}:1`}
-              </Td>
-
-              <Td col="size" className="num text-right tabular-nums text-muted-foreground">
-                {shortPositionSize(t.positionSize)}
               </Td>
 
               <Td col="pe" className="num text-right tabular-nums text-muted-foreground">

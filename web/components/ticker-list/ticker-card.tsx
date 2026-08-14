@@ -34,9 +34,9 @@ export function TickerCard({ t }: { t: TickerSummary; index?: number }) {
               <span className="rounded-md bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
                 {t.market}
               </span>
-              {t.group === "holding" && (
+              {t.group === "tracked" && (
                 <span className="rounded-md bg-foreground px-1.5 py-0.5 text-[10px] font-semibold uppercase text-background">
-                  Held
+                  Tracked
                 </span>
               )}
             </div>

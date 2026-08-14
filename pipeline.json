@@ -134,10 +134,30 @@
       ]
     },
     {
+      "id": "CTX",
+      "layer": "Supporting context",
+      "title": "Outcome Memory",
+      "note": "deterministic — exit-date gated against leakage",
+      "rows": [
+        [
+          {
+            "id": "MEM",
+            "label": "OutcomeStore",
+            "lines": [
+              "realized return per resolved call",
+              "hit rate · conviction calibration",
+              "feeds context into synthesis"
+            ],
+            "tone": "muted"
+          }
+        ]
+      ]
+    },
+    {
       "id": "L4",
       "layer": "Layer 4",
       "title": "Synthesis",
-      "note": "writes the briefing; convergence is computed, not authored",
+      "note": "writes the research briefing; convergence is computed, not authored",
       "model": "Sonnet",
       "modelKey": "synthesis_model",
       "rows": [
@@ -156,46 +176,6 @@
           }
         ]
       ]
-    },
-    {
-      "id": "L5",
-      "layer": "Layer 5",
-      "title": "Portfolio Risk Gate",
-      "note": "deterministic — reads real holdings",
-      "rows": [
-        [
-          {
-            "id": "GATE",
-            "label": "PortfolioGate",
-            "lines": [
-              "risk budget → stop distance → size",
-              "single / sector / USD exposure caps",
-              "APPROVE · WATCH · REDUCE · REJECT"
-            ],
-            "tone": "data"
-          }
-        ]
-      ]
-    },
-    {
-      "id": "L6",
-      "layer": "Layer 6",
-      "title": "Outcome Memory",
-      "note": "deterministic — closes the loop; exit-date gated against leakage",
-      "rows": [
-        [
-          {
-            "id": "MEM",
-            "label": "OutcomeStore",
-            "lines": [
-              "realized return per resolved call",
-              "hit rate · conviction calibration",
-              "feeds back into Layer 4"
-            ],
-            "tone": "muted"
-          }
-        ]
-      ]
     }
   ],
   "output": {
@@ -203,8 +183,7 @@
     "label": "Briefing",
     "lines": [
       "research view · conviction −1.00…+1.00",
-      "trade decision · entry · stop · TP1 / TP2",
-      "position size as % of equity sleeve"
+      "entry · stop · TP1 / TP2 · drawdown · risk-reward"
     ],
     "tone": "output"
   },

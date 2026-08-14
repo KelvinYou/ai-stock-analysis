@@ -40,28 +40,22 @@ flowchart TD
 
     L3 --> RM
 
+    subgraph CTX["Supporting context — Outcome Memory (deterministic — exit-date gated against leakage)"]
+        MEM["<b>OutcomeStore</b><br/>realized return per resolved call<br/>hit rate · conviction calibration<br/>feeds context into synthesis"]
+    end
+
+    RM --> MEM
+
     subgraph L4["Layer 4 — Synthesis (synthesis_model = Sonnet)"]
         direction LR
         SYN["<b>SynthesizerAgent</b><br/>merges reports + verdict + memory<br/>research view · conviction"]
         RISK["<b>RiskChecker</b><br/>deterministic entry/stop/target<br/>drawdown · risk-reward"]
     end
 
-    RM --> L4
+    MEM --> L4
 
-    subgraph L5["Layer 5 — Portfolio Risk Gate (deterministic — reads real holdings)"]
-        GATE["<b>PortfolioGate</b><br/>risk budget → stop distance → size<br/>single / sector / USD exposure caps<br/>APPROVE · WATCH · REDUCE · REJECT"]
-    end
-
-    L4 --> GATE
-
-    subgraph L6["Layer 6 — Outcome Memory (deterministic — closes the loop; exit-date gated against leakage)"]
-        MEM["<b>OutcomeStore</b><br/>realized return per resolved call<br/>hit rate · conviction calibration<br/>feeds back into Layer 4"]
-    end
-
-    GATE --> MEM
-
-    OUT["<b>Briefing</b><br/>research view · conviction −1.00…+1.00<br/>trade decision · entry · stop · TP1 / TP2<br/>position size as % of equity sleeve"]
-    MEM --> OUT
+    OUT["<b>Briefing</b><br/>research view · conviction −1.00…+1.00<br/>entry · stop · TP1 / TP2 · drawdown · risk-reward"]
+    L4 --> OUT
 
     subgraph CONSUMERS["Consumers"]
         direction LR

@@ -1,4 +1,4 @@
-"""Layer 6: the leakage guard, calibration arithmetic, and store round-tripping."""
+"""Outcome memory: leakage guard, calibration arithmetic, and store round-tripping."""
 
 import tempfile
 import unittest

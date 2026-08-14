@@ -15,7 +15,7 @@ What this layer adds that a summary cannot:
 - the single strongest counterexample to the winning case, kept intact rather
   than diluted into a list of risks
 - falsifiable `invalidation_conditions` — what would have to happen for the
-  thesis to be wrong — which is what Layer 6 later scores the thesis against
+  thesis to be wrong — which outcome memory can later score the thesis against
 - `evidence_gaps`: what is *missing* rather than merely contested, which the
   bull/bear framing structurally cannot surface because neither advocate
   benefits from naming it

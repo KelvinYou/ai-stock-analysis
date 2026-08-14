@@ -7,7 +7,7 @@ const WATCHLIST_FILE = process.env.STOCK_TICKERS_FILE
   ? path.resolve(process.env.STOCK_TICKERS_FILE)
   : path.resolve(process.cwd(), "..", "tickers.txt");
 
-const GROUP_MARKER = /^#\s*group:\s*(holding|candidate)s?\s*$/i;
+const GROUP_MARKER = /^#\s*group:\s*(tracked|candidate)s?\s*$/i;
 const THEME_MARKER = /^#\s*theme:\s*(.+?)\s*$/i;
 
 /**

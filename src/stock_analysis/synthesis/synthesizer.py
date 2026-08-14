@@ -254,9 +254,6 @@ class SynthesizerAgent:
             ticker=ticker_data.info.symbol,
             date=ticker_data.fetched_at.date().isoformat(),
             overall_signal=signal,
-            # The research layer's honest read. `trade_decision` is filled in by
-            # Layer 5, which is the only layer allowed to say "act on this".
-            research_view=signal,
             conviction=conviction,
             executive_summary=result["executive_summary"],
             bull_case=result["bull_case"],
@@ -265,7 +262,6 @@ class SynthesizerAgent:
             catalysts_upcoming=result["catalysts_upcoming"],
             research_verdict=research_verdict,
             risk_assessment=RiskAssessment(
-                position_size_suggestion="pending",
                 correlation_notes=[],
                 max_drawdown_scenario="pending",
             ),
