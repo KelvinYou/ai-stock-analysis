@@ -29,8 +29,8 @@ export function DataStatus({
   const haveData = new Set(tickers.map((t) => t.symbol));
   const briefed = new Set(briefedTickers.map((t) => t.symbol));
   const notFetched = watchlist.filter((w) => !haveData.has(w.symbol));
-  const unbriefedHoldings = watchlist.filter(
-    (w) => w.group === "holding" && haveData.has(w.symbol) && !briefed.has(w.symbol),
+  const unbriefedTracked = watchlist.filter(
+    (w) => w.group === "tracked" && haveData.has(w.symbol) && !briefed.has(w.symbol),
   );
 
   return (
@@ -60,12 +60,12 @@ export function DataStatus({
         />
       </div>
 
-      {unbriefedHoldings.length > 0 && (
+      {unbriefedTracked.length > 0 && (
         <Gap
-          title={`${unbriefedHoldings.length} holding${
-            unbriefedHoldings.length > 1 ? "s" : ""
+          title={`${unbriefedTracked.length} tracked ticker${
+            unbriefedTracked.length > 1 ? "s" : ""
           } never briefed`}
-          entries={unbriefedHoldings}
+          entries={unbriefedTracked}
         />
       )}
 

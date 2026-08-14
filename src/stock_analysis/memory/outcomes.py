@@ -1,4 +1,4 @@
-"""Layer 6 — outcome memory: what previous calls actually earned.
+"""Outcome memory: what previous calls actually earned.
 
 Every run before this was a cold start. The pipeline already produced the raw
 material for a track record (`BacktestTrial.realized_return`, the scorer's hit

@@ -31,9 +31,10 @@ uvicorn stock_analysis.api.app:app --reload
 it as the mermaid block in `architecture.md`. Change the pipeline → edit `pipeline.json`
 and run the script; never hand-edit the mermaid or the diagram component.
 
-This is a multi-agent pipeline for AI-driven stock analysis: four analyst layers,
-a debate adjudicator, a portfolio gate, and an outcome-memory loop. Each layer
-feeds into the next and outputs structured Pydantic models persisted as JSON.
+This is a multi-agent pipeline for AI-driven stock research: four analyst layers,
+a debate adjudicator, deterministic risk levels, and an outcome-memory loop. It
+emits structured research models persisted as JSON; portfolio decisions belong
+to the consuming application.
 
 Storage is a **flat per-ticker directory** — `data/AAPL/{price_history.csv,
 fundamentals.json, technicals.json, analyst_reports.json, debate_result.json,
@@ -68,20 +69,14 @@ Two invariants here, both load-bearing:
 - **`signal_convergence` is computed, not authored.** It is a deterministic
   confidence-weighted function of the four analyst reports
   (`compute_signal_convergence`); the LLM's self-reported value is discarded.
-  It gates whether Layer 5 will quote precise levels, so an LLM-authored value
-  would let the model talk itself into a position.
-- **Neutral is a valid output.** The research view (`overall_signal` /
-  `research_view`) and the decision to act (`trade_decision`) are separate
-  fields. Do not reintroduce prompt pressure against neutral.
+  It gates whether RiskChecker will quote precise levels, so an LLM-authored
+  value would let the model talk itself into a trade setup.
+- **Neutral is a valid output.** `overall_signal=neutral` is a complete research
+  result. Do not add prompt pressure to force a trade direction.
 
 Default model: Sonnet (`synthesis_model`).
 
-### Layer 5 — Portfolio Risk Gate (`synthesis/portfolio_gate.py`)
-Deterministic, no LLM. Chain: `risk budget → stop distance → position size → exposure caps → APPROVE/WATCH/REDUCE/REJECT`. Position size means something specific — if the stop is hit, the loss is `per_trade_risk_budget_pct` of the priced equity sleeve. Reads real holdings from personal-os `data/finance/portfolio.yaml`, caps from `policy.yaml`, FX from `market/fx.yaml`, and prices from this repo's own `technicals.json`.
-
-Failure modes are conservative by design: a **null policy cap is not a pass** (it yields `CAP_UNCONFIGURED` and degrades to WATCH — never a substituted default), missing holdings degrade to WATCH, and unpriced holdings are disclosed rather than dropped. `RiskChecker` reports this layer's size; it no longer derives its own.
-
-### Layer 6 — Outcome Memory (`memory/outcomes.py`)
+### Supporting context — Outcome Memory (`memory/outcomes.py`)
 Deterministic, no LLM. Appends resolved calls to `outcomes.jsonl`, computes hit rate / conviction calibration, and injects the track record into the next synthesis prompt.
 
 **The leakage guard is the critical invariant.** `OutcomeRecord.visible_on()` admits a record only when its *exit* date precedes the analysis date — gating on entry date would feed backtests outcomes that had not happened yet, silently turning every backtest metric into future knowledge. Calibration is reported, never applied: nothing rescales conviction by a small-sample hit rate.
@@ -89,7 +84,7 @@ Deterministic, no LLM. Appends resolved calls to `outcomes.jsonl`, computes hit 
 Backfill from a backtest with `stock-analysis-backtest --record-outcomes` (off by default, so repeated backtests stay comparable).
 
 ### Orchestration
-`AnalysisPipeline` in `orchestrator.py` chains every layer. Configuration lives in `config.py` as a Pydantic `Settings` object (models, debate rounds, data directory, price history period, per-layer enable flags, risk budget).
+`AnalysisPipeline` in `orchestrator.py` chains every layer. Configuration lives in `config.py` as a Pydantic `Settings` object (models, debate rounds, data directory, price history period, and optional research enrichments).
 
 ### Agent Pattern
 Every agent subclasses `BaseAnalystAgent` and implements three methods: `system_prompt()`, `build_tools()` (MCP tool definitions over `TickerData`), and `output_model()` (the Pydantic response type). LLM calls go through `query_with_retry()` in `_query_retry.py`.

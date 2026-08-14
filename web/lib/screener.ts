@@ -22,7 +22,6 @@ export type SortKey =
   | "convergence"
   | "toEntry"
   | "riskReward"
-  | "size"
   | "pe"
   | "rsi"
   | "from52wHigh"
@@ -61,8 +60,8 @@ export const COLUMNS: ColumnDef[] = [
   },
   {
     key: "group",
-    label: "Pos",
-    title: "Holding vs watchlist candidate (from tickers.txt)",
+    label: "Group",
+    title: "Tracked vs watchlist candidate (from tickers.txt)",
     numeric: false,
     defaultDir: "asc",
   },
@@ -119,14 +118,6 @@ export const COLUMNS: ColumnDef[] = [
     hideBelow: "lg",
   },
   {
-    key: "size",
-    label: "Size",
-    title: "Suggested position size, % of portfolio",
-    numeric: true,
-    defaultDir: "desc",
-    hideBelow: "lg",
-  },
-  {
     key: "pe",
     label: "P/E",
     title: "Trailing price/earnings",
@@ -168,12 +159,6 @@ export function isStale(t: TickerSummary): boolean {
   return t.briefingAgeDays != null && t.briefingAgeDays > STALE_DAYS;
 }
 
-/** Percent out of "0.9% of portfolio", for sorting. */
-function sizePct(t: TickerSummary): number | null {
-  const m = t.positionSize ? /(\d+(?:\.\d+)?)\s*%/.exec(t.positionSize) : null;
-  return m ? Number(m[1]) : null;
-}
-
 type SortValue = string | number | null;
 
 function valueOf(t: TickerSummary, key: SortKey): SortValue {
@@ -182,9 +167,9 @@ function valueOf(t: TickerSummary, key: SortKey): SortValue {
       return t.symbol;
     case "name":
       return t.name;
-    // Holdings first, then candidates, then tickers absent from tickers.txt.
+    // Tracked tickers first, then candidates, then tickers absent from tickers.txt.
     case "group":
-      return t.group === "holding" ? 0 : t.group === "candidate" ? 1 : 2;
+      return t.group === "tracked" ? 0 : t.group === "candidate" ? 1 : 2;
     case "price":
       return t.price;
     case "change":
@@ -199,8 +184,6 @@ function valueOf(t: TickerSummary, key: SortKey): SortValue {
       return t.toEntryPct;
     case "riskReward":
       return t.riskReward;
-    case "size":
-      return sizePct(t);
     case "pe":
       return t.peRatio;
     case "rsi":

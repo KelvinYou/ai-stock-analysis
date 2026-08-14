@@ -13,12 +13,7 @@ from .synthesis import (
     ActionPlan,
     Briefing,
     ConvictionScore,
-    ExposureCheck,
-    ExposureStatus,
-    PortfolioGateResult,
-    PositionSizing,
     RiskAssessment,
-    TradeDecision,
 )
 
 __all__ = [
@@ -30,14 +25,10 @@ __all__ = [
     "DebateArgument",
     "DebateResult",
     "DebateRound",
-    "ExposureCheck",
-    "ExposureStatus",
     "FinancialStatements",
     "FundamentalsReport",
     "MacroFXReport",
     "Market",
-    "PortfolioGateResult",
-    "PositionSizing",
     "PriceBar",
     "ResearchVerdict",
     "RiskAssessment",
@@ -46,5 +37,4 @@ __all__ = [
     "TechnicalReport",
     "TickerData",
     "TickerInfo",
-    "TradeDecision",
 ]

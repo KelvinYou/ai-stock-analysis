@@ -224,7 +224,6 @@ async function loadTickerSummary(
     takeProfit1: plan?.take_profit_1 ?? null,
     toEntryPct,
     riskReward: parseRatio(briefing?.risk_assessment?.risk_reward_ratio),
-    positionSize: briefing?.risk_assessment?.position_size_suggestion ?? null,
 
     peRatio: info?.pe_ratio ?? null,
     rsi14: technicals?.rsi_14 ?? null,

@@ -27,9 +27,8 @@ class RiskChecker:
     def assess(self, ticker_data: TickerData, briefing: Briefing) -> RiskAssessment:
         volatility = self._compute_volatility(ticker_data)
 
-        position_size = self._describe_position_size(briefing)
         max_dd = self._estimate_max_drawdown(ticker_data, volatility)
-        correlation_notes = self._check_correlations(ticker_data)
+        market_context_notes = self._check_correlations(ticker_data)
 
         risk_reward = None
         action_plan = briefing.action_plan
@@ -47,8 +46,7 @@ class RiskChecker:
             risk_reward = "N/A (bearish signal)"
 
         return RiskAssessment(
-            position_size_suggestion=position_size,
-            correlation_notes=correlation_notes,
+            correlation_notes=market_context_notes,
             max_drawdown_scenario=max_dd,
             risk_reward_ratio=risk_reward,
         )
@@ -67,33 +65,6 @@ class RiskChecker:
         daily_vol = math.sqrt(variance)
         annualized = daily_vol * math.sqrt(252)
         return round(annualized, 4)
-
-    def _describe_position_size(self, briefing: Briefing) -> str:
-        """Report the portfolio gate's size rather than inventing a second one.
-
-        Sizing used to be `conviction x convergence x volatility` computed here,
-        which yielded a percentage of nothing in particular and disagreed with
-        the stop-based size a trader would actually use. The single owner is now
-        `PortfolioGate` (Layer 5); when it has not run, say so instead of
-        substituting a formula.
-        """
-        gate = briefing.portfolio_gate
-        if gate is None:
-            return "Not sized — portfolio gate (Layer 5) did not run."
-
-        sizing = gate.sizing
-        if sizing.suggested_position_pct is None:
-            reason = sizing.notes[0] if sizing.notes else "no usable stop distance"
-            return f"Not sized — {reason}"
-
-        text = (
-            f"{sizing.suggested_position_pct}% of priced equity sleeve "
-            f"(risking {sizing.risk_budget_pct}% on a "
-            f"{sizing.stop_distance_pct:.2f}% stop distance)"
-        )
-        if sizing.capped_by:
-            text = f"{text}; capped by {sizing.capped_by}"
-        return f"{text} — gate: {gate.decision.value.upper()}"
 
     def _estimate_max_drawdown(self, ticker_data: TickerData, volatility: float) -> str:
         closes = [bar.close for bar in ticker_data.price_history]
@@ -126,19 +97,17 @@ class RiskChecker:
         if beta is not None:
             if beta > 1.3:
                 notes.append(
-                    f"High beta ({beta:.2f}) — amplifies market moves. "
-                    "Consider reducing if portfolio is already tech/growth heavy."
+                    f"High beta ({beta:.2f}) — price may amplify broad-market moves."
                 )
             elif beta < 0.7:
                 notes.append(
-                    f"Low beta ({beta:.2f}) — defensive characteristic. "
-                    "Good for portfolio diversification."
+                    f"Low beta ({beta:.2f}) — historically less sensitive to broad-market moves."
                 )
 
         if sector:
-            notes.append(f"Sector: {sector} — check existing portfolio exposure to this sector.")
+            notes.append(f"Sector: {sector} — use sector-specific catalysts and risks in the thesis.")
 
-        return notes if notes else ["No significant correlation flags."]
+        return notes if notes else ["No significant market-context flags."]
 
     def plan_action(self, ticker_data: TickerData, briefing: Briefing) -> ActionPlan:
         """Translate the signal into concrete limit/stop/target prices.
@@ -220,8 +189,7 @@ class RiskChecker:
             entry_rationale="Bearish signal — do not initiate new long positions.",
             stop_loss=invalidation,
             stop_rationale=(
-                f"If still holding: exit if price breaks above ${invalidation:.2f} "
-                f"(thesis invalidated)."
+                f"Thesis invalidated if price breaks above ${invalidation:.2f}."
             ),
             take_profit_1=exit_now,
             take_profit_2=next_support,

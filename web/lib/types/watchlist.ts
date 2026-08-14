@@ -1,5 +1,5 @@
-/** Where a ticker sits in the watchlist: something you own vs something you watch. */
-export type WatchGroup = "holding" | "candidate";
+/** Where a ticker sits in the public watchlist: actively tracked vs candidate. */
+export type WatchGroup = "tracked" | "candidate";
 
 export interface WatchlistEntry {
   /** Storage symbol — matches the directory name under data/. */

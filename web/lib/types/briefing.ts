@@ -11,7 +11,6 @@ export interface ConvictionScore {
 }
 
 export interface RiskAssessment {
-  position_size_suggestion: string;
   correlation_notes: string[];
   max_drawdown_scenario: string;
   risk_reward_ratio: string | null;
@@ -27,51 +26,6 @@ export interface ActionPlan {
   target_rationale: string | null;
   horizon: string;
   note: string | null;
-}
-
-/** Whether to act on the research view — a separate axis from what the view is. */
-export type TradeDecision = "approve" | "watch" | "reduce" | "reject";
-
-export interface PositionSizing {
-  risk_budget_pct: number | null;
-  risk_budget_source: string;
-  stop_distance_pct: number | null;
-  suggested_position_pct: number | null;
-  capped_by: string | null;
-  notes: string[];
-}
-
-/**
- * `cap_unconfigured` is NOT a pass — it means policy.yaml has no cap to compare
- * against, so the check could not be performed. Render it distinctly from
- * `within_cap` or the UI will imply an approval the backend refused to give.
- */
-export type ExposureStatus =
-  | "within_cap"
-  | "breach"
-  | "cap_unconfigured"
-  | "holdings_unavailable";
-
-export interface ExposureCheck {
-  label: string;
-  current_pct: number | null;
-  projected_pct: number | null;
-  cap_pct: number | null;
-  status: ExposureStatus;
-  detail: string;
-}
-
-export interface PortfolioGateResult {
-  decision: TradeDecision;
-  reasons: string[];
-  sizing: PositionSizing;
-  exposures: ExposureCheck[];
-  holdings_source: string;
-  policy_source: string;
-  equity_sleeve_value: number | null;
-  valuation_currency: string | null;
-  already_held: boolean;
-  held_shares: number | null;
 }
 
 export interface ResearchVerdict {
@@ -90,10 +44,6 @@ export interface Briefing {
   ticker: string;
   date: string;
   overall_signal: Signal;
-  /** The research layer's honest view; equals `overall_signal`. Null on briefings written before Layer 5 existed. */
-  research_view?: Signal | null;
-  /** Layer 5's ruling on whether to act. Null when the gate did not run. */
-  trade_decision?: TradeDecision | null;
   conviction: ConvictionScore;
   executive_summary: string;
   bull_case: string;
@@ -103,7 +53,6 @@ export interface Briefing {
   risk_assessment: RiskAssessment;
   action_plan: ActionPlan | null;
   research_verdict?: ResearchVerdict | null;
-  portfolio_gate?: PortfolioGateResult | null;
   agent_signal_breakdown: Record<string, string>;
 }
 
@@ -147,7 +96,6 @@ export interface TickerSummary {
   /** (entry − price) / price × 100. Negative = price must still fall to reach entry. */
   toEntryPct: number | null;
   riskReward: number | null;
-  positionSize: string | null;
 
   // Layer-1 screening metrics (present for every fetched ticker)
   peRatio: number | null;

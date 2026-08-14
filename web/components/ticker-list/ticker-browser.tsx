@@ -19,7 +19,7 @@ import {
 import type { Signal, TickerSummary } from "@/lib/types";
 
 type AnalyzedFilter = "all" | "briefed" | "raw";
-type GroupFilter = "all" | "holding" | "candidate";
+type GroupFilter = "all" | "tracked" | "candidate";
 type View = "table" | "cards";
 
 const SIGNAL_ORDER: Signal[] = ["strong_buy", "buy", "neutral", "sell", "strong_sell"];
@@ -69,7 +69,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
   });
   const [group, setGroup] = useState<GroupFilter>(() => {
     const v = params.get("group");
-    return v === "holding" || v === "candidate" ? v : "all";
+    return v === "tracked" || v === "candidate" ? v : "all";
   });
   const [actionableOnly, setActionableOnly] = useState(
     () => params.get("actionable") === "1",
@@ -146,7 +146,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
       briefed: tickers.filter((t) => t.signal != null).length,
       actionable: tickers.filter(isActionable).length,
       stale: tickers.filter(isStale).length,
-      holdings: tickers.filter((t) => t.group === "holding").length,
+      tracked: tickers.filter((t) => t.group === "tracked").length,
     }),
     [tickers],
   );
@@ -291,7 +291,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
             ]}
           />
           <PillGroup
-            label="Position"
+            label="Coverage"
             value={group}
             onChange={(v) => {
               setGroup(v);
@@ -299,7 +299,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
             }}
             options={[
               { v: "all", label: "Any" },
-              { v: "holding", label: `Held · ${counts.holdings}` },
+              { v: "tracked", label: `Tracked · ${counts.tracked}` },
               { v: "candidate", label: "Candidates" },
             ]}
           />

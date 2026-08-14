@@ -96,7 +96,7 @@ def cli():
         action="store_true",
         help=(
             "Append realized outcomes to data/<TICKER>/outcomes.jsonl so future runs "
-            "see this track record (Layer 6). Off by default: recording changes what "
+            "see this track record. Off by default: recording changes what "
             "later runs read, so back-to-back backtests would stop being comparable."
         ),
     )

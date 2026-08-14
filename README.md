@@ -27,7 +27,7 @@ Built on the [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk) 
 <tr><td><b>🎯 Actionable price levels</b></td><td>Briefings include entry, stop, and target levels gated on conviction. No abstract signals that tell you nothing.</td></tr>
 <tr><td><b>📊 Conviction & convergence metrics</b></td><td>Every briefing reports a conviction score (−1.0 to +1.0) capped by the confidence-weighted net consensus of the four agents, plus a deterministic convergence score.</td></tr>
 <tr><td><b>⏮️ Historical backtesting</b></td><td>Replay the full pipeline over any date range. Score hit rate and directional accuracy against realized price moves.</td></tr>
-<tr><td><b>🖥️ Web dashboard + REST API</b></td><td>Next.js portfolio view with per-ticker drill-down. FastAPI job queue for programmatic runs. Conviction meter, debate transcript, watchlist.</td></tr>
+<tr><td><b>🖥️ Web dashboard + REST API</b></td><td>Next.js research dashboard with per-ticker drill-down. FastAPI job queue for programmatic runs. Conviction meter, debate transcript, watchlist.</td></tr>
 <tr><td><b>💸 Cost-tuned model routing</b></td><td>Haiku for analyst agents, Opus for debate, Sonnet for synthesis. Configurable per layer in <code>config.py</code>.</td></tr>
 </table>
 
@@ -67,11 +67,10 @@ See [Usage](#usage) for full flag reference.
 ## Architecture
 
 ```
-Data Ingestion --> Analyst Agents --> Debate --> Research Manager --> Synthesis
-  (Layer 1)         (Layer 2)         (Layer 3)     (Layer 3.5)       (Layer 4)
-                                                                          |
-                            Outcome Memory <-- Portfolio Risk Gate <------+
-                              (Layer 6)            (Layer 5)
+Data Ingestion --> Analyst Agents --> Debate --> Research Manager --> Outcome Memory --> Synthesis
+  (Layer 1)         (Layer 2)         (Layer 3)     (Layer 3.5)       (context)         (Layer 4)
+                                                                                          |
+                                                                                 Research Briefing
 ```
 
 **Layer 1 — Data Ingestion** fetches market data deterministically with no LLM involvement. Supports US equities via [yfinance](https://github.com/ranaroussi/yfinance) and Bursa/KLSE (Malaysia) — the MY fetcher resolves names to codes via `BURSA_ALIASES` and appends the `.KL` suffix. Ticker universes (S&P 500, NASDAQ 100, FBM KLCI) are pulled from Wikipedia.
@@ -90,13 +89,11 @@ Each agent produces a structured report with a signal (strong buy → strong sel
 
 **Layer 4 — Synthesis** merges reports, debate, verdict, and prior outcomes into a briefing with an executive summary, a conviction score, and deterministic entry/stop/target levels.
 
-Two things are deliberately *not* left to the model here. `signal_convergence` is computed from the analyst reports rather than self-reported, because it gates whether concrete levels get quoted. And a neutral view is a valid result: the research view and the decision to act are separate fields, so the model is never pushed into a direction it cannot support.
+Two things are deliberately *not* left to the model here. `signal_convergence` is computed from the analyst reports rather than self-reported, because it gates whether concrete levels get quoted. And a neutral view is a valid result: this package emits research evidence and conditional price levels; it does not decide whether the idea fits a user's holdings.
 
-**Layer 5 — Portfolio Risk Gate** (deterministic) sizes the position from the stop distance and a risk budget, checks single-name / sector / USD exposure against your configured caps, and returns `APPROVE` / `WATCH` / `REDUCE` / `REJECT`. Position size has a stated meaning: if the stop is hit, the loss is `per_trade_risk_budget_pct` of the priced equity sleeve.
+**Outcome Memory** (deterministic supporting context) records what each resolved call actually earned, computes hit rate and conviction calibration, and feeds that track record into the next synthesis. Reads are gated on *exit* date, so a backtest can never see an outcome that had not resolved on the date being analyzed. Calibration is reported, never applied — nothing silently rescales a signal by a small-sample hit rate.
 
-It fails conservatively on purpose. An unset cap is not a pass — it reports `cap_unconfigured` and degrades to `WATCH` rather than inventing a default, and unpriced holdings are disclosed instead of dropped from the denominator.
-
-**Layer 6 — Outcome Memory** (deterministic) records what each resolved call actually earned, computes hit rate and conviction calibration, and feeds that track record into the next synthesis. Reads are gated on *exit* date, so a backtest can never see an outcome that had not resolved on the date being analyzed. Calibration is reported, never applied — nothing silently rescales a signal by a small-sample hit rate.
+Portfolio valuation, concentration limits, position sizing, and buy/hold/sell decisions belong in the consuming application. This public repository has no dependency on `personal-os`, `portfolio.yaml`, `policy.yaml`, or private holdings.
 
 See [`architecture.md`](architecture.md) for the full diagram.
 
@@ -157,37 +154,18 @@ stock-fetch --universe sp500
 stock-analysis AAPL --market US --rounds 3 --model haiku --debate-model opus -v
 ```
 
-### Portfolio-aware gating (Layer 5)
+### Portfolio decisions
 
-The gate reads holdings from a `personal-os` checkout. It looks for
-`data/finance/portfolio.yaml` by walking up from the repo root, or you can point
-it anywhere:
-
-```bash
-export STOCK_ANALYSIS_FINANCE_DIR=~/personal-os/data/finance   # portfolio.yaml + policy.yaml
-export STOCK_ANALYSIS_MARKET_DIR=~/personal-os/market          # fx.yaml
-```
-
-Without those files the pipeline still runs — the gate returns `WATCH` and says
-why, rather than approving a trade it could not check.
-
-Concentration caps live in `policy.yaml` under `concentration:`. **While they are
-`null`, the gate can never return `APPROVE`** — an unset cap is treated as a check
-that could not be performed, not as one that passed. Set them to enable approvals:
-
-```yaml
-concentration:
-  max_single_position_pct_of_equity: 20
-  max_sector_pct_of_equity: 40
-  max_usd_pct_of_tracked_investable_assets: 60
-```
+This repository intentionally stops at stock research. If you need portfolio
+valuation, concentration checks, or position sizing, consume the saved briefing
+from your private application and apply those rules there.
 
 ### Run backtests
 
 ```bash
 stock-analysis-backtest --tickers AAPL,MSFT --start 2024-01-01 --end 2024-12-31
 
-# Also feed realized outcomes back into Layer 6 memory. Off by default so that
+# Also feed realized outcomes back into outcome memory. Off by default so that
 # repeated backtests over the same window stay comparable.
 stock-analysis-backtest --tickers AAPL --start 2024-01-01 --end 2024-12-31 \
     --record-outcomes
@@ -244,7 +222,7 @@ src/stock_analysis/
 │   ├── market_data.py   # TickerData, PriceBar, FinancialStatements
 │   ├── agent_reports.py # FundamentalsReport, SentimentReport, TechnicalReport, MacroFXReport
 │   ├── debate.py        # DebateArgument, DebateRound, DebateResult
-│   └── synthesis.py     # Briefing, ConvictionScore, TradeDecision, PortfolioGateResult
+│   └── synthesis.py     # Briefing, ConvictionScore, ActionPlan, RiskAssessment
 ├── data/                # Layer 1 — data fetching and storage
 │   ├── fetcher_base.py  # Abstract BaseFetcher interface
 │   ├── us_market.py     # USMarketFetcher (yfinance)
@@ -266,7 +244,7 @@ src/stock_analysis/
 ├── backtest/            # Historical backtesting
 │   ├── runner.py        # Backtester
 │   ├── scorer.py        # Hit rate / accuracy scoring
-│   ├── portfolio.py     # Portfolio-level simulation
+│   ├── portfolio.py     # Generic backtest simulation (no personal holdings)
 │   └── fetcher.py       # Historical data helper
 ├── api/                 # FastAPI REST endpoints
 │   └── app.py           # POST /analyze/{ticker}, GET /status/{job_id}, GET /results/{ticker}
@@ -309,8 +287,8 @@ data/
     ├── debate_result.json
     ├── research_verdict.json  # Layer 3.5 adjudication
     ├── briefing.json
-    ├── outcomes.jsonl         # Layer 6 append-only outcome log
-    └── calibration.json       # Layer 6 computed track record
+    ├── outcomes.jsonl         # append-only outcome log
+    └── calibration.json       # computed track record
 ```
 
 The dated `data/<TICKER>/<DATE>/` layout is a backtest-only fallback, used when a

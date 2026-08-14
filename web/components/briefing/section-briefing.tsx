@@ -94,10 +94,6 @@ export function BriefingSection({ data }: { data: Briefing; currency?: string })
             Risk assessment
           </div>
           <dl className="grid gap-x-6 gap-y-4 text-sm md:grid-cols-2">
-            <DlRow
-              label="Position size"
-              value={data.risk_assessment.position_size_suggestion}
-            />
             {data.risk_assessment.risk_reward_ratio && (
               <DlRow
                 label="Risk / reward"
@@ -111,7 +107,7 @@ export function BriefingSection({ data }: { data: Briefing; currency?: string })
             />
             {data.risk_assessment.correlation_notes.length > 0 && (
               <DlRow
-                label="Correlation notes"
+                label="Market context"
                 span
                 value={
                   <ul className="space-y-1">

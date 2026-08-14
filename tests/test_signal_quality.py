@@ -338,7 +338,6 @@ class SignalQualityTests(unittest.TestCase):
             key_uncertainties=[],
             catalysts_upcoming=[],
             risk_assessment=RiskAssessment(
-                position_size_suggestion="0%",
                 correlation_notes=[],
                 max_drawdown_scenario="unknown",
             ),

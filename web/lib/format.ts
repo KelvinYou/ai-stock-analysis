@@ -52,12 +52,6 @@ export function parseRatio(s: string | null | undefined): number | null {
   return Number(m[1]) / denominator;
 }
 
-/** "0.9% of portfolio" → "0.9%". Falls back to the raw string. */
-export function shortPositionSize(s: string | null | undefined): string {
-  if (!s) return "—";
-  return /(\d+(?:\.\d+)?\s*%)/.exec(s)?.[1].replace(/\s+/g, "") ?? s;
-}
-
 /** "4d" / "today". Compact enough for a table cell. */
 export function fmtAge(days: number | null | undefined): string {
   if (days == null) return "—";

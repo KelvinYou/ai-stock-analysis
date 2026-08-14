@@ -28,8 +28,8 @@ class DataStore:
             debate_result.json
             research_verdict.json   # Layer 3.5 adjudication
             briefing.json
-            outcomes.jsonl          # Layer 6 append-only outcome log
-            calibration.json        # Layer 6 computed track record
+            outcomes.jsonl          # append-only outcome log
+            calibration.json        # computed track record
 
     Backtest paths (for_date set) fall back to the legacy per-date subdirectory layout:
         data/AAPL/2026-04-18/market_data.json

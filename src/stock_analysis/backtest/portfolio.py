@@ -1,4 +1,7 @@
-"""Portfolio simulator: turns BacktestTrial signals into an equity curve.
+"""Synthetic portfolio simulator for backtests only.
+
+This module turns BacktestTrial signals into an equity curve. It never reads
+real holdings, private account data, or portfolio policy files.
 
 Event-driven model:
 - Each directional trial is an independent bet of `position_size_pct` of current cash.
