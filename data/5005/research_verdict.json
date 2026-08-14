@@ -1,0 +1,26 @@
+{
+  "ticker": "5005",
+  "judged_view": "neutral",
+  "confidence": "medium",
+  "thesis": "Recovery optionality is not yet reflected in cash generation or margins, so the stock remains neutral with a downside bias until operating evidence improves.",
+  "winning_side": "bear",
+  "strongest_counterexample": "The gap between the 109.8x trailing and 33.7x forward P/E could reflect a real earnings inflection if orders and utilization recover quickly.",
+  "invalidation_conditions": [
+    "Free cash flow turns positive and expands",
+    "Operating margin improves materially without a revenue-quality deterioration",
+    "Price reclaims SMA-20 and SMA-50 with positive MACD"
+  ],
+  "evidence_gaps": [
+    "No current news headlines in the local Layer 1 snapshot",
+    "No customer-order, capex, or utilization detail",
+    "Price history and technical indicators end on 2026-08-10"
+  ],
+  "decisive_factors": [
+    "Negative MYR164 million free cash flow and 4.2% operating margin",
+    "109.8x trailing P/E despite a 33.7x forward P/E",
+    "Price below SMA-20 and SMA-50 with RSI 31.8 and negative MACD"
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

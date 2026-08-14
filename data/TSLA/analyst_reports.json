@@ -23,7 +23,7 @@
       "Recurring revenue streams from energy storage (Powerwall, Megapacks) and software subscriptions (FSD Premium)",
       "~18-20% global EV market share—largest EV manufacturer globally"
     ],
-    "summary": "Tesla is a fundamentally sound company with industry-leading brands, technology, and cash generation, but trades at deeply unsustainable valuations (305x P/E, 150x forward P/E). At current multiples, the market has fully priced in exceptional growth that is unlikely to materialize given slowing revenue growth (2-5% annually), thin net margins (4.0%), and intensifying competition. The risk/reward is asymmetric to the downside."
+    "summary": "Current-session signal: sell. Tesla combines a 305.3x trailing P/E, 150.0x forward P/E, and only a 4.0% net margin, making the valuation highly dependent on future execution. The price is below all major moving averages with an RSI of 33.6, while the improving MACD histogram is not yet a confirmed reversal."
   },
   "sentiment": {
     "signal": "neutral",
@@ -42,10 +42,10 @@
       "Analysis based on analyst rating distribution (47 total analysts tracked)"
     ],
     "social_sentiment": null,
-    "summary": "TSLA shows cautiously bullish analyst sentiment with a 49% buy rating and improving 3-month trend, but the 38% hold rating signals material conviction gaps around valuation and execution. Sentiment appears balanced rather than ahead of fundamentals, reflecting the market's uncertainty about EV transition headwinds and competitive dynamics in consumer cyclicals."
+    "summary": "Current-session signal: neutral. Tesla combines a 305.3x trailing P/E, 150.0x forward P/E, and only a 4.0% net margin, making the valuation highly dependent on future execution. The price is below all major moving averages with an RSI of 33.6, while the improving MACD histogram is not yet a confirmed reversal."
   },
   "technical": {
-    "signal": "neutral",
+    "signal": "sell",
     "confidence": "medium",
     "trend": "Downtrend (price below SMA-50 and SMA-200)",
     "rsi_14": 33.63,
@@ -62,10 +62,10 @@
       376.16,
       394.46
     ],
-    "summary": "TSLA is in a clear downtrend, trading 11.5% below SMA-50 and 18.4% below SMA-200 after a sharp sell-off. Oversold RSI and positive MACD histogram suggest early reversal setup, but price must recapture the $376 SMA-50 level to confirm uptrend resumption. Hold for confirmation; watch for break above resistance."
+    "summary": "Current-session signal: sell. Tesla combines a 305.3x trailing P/E, 150.0x forward P/E, and only a 4.0% net margin, making the valuation highly dependent on future execution. The price is below all major moving averages with an RSI of 33.6, while the improving MACD histogram is not yet a confirmed reversal."
   },
   "macro": {
-    "signal": "sell",
+    "signal": "neutral",
     "confidence": "medium",
     "fed_impact": "Fed is on hold at 4.25–4.50% with inflation trending toward 2%, reducing near-term rate-cut expectations. TSLA's high beta (1.827) amplifies sensitivity to any Fed surprise; hawkish hold delays relief for capital-intensive EV financing and consumer purchases.",
     "interest_rate_outlook": "Current 4.25–4.50% remains elevated for consumer auto financing. Potential cuts in late 2026–early 2027 would eventually ease EV demand, but no immediate relief. Rate maintenance pressures affordability and delays consumer discretionary spending recovery.",
@@ -81,6 +81,9 @@
       "CNY weakness: Chinese currency depreciation makes local EV competitors cheaper, compressing TSLA's pricing in its largest non-US market",
       "Supply chain fragmentation: Geopolitical decoupling increases input costs and logistics risks, pressuring gross margins"
     ],
-    "summary": "TSLA faces a difficult macro backdrop: moderate GDP growth (recession risk), elevated rates suppressing consumer financing, and specific geopolitical headwinds in China. Its 1.827 beta amplifies downside in a weakening macro environment, and Consumer Cyclical exposure means demand destruction is likely if growth falters."
-  }
+    "summary": "Current-session signal: neutral. Tesla combines a 305.3x trailing P/E, 150.0x forward P/E, and only a 4.0% net margin, making the valuation highly dependent on future execution. The price is below all major moving averages with an RSI of 33.6, while the improving MACD histogram is not yet a confirmed reversal."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

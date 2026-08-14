@@ -1,0 +1,26 @@
+{
+  "ticker": "1155",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "The snapshot supports a value-oriented watch, not a confirmed entry, because the attractive valuation is offset by a clear downtrend and incomplete bank risk data.",
+  "winning_side": "neither",
+  "strongest_counterexample": "Low beta, strong reported profitability, and an RSI near 34 could support a defensive technical rebound.",
+  "invalidation_conditions": [
+    "Bank asset quality or capital metrics deteriorate materially.",
+    "The price breaks below the 52-week low.",
+    "The dividend or earnings profile weakens materially."
+  ],
+  "evidence_gaps": [
+    "NIM, NPL, CET1, provisioning, and ROE data.",
+    "Bank-appropriate cash-flow and dividend coverage analysis.",
+    "Usable current news and macro inputs."
+  ],
+  "decisive_factors": [
+    "12.3x trailing P/E, 11.3x forward P/E, and 6.23% yield.",
+    "Price below SMA-20, SMA-50, and SMA-200 with negative MACD.",
+    "Incomplete bank-specific risk evidence."
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

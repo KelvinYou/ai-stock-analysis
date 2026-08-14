@@ -1,6 +1,6 @@
 {
   "fundamentals": {
-    "signal": "neutral",
+    "signal": "buy",
     "confidence": "medium",
     "pe_assessment": "P/E of 8.92x represents a 35%+ discount to typical regional bank multiples (12–15x range). Forward P/E unchanged at 8.80x signals minimal growth expectations. Valuation appears undervalued on surface but likely reflects justified market concerns about execution or competitive positioning in Malaysia's regional banking sector.",
     "margin_analysis": "Net margin of 21.99% sits comfortably within healthy banking range (15–25%), indicating strong operational efficiency. Profitability metrics are solid relative to the MYR 2.53B revenue base, with net income of MYR 557M demonstrating effective cost management and financial stability.",
@@ -20,7 +20,7 @@
       "Robust free cash flow of MYR 1.78B exceeding net income by 3.2x",
       "Defensive profile with low beta of 0.19 and minimal volatility"
     ],
-    "summary": "BIMB presents a classic value dilemma: deeply discounted valuation with exceptional yield and strong cash generation, yet analyst consensus (87.5% hold) and flat growth expectations suggest the market is correctly pricing in legitimate execution or competitive risks inherent to Malaysia's regional banking landscape. Best suited for dividend-focused value investors with conviction in local banks; unsuitable for growth-oriented traders."
+    "summary": "Current-session signal: buy. BIMB offers an 8.9x trailing P/E, 8.8x forward P/E, 8.72% dividend yield, 22.0% reported net margin, and positive reported free cash flow. The 2.14 close is only just above SMA-20, remains below SMA-50 and SMA-200, and trades with RSI 52.0, positive MACD histogram, and very low volume."
   },
   "sentiment": {
     "signal": "neutral",
@@ -40,7 +40,7 @@
       "No strong conviction either direction"
     ],
     "social_sentiment": null,
-    "summary": "BIMB shows a stable analyst consensus with a strong HOLD majority (7 of 8 analysts) and modest buy support (1 analyst). The unchanged ratings month-over-month suggest neither deteriorating nor improving fundamentals, typical for a regional bank in normal market conditions. Sentiment appears neutral rather than ahead of fundamentals."
+    "summary": "Current-session signal: neutral. BIMB offers an 8.9x trailing P/E, 8.8x forward P/E, 8.72% dividend yield, 22.0% reported net margin, and positive reported free cash flow. The 2.14 close is only just above SMA-20, remains below SMA-50 and SMA-200, and trades with RSI 52.0, positive MACD histogram, and very low volume."
   },
   "technical": {
     "signal": "neutral",
@@ -58,10 +58,10 @@
       2.18,
       2.5519
     ],
-    "summary": "BIMB trades sideways with weak bearish momentum and neutral RSI. Price holds above SMA-50 but remains below SMA-200 in the lower range. Await decisive breakout above 2.18 on volume or support test at 1.41 before committing."
+    "summary": "Current-session signal: neutral. BIMB offers an 8.9x trailing P/E, 8.8x forward P/E, 8.72% dividend yield, 22.0% reported net margin, and positive reported free cash flow. The 2.14 close is only just above SMA-20, remains below SMA-50 and SMA-200, and trades with RSI 52.0, positive MACD histogram, and very low volume."
   },
   "macro": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "fed_impact": "Supportive. Steady 4.25–4.50% rates and low inflation provide a stable, rate-supportive backdrop for NIM expansion without downside surprise from Fed hikes.",
     "interest_rate_outlook": "Favorable. The 125bp OPR–Fed spread persists; BNM's accommodative, growth-focused stance suggests rates stable-to-higher. Regional banks benefit from sustained NIM.",
@@ -78,6 +78,9 @@
       "Global supply-chain disruption affects trade finance volumes",
       "Southeast Asia regional stability relatively stable (low tail risk)"
     ],
-    "summary": "BIMB benefits from a stable, higher-for-longer rate environment and BNM's accommodative stance, supporting NIM expansion and credit demand. Low beta (0.19) provides defensive positioning. Trade tensions present modest near-term headwind but do not materially alter the macro tailwind for regional financials."
-  }
+    "summary": "Current-session signal: neutral. BIMB offers an 8.9x trailing P/E, 8.8x forward P/E, 8.72% dividend yield, 22.0% reported net margin, and positive reported free cash flow. The 2.14 close is only just above SMA-20, remains below SMA-50 and SMA-200, and trades with RSI 52.0, positive MACD histogram, and very low volume."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

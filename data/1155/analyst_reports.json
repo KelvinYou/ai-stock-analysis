@@ -20,7 +20,7 @@
       "Ultra-low beta (0.11) provides defensive shelter in downturns",
       "Solid 0.56x D/E ratio and well-capitalized balance sheet"
     ],
-    "summary": "MAYBANK is a **high-quality, mature dividend stock** trading at an attractive valuation (11.3x forward P/E) with fortress-like balance sheet health, exceptional profitability (37.7% margins), and defensive characteristics (beta 0.11). Suitable for income and value investors; limited price appreciation but strong downside protection and 6%+ yield justify entry at current levels."
+    "summary": "Current-session signal: buy. Maybank trades at 12.3x trailing and 11.3x forward earnings with a 6.23% dividend yield, 37.7% reported net margin, and low beta of 0.11. The 10.56 close is below all three moving averages, RSI is 34.3, MACD is negative, and the local snapshot has no usable news headlines."
   },
   "sentiment": {
     "signal": "neutral",
@@ -43,10 +43,10 @@
       "FBM KLCI forecast to reach 1,800 by year-end 2026"
     ],
     "social_sentiment": null,
-    "summary": "MAYBANK presents a **NEUTRAL** sentiment with modest bullish undertones driven by supportive regional macro conditions and strategic M&A activity, offset by mixed analyst recommendations where HOLD dominates (9/17 vs 7/17 BUY). Confidence is medium due to conflicting signals: YTD momentum (+13.42%) suggests recovery, but 1-year weakness (-9.38%) indicates broader sector headwinds. Foreign capital inflows into Malaysian financials and JP Morgan's regional upgrade provide tailwinds, but analyst caution suggests limited near-term upside expectations."
+    "summary": "Current-session signal: neutral. Maybank trades at 12.3x trailing and 11.3x forward earnings with a 6.23% dividend yield, 37.7% reported net margin, and low beta of 0.11. The 10.56 close is below all three moving averages, RSI is 34.3, MACD is negative, and the local snapshot has no usable news headlines."
   },
   "technical": {
-    "signal": "neutral",
+    "signal": "sell",
     "confidence": "medium",
     "trend": "Downtrend — price below both SMA-50 and SMA-200; recent 20-day decline from 11.20 to 10.66",
     "rsi_14": 26.32,
@@ -65,10 +65,10 @@
       10.96,
       12.03
     ],
-    "summary": "MAYBANK is in a downtrend with price below both key moving averages, negative MACD momentum, and elevated volume on declines. However, the deeply oversold RSI (26.32) presents a tactical bounce opportunity. The neutral signal reflects conflicting signals: oversold conditions suggest near-term relief, but underlying momentum remains bearish. Regional banks are typically defensive, but conviction is low until price reclaims the SMA-50 (10.84) with sustained volume."
+    "summary": "Current-session signal: sell. Maybank trades at 12.3x trailing and 11.3x forward earnings with a 6.23% dividend yield, 37.7% reported net margin, and low beta of 0.11. The 10.56 close is below all three moving averages, RSI is 34.3, MACD is negative, and the local snapshot has no usable news headlines."
   },
   "macro": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "fed_impact": "Steady Fed rates at 4.25-4.50% support stable NIMs; no rate cuts expected near-term benefit regional bank margins and predictability.",
     "interest_rate_outlook": "BNM's accommodative 3.00% OPR with growth focus supports lending expansion; stable Fed rates reduce refinancing risk and support yield curves in both markets.",
@@ -84,6 +84,9 @@
       "Elevated US-China trade tensions could pressure Malaysian export sector and corporate lending",
       "MYR/USD stability at 4.30-4.40 range reduces FX hedging costs but currency weakness would pressurize asset quality"
     ],
-    "summary": "Maybank is positioned well in a stable, accommodative rate environment with BNM's growth-focused policy supporting lending expansion and NIM resilience. Headwinds from China's mixed recovery and elevated trade tensions warrant cautious positioning, but the bank's defensive characteristics (low beta) and favorable domestic credit backdrop support a buy thesis with medium conviction."
-  }
+    "summary": "Current-session signal: neutral. Maybank trades at 12.3x trailing and 11.3x forward earnings with a 6.23% dividend yield, 37.7% reported net margin, and low beta of 0.11. The 10.56 close is below all three moving averages, RSI is 34.3, MACD is negative, and the local snapshot has no usable news headlines."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

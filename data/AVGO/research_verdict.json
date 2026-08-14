@@ -1,0 +1,26 @@
+{
+  "ticker": "AVGO",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Broadcom's strong margins, free cash flow, analyst support, and positive trend justify a buy signal, but the valuation requires continued earnings execution.",
+  "winning_side": "bull",
+  "strongest_counterexample": "The 69.3x trailing P/E, 1.47 beta, and low volume could indicate that much of the expected growth is already priced in.",
+  "invalidation_conditions": [
+    "Material deterioration in free cash flow or operating margin",
+    "Price falling below the 200-day moving average",
+    "Forward earnings estimates being revised materially lower"
+  ],
+  "evidence_gaps": [
+    "No non-empty current news headlines",
+    "No detailed bridge from trailing to forward earnings",
+    "Latest technical snapshot is dated 2026-08-11"
+  ],
+  "decisive_factors": [
+    "36.2% net margin and positive free cash flow",
+    "21.3x forward P/E versus 69.3x trailing P/E",
+    "Price above all three major moving averages"
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

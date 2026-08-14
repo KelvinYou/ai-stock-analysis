@@ -1,0 +1,26 @@
+{
+  "ticker": "TSM",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "TSM's financial quality, analyst support, and positive medium-term trend provide the strongest buy setup in this batch, subject to continued earnings execution.",
+  "winning_side": "bull",
+  "strongest_counterexample": "A failure to meet forward earnings expectations could trigger both earnings revisions and valuation compression despite the current technical strength.",
+  "invalidation_conditions": [
+    "Material deterioration in margins or free cash flow",
+    "Price falling below the 200-day moving average",
+    "Forward earnings estimates being revised materially lower"
+  ],
+  "evidence_gaps": [
+    "No non-empty current news headlines",
+    "No detailed forward earnings assumptions",
+    "Latest technical snapshot is dated 2026-08-12"
+  ],
+  "decisive_factors": [
+    "59.9% gross margin and 50.8% operating margin",
+    "19.7x forward P/E and low leverage",
+    "Price above all three major moving averages"
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

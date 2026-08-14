@@ -1,0 +1,48 @@
+{
+  "ticker": "RKLB",
+  "rounds": [
+    {
+      "round_number": 1,
+      "bull_argument": {
+        "position": "bull",
+        "round_number": 1,
+        "argument": "Revenue scale, positive gross margin, analyst support, and improving short-term momentum could become more compelling if losses and cash burn improve.",
+        "key_points": [
+          "Revenue scale, positive gross margin, analyst support, and improving short-term momentum could become more compelling if losses and cash burn improve.",
+          "Improvement in operating margin and free cash flow",
+          "Price recovery above the 50-day moving average at 86.23"
+        ],
+        "rebuttal_to_previous": null
+      },
+      "bear_argument": {
+        "position": "bear",
+        "round_number": 1,
+        "argument": "Negative profitability, negative free cash flow, a 1,602x forward P/E, and a beta of 2.63 make the current valuation highly sensitive to execution delays.",
+        "key_points": [
+          "Negative profitability, negative free cash flow, a 1,602x forward P/E, and a beta of 2.63 make the current valuation highly sensitive to execution delays.",
+          "Whether revenue growth can translate into positive free cash flow",
+          "Whether the 1,602x forward P/E is supported by realistic earnings assumptions"
+        ],
+        "rebuttal_to_previous": null
+      }
+    }
+  ],
+  "bull_case_summary": "Revenue scale, positive gross margin, analyst support, and improving short-term momentum could become more compelling if losses and cash burn improve.",
+  "bear_case_summary": "Negative profitability, negative free cash flow, a 1,602x forward P/E, and a beta of 2.63 make the current valuation highly sensitive to execution delays.",
+  "key_points_of_agreement": [
+    "The bull case points to revenue, positive gross margin, analyst support, and improving MACD momentum. The bear case is stronger on valuation and cash generation, but the mixed price structure supports a cautious neutral view rather than a definitive sell."
+  ],
+  "key_points_of_disagreement": [
+    "Whether revenue growth can translate into positive free cash flow",
+    "Whether the 1,602x forward P/E is supported by realistic earnings assumptions",
+    "The absence of non-empty current news and macro data"
+  ],
+  "unresolved_uncertainties": [
+    "Whether revenue growth can translate into positive free cash flow",
+    "Whether the 1,602x forward P/E is supported by realistic earnings assumptions",
+    "The absence of non-empty current news and macro data"
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

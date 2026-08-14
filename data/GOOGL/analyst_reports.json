@@ -20,10 +20,10 @@
       "Massive scale ($4.2T market cap) with moat",
       "Overwhelming analyst consensus: 58 buy/strong buy vs 6 hold ratings"
     ],
-    "summary": "Alphabet is a fortress-like mega-cap with exceptional profitability (32.8% net margin), minimal leverage, and $73.3B in annual free cash flow. Trading at a reasonable trailing P/E of 17.27x with strong analyst backing (58:6 bullish ratio), but forward P/E of 23.33x requires sustained growth. Regulatory risks and AI competition are real headwinds, but the company's scale, market leadership, and financial strength justify a BUY rating with high confidence."
+    "summary": "Current-session signal: buy. Alphabet combines a 32.8% net margin, $73.3B free cash flow, and debt-to-equity of about 0.14 with a 17.2x trailing P/E. Price is below the 20- and 50-day averages but above the 200-day average; RSI is 62.1 and the MACD histogram is positive."
   },
   "sentiment": {
-    "signal": "strong_buy",
+    "signal": "buy",
     "confidence": "medium",
     "news_tone": "neutral",
     "news_summary": "No recent news headline data retrieved; sentiment assessment based entirely on analyst recommendation consensus.",
@@ -35,7 +35,7 @@
     ],
     "notable_headlines": [],
     "social_sentiment": null,
-    "summary": "Analysts show near-unanimous bullishness (90.6% Buy/Strong Buy, zero Sell ratings) with unwavering conviction over 3 months. While this reflects strong institutional confidence in Alphabet, the extreme consensus and lack of critical dissent suggest sentiment may be ahead of fundamentals—leaving minimal margin for disappointment. Recommend validating against fundamental data and monitoring for reversal signals."
+    "summary": "Current-session signal: buy. Alphabet combines a 32.8% net margin, $73.3B free cash flow, and debt-to-equity of about 0.14 with a 17.2x trailing P/E. Price is below the 20- and 50-day averages but above the 200-day average; RSI is 62.1 and the MACD histogram is positive."
   },
   "technical": {
     "signal": "buy",
@@ -55,7 +55,7 @@
       377.65,
       402.38
     ],
-    "summary": "GOOGL shows emerging bullish momentum despite short-term consolidation. The positive MACD histogram and price holding above the 200-day MA ($329.83) confirm an intact long-term uptrend, while the volume washout pattern suggests selling exhaustion. However, the price trading 3.18% below the 50-day MA and neutral RSI prevent a strong conviction call."
+    "summary": "Current-session signal: buy. Alphabet combines a 32.8% net margin, $73.3B free cash flow, and debt-to-equity of about 0.14 with a 17.2x trailing P/E. Price is below the 20- and 50-day averages but above the 200-day average; RSI is 62.1 and the MACD histogram is positive."
   },
   "macro": {
     "signal": "sell",
@@ -76,6 +76,9 @@
       "US-China tech competition and potential export controls on semiconductors could slow AI/cloud infrastructure investments",
       "Geopolitical uncertainty reduces corporate confidence in long-term ad budget growth, compressing near-term spending"
     ],
-    "summary": "GOOGL faces a negative macro setup: elevated rate-hike risk from a hawkish Fed (9 of 18 officials project tightening) combined with 1.24x market beta creates downside leverage. While ad-spending resilience from low unemployment and moderating inflation provide support, the asymmetric rate surprise risk and compressed AI capex cycle outweigh near-term catalysts. A Fed pivot to cuts in late 2026 would reverse this signal."
-  }
+    "summary": "Current-session signal: sell. Alphabet combines a 32.8% net margin, $73.3B free cash flow, and debt-to-equity of about 0.14 with a 17.2x trailing P/E. Price is below the 20- and 50-day averages but above the 200-day average; RSI is 62.1 and the MACD histogram is positive."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

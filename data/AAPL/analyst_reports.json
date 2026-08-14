@@ -22,10 +22,10 @@
       "Analyst consensus: 27 of 46 analysts (59%) rate as Buy or Strong Buy; bullish near-term sentiment",
       "Market dominance: $4.45T market cap with leadership in premium consumer electronics"
     ],
-    "summary": "Apple combines world-class profitability (26.9% net margin, $98.77B FCF) with dominant market position ($4.45T cap), though it trades at a premium valuation (P/E 34.97x vs sector 22-24x). Strong analyst consensus (59% buy/strong buy) and forward P/E of 32x reflect confidence in the quality franchise. Primary headwinds are valuation premium, modest growth trajectory at scale, and China exposure. Strong fundamentals and cash generation support the rating despite limited upside from current levels."
+    "summary": "Current-session signal: buy. Apple generates a 26.9% net margin and $98.8B free cash flow, but trades at 34.7x trailing earnings and 31.8x forward earnings with debt-to-equity of about 1.34. Price is below the 20- and 50-day averages but above the 200-day average; RSI is 37.2 and the MACD histogram is negative."
   },
   "sentiment": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "news_tone": "neutral",
     "news_summary": "News headline data unavailable. Analysis based solely on analyst recommendation trends, which show declining but still-bullish consensus over the past 3 months.",
@@ -41,10 +41,10 @@
       "Minimal bearish sentiment among 46 tracked analysts"
     ],
     "social_sentiment": null,
-    "summary": "AAPL maintains strong analyst support with 59% bullish ratings, but sentiment is moderating—strong buy recommendations declined from 7 to 6 over 3 months, signaling potential consolidation. The lack of headline data limits conviction, but the wide analyst support (27/46 bullish) and minimal bearish dissent (5/46) support a cautious buy posture."
+    "summary": "Current-session signal: neutral. Apple generates a 26.9% net margin and $98.8B free cash flow, but trades at 34.7x trailing earnings and 31.8x forward earnings with debt-to-equity of about 1.34. Price is below the 20- and 50-day averages but above the 200-day average; RSI is 37.2 and the MACD histogram is negative."
   },
   "technical": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "trend": "Downtrend within longer-term uptrend; price above SMA-200 ($279.36) but below SMA-50 ($309.30)",
     "rsi_14": 36.61,
@@ -64,7 +64,7 @@
       327.0,
       339.79
     ],
-    "summary": "AAPL has pulled back 10.3% from its recent high of $339.79 (7/28) to $304.91 (8/11), finding consolidation near the 50-day MA. RSI at 36.61 signals oversold conditions are developing, while bearish MACD and volume contraction suggest the selling phase may be exhausted. A break above $313 with MACD histogram turning positive would confirm a reversal, making this a tactical long setup with medium confidence at current levels."
+    "summary": "Current-session signal: neutral. Apple generates a 26.9% net margin and $98.8B free cash flow, but trades at 34.7x trailing earnings and 31.8x forward earnings with debt-to-equity of about 1.34. Price is below the 20- and 50-day averages but above the 200-day average; RSI is 37.2 and the MACD histogram is negative."
   },
   "macro": {
     "signal": "sell",
@@ -85,6 +85,9 @@
       "Semiconductor supply chain vulnerability to cross-strait disruption",
       "Potential tariffs on consumer electronics could compress margins"
     ],
-    "summary": "AAPL faces significant macro headwinds: restrictive Fed policy dampens consumer demand, elevated trade tensions threaten China supply chain and tariff exposure, and rate environment pressures growth valuations. While strong cash flow and AI tailwinds provide offset, geopolitical risks and consumer discretionary weakness outweigh near-term support. Recommend a **cautious stance** — wait for Fed rate cuts or tariff clarification before initiating positions."
-  }
+    "summary": "Current-session signal: sell. Apple generates a 26.9% net margin and $98.8B free cash flow, but trades at 34.7x trailing earnings and 31.8x forward earnings with debt-to-equity of about 1.34. Price is below the 20- and 50-day averages but above the 200-day average; RSI is 37.2 and the MACD histogram is negative."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

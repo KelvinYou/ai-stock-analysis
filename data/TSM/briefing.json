@@ -1,56 +1,73 @@
 {
   "ticker": "TSM",
-  "date": "2026-08-12",
+  "date": "2026-08-14",
   "overall_signal": "buy",
   "conviction": {
-    "score": 0.42,
-    "signal_convergence": 0.7,
-    "explanation": "All four analyst agents (Fundamentals, Sentiment, Technical, Macro) independently returned buy, and the bull survived a rigorous three-round adversarial debate with its core thesis intact — a structural foundry monopoly trading at 19.4x forward versus 35-40x for the customers who depend on it. Conviction is moderated, not high, because the bear forced two material concessions (no contractual backlog evidence behind the growth assumption; overseas-fab margin dilution is prospective, not already absorbed) and exposed that the entire valuation case pivots on a single unvalidated variable — whether forward earnings growth lands near consensus (~90%) or well below it. Signal convergence is real but partly mechanical: all four agents draw on the same yfinance/consensus data feed rather than fully independent evidence, and two of the four (Technical, Macro) capped confidence at medium precisely on downside-relevant grounds (low-volume consolidation under resistance; geopolitical tail risk)."
+    "score": 0.64,
+    "signal_convergence": 0.75,
+    "explanation": "Current-session English batch refresh. The bull case is supported by strong profitability, low leverage, analyst consensus, and aligned technical indicators. The bear case is mainly valuation and confirmation risk, so the evidence supports a bullish view with medium rather than high confidence."
   },
-  "executive_summary": "TSM presents as a high-quality, structurally advantaged business — 59.89% gross margins, a 0.199 debt-to-equity fortress balance sheet, and an effective monopoly on advanced-node fabrication that Samsung and Intel Foundry have failed to close despite years of subsidized effort — trading at a forward multiple (19.4x) well below both the broader market and the 35-40x the market assigns to the downstream customers (Nvidia, Apple, AMD) who cannot build anywhere else. All four independent analyst layers (Fundamentals, Sentiment, Technical, Macro/FX) converge on buy, and 18 of 19 sell-side analysts rate buy/strong buy with a $540.20 target implying ~28% upside. The adversarial debate stress-tested this thesis hard and it survived, but not unscathed: the bull was forced to concede that the growth assumption underlying the \"cheap\" forward multiple has no contractual backing in the record (no backlog, no take-or-pay data), and that overseas-fab depreciation dilution to the flagship margin figure is a prospective headwind, not one already priced into today's reported numbers.\n\nThe bear case is coherent but ultimately rests on an unsourced point estimate (~30% growth, ~15x terminal multiple) presented as conservatism, and on treating near-unanimous analyst consensus and 4/4 agent convergence as crowding rather than corroboration — a framing that cuts against the fact the stock trades at roughly half the multiple of the companies it supplies. The genuinely unresolved risk is real and should govern position sizing: no free-cash-flow yield appears anywhere in the analysis despite a business spending roughly half of revenue on plant, the magnitude of overseas margin dilution is unquantified, and Taiwan Strait/export-control tail risk is permanent, unhedgeable, and falls disproportionately on TSM versus its fabless customers. Net: the risk-reward favors ownership — a structural moat priced below its downstream ecosystem — but this is a position-sized, medium-to-long-horizon buy, not a high-conviction max-size call, given the beta (1.258), the low-volume near-term technical setup, and the single-assumption dependency the debate exposed.\n\nCatalysts to watch cut both directions: continued hyperscaler capex disclosures and node-transition commentary (2nm ramp, CoWoS capacity) would validate the growth assumption, while any hyperscaler capex-digestion guide, geopolitical escalation, or evidence of margin compression from the Arizona/Japan/Germany ramp would validate the bear thesis quickly given how much is embedded in the forward multiple.",
-  "bull_case": "TSM is the cheapest structural expression of the AI buildout: a 19.4x forward P/E for a company holding a de facto monopoly on advanced-node capacity, evidenced by 59.89% gross margins sustained in a capital-intensive business that rivals (Samsung, Intel Foundry) have failed to replicate despite years of sovereign-subsidized effort. The 90% implied forward earnings growth is capitalized below the market's own multiple and at roughly half what the market pays TSM's customers (Nvidia, Apple, AMD, Broadcom), who have no alternative supplier for leading-edge silicon. A fortress balance sheet (D/E 0.199) funds the record capex cycle largely from operating cash rather than leverage, and all four independent analyst agents plus 18 of 19 sell-side analysts ($540.20 target, ~28% upside) converge on buy. The bull case tolerates being substantially wrong — even at half of consensus growth (~45%), TSM would trade near 26x forward, still below its customers' multiples — while Taiwan Strait risk, though real and unhedgeable, is old, permanent, and already the reason this chokepoint asset is available at a discount multiple at all.",
-  "bear_case": "The 19.4x forward multiple is not a valuation, it's a costume for a ~90% consensus earnings-growth assumption that appears nowhere in the record as contracted or committed demand — the bull withdrew this claim under pressure. Strip the forecast and the stock is 37x trailing at all-time-peak margins during a record capex peak, the textbook top-of-cycle setup where semiconductors always look cheapest on forward earnings right before the E breaks. The $40B+ Arizona/Japan/Germany buildout is a prospective, mechanically certain drag on the flagship 59.89% margin (conceded by the bull in round 3), overseas fabs carry structurally higher costs, and no free-cash-flow yield appears anywhere in the analysis despite capex approaching half of revenue — a critical omission the bull never resolved (D/E is a solvency ratio, not a cash-conversion metric). 18-of-19 analyst unanimity means the only available ratings revision is a downgrade, not further upside surprise, and the technical tape shows low-volume consolidation beneath $424-477 resistance with only medium conviction. A single hyperscaler capex-digestion announcement, a Taiwan Strait/export-control escalation (TSM sits inside the blast radius; customers merely lose a supplier), or growth landing materially below consensus would drag the multiple down with the earnings — a correlated de-rating, not a hedge, implying 40%+ downside on a normalized foundry multiple.",
+  "executive_summary": "TSM combines a 59.9% gross margin, 50.8% operating margin, 44.6% net margin, low leverage, and an 18-buy versus 1-hold analyst split. The price is above all major moving averages with RSI 56.5 and a positive MACD histogram, although it remains exposed to valuation, volume, and missing macro evidence.",
+  "bull_case": "Exceptional profitability, low leverage, positive cash flow, and a 19.7x forward P/E support continued upside if earnings growth remains strong.",
+  "bear_case": "The 31.8x trailing P/E, price near the upper Bollinger Band, and below-average volume leave the stock vulnerable to a pullback if forward earnings disappoint.",
   "key_uncertainties": [
-    "Whether forward earnings growth lands near consensus (~90%), the bull's fallback (~45%), or the bear's downside case (~30%) — nothing in the record adjudicates this and the entire valuation case hinges on it",
-    "Free cash flow yield and true cash conversion during the capex peak — cited by both sides as the single most material data gap; D/E 0.199 shows solvency, not cash generation",
-    "Magnitude and timing of overseas-fab (Arizona/Japan/Germany) margin dilution — direction is conceded by both sides, magnitude is unquantified",
-    "Whether the correct terminal/normalized multiple is a structural-monopoly premium or a commodity-foundry ~15x — the bear's 40%+ downside case depends entirely on this and is asserted, not sourced",
-    "Whether TSM's mature-node China capacity is fungible into leading-edge/advanced-packaging AI demand if China revenue is restricted — asserted in both directions with no supporting capacity/tooling data",
-    "Whether the four analyst-agent signals reflect genuinely independent evidence or a single upstream yfinance/consensus data feed counted four times, which determines how much information the 4/4 convergence actually carries",
-    "Probability (not just severity) of a Taiwan Strait or export-control escalation, and how much of that risk is genuinely already embedded in the current multiple"
+    "Whether forward earnings expectations can be sustained",
+    "Whether the current technical breakout will hold on higher volume",
+    "The absence of non-empty current news and macro data"
   ],
   "catalysts_upcoming": [
-    "Hyperscaler capex guidance/updates (Nvidia, Microsoft, Google, Meta, Amazon) — any digestion or slowdown signal would directly undercut the growth assumption embedded in TSM's forward multiple",
-    "2nm/3nm node ramp progress and CoWoS advanced-packaging capacity updates as evidence of demand durability versus bottleneck",
-    "Quarterly earnings and updated capex guidance — first real-world test of margin trajectory as Arizona/Japan/Germany fabs move further into depreciation",
-    "Sell-side target/rating revisions off the current 18-of-19 buy base — the marginal analyst action from here is structurally more likely to be a downgrade than a fresh upgrade",
-    "Any escalation or de-escalation in US-China export controls or Taiwan Strait geopolitical risk",
-    "Price action relative to the $424-477 resistance band and whether volume returns to confirm the uptrend versus continued low-conviction drift"
+    "Financial results confirming continued margin and cash-flow strength",
+    "Price holding above the 50-day moving average at 425.55",
+    "Volume increasing while the price remains above the major moving averages"
   ],
   "risk_assessment": {
-    "position_size_suggestion": "0.8% of portfolio",
     "correlation_notes": [
-      "Sector: Technology — check existing portfolio exposure to this sector."
+      "Sector: Technology — use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 56.5% over past year. Projected worst case (2-sigma): ~98.6% from current $422.06.",
-    "risk_reward_ratio": "0.85:1"
+    "max_drawdown_scenario": "Historical max drawdown: 56.5% over available price history. Projected worst case (2-sigma): ~97.9% from current $429.15.",
+    "risk_reward_ratio": "0.84:1"
   },
   "action_plan": {
-    "entry_limit": 409.22,
-    "entry_rationale": "Buy-the-dip to SMA-20 support near $409.22",
-    "stop_loss": 378.59,
-    "stop_rationale": "2x ATR-14 ($15.31) below entry — invalidates the setup",
-    "take_profit_1": 433.98,
-    "take_profit_2": 485.37,
+    "entry_limit": 409.71,
+    "entry_rationale": "Buy-the-dip to SMA-20 support near $409.71",
+    "stop_loss": 378.84,
+    "stop_rationale": "2x ATR-14 ($15.43) below entry — invalidates the setup",
+    "take_profit_1": 435.67,
+    "take_profit_2": 493.52,
     "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
     "horizon": "swing (2-8 weeks)",
     "note": null
   },
+  "research_verdict": {
+    "ticker": "TSM",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "TSM's financial quality, analyst support, and positive medium-term trend provide the strongest buy setup in this batch, subject to continued earnings execution.",
+    "winning_side": "bull",
+    "strongest_counterexample": "A failure to meet forward earnings expectations could trigger both earnings revisions and valuation compression despite the current technical strength.",
+    "invalidation_conditions": [
+      "Material deterioration in margins or free cash flow",
+      "Price falling below the 200-day moving average",
+      "Forward earnings estimates being revised materially lower"
+    ],
+    "evidence_gaps": [
+      "No non-empty current news headlines",
+      "No detailed forward earnings assumptions",
+      "Latest technical snapshot is dated 2026-08-12"
+    ],
+    "decisive_factors": [
+      "59.9% gross margin and 50.8% operating margin",
+      "19.7x forward P/E and low leverage",
+      "Price above all three major moving averages"
+    ]
+  },
   "agent_signal_breakdown": {
-    "Fundamentals": "buy (high confidence) - premium quality metrics (59.89% gross margin, 0.199 D/E) justify forward multiple despite elevated trailing P/E",
-    "Sentiment": "buy (high confidence) - 18/19 analyst buy consensus, but flags that much of the bull case is already priced in with capex execution as key downside variable",
-    "Technical": "buy (medium confidence) - intact uptrend above SMA-200 but low-volume consolidation beneath resistance limits near-term conviction",
-    "Macro/FX": "buy (medium confidence) - structural AI demand and stable Fed backdrop support thesis, but geopolitical tail risk caps confidence",
-    "Debate synthesis": "Bull thesis survives adversarial pressure but with two material concessions (no contracted demand evidence; prospective margin dilution not yet absorbed), leaving the buy case intact but appropriately position-sized rather than high-conviction"
-  }
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "buy",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
 }

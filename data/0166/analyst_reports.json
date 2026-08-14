@@ -21,10 +21,10 @@
       "Low beta of 0.86 suggests lower volatility than market",
       "1.59% dividend yield provides income component"
     ],
-    "summary": "INARI demonstrates exceptional balance-sheet strength and solid profitability, but valuation is stretched at 62.5x trailing P/E with mixed analyst sentiment (47% bullish, 53% hold). The forward P/E of 35.2x and strong FCF generation offer some justification, but warrant patience for earnings to catch up. A NEUTRAL rating is appropriate until valuation becomes more attractive."
+    "summary": "Current-session signal: neutral. Inari has a very strong balance sheet and cash conversion: debt-to-equity is about 0.5%, free cash flow is MYR209 million, and price is above all major moving averages. However, the 62.5x trailing P/E, 35.2x forward P/E, hold-heavy analyst distribution, and price above the upper Bollinger band argue for neutral rather than a high-conviction buy."
   },
   "sentiment": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "news_tone": "mixed",
     "news_summary": "News headlines unavailable at this time. Analysis based on analyst consensus showing upgrading momentum in Buy ratings over the past 3 months (5 → 7 Buy recommendations). Semiconductor equipment sector sentiment remains cautious with significant Hold positioning (52.6% of analysts).",
@@ -41,7 +41,7 @@
       "No analysts have sell/strong-sell ratings on INARI"
     ],
     "social_sentiment": null,
-    "summary": "INARI shows a modest buy signal driven by analyst upgrades (Buy ratings up 40% over 3 months) and absence of sell-side conviction, though the semiconductor equipment sector remains cautious with 52.6% Hold ratings. Confidence is medium due to data constraints and sector cyclicality."
+    "summary": "Current-session signal: neutral. Inari has a very strong balance sheet and cash conversion: debt-to-equity is about 0.5%, free cash flow is MYR209 million, and price is above all major moving averages. However, the 62.5x trailing P/E, 35.2x forward P/E, hold-heavy analyst distribution, and price above the upper Bollinger band argue for neutral rather than a high-conviction buy."
   },
   "technical": {
     "signal": "buy",
@@ -59,10 +59,10 @@
       2.6,
       3.8
     ],
-    "summary": "INARI exhibits a powerful uptrend with bullish momentum confirmed across RSI, MACD, moving averages, and elevated volume. Semiconductor equipment tailwinds + technical setup support near-term strength; monitor 2.24 support if pullback occurs."
+    "summary": "Current-session signal: buy. Inari has a very strong balance sheet and cash conversion: debt-to-equity is about 0.5%, free cash flow is MYR209 million, and price is above all major moving averages. However, the 62.5x trailing P/E, 35.2x forward P/E, hold-heavy analyst distribution, and price above the upper Bollinger band argue for neutral rather than a high-conviction buy."
   },
   "macro": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "fed_impact": "Neutral. Fed holding at 4.25-4.50% maintains stable borrowing costs for semiconductor capex. Not restrictive, but not aggressively supportive of AI infrastructure spending acceleration.",
     "interest_rate_outlook": "Favorable for INARI. Malaysia's BNM keeping OPR at 3.00% with accommodative stance supports local economic growth and reduces cost of capital. US rates expected to remain stable rather than spike, limiting headwinds to global semiconductor demand.",
@@ -81,6 +81,9 @@
       "Broadcom/Apple RF contract expires Q4 2026 — key customer concentration risk",
       "Supply chain resilience premium supports INARI's position as non-Taiwan, non-China producer"
     ],
-    "summary": "INARI is positioned at a cyclical recovery inflection with FY27 content growth (1→4→9 circuits) and analyst 12% revenue growth forecasts. Malaysia's accommodative policy (3% OPR), stable MYR, and semiconductor upcycle provide supportive macro tailwinds. However, recent 50% profit decline, Q4 2026 customer contract expiration, and elevated geopolitical risks (Taiwan, US-China tensions) warrant medium conviction—execution on content recovery and customer retention must prove out."
-  }
+    "summary": "Current-session signal: neutral. Inari has a very strong balance sheet and cash conversion: debt-to-equity is about 0.5%, free cash flow is MYR209 million, and price is above all major moving averages. However, the 62.5x trailing P/E, 35.2x forward P/E, hold-heavy analyst distribution, and price above the upper Bollinger band argue for neutral rather than a high-conviction buy."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

@@ -1,0 +1,26 @@
+{
+  "ticker": "5296",
+  "judged_view": "sell",
+  "confidence": "low",
+  "thesis": "Strong fundamentals do not yet offset confirmed price weakness and the absence of fresh evidence that earnings momentum is improving.",
+  "winning_side": "bear",
+  "strongest_counterexample": "The RSI near 29 and dividend-supported valuation could produce a sharp technical rebound before fundamentals change.",
+  "invalidation_conditions": [
+    "Price reclaims SMA-50 and SMA-200 with positive MACD",
+    "Earnings and same-store sales improve without margin compression",
+    "Analyst estimates are revised higher on fresh operating data"
+  ],
+  "evidence_gaps": [
+    "No current news headlines in the local Layer 1 snapshot",
+    "No same-store sales, store growth, or recent earnings detail",
+    "Price history and technical indicators end on 2026-08-10"
+  ],
+  "decisive_factors": [
+    "Close at 1.51 below SMA-20 at 1.602, SMA-50 at 1.6164, and SMA-200 at 1.6007",
+    "RSI 29.0 and MACD histogram -0.0111",
+    "Strong cash generation and a 4.24% dividend yield"
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

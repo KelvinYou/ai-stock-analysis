@@ -1,0 +1,26 @@
+{
+  "ticker": "NVDA",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Financial quality, analyst consensus, and technical momentum support a buy view, but the high-beta profile makes the outcome sensitive to earnings expectations.",
+  "winning_side": "bull",
+  "strongest_counterexample": "If forward earnings growth slows materially, the large gap between trailing and forward valuation could close through a sharp price correction.",
+  "invalidation_conditions": [
+    "A sustained break below the 200-day average",
+    "A material decline in margins or free cash flow",
+    "Broad downward analyst estimate revisions"
+  ],
+  "evidence_gaps": [
+    "No current news data",
+    "No customer-level demand or order visibility",
+    "No explicit macroeconomic or supply-chain data"
+  ],
+  "decisive_factors": [
+    "55.6% net margin",
+    "$96.7B free cash flow and very low leverage",
+    "58 buy or strong-buy recommendations versus 3 negative recommendations"
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

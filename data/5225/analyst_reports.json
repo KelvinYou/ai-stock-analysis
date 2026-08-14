@@ -1,6 +1,6 @@
 {
   "fundamentals": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "pe_assessment": "Trailing P/E of 34.79x vs. sector avg ~22x is 58% above peer average; forward P/E of 28.61x shows forward moderation but still above-market. Valuation is aggressive and leaves limited margin of safety for execution misses.",
     "margin_analysis": "Excellent profitability: gross margin 71.7% (indicating strong pricing power), operating margin 15.19%, net margin 8.16%. Margins well above typical medical care facilities, suggesting competitive strength and operational efficiency. Strong across all levels.",
@@ -20,10 +20,10 @@
       "Strong cash generation: MYR 1.9B FCF supports dividend yield of 1.32% plus growth reinvestment",
       "Conservative balance sheet: 0.51x D/E ratio provides financial flexibility"
     ],
-    "summary": "IHH is a high-quality healthcare operator with exceptional margins (71.7% gross), strong analyst conviction (78% buy), and conservative debt (0.51x D/E). However, the 34.79x trailing P/E is stretched for the sector and prices in substantial growth. Fundamentals support the bullish stance, but limited margin of safety warrants a BUY (not STRONG BUY) rating—suitable for growth-oriented investors, risky for value-conscious buyers."
+    "summary": "Current-session signal: neutral. IHH has 8.2% reported net margin, 15.2% operating margin, RM1.90 billion of reported free cash flow, and 18 buy versus 5 hold recommendations, but trades at 34.6x trailing and 28.5x forward earnings. The 8.31 close is below SMA-20, SMA-50, and SMA-200, RSI is 51.1, and volume is only 3% of its 20-day average despite a slightly positive MACD histogram."
   },
   "sentiment": {
-    "signal": "strong_buy",
+    "signal": "buy",
     "confidence": "high",
     "news_tone": "neutral",
     "news_summary": "No recent news headlines available in the data feed, but analyst consensus remains uniformly positive with 78% buy recommendations and zero sell-side ratings maintained consistently over 3 months.",
@@ -40,7 +40,7 @@
       "100% positive-or-neutral recommendation distribution"
     ],
     "social_sentiment": null,
-    "summary": "IHH shows exceptionally strong analyst consensus with 78% buy-side recommendations and zero sell ratings—a bullish alignment that has remained stable for three months. However, the absence of recent news coverage and unanimous positive stance warrants caution: extreme bullishness may indicate sentiment is ahead of fundamentals, typical for mature healthcare operators. Key watch: whether upcoming earnings or sector developments will sustain or challenge this elevated confidence."
+    "summary": "Current-session signal: buy. IHH has 8.2% reported net margin, 15.2% operating margin, RM1.90 billion of reported free cash flow, and 18 buy versus 5 hold recommendations, but trades at 34.6x trailing and 28.5x forward earnings. The 8.31 close is below SMA-20, SMA-50, and SMA-200, RSI is 51.1, and volume is only 3% of its 20-day average despite a slightly positive MACD histogram."
   },
   "technical": {
     "signal": "sell",
@@ -59,10 +59,10 @@
       8.5,
       9.33
     ],
-    "summary": "IHH exhibits bearish technicals: price 1.89%–3.02% below both moving averages, negative MACD histogram, and declining recent volume. RSI at 40 leaves room for further weakness before oversold signals. Downside risk predominates without evidence of reversal strength."
+    "summary": "Current-session signal: sell. IHH has 8.2% reported net margin, 15.2% operating margin, RM1.90 billion of reported free cash flow, and 18 buy versus 5 hold recommendations, but trades at 34.6x trailing and 28.5x forward earnings. The 8.31 close is below SMA-20, SMA-50, and SMA-200, RSI is 51.1, and volume is only 3% of its 20-day average despite a slightly positive MACD histogram."
   },
   "macro": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "fed_impact": "Fed holds at 4.25–4.50%; IHH's low rate sensitivity (0.143 beta) and defensive healthcare profile insulate from rate-driven volatility. Stable US rates support dividend sustainability.",
     "interest_rate_outlook": "BNM OPR steady at 2.75%, accommodative through 2026 (4%–5% GDP growth support). Low inflation backdrop reduces cost pressures. Rate environment favors dividend-yielding, low-beta healthcare.",
@@ -80,6 +80,9 @@
       "Staff mobility constraints across 10-country footprint if escalation widens",
       "Mitigation: geographic diversification (UK, developed markets reduce concentration)"
     ],
-    "summary": "IHH Healthcare is a defensive buy in a rate-stable, MYR-strong macro backdrop. Expected 7–10% ringgit appreciation removes currency headwinds for Malaysia-based hospital operator. BNM accommodative policy supports 4–5% GDP growth driving healthcare demand. Low beta (0.143) and acyclical demand insulate from geopolitical shocks. 10.5 sen dividend secure. Confidence is medium because global healthcare valuations are already defensive and international ops face dollar-weakness spillover risk."
-  }
+    "summary": "Current-session signal: neutral. IHH has 8.2% reported net margin, 15.2% operating margin, RM1.90 billion of reported free cash flow, and 18 buy versus 5 hold recommendations, but trades at 34.6x trailing and 28.5x forward earnings. The 8.31 close is below SMA-20, SMA-50, and SMA-200, RSI is 51.1, and volume is only 3% of its 20-day average despite a slightly positive MACD histogram."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

@@ -1,0 +1,74 @@
+{
+  "ticker": "5151",
+  "date": "2026-08-14",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": -0.18,
+    "signal_convergence": 0.52,
+    "explanation": "Current-session English batch refresh. Positive cash flow and short-term momentum support the bull case, but valuation, leverage, missing forward estimates, and overbought price action leave the risk case slightly stronger."
+  },
+  "executive_summary": "Hextar's 39.5x trailing P/E, unavailable forward P/E, 1.77 debt-to-equity ratio, and 7.0% reported net margin provide little valuation cushion despite RM103.8 million of reported free cash flow. At RM0.79, price is above SMA-20 and SMA-50 with positive MACD, but below SMA-200, RSI is 75.0, and price is above the upper Bollinger band; news and analyst fields are empty.",
+  "bull_case": "Positive reported free cash flow, short-term price strength, and above-average volume could indicate an early operating or sentiment re-rating.",
+  "bear_case": "High valuation, heavy leverage, no forward earnings estimate, long-term resistance at SMA-200, and overbought momentum make the downside risk difficult to justify.",
+  "key_uncertainties": [
+    "Whether earnings and free cash flow can improve sustainably.",
+    "Debt, restructuring, and execution risk are not resolved by the local snapshot.",
+    "There is no usable current news or analyst coverage."
+  ],
+  "catalysts_upcoming": [
+    "Several quarters of improving earnings and free cash flow.",
+    "A sustained break and hold above SMA-200.",
+    "New analyst coverage or verifiable operating news."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Low beta (-0.35) — historically less sensitive to broad-market moves.",
+      "Sector: Basic Materials — use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 54.9% over available price history. Projected worst case (2-sigma): ~31.7% from current $0.79.",
+    "risk_reward_ratio": "N/A (bearish signal)"
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction -0.18, convergence 0.52). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "5151",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Hextar is a neutral watch with a bearish risk tilt: the short-term chart has improved, but the local fundamentals do not provide enough evidence to support the valuation or leverage.",
+    "winning_side": "bear",
+    "strongest_counterexample": "A sustained earnings recovery could make the current trailing multiple less relevant and validate the recent price and volume strength.",
+    "invalidation_conditions": [
+      "Price loses SMA-20 and SMA-50 with MACD turning negative.",
+      "Reported free cash flow reverses or leverage worsens.",
+      "A break above SMA-200 is not sustained."
+    ],
+    "evidence_gaps": [
+      "Forward earnings estimates and earnings-recovery path.",
+      "Debt maturity, restructuring, and corporate-action details.",
+      "Usable current news and analyst coverage."
+    ],
+    "decisive_factors": [
+      "39.5x trailing P/E with no forward P/E.",
+      "1.77 debt-to-equity ratio and 7.0% reported net margin.",
+      "RSI 75.0, price above the upper Bollinger band, and below SMA-200."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "sell",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

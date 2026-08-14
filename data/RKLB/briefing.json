@@ -1,0 +1,74 @@
+{
+  "ticker": "RKLB",
+  "date": "2026-08-14",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": -0.22,
+    "signal_convergence": 0.35,
+    "explanation": "Current-session English batch refresh. The bull case points to revenue, positive gross margin, analyst support, and improving MACD momentum. The bear case is stronger on valuation and cash generation, but the mixed price structure supports a cautious neutral view rather than a definitive sell."
+  },
+  "executive_summary": "Rocket Lab has positive revenue and gross margin but negative net income, a negative 38.0% operating margin, negative free cash flow, and a 1,602x forward P/E with no trailing P/E. The price is above the 20- and 200-day moving averages but below the 50-day average, while RSI 69.9, positive MACD histogram, and 14 buys versus 4 holds create a mixed signal.",
+  "bull_case": "Revenue scale, positive gross margin, analyst support, and improving short-term momentum could become more compelling if losses and cash burn improve.",
+  "bear_case": "Negative profitability, negative free cash flow, a 1,602x forward P/E, and a beta of 2.63 make the current valuation highly sensitive to execution delays.",
+  "key_uncertainties": [
+    "Whether revenue growth can translate into positive free cash flow",
+    "Whether the 1,602x forward P/E is supported by realistic earnings assumptions",
+    "The absence of non-empty current news and macro data"
+  ],
+  "catalysts_upcoming": [
+    "Improvement in operating margin and free cash flow",
+    "Price recovery above the 50-day moving average at 86.23",
+    "Analyst support remaining stable as new financial data arrives"
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (2.63) — price may amplify broad-market moves.",
+      "Sector: Industrials — use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 83.0% over available price history. Projected worst case (2-sigma): ~194.3% from current $80.10.",
+    "risk_reward_ratio": "N/A (bearish signal)"
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction -0.22, convergence 0.35). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "RKLB",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "The operating business shows traction, but negative profitability, negative free cash flow, and extreme forward valuation make the risk-reward unfavorable until execution improves.",
+    "winning_side": "bear",
+    "strongest_counterexample": "If revenue scales rapidly while gross margin holds and free cash flow turns positive, the current earnings-based valuation could become less restrictive.",
+    "invalidation_conditions": [
+      "Free cash flow turns positive and remains positive",
+      "Operating margin improves materially",
+      "Price recovers above the 50-day moving average with stronger volume"
+    ],
+    "evidence_gaps": [
+      "No non-empty current news headlines",
+      "No detailed forward earnings composition",
+      "Latest technical snapshot is dated 2026-08-13"
+    ],
+    "decisive_factors": [
+      "Negative net income and negative free cash flow",
+      "1,602x forward P/E",
+      "Price below the 50-day moving average despite positive short-term momentum"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "sell",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}

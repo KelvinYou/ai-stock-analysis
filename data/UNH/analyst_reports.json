@@ -1,6 +1,6 @@
 {
   "fundamentals": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "high",
     "pe_assessment": "Current P/E of 30.3x is elevated on a trailing basis, but forward P/E of 17.9x is fair-to-attractive vs. sector avg of 18-22x. Gap signals expected earnings growth; valuation is reasonable on earnings visibility.",
     "margin_analysis": "Net margin of 2.69% is thin but typical for healthcare insurance. Gross margin of 18.53% and operating margin of 4.24% are stable. Limited upside from margin expansion; cost inflation (medical utilization, labor) poses downside risk.",
@@ -21,10 +21,10 @@
       "Fair forward valuation (17.9x vs. sector avg 18-22x)",
       "Stable, predictable cash flows and 2.27% dividend yield"
     ],
-    "summary": "UnitedHealth Group is a defensive, fortress-cash-flow healthcare leader trading at a fair forward multiple with overwhelming analyst support. Buy at current levels on 17.9x forward P/E; hold for stable growth, dividends, and market dominance. Trailing valuation is elevated but justified by quality and growth trajectory. Downside risk centers on regulatory headwinds and margin compression from medical cost inflation."
+    "summary": "Current-session signal: neutral. UnitedHealth has positive free cash flow, a 17.9x forward P/E versus a 30.3x trailing P/E, and analyst support of 22 buys versus 5 holds. However, its 2.7% net margin, 0.83 debt-to-equity ratio, price below the 20- and 50-day moving averages, RSI of 30.6, and negative MACD create a mixed recovery case."
   },
   "sentiment": {
-    "signal": "strong_buy",
+    "signal": "buy",
     "confidence": "high",
     "news_tone": "positive",
     "news_summary": "UnitedHealth Group shows overwhelming analyst consensus with 81.5% of analysts recommending buy/strong buy. No sell-side ratings currently. Analyst sentiment has remained stable over the past three months with minimal rating changes, indicating sustained confidence in the stock despite potential regulatory headwinds in the healthcare sector.",
@@ -42,10 +42,10 @@
       "Healthcare Plans industry continues to show institutional support"
     ],
     "social_sentiment": "Data unavailable",
-    "summary": "UNH exhibits exceptional analyst bullishness with 81.5% buy/strong buy consensus (22 of 27 analysts). The ratings have remained remarkably stable over three months, suggesting conviction is not speculative. However, the extreme consensus itself warrants caution as a potential contrarian signal—such overwhelming agreement may already be priced into valuations. Healthcare regulatory risks remain a latent downside factor."
+    "summary": "Current-session signal: buy. UnitedHealth has positive free cash flow, a 17.9x forward P/E versus a 30.3x trailing P/E, and analyst support of 22 buys versus 5 holds. However, its 2.7% net margin, 0.83 debt-to-equity ratio, price below the 20- and 50-day moving averages, RSI of 30.6, and negative MACD create a mixed recovery case."
   },
   "technical": {
-    "signal": "neutral",
+    "signal": "sell",
     "confidence": "medium",
     "trend": "Short-term downtrend; long-term uptrend intact",
     "rsi_14": 30.61,
@@ -62,10 +62,10 @@
       430.0,
       450.0
     ],
-    "summary": "UNH is oversold (RSI 30.6) but momentum remains bearish (negative MACD). Price below 50-MA but above 200-MA, indicating a pullback within a larger uptrend. Wait for MACD histogram to turn positive or price to reclaim $415 resistance before a strong buy signal; downside support at $395–$385."
+    "summary": "Current-session signal: sell. UnitedHealth has positive free cash flow, a 17.9x forward P/E versus a 30.3x trailing P/E, and analyst support of 22 buys versus 5 holds. However, its 2.7% net margin, 0.83 debt-to-equity ratio, price below the 20- and 50-day moving averages, RSI of 30.6, and negative MACD create a mixed recovery case."
   },
   "macro": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "fed_impact": "Stable fed funds at 4.25–4.50% with inflation moderating toward 2% creates benign conditions for UNH's predictable cash flows; no refinancing pressure, supporting shareholder returns.",
     "interest_rate_outlook": "Data-dependent hold stance supports rate stability through 2026; UNH benefits from predictable cost of capital and steady earnings visibility.",
@@ -80,6 +80,9 @@
       "Trade tensions elevate pharma/device supply-chain risk (China exposure), but secondary to UNH's pricing power",
       "US healthcare policy remains structurally uncertain, though current regime favors market-based insurers"
     ],
-    "summary": "Macro backdrop removes headwinds rather than creates tailwinds: stable rates and moderating inflation support defensive cash flows. UNH's strength comes from demographic growth and business stability, not macro acceleration. Current environment is constructive for a low-beta healthcare compounder."
-  }
+    "summary": "Current-session signal: neutral. UnitedHealth has positive free cash flow, a 17.9x forward P/E versus a 30.3x trailing P/E, and analyst support of 22 buys versus 5 holds. However, its 2.7% net margin, 0.83 debt-to-equity ratio, price below the 20- and 50-day moving averages, RSI of 30.6, and negative MACD create a mixed recovery case."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

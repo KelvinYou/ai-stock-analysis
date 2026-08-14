@@ -23,7 +23,7 @@
       "Fortress balance sheet: 0.199 debt-to-equity, trivial refinancing risk",
       "Analyst consensus: 18 buy/strong buy vs 1 hold across all periods"
     ],
-    "summary": "TSM is a high-quality business at a fair-to-slightly-premium valuation. Exceptional margins (59.89% gross), fortress balance sheet (0.199 D/E), and strong AI-driven growth justify the forward P/E of 19.4x. Trailing multiple is expensive but reflects near-term earnings acceleration. Geopolitical and cyclical risks are material but offset by competitive moat and cash generation. Buy for growth investors with medium-to-long holding horizon."
+    "summary": "Current-session signal: buy. TSM combines a 59.9% gross margin, 50.8% operating margin, 44.6% net margin, low leverage, and an 18-buy versus 1-hold analyst split. The price is above all major moving averages with RSI 56.5 and a positive MACD histogram, although it remains exposed to valuation, volume, and missing macro evidence."
   },
   "sentiment": {
     "signal": "buy",
@@ -46,7 +46,7 @@
       "19 Analysts Rate TSM 'Strong Buy' With 28% Upside Target"
     ],
     "social_sentiment": null,
-    "summary": "Analyst sentiment is nearly unanimous bullish: 18 of 19 analysts recommend buy/strong buy with 12-month target of $540.2 (28% upside). This is reinforced by fundamental strength—double-digit revenue growth, aggressive capacity expansion for AI/high-end chips, and strategic geographic buildout signal management confidence. However, the 20x forward earnings valuation and recent $2T market cap reclamation suggest much of the bull case is already priced in; execution risk on the massive capex program remains the key downside variable."
+    "summary": "Current-session signal: buy. TSM combines a 59.9% gross margin, 50.8% operating margin, 44.6% net margin, low leverage, and an 18-buy versus 1-hold analyst split. The price is above all major moving averages with RSI 56.5 and a positive MACD histogram, although it remains exposed to valuation, volume, and missing macro evidence."
   },
   "technical": {
     "signal": "buy",
@@ -64,10 +64,10 @@
       424.61,
       477.57
     ],
-    "summary": "TSM is in a multi-month uptrend (SMA-200 bull case) but consolidating with below-average volume. Bullish MACD divergence and neutral RSI suggest uptrend remains intact with room for recovery toward $424–$477 resistance. Best viewed as accumulation zone for trend-following entries; reduced volume limits upside conviction short-term."
+    "summary": "Current-session signal: buy. TSM combines a 59.9% gross margin, 50.8% operating margin, 44.6% net margin, low leverage, and an 18-buy versus 1-hold analyst split. The price is above all major moving averages with RSI 56.5 and a positive MACD histogram, although it remains exposed to valuation, volume, and missing macro evidence."
   },
   "macro": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
     "fed_impact": "Fed holding steady at 4.25-4.50% stabilizes rate expectations and reduces shock risk. While elevated rates constrain capex multiples and cost of capital for TSM's customers, the AI boom's insatiable chip demand offsets this headwind. CPI trending toward 2% target suggests rates may stay higher for longer, pressuring valuations but preserving capex visibility in the tech cycle.",
     "interest_rate_outlook": "Rates likely to remain elevated near current levels (4.25-4.50%) through 2026. For semiconductors, this is a mixed signal: it increases TSM's own cost of capital (hurts WACC valuations) but the AI capex cycle is sufficiently powerful to drive advanced node demand regardless. Higher-for-longer rates could slow non-AI tech spending, but TSM's exposure to hyperscalers (NVIDIA, Meta, Microsoft) cushions this risk.",
@@ -84,6 +84,9 @@
       "US export control expansion: potential broadening of CHIPS Act restrictions or new EDA/lithography tool bans would pressure TSM's China exposure",
       "Taiwan political risk: 2026-2028 geopolitical environment remains uncertain; Taiwan strait incident could trigger Taiwan-listed asset premium and currency volatility"
     ],
-    "summary": "TSM is a **BUY** supported by structural AI capex demand and TSM's monopoly on advanced node fabs, coupled with stabilized Fed rates reducing near-term shock risk. However, geopolitical risks (Taiwan strait, US-China trade tensions, export control escalation) cap confidence at **MEDIUM**—a 15-20% China revenue hit from escalated restrictions or Taiwan incident remains a material tail risk."
-  }
+    "summary": "Current-session signal: neutral. TSM combines a 59.9% gross margin, 50.8% operating margin, 44.6% net margin, low leverage, and an 18-buy versus 1-hold analyst split. The price is above all major moving averages with RSI 56.5 and a positive MACD histogram, although it remains exposed to valuation, volume, and missing macro evidence."
+  },
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
 }

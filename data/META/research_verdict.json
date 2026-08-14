@@ -1,0 +1,26 @@
+{
+  "ticker": "META",
+  "judged_view": "neutral",
+  "confidence": "medium",
+  "thesis": "The valuation, profitability, and analyst consensus are constructive, but price below the 200-day average and negative momentum prevent a confirmed buy signal.",
+  "winning_side": "bull",
+  "strongest_counterexample": "If earnings estimates fall while the stock remains below the 200-day average, the 17.2x forward P/E may represent deteriorating fundamentals rather than undervaluation.",
+  "invalidation_conditions": [
+    "A sustained break below the 50-day average",
+    "Deterioration in margins or free cash flow",
+    "Broad analyst downgrades or lower earnings estimates"
+  ],
+  "evidence_gaps": [
+    "No current news data",
+    "No detailed forward earnings assumptions",
+    "No explicit macroeconomic or advertising-demand data"
+  ],
+  "decisive_factors": [
+    "30.1% net margin and $46.1B free cash flow",
+    "17.2x forward P/E versus 22.6x trailing P/E",
+    "Price below the 200-day average with negative MACD"
+  ],
+  "pipeline_mode": "in-session-claude-code",
+  "refresh_scope": "all-watchlist-current-session-batch",
+  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+}
