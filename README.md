@@ -26,7 +26,7 @@ Built on the [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk) 
 <tr><td><b>⚖️ Adversarial bull/bear debate</b></td><td>Multi-round researcher debate surfaces points of agreement, disagreement, and unresolved uncertainty — not a single averaged take.</td></tr>
 <tr><td><b>🎯 Actionable price levels</b></td><td>Briefings include entry, stop, and target levels gated on conviction. No abstract signals that tell you nothing.</td></tr>
 <tr><td><b>📊 Conviction & convergence metrics</b></td><td>Every briefing reports a conviction score (−1.0 to +1.0) capped by the confidence-weighted net consensus of the four agents, plus a deterministic convergence score.</td></tr>
-<tr><td><b>⏮️ Historical backtesting</b></td><td>Replay the full pipeline over any date range. Score hit rate and directional accuracy against realized price moves.</td></tr>
+<tr><td><b>⏮️ Historical backtesting</b></td><td>Replay the full pipeline over any date range. Hit rate and directional accuracy against realized price moves — reported with confidence intervals, overlap-adjusted sample sizes, transaction costs, and a deflated Sharpe for the strategy comparison.</td></tr>
 <tr><td><b>🖥️ Web dashboard + REST API</b></td><td>Next.js research dashboard with per-ticker drill-down. FastAPI job queue for programmatic runs. Conviction meter, debate transcript, watchlist.</td></tr>
 <tr><td><b>💸 Cost-tuned model routing</b></td><td>Haiku for analyst agents, Opus for debate, Sonnet for synthesis. Configurable per layer in <code>config.py</code>.</td></tr>
 </table>
@@ -165,11 +165,33 @@ from your private application and apply those rules there.
 ```bash
 stock-analysis-backtest --tickers AAPL,MSFT --start 2024-01-01 --end 2024-12-31
 
+# Charge a one-way transaction cost (bps) on entry and exit. Reports gross and
+# net side by side — 0 is the default but it is an assumption, not neutral.
+stock-analysis-backtest --tickers AAPL --start 2024-01-01 --end 2024-12-31 \
+    --cost-bps 10
+
 # Also feed realized outcomes back into outcome memory. Off by default so that
 # repeated backtests over the same window stay comparable.
 stock-analysis-backtest --tickers AAPL --start 2024-01-01 --end 2024-12-31 \
     --record-outcomes
 ```
+
+Every headline metric ships with an interval, because a point estimate over a
+few dozen trials reads as an edge whether or not it is one:
+
+- **Hit rates** carry Wilson intervals, and the report says so outright when the
+  interval still spans 50%.
+- **Sample size is discounted for overlap.** Weekly as-of dates at a 30-day
+  horizon share most of their price path; 13 nominal trials can be worth 1.8
+  independent ones, and every t-statistic uses the discounted count.
+- **Sharpe is reported probabilistically** (PSR), correcting for the negative
+  skew and fat tails that flatter a raw Sharpe.
+- **The strategy comparison is deflated.** Scoring six strategies and reporting
+  the best is a search; the winner gets a Deflated Sharpe against the expected
+  best-of-six under the null.
+
+If `--interval` is shorter than `--horizon`, the report will tell you how much
+of the sample is redundant.
 
 ### Run backtests in the current session (no API key)
 
@@ -243,7 +265,8 @@ src/stock_analysis/
 │   └── risk_checker.py  # RiskChecker
 ├── backtest/            # Historical backtesting
 │   ├── runner.py        # Backtester
-│   ├── scorer.py        # Hit rate / accuracy scoring
+│   ├── scorer.py        # Hit rate / accuracy scoring, with interval estimates
+│   ├── stats.py         # Wilson / Student-t / PSR / DSR, no scipy dependency
 │   ├── portfolio.py     # Generic backtest simulation (no personal holdings)
 │   └── fetcher.py       # Historical data helper
 ├── api/                 # FastAPI REST endpoints

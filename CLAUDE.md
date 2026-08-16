@@ -94,3 +94,11 @@ Every agent subclasses `BaseAnalystAgent` and implements three methods: `system_
 
 ### Backtesting (`backtest/`)
 `Backtester` reruns the full pipeline across historical date ranges. `Scorer` computes hit rate and accuracy against actual price movement over a configurable holding horizon.
+
+**Point estimates never ship alone.** `stats.py` implements the small-sample machinery from scratch (no scipy — the normal approximations a light dependency would buy are wrong in exactly the regime that matters here): Wilson intervals for hit rates, an exact Student-t tail for p-values, Fisher-z intervals for the information coefficient, and PSR/DSR for Sharpe.
+
+Three invariants to preserve when touching this module:
+
+- **Significance is computed on `effective_n`, not the trial count.** Overlapping holding windows are not independent observations — weekly as-of dates at a 30-day horizon collapse 5 nominal trials to 1. `stats.effective_sample_size` applies a per-trial simplification of López de Prado's uniqueness weighting. It does not model cross-sectional dependence, so it is an upper bound on independence.
+- **Gross and net are reported side by side.** `--cost-bps` charges a round trip to directional trials only. Costs are never folded silently into the headline number.
+- **The strategy table is a search.** `portfolio.simulate` scores six strategies; the winner's Sharpe is an order statistic, so it carries a Deflated Sharpe against the expected best-of-N under the null. Adding strategies to that comparison raises the bar the winner must clear — which is the correct behaviour, not a regression.
