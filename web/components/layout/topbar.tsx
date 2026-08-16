@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { ChevronRight, Menu, Search } from "lucide-react";
@@ -132,6 +133,17 @@ function SearchPalette({
     setActiveIdx(0);
   }, [query]);
 
+  // Now that the overlay really covers the viewport, the page behind it must
+  // stop scrolling under the wheel.
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
   const go = useCallback(
     (symbol: string) => {
       router.push(`/${symbol}`);
@@ -188,7 +200,11 @@ function SearchPalette({
 
   if (!open) return null;
 
-  return (
+  // Portalled to <body> on purpose: the topbar carries `backdrop-blur`, and a
+  // backdrop-filter makes that element the containing block for fixed-position
+  // descendants — rendering in place pinned the overlay to the topbar strip
+  // instead of the viewport.
+  return createPortal(
     <div
       role="dialog"
       aria-modal="true"
@@ -223,7 +239,7 @@ function SearchPalette({
             aria-activedescendant={
               results.length > 0 ? optionId(activeIdx) : undefined
             }
-            className="h-12 w-full bg-transparent text-sm text-ink placeholder:text-graphite"
+            className="h-12 w-full bg-transparent text-sm text-ink outline-none placeholder:text-graphite"
             autoComplete="off"
             spellCheck={false}
           />
@@ -284,7 +300,8 @@ function SearchPalette({
           )}
         </ul>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 

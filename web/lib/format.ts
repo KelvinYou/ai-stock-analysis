@@ -64,6 +64,22 @@ export function signalLabel(s: string | null | undefined): string {
   return s.replace("_", " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
+/**
+ * Cut prose to `max` characters at a word boundary.
+ *
+ * Used where CSS cannot do the clamping: the share card (Satori has no
+ * line-clamp) and `og:description` (a scraper truncates wherever it likes, so
+ * the sentence should end before it gets there).
+ */
+export function clampText(text: string, max: number): string {
+  const clean = text.replace(/\s+/g, " ").trim();
+  if (clean.length <= max) return clean;
+  const cut = clean.slice(0, max);
+  const boundary = cut.lastIndexOf(" ");
+  const kept = boundary > max * 0.6 ? cut.slice(0, boundary) : cut;
+  return `${kept.replace(/[.,;:—-]$/, "")}…`;
+}
+
 export function fmtDate(iso: string): string {
   const d = new Date(iso);
   if (Number.isNaN(d.valueOf())) return iso;

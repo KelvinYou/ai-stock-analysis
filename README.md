@@ -234,6 +234,21 @@ npm run dev
 # → http://localhost:3000
 ```
 
+Every ticker page carries a **Share** button that renders a 16:9 summary card —
+verdict, price, levels, sparkline, and a QR code back to the page. The same
+image is the page's Open Graph card, so pasting a link into Slack or WhatsApp
+unfurls exactly what the button hands out.
+
+The QR encodes an absolute URL, so any deployment that is not the local dev
+server must set the origin:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-host.example npm run build
+```
+
+Left unset it falls back to `http://localhost:3000`, which is a dead scan on
+anyone else's phone.
+
 ---
 
 ## Project Structure
@@ -285,15 +300,18 @@ web/                     # Next.js dashboard
 │   ├── page.tsx         # Screener — one sortable row per watchlist ticker
 │   ├── about/           # Pipeline flowchart (SVG from pipeline.json) + glossary
 │   ├── dashboard/       # Redirect to / (the screener moved there)
-│   └── [ticker]/        # Per-ticker analysis view
+│   └── [ticker]/        # Per-ticker analysis view + opengraph/twitter-image
+├── assets/fonts/        # Static subsetted TTFs — share card only (see its README)
 ├── lib/
 │   ├── data.ts          # Reads data/<TICKER>/*.json into TickerSummary rows
 │   ├── watchlist.ts     # Parses tickers.txt incl. #group / #theme markers
 │   ├── screener.ts      # Column defs, sorting, at-entry / stale predicates
-│   └── pipeline.ts      # Loads pipeline.json + computes the flowchart layout
+│   ├── pipeline.ts      # Loads pipeline.json + computes the flowchart layout
+│   └── share/           # 16:9 share card: JSX, palette, QR + sparkline SVGs
 └── components/
     ├── briefing/        # Conviction meter, decision card, analyst/debate sections
     ├── chart/           # Price chart
+    ├── share/           # Share button — native sheet, clipboard, download
     ├── ticker-list/     # Screener table, cards, filters, star/watchlist
     └── shared/          # Data-status strip and other UI primitives
 ```

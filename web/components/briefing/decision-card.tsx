@@ -1,10 +1,8 @@
 import { ConsensusAxis } from "@/components/consensus/consensus-axis";
-import { describeConviction } from "@/lib/conviction";
+import { DIRECTION_LABEL, TONE_EYEBROW, describeConviction } from "@/lib/conviction";
 import { fmtCurrency } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { Briefing } from "@/lib/types";
-
-const DIRECTION_WORD = { bull: "Buy", bear: "Sell", neutral: "Hold" } as const;
 
 // Hold stays ink: a neutral verdict is a complete result, not a weak one, and
 // greying it out would read as "no answer yet".
@@ -12,13 +10,6 @@ const VERDICT_TONE = {
   bull: "text-bull",
   bear: "text-bear",
   neutral: "text-ink",
-} as const;
-
-const TONE_EYEBROW = {
-  strong: "High conviction",
-  moderate: "Moderate conviction",
-  weak: "Slight lean",
-  mixed: "The desks disagree",
 } as const;
 
 export function DecisionCard({
@@ -50,7 +41,7 @@ export function DecisionCard({
               VERDICT_TONE[conviction.agreement.direction],
             )}
           >
-            {DIRECTION_WORD[conviction.agreement.direction]}
+            {DIRECTION_LABEL[conviction.agreement.direction]}
           </p>
           {conviction.agreement.total > 0 && (
             <p className="mt-3 text-sm text-graphite">

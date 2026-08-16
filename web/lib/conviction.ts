@@ -115,10 +115,24 @@ export function readConsensus(briefing: Briefing): ConsensusReading {
   };
 }
 
-const DIRECTION_LABEL: Record<Direction, string> = {
+/**
+ * The one-word verdict, and the line that qualifies it. Exported because the
+ * decision card and the share card must never disagree about what a briefing
+ * says — they are the same claim rendered by two different engines.
+ *
+ * Hold is a complete answer, not a missing one; nothing here softens it.
+ */
+export const DIRECTION_LABEL: Record<Direction, string> = {
   bull: "Buy",
   bear: "Sell",
   neutral: "Hold",
+};
+
+export const TONE_EYEBROW: Record<ConvictionTone, string> = {
+  strong: "High conviction",
+  moderate: "Moderate conviction",
+  weak: "Slight lean",
+  mixed: "The desks disagree",
 };
 
 export function describeConviction(briefing: Briefing): ConvictionSummary {
