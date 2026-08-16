@@ -7,15 +7,50 @@ import { DebateSection } from "@/components/briefing/section-debate";
 import { FundamentalsSection } from "@/components/briefing/section-fundamentals";
 import { TechnicalsSection } from "@/components/briefing/section-technicals";
 import { SectionCard } from "@/components/shared/section-card";
+import { ShareButton } from "@/components/share/share-button";
 import { StarButton } from "@/components/ticker-list/star-button";
 import { listTickers, loadTicker } from "@/lib/data";
-import { fmtCurrency, fmtSignedPercent } from "@/lib/format";
+import { describeConviction } from "@/lib/conviction";
+import { clampText, fmtCurrency, fmtSignedPercent } from "@/lib/format";
+import type { Metadata } from "next";
 
 export const revalidate = 60;
 
 export async function generateStaticParams() {
   const tickers = await listTickers();
   return tickers.map((ticker) => ({ ticker }));
+}
+
+/**
+ * The unfurl's words. The picture is `opengraph-image.tsx` in this same folder,
+ * which Next attaches to both `og:image` and `twitter:image` on its own.
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ ticker: string }>;
+}): Promise<Metadata> {
+  const { ticker } = await params;
+  const bundle = await loadTicker(ticker);
+  if (!bundle) return {};
+
+  const name = bundle.fundamentals?.info.name;
+  const title = name ? `${bundle.symbol} · ${name}` : bundle.symbol;
+  // Scrapers cut a description wherever they please; ending the sentence first
+  // is the only way to control where.
+  const description = bundle.briefing
+    ? clampText(
+        `${describeConviction(bundle.briefing).phrase}. ${bundle.briefing.executive_summary ?? ""}`,
+        200,
+      )
+    : `Price and fundamentals for ${bundle.symbol}. The analyst desks have not run yet.`;
+
+  return {
+    title,
+    description,
+    openGraph: { title, description, type: "article" },
+    twitter: { card: "summary_large_image", title, description },
+  };
 }
 
 export default async function TickerPage({
@@ -67,6 +102,7 @@ export default async function TickerPage({
                   {info.market}
                 </span>
               )}
+              <ShareButton symbol={bundle.symbol} className="ml-1" />
             </div>
             <p className="mt-1.5 truncate text-sm text-graphite">
               {info?.name ?? bundle.symbol}

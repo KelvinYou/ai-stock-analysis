@@ -3,6 +3,7 @@ import { Archivo, Newsreader, DM_Mono } from "next/font/google";
 import { AppShell } from "@/components/layout/app-shell";
 import { themeScript } from "@/components/shared/theme-toggle";
 import { listTickerSummaries } from "@/lib/data";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 // Three faces, three kinds of claim. Archivo (run wide) carries structure —
@@ -30,6 +31,9 @@ const mono = DM_Mono({
 });
 
 export const metadata: Metadata = {
+  // Required for the share cards: without it Next emits a relative `og:image`,
+  // which every scraper ignores. Set NEXT_PUBLIC_SITE_URL per deployment.
+  metadataBase: new URL(SITE_URL),
   title: "Desk · Stock Briefings",
   description:
     "Multi-agent briefings across fundamentals, technicals, sentiment, and macro.",
