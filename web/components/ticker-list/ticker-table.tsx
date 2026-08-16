@@ -120,36 +120,8 @@ export function TickerTable({
                 {t.name}
               </Td>
 
-              <Td col="group">
-                {t.group === "tracked" ? (
-                  <span className="rounded bg-foreground px-1.5 py-px text-[9px] font-semibold uppercase text-background">
-                    Tracked
-                  </span>
-                ) : t.group === "candidate" ? (
-                  <span className="text-[10px] text-muted-foreground">Cand</span>
-                ) : (
-                  <span className="text-[10px] text-muted-foreground/50" title="Not in tickers.txt">
-                    —
-                  </span>
-                )}
-              </Td>
-
               <Td col="price" className="num text-right tabular-nums">
                 {fmtNumber(t.price)}
-              </Td>
-
-              <Td
-                col="change"
-                className={cn(
-                  "num text-right tabular-nums",
-                  t.priceChangePct == null
-                    ? "text-muted-foreground"
-                    : t.priceChangePct >= 0
-                      ? "text-emerald-600"
-                      : "text-rose-600",
-                )}
-              >
-                {fmtSignedPercent(t.priceChangePct)}
               </Td>
 
               <Td col="signal">

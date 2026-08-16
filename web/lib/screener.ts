@@ -14,9 +14,7 @@ export const SIGNAL_WEIGHT: Record<Signal, number> = {
 export type SortKey =
   | "symbol"
   | "name"
-  | "group"
   | "price"
-  | "change"
   | "signal"
   | "conviction"
   | "convergence"
@@ -59,23 +57,9 @@ export const COLUMNS: ColumnDef[] = [
     hideBelow: "xl",
   },
   {
-    key: "group",
-    label: "Group",
-    title: "Tracked vs watchlist candidate (from tickers.txt)",
-    numeric: false,
-    defaultDir: "asc",
-  },
-  {
     key: "price",
     label: "Price",
     title: "Last close",
-    numeric: true,
-    defaultDir: "desc",
-  },
-  {
-    key: "change",
-    label: "Chg",
-    title: "Change vs previous close",
     numeric: true,
     defaultDir: "desc",
   },
@@ -167,13 +151,8 @@ function valueOf(t: TickerSummary, key: SortKey): SortValue {
       return t.symbol;
     case "name":
       return t.name;
-    // Tracked tickers first, then candidates, then tickers absent from tickers.txt.
-    case "group":
-      return t.group === "tracked" ? 0 : t.group === "candidate" ? 1 : 2;
     case "price":
       return t.price;
-    case "change":
-      return t.priceChangePct;
     case "signal":
       return t.signal ? SIGNAL_WEIGHT[t.signal] : null;
     case "conviction":
