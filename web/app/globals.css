@@ -22,10 +22,12 @@
     --destructive-foreground: 0 0% 100%;
     --border: 240 6% 90%;
     --input: 240 6% 90%;
-    --ring: 240 10% 4%;
+    --ring: 233 34% 32%;
+    --brand: 233 34% 32%;
+    --brand-foreground: 0 0% 100%;
     --bull: 152 60% 38%;
     --bear: 358 70% 52%;
-    --radius: 0.75rem;
+    --radius: 0.625rem;
   }
 
   .dark {
@@ -45,7 +47,9 @@
     --accent-foreground: 0 0% 98%;
     --border: 240 5% 16%;
     --input: 240 5% 16%;
-    --ring: 0 0% 90%;
+    --ring: 233 40% 68%;
+    --brand: 233 40% 66%;
+    --brand-foreground: 240 10% 6%;
     --bull: 152 60% 48%;
     --bear: 358 70% 62%;
   }
@@ -107,5 +111,15 @@
   }
   .fade-up {
     animation: fade-up 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up {
+      animation: none;
+    }
+    * {
+      transition-duration: 0.001ms !important;
+      animation-duration: 0.001ms !important;
+    }
   }
 }

@@ -75,8 +75,15 @@ export function Sidebar({
       aria-label="Primary navigation"
     >
       <div className="flex h-16 shrink-0 items-center gap-2.5 border-b px-5">
-        <span className="grid size-8 place-items-center rounded-lg bg-foreground text-background">
-          <span className="text-sm font-semibold">D</span>
+        <span
+          className="grid size-8 shrink-0 place-items-center rounded-lg bg-brand text-brand-foreground"
+          aria-hidden
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" strokeOpacity="0.45" strokeWidth="1.5" strokeLinecap="round" />
+            <line x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" strokeOpacity="0.45" strokeWidth="1.5" strokeLinecap="round" />
+            <circle cx="15.5" cy="12" r="2.5" fill="hsl(var(--bull))" />
+          </svg>
         </span>
         <div className="min-w-0">
           <div className="text-sm font-semibold leading-none tracking-tight text-foreground">
@@ -129,7 +136,7 @@ export function Sidebar({
         <Link
           href="/"
           onClick={onClose}
-          className="text-[11px] text-muted-foreground transition-colors hover:text-foreground"
+          className="text-[11px] text-muted-foreground transition-colors hover:text-brand"
         >
           Browse all {tickers.length} tickers →
         </Link>
@@ -178,13 +185,19 @@ function NavItem({
   const pathname = usePathname();
   const active = !external && pathname === href;
   const cls = cn(
-    "group flex h-9 items-center gap-2.5 rounded-md px-3 text-[13px] transition-colors",
+    "group relative flex h-9 items-center gap-2.5 rounded-md px-3 text-[13px] transition-colors",
     active
-      ? "bg-muted font-medium text-foreground"
+      ? "bg-brand/10 font-medium text-brand"
       : "text-muted-foreground hover:bg-muted/60 hover:text-foreground",
   );
   const content = (
     <>
+      {active && (
+        <span
+          className="absolute -left-3 top-1/2 h-4 -translate-y-1/2 w-0.5 rounded-full bg-brand"
+          aria-hidden
+        />
+      )}
       <Icon className="size-4 shrink-0" />
       <span className="truncate">{children}</span>
       {external && <ArrowUpRight className="ml-auto size-3 opacity-60" />}
@@ -217,7 +230,7 @@ function TickerRow({ t, onNavigate }: { t: TickerSummary; onNavigate?: () => voi
       className={cn(
         "group flex h-10 items-center gap-2.5 rounded-md px-3 transition-colors",
         active
-          ? "bg-muted font-medium text-foreground"
+          ? "bg-brand/10 font-medium text-foreground"
           : "text-muted-foreground hover:bg-muted/60 hover:text-foreground",
       )}
     >

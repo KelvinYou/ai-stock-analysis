@@ -34,7 +34,7 @@ export default async function ScreenerPage() {
           </div>
           <Link
             href="/about"
-            className="text-xs text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+            className="text-xs text-muted-foreground underline-offset-4 hover:text-brand hover:underline"
           >
             How the pipeline works →
           </Link>

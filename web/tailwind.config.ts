@@ -50,6 +50,10 @@ const config: Config = {
         },
         bull: "hsl(var(--bull))",
         bear: "hsl(var(--bear))",
+        brand: {
+          DEFAULT: "hsl(var(--brand))",
+          foreground: "hsl(var(--brand-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

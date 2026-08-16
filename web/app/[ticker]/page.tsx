@@ -120,7 +120,7 @@ export default async function TickerPage({
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="inline-flex shrink-0 items-center rounded-md px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                className="inline-flex shrink-0 items-center rounded-md px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-brand/10 hover:text-brand"
               >
                 {s.label}
               </a>
