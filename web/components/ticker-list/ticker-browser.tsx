@@ -263,7 +263,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
                 setVisible(INITIAL_VISIBLE);
               }}
               placeholder="Search symbol or name"
-              className="h-9 w-full rounded-md border bg-background px-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-foreground/30"
+              className="h-9 w-full rounded-md border bg-background px-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-brand/50"
               aria-label="Search tickers"
             />
             {search && (
@@ -313,7 +313,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
             id="sort-select"
             value={sortKey}
             onChange={(e) => handleSort(e.target.value as SortKey)}
-            className="h-9 rounded-md border bg-background px-2 text-xs outline-none transition-colors focus:border-foreground/30"
+            className="h-9 rounded-md border bg-background px-2 text-xs outline-none transition-colors focus:border-brand/50"
           >
             {COLUMNS.map((c) => (
               <option key={c.key} value={c.key}>
@@ -559,7 +559,7 @@ function Chip({
       className={cn(
         "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors",
         active
-          ? "border-foreground/20 bg-foreground text-background"
+          ? "border-brand/30 bg-brand/10 text-brand"
           : "border-border bg-background text-muted-foreground hover:border-foreground/20 hover:text-foreground",
         disabled && "cursor-not-allowed opacity-40 hover:border-border hover:text-muted-foreground",
       )}

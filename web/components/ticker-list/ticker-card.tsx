@@ -21,7 +21,7 @@ export function TickerCard({ t }: { t: TickerSummary; index?: number }) {
       <article
         className={cn(
           "flex h-full flex-col gap-4 rounded-xl border bg-card p-5 transition-all duration-200",
-          "group-hover:-translate-y-0.5 group-hover:border-foreground/20 group-hover:shadow-[0_6px_24px_-12px_rgba(0,0,0,0.12)]",
+          "group-hover:-translate-y-0.5 group-hover:border-brand/40 group-hover:shadow-[0_6px_24px_-12px_rgba(0,0,0,0.12)]",
           "group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2",
         )}
       >

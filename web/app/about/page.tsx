@@ -27,7 +27,7 @@ export default async function AboutPage() {
           <div className="mt-8">
             <Link
               href="/"
-              className="inline-flex h-10 items-center gap-2 rounded-lg bg-foreground px-5 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+              className="inline-flex h-10 items-center gap-2 rounded-lg bg-brand px-5 text-sm font-medium text-brand-foreground shadow-sm transition-colors hover:bg-brand/90"
             >
               Open the screener
               <ArrowRight className="size-4" />
