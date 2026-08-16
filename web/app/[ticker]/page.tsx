@@ -7,11 +7,9 @@ import { DebateSection } from "@/components/briefing/section-debate";
 import { FundamentalsSection } from "@/components/briefing/section-fundamentals";
 import { TechnicalsSection } from "@/components/briefing/section-technicals";
 import { SectionCard } from "@/components/shared/section-card";
-import { TrackVisit } from "@/components/shared/track-visit";
 import { StarButton } from "@/components/ticker-list/star-button";
 import { listTickers, loadTicker } from "@/lib/data";
 import { fmtCurrency, fmtSignedPercent } from "@/lib/format";
-import { cn } from "@/lib/utils";
 
 export const revalidate = 60;
 
@@ -42,64 +40,58 @@ export default async function TickerPage({
       : null;
   const up = (changePct ?? 0) >= 0;
 
+  // Ordered by the pipeline's own evidence chain — the tape, then the desks
+  // that read it, then the debate, then the synthesis that settled it. The
+  // verdict itself sits above this, because that is what you came for.
   const sections: { id: string; label: string; show: boolean }[] = [
     { id: "chart", label: "Price", show: bundle.priceHistory.length > 0 },
     { id: "fundamentals", label: "Fundamentals", show: !!bundle.fundamentals },
     { id: "technicals", label: "Technicals", show: !!bundle.technicals },
-    { id: "briefing", label: "Brief", show: !!bundle.briefing },
-    { id: "analysts", label: "Analysts", show: !!bundle.analystReports },
+    { id: "analysts", label: "Desks", show: !!bundle.analystReports },
     { id: "debate", label: "Debate", show: !!bundle.debate },
+    { id: "briefing", label: "Synthesis", show: !!bundle.briefing },
   ].filter((s) => s.show);
 
   return (
     <div className="space-y-8">
-      <TrackVisit symbol={bundle.symbol} />
-      <header className="fade-up space-y-5">
-        <div className="flex flex-wrap items-start justify-between gap-6">
+      <header className="fade-up space-y-6">
+        <div className="flex flex-wrap items-start justify-between gap-x-8 gap-y-4">
           <div className="min-w-0">
-            <div className="flex items-center gap-2">
-              <h1 className="num text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+            <div className="flex items-center gap-2.5">
+              <h1 className="text-3xl font-semibold tracking-[-0.03em] text-ink [font-stretch:125%] md:text-4xl">
                 {bundle.symbol}
               </h1>
               <StarButton symbol={bundle.symbol} />
               {info?.market && (
-                <span className="rounded-md bg-muted px-1.5 py-0.5 text-[11px] font-medium text-muted-foreground">
+                <span className="text-micro font-semibold uppercase tracking-[0.09em] text-graphite">
                   {info.market}
                 </span>
               )}
             </div>
-            <p className="mt-1 truncate text-sm text-muted-foreground">
+            <p className="mt-1.5 truncate text-sm text-graphite">
               {info?.name ?? bundle.symbol}
             </p>
-            <div className="mt-3 flex flex-wrap items-center gap-2">
-              {info?.sector && (
-                <span className="rounded-full border px-2.5 py-0.5 text-[11px] text-muted-foreground">
-                  {info.sector}
-                </span>
-              )}
-              {info?.industry && (
-                <span className="rounded-full border px-2.5 py-0.5 text-[11px] text-muted-foreground">
-                  {info.industry}
-                </span>
-              )}
-            </div>
+            {(info?.sector || info?.industry) && (
+              <p className="mt-2 text-micro uppercase tracking-[0.07em] text-graphite">
+                {[info?.sector, info?.industry].filter(Boolean).join(" · ")}
+              </p>
+            )}
           </div>
 
           <div className="text-right">
-            <div className="text-[11px] font-medium text-muted-foreground">Last close</div>
-            <div className="num mt-1 text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+            <div className="eyebrow">Last close</div>
+            <div className="num mt-1.5 text-3xl font-medium text-ink md:text-4xl">
               {fmtCurrency(latestPrice, currency)}
             </div>
             {changePct != null && (
-              <div
-                className={cn(
-                  "num mt-0.5 text-xs font-medium",
-                  up ? "text-emerald-600" : "text-rose-600",
-                )}
-              >
-                {up ? "+" : ""}
-                {fmtSignedPercent(changePct)}{" "}
-                <span className="text-muted-foreground">vs previous</span>
+              // Colour and glyph together — the arrow keeps the meaning legible
+              // without hue, the hue makes it readable at a glance.
+              <div className="num mt-1 text-xs text-graphite">
+                <span className={up ? "text-bull" : "text-bear"}>
+                  <span aria-hidden>{up ? "▲" : "▼"}</span>{" "}
+                  {fmtSignedPercent(changePct)}
+                </span>{" "}
+                vs previous
               </div>
             )}
           </div>
@@ -113,14 +105,14 @@ export default async function TickerPage({
       {sections.length > 1 && (
         <nav
           aria-label="Sections on this page"
-          className="sticky top-16 z-20 -mx-5 border-y bg-background/80 px-5 py-2 backdrop-blur-md md:-mx-10 md:px-10"
+          className="sticky top-topbar z-20 -mx-5 border-b bg-paper/85 px-5 py-2.5 backdrop-blur-md md:-mx-10 md:px-10"
         >
-          <div className="flex items-center gap-1 overflow-x-auto">
+          <div className="flex items-center gap-5 overflow-x-auto">
             {sections.map((s) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="inline-flex shrink-0 items-center rounded-md px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-brand/10 hover:text-brand"
+                className="shrink-0 border-b-2 border-transparent pb-0.5 text-micro font-semibold uppercase tracking-[0.07em] text-graphite transition-colors hover:border-ink hover:text-ink"
               >
                 {s.label}
               </a>
@@ -129,18 +121,23 @@ export default async function TickerPage({
         </nav>
       )}
 
-      <div className="space-y-8">
-        {bundle.priceHistory.length > 0 && (
-          <SectionCard id="chart" title="Price" description="Daily close">
-            <PriceChart data={bundle.priceHistory} currency={currency} />
-          </SectionCard>
+      <div className="space-y-14">
+        {(bundle.priceHistory.length > 0 || bundle.fundamentals || bundle.technicals) && (
+          <div className="space-y-6">
+            <p className="eyebrow border-t-2 border-ink pt-4">Layer 1 · The tape</p>
+            {bundle.priceHistory.length > 0 && (
+              <SectionCard id="chart" title="Price" description="Daily close">
+                <PriceChart data={bundle.priceHistory} currency={currency} />
+              </SectionCard>
+            )}
+            {bundle.fundamentals && <FundamentalsSection data={bundle.fundamentals} />}
+            {bundle.technicals && <TechnicalsSection data={bundle.technicals} />}
+          </div>
         )}
 
-        {bundle.fundamentals && <FundamentalsSection data={bundle.fundamentals} />}
-        {bundle.technicals && <TechnicalsSection data={bundle.technicals} />}
-        {bundle.briefing && <BriefingSection data={bundle.briefing} currency={currency} />}
         {bundle.analystReports && <AnalystSection data={bundle.analystReports} />}
         {bundle.debate && <DebateSection data={bundle.debate} />}
+        {bundle.briefing && <BriefingSection data={bundle.briefing} currency={currency} />}
       </div>
     </div>
   );

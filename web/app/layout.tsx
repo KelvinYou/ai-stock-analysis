@@ -1,18 +1,30 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Archivo, Newsreader, DM_Mono } from "next/font/google";
 import { AppShell } from "@/components/layout/app-shell";
+import { themeScript } from "@/components/shared/theme-toggle";
 import { listTickerSummaries } from "@/lib/data";
 import "./globals.css";
 
-const sans = Instrument_Sans({
+// Three faces, three kinds of claim. Archivo (run wide) carries structure —
+// headers, tickers, the verdict word. Newsreader carries argument: every string
+// an LLM reasoned out. DM Mono carries anything the pipeline computed. Keeping
+// them disjoint is what makes "argued vs. calculated" legible at a glance.
+const display = Archivo({
   subsets: ["latin"],
-  variable: "--font-sans",
+  axes: ["wdth"],
+  variable: "--font-display",
   display: "swap",
 });
 
-const mono = IBM_Plex_Mono({
+const prose = Newsreader({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  variable: "--font-prose",
+  display: "swap",
+});
+
+const mono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
   variable: "--font-mono",
   display: "swap",
 });
@@ -26,8 +38,15 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const tickers = await listTickerSummaries();
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
-      <body className="min-h-dvh bg-background font-sans text-foreground antialiased">
+    <html
+      lang="en"
+      className={`${display.variable} ${prose.variable} ${mono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-dvh bg-background font-display text-foreground antialiased">
+        {/* Sets the theme class before first paint so the page never flashes
+            the wrong ground. Must run inline, ahead of hydration. */}
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-foreground focus:px-3 focus:py-2 focus:text-background"

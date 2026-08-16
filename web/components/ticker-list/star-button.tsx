@@ -30,10 +30,11 @@ export function StarButton({ symbol, className }: { symbol: string; className?: 
       onClick={toggle}
       aria-label={starred ? `Unstar ${symbol}` : `Star ${symbol}`}
       className={cn(
+        // Fill vs outline still carries the state on its own; `halt` is the
+        // second cue. Deliberately not bull/bear — starring a ticker is a
+        // bookmark, not a directional call on it.
         "rounded p-1 transition-colors",
-        starred
-          ? "text-amber-400 hover:text-amber-500"
-          : "text-muted-foreground/30 hover:text-muted-foreground",
+        starred ? "text-halt" : "text-graphite hover:text-ink",
         className,
       )}
     >

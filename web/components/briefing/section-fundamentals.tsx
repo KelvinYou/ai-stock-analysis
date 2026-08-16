@@ -43,8 +43,8 @@ export function FundamentalsSection({ data }: { data: Fundamentals }) {
 
       {latestRec && recTotal > 0 && (
         <div className="mt-6">
-          <h3 className="mb-2.5 text-[11px] font-medium text-muted-foreground">
-            Street consensus · n = {recTotal}
+          <h3 className="eyebrow mb-2.5">
+            Street consensus · n = <span className="num">{recTotal}</span>
           </h3>
           <RecBar rec={latestRec} total={recTotal} />
         </div>
@@ -53,6 +53,12 @@ export function FundamentalsSection({ data }: { data: Fundamentals }) {
   );
 }
 
+/**
+ * A diverging bull→bear ramp, the way the street's own consensus strips read:
+ * conviction at the ends, graphite for hold. The counts are printed under every
+ * segment and the aria-label repeats all five, so the bar is a summary of the
+ * numbers rather than the only place they exist.
+ */
 function RecBar({
   rec,
   total,
@@ -61,29 +67,35 @@ function RecBar({
   total: number;
 }) {
   const parts = [
-    { key: "Strong Buy", count: rec.strongBuy, cls: "bg-emerald-600" },
-    { key: "Buy", count: rec.buy, cls: "bg-emerald-500/80" },
-    { key: "Hold", count: rec.hold, cls: "bg-zinc-400" },
-    { key: "Sell", count: rec.sell, cls: "bg-rose-500/80" },
-    { key: "Strong Sell", count: rec.strongSell, cls: "bg-rose-600" },
+    { key: "Strong Buy", count: rec.strongBuy, cls: "bg-bull" },
+    { key: "Buy", count: rec.buy, cls: "bg-bull/60" },
+    { key: "Hold", count: rec.hold, cls: "bg-graphite/40" },
+    { key: "Sell", count: rec.sell, cls: "bg-bear/60" },
+    { key: "Strong Sell", count: rec.strongSell, cls: "bg-bear" },
   ];
+  const summary = parts.map((p) => `${p.key} ${p.count}`).join(", ");
+
   return (
     <div>
-      <div className="flex h-2 w-full overflow-hidden rounded-full bg-muted">
+      <div
+        className="flex h-2 w-full overflow-hidden rounded-full bg-muted"
+        role="img"
+        aria-label={`Street consensus across ${total} analysts: ${summary}.`}
+      >
         {parts.map((p) => (
           <div
             key={p.key}
             className={p.cls}
             style={{ width: `${(p.count / total) * 100}%` }}
-            title={`${p.key}: ${p.count}`}
+            aria-hidden
           />
         ))}
       </div>
-      <div className="mt-3 grid grid-cols-5 gap-2 text-[11px]">
+      <div className="mt-3 grid grid-cols-5 gap-2">
         {parts.map((p) => (
-          <div key={p.key} className="flex flex-col items-center gap-0.5">
-            <span className="num font-semibold text-foreground">{p.count}</span>
-            <span className="text-[10px] text-muted-foreground">{p.key}</span>
+          <div key={p.key} className="flex flex-col items-center gap-0.5 text-center">
+            <span className="num text-xs font-semibold text-ink">{p.count}</span>
+            <span className="text-mini text-graphite">{p.key}</span>
           </div>
         ))}
       </div>

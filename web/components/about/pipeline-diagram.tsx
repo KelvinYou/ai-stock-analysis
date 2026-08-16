@@ -12,13 +12,32 @@ import { cn } from "@/lib/utils";
  * Server-rendered SVG flowchart of the analysis pipeline. Everything is coloured
  * with Tailwind fill-/stroke- utilities so the diagram follows the app's theme
  * tokens (including `.dark`) instead of carrying its own palette.
+ *
+ * The bull and bear researchers take their direction colours; every other node,
+ * every edge and every band stays ink/graphite/rule, so the two arguments are
+ * the only thing on the diagram that reads as coloured. Their labels also name
+ * them, and the generated <desc> reads the whole graph out, so the hue is never
+ * the only way to tell the two apart. SVG cannot take the Tailwind type scale,
+ * so the two steps this diagram needs are restated numerically — 11 for labels,
+ * 10 for captions, matching micro and mini.
  */
+
+/** The type scale, in the numeric form SVG requires. */
+const FS = { label: 11, caption: 10 } as const;
+
+/** Matches the `rounded` token (--radius = 0.25rem) at diagram scale. */
+const RX = 4;
+
+/** Mono advance width at `FS.caption`, plus horizontal padding. */
+const BADGE_PAD = 14;
+const MONO_ADVANCE = 6;
+
 export function PipelineDiagram({ pipeline }: { pipeline: Pipeline }) {
   const { width, height, bands, boxes, edges } = layoutPipeline(pipeline);
 
   return (
     <figure className="space-y-3">
-      <div className="overflow-x-auto rounded-xl border bg-card p-2 sm:p-4">
+      <div className="overflow-x-auto rounded-lg border bg-card p-2 sm:p-4">
         <svg
           viewBox={`0 0 ${width} ${height}`}
           role="img"
@@ -40,7 +59,7 @@ export function PipelineDiagram({ pipeline }: { pipeline: Pipeline }) {
               markerHeight="5"
               orient="auto-start-reverse"
             >
-              <path d="M0,0 L8,4 L0,8 z" className="fill-muted-foreground" />
+              <path d="M0,0 L8,4 L0,8 z" className="fill-graphite" />
             </marker>
           </defs>
 
@@ -51,15 +70,20 @@ export function PipelineDiagram({ pipeline }: { pipeline: Pipeline }) {
                 y={b.y}
                 width={b.w}
                 height={b.h}
-                rx={10}
-                className="fill-muted/40 stroke-border"
+                rx={RX}
+                className="fill-secondary stroke-rule"
                 strokeWidth={1}
               />
-              <text x={b.x + L.bandPadX} y={b.y + 17} className="fill-foreground text-[11px] font-semibold">
+              <text
+                x={b.x + L.bandPadX}
+                y={b.y + 17}
+                fontSize={FS.label}
+                className="fill-ink font-semibold"
+              >
                 {b.stage.layer}
-                <tspan className="fill-muted-foreground font-normal"> · {b.stage.title}</tspan>
+                <tspan className="fill-graphite font-normal"> · {b.stage.title}</tspan>
                 {b.stage.note && (
-                  <tspan className="fill-muted-foreground font-normal"> — {b.stage.note}</tspan>
+                  <tspan className="fill-graphite font-normal"> — {b.stage.note}</tspan>
                 )}
               </text>
               {b.stage.model && (
@@ -82,23 +106,37 @@ export function PipelineDiagram({ pipeline }: { pipeline: Pipeline }) {
           ))}
         </svg>
       </div>
-      <figcaption className="text-[11px] leading-relaxed text-muted-foreground">
+      <figcaption className="text-micro leading-relaxed text-graphite">
         Generated from{" "}
-        <code className="font-mono text-[10px] text-foreground">pipeline.json</code> — the
+        <code className="num text-mini text-ink">pipeline.json</code> — the
         same file that generates the mermaid diagram in{" "}
-        <code className="font-mono text-[10px] text-foreground">architecture.md</code>.
+        <code className="num text-mini text-ink">architecture.md</code>.
       </figcaption>
     </figure>
   );
 }
 
+/**
+ * Ground and rule carry the node's role. Only `bull` and `bear` take a hue —
+ * they are the one place on this diagram where direction is the content.
+ */
 const TONE_FILL: Record<Tone, string> = {
-  data: "fill-background stroke-border",
-  agent: "fill-background stroke-foreground/25",
-  bull: "fill-bull/10 stroke-bull/50",
-  bear: "fill-bear/10 stroke-bear/50",
-  output: "fill-foreground/[0.06] stroke-foreground/40",
-  muted: "fill-muted/60 stroke-border",
+  data: "fill-background stroke-rule",
+  agent: "fill-background stroke-graphite",
+  bull: "fill-card stroke-bull",
+  bear: "fill-card stroke-bear",
+  output: "fill-secondary stroke-ink",
+  muted: "fill-muted stroke-rule",
+};
+
+/** Label colour, matched to the stroke so a coloured box is not outlined in one hue and lettered in another. */
+const TONE_LABEL: Record<Tone, string> = {
+  data: "fill-ink",
+  agent: "fill-ink",
+  bull: "fill-bull",
+  bear: "fill-bear",
+  output: "fill-ink",
+  muted: "fill-ink",
 };
 
 function NodeBox({
@@ -122,7 +160,7 @@ function NodeBox({
         y={y}
         width={w}
         height={h}
-        rx={7}
+        rx={RX}
         strokeWidth={1}
         strokeDasharray={node.dashed ? "3 3" : undefined}
         className={cn(TONE_FILL[tone])}
@@ -131,14 +169,8 @@ function NodeBox({
         x={x + w / 2}
         y={y + L.boxPadY + 10}
         textAnchor="middle"
-        className={cn(
-          "text-[11px] font-semibold",
-          tone === "bull"
-            ? "fill-bull"
-            : tone === "bear"
-              ? "fill-bear"
-              : "fill-foreground",
-        )}
+        fontSize={FS.label}
+        className={cn("font-semibold", TONE_LABEL[tone])}
       >
         {node.label}
       </text>
@@ -148,7 +180,8 @@ function NodeBox({
           x={x + w / 2}
           y={y + L.boxPadY + L.titleH + 8 + i * L.lineH}
           textAnchor="middle"
-          className="fill-muted-foreground text-[8.5px]"
+          fontSize={FS.caption}
+          className="fill-graphite"
         >
           {line}
         </text>
@@ -175,14 +208,15 @@ function EdgePath({ edge }: { edge: Edge }) {
         strokeDasharray={edge.dashed ? "3 3" : undefined}
         markerEnd={arrow}
         markerStart={edge.bidirectional ? "url(#arrow)" : undefined}
-        className="stroke-muted-foreground/50"
+        className="stroke-graphite"
       />
       {edge.label && (
         <text
           x={mx}
           y={isBus ? my - 5 : my}
           textAnchor="middle"
-          className="fill-muted-foreground text-[8px] italic"
+          fontSize={FS.caption}
+          className="fill-graphite italic"
         >
           {edge.label}
         </text>
@@ -202,7 +236,9 @@ function ModelBadge({
   model: string;
   modelKey?: string;
 }) {
-  const w = 8 + model.length * 5.6;
+  // The label is set in the mono face, so its advance width is predictable —
+  // the old estimate was tuned to a proportional face and now overruns.
+  const w = BADGE_PAD + model.length * MONO_ADVANCE;
   return (
     <g>
       <title>{modelKey ? `config.py · ${modelKey}` : model}</title>
@@ -211,15 +247,16 @@ function ModelBadge({
         y={y}
         width={w}
         height={14}
-        rx={7}
-        className="fill-background stroke-border"
+        rx={RX}
+        className="fill-background stroke-rule"
         strokeWidth={1}
       />
       <text
         x={x - w / 2}
         y={y + 10}
         textAnchor="middle"
-        className="fill-muted-foreground text-[8.5px] font-medium"
+        fontSize={FS.caption}
+        className="num fill-graphite font-medium"
       >
         {model}
       </text>

@@ -1,6 +1,4 @@
 const MY_LIST_KEY = "desk.myList.v1";
-const RECENT_KEY = "desk.recent.v1";
-const RECENT_MAX = 5;
 
 function safeRead<T>(key: string, fallback: T): T {
   if (typeof window === "undefined") return fallback;
@@ -25,14 +23,4 @@ export function toggleMyList(symbol: string): string[] {
 
 export function isStarred(symbol: string): boolean {
   return getMyList().includes(symbol);
-}
-
-export function getRecentlyViewed(): string[] {
-  return safeRead<string[]>(RECENT_KEY, []);
-}
-
-export function addRecentlyViewed(symbol: string): void {
-  const list = getRecentlyViewed().filter((s) => s !== symbol);
-  const next = [symbol, ...list].slice(0, RECENT_MAX);
-  localStorage.setItem(RECENT_KEY, JSON.stringify(next));
 }

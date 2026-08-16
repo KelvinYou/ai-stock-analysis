@@ -1,14 +1,12 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
+/** Border-only. Elevation is reserved for overlays; cards sit flat on the paper. */
 const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn(
-        "rounded-xl border border-border bg-card text-card-foreground",
-        className,
-      )}
+      className={cn("rounded-lg border bg-card text-card-foreground", className)}
       {...props}
     />
   ),
@@ -26,7 +24,10 @@ const CardTitle = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivE
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn("font-semibold leading-none tracking-tight", className)}
+      className={cn(
+        "font-semibold leading-none tracking-[-0.02em] text-ink [font-stretch:125%]",
+        className,
+      )}
       {...props}
     />
   ),
@@ -35,7 +36,7 @@ CardTitle.displayName = "CardTitle";
 
 const CardDescription = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div ref={ref} className={cn("text-sm text-muted-foreground", className)} {...props} />
+    <div ref={ref} className={cn("text-sm text-graphite", className)} {...props} />
   ),
 );
 CardDescription.displayName = "CardDescription";

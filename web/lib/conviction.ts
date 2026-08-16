@@ -24,6 +24,97 @@ export function signalDirection(signal: string | null | undefined): Direction {
   return "neutral";
 }
 
+/**
+ * Where a signal sits on the consensus axis, −1 (strong sell) to +1 (strong buy).
+ * The axis is the page's one piece of chroma, so this mapping is what every
+ * coloured mark in the UI ultimately derives from.
+ */
+const SIGNAL_POSITION: Record<string, number> = {
+  strong_sell: -1,
+  sell: -0.5,
+  hold: 0,
+  neutral: 0,
+  buy: 0.5,
+  strong_buy: 1,
+};
+
+export function signalPosition(signal: string | null | undefined): number {
+  if (!signal) return 0;
+  const key = signal.trim().toLowerCase().replace(/[ -]/g, "_");
+  return SIGNAL_POSITION[key] ?? 0;
+}
+
+export interface AnalystMark {
+  /** Desk name as shown to the reader, e.g. "Fundamentals". */
+  desk: string;
+  /** Axis-width label — full names collide once two desks sit near each other. */
+  abbr: string;
+  signal: string;
+  position: number;
+  direction: Direction;
+}
+
+export interface ConsensusReading {
+  marks: AnalystMark[];
+  /** Narrowest and widest analyst positions — the visible spread. */
+  spread: { min: number; max: number; width: number } | null;
+  conviction: number;
+  convergence: number;
+  /** True when convergence was too low for the pipeline to quote levels. */
+  levelsWithheld: boolean;
+}
+
+const DESK_LABEL: Record<string, string> = {
+  fundamentals: "Fundamentals",
+  sentiment: "Sentiment",
+  technical: "Technical",
+  macro: "Macro / FX",
+};
+
+const DESK_ABBR: Record<string, string> = {
+  fundamentals: "Fund",
+  sentiment: "Sent",
+  technical: "Tech",
+  macro: "Macro",
+};
+
+export function readConsensus(briefing: Briefing): ConsensusReading {
+  const breakdown = briefing.agent_signal_breakdown ?? {};
+  const marks: AnalystMark[] = Object.entries(breakdown)
+    .filter(([, signal]) => !!signal)
+    .map(([desk, signal]) => ({
+      desk: DESK_LABEL[desk] ?? desk,
+      abbr: DESK_ABBR[desk] ?? (DESK_LABEL[desk] ?? desk),
+      signal: String(signal),
+      position: signalPosition(String(signal)),
+      direction: signalDirection(String(signal)),
+    }));
+
+  const positions = marks.map((m) => m.position);
+  const spread = positions.length
+    ? {
+        min: Math.min(...positions),
+        max: Math.max(...positions),
+        width: Math.max(...positions) - Math.min(...positions),
+      }
+    : null;
+
+  const plan = briefing.action_plan;
+  const levelsWithheld =
+    !plan ||
+    (plan.entry_limit === null &&
+      plan.stop_loss === null &&
+      plan.take_profit_1 === null);
+
+  return {
+    marks,
+    spread,
+    conviction: Math.max(-1, Math.min(1, briefing.conviction.score)),
+    convergence: briefing.conviction.signal_convergence,
+    levelsWithheld,
+  };
+}
+
 const DIRECTION_LABEL: Record<Direction, string> = {
   bull: "Buy",
   bear: "Sell",

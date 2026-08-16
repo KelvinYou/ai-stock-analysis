@@ -7,12 +7,16 @@ import type { Technicals } from "@/lib/types";
 
 export function TechnicalsSection({ data }: { data: Technicals }) {
   const rsi = data.rsi_14;
+  // Weight *and* hue: the medium weight still marks "this is an extreme
+  // reading" on its own, and the colour says which way the extreme cuts.
   const rsiStatus =
     rsi >= 70
-      ? { label: "Overbought", cls: "text-rose-600" }
+      ? { label: "Overbought", cls: "font-medium text-bear" }
       : rsi <= 30
-        ? { label: "Oversold", cls: "text-emerald-600" }
-        : { label: "Neutral", cls: "text-muted-foreground" };
+        ? { label: "Oversold", cls: "font-medium text-bull" }
+        : { label: "Neutral", cls: "text-graphite" };
+
+  const macdUp = data.macd_histogram >= 0;
 
   return (
     <SectionCard id="technicals" title="Technicals" description={`As of ${data.as_of_date}`}>
@@ -24,8 +28,14 @@ export function TechnicalsSection({ data }: { data: Technicals }) {
         />
         <Stat
           label="MACD Histogram"
-          value={fmtNumber(data.macd_histogram, 2)}
-          accent={data.macd_histogram >= 0 ? "up" : "down"}
+          value={
+            <span className={macdUp ? "text-bull" : "text-bear"}>
+              <span aria-hidden>{macdUp ? "▲" : "▼"}</span>{" "}
+              {macdUp ? "+" : ""}
+              {fmtNumber(data.macd_histogram, 2)}
+            </span>
+          }
+          hint={macdUp ? "Above zero" : "Below zero"}
         />
         <Stat label="ATR (14)" value={fmtNumber(data.atr_14, 2)} hint="Daily volatility" />
         <Stat
@@ -43,25 +53,22 @@ export function TechnicalsSection({ data }: { data: Technicals }) {
 
       <div className="mt-5 grid gap-4 md:grid-cols-2">
         <div className="rounded-lg border bg-background p-4">
-          <h3 className="mb-3 text-[11px] font-medium text-muted-foreground">
-            Moving Averages
-          </h3>
+          <h3 className="eyebrow mb-3">Moving averages</h3>
           <MaRow label="SMA 20" value={data.sma_20} above={data.above_sma_20} />
           <MaRow label="SMA 50" value={data.sma_50} above={data.above_sma_50} />
           <MaRow label="SMA 200" value={data.sma_200} above={data.above_sma_200} />
           <MaRow label="EMA 20" value={data.ema_20} />
         </div>
         <div className="rounded-lg border bg-background p-4">
-          <h3 className="mb-3 text-[11px] font-medium text-muted-foreground">
-            52-Week Range
-          </h3>
-          <div className="space-y-2 text-sm">
+          <h3 className="eyebrow mb-3">52-week range</h3>
+          <div className="space-y-2">
             <Row label="High" value={fmtNumber(data.high_52w)} />
             <Row label="Low" value={fmtNumber(data.low_52w)} />
             <Row
               label="From high"
               value={
-                <span className="text-rose-600">
+                <span className="text-bear">
+                  <span aria-hidden>▼</span>{" "}
                   {fmtPercent(data.pct_from_52w_high, 2, true)}
                 </span>
               }
@@ -69,7 +76,8 @@ export function TechnicalsSection({ data }: { data: Technicals }) {
             <Row
               label="From low"
               value={
-                <span className="text-emerald-600">
+                <span className="text-bull">
+                  <span aria-hidden>▲</span>{" "}
                   {fmtPercent(data.pct_from_52w_low, 2, true)}
                 </span>
               }
@@ -84,52 +92,79 @@ export function TechnicalsSection({ data }: { data: Technicals }) {
 
 function Row({ label, value }: { label: string; value: React.ReactNode }) {
   return (
-    <div className="flex items-baseline justify-between">
-      <span className="text-[11px] text-muted-foreground">{label}</span>
-      <span className="num text-sm font-medium text-foreground">{value}</span>
+    <div className="flex items-baseline justify-between gap-3">
+      <span className="text-micro text-graphite">{label}</span>
+      <span className="num text-sm font-medium text-ink">{value}</span>
     </div>
   );
 }
 
 function MaRow({ label, value, above }: { label: string; value: number; above?: boolean }) {
   return (
-    <div className="flex items-center justify-between border-b py-2 text-sm last:border-none">
+    <div className="flex items-center justify-between border-b py-2 last:border-none">
       <div className="flex items-center gap-2">
         {above != null ? (
           above ? (
-            <Check className="size-3.5 text-emerald-600" />
+            <>
+              <Check className="size-3.5 shrink-0 text-bull" aria-hidden />
+              <span className="sr-only">Price above</span>
+            </>
           ) : (
-            <X className="size-3.5 text-rose-600" />
+            <>
+              <X className="size-3.5 shrink-0 text-bear" aria-hidden />
+              <span className="sr-only">Price below</span>
+            </>
           )
         ) : (
-          <span className="size-3.5" />
+          <span className="size-3.5" aria-hidden />
         )}
-        <span className="text-xs text-muted-foreground">{label}</span>
+        <span className="text-xs text-graphite">{label}</span>
       </div>
-      <span className={cn("num text-sm font-medium text-foreground")}>
+      <span
+        className={cn(
+          "num text-sm font-medium",
+          above === false ? "text-graphite" : "text-ink",
+        )}
+      >
         {fmtNumber(value, 2)}
       </span>
     </div>
   );
 }
 
+/**
+ * A diverging track: bear at the 52-week low, neutral graphite through the
+ * middle, bull at the high. The knob marks the current close, and the
+ * aria-label states the position in words so the ramp is never the only way
+ * to read it.
+ */
 function RangeBar({ low, high, current }: { low: number; high: number; current: number }) {
-  const pct = ((current - low) / (high - low)) * 100;
+  const raw = high === low ? 0 : ((current - low) / (high - low)) * 100;
+  const pct = Math.max(0, Math.min(100, raw));
+
   return (
     <div className="mt-3">
-      <div className="relative h-1.5 w-full rounded-full bg-muted">
+      <div
+        className="relative h-1.5 w-full overflow-visible rounded-full"
+        role="progressbar"
+        aria-valuenow={Math.round(pct)}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label={`Close ${fmtNumber(current, 2)} sits ${Math.round(pct)}% of the way from the 52-week low ${fmtNumber(low, 2)} to the high ${fmtNumber(high, 2)}.`}
+      >
         <div
-          className="absolute top-0 h-full rounded-full bg-gradient-to-r from-rose-500/50 via-amber-400/50 to-emerald-500/50"
-          style={{ width: "100%" }}
+          className="absolute inset-0 overflow-hidden rounded-full bg-gradient-to-r from-bear via-graphite/30 to-bull"
+          aria-hidden
         />
         <div
-          className="absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground ring-2 ring-background"
-          style={{ left: `${Math.max(0, Math.min(100, pct))}%` }}
+          className="absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-ink ring-2 ring-background"
+          style={{ left: `${pct}%` }}
+          aria-hidden
         />
       </div>
-      <div className="mt-1.5 flex justify-between text-[10px] text-muted-foreground">
+      <div className="mt-1.5 flex justify-between text-mini text-graphite">
         <span>Low</span>
-        <span className="num text-foreground">{fmtNumber(current, 2)}</span>
+        <span className="num text-ink">{fmtNumber(current, 2)}</span>
         <span>High</span>
       </div>
     </div>

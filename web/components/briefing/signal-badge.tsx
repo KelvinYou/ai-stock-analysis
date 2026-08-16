@@ -1,19 +1,37 @@
 import { cn } from "@/lib/utils";
 import { signalLabel } from "@/lib/format";
+import { signalGlyph } from "@/lib/signal-display";
 import type { Confidence, Signal } from "@/lib/types";
 
-const SIGNAL_STYLES: Record<Signal, string> = {
-  strong_buy: "bg-emerald-50 text-emerald-700 border-emerald-200",
-  buy: "bg-emerald-50/60 text-emerald-700 border-emerald-200/70",
-  neutral: "bg-muted text-foreground/80 border-border",
-  sell: "bg-rose-50/60 text-rose-700 border-rose-200/70",
-  strong_sell: "bg-rose-50 text-rose-700 border-rose-200",
+/**
+ * Direction reads three ways at once: the glyph, the word, and the hue. Colour
+ * is the last of the three to arrive and the first thing a colour-blind reader
+ * loses, so the glyph and the label are never dropped in its favour. The glyph
+ * map is shared with the screener via `lib/signal-display`.
+ *
+ * Text colour only — the client asked for a coloured word, not a filled pill,
+ * and a tinted chip at list density would fight the consensus axis.
+ */
+const SIZE_CLS = {
+  sm: "text-mini",
+  md: "text-micro",
+  lg: "text-micro",
+  xl: "text-xs",
+} as const;
+
+const SIGNAL_CLS: Record<Signal, string> = {
+  strong_buy: "text-bull",
+  buy: "text-bull",
+  neutral: "text-graphite",
+  sell: "text-bear",
+  strong_sell: "text-bear",
 };
 
-const CONF_STYLES: Record<Confidence, string> = {
-  high: "text-emerald-600",
-  medium: "text-amber-600",
-  low: "text-muted-foreground",
+/** Conviction in the reading itself — `halt` at medium, unmarked at low. */
+const CONFIDENCE_CLS: Record<Confidence, string> = {
+  high: "text-bull",
+  medium: "text-halt",
+  low: "text-graphite",
 };
 
 export function SignalBadge({
@@ -27,42 +45,30 @@ export function SignalBadge({
   size?: "sm" | "md" | "lg" | "xl";
   className?: string;
 }) {
-  const sizeCls =
-    size === "xl"
-      ? "px-3 py-1.5 text-xs"
-      : size === "lg"
-        ? "px-2.5 py-1 text-[11px]"
-        : size === "sm"
-          ? "px-2 py-0.5 text-[10px]"
-          : "px-2 py-0.5 text-[11px]";
   return (
-    <div className={cn("inline-flex items-center gap-2", className)}>
+    <div className={cn("inline-flex items-baseline gap-2", className)}>
       <span
         className={cn(
-          "inline-flex items-center gap-1.5 rounded-full border font-medium",
-          SIGNAL_STYLES[signal],
-          sizeCls,
+          "inline-flex items-baseline gap-1.5 uppercase [font-stretch:125%]",
+          // At list density the badge repeats 26 times — it labels, it should
+          // not shout. Weight and tracking open up only at the detail sizes.
+          size === "sm" || size === "md"
+            ? "font-medium tracking-[0.06em]"
+            : "font-semibold tracking-[0.09em]",
+          SIZE_CLS[size],
+          SIGNAL_CLS[signal],
         )}
       >
-        <Dot signal={signal} size={size} />
+        <span aria-hidden className="tracking-normal">
+          {signalGlyph(signal)}
+        </span>
         {signalLabel(signal)}
       </span>
       {confidence && (
-        <span className={cn("text-[11px] font-medium", CONF_STYLES[confidence])}>
+        <span className={cn("text-micro", CONFIDENCE_CLS[confidence])}>
           {confidence} conf.
         </span>
       )}
     </div>
   );
-}
-
-function Dot({ signal, size }: { signal: Signal; size: "sm" | "md" | "lg" | "xl" }) {
-  const color =
-    signal === "strong_buy" || signal === "buy"
-      ? "bg-emerald-500"
-      : signal === "strong_sell" || signal === "sell"
-        ? "bg-rose-500"
-        : "bg-zinc-400";
-  const dotSize = size === "xl" ? "size-1.5" : "size-1";
-  return <span className={cn("inline-block rounded-full", dotSize, color)} aria-hidden />;
 }

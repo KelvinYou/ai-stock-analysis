@@ -1,5 +1,17 @@
 import { cn } from "@/lib/utils";
 
+/**
+ * A measured reading. `accent` repaints the number *and* sets a ▲/▼ glyph beside
+ * it — the glyph is what a colour-blind reader goes by, so it stays whether or
+ * not the hue lands.
+ */
+const ACCENT_GLYPH = { up: "▲", down: "▼", muted: null } as const;
+const ACCENT_COLOR = {
+  up: "text-bull",
+  down: "text-bear",
+  muted: "text-graphite",
+} as const;
+
 export function Stat({
   label,
   value,
@@ -13,27 +25,29 @@ export function Stat({
   accent?: "up" | "down" | "muted";
   className?: string;
 }) {
+  const glyph = accent ? ACCENT_GLYPH[accent] : null;
   return (
     <div
       className={cn(
-        "flex flex-col gap-1.5 rounded-lg border bg-background p-4 transition-colors hover:bg-muted/40",
+        "flex flex-col gap-1.5 rounded-lg border bg-background p-4 transition-colors hover:bg-secondary",
         className,
       )}
     >
-      <div className="text-[11px] font-medium text-muted-foreground">{label}</div>
+      <div className="eyebrow">{label}</div>
       <div
         className={cn(
-          "num text-lg font-semibold leading-tight tracking-tight text-foreground",
-          accent === "up" && "text-emerald-600",
-          accent === "down" && "text-rose-600",
-          accent === "muted" && "text-muted-foreground",
+          "num flex items-baseline gap-1.5 text-lg font-semibold leading-tight tracking-tight",
+          accent ? ACCENT_COLOR[accent] : "text-ink",
         )}
       >
-        {value}
+        {glyph && (
+          <span className="text-mini leading-none" aria-hidden>
+            {glyph}
+          </span>
+        )}
+        <span>{value}</span>
       </div>
-      {hint && (
-        <div className="text-[11px] leading-snug text-muted-foreground">{hint}</div>
-      )}
+      {hint && <div className="text-micro leading-snug text-graphite">{hint}</div>}
     </div>
   );
 }

@@ -2,11 +2,12 @@
 
 import { useMemo, useState, useEffect, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { getMyList } from "@/lib/client-storage";
 import { LayoutGrid, Rows3, SlidersHorizontal, X } from "lucide-react";
 import { TickerCard } from "./ticker-card";
 import { TickerTable } from "./ticker-table";
 import { cn } from "@/lib/utils";
-import { signalLabel } from "@/lib/format";
+import { signalGlyph, signalShortLabel } from "@/lib/signal-display";
 import {
   COLUMNS,
   isActionable,
@@ -24,17 +25,26 @@ type View = "table" | "cards";
 
 const SIGNAL_ORDER: Signal[] = ["strong_buy", "buy", "neutral", "sell", "strong_sell"];
 
-const SIGNAL_DOT: Record<Signal, string> = {
-  strong_buy: "bg-emerald-500",
-  buy: "bg-emerald-500/70",
-  neutral: "bg-zinc-400",
-  sell: "bg-rose-500/70",
-  strong_sell: "bg-rose-500",
+/**
+ * The chip row is where the colour vocabulary gets taught: the glyph carries its
+ * signal's hue, so by the time you reach the table you already know what a green
+ * conviction number means. The chip container itself stays interactive-blue —
+ * "you can click this" must never read as "this went up".
+ */
+const SIGNAL_TONE: Record<Signal, string> = {
+  strong_buy: "text-bull",
+  buy: "text-bull",
+  neutral: "text-graphite",
+  sell: "text-bear",
+  strong_sell: "text-bear",
 };
 
 const VIEW_KEY = "desk.view.v1";
 const INITIAL_VISIBLE = 60;
 const PAGE_SIZE = 60;
+/** Cards enter in a short cascade; the last card in view must not wait for it. */
+const CARD_STAGGER_MS = 20;
+const MAX_CARD_STAGGER_MS = 200;
 const SORT_KEYS = new Set<string>(COLUMNS.map((c) => c.key));
 
 function parseSignals(raw: string | null): Set<Signal> {
@@ -75,6 +85,17 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     () => params.get("actionable") === "1",
   );
   const [staleOnly, setStaleOnly] = useState(() => params.get("stale") === "1");
+  const [starredOnly, setStarredOnly] = useState(() => params.get("starred") === "1");
+
+  // The sidebar caps "My list" to keep the rail inside one viewport, so its
+  // overflow link lands here — the filter has to actually exist for that.
+  const [starred, setStarred] = useState<Set<string>>(new Set());
+  useEffect(() => {
+    const refresh = () => setStarred(new Set(getMyList()));
+    refresh();
+    window.addEventListener("mylist-change", refresh);
+    return () => window.removeEventListener("mylist-change", refresh);
+  }, []);
   const [sortKey, setSortKey] = useState<SortKey>(() => {
     const v = params.get("sort");
     return v && SORT_KEYS.has(v) ? (v as SortKey) : "conviction";
@@ -116,6 +137,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     if (group !== "all") p.set("group", group);
     if (actionableOnly) p.set("actionable", "1");
     if (staleOnly) p.set("stale", "1");
+    if (starredOnly) p.set("starred", "1");
     if (sortKey !== "conviction") p.set("sort", sortKey);
     if (sortDir !== "desc") p.set("dir", sortDir);
     if (view !== "table") p.set("view", view);
@@ -132,6 +154,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     group,
     actionableOnly,
     staleOnly,
+    starredOnly,
     sortKey,
     sortDir,
     view,
@@ -147,8 +170,9 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
       actionable: tickers.filter(isActionable).length,
       stale: tickers.filter(isStale).length,
       tracked: tickers.filter((t) => t.group === "tracked").length,
+      starred: tickers.filter((t) => starred.has(t.symbol)).length,
     }),
-    [tickers],
+    [tickers, starred],
   );
 
   const allMarkets = useMemo(
@@ -184,6 +208,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
       if (group !== "all" && t.group !== group) return false;
       if (actionableOnly && !isActionable(t)) return false;
       if (staleOnly && !isStale(t)) return false;
+      if (starredOnly && !starred.has(t.symbol)) return false;
       if (signals.size > 0 && (t.signal == null || !signals.has(t.signal))) return false;
       if (markets.size > 0 && !markets.has(t.market)) return false;
       if (sectors.size > 0 && (t.sector == null || !sectors.has(t.sector))) return false;
@@ -202,6 +227,8 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     group,
     actionableOnly,
     staleOnly,
+    starredOnly,
+    starred,
     sortKey,
     sortDir,
   ]);
@@ -215,7 +242,8 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     analyzed !== "all" ||
     group !== "all" ||
     actionableOnly ||
-    staleOnly;
+    staleOnly ||
+    starredOnly;
 
   function reset() {
     setSearch("");
@@ -227,6 +255,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     setGroup("all");
     setActionableOnly(false);
     setStaleOnly(false);
+    setStarredOnly(false);
     setVisible(INITIAL_VISIBLE);
   }
 
@@ -255,7 +284,11 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex flex-1 flex-wrap items-center gap-2">
           <div className="relative w-full sm:max-w-[220px]">
+            <label htmlFor="ticker-search" className="sr-only">
+              Search tickers
+            </label>
             <input
+              id="ticker-search"
               type="search"
               value={search}
               onChange={(e) => {
@@ -263,14 +296,13 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
                 setVisible(INITIAL_VISIBLE);
               }}
               placeholder="Search symbol or name"
-              className="h-9 w-full rounded-md border bg-background px-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-brand/50"
-              aria-label="Search tickers"
+              className="h-9 w-full rounded-md border bg-background px-3 text-sm transition-colors placeholder:text-graphite focus:border-action"
             />
             {search && (
               <button
                 type="button"
                 onClick={() => setSearch("")}
-                className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-0.5 text-muted-foreground hover:bg-muted hover:text-foreground"
+                className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-0.5 text-graphite hover:bg-muted hover:text-ink"
                 aria-label="Clear search"
               >
                 <X className="size-3.5" />
@@ -287,7 +319,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
             options={[
               { v: "all", label: `All · ${tickers.length}` },
               { v: "briefed", label: `Briefed · ${counts.briefed}` },
-              { v: "raw", label: "Data only" },
+              { v: "raw", label: "Not briefed" },
             ]}
           />
           <PillGroup
@@ -313,7 +345,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
             id="sort-select"
             value={sortKey}
             onChange={(e) => handleSort(e.target.value as SortKey)}
-            className="h-9 rounded-md border bg-background px-2 text-xs outline-none transition-colors focus:border-brand/50"
+            className="h-9 rounded-md border bg-background px-2 text-xs transition-colors focus:border-action"
           >
             {COLUMNS.map((c) => (
               <option key={c.key} value={c.key}>
@@ -324,7 +356,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
           <button
             type="button"
             onClick={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
-            className="h-9 rounded-md border bg-background px-2.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
+            className="h-9 rounded-md border bg-background px-2.5 text-xs text-graphite transition-colors hover:text-ink"
             aria-label={`Sort direction: ${sortDir === "asc" ? "ascending" : "descending"}`}
           >
             {sortDir === "asc" ? "↑" : "↓"}
@@ -349,9 +381,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
                 onClick={() => setView(v)}
                 className={cn(
                   "grid h-full w-8 place-items-center rounded transition-colors",
-                  view === v
-                    ? "bg-muted text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
+                  view === v ? "bg-muted text-ink" : "text-graphite hover:text-ink",
                 )}
               >
                 <Icon className="size-4" />
@@ -362,6 +392,21 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
       </div>
 
       <div className="flex flex-wrap items-center gap-1.5">
+        {counts.starred > 0 && (
+          <Chip
+            active={starredOnly}
+            onClick={() => {
+              setStarredOnly((v) => !v);
+              setVisible(INITIAL_VISIBLE);
+            }}
+            title="Only the tickers you have starred"
+          >
+            <span aria-hidden className="text-halt">
+              ★
+            </span>
+            My list · {counts.starred}
+          </Chip>
+        )}
         <Chip
           active={actionableOnly}
           disabled={counts.actionable === 0 && !actionableOnly}
@@ -371,7 +416,9 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
           }}
           title="Last close has reached the suggested entry limit"
         >
-          <span className="size-1.5 shrink-0 rounded-full bg-emerald-500" aria-hidden />
+          <span aria-hidden className="text-bull">
+            ▲
+          </span>
           At entry · {counts.actionable}
         </Chip>
         <Chip
@@ -383,7 +430,9 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
           }}
           title={`Briefing older than ${STALE_DAYS} days`}
         >
-          <span className="size-1.5 shrink-0 rounded-full bg-amber-500" aria-hidden />
+          <span aria-hidden className="text-halt">
+            °
+          </span>
           Stale &gt;{STALE_DAYS}d · {counts.stale}
         </Chip>
         <span className="mx-1 h-4 w-px bg-border" aria-hidden />
@@ -394,10 +443,12 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
             onClick={() => toggleSet(signals, s, setSignals)}
           >
             <span
-              className={cn("size-1.5 shrink-0 rounded-full", SIGNAL_DOT[s])}
               aria-hidden
-            />
-            {signalLabel(s)}
+              className={cn("shrink-0", signals.has(s) && SIGNAL_TONE[s])}
+            >
+              {signalGlyph(s)}
+            </span>
+            {signalShortLabel(s)}
           </Chip>
         ))}
         <button
@@ -405,10 +456,8 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
           onClick={() => setMoreFilters((v) => !v)}
           aria-expanded={moreFilters}
           className={cn(
-            "ml-1 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors",
-            moreFilters
-              ? "border-foreground/20 text-foreground"
-              : "border-border text-muted-foreground hover:text-foreground",
+            "ml-1 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-micro font-medium transition-colors",
+            moreFilters ? "border-ink text-ink" : "border-rule text-graphite hover:text-ink",
           )}
         >
           <SlidersHorizontal className="size-3" />
@@ -461,18 +510,21 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
       )}
 
       <div className="flex items-center justify-between border-t pt-3">
-        <span className="text-xs text-muted-foreground">
-          Showing <span className="num text-foreground">{shown.length}</span> of{" "}
-          <span className="num">{filtered.length}</span>
+        <span className="text-xs text-graphite">
+          Showing <span className="num text-ink">{shown.length}</span> of{" "}
+          <span className="num text-ink">{filtered.length}</span> matching
           {filtered.length !== tickers.length && (
-            <span className="text-muted-foreground/70"> (of {tickers.length})</span>
+            <span>
+              {" "}
+              · <span className="num">{tickers.length}</span> tracked in total
+            </span>
           )}
         </span>
         {hasActiveFilters && (
           <button
             type="button"
             onClick={reset}
-            className="text-xs text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+            className="text-xs text-graphite underline-offset-4 transition-colors hover:text-ink hover:underline"
           >
             Reset filters
           </button>
@@ -480,8 +532,21 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
       </div>
 
       {filtered.length === 0 ? (
-        <div className="rounded-lg border border-dashed p-10 text-center text-sm text-muted-foreground">
-          No tickers match these filters.
+        <div className="rounded-lg border border-dashed p-10 text-center">
+          <p className="text-sm text-ink">No ticker matches these filters.</p>
+          <p className="mt-1 text-xs text-graphite">
+            Widen the signal or coverage filters, or reset them to see all{" "}
+            <span className="num">{tickers.length}</span> tickers.
+          </p>
+          {hasActiveFilters && (
+            <button
+              type="button"
+              onClick={reset}
+              className="mt-4 h-9 rounded-md border bg-background px-4 text-sm font-medium text-ink transition-colors hover:bg-muted"
+            >
+              Reset filters
+            </button>
+          )}
         </div>
       ) : (
         <>
@@ -501,7 +566,9 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
                 <div
                   key={t.symbol}
                   className="fade-up"
-                  style={{ animationDelay: `${Math.min(i * 20, 200)}ms` }}
+                  style={{
+                    animationDelay: `${Math.min(i * CARD_STAGGER_MS, MAX_CARD_STAGGER_MS)}ms`,
+                  }}
                 >
                   <TickerCard t={t} />
                 </div>
@@ -513,7 +580,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
               <button
                 type="button"
                 onClick={() => setVisible((v) => v + PAGE_SIZE)}
-                className="h-9 rounded-md border bg-background px-4 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                className="h-9 rounded-md border bg-background px-4 text-sm font-medium text-ink transition-colors hover:bg-muted"
               >
                 Load {Math.min(PAGE_SIZE, filtered.length - visible)} more
               </button>
@@ -528,9 +595,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
 function FilterRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="w-14 shrink-0 text-[11px] font-medium text-muted-foreground">
-        {label}
-      </span>
+      <span className="eyebrow w-14 shrink-0">{label}</span>
       <div className="flex flex-wrap gap-1.5">{children}</div>
     </div>
   );
@@ -557,11 +622,13 @@ function Chip({
       title={title}
       disabled={disabled}
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors",
+        "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-micro font-medium transition-colors",
+        // A chip is something you clicked, not something that went up — so the
+        // active state is `action`, never a direction colour.
         active
-          ? "border-brand/30 bg-brand/10 text-brand"
-          : "border-border bg-background text-muted-foreground hover:border-foreground/20 hover:text-foreground",
-        disabled && "cursor-not-allowed opacity-40 hover:border-border hover:text-muted-foreground",
+          ? "border-action bg-action/10 text-action"
+          : "border-rule bg-background text-graphite hover:border-ink hover:text-ink",
+        disabled && "cursor-not-allowed opacity-40 hover:border-rule hover:text-graphite",
       )}
     >
       {children}
@@ -594,10 +661,8 @@ function PillGroup<T extends string>({
           aria-checked={value === o.v}
           onClick={() => onChange(o.v)}
           className={cn(
-            "h-full rounded px-2.5 text-[12px] font-medium transition-colors",
-            value === o.v
-              ? "bg-muted text-foreground"
-              : "text-muted-foreground hover:text-foreground",
+            "h-full rounded px-2.5 text-xs font-medium transition-colors",
+            value === o.v ? "bg-muted text-ink" : "text-graphite hover:text-ink",
           )}
         >
           {o.label}
