@@ -1,19 +1,14 @@
 "use client";
 
-import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { ChevronRight, Menu, Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { cn } from "@/lib/utils";
-import type { Signal, TickerSummary } from "@/lib/types";
-
-const SIGNAL_DOT: Record<Signal, string> = {
-  strong_buy: "bg-emerald-500",
-  buy: "bg-emerald-500/70",
-  neutral: "bg-zinc-400",
-  sell: "bg-rose-500/70",
-  strong_sell: "bg-rose-500",
-};
+import { signalGlyph, signalShortLabel } from "@/lib/signal-display";
+import type { TickerSummary } from "@/lib/types";
 
 export function Topbar({
   onMenuClick,
@@ -25,6 +20,7 @@ export function Topbar({
   const pathname = usePathname();
   const crumbs = buildCrumbs(pathname);
   const [searchOpen, setSearchOpen] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -38,32 +34,36 @@ export function Topbar({
   }, []);
 
   return (
-    <header className="sticky top-0 z-30 flex h-16 shrink-0 items-center justify-between gap-4 border-b bg-background/80 px-5 backdrop-blur-md md:px-10">
+    <header className="sticky top-0 z-30 flex h-topbar shrink-0 items-center justify-between gap-4 border-b bg-background/80 px-5 backdrop-blur-md md:px-10">
       <div className="flex min-w-0 items-center gap-3">
-        <button
-          type="button"
+        <Button
+          variant="ghost"
+          size="icon"
           onClick={onMenuClick}
-          className="-ml-1 inline-flex size-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
+          className="-ml-1 lg:hidden"
           aria-label="Open navigation menu"
         >
           <Menu className="size-5" />
-        </button>
+        </Button>
         <Breadcrumb crumbs={crumbs} />
       </div>
 
-      <div className="hidden items-center gap-2 md:flex">
-        <button
-          type="button"
+      <div className="flex items-center gap-1">
+        <ThemeToggle />
+        <Button
+          ref={triggerRef}
+          variant="outline"
+          size="sm"
           onClick={() => setSearchOpen(true)}
-          className="inline-flex h-9 items-center gap-2 rounded-md border bg-background px-3 text-xs text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+          className="hidden text-graphite hover:border-action hover:text-action md:inline-flex"
           aria-label="Search tickers"
         >
           <Search className="size-3.5" />
           <span>Search</span>
-          <kbd className="ml-4 rounded border bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
+          <kbd className="num ml-4 rounded border bg-muted px-1.5 py-0.5 text-mini font-medium text-graphite">
             ⌘K
           </kbd>
-        </button>
+        </Button>
       </div>
 
       <SearchPalette
@@ -74,6 +74,9 @@ export function Topbar({
     </header>
   );
 }
+
+const FOCUSABLE =
+  'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 function SearchPalette({
   open,
@@ -89,6 +92,13 @@ function SearchPalette({
   const [activeIdx, setActiveIdx] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const restoreRef = useRef<HTMLElement | null>(null);
+
+  const baseId = useId();
+  const inputId = `${baseId}-input`;
+  const listboxId = `${baseId}-listbox`;
+  const optionId = (i: number) => `${baseId}-option-${i}`;
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -110,6 +120,14 @@ function SearchPalette({
     }
   }, [open]);
 
+  // A dialog that swallows focus has to give it back, or the keyboard user is
+  // dropped at the top of the document every time they dismiss the palette.
+  useEffect(() => {
+    if (!open) return;
+    restoreRef.current = document.activeElement as HTMLElement | null;
+    return () => restoreRef.current?.focus?.();
+  }, [open]);
+
   useEffect(() => {
     setActiveIdx(0);
   }, [query]);
@@ -128,6 +146,21 @@ function SearchPalette({
       if (e.key === "Escape") {
         e.preventDefault();
         onClose();
+      } else if (e.key === "Tab") {
+        // aria-modal is a promise to assistive tech; without a trap the promise
+        // is false the moment the user presses Tab.
+        const nodes = panelRef.current?.querySelectorAll<HTMLElement>(FOCUSABLE);
+        if (!nodes || nodes.length === 0) return;
+        const first = nodes[0];
+        const last = nodes[nodes.length - 1];
+        const activeEl = document.activeElement;
+        if (e.shiftKey && (activeEl === first || !panelRef.current?.contains(activeEl))) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && activeEl === last) {
+          e.preventDefault();
+          first.focus();
+        }
       } else if (e.key === "ArrowDown") {
         e.preventDefault();
         setActiveIdx((i) => Math.min(i + 1, Math.max(results.length - 1, 0)));
@@ -166,66 +199,82 @@ function SearchPalette({
         type="button"
         aria-label="Close search"
         onClick={onClose}
-        className="absolute inset-0 bg-foreground/40 backdrop-blur-sm"
+        className="absolute inset-0 bg-ink/40 backdrop-blur-sm"
       />
-      <div className="relative w-full max-w-lg overflow-hidden rounded-xl border bg-background shadow-2xl">
+      <div
+        ref={panelRef}
+        className="relative w-full max-w-lg overflow-hidden rounded-lg border bg-popover shadow-lg"
+      >
         <div className="flex items-center gap-2 border-b px-4">
-          <Search className="size-4 shrink-0 text-muted-foreground" />
+          <Search className="size-4 shrink-0 text-graphite" aria-hidden />
+          <label htmlFor={inputId} className="sr-only">
+            Search tickers by symbol or name
+          </label>
           <input
+            id={inputId}
             ref={inputRef}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search tickers…"
-            className="h-12 w-full bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none"
+            role="combobox"
+            aria-expanded
+            aria-controls={listboxId}
+            aria-autocomplete="list"
+            aria-activedescendant={
+              results.length > 0 ? optionId(activeIdx) : undefined
+            }
+            className="h-12 w-full bg-transparent text-sm text-ink placeholder:text-graphite"
             autoComplete="off"
             spellCheck={false}
           />
-          <kbd className="hidden rounded border bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground sm:inline-block">
+          <kbd className="hidden rounded border bg-muted px-1.5 py-0.5 text-mini font-medium text-graphite sm:inline-block">
             Esc
           </kbd>
         </div>
         <ul
+          id={listboxId}
           ref={listRef}
           role="listbox"
+          aria-label="Ticker results"
           className="max-h-[50vh] overflow-y-auto py-1"
         >
           {results.length === 0 ? (
-            <li className="px-4 py-6 text-center text-xs text-muted-foreground">
+            <li className="px-4 py-6 text-center text-xs text-graphite">
               No matches
             </li>
           ) : (
             results.map((t, i) => {
               const active = i === activeIdx;
-              const dot = t.signal ? SIGNAL_DOT[t.signal] : "bg-muted-foreground/30";
-              const up = (t.priceChangePct ?? 0) >= 0;
               return (
                 <li
                   key={t.symbol}
+                  id={optionId(i)}
                   data-idx={i}
                   role="option"
                   aria-selected={active}
                   onMouseEnter={() => setActiveIdx(i)}
                   onClick={() => go(t.symbol)}
                   className={cn(
-                    "mx-1 flex h-11 cursor-pointer items-center gap-3 rounded-md px-3 text-sm",
-                    active ? "bg-muted text-foreground" : "text-muted-foreground",
+                    "mx-1 flex h-11 cursor-pointer items-center gap-3 rounded px-3 text-sm",
+                    active ? "bg-action/10 text-action" : "text-graphite",
                   )}
                 >
-                  <span className={cn("size-1.5 shrink-0 rounded-full", dot)} aria-hidden />
-                  <span className="num font-medium text-foreground">{t.symbol}</span>
+                  <span
+                    className="w-4 shrink-0 text-center text-mini leading-none text-graphite"
+                    aria-hidden
+                  >
+                    {signalGlyph(t.signal)}
+                  </span>
+                  <span className="sr-only">{signalShortLabel(t.signal)}.</span>
+                  <span className="num font-medium text-ink">{t.symbol}</span>
                   {t.name && (
-                    <span className="min-w-0 truncate text-xs text-muted-foreground">
+                    <span className="min-w-0 truncate text-xs text-graphite">
                       {t.name}
                     </span>
                   )}
                   {t.priceChangePct != null && (
-                    <span
-                      className={cn(
-                        "num ml-auto text-[11px]",
-                        up ? "text-emerald-600" : "text-rose-600",
-                      )}
-                    >
-                      {up ? "+" : ""}
+                    <span className="num ml-auto text-micro text-graphite">
+                      {t.priceChangePct >= 0 ? "+" : ""}
                       {t.priceChangePct.toFixed(2)}%
                     </span>
                   )}
@@ -265,18 +314,16 @@ function Breadcrumb({ crumbs }: { crumbs: Crumb[] }) {
             <Fragment key={c.href}>
               {i > 0 && (
                 <li aria-hidden>
-                  <ChevronRight className="size-3.5 text-muted-foreground/60" />
+                  <ChevronRight className="size-3.5 text-graphite" />
                 </li>
               )}
               <li className={cn("min-w-0", isLast && "truncate")}>
                 {isLast ? (
-                  <span className="truncate font-medium text-foreground">
-                    {c.label}
-                  </span>
+                  <span className="truncate font-medium text-ink">{c.label}</span>
                 ) : (
                   <Link
                     href={c.href}
-                    className="text-muted-foreground transition-colors hover:text-foreground"
+                    className="text-graphite transition-colors hover:text-action"
                   >
                     {c.label}
                   </Link>

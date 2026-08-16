@@ -2,56 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Ink on cool paper, with colour ranked rather than rationed.
+ *
+ * Chrome — nav, headers, table rules, containers — stays ink and graphite so it
+ * recedes. Colour belongs to the data: `bull`/`bear` on signals, conviction,
+ * price deltas and the chart; `halt` on the withheld-levels and extreme-reading
+ * warnings; `action` on anything you can click.
+ *
+ * Every hue here is tuned to clear 4.5:1 on its own ground — the stock
+ * emerald-600/amber-600 this replaced sat at 3.4:1 and 3.1:1, and did so at the
+ * smallest sizes in the app. Colour is also never the sole carrier of meaning:
+ * a direction glyph or a text label always rides along with it.
+ */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 4%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 4%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 4%;
-    --primary: 240 10% 4%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 10% 10%;
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
-    --accent: 240 5% 96%;
-    --accent-foreground: 240 10% 10%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 233 34% 32%;
-    --brand: 233 34% 32%;
-    --brand-foreground: 0 0% 100%;
-    --bull: 152 60% 38%;
-    --bear: 358 70% 52%;
-    --radius: 0.625rem;
+    /* Ground */
+    --paper: 220 13% 95%;
+    --surface: 0 0% 100%;
+    --ink: 225 17% 9%;
+    --graphite: 217 6% 41%; /* 5.2:1 on paper — 45% landed at 4.48 */
+    --rule: 220 10% 89%;
+
+    /* Direction — 5.3:1 and 6.1:1 on paper */
+    --bull: 159 59% 30%;
+    --bear: 2 59% 45%;
+    /* Caution: withheld levels, stale data, extreme readings — 5.0:1 */
+    --halt: 42 63% 33%;
+    /* Interactive. Deep blue sits ~140° from both bull and bear, so "you can
+       click this" never reads as "this went up". 5.7:1 on paper. */
+    --action: 223 65% 48%;
+    --action-foreground: 0 0% 100%;
+
+    /* Semantic aliases consumed by the shadcn primitives */
+    --background: var(--paper);
+    --foreground: var(--ink);
+    --card: var(--surface);
+    --card-foreground: var(--ink);
+    --popover: var(--surface);
+    --popover-foreground: var(--ink);
+    --primary: var(--ink);
+    --primary-foreground: var(--surface);
+    --secondary: 220 11% 92%;
+    --secondary-foreground: var(--ink);
+    --muted: 220 11% 92%;
+    --muted-foreground: var(--graphite);
+    --accent: 220 11% 92%;
+    --accent-foreground: var(--ink);
+    --destructive: var(--bear);
+    --destructive-foreground: var(--surface);
+    --border: var(--rule);
+    --input: var(--rule);
+    --ring: var(--action);
+
+    --radius: 0.25rem;
   }
 
   .dark {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
-    --card: 240 8% 7%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 8% 7%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 10% 4%;
-    --secondary: 240 5% 12%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 5% 12%;
-    --muted-foreground: 240 4% 64%;
-    --accent: 240 5% 14%;
-    --accent-foreground: 0 0% 98%;
-    --border: 240 5% 16%;
-    --input: 240 5% 16%;
-    --ring: 233 40% 68%;
-    --brand: 233 40% 66%;
-    --brand-foreground: 240 10% 6%;
-    --bull: 152 60% 48%;
-    --bear: 358 70% 62%;
+    --paper: 216 15% 6%;
+    --surface: 223 14% 10%;
+    --ink: 220 9% 94%;
+    --graphite: 218 8% 60%;
+    --rule: 218 13% 17%;
+
+    --bull: 156 47% 53%;
+    --bear: 3 75% 64%;
+    --halt: 41 61% 53%;
+    --action: 224 87% 70%; /* 6.5:1 on the dark ground */
+    --action-foreground: 216 15% 6%;
+
+    --secondary: 220 12% 14%;
+    --accent: 220 12% 14%;
+    --muted: 220 12% 14%;
+    --primary-foreground: 216 15% 6%;
+    --destructive-foreground: 216 15% 6%;
+    --ring: var(--action);
   }
 
   * {
@@ -66,13 +91,29 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* Structure runs wide. Archivo's wdth axis is what gives headers and ticker
+     symbols their signage quality; without it this is just another grotesk. */
   body {
-    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+    font-stretch: 112%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-stretch: 125%;
+    letter-spacing: -0.02em;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--action));
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 
   ::selection {
-    background: hsl(var(--foreground) / 0.12);
-    color: hsl(var(--foreground));
+    background: hsl(var(--ink) / 0.14);
+    color: hsl(var(--ink));
   }
 
   ::-webkit-scrollbar {
@@ -83,22 +124,50 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--border));
+    background: hsl(var(--rule));
     border-radius: 999px;
-    border: 2px solid hsl(var(--background));
+    border: 2px solid hsl(var(--paper));
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--muted-foreground) / 0.4);
+    background: hsl(var(--graphite) / 0.5);
+  }
+}
+
+@layer components {
+  /* Computed: anything the pipeline calculated deterministically. */
+  .num {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    font-stretch: normal;
+    letter-spacing: -0.02em;
+  }
+
+  /* Argued: anything a model reasoned out in words. */
+  .prose-claim {
+    font-family: var(--font-prose), ui-serif, Georgia, serif;
+    font-stretch: normal;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    letter-spacing: 0.003em;
+    color: hsl(var(--ink) / 0.86);
+  }
+  .prose-claim strong {
+    font-weight: 600;
+    color: hsl(var(--ink));
+  }
+
+  /* Small caps signage for eyebrows and column heads. */
+  .eyebrow {
+    font-stretch: 125%;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: hsl(var(--graphite));
   }
 }
 
 @layer utilities {
-  .num {
-    font-family: var(--font-mono), ui-monospace, monospace;
-    font-variant-numeric: tabular-nums;
-    letter-spacing: -0.01em;
-  }
-
   @keyframes fade-up {
     from {
       opacity: 0;
@@ -113,13 +182,32 @@
     animation: fade-up 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
   }
 
+  /* The axis marks settle into place on load — the one orchestrated moment. */
+  @keyframes mark-settle {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) scaleY(0.4);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) scaleY(1);
+    }
+  }
+  .mark-settle {
+    animation: mark-settle 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .fade-up {
+    .fade-up,
+    .mark-settle {
       animation: none;
     }
-    * {
+    *,
+    *::before,
+    *::after {
       transition-duration: 0.001ms !important;
       animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
     }
   }
 }

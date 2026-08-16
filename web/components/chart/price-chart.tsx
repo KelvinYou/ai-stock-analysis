@@ -24,6 +24,20 @@ const RANGES = [
 
 type RangeKey = (typeof RANGES)[number]["key"];
 
+/**
+ * Recharts sets axis type through numeric props, so the type scale has to be
+ * restated here as a number. 11 is `text-micro` (0.6875rem at a 16px root).
+ */
+const AXIS_FONT_SIZE = 11;
+
+/**
+ * The series carries direction: bull when the selected range closed up, bear
+ * when it closed down. Colour is additive here — the delta above the plot still
+ * spells the direction out in a ▲/▼ glyph and a signed number, so a
+ * colour-blind reader loses nothing.
+ */
+const seriesColor = (up: boolean) => (up ? "hsl(var(--bull))" : "hsl(var(--bear))");
+
 export function PriceChart({
   data,
   currency = "USD",
@@ -44,42 +58,46 @@ export function PriceChart({
   const change = last - first;
   const changePct = first ? (change / first) * 100 : 0;
   const up = change >= 0;
+  const stroke = seriesColor(up);
 
-  const stroke = up ? "rgb(5 150 105)" : "rgb(225 29 72)";
   const gradientId = React.useId();
 
   return (
     <div>
       <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <div className="text-[11px] font-medium text-muted-foreground">
-            {range} range
-          </div>
+          <div className="eyebrow">{range} range</div>
           <div className="mt-1 flex items-baseline gap-2.5">
-            <span className="num text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+            <span className="num text-2xl font-semibold tracking-tight text-ink md:text-3xl">
               {fmtCurrency(last, currency)}
             </span>
             <span
               className={cn(
-                "num text-xs font-medium",
-                up ? "text-emerald-600" : "text-rose-600",
+                "num flex items-baseline gap-1.5 text-xs font-medium",
+                up ? "text-bull" : "text-bear",
               )}
             >
-              {up ? "+" : ""}
-              {fmtCurrency(change, currency)} · {fmtSignedPercent(changePct)}
+              <span className="text-mini leading-none" aria-hidden>
+                {up ? "▲" : "▼"}
+              </span>
+              <span>
+                {up ? "+" : ""}
+                {fmtCurrency(change, currency)} · {fmtSignedPercent(changePct)}
+              </span>
             </span>
           </div>
         </div>
-        <div className="inline-flex items-stretch overflow-hidden rounded-lg border bg-muted/40 p-0.5">
+        <div className="inline-flex items-stretch overflow-hidden rounded-lg border bg-secondary p-0.5">
           {RANGES.map((r) => (
             <button
               key={r.key}
               onClick={() => setRange(r.key)}
+              aria-pressed={range === r.key}
               className={cn(
-                "num rounded-md px-2.5 py-1 text-[11px] font-medium transition-colors",
+                "num rounded px-2.5 py-1 text-micro font-medium transition-colors",
                 range === r.key
-                  ? "bg-background text-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-foreground",
+                  ? "bg-action text-action-foreground"
+                  : "text-graphite hover:text-action",
               )}
             >
               {r.key}
@@ -92,31 +110,31 @@ export function PriceChart({
           <AreaChart data={sliced} margin={{ top: 5, right: 8, left: 0, bottom: 0 }}>
             <defs>
               <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor={stroke} stopOpacity={0.22} />
+                <stop offset="0%" stopColor={stroke} stopOpacity={0.2} />
                 <stop offset="100%" stopColor={stroke} stopOpacity={0} />
               </linearGradient>
             </defs>
-            <CartesianGrid stroke="hsl(var(--border))" strokeOpacity={0.6} vertical={false} />
+            <CartesianGrid stroke="hsl(var(--rule))" vertical={false} />
             <XAxis
               dataKey="date"
               tickFormatter={fmtDateShort}
-              stroke="hsl(var(--muted-foreground))"
+              stroke="hsl(var(--rule))"
+              tick={{ fill: "hsl(var(--graphite))", fontSize: AXIS_FONT_SIZE }}
               tickLine={false}
               axisLine={false}
               minTickGap={32}
-              fontSize={11}
             />
             <YAxis
               domain={["auto", "auto"]}
-              stroke="hsl(var(--muted-foreground))"
+              stroke="hsl(var(--rule))"
+              tick={{ fill: "hsl(var(--graphite))", fontSize: AXIS_FONT_SIZE }}
               tickLine={false}
               axisLine={false}
               tickFormatter={(v) => fmtCurrency(v, currency).replace(/\.\d+$/, "")}
               width={60}
-              fontSize={11}
             />
             <Tooltip
-              cursor={{ stroke: "hsl(var(--foreground))", strokeOpacity: 0.3, strokeDasharray: "3 3" }}
+              cursor={{ stroke: "hsl(var(--graphite))", strokeDasharray: "3 3" }}
               content={<ChartTooltip currency={currency} />}
             />
             <Area
@@ -147,14 +165,14 @@ function ChartTooltip({
   const p = payload[0].payload;
   return (
     <div className="rounded-lg border bg-popover px-3 py-2 text-xs shadow-lg">
-      <div className="text-[11px] font-medium text-muted-foreground">
+      <div className="num text-micro font-medium text-graphite">
         {fmtDateShort(p.date)}
       </div>
       <div className="num mt-1 flex items-center gap-3">
-        <span className="text-muted-foreground">Close</span>
-        <span className="font-semibold text-foreground">{fmtCurrency(p.close, currency)}</span>
+        <span className="text-graphite">Close</span>
+        <span className="font-semibold text-ink">{fmtCurrency(p.close, currency)}</span>
       </div>
-      <div className="num mt-0.5 flex items-center gap-3 text-muted-foreground">
+      <div className="num mt-0.5 flex items-center gap-3 text-graphite">
         <span>Vol</span>
         <span>{p.volume.toLocaleString("en-US")}</span>
       </div>

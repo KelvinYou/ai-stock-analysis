@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { AlertTriangle } from "lucide-react";
 import { CopyCommand } from "@/components/shared/copy-command";
 import { fmtDateShort } from "@/lib/format";
 import { isStale, STALE_DAYS } from "@/lib/screener";
@@ -10,6 +9,10 @@ import type { TickerSummary, WatchlistEntry } from "@/lib/types";
  * Freshness and coverage of the whole desk, stated up front. Without this the
  * dashboard silently implies "you are looking at everything, as of now" — which
  * is wrong on both counts whenever the pipeline has not been run.
+ *
+ * Warnings are drawn as a `halt`-coloured left rule *plus* the word "Warning".
+ * The hue is additive — it makes the row findable in a scan, but the text label
+ * is what carries the meaning, so nothing is lost without the colour.
  */
 export function DataStatus({
   tickers,
@@ -94,16 +97,22 @@ function Stat({
   tone?: "warn";
 }) {
   return (
-    <div className="rounded-lg border bg-card p-3" title={hint}>
-      <div className="text-[11px] font-medium text-muted-foreground">{label}</div>
-      <div
-        className={cn(
-          "num mt-1 text-base font-semibold tracking-tight",
-          tone === "warn" ? "text-amber-600" : "text-foreground",
-        )}
-      >
+    <div
+      className={cn(
+        "rounded-lg border bg-card p-3",
+        tone === "warn" && "border-l-2 border-l-halt",
+      )}
+      title={hint}
+    >
+      <div className="eyebrow">{label}</div>
+      <div className="num mt-1 text-base font-semibold tracking-tight text-ink">
         {value}
       </div>
+      {tone === "warn" && (
+        <div className="mt-1 text-mini font-medium uppercase tracking-[0.07em] text-halt">
+          Needs attention
+        </div>
+      )}
     </div>
   );
 }
@@ -124,9 +133,9 @@ function Gap({
         .join(" && ");
 
   return (
-    <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-lg border border-amber-500/30 bg-amber-500/5 px-3 py-2.5 text-xs">
-      <span className="inline-flex items-center gap-1.5 font-medium text-amber-700 dark:text-amber-500">
-        <AlertTriangle className="size-3.5" />
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-l-2 border-halt bg-card px-3 py-2.5 text-xs">
+      <span className="font-medium text-ink">
+        <span className="eyebrow mr-2 text-halt">Warning</span>
         {title}
       </span>
       <span className="flex flex-wrap gap-1">
@@ -135,7 +144,7 @@ function Gap({
           fetchOnly ? (
             <span
               key={e.symbol}
-              className="num rounded border bg-background px-1.5 py-0.5 text-[11px] text-muted-foreground"
+              className="num rounded border bg-background px-1.5 py-0.5 text-micro text-graphite"
             >
               {e.symbol}
             </span>
@@ -143,7 +152,7 @@ function Gap({
             <Link
               key={e.symbol}
               href={`/${e.symbol}`}
-              className="num rounded border bg-background px-1.5 py-0.5 text-[11px] text-foreground transition-colors hover:bg-muted"
+              className="num rounded border bg-background px-1.5 py-0.5 text-micro text-ink transition-colors hover:border-action hover:text-action"
             >
               {e.symbol}
             </Link>

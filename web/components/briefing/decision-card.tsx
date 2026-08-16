@@ -1,9 +1,25 @@
-import { Flag, Target } from "lucide-react";
-import { SignalBadge } from "./signal-badge";
+import { ConsensusAxis } from "@/components/consensus/consensus-axis";
 import { describeConviction } from "@/lib/conviction";
 import { fmtCurrency } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { Briefing } from "@/lib/types";
+
+const DIRECTION_WORD = { bull: "Buy", bear: "Sell", neutral: "Hold" } as const;
+
+// Hold stays ink: a neutral verdict is a complete result, not a weak one, and
+// greying it out would read as "no answer yet".
+const VERDICT_TONE = {
+  bull: "text-bull",
+  bear: "text-bear",
+  neutral: "text-ink",
+} as const;
+
+const TONE_EYEBROW = {
+  strong: "High conviction",
+  moderate: "Moderate conviction",
+  weak: "Slight lean",
+  mixed: "The desks disagree",
+} as const;
 
 export function DecisionCard({
   briefing,
@@ -22,82 +38,53 @@ export function DecisionCard({
 
   return (
     <section
-      aria-label="Decision summary"
-      className="fade-up rounded-xl border bg-card p-5 md:p-6"
+      aria-label="Decision"
+      className="fade-up overflow-hidden rounded-lg border bg-card"
     >
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div className="flex flex-wrap items-center gap-3">
-          <SignalBadge signal={briefing.overall_signal} size="xl" />
-          <div className="flex flex-col gap-1">
-            <span className="text-sm font-medium text-foreground">{conviction.phrase}</span>
-            <AgreementRow
-              agreeing={conviction.agreement.agreeing}
-              total={conviction.agreement.total}
-              convergencePct={Math.round(briefing.conviction.signal_convergence * 100)}
-            />
-          </div>
+      <div className="grid items-center gap-8 p-6 md:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] md:gap-12 md:p-8">
+        <div>
+          <p className="eyebrow">{TONE_EYEBROW[conviction.tone]}</p>
+          <p
+            className={cn(
+              "mt-2 text-5xl font-semibold leading-[0.95] tracking-[-0.03em] [font-stretch:125%] md:text-6xl",
+              VERDICT_TONE[conviction.agreement.direction],
+            )}
+          >
+            {DIRECTION_WORD[conviction.agreement.direction]}
+          </p>
+          {conviction.agreement.total > 0 && (
+            <p className="mt-3 text-sm text-graphite">
+              <span className="num text-ink">{conviction.agreement.agreeing}</span> of{" "}
+              <span className="num text-ink">{conviction.agreement.total}</span> desks
+              back it
+            </p>
+          )}
+          {plan?.horizon && (
+            <p className="mt-5 border-t pt-3 text-xs text-graphite">
+              Horizon <span className="text-ink">{plan.horizon}</span>
+            </p>
+          )}
         </div>
-        {plan?.horizon && (
-          <div className="text-right">
-            <div className="text-[11px] font-medium text-muted-foreground">Horizon</div>
-            <div className="mt-0.5 text-sm text-foreground">{plan.horizon}</div>
-          </div>
-        )}
+
+        <ConsensusAxis briefing={briefing} />
       </div>
 
-      <div className="my-5 border-t" />
-
-      {hasLevels ? (
-        <LevelsRow
-          plan={plan!}
-          currency={currency}
-          riskReward={briefing.risk_assessment.risk_reward_ratio}
-        />
-      ) : (
-        <WatchForCallout note={plan?.note ?? null} />
-      )}
+      <div className="border-t bg-paper/60 px-6 py-5 md:px-8">
+        {hasLevels ? (
+          <Levels
+            plan={plan!}
+            currency={currency}
+            riskReward={briefing.risk_assessment.risk_reward_ratio}
+          />
+        ) : (
+          <Withheld note={plan?.note ?? null} />
+        )}
+      </div>
     </section>
   );
 }
 
-function AgreementRow({
-  agreeing,
-  total,
-  convergencePct,
-}: {
-  agreeing: number;
-  total: number;
-  convergencePct: number;
-}) {
-  if (total === 0) {
-    return (
-      <span className="text-xs text-muted-foreground">
-        {convergencePct}% signal convergence
-      </span>
-    );
-  }
-  return (
-    <div className="flex items-center gap-2 text-xs text-muted-foreground">
-      <span className="flex items-center gap-1" aria-hidden>
-        {Array.from({ length: total }).map((_, i) => (
-          <span
-            key={i}
-            className={cn(
-              "inline-block size-1.5 rounded-full",
-              i < agreeing ? "bg-foreground" : "bg-muted-foreground/25",
-            )}
-          />
-        ))}
-      </span>
-      <span>
-        <span className="num text-foreground">{agreeing}</span> of{" "}
-        <span className="num text-foreground">{total}</span> agents agree
-      </span>
-    </div>
-  );
-}
-
-function LevelsRow({
+function Levels({
   plan,
   currency,
   riskReward,
@@ -108,20 +95,17 @@ function LevelsRow({
 }) {
   return (
     <div>
-      <div className="grid grid-cols-3 gap-3 md:gap-4">
-        <Level
-          icon={<Target className="size-3.5" />}
-          label="Entry"
-          price={plan.entry_limit}
-          rationale={plan.entry_rationale}
-          currency={currency}
-        />
-        <Level
-          label="Stop loss"
-          price={plan.stop_loss}
-          rationale={plan.stop_rationale}
-          currency={currency}
-        />
+      <div className="flex flex-wrap items-baseline justify-between gap-3">
+        <h3 className="eyebrow">Levels</h3>
+        {riskReward && (
+          <span className="text-micro text-graphite">
+            Risk / reward <span className="num text-ink">{riskReward}</span>
+          </span>
+        )}
+      </div>
+      <dl className="mt-3 grid gap-x-6 gap-y-4 sm:grid-cols-3">
+        <Level label="Entry" price={plan.entry_limit} rationale={plan.entry_rationale} currency={currency} />
+        <Level label="Stop" price={plan.stop_loss} rationale={plan.stop_rationale} currency={currency} />
         <Level
           label="Target"
           price={plan.take_profit_1}
@@ -129,31 +113,18 @@ function LevelsRow({
           rationale={plan.target_rationale}
           currency={currency}
         />
-      </div>
-      {(riskReward || plan.note) && (
-        <div className="mt-4 flex flex-wrap items-center gap-3 border-t pt-3 text-xs text-muted-foreground">
-          {riskReward && (
-            <span className="inline-flex items-center gap-2 rounded-full border bg-background px-2.5 py-1">
-              <span>Risk / reward</span>
-              <span className="num font-medium text-foreground">{riskReward}</span>
-            </span>
-          )}
-          {plan.note && <span className="flex-1">{plan.note}</span>}
-        </div>
-      )}
+      </dl>
     </div>
   );
 }
 
 function Level({
-  icon,
   label,
   price,
   secondary,
   rationale,
   currency,
 }: {
-  icon?: React.ReactNode;
   label: string;
   price: number | null;
   secondary?: number | null;
@@ -161,37 +132,32 @@ function Level({
   currency: string;
 }) {
   return (
-    <div className="rounded-lg border bg-background p-3 md:p-4">
-      <div className="mb-1 flex items-center gap-1.5 text-[11px] font-medium text-muted-foreground">
-        {icon}
-        {label}
-      </div>
-      <div className="num text-base font-semibold tracking-tight text-foreground md:text-lg">
+    <div>
+      <dt className="text-micro uppercase tracking-[0.07em] text-graphite">{label}</dt>
+      <dd className="num mt-1 text-xl font-medium text-ink">
         {price !== null ? fmtCurrency(price, currency) : "—"}
-      </div>
-      {secondary != null && (
-        <div className="num mt-0.5 text-[11px] text-muted-foreground">
-          then {fmtCurrency(secondary, currency)}
-        </div>
-      )}
-      {rationale && (
-        <p className="mt-2 hidden text-xs leading-relaxed text-muted-foreground md:block">
-          {rationale}
-        </p>
-      )}
+        {secondary != null && (
+          <span className="ml-2 text-xs text-graphite">
+            then {fmtCurrency(secondary, currency)}
+          </span>
+        )}
+      </dd>
+      {rationale && <p className="prose-claim mt-1.5 text-xs">{rationale}</p>}
     </div>
   );
 }
 
-function WatchForCallout({ note }: { note: string | null }) {
+function Withheld({ note }: { note: string | null }) {
   return (
-    <div className="rounded-lg border border-amber-200 bg-amber-50/60 p-4">
-      <div className="mb-1.5 flex items-center gap-2 text-[11px] font-medium text-amber-700">
-        <Flag className="size-3.5" />
-        Watch for
-      </div>
-      <p className="text-sm leading-relaxed text-foreground">
-        {note ?? "Waiting for a clearer setup — no actionable levels yet."}
+    // `halt` is axis chroma: this is the axis's withheld state, restated where
+    // the levels would otherwise be.
+    <div className="border-l-2 border-halt pl-4">
+      <h3 className="text-micro font-semibold uppercase tracking-[0.07em] text-halt">
+        No levels quoted
+      </h3>
+      <p className="prose-claim mt-1 text-sm">
+        {note ??
+          "The desks are too far apart to place an entry, stop, or target. Wait for them to converge."}
       </p>
     </div>
   );

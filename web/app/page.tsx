@@ -25,16 +25,16 @@ export default async function ScreenerPage() {
       <section className="fade-up space-y-4">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
-            <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+            <h1 className="text-2xl font-semibold tracking-tight text-ink md:text-3xl">
               Screener
             </h1>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="mt-1 text-sm text-graphite">
               Every watchlist ticker, one row each. Sort by any column.
             </p>
           </div>
           <Link
             href="/about"
-            className="text-xs text-muted-foreground underline-offset-4 hover:text-brand hover:underline"
+            className="text-xs text-graphite underline-offset-4 hover:text-action hover:underline"
           >
             How the pipeline works →
           </Link>

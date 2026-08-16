@@ -28,22 +28,20 @@ export function CopyCommand({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-md border bg-muted/60 py-1 pl-2.5 pr-1",
+        "inline-flex items-center gap-1.5 rounded border bg-muted py-1 pl-2.5 pr-1",
         className,
       )}
     >
-      <code className="font-mono text-[11px] text-foreground">{command}</code>
+      <code className="num text-micro text-ink">{command}</code>
       <button
         type="button"
         onClick={copy}
         aria-label={copied ? "Copied" : `Copy: ${command}`}
-        className="rounded p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+        className="rounded p-1 text-graphite transition-colors hover:bg-action/10 hover:text-action"
       >
-        {copied ? (
-          <Check className="size-3 text-emerald-600" />
-        ) : (
-          <Copy className="size-3" />
-        )}
+        {/* The icon swap is the confirmation; `bull` on the tick just makes it
+            land faster. The aria-label changes to "Copied" either way. */}
+        {copied ? <Check className="size-3 text-bull" /> : <Copy className="size-3" />}
       </button>
     </span>
   );

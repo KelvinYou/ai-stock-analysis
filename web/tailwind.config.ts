@@ -4,17 +4,36 @@ const config: Config = {
   darkMode: "class",
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
   theme: {
-    container: {
-      center: true,
-      padding: "1.5rem",
-      screens: { "2xl": "1400px" },
-    },
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        // Three roles, three faces — see app/layout.tsx.
+        display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
+        prose: ["var(--font-prose)", "ui-serif", "Georgia", "serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
+      fontSize: {
+        // `micro` replaces 56 hand-written text-[11px]; `mini` replaces text-[10px].
+        mini: ["0.625rem", { lineHeight: "0.875rem" }],
+        micro: ["0.6875rem", { lineHeight: "1rem" }],
+      },
       colors: {
+        // Ground
+        paper: "hsl(var(--paper))",
+        ink: "hsl(var(--ink))",
+        graphite: "hsl(var(--graphite))",
+        rule: "hsl(var(--rule))",
+
+        // Data colour: direction, caution, and "you can click this".
+        // Chrome stays ink/graphite so these stay legible as signal.
+        bull: "hsl(var(--bull))",
+        bear: "hsl(var(--bear))",
+        halt: "hsl(var(--halt))",
+        action: {
+          DEFAULT: "hsl(var(--action))",
+          foreground: "hsl(var(--action-foreground))",
+        },
+
+        // Semantic aliases for the shadcn primitives.
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -48,35 +67,24 @@ const config: Config = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
-        bull: "hsl(var(--bull))",
-        bear: "hsl(var(--bear))",
-        brand: {
-          DEFAULT: "hsl(var(--brand))",
-          foreground: "hsl(var(--brand-foreground))",
-        },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        // Every radius derives from --radius so the whole app moves together.
+        sm: "calc(var(--radius) - 1px)",
+        DEFAULT: "var(--radius)",
+        md: "var(--radius)",
+        lg: "calc(var(--radius) + 2px)",
+        xl: "calc(var(--radius) + 4px)",
       },
-      keyframes: {
-        "fade-in": {
-          from: { opacity: "0", transform: "translateY(4px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
-        "pulse-soft": {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.6" },
-        },
+      maxWidth: {
+        shell: "1280px",
       },
-      animation: {
-        "fade-in": "fade-in 0.4s ease-out",
-        "pulse-soft": "pulse-soft 2.5s ease-in-out infinite",
+      spacing: {
+        topbar: "4rem",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
 
 export default config;

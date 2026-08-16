@@ -5,104 +5,113 @@ import { fmtCurrency, fmtSignedPercent } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { TickerSummary } from "@/lib/types";
 
+/** −1…+1 conviction fills at most half the track, out from the centre tick. */
+const CONVICTION_MAX = 1;
+
 export function TickerCard({ t }: { t: TickerSummary; index?: number }) {
   const up = (t.priceChangePct ?? 0) >= 0;
   const conviction = t.conviction ?? 0;
-  const convictionPct = Math.min(Math.abs(conviction) * 100, 100);
-  const convictionTone =
-    conviction > 0.15
-      ? "bg-emerald-500"
-      : conviction < -0.15
-        ? "bg-rose-500"
-        : "bg-zinc-400";
+  const halfWidthPct = (Math.min(Math.abs(conviction), CONVICTION_MAX) / CONVICTION_MAX) * 50;
 
   return (
-    <Link href={`/${t.symbol}`} className="group block focus:outline-none">
-      <article
-        className={cn(
-          "flex h-full flex-col gap-4 rounded-xl border bg-card p-5 transition-all duration-200",
-          "group-hover:-translate-y-0.5 group-hover:border-brand/40 group-hover:shadow-[0_6px_24px_-12px_rgba(0,0,0,0.12)]",
-          "group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2",
-        )}
-      >
-        <header className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <div className="flex items-center gap-2">
-              <span className="num text-base font-semibold tracking-tight text-foreground">
-                {t.symbol}
-              </span>
-              <span className="rounded-md bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
-                {t.market}
-              </span>
-              {t.group === "tracked" && (
-                <span className="rounded-md bg-foreground px-1.5 py-0.5 text-[10px] font-semibold uppercase text-background">
-                  Tracked
-                </span>
-              )}
-            </div>
-            <p className="mt-1 truncate text-xs text-muted-foreground">{t.name}</p>
-          </div>
-          <div className="flex items-center gap-1">
-            <StarButton symbol={t.symbol} />
-            {t.signal ? (
-              <SignalBadge signal={t.signal} size="sm" />
-            ) : (
-              <span
-                className="inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-medium text-muted-foreground/60"
-                title="Not yet analyzed"
-              >
-                Data only
+    // The card is the landmark; the symbol link stretches over it so the whole
+    // card is clickable without burying <header>/<footer> inside an anchor.
+    <article
+      className={cn(
+        "group relative flex h-full flex-col gap-4 rounded-lg border bg-card p-5",
+        "transition-colors duration-200 hover:border-ink focus-within:border-ink",
+      )}
+    >
+      <header className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2">
+            <Link
+              href={`/${t.symbol}`}
+              className="num text-base font-semibold tracking-tight text-ink after:absolute after:inset-0 after:content-['']"
+            >
+              {t.symbol}
+            </Link>
+            <span className="rounded bg-muted px-1.5 py-0.5 text-mini font-medium text-graphite">
+              {t.market}
+            </span>
+            {t.group === "tracked" && (
+              <span className="rounded bg-ink px-1.5 py-0.5 text-mini font-semibold uppercase tracking-[0.07em] text-background">
+                Tracked
               </span>
             )}
           </div>
-        </header>
+          <p className="mt-1 truncate text-xs text-graphite">{t.name}</p>
+        </div>
+        <div className="relative z-10 flex items-center gap-1">
+          <StarButton symbol={t.symbol} />
+          {t.signal ? (
+            <SignalBadge signal={t.signal} size="sm" />
+          ) : (
+            <span className="inline-flex items-center rounded-full border px-2 py-0.5 text-mini font-medium text-graphite">
+              Not briefed yet
+            </span>
+          )}
+        </div>
+      </header>
 
-        <div className="flex items-end justify-between gap-3">
-          <div>
-            <div className="num text-xl font-semibold tracking-tight text-foreground">
-              {fmtCurrency(t.price, t.currency)}
-            </div>
-            {t.priceChangePct != null && (
-              <div
-                className={cn(
-                  "num mt-1 text-xs font-medium",
-                  up ? "text-emerald-600" : "text-rose-600",
-                )}
-              >
-                {up ? "+" : ""}
-                {fmtSignedPercent(t.priceChangePct)}
-              </div>
-            )}
+      <div className="flex items-end justify-between gap-3">
+        <div>
+          <div className="num text-xl font-semibold tracking-tight text-ink">
+            {fmtCurrency(t.price, t.currency)}
           </div>
-          {t.conviction != null && (
-            <div className="min-w-[110px] text-right">
-              <div className="mb-1 text-[10px] font-medium text-muted-foreground">
-                Conviction
-              </div>
-              <div className="relative ml-auto h-1 w-24 overflow-hidden rounded-full bg-muted">
-                <span className="absolute left-1/2 top-0 h-full w-px bg-border" aria-hidden />
-                <span
-                  className={cn("absolute top-0 h-full rounded-full", convictionTone)}
-                  style={{
-                    left: conviction >= 0 ? "50%" : `${50 - convictionPct / 2}%`,
-                    width: `${convictionPct / 2}%`,
-                  }}
-                />
-              </div>
-              <div className="num mt-1 text-[11px] text-foreground/70">
-                {conviction >= 0 ? "+" : ""}
-                {conviction.toFixed(2)}
-              </div>
+          {t.priceChangePct != null && (
+            <div
+              className={cn(
+                "num mt-1 text-xs font-medium",
+                up ? "text-bull" : "text-bear",
+              )}
+            >
+              {/* The glyph stays: colour is the second cue here, never the first. */}
+              <span aria-hidden className="mr-1">
+                {up ? "▲" : "▼"}
+              </span>
+              <span>{fmtSignedPercent(t.priceChangePct)}</span>
+              <span className="sr-only"> since the previous close</span>
             </div>
           )}
         </div>
-
-        {t.sector && (
-          <footer className="border-t pt-3 text-[11px] text-muted-foreground">
-            <span className="truncate">{t.sector}</span>
-          </footer>
+        {t.conviction != null && (
+          <div className="min-w-[110px] text-right">
+            <div className="eyebrow mb-1">Conviction</div>
+            <div
+              role="progressbar"
+              aria-valuenow={Number(conviction.toFixed(2))}
+              aria-valuemin={-CONVICTION_MAX}
+              aria-valuemax={CONVICTION_MAX}
+              aria-label={`Conviction ${conviction.toFixed(2)} on a scale from −1 (max bearish) to +1 (max bullish)`}
+              className="relative ml-auto h-1 w-24 overflow-hidden rounded-full bg-muted"
+            >
+              <span className="absolute left-1/2 top-0 h-full w-px bg-rule" aria-hidden />
+              <span
+                className={cn(
+                  "absolute top-0 h-full rounded-full",
+                  conviction > 0 ? "bg-bull" : conviction < 0 ? "bg-bear" : "bg-graphite",
+                )}
+                aria-hidden
+                style={{
+                  left: conviction >= 0 ? "50%" : `${50 - halfWidthPct}%`,
+                  width: `${halfWidthPct}%`,
+                }}
+              />
+            </div>
+            <div className="num mt-1 text-micro text-graphite">
+              {conviction >= 0 ? "+" : ""}
+              {conviction.toFixed(2)}
+            </div>
+          </div>
         )}
-      </article>
-    </Link>
+      </div>
+
+      {t.sector && (
+        <footer className="mt-auto border-t pt-3 text-micro text-graphite">
+          <span className="truncate">{t.sector}</span>
+        </footer>
+      )}
+    </article>
   );
 }
