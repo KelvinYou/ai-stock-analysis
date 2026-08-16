@@ -127,6 +127,18 @@ def cli():
         action="store_true",
         help="Take short positions on sell/strong_sell signals (default: skip).",
     )
+    parser.add_argument(
+        "--cost-bps",
+        type=float,
+        default=0.0,
+        help=(
+            "One-way transaction cost in basis points (commission + spread + "
+            "slippage), charged on entry and again on exit. Default 0 keeps "
+            "historical reports comparable, but 0 is an assumption, not a "
+            "neutral default — try 10 for liquid US large caps, 30-50+ for "
+            "Bursa small caps."
+        ),
+    )
     parser.add_argument("--verbose", "-v", action="store_true")
 
     args = parser.parse_args()
@@ -204,13 +216,15 @@ def cli():
 
 
 def _score_and_write(result, args) -> None:
-    report = Scorer.score(result)
+    cost_bps = getattr(args, "cost_bps", 0.0) or 0.0
+    report = Scorer.score(result, cost_bps_per_side=cost_bps)
     markdown = Scorer.to_markdown(result, report)
 
     portfolio_config = PortfolioConfig(
         starting_balance=args.starting_balance,
         position_size_pct=args.position_size,
         allow_short=args.allow_short,
+        cost_bps_per_side=cost_bps,
     )
     portfolio_report = portfolio_mod.simulate(result, portfolio_config)
     portfolio_md = portfolio_mod.to_markdown(portfolio_report)
