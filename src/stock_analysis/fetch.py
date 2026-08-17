@@ -9,12 +9,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import timedelta
 from pathlib import Path
 
-from stock_analysis.config import Settings
+from stock_analysis.config import Settings, load_env
+from stock_analysis.data.cloud import build_store
 from stock_analysis.data.my_market import MYMarketFetcher
-from stock_analysis.data.store import DataStore
 from stock_analysis.data.technicals import compute_technicals
 from stock_analysis.data.universe import UNIVERSE_LOADERS, resolve_universe
 from stock_analysis.data.us_market import USMarketFetcher
+from stock_analysis.data.watchlist import WatchlistEntry, load_watchlist_map
 
 logger = logging.getLogger(__name__)
 _print_lock = threading.Lock()
@@ -26,13 +27,14 @@ def _fetch_one(
     ticker: str,
     market: str,
     fetchers: dict,
-    store: DataStore,
+    store,
     full: bool,
+    watch: WatchlistEntry | None = None,
 ) -> tuple[bool, str]:
     """Fetch, persist, and compute technicals for a single ticker.
 
     Incremental by default: asks yfinance only for bars since the last stored date,
-    then merges into the on-disk CSV. ``full=True`` forces the legacy full history
+    then merges into the configured storage backend. ``full=True`` forces a full history
     refetch (used weekly to resync dividend-adjusted historical closes).
 
     Returns (ok, symbol_or_ticker). Output is serialized via a module-level lock.
@@ -51,6 +53,20 @@ def _fetch_one(
         merged = store.merge_market_data(symbol, data)
         snapshot = compute_technicals(symbol, merged)
         store.save_technicals(symbol, snapshot)
+        # The cloud `tickers` table is what the dashboard reads for sector and
+        # watchlist grouping; merge_market_data only guarantees symbol+market.
+        # Without this, cloud mode renders every ticker as an ungrouped,
+        # sector-less row. No-op on the local backend.
+        store.upsert_ticker_metadata(
+            symbol,
+            market=data.info.market.value,
+            name=data.info.name,
+            sector=data.info.sector,
+            industry=data.info.industry,
+            currency=data.info.currency,
+            watch_group=watch.group if watch else None,
+            theme=watch.theme if watch else None,
+        )
         mode = "FULL" if start_date is None else "INC "
         with _print_lock:
             print(
@@ -98,8 +114,9 @@ def _parse_tickers(lines: list[str]) -> list[tuple[str, str]]:
 
 
 def cli():
+    load_env()
     parser = argparse.ArgumentParser(
-        description="Layer 1 only: fetch market data and save to data/ (no LLM)."
+        description="Layer 1 only: fetch market data into the configured backend (no LLM)."
     )
     parser.add_argument(
         "tickers",
@@ -193,8 +210,12 @@ def cli():
         print("ERR no tickers resolved (all universe expansions failed?)", file=sys.stderr)
         sys.exit(1)
 
-    settings = Settings()
-    store = DataStore(settings.data_dir)
+    settings = Settings.from_env()
+    store = build_store(settings)
+    # Grouping/theme live only in tickers.txt markers, so they are read here even
+    # when the tickers came from CLI args or a universe — a ticker that happens to
+    # be on the hand-curated watchlist keeps its group either way.
+    watch_map = load_watchlist_map(args.from_file)
     fetchers = {
         "US": USMarketFetcher(period=settings.price_history_period),
         "MY": MYMarketFetcher(period=settings.price_history_period),
@@ -210,14 +231,29 @@ def cli():
 
     failures: list[str] = []
     successes: list[str] = []
-    with ThreadPoolExecutor(max_workers=max(1, args.workers)) as ex:
-        futures = [
-            ex.submit(_fetch_one, i, total, ticker, market, fetchers, store, args.full)
-            for i, (ticker, market) in enumerate(pairs, 1)
-        ]
-        for fut in as_completed(futures):
-            ok, name = fut.result()
-            (successes if ok else failures).append(name)
+    try:
+        with ThreadPoolExecutor(max_workers=max(1, args.workers)) as ex:
+            futures = [
+                ex.submit(
+                    _fetch_one,
+                    i,
+                    total,
+                    ticker,
+                    market,
+                    fetchers,
+                    store,
+                    args.full,
+                    watch_map.get(ticker.upper()),
+                )
+                for i, (ticker, market) in enumerate(pairs, 1)
+            ]
+            for fut in as_completed(futures):
+                ok, name = fut.result()
+                (successes if ok else failures).append(name)
+    finally:
+        close = getattr(store, "close", None)
+        if close:
+            close()
 
     summary = f"Fetched {len(successes)}/{total} tickers"
     if failures:

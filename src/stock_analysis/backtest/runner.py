@@ -10,6 +10,7 @@ import yfinance as yf
 from pydantic import BaseModel
 
 from stock_analysis.config import Settings
+from stock_analysis.data.cloud import build_store
 from stock_analysis.data.my_market import BURSA_ALIASES
 from stock_analysis.models.agent_reports import Signal
 from stock_analysis.models.synthesis import Briefing
@@ -78,10 +79,16 @@ class Backtester:
         horizon_days: int = 30,
         lookback_days: int = 365,
     ):
-        self.settings = settings or Settings()
+        self.settings = settings or Settings.from_env()
+        self.store = build_store(self.settings)
         self.market = market.upper()
         self.horizon_days = horizon_days
         self.lookback_days = lookback_days
+
+    def close(self) -> None:
+        close = getattr(self.store, "close", None)
+        if close:
+            close()
 
     async def run(
         self,
@@ -151,13 +158,21 @@ class Backtester:
         resume: bool,
     ) -> BacktestTrial:
         # Check cache first
-        store_path = (
-            Path(self.settings.data_dir) / ticker.upper() / as_of.isoformat() / "briefing.json"
-        )
         briefing: Briefing | None = None
-        if resume and store_path.exists():
-            logger.info("[%s @ %s] Resuming from cached briefing", ticker, as_of)
-            briefing = Briefing.model_validate_json(store_path.read_text())
+        if resume:
+            if self.settings.storage_backend == "supabase":
+                briefing = self.store.load_briefing(ticker, for_date=as_of)
+            else:
+                store_path = (
+                    Path(self.settings.data_dir)
+                    / ticker.upper()
+                    / as_of.isoformat()
+                    / "briefing.json"
+                )
+                if store_path.exists():
+                    briefing = Briefing.model_validate_json(store_path.read_text())
+            if briefing is not None:
+                logger.info("[%s @ %s] Resuming from cached briefing", ticker, as_of)
 
         if briefing is None:
             fetcher = BacktestFetcher(
@@ -172,7 +187,10 @@ class Backtester:
                 as_of_date=as_of,
             )
             logger.info("[%s @ %s] Running pipeline", ticker, as_of)
-            briefing = await pipeline.run(ticker)
+            try:
+                briefing = await pipeline.run(ticker)
+            finally:
+                pipeline.close()
 
         entry_price, _entry_date = self._price_on_or_after(forward_series, as_of)
         exit_price, exit_date = self._price_on_or_after(

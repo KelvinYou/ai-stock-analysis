@@ -58,6 +58,7 @@ Works on Linux, macOS, and WSL2 with Python 3.12+. Node.js 18+ is required for t
 | `stock-analysis <TICKER>` | Run the full four-layer pipeline for one ticker. |
 | `stock-analysis-backtest` | Replay the pipeline over a historical date range and score it. |
 | `uvicorn stock_analysis.api.app:app --reload` | Start the FastAPI job server. |
+| `stock-analysis-worker` | Process durable Supabase analysis jobs. |
 | `cd web && npm run dev` | Start the Next.js dashboard on port 3000. |
 
 See [Usage](#usage) for full flag reference.
@@ -176,6 +177,27 @@ stock-analysis-backtest --tickers AAPL --start 2024-01-01 --end 2024-12-31 \
     --record-outcomes
 ```
 
+### Run deterministic factor research
+
+This mode uses the local `data/<TICKER>/price_history.csv` only — no API key or
+LLM call. It runs the fixed long-only momentum baseline through expanding
+walk-forward folds, enters on the next bar's open, and reports gross and
+cost-adjusted returns side by side:
+
+```bash
+stock-analysis-backtest --mode factor --tickers AAPL \
+  --start 2020-01-01 --end 2026-08-14 \
+  --factor-lookback-bars 20 --factor-holding-bars 20 \
+  --walk-forward-train-bars 252 --walk-forward-test-bars 63 \
+  --cost-bps 10 --output factor-aapl
+```
+
+The factor is a research baseline, not a live-trading recommendation. The
+output includes the exact protocol, fold boundaries, trade log, Wilson interval,
+max drawdown, net p-value, and a buy-and-hold comparison. It does not fit a
+model inside the test folds, so its result is evidence about one fixed rule on
+one dataset rather than a claim of durable alpha.
+
 Every headline metric ships with an interval, because a point estimate over a
 few dozen trials reads as an edge whether or not it is one:
 
@@ -249,6 +271,26 @@ NEXT_PUBLIC_SITE_URL=https://your-host.example npm run build
 Left unset it falls back to `http://localhost:3000`, which is a dead scan on
 anyone else's phone.
 
+### Cloud-first storage
+
+The default backend remains local for offline tests. To avoid durable local
+analysis files, configure `STORAGE_BACKEND=supabase`:
+
+```bash
+export STORAGE_BACKEND=supabase
+export SUPABASE_URL=https://your-project.supabase.co
+export SUPABASE_SERVICE_ROLE_KEY=your-server-only-service-key
+
+stock-analysis-worker
+```
+
+The worker claims rows from the durable `analysis_runs` queue and writes typed
+market snapshots, immutable per-layer artifacts, outcomes, and backtest
+reports to Supabase. The Next.js server reads through the publishable key and
+RLS; it does not need a local `data/` directory. See
+[`docs/supabase.md`](docs/supabase.md) for migration, import, and deployment
+steps.
+
 ---
 
 ## Project Structure
@@ -266,7 +308,8 @@ src/stock_analysis/
 │   ├── my_market.py     # MYMarketFetcher (Bursa/KLSE, BURSA_ALIASES)
 │   ├── technicals.py    # Technical indicator calculations
 │   ├── universe.py      # Ticker universe loaders (S&P 500, NASDAQ 100, FBM KLCI)
-│   └── store.py         # DataStore — flat per-ticker JSON persistence
+│   ├── store.py         # DataStore — local flat per-ticker persistence
+│   └── cloud.py         # SupabaseAnalysisStore — cloud-first persistence
 ├── agents/              # Layer 2 — specialist analyst agents
 │   ├── base.py          # BaseAnalystAgent
 │   ├── fundamentals.py
@@ -286,6 +329,7 @@ src/stock_analysis/
 │   └── fetcher.py       # Historical data helper
 ├── api/                 # FastAPI REST endpoints
 │   └── app.py           # POST /analyze/{ticker}, GET /status/{job_id}, GET /results/{ticker}
+├── worker.py            # Durable Supabase job worker
 ├── config.py            # Settings (models, debate rounds, data dir)
 ├── orchestrator.py      # AnalysisPipeline — chains all four layers
 ├── fetch.py             # stock-fetch CLI entry point
@@ -303,7 +347,7 @@ web/                     # Next.js dashboard
 │   └── [ticker]/        # Per-ticker analysis view + opengraph/twitter-image
 ├── assets/fonts/        # Static subsetted TTFs — share card only (see its README)
 ├── lib/
-│   ├── data.ts          # Reads data/<TICKER>/*.json into TickerSummary rows
+│   ├── data.ts          # Reads Supabase or local data into TickerSummary rows
 │   ├── watchlist.ts     # Parses tickers.txt incl. #group / #theme markers
 │   ├── screener.ts      # Column defs, sorting, at-entry / stale predicates
 │   ├── pipeline.ts      # Loads pipeline.json + computes the flowchart layout
@@ -334,6 +378,11 @@ data/
 
 The dated `data/<TICKER>/<DATE>/` layout is a backtest-only fallback, used when a
 `for_date` is passed. `DataStore`'s docstring is the authoritative reference.
+
+With `STORAGE_BACKEND=supabase`, these files are replaced by Postgres tables and
+JSONB artifacts. A completed run is promoted to the latest ticker view only
+after its final briefing artifact exists; failed runs never replace a previous
+visible briefing.
 
 ---
 

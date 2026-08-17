@@ -6,10 +6,22 @@ import logging
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
-from stock_analysis.config import Settings
-from stock_analysis.memory.outcomes import OutcomeStore, records_from_backtest
+import pandas as pd
+
+from stock_analysis.config import Settings, load_env
+from stock_analysis.data.cloud import build_store
+from stock_analysis.memory.cloud import build_outcome_store
+from stock_analysis.memory.outcomes import records_from_backtest
 
 from . import portfolio as portfolio_mod
+from .factor import (
+    FactorConfig,
+    load_price_history,
+    run_factor_backtest,
+)
+from .factor import (
+    to_markdown as factor_to_markdown,
+)
 from .portfolio import PortfolioConfig
 from .runner import Backtester
 from .scorer import Scorer
@@ -19,16 +31,18 @@ logger = logging.getLogger(__name__)
 
 
 def cli():
+    load_env()
     parser = argparse.ArgumentParser(
         description="Backtest the AI stock analysis pipeline against historical prices."
     )
     parser.add_argument(
         "--mode",
-        choices=["api", "session-prepare", "session-score"],
+        choices=["api", "factor", "session-prepare", "session-score"],
         default="api",
         help=(
-            "api runs the SDK pipeline; session-prepare writes point-in-time packets; "
-            "session-score scores session predictions (default: api)."
+            "api runs the SDK pipeline; factor runs the deterministic momentum slice; "
+            "session-prepare writes point-in-time packets; session-score scores "
+            "session predictions (default: api)."
         ),
     )
     parser.add_argument(
@@ -54,6 +68,30 @@ def cli():
         type=int,
         default=365,
         help="Historical price window passed to agents, in days (default: 365).",
+    )
+    parser.add_argument(
+        "--factor-lookback-bars",
+        type=int,
+        default=20,
+        help="Momentum lookback for --mode factor (default: 20 trading bars).",
+    )
+    parser.add_argument(
+        "--factor-holding-bars",
+        type=int,
+        default=20,
+        help="Holding period for --mode factor (default: 20 trading bars).",
+    )
+    parser.add_argument(
+        "--walk-forward-train-bars",
+        type=int,
+        default=252,
+        help="Initial expanding walk-forward warm-up for --mode factor (default: 252).",
+    )
+    parser.add_argument(
+        "--walk-forward-test-bars",
+        type=int,
+        default=63,
+        help="Out-of-sample window for --mode factor (default: 63 trading bars).",
     )
     parser.add_argument("--market", choices=["US", "MY"], default="US")
     parser.add_argument(
@@ -95,7 +133,7 @@ def cli():
         "--record-outcomes",
         action="store_true",
         help=(
-            "Append realized outcomes to data/<TICKER>/outcomes.jsonl so future runs "
+            "Append realized outcomes to the configured outcome backend so future runs "
             "see this track record. Off by default: recording changes what "
             "later runs read, so back-to-back backtests would stop being comparable."
         ),
@@ -103,7 +141,7 @@ def cli():
     parser.add_argument(
         "--data-dir",
         default="data",
-        help="Where per-ticker data lives — used by --record-outcomes (default: data).",
+        help="Where per-ticker price history/outcomes live (default: data).",
     )
     parser.add_argument(
         "--no-resume",
@@ -169,6 +207,12 @@ def cli():
     if not tickers:
         parser.error("--tickers is empty")
 
+    if args.mode == "factor":
+        if len(tickers) != 1:
+            parser.error("--mode factor currently accepts exactly one ticker")
+        _run_factor_and_write(tickers[0], start, end, args)
+        return
+
     if args.mode == "session-prepare":
         manifest = prepare_session_bundle(
             tickers=tickers,
@@ -191,7 +235,7 @@ def cli():
         )
         return
 
-    settings = Settings(
+    settings = Settings.from_env(
         quick_think_model=args.model,
         deep_think_model=args.debate_model,
         synthesis_model=args.synthesis_model,
@@ -203,15 +247,19 @@ def cli():
         horizon_days=args.horizon,
         lookback_days=args.lookback,
     )
+    args._settings = settings
 
     print(
         f"Running {len(tickers)} tickers × {len(dates)} dates = "
         f"{len(tickers) * len(dates)} trials. Horizon: {args.horizon}d."
     )
 
-    result = asyncio.run(
-        backtester.run(tickers, dates, resume=not args.no_resume)
-    )
+    try:
+        result = asyncio.run(
+            backtester.run(tickers, dates, resume=not args.no_resume)
+        )
+    finally:
+        backtester.close()
     _score_and_write(result, args)
 
 
@@ -230,10 +278,34 @@ def _score_and_write(result, args) -> None:
     portfolio_md = portfolio_mod.to_markdown(portfolio_report)
     markdown += "\n" + portfolio_md
 
-    out_json = Path(f"{args.output}.json")
-    out_md = Path(f"{args.output}.md")
-    out_json.write_text(
-        
+    settings = getattr(args, "_settings", None) or Settings.from_env()
+    payload = {
+        "result": result.model_dump(mode="json"),
+        "report": report.model_dump(mode="json"),
+        "portfolio": portfolio_report.model_dump(mode="json"),
+    }
+
+    if settings.storage_backend == "supabase":
+        store = build_store(settings)
+        try:
+            artifact_id = store.save_backtest_artifact(
+                mode="api",
+                tickers=sorted({trial.ticker for trial in result.trials}),
+                payload=payload,
+                markdown=markdown,
+                metadata={"output": args.output, "cost_bps_per_side": cost_bps},
+            )
+        finally:
+            close = getattr(store, "close", None)
+            if close:
+                close()
+        print()
+        print(markdown)
+        print(f"Cloud artifact: {artifact_id}")
+    else:
+        out_json = Path(f"{args.output}.json")
+        out_md = Path(f"{args.output}.md")
+        out_json.write_text(
             '{"result": '
             + result.model_dump_json(indent=2)
             + ', "report": '
@@ -241,21 +313,78 @@ def _score_and_write(result, args) -> None:
             + ', "portfolio": '
             + portfolio_report.model_dump_json(indent=2)
             + "}"
-        
-    )
-    out_md.write_text(markdown)
+        )
+        out_md.write_text(markdown)
+        print()
+        print(markdown)
+        print(f"Raw results: {out_json}")
+        print(f"Report:      {out_md}")
 
     print()
-    print(markdown)
-    print(f"Raw results: {out_json}")
-    print(f"Report:      {out_md}")
 
     if getattr(args, "record_outcomes", False):
-        store = OutcomeStore(args.data_dir)
-        written = store.append(records_from_backtest(result))
-        for ticker in sorted({t.ticker for t in result.trials}):
-            store.save_calibration(ticker)
-        print(f"Outcomes:    +{written} record(s) into {args.data_dir}/<TICKER>/outcomes.jsonl")
+        outcome_store = build_outcome_store(settings)
+        try:
+            written = outcome_store.append(records_from_backtest(result))
+            for ticker in sorted({t.ticker for t in result.trials}):
+                outcome_store.save_calibration(ticker)
+        finally:
+            close = getattr(outcome_store, "close", None)
+            if close:
+                close()
+        destination = "Supabase" if settings.storage_backend == "supabase" else f"{args.data_dir}/<TICKER>/outcomes.jsonl"
+        print(f"Outcomes:    +{written} record(s) into {destination}")
+
+
+def _run_factor_and_write(ticker: str, start: date, end: date, args) -> None:
+    config = FactorConfig(
+        lookback_bars=args.factor_lookback_bars,
+        holding_bars=args.factor_holding_bars,
+        initial_train_bars=args.walk_forward_train_bars,
+        test_window_bars=args.walk_forward_test_bars,
+        cost_bps_per_side=args.cost_bps,
+    )
+    settings = Settings.from_env()
+    store = build_store(settings)
+    if settings.storage_backend == "supabase":
+        price_history = pd.DataFrame(
+            [bar.model_dump(mode="json") for bar in store.load_price_history(ticker)]
+        )
+    else:
+        price_path = Path(args.data_dir) / ticker / "price_history.csv"
+        price_history = load_price_history(price_path)
+    report = run_factor_backtest(
+        ticker,
+        price_history,
+        start=start,
+        end=end,
+        config=config,
+    )
+    markdown = factor_to_markdown(report)
+    output_prefix = args.output if args.output != "backtest_report" else "factor_report"
+    try:
+        if settings.storage_backend == "supabase":
+            artifact_id = store.save_backtest_artifact(
+                mode="factor",
+                tickers=[ticker],
+                payload={"report": report.model_dump(mode="json")},
+                markdown=markdown,
+                metadata={"output": output_prefix},
+            )
+            print(markdown)
+            print(f"Cloud artifact: {artifact_id}")
+        else:
+            out_json = Path(f"{output_prefix}.json")
+            out_md = Path(f"{output_prefix}.md")
+            out_json.write_text(report.model_dump_json(indent=2))
+            out_md.write_text(markdown)
+            print(markdown)
+            print(f"Raw results: {out_json}")
+            print(f"Report:      {out_md}")
+    finally:
+        close = getattr(store, "close", None)
+        if close:
+            close()
 
 
 def _parse_date(s: str) -> date:

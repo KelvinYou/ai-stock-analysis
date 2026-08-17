@@ -36,5 +36,5 @@ class BaseFetcher(ABC):
         ...
 
     def resolve_symbol(self, ticker: str) -> str:
-        """Return the on-disk storage symbol for a ticker, without hitting the network."""
+        """Return the storage symbol for a ticker, without hitting the network."""
         return ticker.upper().strip()

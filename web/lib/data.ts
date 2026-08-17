@@ -11,6 +11,7 @@ import type {
   Technicals,
   TickerBundle,
   TickerSummary,
+  WatchGroup,
   WatchlistEntry,
 } from "./types";
 import { parseRatio } from "./format";
@@ -19,7 +20,187 @@ const DATA_DIR = process.env.STOCK_DATA_DIR
   ? path.resolve(process.env.STOCK_DATA_DIR)
   : path.resolve(process.cwd(), "..", "data");
 
+const SUPABASE_URL =
+  process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
+const SUPABASE_KEY =
+  process.env.SUPABASE_PUBLISHABLE_KEY ??
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ??
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
+  "";
+const CLOUD_CONFIGURED = Boolean(SUPABASE_URL && SUPABASE_KEY);
+
 const SUMMARY_CONCURRENCY = 16;
+
+type CloudSummaryRow = {
+  symbol: string;
+  market: string;
+  name: string | null;
+  info_name: string | null;
+  sector: string | null;
+  industry: string | null;
+  currency: string | null;
+  watch_group: WatchGroup | null;
+  theme: string | null;
+  market_as_of_date: string | null;
+  latest_price_date: string | null;
+  previous_price: number | null;
+  price: number | null;
+  pe_ratio: number | null;
+  rsi_14: number | null;
+  pct_from_52w_high: number | null;
+  latest_run_id: string | null;
+  briefing_date: string | null;
+  signal: TickerSummary["signal"];
+  conviction: number | null;
+  convergence: number | null;
+  entry_limit: number | null;
+  stop_loss: number | null;
+  take_profit_1: number | null;
+  risk_reward: string | null;
+};
+
+async function cloudRows<T>(
+  resource: string,
+  params: Record<string, string> = {},
+): Promise<T[]> {
+  if (!CLOUD_CONFIGURED) {
+    throw new Error("Supabase web configuration is missing");
+  }
+  const query = new URLSearchParams(params);
+  const response = await fetch(
+    `${SUPABASE_URL.replace(/\/$/, "")}/rest/v1/${resource}?${query.toString()}`,
+    {
+      headers: {
+        apikey: SUPABASE_KEY,
+        Authorization: `Bearer ${SUPABASE_KEY}`,
+      },
+      next: { revalidate: 60 },
+    },
+  );
+  if (!response.ok) {
+    throw new Error(`Supabase ${resource} failed (${response.status})`);
+  }
+  return (await response.json()) as T[];
+}
+
+async function cloudRowsAll<T>(
+  resource: string,
+  params: Record<string, string> = {},
+): Promise<T[]> {
+  const rows: T[] = [];
+  const pageSize = 1000;
+  for (let offset = 0; ; offset += pageSize) {
+    const page = await cloudRows<T>(resource, {
+      ...params,
+      offset: String(offset),
+      limit: String(pageSize),
+    });
+    rows.push(...page);
+    if (page.length < pageSize) return rows;
+  }
+}
+
+function summaryFromCloud(
+  row: CloudSummaryRow,
+  watch: WatchlistEntry | undefined,
+): TickerSummary {
+  const price = row.price;
+  const previous = row.previous_price;
+  const priceChangePct =
+    price != null && previous != null && previous !== 0
+      ? ((price - previous) / previous) * 100
+      : null;
+  const toEntryPct =
+    row.entry_limit != null && price != null && price !== 0
+      ? ((row.entry_limit - price) / price) * 100
+      : null;
+
+  return {
+    symbol: row.symbol,
+    name: row.info_name ?? row.name ?? row.symbol,
+    sector: row.sector,
+    market: row.market ?? watch?.market ?? "—",
+    currency: row.currency ?? "USD",
+    price,
+    priceChangePct,
+    signal: row.signal ?? null,
+    conviction: row.conviction,
+    convergence: row.convergence,
+    briefingDate: row.briefing_date,
+    briefingAgeDays: ageInDays(row.briefing_date),
+    entryLimit: row.entry_limit,
+    stopLoss: row.stop_loss,
+    takeProfit1: row.take_profit_1,
+    toEntryPct,
+    riskReward: parseRatio(row.risk_reward),
+    peRatio: row.pe_ratio,
+    rsi14: row.rsi_14,
+    pctFrom52wHigh: row.pct_from_52w_high,
+    asOfDate: row.market_as_of_date ?? row.latest_price_date,
+    group: row.watch_group ?? watch?.group ?? null,
+    theme: row.theme ?? watch?.theme ?? null,
+  };
+}
+
+async function loadCloudTicker(symbol: string): Promise<TickerBundle | null> {
+  const normalized = symbol.toUpperCase();
+  const [summaryRows, snapshotRows] = await Promise.all([
+    cloudRows<CloudSummaryRow>("latest_ticker_summary", {
+      symbol: `eq.${normalized}`,
+      select: "*",
+      limit: "1",
+    }),
+    cloudRows<Record<string, unknown>>("market_snapshots", {
+      symbol: `eq.${normalized}`,
+      select: "*",
+      order: "as_of_date.desc",
+      limit: "1",
+    }),
+  ]);
+  if (!summaryRows.length && !snapshotRows.length) return null;
+
+  const summary = summaryRows[0];
+  const snapshot = snapshotRows[0];
+  const priceRows = await cloudRowsAll<{
+    bar_date: string;
+    open: number;
+    high: number;
+    low: number;
+    close: number;
+    volume: number;
+  }>("price_bars", {
+    symbol: `eq.${normalized}`,
+    select: "bar_date,open,high,low,close,volume",
+    order: "bar_date.asc",
+  });
+
+  const artifactRows = summary?.latest_run_id
+    ? await cloudRows<{ stage: string; payload: unknown }>("analysis_artifacts", {
+        run_id: `eq.${summary.latest_run_id}`,
+        select: "stage,payload",
+      })
+    : [];
+  const artifacts = Object.fromEntries(
+    artifactRows.map((row) => [row.stage, row.payload]),
+  );
+
+  return {
+    symbol: normalized,
+    fundamentals: (snapshot?.fundamentals as Fundamentals | null) ?? null,
+    technicals: (snapshot?.technicals as Technicals | null) ?? null,
+    priceHistory: priceRows.map((row) => ({
+      date: row.bar_date,
+      open: Number(row.open),
+      high: Number(row.high),
+      low: Number(row.low),
+      close: Number(row.close),
+      volume: Number(row.volume),
+    })),
+    analystReports: (artifacts.analyst_reports as AnalystReports | null) ?? null,
+    debate: (artifacts.debate_result as DebateResult | null) ?? null,
+    briefing: (artifacts.briefing as Briefing | null) ?? null,
+  };
+}
 
 async function mapWithConcurrency<T, U>(
   items: readonly T[],
@@ -86,6 +267,14 @@ async function readCsv(filePath: string): Promise<PricePoint[]> {
 }
 
 export const listTickers = cache(async (): Promise<string[]> => {
+  if (CLOUD_CONFIGURED) {
+    const rows = await cloudRows<{ symbol: string }>("tickers", {
+      select: "symbol",
+      enabled: "eq.true",
+      order: "symbol.asc",
+    });
+    return rows.map((row) => row.symbol);
+  }
   try {
     const entries = await fs.readdir(DATA_DIR, { withFileTypes: true });
     return entries
@@ -98,6 +287,7 @@ export const listTickers = cache(async (): Promise<string[]> => {
 });
 
 export async function loadTicker(symbol: string): Promise<TickerBundle | null> {
+  if (CLOUD_CONFIGURED) return loadCloudTicker(symbol);
   const dir = path.join(DATA_DIR, symbol);
   try {
     const stat = await fs.stat(dir);
@@ -178,6 +368,14 @@ async function loadTickerSummary(
   symbol: string,
   watch: WatchlistEntry | undefined,
 ): Promise<TickerSummary | null> {
+  if (CLOUD_CONFIGURED) {
+    const rows = await cloudRows<CloudSummaryRow>("latest_ticker_summary", {
+      symbol: `eq.${symbol.toUpperCase()}`,
+      select: "*",
+      limit: "1",
+    });
+    return rows[0] ? summaryFromCloud(rows[0], watch) : null;
+  }
   const dir = path.join(DATA_DIR, symbol);
   try {
     const stat = await fs.stat(dir);
@@ -236,6 +434,16 @@ async function loadTickerSummary(
 }
 
 export const listTickerSummaries = cache(async (): Promise<TickerSummary[]> => {
+  if (CLOUD_CONFIGURED) {
+    const [rows, watchMap] = await Promise.all([
+      cloudRowsAll<CloudSummaryRow>("latest_ticker_summary", {
+        select: "*",
+        order: "symbol.asc",
+      }),
+      loadWatchlistMap(),
+    ]);
+    return rows.map((row) => summaryFromCloud(row, watchMap[row.symbol]));
+  }
   const [tickers, watchMap] = await Promise.all([listTickers(), loadWatchlistMap()]);
   const results = await mapWithConcurrency(tickers, SUMMARY_CONCURRENCY, (symbol) =>
     loadTickerSummary(symbol, watchMap[symbol]),

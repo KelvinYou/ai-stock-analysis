@@ -11,7 +11,7 @@ flowchart TD
 
     UNI -.->|"drives bulk fetch"| US
     UNI -.->|"drives bulk fetch"| MY
-    SDL["<b>DataStore</b><br/>flat per-ticker layout<br/>price_history.csv · fundamentals · technicals<br/>reports · verdict · briefing · outcomes"]
+    SDL["<b>Analysis Store</b><br/>Supabase Postgres (canonical) · local backend<br/>price bars · market snapshots · JSONB artifacts<br/>runs · briefings · outcomes · backtest reports"]
     US --> SDL
     MY --> SDL
 
@@ -41,7 +41,7 @@ flowchart TD
     L3 --> RM
 
     subgraph CTX["Supporting context — Outcome Memory (deterministic — exit-date gated against leakage)"]
-        MEM["<b>OutcomeStore</b><br/>realized return per resolved call<br/>hit rate · conviction calibration<br/>feeds context into synthesis"]
+        MEM["<b>Outcome Memory</b><br/>cloud/local append-only outcomes<br/>hit rate · conviction calibration<br/>feeds context into synthesis"]
     end
 
     RM --> MEM

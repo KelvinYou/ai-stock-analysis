@@ -12,9 +12,12 @@ import { StarButton } from "@/components/ticker-list/star-button";
 import { listTickers, loadTicker } from "@/lib/data";
 import { describeConviction } from "@/lib/conviction";
 import { clampText, fmtCurrency, fmtSignedPercent } from "@/lib/format";
+import { buildShareText } from "@/lib/share/text";
+import { tickerUrl } from "@/lib/site";
 import type { Metadata } from "next";
 
 export const revalidate = 60;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const tickers = await listTickers();
@@ -102,7 +105,11 @@ export default async function TickerPage({
                   {info.market}
                 </span>
               )}
-              <ShareButton symbol={bundle.symbol} className="ml-1" />
+              <ShareButton
+                symbol={bundle.symbol}
+                shareText={buildShareText(bundle, tickerUrl(bundle.symbol))}
+                className="ml-1"
+              />
             </div>
             <p className="mt-1.5 truncate text-sm text-graphite">
               {info?.name ?? bundle.symbol}

@@ -41,11 +41,11 @@
       ],
       "sink": {
         "id": "SDL",
-        "label": "DataStore",
+        "label": "Analysis Store",
         "lines": [
-          "flat per-ticker layout",
-          "price_history.csv · fundamentals · technicals",
-          "reports · verdict · briefing · outcomes"
+          "Supabase Postgres (canonical) · local backend",
+          "price bars · market snapshots · JSONB artifacts",
+          "runs · briefings · outcomes · backtest reports"
         ],
         "tone": "data"
       }
@@ -142,9 +142,9 @@
         [
           {
             "id": "MEM",
-            "label": "OutcomeStore",
+            "label": "Outcome Memory",
             "lines": [
-              "realized return per resolved call",
+              "cloud/local append-only outcomes",
               "hit rate · conviction calibration",
               "feeds context into synthesis"
             ],

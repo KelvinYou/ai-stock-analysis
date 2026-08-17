@@ -13,13 +13,14 @@ import { tickerUrl } from "@/lib/site";
  * Slack or WhatsApp then render from the same source, so they can never
  * disagree.
  *
- * No `runtime = "edge"` here, on purpose — the card reads the briefing off disk
- * through `loadTicker`, which needs Node.
+ * No `runtime = "edge"` here, on purpose — the card reads the briefing through
+ * the server-side data adapter, which may use Node's local fallback.
  */
 export const alt = "Multi-agent briefing summary";
 export const size = SHARE_CARD_SIZE;
 export const contentType = "image/png";
 export const revalidate = 60;
+export const dynamicParams = true;
 
 /**
  * A metadata image route does *not* inherit the params its page enumerates —
