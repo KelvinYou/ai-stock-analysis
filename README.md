@@ -115,24 +115,8 @@ See [`architecture.md`](architecture.md) for the full diagram.
 - An [Anthropic API key](https://console.anthropic.com/) (`ANTHROPIC_API_KEY` env var)
 - Node.js 18+ (for the web dashboard)
 
-## Setup
-
-```bash
-# Clone the repository
-git clone <repo-url>
-cd ai-stock-analysis
-
-# Create a virtual environment and install
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .
-
-# For development (linting, testing)
-pip install -e ".[dev]"
-
-# Set your API key
-export ANTHROPIC_API_KEY=sk-ant-...
-```
+Install with the dev extra — `pip install -e ".[dev]"` — if you intend to run
+`ruff` or `pytest`. Everything else is covered by [Quick Start](#quick-start).
 
 ---
 
