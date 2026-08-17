@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from itertools import pairwise
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -83,7 +84,7 @@ def emit(pipeline: dict) -> str:
 
         # Rows inside a stage chain together, then the sink converges them.
         out.append("")
-        for upper, lower in zip(rows, rows[1:]):
+        for upper, lower in pairwise(rows):
             for src in upper:
                 arrow = "-.->" if src.get("dashed") else "-->"
                 label = f'|"{esc(src["edgeLabel"])}"|' if src.get("edgeLabel") else ""

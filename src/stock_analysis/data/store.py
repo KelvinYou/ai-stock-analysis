@@ -218,3 +218,27 @@ class DataStore:
         if not path.exists():
             return None
         return Briefing.model_validate_json(path.read_text())
+
+    # Cloud-backed stores use these lifecycle hooks to make a run durable. The
+    # local backend deliberately keeps them as no-ops so existing offline tests
+    # and the human-readable filesystem workflow remain unchanged.
+
+    def begin_run(self, ticker: str, as_of_date: date, settings=None, *, market: str = "US"):
+        return None
+
+    def complete_run(self, run_id: str | None = None) -> None:
+        return None
+
+    def fail_run(self, run_id: str | None, error: str) -> None:
+        return None
+
+    def save_backtest_artifact(self, **kwargs):
+        return None
+
+    def upsert_ticker_metadata(self, ticker: str, **metadata) -> None:
+        """No-op: locally, ticker metadata lives in fundamentals.json/tickers.txt."""
+        return None
+
+    def resume_artifact(self, stage: str, model_type):
+        """No-op: the local backend has no durable run to resume into."""
+        return None

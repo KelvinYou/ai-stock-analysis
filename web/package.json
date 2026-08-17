@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "NODE_EXTRA_CA_CERTS=${NODE_EXTRA_CA_CERTS:-../.corp-ca.pem} next dev",
+    "build": "NODE_EXTRA_CA_CERTS=${NODE_EXTRA_CA_CERTS:-../.corp-ca.pem} next build",
+    "start": "NODE_EXTRA_CA_CERTS=${NODE_EXTRA_CA_CERTS:-../.corp-ca.pem} next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.23",
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-tabs": "^1.1.3",

@@ -14,9 +14,15 @@ dependencies = [
     "httpx>=0.27",
     "pandas>=2.0",
     "lxml>=5.0",
+    "python-dotenv>=1.0",
 ]
 
 [project.optional-dependencies]
+# Only needed behind a TLS-inspecting proxy whose root CA is in the OS trust
+# store but not in certifi. See the truststore note in stock_analysis/__init__.py.
+proxy = [
+    "truststore>=0.9",
+]
 dev = [
     "pytest>=8.2",
     "pytest-asyncio>=0.23",
@@ -27,6 +33,7 @@ dev = [
 stock-analysis = "stock_analysis.main:cli"
 stock-fetch = "stock_analysis.fetch:cli"
 stock-analysis-backtest = "stock_analysis.backtest.main:cli"
+stock-analysis-worker = "stock_analysis.worker:cli"
 
 [build-system]
 requires = ["hatchling", "hatch-vcs"]

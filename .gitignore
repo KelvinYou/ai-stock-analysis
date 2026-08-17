@@ -53,3 +53,7 @@ skills-lock.json
 
 # Runtime logs
 logs/
+
+# Corporate proxy root CA extracted from the OS keychain (machine-specific).
+# See NODE_EXTRA_CA_CERTS in web/package.json and truststore in stock_analysis/__init__.py.
+.corp-ca.pem

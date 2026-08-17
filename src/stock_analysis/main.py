@@ -5,11 +5,12 @@ import asyncio
 import logging
 
 from stock_analysis import __version__
-from stock_analysis.config import Settings
+from stock_analysis.config import Settings, load_env
 from stock_analysis.orchestrator import AnalysisPipeline
 
 
 def cli():
+    load_env()
     parser = argparse.ArgumentParser(
         description="AI Stock Analysis — multi-agent investment research"
     )
@@ -49,14 +50,17 @@ def cli():
         format="%(message)s",
     )
 
-    settings = Settings(
+    settings = Settings.from_env(
         quick_think_model=args.model,
         deep_think_model=args.debate_model,
         debate_rounds=args.rounds,
     )
 
     pipeline = AnalysisPipeline(settings, market=args.market)
-    briefing = asyncio.run(pipeline.run(args.ticker.upper()))
+    try:
+        briefing = asyncio.run(pipeline.run(args.ticker.upper()))
+    finally:
+        pipeline.close()
 
     print(briefing.model_dump_json(indent=2))
 
