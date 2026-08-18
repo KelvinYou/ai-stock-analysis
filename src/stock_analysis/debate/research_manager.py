@@ -142,7 +142,10 @@ class ResearchManager:
         options = ClaudeAgentOptions(
             model=self.model,
             system_prompt=RESEARCH_MANAGER_SYSTEM,
-            permission_mode="bypassPermissions",
+            tools=[],
+            permission_mode="dontAsk",
+            strict_mcp_config=True,
+            setting_sources=[],
             output_format={"type": "json_schema", "schema": VERDICT_OUTPUT_SCHEMA},
             max_turns=3,
         )

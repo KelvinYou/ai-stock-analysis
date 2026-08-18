@@ -221,7 +221,10 @@ class SynthesizerAgent:
                 "uncertainties. Do NOT invent specific entry/stop/target prices in prose; a "
                 "deterministic post-step attaches concrete levels to the briefing."
             ),
-            permission_mode="bypassPermissions",
+            tools=[],
+            permission_mode="dontAsk",
+            strict_mcp_config=True,
+            setting_sources=[],
             output_format={"type": "json_schema", "schema": BRIEFING_OUTPUT_SCHEMA},
             max_turns=3,
         )
