@@ -1,6 +1,12 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { cache } from "react";
+import {
+  ANALYSIS_API_CONFIGURED,
+  assertAnalysisApiConfiguration,
+  listTickerSummariesFromApi,
+  loadTickerFromApi,
+} from "./api";
 import { loadWatchlistMap } from "./watchlist";
 import type {
   AnalystReports,
@@ -267,6 +273,10 @@ async function readCsv(filePath: string): Promise<PricePoint[]> {
 }
 
 export const listTickers = cache(async (): Promise<string[]> => {
+  assertAnalysisApiConfiguration();
+  if (ANALYSIS_API_CONFIGURED) {
+    return (await listTickerSummariesFromApi()).map((summary) => summary.symbol);
+  }
   if (CLOUD_CONFIGURED) {
     const rows = await cloudRows<{ symbol: string }>("tickers", {
       select: "symbol",
@@ -287,6 +297,8 @@ export const listTickers = cache(async (): Promise<string[]> => {
 });
 
 export async function loadTicker(symbol: string): Promise<TickerBundle | null> {
+  assertAnalysisApiConfiguration();
+  if (ANALYSIS_API_CONFIGURED) return loadTickerFromApi(symbol);
   if (CLOUD_CONFIGURED) return loadCloudTicker(symbol);
   const dir = path.join(DATA_DIR, symbol);
   try {
@@ -434,6 +446,8 @@ async function loadTickerSummary(
 }
 
 export const listTickerSummaries = cache(async (): Promise<TickerSummary[]> => {
+  assertAnalysisApiConfiguration();
+  if (ANALYSIS_API_CONFIGURED) return listTickerSummariesFromApi();
   if (CLOUD_CONFIGURED) {
     const [rows, watchMap] = await Promise.all([
       cloudRowsAll<CloudSummaryRow>("latest_ticker_summary", {

@@ -43,9 +43,9 @@ export interface NewsHeadline {
 
 export interface Fundamentals {
   info: TickerInfo;
-  financials: Financials;
-  analyst_recommendations: AnalystRec[];
-  news_headlines: NewsHeadline[];
+  financials: Financials | null;
+  analyst_recommendations: AnalystRec[] | null;
+  news_headlines: NewsHeadline[] | null;
 }
 
 export interface Technicals {

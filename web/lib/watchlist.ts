@@ -1,6 +1,11 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { cache } from "react";
+import {
+  ANALYSIS_API_CONFIGURED,
+  assertAnalysisApiConfiguration,
+  loadWatchlistFromApi,
+} from "./api";
 import type { WatchGroup, WatchlistEntry } from "./types/watchlist";
 
 const WATCHLIST_FILE = process.env.STOCK_TICKERS_FILE
@@ -56,6 +61,8 @@ export function parseWatchlist(text: string): WatchlistEntry[] {
 }
 
 export const loadWatchlist = cache(async (): Promise<WatchlistEntry[]> => {
+  assertAnalysisApiConfiguration();
+  if (ANALYSIS_API_CONFIGURED) return loadWatchlistFromApi();
   if (SUPABASE_URL && SUPABASE_KEY) {
     const response = await fetch(
       `${SUPABASE_URL.replace(/\/$/, "")}/rest/v1/tickers?select=symbol,market,watch_group,theme&enabled=eq.true&order=symbol.asc`,

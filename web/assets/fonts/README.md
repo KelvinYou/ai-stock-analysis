@@ -1,8 +1,8 @@
 # Share-card fonts
 
-These four TTFs exist only for `lib/share/card.tsx`. The site itself loads its
-faces through `next/font/google` in `app/layout.tsx` — nothing here is served to
-a browser.
+These TTFs are used by both `lib/share/card.tsx` and `app/layout.tsx`. The site
+loads them through `next/font/local`, so production builds do not need to fetch
+Google Fonts over the deployment network.
 
 They are committed rather than fetched because Satori (the engine behind
 `next/og`) needs raw font bytes at render time and accepts **ttf/otf/woff only**

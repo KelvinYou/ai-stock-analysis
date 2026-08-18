@@ -5,7 +5,7 @@ import type { Fundamentals } from "@/lib/types";
 
 export function FundamentalsSection({ data }: { data: Fundamentals }) {
   const { info, financials, analyst_recommendations } = data;
-  const latestRec = analyst_recommendations[0];
+  const latestRec = analyst_recommendations?.[0];
   const recTotal = latestRec
     ? latestRec.strongBuy + latestRec.buy + latestRec.hold + latestRec.sell + latestRec.strongSell
     : 0;
@@ -23,17 +23,17 @@ export function FundamentalsSection({ data }: { data: Fundamentals }) {
         <Stat label="Beta" value={fmtNumber(info.beta, 2)} />
         <Stat
           label="Revenue"
-          value={fmtCompact(financials.revenue, info.currency)}
+          value={fmtCompact(financials?.revenue, info.currency)}
           hint={
-            financials.net_margin != null
+            financials?.net_margin != null
               ? `Net margin ${fmtPercent(financials.net_margin, 1, true)}`
               : undefined
           }
         />
-        <Stat label="Net Income" value={fmtCompact(financials.net_income, info.currency)} />
+        <Stat label="Net Income" value={fmtCompact(financials?.net_income, info.currency)} />
         <Stat
           label="Free Cash Flow"
-          value={fmtCompact(financials.free_cash_flow, info.currency)}
+          value={fmtCompact(financials?.free_cash_flow, info.currency)}
         />
         <Stat
           label="Dividend Yield"
