@@ -59,8 +59,8 @@ flowchart TD
 
     subgraph CONSUMERS["Consumers"]
         direction LR
-        DASH["<b>Next.js screener</b><br/>one sortable row per ticker"]
-        API["<b>FastAPI</b><br/>POST /analyze · GET /status"]
+        DASH["<b>Next.js screener</b><br/>server-side FastAPI client<br/>one sortable row per ticker"]
+        API["<b>FastAPI</b><br/>POST /api/v1/analyze<br/>GET /api/v1/analysis-runs · public reads"]
         BT["<b>Backtester</b><br/>hit rate vs realized move"]
     end
     OUT --> CONSUMERS

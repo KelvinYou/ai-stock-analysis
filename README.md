@@ -47,6 +47,10 @@ stock-analysis AAPL --market US -v
 
 Works on Linux, macOS, and WSL2 with Python 3.12+. Node.js 18+ is required for the web dashboard.
 
+For a deployed backend, use `ANTHROPIC_API_KEY` as a server-side secret for the
+worker; do not copy `~/.claude` or run an interactive login in a container. The
+Agent SDK dependency is pinned and bundles the Claude Code CLI.
+
 ---
 
 ## Commands
@@ -255,6 +259,27 @@ NEXT_PUBLIC_SITE_URL=https://your-host.example npm run build
 Left unset it falls back to `http://localhost:3000`, which is a dead scan on
 anyone else's phone.
 
+For a deployed dashboard, configure the Next.js server to read through the
+FastAPI public-data seam. These variables are server-only — never prefix the
+token with `NEXT_PUBLIC_`:
+
+```bash
+STOCK_ANALYSIS_API_URL=https://api.your-host.example
+STOCK_ANALYSIS_API_TOKEN=your-fastapi-bearer-token
+NEXT_PUBLIC_SITE_URL=https://your-host.example
+```
+
+The dashboard then calls `GET /api/v1/tickers`,
+`GET /api/v1/tickers/{ticker}`, and `GET /api/v1/watchlist`. It does not need a
+Supabase key in the deployed web bundle. Direct Supabase reads remain only as a
+local transition fallback when the FastAPI variables are unset.
+
+The analysis API accepts `X-Idempotency-Key` for safe client retries. A key is
+bound to the complete ticker/market/settings request; changing those values
+with the same key returns `409`. Cloud requests are queued durably, and worker
+replica count controls parallelism. `ANALYSIS_QUOTA_TIMEZONE` controls the
+daily cost-quota boundary (default `Asia/Kuala_Lumpur`).
+
 ### Cloud-first storage
 
 The default backend remains local for offline tests. To avoid durable local
@@ -270,10 +295,32 @@ stock-analysis-worker
 
 The worker claims rows from the durable `analysis_runs` queue and writes typed
 market snapshots, immutable per-layer artifacts, outcomes, and backtest
-reports to Supabase. The Next.js server reads through the publishable key and
-RLS; it does not need a local `data/` directory. See
+reports to Supabase. In deployment, the Next.js server reads completed public
+data through FastAPI; it does not need a local `data/` directory or a Supabase
+key. See
 [`docs/supabase.md`](docs/supabase.md) for migration, import, and deployment
 steps.
+
+### Deploy the backend
+
+The API and worker run as two long-lived services from the same Docker image.
+The API is public HTTPS plus a bearer token; the worker is private and consumes
+the Supabase queue. See [`docs/deployment.md`](docs/deployment.md) for the
+environment matrix, Docker commands, API calls, and acceptance checklist.
+
+The repository also carries generated acceptance assets:
+
+```bash
+python scripts/generate_openapi.py       # write contracts/openapi.json
+python scripts/generate_postman.py       # write the importable collection
+python scripts/generate_openapi.py --check
+python scripts/generate_postman.py --check
+```
+
+Import `postman/ai-stock-analysis.postman_collection.json` into Postman, set
+`base_url` and `api_token`, and run the health/contract requests first. The
+`Start paid canary` request enqueues a real LLM run and must be triggered
+manually only after the non-cost checks pass.
 
 ---
 
@@ -312,7 +359,7 @@ src/stock_analysis/
 │   ├── portfolio.py     # Generic backtest simulation (no personal holdings)
 │   └── fetcher.py       # Historical data helper
 ├── api/                 # FastAPI REST endpoints
-│   └── app.py           # POST /analyze/{ticker}, GET /status/{job_id}, GET /results/{ticker}
+│   └── app.py           # versioned FastAPI control plane + health checks
 ├── worker.py            # Durable Supabase job worker
 ├── config.py            # Settings (models, debate rounds, data dir)
 ├── orchestrator.py      # AnalysisPipeline — chains all four layers
@@ -321,7 +368,15 @@ src/stock_analysis/
 
 pipeline.json            # Canonical pipeline shape — feeds /about + architecture.md
 scripts/
-└── sync_architecture.py # Regenerates the mermaid block from pipeline.json
+├── sync_architecture.py  # Regenerates the mermaid block from pipeline.json
+├── generate_openapi.py   # Writes/checks the FastAPI contract snapshot
+└── generate_postman.py   # Writes/checks the Postman acceptance collection
+
+contracts/
+└── openapi.json          # Generated FastAPI OpenAPI snapshot
+
+postman/
+└── ai-stock-analysis.postman_collection.json  # Generated API checks
 
 web/                     # Next.js dashboard
 ├── app/
@@ -329,10 +384,11 @@ web/                     # Next.js dashboard
 │   ├── about/           # Pipeline flowchart (SVG from pipeline.json) + glossary
 │   ├── dashboard/       # Redirect to / (the screener moved there)
 │   └── [ticker]/        # Per-ticker analysis view + opengraph/twitter-image
-├── assets/fonts/        # Static subsetted TTFs — share card only (see its README)
+├── assets/fonts/        # Static subsetted TTFs — site + share cards
 ├── lib/
-│   ├── data.ts          # Reads Supabase or local data into TickerSummary rows
-│   ├── watchlist.ts     # Parses tickers.txt incl. #group / #theme markers
+│   ├── api.ts            # Server-side FastAPI public-read client
+│   ├── data.ts           # Reads FastAPI, Supabase, or local data into rows
+│   ├── watchlist.ts      # Reads FastAPI, Supabase, or tickers.txt
 │   ├── screener.ts      # Column defs, sorting, at-entry / stale predicates
 │   ├── pipeline.ts      # Loads pipeline.json + computes the flowchart layout
 │   └── share/           # 16:9 share card: JSX, palette, QR + sparkline SVGs
@@ -391,6 +447,12 @@ ruff format src/
 
 # Run API server
 uvicorn stock_analysis.api.app:app --reload
+
+# Contract snapshots / Postman collection
+python scripts/generate_openapi.py
+python scripts/generate_postman.py
+python scripts/generate_openapi.py --check
+python scripts/generate_postman.py --check
 
 # Tests
 pytest

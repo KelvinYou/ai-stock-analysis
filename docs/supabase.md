@@ -16,10 +16,13 @@ Run the migration in the Supabase SQL editor or through the Supabase CLI:
 supabase db push
 ```
 
-The migration is:
+The migrations are:
 
 ```text
 supabase/migrations/20260817000000_initial_analysis_schema.sql
+supabase/migrations/20260818000000_deployment_safety.sql
+supabase/migrations/20260818000001_public_summary_visibility.sql
+supabase/migrations/20260818000002_queue_admission_contract.sql
 ```
 
 It creates the typed market tables, immutable analysis artifacts, durable run
@@ -75,17 +78,29 @@ The API is only a control plane in cloud mode. It inserts a pending
 pipeline:
 
 ```bash
-STORAGE_BACKEND=supabase uvicorn stock_analysis.api.app:app --host 0.0.0.0 --port 8000
-STORAGE_BACKEND=supabase stock-analysis-worker
+APP_ENV=production STORAGE_BACKEND=supabase uvicorn stock_analysis.api.app:app --host 0.0.0.0 --port 8000
+APP_ENV=production STORAGE_BACKEND=supabase stock-analysis-worker
 ```
 
-Use `X-Idempotency-Key` on `POST /analyze/<ticker>` when a client may retry the
-request. The same key returns the existing run instead of starting another
-LLM job.
+Use `X-Idempotency-Key` on `POST /api/v1/analyze/<ticker>` when a client may retry the
+request. The same key returns the existing run instead of starting another LLM
+job only when ticker, market, date, and pipeline settings are identical. A
+different request with the same key returns `409 idempotency_conflict`.
+
+The daily cost quota uses `ANALYSIS_QUOTA_TIMEZONE` (default
+`Asia/Kuala_Lumpur`) rather than the database/server UTC day. Accepted attempts
+count even when a later provider failure marks the run failed, because the
+provider may already have charged tokens. Cloud enqueue does not reject based
+on current running-row count; durable pending rows are consumed according to
+the number of worker processes/replicas.
+
+The versioned status route is `GET /api/v1/analysis-runs/<run_id>` and the
+run-scoped briefing route is `GET /api/v1/analysis-runs/<run_id>/result`.
 
 ### Retry semantics
 
-`claim_analysis_run` caps attempts at 3 (`p_max_attempts`). A worker that exits
+`claim_analysis_run` caps attempts at 3 (`p_max_attempts`). The worker renews
+its lease and records `heartbeat_at` while a run is active. A worker that exits
 cleanly marks its own run `failed`, which is terminal. A worker killed hard
 (OOM, SIGKILL) cannot, so its run stays `running` until the lease expires and is
 then reclaimed — up to the cap, after which the run is retired as `failed` with
@@ -97,23 +112,30 @@ keyed `(run_id, stage)`. `AnalysisPipeline` reads those back before re-entering 
 layer, so a reclaimed run resumes at the first unfinished stage instead of paying
 for Layer 2-4 again.
 
-## 3. Configure Next.js
+## 3. Configure Next.js through FastAPI
 
-The web app only needs the publishable/anon key for public, read-only queries:
+The deployed web app should use the FastAPI public-read seam. Configure these
+server-only variables in the Next.js runtime:
 
 ```text
-SUPABASE_URL=https://YOUR_PROJECT.supabase.co
-SUPABASE_PUBLISHABLE_KEY=sb_publishable_...
+STOCK_ANALYSIS_API_URL=https://YOUR_API
+STOCK_ANALYSIS_API_TOKEN=long-random-inbound-api-token
 NEXT_PUBLIC_SITE_URL=https://your-site.example
 ```
 
-`NEXT_PUBLIC_SUPABASE_URL` and
-`NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` are also accepted. Never put
-`SUPABASE_SERVICE_ROLE_KEY` in the web environment.
+The API token is sent only by Next.js server components to FastAPI. It is not
+exposed to browser JavaScript. FastAPI reads Supabase with the service key and
+returns only completed/public dashboard data.
 
-When cloud variables are present, `web/lib/data.ts` reads `tickers`,
-`latest_ticker_summary`, `market_snapshots`, `price_bars`, and
-`analysis_artifacts`. It no longer needs a local `data/` directory.
+For local/offline development, leave the API variables unset and the existing
+filesystem reader remains available. Direct Supabase reads remain as a
+transition fallback when `STOCK_ANALYSIS_API_URL` is unset; do not use them for
+the deployed web app.
+
+When the FastAPI variables are present, `web/lib/data.ts` and
+`web/lib/watchlist.ts` call `/api/v1/tickers`, `/api/v1/tickers/<ticker>`, and
+`/api/v1/watchlist`. The web no longer needs a Supabase publishable key or a
+direct database read path in production.
 
 The local reader is a **separate mode, not a fallback**: the backend is chosen
 by whether the two env vars are set, and a failed cloud query raises rather than
@@ -165,4 +187,3 @@ nothing currently exports back to it. That means the git history of `data/`
 stops being an audit trail — the `data: fetch <date> (N/N ok)` commits end here.
 If that trail matters, write an exporter before deleting the directory; until
 then `data/` is a static backup of the pre-cutover state, not a live mirror.
-
