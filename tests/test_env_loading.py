@@ -10,6 +10,8 @@ from __future__ import annotations
 
 import os
 
+import pytest
+
 import stock_analysis.config as config_module
 from stock_analysis.config import Settings, load_env
 
@@ -64,3 +66,32 @@ def test_missing_dotenv_is_not_an_error(tmp_path, monkeypatch):
 
     assert "STORAGE_BACKEND" not in os.environ
     assert Settings.from_env().storage_backend == "local"
+
+
+def test_production_api_requires_supabase_and_bearer_token():
+    settings = Settings(environment="production")
+
+    with pytest.raises(RuntimeError, match="STORAGE_BACKEND=supabase"):
+        settings.require_api_runtime()
+
+
+def test_production_worker_requires_anthropic_api_key(monkeypatch):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    settings = Settings(
+        environment="production",
+        storage_backend="supabase",
+        supabase_url="https://example.supabase.co",
+        supabase_service_key="service-secret",
+    )
+
+    with pytest.raises(RuntimeError, match="ANTHROPIC_API_KEY"):
+        settings.require_worker_runtime()
+
+
+def test_quota_timezone_is_validated_and_configurable():
+    settings = Settings(quota_timezone="UTC")
+
+    assert settings.quota_timezone == "UTC"
+
+    with pytest.raises(ValueError, match="valid IANA timezone"):
+        Settings(quota_timezone="Not/A_timezone")
