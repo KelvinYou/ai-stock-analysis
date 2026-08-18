@@ -1,0 +1,29 @@
+services:
+  api:
+    build: .
+    command: ["api"]
+    env_file: .env
+    # The API never needs the outbound LLM credential. Keep the single-file
+    # local compose workflow, but do not copy this secret into the API process.
+    environment:
+      ANTHROPIC_API_KEY: ""
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - >-
+          import urllib.request;
+          urllib.request.urlopen('http://127.0.0.1:8000/health/live', timeout=3)
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  worker:
+    build: .
+    command: ["stock-analysis-worker"]
+    env_file: .env
+    restart: unless-stopped
