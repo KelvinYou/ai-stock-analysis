@@ -1,0 +1,409 @@
+{
+  "auth": {
+    "bearer": [
+      {
+        "key": "token",
+        "type": "string",
+        "value": "{{api_token}}"
+      }
+    ],
+    "type": "bearer"
+  },
+  "info": {
+    "_postman_id": "7d4d6fb4-1b9e-4d1c-93f4-9f65d0e3c8f4",
+    "description": "Acceptance collection for the deployed FastAPI control plane. Set api_token before running protected requests. The 'Paid canary' request starts a real LLM analysis and must be run manually.",
+    "name": "AI Stock Analysis API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.response.to.have.status(200);",
+                  "pm.test(\"service is live\", function () {",
+                  "    pm.expect(pm.response.json().status).to.eql(\"ok\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Live",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/health/live"
+            }
+          }
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.expect([200, 503]).to.include(pm.response.code);",
+                  "pm.test(\"readiness has a status\", function () {",
+                  "    pm.expect(pm.response.json().status).to.be.oneOf([\"ok\", \"not_ready\"]);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Ready",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "200 means storage is reachable; 503 is an actionable readiness failure.",
+            "header": [],
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/health/ready"
+            }
+          }
+        }
+      ],
+      "name": "Health"
+    },
+    {
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.response.to.have.status(200);",
+                  "pm.test(\"ticker summaries is an array\", function () {",
+                  "    pm.expect(pm.response.json()).to.be.an('array');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "List ticker summaries",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/v1/tickers"
+            }
+          }
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.response.to.have.status(200);",
+                  "pm.test(\"watchlist is an array\", function () {",
+                  "    pm.expect(pm.response.json()).to.be.an('array');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "List watchlist",
+          "request": {
+            "header": [],
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/v1/watchlist"
+            }
+          }
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.expect([200, 404]).to.include(pm.response.code);",
+                  "pm.test(\"known ticker bundle has a symbol\", function () {",
+                  "    if (pm.response.code === 200) pm.expect(pm.response.json().symbol).to.be.a(\"string\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Load ticker bundle",
+          "request": {
+            "description": "Use a ticker that has a completed public analysis; 404 is valid for an unknown ticker.",
+            "header": [],
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/v1/tickers/{{ticker}}"
+            }
+          }
+        }
+      ],
+      "name": "Public dashboard reads"
+    },
+    {
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.response.to.have.status(401);",
+                  "pm.test(\"unauthorized error envelope\", function () {",
+                  "    pm.expect(pm.response.json().error.code).to.eql(\"unauthorized\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Reject missing bearer token",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "Production-only auth check; development mode without API_BEARER_TOKEN intentionally permits the request.",
+            "header": [],
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/v1/tickers"
+            }
+          }
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.response.to.have.status(422);",
+                  "pm.test(\"validation error envelope\", function () {",
+                  "    pm.expect(pm.response.json().error.code).to.eql(\"validation_error\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Reject point-in-time input",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"as_of_date\": \"2026-08-18\"\n}"
+            },
+            "description": "Must return 422 before enqueueing anything; this request does not spend LLM budget.",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "raw": "{{base_url}}/api/v1/analyze/{{ticker}}"
+            }
+          }
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.response.to.have.status(422);",
+                  "pm.test(\"ticker validation error envelope\", function () {",
+                  "    pm.expect(pm.response.json().error.code).to.eql(\"validation_error\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Reject invalid ticker",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{}"
+            },
+            "description": "Must return 422 before local admission or cloud enqueue; this request does not spend LLM budget.",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "raw": "{{base_url}}/api/v1/analyze/invalid_ticker"
+            }
+          }
+        }
+      ],
+      "name": "Contract checks"
+    },
+    {
+      "item": [
+        {
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "pm.collectionVariables.set(\"idempotency_key\", \"postman-canary-\" + Date.now());"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.response.to.have.status(202);",
+                  "pm.test(\"run was accepted\", function () {",
+                  "    var body = pm.response.json();",
+                  "    pm.expect(body.run_id).to.be.a(\"string\");",
+                  "    pm.collectionVariables.set(\"run_id\", body.run_id);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Start paid canary",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n  \"rounds\": 3,\n  \"model\": \"haiku\",\n  \"debate_model\": \"opus\",\n  \"market\": \"US\"\n}"
+            },
+            "description": "COST WARNING: this enqueues a real analysis and may call four analyst agents, debate rounds, and synthesis. Run manually once only.",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Idempotency-Key",
+                "value": "{{idempotency_key}}"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "raw": "{{base_url}}/api/v1/analyze/{{ticker}}"
+            }
+          }
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.expect([200, 404]).to.include(pm.response.code);",
+                  "pm.test(\"known run has a status\", function () {",
+                  "    if (pm.response.code === 200) pm.expect(pm.response.json().status).to.be.a(\"string\");",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Get run status",
+          "request": {
+            "description": "Run after Start paid canary; 404 means run_id has not been set or is unknown.",
+            "header": [],
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/v1/analysis-runs/{{run_id}}"
+            }
+          }
+        },
+        {
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.expect([200, 404]).to.include(pm.response.code);",
+                  "pm.test(\"completed result has a briefing\", function () {",
+                  "    if (pm.response.code === 200) {",
+                  "        var body = pm.response.json();",
+                  "        pm.expect(body.ticker).to.be.a(\"string\");",
+                  "        pm.expect(body.overall_signal).to.be.a(\"string\");",
+                  "    }",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "name": "Get run-scoped result",
+          "request": {
+            "description": "Poll until the run is completed; 404 is expected while it is still running.",
+            "header": [],
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/v1/analysis-runs/{{run_id}}/result"
+            }
+          }
+        }
+      ],
+      "name": "Analysis run"
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "type": "string",
+      "value": "http://localhost:8000"
+    },
+    {
+      "key": "api_token",
+      "type": "string",
+      "value": "replace-with-api-bearer-token"
+    },
+    {
+      "key": "ticker",
+      "type": "string",
+      "value": "AAPL"
+    },
+    {
+      "key": "run_id",
+      "type": "string",
+      "value": "replace-after-canary"
+    },
+    {
+      "key": "idempotency_key",
+      "type": "string",
+      "value": "postman-canary"
+    }
+  ]
+}
