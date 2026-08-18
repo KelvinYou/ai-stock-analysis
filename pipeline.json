@@ -191,13 +191,13 @@
     {
       "id": "DASH",
       "label": "Next.js screener",
-      "lines": ["one sortable row per ticker"],
+      "lines": ["server-side FastAPI client", "one sortable row per ticker"],
       "tone": "muted"
     },
     {
       "id": "API",
       "label": "FastAPI",
-      "lines": ["POST /analyze · GET /status"],
+      "lines": ["POST /api/v1/analyze", "GET /api/v1/analysis-runs · public reads"],
       "tone": "muted"
     },
     {

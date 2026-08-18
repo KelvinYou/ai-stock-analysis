@@ -89,8 +89,18 @@ Backfill from a backtest with `stock-analysis-backtest --record-outcomes` (off b
 ### Agent Pattern
 Every agent subclasses `BaseAnalystAgent` and implements three methods: `system_prompt()`, `build_tools()` (MCP tool definitions over `TickerData`), and `output_model()` (the Pydantic response type). LLM calls go through `query_with_retry()` in `_query_retry.py`.
 
-### API (WIP)
-`api/app.py` exposes `POST /analyze/{ticker}` (async job), `GET /status/{job_id}`, and `GET /results/{ticker}` via FastAPI.
+### API
+`api/app.py` exposes a bearer-protected, versioned FastAPI control plane:
+
+- `POST /api/v1/analyze/{ticker}` enqueues an async run;
+- `GET /api/v1/analysis-runs/{run_id}` returns run status;
+- `GET /api/v1/analysis-runs/{run_id}/result` returns the run-scoped briefing;
+- `GET /api/v1/tickers`, `GET /api/v1/tickers/{ticker}`, and
+  `GET /api/v1/watchlist` serve completed public dashboard data to the
+  server-side Next.js client.
+
+Only `/health/live` and `/health/ready` are unauthenticated. The analyze
+request deliberately has no caller-controlled `as_of_date` field.
 
 ### Backtesting (`backtest/`)
 `Backtester` reruns the full pipeline across historical date ranges. `Scorer` computes hit rate and accuracy against actual price movement over a configurable holding horizon.
