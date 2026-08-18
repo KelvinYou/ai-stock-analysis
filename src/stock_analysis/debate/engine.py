@@ -182,7 +182,10 @@ class DebateEngine:
         options = ClaudeAgentOptions(
             model=self.model,
             system_prompt=system,
-            permission_mode="bypassPermissions",
+            tools=[],
+            permission_mode="dontAsk",
+            strict_mcp_config=True,
+            setting_sources=[],
             output_format={"type": "json_schema", "schema": ARGUMENT_OUTPUT_SCHEMA},
             max_turns=3,
         )
@@ -222,7 +225,10 @@ class DebateEngine:
         options = ClaudeAgentOptions(
             model=self.model,
             system_prompt="You are a neutral debate moderator summarizing an investment debate.",
-            permission_mode="bypassPermissions",
+            tools=[],
+            permission_mode="dontAsk",
+            strict_mcp_config=True,
+            setting_sources=[],
             output_format={"type": "json_schema", "schema": SUMMARY_OUTPUT_SCHEMA},
             max_turns=3,
         )

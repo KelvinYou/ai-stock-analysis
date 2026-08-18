@@ -48,8 +48,13 @@ class BaseAnalystAgent(ABC):
             model=self.model,
             system_prompt=self.system_prompt(),
             mcp_servers={self.name: server},
+            # MCP tools are supplied explicitly below; no Claude Code
+            # filesystem/shell tools are needed by an analyst.
+            tools=[],
             allowed_tools=tool_names,
-            permission_mode="bypassPermissions",
+            permission_mode="dontAsk",
+            strict_mcp_config=True,
+            setting_sources=[],
             output_format={"type": "json_schema", "schema": schema},
             max_turns=5,
         )
