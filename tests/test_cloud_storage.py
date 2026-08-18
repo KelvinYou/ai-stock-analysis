@@ -29,6 +29,8 @@ class MemoryClient:
     def __init__(self) -> None:
         self.tables: dict[str, list[dict[str, Any]]] = {}
         self.rpc_calls: list[tuple[str, dict[str, Any]]] = []
+        self.rpc_results: dict[str, list[dict[str, Any]]] = {}
+        self.updates: list[tuple[str, dict[str, Any], dict[str, str]]] = []
         # Write volume is part of the storage contract here, not an
         # implementation detail: see test_merge_market_data_only_writes_incoming_bars.
         self.upserts: list[tuple[str, list[dict[str, Any]]]] = []
@@ -43,7 +45,15 @@ class MemoryClient:
                 continue
             if value.startswith("eq."):
                 expected = value[3:]
-                rows = [row for row in rows if str(row.get(key)) == expected]
+                rows = [
+                    row
+                    for row in rows
+                    if (
+                        str(row.get(key)).lower() == expected.lower()
+                        if isinstance(row.get(key), bool)
+                        else str(row.get(key)) == expected
+                    )
+                ]
         order = (params or {}).get("order")
         if order:
             for expression in reversed(order.split(",")):
@@ -103,6 +113,7 @@ class MemoryClient:
         values: dict[str, Any],
         params: dict[str, str],
     ) -> list[dict[str, Any]]:
+        self.updates.append((table, dict(values), dict(params)))
         rows = self._filtered(table, params)
         for row in self.tables.get(table, []):
             if row in rows:
@@ -111,7 +122,7 @@ class MemoryClient:
 
     def rpc(self, function: str, payload: dict[str, Any]) -> list[dict[str, Any]]:
         self.rpc_calls.append((function, payload))
-        return []
+        return [dict(row) for row in self.rpc_results.get(function, [])]
 
 
 def _settings() -> Settings:
@@ -155,6 +166,7 @@ def test_pipeline_dump_excludes_cloud_credentials(monkeypatch):
     assert "env-secret" not in payload.values()
     assert "supabase_service_key" not in payload
     assert "data_dir" not in payload
+    assert "quota_timezone" not in payload
 
 
 def test_rest_client_sends_supabase_headers_and_parses_rows():
@@ -189,6 +201,77 @@ def test_analysis_store_creates_run_without_clobbering_worker_lease():
     assert run["status"] == "running"
     assert "lease_until" not in run
     assert client.tables["tickers"][0]["symbol"] == "AAPL"
+    assert [table for table, _ in client.upserts[:2]] == ["tickers", "analysis_runs"]
+
+
+def test_enqueue_run_uses_atomic_admission_rpc():
+    client = MemoryClient()
+    client.rpc_results["enqueue_analysis_run"] = [{"id": "run-1"}]
+    settings = _settings().model_copy(
+        update={"max_daily_runs": 4, "quota_timezone": "Asia/Kuala_Lumpur"}
+    )
+    store = SupabaseAnalysisStore(settings, client=client)
+
+    run_id = store.enqueue_run(
+        "aapl",
+        market="us",
+        as_of_date=date(2026, 8, 18),
+        idempotency_key="request-1",
+    )
+
+    assert run_id == "run-1"
+    assert client.rpc_calls == [
+        (
+            "enqueue_analysis_run",
+            {
+                "p_symbol": "AAPL",
+                "p_market": "US",
+                "p_as_of_date": "2026-08-18",
+                "p_settings": settings.pipeline_dump(),
+                "p_request_idempotency_key": "request-1",
+                "p_max_daily_runs": 4,
+                "p_quota_timezone": "Asia/Kuala_Lumpur",
+            },
+        )
+    ]
+
+
+def test_renew_run_lease_uses_run_and_worker_owner():
+    client = MemoryClient()
+    client.rpc_results["renew_analysis_run_lease"] = [{"renewed": True}]
+    store = SupabaseAnalysisStore(_settings(), client=client)
+
+    assert store.renew_run_lease("run-1", "worker-1", lease_seconds=120) is True
+    assert client.rpc_calls == [
+        (
+            "renew_analysis_run_lease",
+            {
+                "p_run_id": "run-1",
+                "p_worker_id": "worker-1",
+                "p_lease_seconds": 120,
+            },
+        )
+    ]
+
+
+def test_terminal_run_updates_keep_the_active_worker_owner():
+    client = MemoryClient()
+    settings = _settings().model_copy(update={"worker_id": "worker-1"})
+    store = SupabaseAnalysisStore(settings, client=client)
+
+    store.complete_run("run-1")
+    store.fail_run("run-1", "boom")
+
+    assert client.updates[0][2] == {
+        "id": "eq.run-1",
+        "status": "eq.running",
+        "worker_id": "eq.worker-1",
+    }
+    assert client.updates[1][2] == {
+        "id": "eq.run-1",
+        "status": "eq.running",
+        "worker_id": "eq.worker-1",
+    }
 
 
 def test_claim_run_uses_sql_function_argument_names():
@@ -302,6 +385,29 @@ def test_resume_artifact_reads_the_in_flight_run():
     # `_load_artifact` still refuses it: the run has not completed, so no public
     # reader should be able to see it yet.
     assert reclaimed.load_analyst_reports("AAPL", date(2026, 8, 14)) is None
+
+
+def test_public_artifact_reader_excludes_private_artifacts():
+    client = MemoryClient()
+    store = SupabaseAnalysisStore(_settings(), client=client)
+    run_id = store.begin_run("AAPL", date(2026, 8, 14), _settings())
+    client.tables["analysis_runs"][0]["status"] = "completed"
+    reports = _analyst_reports()
+    client.tables["analysis_artifacts"] = [
+        {
+            "run_id": run_id,
+            "stage": "analyst_reports",
+            "is_public": False,
+            "payload": reports.model_dump(mode="json"),
+        }
+    ]
+
+    assert store.load_public_artifact("AAPL", "analyst_reports", AnalystReports) is None
+
+    client.tables["analysis_artifacts"][0]["is_public"] = True
+    loaded = store.load_public_artifact("AAPL", "analyst_reports", AnalystReports)
+    assert loaded is not None
+    assert loaded.fundamentals.signal is Signal.BUY
 
 
 def test_watchlist_markers_survive_the_python_side():

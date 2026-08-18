@@ -243,12 +243,15 @@ class SupabaseAnalysisStore:
         }
         if self.settings.worker_id:
             values["worker_id"] = self.settings.worker_id
-        self.client.upsert("analysis_runs", values, on_conflict="id")
+        # ``analysis_runs.symbol`` references ``tickers.symbol``. Keep this
+        # order valid for a fresh ticker in real Postgres (the memory test
+        # client does not enforce foreign keys).
         self.client.upsert(
             "tickers",
             {"symbol": symbol, "market": market.upper(), "updated_at": _now()},
             on_conflict="symbol",
         )
+        self.client.upsert("analysis_runs", values, on_conflict="id")
         self._run_id = run_id
         self._run_as_of = as_of_date
         return run_id
@@ -257,6 +260,9 @@ class SupabaseAnalysisStore:
         run_id = run_id or self._run_id
         if not run_id:
             return
+        params = {"id": f"eq.{run_id}", "status": "eq.running"}
+        if self.settings.worker_id:
+            params["worker_id"] = f"eq.{self.settings.worker_id}"
         self.client.update(
             "analysis_runs",
             {
@@ -265,13 +271,16 @@ class SupabaseAnalysisStore:
                 "lease_until": None,
                 "error": None,
             },
-            {"id": f"eq.{run_id}"},
+            params,
         )
 
     def fail_run(self, run_id: str | None, error: str) -> None:
         run_id = run_id or self._run_id
         if not run_id:
             return
+        params = {"id": f"eq.{run_id}", "status": "eq.running"}
+        if self.settings.worker_id:
+            params["worker_id"] = f"eq.{self.settings.worker_id}"
         self.client.update(
             "analysis_runs",
             {
@@ -280,7 +289,7 @@ class SupabaseAnalysisStore:
                 "lease_until": None,
                 "error": error[:4000],
             },
-            {"id": f"eq.{run_id}"},
+            params,
         )
 
     def enqueue_run(
@@ -291,47 +300,62 @@ class SupabaseAnalysisStore:
         as_of_date: date | None = None,
         settings: Settings | None = None,
         idempotency_key: str | None = None,
+        max_daily_runs: int | None = None,
     ) -> str:
         symbol = ticker.upper()
-        if idempotency_key:
-            existing = self.client.select(
-                "analysis_runs",
-                {
-                    "request_idempotency_key": f"eq.{idempotency_key}",
-                    "select": "id",
-                    "limit": "1",
-                },
-            )
-            if existing:
-                return str(existing[0]["id"])
-
-        run_id = str(uuid.uuid4())
-        self.client.insert(
-            "analysis_runs",
+        effective_settings = settings or self.settings
+        rows = self.client.rpc(
+            "enqueue_analysis_run",
             {
-                "id": run_id,
-                "symbol": symbol,
-                "market": market.upper(),
-                "as_of_date": (as_of_date or date.today()).isoformat(),
-                "status": "pending",
-                "settings": (settings or self.settings).pipeline_dump(),
-                "request_idempotency_key": idempotency_key,
-                "requested_at": _now(),
+                "p_symbol": symbol,
+                "p_market": market.upper(),
+                "p_as_of_date": as_of_date.isoformat() if as_of_date is not None else None,
+                "p_settings": effective_settings.pipeline_dump(),
+                "p_request_idempotency_key": idempotency_key,
+                "p_max_daily_runs": (
+                    max_daily_runs
+                    if max_daily_runs is not None
+                    else effective_settings.max_daily_runs
+                ),
+                "p_quota_timezone": effective_settings.quota_timezone,
             },
         )
-        self.client.upsert(
-            "tickers",
-            {"symbol": symbol, "market": market.upper(), "updated_at": _now()},
-            on_conflict="symbol",
-        )
-        return run_id
+        if not rows or not rows[0].get("id"):
+            raise SupabaseError("Supabase enqueue_analysis_run returned no run")
+        return str(rows[0]["id"])
 
-    def claim_run(self, worker_id: str, lease_seconds: int = 900) -> CloudRun | None:
+    def claim_run(
+        self,
+        worker_id: str,
+        lease_seconds: int | None = None,
+    ) -> CloudRun | None:
+        lease_seconds = (
+            lease_seconds if lease_seconds is not None else self.settings.worker_lease_seconds
+        )
         rows = self.client.rpc(
             "claim_analysis_run",
             {"p_worker_id": worker_id, "p_lease_seconds": lease_seconds},
         )
         return CloudRun.model_validate(rows[0]) if rows else None
+
+    def renew_run_lease(
+        self,
+        run_id: str,
+        worker_id: str,
+        lease_seconds: int | None = None,
+    ) -> bool:
+        lease_seconds = (
+            lease_seconds if lease_seconds is not None else self.settings.worker_lease_seconds
+        )
+        rows = self.client.rpc(
+            "renew_analysis_run_lease",
+            {
+                "p_run_id": run_id,
+                "p_worker_id": worker_id,
+                "p_lease_seconds": lease_seconds,
+            },
+        )
+        return bool(rows and (rows[0].get("renewed") is True or rows[0].get("renewed") == "true"))
 
     def get_run(self, run_id: str) -> CloudRun | None:
         rows = self.client.select(
@@ -635,6 +659,54 @@ class SupabaseAnalysisStore:
 
     def load_briefing(self, ticker: str, for_date: date | None = None) -> Briefing | None:
         return self._load_artifact("briefing", ticker, Briefing, for_date)
+
+    def load_public_artifact(
+        self,
+        ticker: str,
+        stage: str,
+        model_type: type[T],
+        for_date: date | None = None,
+    ) -> T | None:
+        """Load a completed artifact only when its public flag is true."""
+        run = self._find_run(ticker, for_date)
+        if not run:
+            return None
+        rows = self.client.select(
+            "analysis_artifacts",
+            {
+                "run_id": f"eq.{run['id']}",
+                "stage": f"eq.{stage}",
+                "is_public": "eq.true",
+                "select": "payload",
+                "limit": "1",
+            },
+        )
+        return model_type.model_validate(rows[0]["payload"]) if rows else None
+
+    def load_briefing_for_run(self, run_id: str) -> Briefing | None:
+        """Load only the completed briefing belonging to one run."""
+        runs = self.client.select(
+            "analysis_runs",
+            {
+                "id": f"eq.{run_id}",
+                "status": "eq.completed",
+                "select": "id",
+                "limit": "1",
+            },
+        )
+        if not runs:
+            return None
+        rows = self.client.select(
+            "analysis_artifacts",
+            {
+                "run_id": f"eq.{run_id}",
+                "stage": "eq.briefing",
+                "is_public": "eq.true",
+                "select": "payload",
+                "limit": "1",
+            },
+        )
+        return Briefing.model_validate(rows[0]["payload"]) if rows else None
 
     # ------------------------------------------------------------------
     # Backtest artifacts

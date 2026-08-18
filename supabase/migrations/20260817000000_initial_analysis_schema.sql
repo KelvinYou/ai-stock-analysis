@@ -312,7 +312,7 @@ latest_briefings as (
         a.payload
     from public.analysis_runs r
     join public.analysis_artifacts a
-      on a.run_id = r.id and a.stage = 'briefing'
+      on a.run_id = r.id and a.stage = 'briefing' and a.is_public
     where r.status = 'completed'
       and r.id = (
           select t.latest_run_id from public.tickers t where t.symbol = r.symbol

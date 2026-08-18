@@ -3,8 +3,9 @@ from __future__ import annotations
 import os
 from pathlib import Path
 from typing import Any, Literal
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, model_validator
 
 _ENV_LOADED = False
 
@@ -37,6 +38,7 @@ def load_env(explicit_path: str | os.PathLike[str] | None = None) -> Path | None
 
 
 class Settings(BaseModel):
+    environment: Literal["development", "production"] = "development"
     quick_think_model: str = "haiku"
     deep_think_model: str = "opus"
     synthesis_model: str = "sonnet"
@@ -57,10 +59,33 @@ class Settings(BaseModel):
     worker_poll_seconds: float = 5.0
     worker_id: str | None = None
 
+    # Control-plane protection and admission limits. These are intentionally
+    # not part of the persisted pipeline settings: they govern the service,
+    # not the analysis result.
+    api_bearer_token: str | None = None
+    max_daily_runs: int = Field(default=10, ge=1)
+    # Supabase evaluates the daily cost gate in this timezone. Keep it explicit
+    # so a container's host timezone cannot silently change the quota boundary.
+    quota_timezone: str = "Asia/Kuala_Lumpur"
+    max_concurrent_runs: int = Field(default=1, ge=1)
+    max_run_seconds: int = Field(default=1800, ge=60)
+    worker_lease_seconds: int = Field(default=900, ge=60)
+    worker_heartbeat_seconds: int = Field(default=60, ge=5)
+
     # Optional research enrichments. Each adds cost or a filesystem dependency,
     # so each can be turned off without touching the layers around it.
     enable_research_manager: bool = True
     enable_outcome_memory: bool = True
+
+    @model_validator(mode="after")
+    def validate_worker_timing(self) -> Settings:
+        if self.worker_heartbeat_seconds >= self.worker_lease_seconds:
+            raise ValueError("worker_heartbeat_seconds must be shorter than worker_lease_seconds")
+        try:
+            ZoneInfo(self.quota_timezone)
+        except ZoneInfoNotFoundError as exc:
+            raise ValueError(f"quota_timezone is not a valid IANA timezone: {self.quota_timezone}") from exc
+        return self
 
     @classmethod
     def from_env(cls, **overrides: Any) -> Settings:
@@ -72,6 +97,7 @@ class Settings(BaseModel):
         """
         values: dict[str, Any] = {}
         env_map = {
+            "environment": "APP_ENV",
             "storage_backend": "STORAGE_BACKEND",
             "data_dir": "STOCK_DATA_DIR",
             "supabase_url": "SUPABASE_URL",
@@ -79,6 +105,13 @@ class Settings(BaseModel):
             "supabase_schema": "SUPABASE_SCHEMA",
             "worker_id": "ANALYSIS_WORKER_ID",
             "worker_poll_seconds": "ANALYSIS_WORKER_POLL_SECONDS",
+            "api_bearer_token": "API_BEARER_TOKEN",
+            "max_daily_runs": "ANALYSIS_MAX_DAILY_RUNS",
+            "quota_timezone": "ANALYSIS_QUOTA_TIMEZONE",
+            "max_concurrent_runs": "ANALYSIS_MAX_CONCURRENT_RUNS",
+            "max_run_seconds": "ANALYSIS_MAX_RUN_SECONDS",
+            "worker_lease_seconds": "ANALYSIS_WORKER_LEASE_SECONDS",
+            "worker_heartbeat_seconds": "ANALYSIS_WORKER_HEARTBEAT_SECONDS",
         }
         for field, env_name in env_map.items():
             raw = os.getenv(env_name)
@@ -88,8 +121,54 @@ class Settings(BaseModel):
         if "worker_poll_seconds" in values:
             values["worker_poll_seconds"] = float(values["worker_poll_seconds"])
 
+        for field in {
+            "max_daily_runs",
+            "max_concurrent_runs",
+            "max_run_seconds",
+            "worker_lease_seconds",
+            "worker_heartbeat_seconds",
+        }:
+            if field in values:
+                values[field] = int(values[field])
+
         values.update(overrides)
         return cls(**values)
+
+    def require_api_runtime(self) -> None:
+        """Fail closed when the control plane is configured for production."""
+        if self.environment != "production":
+            return
+        missing: list[str] = []
+        if self.storage_backend != "supabase":
+            missing.append("STORAGE_BACKEND=supabase")
+        if not self.supabase_url:
+            missing.append("SUPABASE_URL")
+        if not self.supabase_service_key:
+            missing.append("SUPABASE_SERVICE_ROLE_KEY")
+        if not self.api_bearer_token:
+            missing.append("API_BEARER_TOKEN")
+        if missing:
+            raise RuntimeError(
+                "Production API configuration is incomplete: " + ", ".join(missing)
+            )
+
+    def require_worker_runtime(self) -> None:
+        """Fail closed when a production worker has no outbound LLM auth."""
+        if self.environment != "production":
+            return
+        missing: list[str] = []
+        if self.storage_backend != "supabase":
+            missing.append("STORAGE_BACKEND=supabase")
+        if not self.supabase_url:
+            missing.append("SUPABASE_URL")
+        if not self.supabase_service_key:
+            missing.append("SUPABASE_SERVICE_ROLE_KEY")
+        if not os.getenv("ANTHROPIC_API_KEY"):
+            missing.append("ANTHROPIC_API_KEY")
+        if missing:
+            raise RuntimeError(
+                "Production worker configuration is incomplete: " + ", ".join(missing)
+            )
 
     def pipeline_dump(self) -> dict[str, Any]:
         """Return safe settings for an ``analysis_runs`` row.
@@ -99,6 +178,7 @@ class Settings(BaseModel):
         return self.model_dump(
             mode="json",
             exclude={
+                "environment",
                 "supabase_url",
                 "supabase_service_key",
                 "data_dir",
@@ -106,5 +186,12 @@ class Settings(BaseModel):
                 "supabase_schema",
                 "worker_poll_seconds",
                 "worker_id",
+                "api_bearer_token",
+                "max_daily_runs",
+                "quota_timezone",
+                "max_concurrent_runs",
+                "max_run_seconds",
+                "worker_lease_seconds",
+                "worker_heartbeat_seconds",
             },
         )
