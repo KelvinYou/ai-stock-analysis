@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Newsreader, DM_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { AppShell } from "@/components/layout/app-shell";
 import { themeScript } from "@/components/shared/theme-toggle";
 import { listTickerSummaries } from "@/lib/data";
@@ -10,22 +10,20 @@ import "./globals.css";
 // headers, tickers, the verdict word. Newsreader carries argument: every string
 // an LLM reasoned out. DM Mono carries anything the pipeline computed. Keeping
 // them disjoint is what makes "argued vs. calculated" legible at a glance.
-const display = Archivo({
-  subsets: ["latin"],
-  axes: ["wdth"],
+const display = localFont({
+  src: "../assets/fonts/Archivo-Expanded-SemiBold.ttf",
   variable: "--font-display",
   display: "swap",
 });
 
-const prose = Newsreader({
-  subsets: ["latin"],
+const prose = localFont({
+  src: "../assets/fonts/Newsreader-Regular.ttf",
   variable: "--font-prose",
   display: "swap",
 });
 
-const mono = DM_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
+const mono = localFont({
+  src: "../assets/fonts/DMMono-Regular.ttf",
   variable: "--font-mono",
   display: "swap",
 });
