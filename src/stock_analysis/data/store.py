@@ -23,7 +23,7 @@ class DataStore:
         data/AAPL/
             price_history.csv       # full OHLCV history, overwritten on each fetch
             fundamentals.json       # TickerInfo + financials + news snapshot
-            technicals.json         # computed indicator snapshot (no LLM)
+            technicals.json         # computed indicators + history (no LLM)
             analyst_reports.json
             debate_result.json
             research_verdict.json   # Layer 3.5 adjudication

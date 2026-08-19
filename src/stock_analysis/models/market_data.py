@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import date, datetime
 from enum import Enum
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Market(str, Enum):
@@ -47,8 +47,29 @@ class TickerInfo(BaseModel):
     fifty_two_week_low: float | None = None
 
 
+class TechnicalSeriesPoint(BaseModel):
+    """Historical deterministic indicators aligned to one price bar."""
+
+    date: date
+    sma_20: float | None = None
+    sma_50: float | None = None
+    sma_200: float | None = None
+    ema_20: float | None = None
+    rsi_14: float | None = None
+    macd_line: float | None = None
+    macd_signal: float | None = None
+    macd_histogram: float | None = None
+    bb_upper: float | None = None
+    bb_middle: float | None = None
+    bb_lower: float | None = None
+    bb_pct: float | None = None
+    atr_14: float | None = None
+    volume_sma_20: float | None = None
+    volume_ratio: float | None = None
+
+
 class TechnicalSnapshot(BaseModel):
-    """Latest technical indicator values computed from price history."""
+    """Latest technical values plus an optional history for deterministic charts."""
 
     ticker: str
     as_of_date: date
@@ -85,6 +106,11 @@ class TechnicalSnapshot(BaseModel):
     above_sma_20: bool | None = None
     above_sma_50: bool | None = None
     above_sma_200: bool | None = None
+
+    # Optional for backward compatibility with snapshots written before the
+    # historical chart series was added. The Python calculation remains the
+    # canonical owner; the web layer only renders these values.
+    series: list[TechnicalSeriesPoint] = Field(default_factory=list)
 
 
 class TickerData(BaseModel):

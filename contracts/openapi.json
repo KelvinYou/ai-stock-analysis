@@ -1040,8 +1040,188 @@
         "title": "TechnicalReport",
         "type": "object"
       },
+      "TechnicalSeriesPoint": {
+        "description": "Historical deterministic indicators aligned to one price bar.",
+        "properties": {
+          "atr_14": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Atr 14"
+          },
+          "bb_lower": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bb Lower"
+          },
+          "bb_middle": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bb Middle"
+          },
+          "bb_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bb Pct"
+          },
+          "bb_upper": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bb Upper"
+          },
+          "date": {
+            "format": "date",
+            "title": "Date",
+            "type": "string"
+          },
+          "ema_20": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ema 20"
+          },
+          "macd_histogram": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Macd Histogram"
+          },
+          "macd_line": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Macd Line"
+          },
+          "macd_signal": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Macd Signal"
+          },
+          "rsi_14": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rsi 14"
+          },
+          "sma_20": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sma 20"
+          },
+          "sma_200": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sma 200"
+          },
+          "sma_50": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sma 50"
+          },
+          "volume_ratio": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Volume Ratio"
+          },
+          "volume_sma_20": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Volume Sma 20"
+          }
+        },
+        "required": [
+          "date"
+        ],
+        "title": "TechnicalSeriesPoint",
+        "type": "object"
+      },
       "TechnicalSnapshot": {
-        "description": "Latest technical indicator values computed from price history.",
+        "description": "Latest technical values plus an optional history for deterministic charts.",
         "properties": {
           "above_sma_20": {
             "anyOf": [
@@ -1238,6 +1418,13 @@
               }
             ],
             "title": "Rsi 14"
+          },
+          "series": {
+            "items": {
+              "$ref": "#/components/schemas/TechnicalSeriesPoint"
+            },
+            "title": "Series",
+            "type": "array"
           },
           "sma_20": {
             "anyOf": [
@@ -1580,21 +1767,6 @@
             ],
             "title": "Entry Limit"
           },
-          "group": {
-            "anyOf": [
-              {
-                "enum": [
-                  "tracked",
-                  "candidate"
-                ],
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Group"
-          },
           "market": {
             "title": "Market",
             "type": "string"
@@ -1790,14 +1962,6 @@
       },
       "WatchlistEntryResponse": {
         "properties": {
-          "group": {
-            "enum": [
-              "tracked",
-              "candidate"
-            ],
-            "title": "Group",
-            "type": "string"
-          },
           "market": {
             "enum": [
               "US",
@@ -1824,8 +1988,7 @@
         },
         "required": [
           "symbol",
-          "market",
-          "group"
+          "market"
         ],
         "title": "WatchlistEntryResponse",
         "type": "object"

@@ -8,7 +8,14 @@ from .agent_reports import (
     TechnicalReport,
 )
 from .debate import DebateArgument, DebateResult, DebateRound, ResearchVerdict
-from .market_data import FinancialStatements, Market, PriceBar, TickerData, TickerInfo
+from .market_data import (
+    FinancialStatements,
+    Market,
+    PriceBar,
+    TechnicalSeriesPoint,
+    TickerData,
+    TickerInfo,
+)
 from .synthesis import (
     ActionPlan,
     Briefing,
@@ -35,6 +42,7 @@ __all__ = [
     "SentimentReport",
     "Signal",
     "TechnicalReport",
+    "TechnicalSeriesPoint",
     "TickerData",
     "TickerInfo",
 ]

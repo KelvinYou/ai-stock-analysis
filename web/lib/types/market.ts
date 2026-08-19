@@ -25,6 +25,25 @@ export interface Financials {
   net_margin: number | null;
 }
 
+export interface TechnicalSeriesPoint {
+  date: string;
+  sma_20: number | null;
+  sma_50: number | null;
+  sma_200: number | null;
+  ema_20: number | null;
+  rsi_14: number | null;
+  macd_line: number | null;
+  macd_signal: number | null;
+  macd_histogram: number | null;
+  bb_upper: number | null;
+  bb_middle: number | null;
+  bb_lower: number | null;
+  bb_pct: number | null;
+  atr_14: number | null;
+  volume_sma_20: number | null;
+  volume_ratio: number | null;
+}
+
 export interface AnalystRec {
   index: number;
   period: string;
@@ -75,6 +94,8 @@ export interface Technicals {
   above_sma_20: boolean;
   above_sma_50: boolean;
   above_sma_200: boolean;
+  /** Optional in snapshots written before the historical series contract. */
+  series?: TechnicalSeriesPoint[];
 }
 
 export interface PricePoint {
