@@ -1,85 +1,103 @@
 {
   "fundamentals": {
     "signal": "buy",
-    "confidence": "high",
-    "pe_assessment": "Fairly valued at 22.6x current / 17.2x forward P/E. Forward multiple compression reflects consensus 20–25% EPS growth; reasonable for mega-cap quality.",
-    "margin_analysis": "Exceptional margins across board: gross 82.0% (pricing power), operating 41.4%, net 30.1%. Margin expansion through cost discipline post-2023 restructuring; no compression visible.",
-    "debt_analysis": "Conservative leverage at 0.39x D/E ratio. $46.1B annual FCF covers debt 1.8x; balance sheet flexibility supports AI capex and shareholder returns. No financial stress.",
-    "growth_outlook": "Forward P/E implies 20–25% EPS growth expected. FCF of $46B funds infrastructure investment (AI/Llama). Ad market fundamentals intact; positioning for next-cycle growth, though macro and Apple privacy risks present.",
+    "confidence": "medium",
+    "pe_assessment": "At $543.67 the stock trades at 20.5x trailing and 15.6x forward earnings - a discount to the S&P 500 and to mega-cap peers, and roughly a 30% de-rating from the 52-week high of $790.80. Forward PE below trailing implies consensus still models EPS growth despite the Q2 2026 miss; average analyst target ~$767 with 55 of 62 ratings at buy/strong buy and zero sells. The multiple is cheap in earnings terms but NOT cheap on cash flow: with 2026 capex guided to $130-145B, FCF was only $784M in Q2 2026 and sell-side models point to negative FCF in 2026 and roughly -$24B in 2027, so a P/FCF framing is far less flattering than 15.6x forward PE.",
+    "margin_analysis": "Margin structure remains best-in-class: 82.0% gross, 41.4% operating, 30.1% net on $201B revenue ($60.5B net income). Family of Apps revenue growth is accelerating - Q2 2026 revenue +28% to $60.8B, beating ~$60.2B consensus, with Q3 guided to $61-64B. The compression is self-inflicted from below the ad line: Q2 net income fell 14% YoY and EPS missed, driven by Reality Labs' $4.62B quarterly operating loss on $431M of segment revenue (~$88B cumulative since 2020) plus a step-up in AI infrastructure depreciation. Expect the 41% operating margin to erode toward the mid-30s as 2026-vintage capex depreciates across 2027-2029 on 5-6 year schedules.",
+    "debt_analysis": "Balance sheet remains a genuine strength but is no longer pristine. Total debt of $83.9B against $217.2B equity is 0.39x debt/equity, and against ~$60B annual net income and 6% of EV the leverage is easily serviceable. The trajectory is the concern: Meta has shifted from a net-cash, buyback-funded model to funding a $130-145B annual capex program with debt and finance leases, and if FCF turns negative in 2026-2027 as modeled, incremental borrowing (plus off-balance-sheet SPV/JV data-center structures) becomes the marginal funding source rather than operating cash.",
+    "growth_outlook": "Top line is the healthy part: +28% YoY in Q2 2026 to $60.8B, ad pricing and engagement gains from AI ranking and recommendation improvements, Q3 guide of $61-64B implying continued mid-20s growth. The bear case is not revenue, it is the earnings conversion: 2026 capex of $130-145B versus $72.2B in 2025, with the depreciation tail landing in 2027-2029 and no disclosed revenue attribution for the AI spend. Reality Labs continues to burn ~$4.5-5B per quarter with no credible path to breakeven. Base case: revenue compounds high-teens to low-20s while EPS growth stalls or goes negative for one to two years, then re-accelerates if AI monetization lands.",
     "key_risks": [
-      "Regulatory overhang (EU DMA, privacy laws, content moderation)",
-      "Advertising concentration risk; macro downturn pressures core business",
-      "AI capex ROI uncertain; infrastructure spend may not yield returns within 3–5 years",
-      "Valuation lacks margin of safety — 22.6x P/E leaves little room for EPS miss",
-      "Higher beta (1.24) drives volatility; 52-week range of 53% reflects sensitivity"
+      "Capex/FCF shock: 2026 capex guided to $130-145B (vs $72.2B in 2025) collapsed Q2 FCF to $784M; sell-side models negative FCF in 2026 and ~-$24B in 2027, undermining buybacks and the 0.37% dividend",
+      "Depreciation wall in 2027-2029: 5-6 year schedules on 2026-vintage AI servers become fixed P&L cost whether or not AI revenue materializes - the main threat to the 41.4% operating margin and to the 15.6x forward PE",
+      "Ongoing federal child-safety trial in Oakland (29 state AGs, Judge Yvonne Gonzalez Rogers, ~7 weeks, opened 2026-08-18): theoretical exposure up to $1.4T, plaintiffs' counsel citing ~$200B as the likelier figure - even the lower number is ~14% of the $1.385T market cap, and injunctive relief on teen engagement design could impair the core ad product",
+      "Reality Labs: $4.62B Q2 operating loss on $431M revenue, widening from $4.03B in Q1, ~$88B cumulative - roughly $18-19B/yr of annual EPS drag with no breakeven timeline",
+      "No disclosed ROI on AI spend: management has not attributed revenue to the superintelligence buildout, so investors are underwriting a ~$140B/yr bet on narrative rather than unit economics",
+      "Governance/capital-allocation risk: dual-class control means the spending pace is not subject to shareholder check; beta of 1.243 amplifies drawdowns in a crowded AI-capex trade",
+      "Technical/sentiment damage: gapped 585.61 to 539.03 on Q2 earnings (2026-07-30), failed the ~595 recovery, and rolled back to 543.67 into the trial - the market is repricing, not merely digesting"
     ],
     "key_strengths": [
-      "Profitability unmatched — 30% net margin in mature ad-tech business",
-      "Cash fortress — $46B FCF annually fuels capex and capital returns",
-      "Minimal leverage (0.39x D/E) enables strategic flexibility",
-      "Analyst consensus overwhelming — 88.7% buy/strong-buy, zero sell ratings",
-      "Operational excellence — margin expansion despite AI/compute investment intensity"
+      "Accelerating top line at enormous scale: Q2 2026 revenue +28% to $60.8B, beating consensus, with Q3 guided to $61-64B - the ad machine is not the problem",
+      "Elite margin structure: 82.0% gross, 41.4% operating, 30.1% net; $60.5B net income on $201B revenue",
+      "Valuation reset already substantial: 20.5x trailing / 15.6x forward with the stock 31% below its $790.80 high, near the $520.26 low - much of the capex fear is in the price",
+      "Balance sheet capacity to fund the buildout: $83.9B debt vs $217.2B equity (0.39x), so the AI program is financeable without distress",
+      "Analyst support intact through the selloff: 8 strong buy / 47 buy / 7 hold / 0 sell, essentially unchanged over four months, average target ~$767",
+      "Core AI is already monetizing inside the ad stack (ranking, creative, targeting), which is why revenue accelerated while capex rose - a differentiator versus pure-infrastructure AI bets",
+      "Optionality if capex ever normalizes: cutting the buildout by even a third would restore $30-40B+ of annual FCF, and the 41% operating margin means EPS leverage on any spending discipline"
     ],
-    "summary": "Current-session signal: buy. Meta has a 30.1% net margin, $46.1B free cash flow, debt-to-equity of about 0.39, and a 17.2x forward P/E below its 22.6x trailing P/E. Price is below the 20- and 200-day averages but slightly above the 50-day average; RSI is 40.8 and the MACD histogram is negative."
+    "summary": "Meta is a rare case where the business is accelerating (Q2 2026 revenue +28% to $60.8B, 41.4% operating margin) while the stock de-rates 31%, because 2026 capex of $130-145B crushed Q2 FCF to $784M and pushed Q2 net income down 14% - the FCF/net income gap ($46.1B vs $60.5B on the trailing figures) is the visible edge of that shift. At 15.6x forward earnings with a $767 consensus target the setup is attractive for investors who can tolerate one to two years of stalled EPS and negative FCF, but the 2027-2029 depreciation wall, ~$18-19B/yr of Reality Labs burn, and an active 29-state child-safety trial with plaintiff-cited exposure near $200B (theoretical $1.4T) are why this is a buy rather than a strong buy, and why confidence is medium rather than high."
   },
   "sentiment": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
-    "news_tone": "neutral",
-    "news_summary": "No news headlines available for analysis. Sentiment assessment relies exclusively on analyst recommendations, which show overwhelming bullish consensus with zero sell-side ratings over the past three months.",
+    "news_tone": "negative",
+    "news_summary": "August 2026 headlines are dominated by legal and spending overhangs rather than fundamentals: opening statements began 2026-08-17/18 in Oakland federal court in the child-safety case co-led by California AG Bonta on behalf of a 29-state AG coalition, with states citing ~$200B as a likely damages figure against Meta's own $1.4T worst-case framing, and the stock fell ~3% on 2026-08-18 as investors repriced that risk. Layered on top are German nonprofit HateAid's 2026-08-12 criminal complaint to Frankfurt's ZIT unit over Ray-Ban Meta smart glasses, plus noyb-driven EU complaints over Meta AI training data. The Q2 2026 print on 2026-07-29 was the origin of the de-rating: revenue $60.8B beat but EPS $6.18 missed ~$7.14, capex guidance was narrowed upward to $130-145B, free cash flow reportedly collapsed ~91%, costs rose ~55% y/y, and Q3 revenue guidance of $61-64B came in light, sending shares down ~8% after hours.",
     "key_themes": [
-      "Extreme bullish consensus (89%)",
-      "Zero analyst dissent",
-      "Stable positioning over 3 months",
-      "Peak sentiment concentration risk"
+      "AI capex shock and free-cash-flow compression ($130-145B 2026 guide)",
+      "Regulatory and litigation overhang: 29-state child-safety trial",
+      "Privacy escalation in Europe (smart-glasses criminal complaint, AI training data)",
+      "Strong ad revenue vs. deteriorating EPS quality",
+      "Sell-side lowering targets but not ratings",
+      "Headline risk driving multiple compression, not estimate cuts"
     ],
     "notable_headlines": [
-      "Analyst data only: 55 of 62 analysts rate META as Buy/Strong Buy",
-      "No sell or strong sell ratings present",
-      "Sentiment unchanged for 3 consecutive months"
+      "'Profits won.' The child safety trial against Meta kicks off in federal court (NPR, 2026-08-18)",
+      "Meta faces state AG trial over child safety claims (CNBC, 2026-08-17)",
+      "States take Meta to trial in California in the biggest fight yet over social media harms to children (CP24, 2026-08-17)",
+      "German nonprofit files criminal complaint over Meta smart glasses privacy (Engadget, 2026-08-12)",
+      "Meta's stock drops on disappointing guidance, dwindling free cash flow (CNBC, 2026-07-29)",
+      "Meta Q2 2026 Earnings Miss Estimates, Capex Guidance Rises to $145 Billion (KuCoin, 2026-07-29)",
+      "The ceiling for shares of Meta is lower after its earnings report, analysts say (CNBC, 2026-07-30)",
+      "Meta Platforms price target lowered to $810 from $900 at BofA (TheFly)",
+      "Why Meta Platforms Stock Popped Today - +6.6% after Morgan Stanley defended the AI investment case (Motley Fool, 2026-08-03)"
     ],
-    "social_sentiment": null,
-    "summary": "Current-session signal: buy. Meta has a 30.1% net margin, $46.1B free cash flow, debt-to-equity of about 0.39, and a 17.2x forward P/E below its 22.6x trailing P/E. Price is below the 20- and 200-day averages but slightly above the 50-day average; RSI is 40.8 and the MACD histogram is negative."
+    "social_sentiment": "No direct retail/social data in feed; press coverage implies fatigued-but-not-capitulating sentiment - dip-buying rallies on analyst reassurance (+6.6% on 2026-08-03) alternate with legal-headline selloffs, and the 'one analyst targets 87% returns' framing suggests contrarian bottom-fishing chatter around a 31%-off-high name.",
+    "summary": "News tone is clearly negative and sentiment is now running behind the fundamentals reset that began with the 2026-07-29 Q2 miss: over 20 firms cut targets (several to $600-650) while leaving ratings untouched, so the 62-analyst board still shows zero sells and a ~$767 average target implying ~41% upside against $543.67 - a classic stale-model signature and a genuine contrarian warning rather than a valuation floor. Litigation timing is the near-term driver, with an active trial calendar and a plausible ~$200B damages ask that no consensus model appears to discount. I stay neutral: the ad engine and the eventual reversion in un-revised targets cut both ways, and until sell-side estimates catch down or the trial risk is bounded, the asymmetry is not yet favorable."
   },
   "technical": {
     "signal": "sell",
-    "confidence": "medium",
-    "trend": "downtrend (below SMA-200; price 4.76% below long-term average)",
-    "rsi_14": 40.82,
-    "rsi_assessment": "RSI at 40.82 indicates neutral-to-bearish momentum. Below the 50-line neutral point but above oversold (<30), suggesting room for weakness before reversal signals emerge.",
-    "macd_assessment": "MACD histogram negative at -12.8203 with both MACD and signal lines below zero. Bearish momentum persists despite recent price recovery. Histogram suggests momentum is neither accelerating nor reversing.",
-    "volume_assessment": "Capitulation spike on July 30 (42.3M shares) at the $539 low. Recent volumes normalized (12–15M), indicating stabilization. Volume does not support continued rally conviction.",
+    "confidence": "high",
+    "trend": "Firmly bearish across all timeframes: price 543.67 sits below SMA-20 (585.82), SMA-50 (594.92, -8.61%) and SMA-200 (624.89, -12.99%), with the SMA-50 itself declining and the recovery rally from the July 30 gap-down having failed at ~599 without reclaiming it - a lower high followed by a three-session breakdown.",
+    "rsi_14": 39.4602,
+    "rsi_assessment": "39.46 is weak but not yet oversold (<30), leaving room for further downside before a mechanical bounce condition; the failure to push above ~55 during the August recovery rally confirms momentum never repaired after the gap-down.",
+    "macd_assessment": "Bearish and deteriorating: MACD line -9.80 is below the signal -6.61, producing a negative histogram of -3.19 that is widening, i.e. downside momentum is accelerating rather than stabilising.",
+    "volume_assessment": "Confirming the breakdown: current volume 26.55M is 1.56x the 20-day average of 16.99M, and the last three down sessions (17.1M, 26.6M) show rising participation into weakness - the same distribution signature as the 42.3M-share July 30 gap-down, with no comparable volume on the failed rally.",
     "support_levels": [
-      539.0,
-      585.0,
-      590.0
+      543.21,
+      539.03,
+      524.49,
+      519.7782,
+      497.76
     ],
     "resistance_levels": [
-      681.0,
-      787.0
+      568.97,
+      585.82,
+      594.92,
+      599.12,
+      624.89
     ],
-    "summary": "Current-session signal: sell. Meta has a 30.1% net margin, $46.1B free cash flow, debt-to-equity of about 0.39, and a 17.2x forward P/E below its 22.6x trailing P/E. Price is below the 20- and 200-day averages but slightly above the 50-day average; RSI is 40.8 and the MACD histogram is negative."
+    "summary": "META closed at 543.67 below the lower Bollinger band (544.97) on 1.56x volume, retesting the July 30 gap-down low zone of 539-545 - support is under active stress rather than holding, since the close is already beneath the 543.21 intraday low band with an accelerating negative MACD histogram. A daily close under 539 opens the 519.78 52-week low just 4.6% below, while the 2x ATR stop sits near 497.76 and the reasonable 2-3x ATR mean-reversion target is 589.58-612.54 into the declining SMA-50 resistance shelf. Bearish stance until price reclaims 568.97 and the SMA-20; RSI at 39.46 is weak but not oversold, so there is no exhaustion signal yet to fade this move."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "Elevated 4.25-4.50% Fed funds rate creates headwind for growth stock valuations; stable hold reduces near-term surprise risk but persistent level constrains multiples",
-    "interest_rate_outlook": "Rates likely to remain elevated into 2H 2026; minor near-term catalyst for cuts unlikely; rate volatility remains a key technical driver given META's 1.243 beta",
-    "fx_impact": null,
+    "confidence": "high",
+    "fed_impact": "The FOMC held the federal funds target range at 3.50%-3.75% on July 29, 2026 (9-3 vote, with three dissents favoring a 25bp HIKE), unchanged since December 2025, and the median 2026 year-end dot moved UP to 3.6%-4.1%. July CPI (released Aug 12, 2026) came in at 3.4% y/y headline (+0.1% m/m) with core at 2.5%, still above target, which lowered September hike odds but removed any near-term easing case. For Meta this is a cost-of-capital and discount-rate story rather than a funding story: a net-cash balance sheet and ~$60.8B quarterly revenue mean it does not need cheap credit, but a no-cut, hike-risk Fed caps the multiple just as Meta shifts from a cash-return story to a capex-heavy one (Q2 2026 FCF fell ~91% to $784M as $31.1B of quarterly capex absorbed ~98% of operating cash flow).",
+    "interest_rate_outlook": "The 10-year Treasury is ~4.69% in mid-August 2026 after touching a 19-month high of 4.75%, and consensus sees it spending more time above 4.40% than below through year-end with a ~4.25% floor into 2027. With the S&P 500 earnings yield near 4.2%, the equity risk premium is compressed to roughly zero - a direct headwind to long-duration megacap tech multiples, and specifically punitive for Meta whose $125B-$145B 2026 capex pushes its cash-flow payoff further out the curve. Mitigating factor: tech's ~19x forward multiple is below the ~22x peak entering the 2022 de-rating.",
+    "fx_impact": "Second-order for Meta: it reports in USD and roughly half of revenue is international, so a strong dollar is a mild translation headwind and a weak dollar a mild tailwind - it moves reported growth by a few points, not the investment case. Current conditions are marginally favorable: DXY is ~99.6 (Aug 17, 2026), down ~1.4% over the past month and roughly 10% below the January 2025 peak, with forecasts of a 92-100 range and a softening bias into 2H26. BNM policy and MYR are not relevant to this name - Meta has no material Malaysian revenue or MYR exposure.",
     "sector_macro_factors": [
-      "Advertising cyclicality: global macro slowdown or recession risk would sharply compress ad budgets",
-      "AI capex trajectory: uncertainty around infrastructure ROI and competitive positioning vs. hyperscalers",
-      "Consumer spending sensitivity: Q3-Q4 2026 holiday season and 2027 consumer discretionary demand critical",
-      "Geopolitical tariff risk: potential trade escalation could raise operating costs and compress international margins"
+      "Digital ad demand is the cyclical bright spot: Meta Q2 2026 ad revenue $59.4B, +27% y/y on impressions +14% and price per ad +12%; US total ad spend is forecast +9.5% in 2026 with social +14.6%, and 2H26 gets cyclical support from the FIFA World Cup and US midterm elections.",
+      "AI capex cycle sentiment has turned from reward to punishment: the Big Four guide to as much as ~$630B of 2026 capex (+~62% y/y vs $388B in 2025), and Alphabet, Amazon and Microsoft all sold off post-earnings on spending, as did Meta twice.",
+      "Bubble/ROI math is now an explicit market input: hyperscaler AI capex has gone from ~33% of operating cash flow in 2023 to an estimated ~93% in 2026, the capex-vs-revenue growth divergence (~46%) exceeds the 2001 telecom cycle (~32%), and Moody's flags ~$662B of signed-but-not-commenced data-center leases sitting off balance sheet.",
+      "Beta 1.243 means Meta amplifies the index-level rate/duration shock rather than damping it; sector sensitivity runs through the discount rate and ad-budget cyclicality, not through debt service.",
+      "Energy prices remain a volatile inflation input (energy +14.7% y/y, gasoline +24.6% y/y in the July CPI), which matters both for the Fed path and directly for the power cost of AI data centers."
     ],
     "geopolitical_risks": [
-      "US-China tech competition and potential tariff escalation on semiconductor imports",
-      "Supply chain vulnerability in AI chip procurement",
-      "Advertising revenue concentration risk in markets affected by trade tensions (EU, India, Asia-Pacific)"
+      "US state-AG child-safety trial opened in federal court in Oakland on Aug 18, 2026; Meta's own counsel has cited exposure as high as $1.4T, with the states' lawyers pointing to ~$200B as more likely - an unquantifiable but genuinely large tail risk sitting immediately in front of the stock.",
+      "EU DMA/DSA enforcement: the EUR 200M pay-or-consent DMA fine is under appeal, and the Commission issued preliminary DSA findings on July 10 that Instagram/Facebook addictive design breaches the DSA - the remedy risk to personalized ad targeting matters more than the fine amounts.",
+      "Escalating EU regulatory pipeline: EU Big Tech fines have topped ~$7B in two years, the proposed Digital Fairness Act is expected late 2026 with tougher child-protection penalties, and the resulting US-EU friction is now an explicit trade/diplomatic irritant.",
+      "Ongoing FTC monopolization case over the Instagram/WhatsApp acquisitions keeps structural remedy risk alive in the US.",
+      "Middle East tensions are feeding the inflation and long-yield impulse, indirectly tightening the multiple Meta trades on; supply-chain risk runs through AI hardware and data-center components rather than consumer goods."
     ],
-    "summary": "Current-session signal: neutral. Meta has a 30.1% net margin, $46.1B free cash flow, debt-to-equity of about 0.39, and a 17.2x forward P/E below its 22.6x trailing P/E. Price is below the 20- and 200-day averages but slightly above the 50-day average; RSI is 40.8 and the MACD histogram is negative."
+    "summary": "Macro is a net headwind on the multiple even though Meta's demand cycle is strong: the Fed is on hold at 3.50%-3.75% with dissents pushing for a hike, July CPI at 3.4% rules out near-term cuts, and a ~4.69% 10-year has compressed the equity risk premium to roughly zero - exactly the environment that de-rates a long-duration megacap that just took 2026 capex to $125B-$145B and saw quarterly free cash flow fall ~91%. Offsetting that, digital ad demand is robust (+27% y/y ad revenue, US social ad spend forecast +14.6% with World Cup and midterm tailwinds), and FX is a mild positive with DXY near 99.6 and softening - BNM/MYR is irrelevant to this USD reporter. The AI-capex sentiment turn plus the state-AG child-safety trial that opened Aug 18 and active EU DMA/DSA remedy risk keep the macro-overlay stance neutral rather than constructive."
   },
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
+  "pipeline_mode": "in-session-claude-code"
 }
