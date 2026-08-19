@@ -170,7 +170,14 @@ export default async function TickerPage({
             <p className="eyebrow border-t-2 border-ink pt-4">Layer 1 · The tape</p>
             {bundle.priceHistory.length > 0 && (
               <SectionCard id="chart" title="Price" description="Daily close">
-                <PriceChart data={bundle.priceHistory} currency={currency} />
+                <PriceChart
+                  data={bundle.priceHistory}
+                  currency={currency}
+                  technicals={bundle.technicals}
+                  supportLevels={bundle.analystReports?.technical.support_levels}
+                  resistanceLevels={bundle.analystReports?.technical.resistance_levels}
+                  actionPlan={bundle.briefing?.action_plan}
+                />
               </SectionCard>
             )}
             {bundle.fundamentals && <FundamentalsSection data={bundle.fundamentals} />}
@@ -179,7 +186,9 @@ export default async function TickerPage({
         )}
 
         {bundle.analystReports && <AnalystSection data={bundle.analystReports} />}
-        {bundle.debate && <DebateSection data={bundle.debate} />}
+        {bundle.debate && (
+          <DebateSection data={bundle.debate} verdict={bundle.briefing?.research_verdict} />
+        )}
         {bundle.briefing && <BriefingSection data={bundle.briefing} currency={currency} />}
       </div>
     </div>

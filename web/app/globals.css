@@ -34,6 +34,16 @@
     --action: 223 65% 48%;
     --action-foreground: 0 0% 100%;
 
+    /* Chart trend-line identity — a sequential violet ramp for the SMA family
+       (ordered by lookback window), kept off bull/bear/halt/action so a moving
+       average never borrows a directional or warning color it doesn't mean. */
+    --trend-fast: 265 60% 34%; /* SMA 20 */
+    --trend-mid: 265 55% 46%; /* SMA 50 */
+    --trend-slow: 265 45% 60%; /* SMA 200 */
+    /* Neutral/Hold marker — distinct hue from graphite so it clears the
+       colorblind-safe floor against bull/bear on the signal landscape scatter. */
+    --neutral-signal: 230 35% 42%;
+
     /* Semantic aliases consumed by the shadcn primitives */
     --background: var(--paper);
     --foreground: var(--ink);
@@ -70,6 +80,11 @@
     --halt: 41 61% 53%;
     --action: 224 87% 70%; /* 6.5:1 on the dark ground */
     --action-foreground: 216 15% 6%;
+
+    --trend-fast: 265 70% 80%;
+    --trend-mid: 265 65% 68%;
+    --trend-slow: 265 55% 54%;
+    --neutral-signal: 230 55% 55%;
 
     --secondary: 220 12% 14%;
     --accent: 220 12% 14%;
@@ -164,6 +179,11 @@
     letter-spacing: 0.09em;
     text-transform: uppercase;
     color: hsl(var(--graphite));
+  }
+
+  .chart-label {
+    fill: hsl(var(--graphite));
+    font-size: 10px;
   }
 }
 
