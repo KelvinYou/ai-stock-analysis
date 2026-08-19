@@ -2,88 +2,100 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Current P/E of 28.04x is elevated but partially justified by forward P/E of 21.39x, implying ~31% earnings growth. Fair valuation for a mega-cap software leader with 40% net margins and Azure cloud dominance, but offers limited margin of safety. Not cheap, but not unreasonable.",
-    "margin_analysis": "Outstanding margins reflect operational excellence: gross margin 67.94% (industry-leading), operating margin 46.78% (world-class—peers avg 20-30%), net margin 40.31% (phenomenal). Demonstrates pricing power and software business model leverage. Margins stable and defensible.",
-    "debt_analysis": "Fortress balance sheet: debt-to-equity of 12.8% (very conservative vs sector avg 40-50%), debt-to-revenue of 0.17x (minimal), $67B annual free cash flow covers total $56.8B debt in <1 year. Zero solvency risk. Strong position for capital allocation.",
-    "growth_outlook": "Forward P/E implies 31% earnings growth driven by Azure cloud expansion, AI/Copilot monetization, and enterprise software stickiness. Free cash flow generation ($67B annually) funds organic growth, buybacks, and dividends. Macro risks to enterprise tech spending in recession; AI returns must materialize.",
+    "pe_assessment": "At 26.8x trailing and 20.4x forward on $481.63, MSFT trades at a modest premium to the S&P 500 (~22x trailing) but below its own 5-year average (~32x) and below infrastructure-software peers; the 6.4-turn trailing-to-forward compression implies ~30% consensus EPS growth, and the stock sits 13% below its 52w high of 553.72 versus a ~$560 consensus target. The multiple is undemanding on earnings but distinctly less cheap on cash: at ~$67B FCF the FCF yield is only ~1.9% (~53x P/FCF), so the valuation case rests on earnings quality holding up through the capex cycle.",
+    "margin_analysis": "Margin structure remains best-in-class: 67.9% gross, 46.8% operating, and 40.3% net on $331.8B revenue \u2014 net margin above operating-peer norms (~25-30%) and roughly flat-to-up despite Azure's lower-margin, capex-heavy mix. The pressure point is not the P&L but depreciation timing: the ~$630B combined hyperscaler capex wave will land as D&A over the next 3-5 years, so operating margin near 47% is more likely a peak than a new floor, even with 18% Q4 revenue growth providing operating leverage.",
+    "debt_analysis": "Balance sheet is fortress-grade: $56.8B total debt against $442.4B equity is 0.13x debt/equity, ~0.43x trailing net income, and ~1.6% of market cap \u2014 negligible leverage for a company of this size and one of the few AAA-tier credit profiles in tech. The real question is whether financing needs shift: with FCF at ~$67B and capex accelerating while ~$30-35B/yr goes to dividends (0.76% yield) and more to buybacks, incremental datacenter build is likely to be funded with new debt or leases, so expect leverage to drift up from an extremely low base \u2014 a capacity to absorb, not a solvency risk.",
+    "growth_outlook": "Demand visibility is the strongest in the company's history: Azure crossed $100B annual revenue growing 41%, Q4 revenue +18% YoY, EPS beat by 11.8%, guidance raised, and an ~$80B Azure backlog that is supply- rather than demand-constrained. That backlog converts to revenue only as power and shells come online, which caps near-term upside and pushes the cash return further out \u2014 FCF conversion of ~50% of net income (vs Microsoft's historical 85-100%+) means growth is currently being purchased with shareholder cash rather than delivered to it, so the 2027-2028 setup depends on whether the AI revenue curve outruns the depreciation curve.",
     "key_risks": [
-      "Valuation risk: 28x current P/E offers limited margin of safety; vulnerable to earnings misses",
-      "AI monetization unproven at scale; heavy Copilot investment returns uncertain",
-      "Macro sensitivity: enterprise tech spending contracts sharply in recession",
-      "Intense competition from Google (Gemini), Amazon (AWS), and OpenAI partnership dynamics",
-      "Regulatory scrutiny on market dominance in productivity software and cloud"
+      "FCF conversion collapsed to ~50% of net income ($67.0B vs $133.7B); if capex stays elevated while depreciation compounds, EPS growth decelerates sharply and the 20.4x forward multiple is being paid on earnings that are not cash",
+      "~$80B of Azure backlog is unfulfillable on power constraints \u2014 revenue recognition slips to future periods and competitors may capture displaced workloads",
+      "Sector-wide capex of ~$630B (+62% YoY) risks overbuild; if AI monetization disappoints, the industry faces stranded assets and a multi-year depreciation drag with no matching revenue",
+      "Consensus is one-sided (53 buy/strong-buy vs 3 hold, zero sells), leaving little cushion for a single Azure growth miss or capex guide-up",
+      "Valuation on cash flow is rich: ~1.9% FCF yield offers no downside support if the earnings narrative cracks",
+      "OpenAI relationship economics and rising Amazon/Google capacity add competitive and equity-method earnings volatility"
     ],
     "key_strengths": [
-      "World-class net margin of 40.31% shows exceptional profitability and pricing power",
-      "Overwhelming analyst consensus: 86.8% Buy/Strong Buy with zero sell ratings",
-      "Fortress balance sheet: 12.8% debt-to-equity, $67B free cash flow annually",
-      "Dominant market positions in Azure cloud and enterprise software (Microsoft 365)",
-      "Forward P/E of 21.39x reasonable given expected 31% earnings growth"
+      "Azure at $100B+ ARR growing 41% with demand exceeding supply \u2014 the clearest evidence of durable, contracted AI demand among hyperscalers",
+      "Elite margin profile (67.9% gross / 46.8% operating / 40.3% net) on $331.8B of revenue, showing scale has not diluted profitability",
+      "Near-zero leverage: 0.13x debt/equity gives full capacity to self-fund the capex cycle without equity dilution",
+      "Forward P/E of 20.4x versus a 26.8x trailing multiple and ~$560 target \u2014 reasonable entry 13% off the 52w high",
+      "Beta of 1.10 with enterprise-subscription revenue provides defensiveness rare among AI-levered names",
+      "Consistent execution: +11.8% EPS beat, +18% revenue growth, and raised guidance"
     ],
-    "summary": "Current-session signal: buy. Microsoft has a 40.3% net margin, $67.0B free cash flow, debt-to-equity of about 0.13, and a 20.9x forward P/E below its 28.1x trailing P/E. Price is above all major moving averages and MACD is positive, but RSI at 85.9 indicates an overbought short-term condition."
+    "summary": "Microsoft is executing exceptionally \u2014 Azure crossed $100B growing 41%, Q4 revenue rose 18%, EPS beat by 11.8%, and margins (46.8% operating, 40.3% net) plus 0.13x debt/equity remain best-in-class \u2014 and 20.4x forward against a ~$560 target is reasonable for that quality. The critical caveat is cash: FCF of $67.0B is only ~50% of $133.75B net income, an unusually weak conversion driven by AI datacenter capex, so shareholders are currently financing the growth rather than receiving it, and the ~$80B power-constrained Azure backlog defers when that reverses. Buy with medium confidence \u2014 the demand signal justifies ownership, but the ~1.9% FCF yield and depreciation cliff argue against strong_buy until conversion inflects."
   },
   "sentiment": {
-    "signal": "buy",
-    "confidence": "high",
-    "news_tone": "positive",
-    "news_summary": "Microsoft commands overwhelming analyst consensus with 94.6% buy/strong-buy ratings (53 of 56 analysts). Strong Buy ratings rising from 12 to 14 over three months while Hold ratings remain stable at 3. Zero sell-side dissent indicates strong conviction in AI leadership, Azure growth, and enterprise software dominance. Analyst sentiment reflects optimism around Copilot integration and cloud infrastructure expansion.",
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "positive (euphoric, but sector cross-current turning mixed)",
+    "news_summary": "Company-specific news is uniformly bullish: Q4 FY2026 beat on revenue and earnings with raised guidance, Azure crossing $100B in annual revenue, a 15% post-earnings gap and +29.8% over 30 days. The only negative strand is sector-wide \u2014 rising doubts about hyperscaler AI capex, with three of four hyperscalers losing market value after earnings and 2026 hyperscaler free cash flow estimates called 'abysmal'.",
     "key_themes": [
-      "AI integration and Copilot expansion",
-      "Azure cloud leadership and growth",
-      "Enterprise software dominance and moat",
-      "Software margin expansion and profitability",
-      "AI infrastructure and compute positioning"
+      "Azure $100B milestone / AI demand acceleration",
+      "Earnings beat with raised growth guidance",
+      "Hyperscaler AI capex and free-cash-flow doubts",
+      "Post-earnings momentum and re-rating",
+      "Round-number price watching near $500"
     ],
     "notable_headlines": [
-      "Strong Buy ratings increasing trend (12→14 over 3 months)",
-      "94.6% analyst consensus on buy/strong-buy recommendations",
-      "Zero sell-side calls from 56 analysts surveyed",
-      "Stable hold ratings (3) with no negative outlooks",
-      "Enterprise software leadership narrative dominates sentiment"
+      "Microsoft's Azure Turbo: Beat on Revenue and Earnings, Raised Growth Guidance, Stock Jumped 15% (TradingKey, late Jul 2026)",
+      "Microsoft (MSFT) Q4 Fiscal 2026 Earnings Recap: Azure Breaks $100 Billion as AI Demand Accelerates (Tickeron)",
+      "Why Microsoft (MSFT) Stock Is Up +29.8% in the Last 30 Days (Tickeron, early Aug 2026)",
+      "Hyperscaler AI Spending Doubts Rising \u2014 three of four hyperscalers lost value post-earnings (Futuriom)",
+      "Microsoft stock holds near $495 as fiscal 2026 earnings power Azure and AI growth (ad-hoc-news, mid-Aug 2026)"
     ],
     "social_sentiment": null,
-    "summary": "Current-session signal: buy. Microsoft has a 40.3% net margin, $67.0B free cash flow, debt-to-equity of about 0.13, and a 20.9x forward P/E below its 28.1x trailing P/E. Price is above all major moving averages and MACD is positive, but RSI at 85.9 indicates an overbought short-term condition."
+    "summary": "Sentiment has run ahead of fundamentals: the fundamental news was real and strong, but a +30% 30-day move plus 56 analysts at 94.6% buy-or-better with zero sell ratings in four months means the good news is fully priced and positioning is one-sided. The -6.2% fade from the 08-10 peak of $513.73 on no negative company news, against a backdrop of rising hyperscaler capex/FCF skepticism, is the classic contrarian pattern of exhausted upside rather than a fresh entry. Quality is not in question \u2014 timing is, so neutral with medium confidence pending either a pullback toward the pre-gap zone or confirmation that capex doubts do not spread to Azure."
   },
   "technical": {
     "signal": "neutral",
     "confidence": "medium",
-    "trend": "Uptrend (price 22.98% above SMA-50, 16.7% above SMA-200)",
-    "rsi_14": 87.37,
-    "rsi_assessment": "RSI-14 at 87.37 is severely overbought (>70), indicating exhaustion risk and potential pullback. Extreme reading suggests profit-taking is likely in the near-term despite bullish fundamentals.",
-    "macd_assessment": "MACD histogram positive at +17.7969 with MACD line (39.71) above signal line (21.91), confirming bullish momentum. However, this must be weighed against overbought RSI conditions.",
-    "volume_assessment": "Volume spike on 7/30 (110.2M shares) successfully initiated the rally. However, recent volume has declined sharply (20.4M on 8/11 vs 37.6M 30-day avg), suggesting weakening buyer conviction as price runs higher—a bearish divergence.",
+    "trend": "Short-term uptrend intact but stretched: price 481.63 sits above SMA-20 (458.34), SMA-50 (415.12, +16.02%) and SMA-200 (430.74, +11.81%), yet the SMA-50 is still BELOW the SMA-200, so the longer-term MA structure has not confirmed the move \u2014 this is a post-earnings-gap repricing, not a matured trend. The last 6 sessions have rolled over from the 08-10 swing high of 513.73 into a lower-high/lower-low sequence.",
+    "rsi_14": 78.0951,
+    "rsi_assessment": "At 78.10 the RSI is clearly overbought and above the 70 threshold. In a fresh post-earnings breakout an overbought RSI is more often a sign of strength than an outright sell trigger, but here it is diverging from price: RSI is extended while price has already lost ~6.3% from the 513.73 swing high, meaning the reading reflects the late-July/early-August thrust rather than current demand. That combination \u2014 extreme RSI with decaying price \u2014 argues against adding new exposure at 481.63.",
+    "macd_assessment": "MACD line 24.59 has crossed below its signal 25.20, producing a histogram of -0.61 \u2014 the first negative histogram after an extended run, i.e. a bearish momentum crossover. The absolute MACD level is still deeply positive, so this is deceleration of an uptrend rather than a trend reversal; it flags that upside momentum peaked around 08-10 and is now unwinding. Confirmation would require the histogram to keep expanding negatively alongside a close below 477.15.",
+    "volume_assessment": "Volume 23.7M is only 0.63x the 20-day average of 37.7M, and the fade off the highs has come on progressively lighter turnover (08-14 just 16.2M) versus the 110.2M earnings-gap day and 66.8M follow-through. Light-volume pullbacks after heavy-volume advances read as consolidation/profit-taking rather than institutional distribution \u2014 no high-volume down day has appeared. The caveat is that low volume also means the higher prices are thinly validated, so the 477-480 shelf is untested support.",
     "support_levels": [
-      409.66,
+      480.35,
+      477.15,
+      464.72,
+      458.34,
       451.1,
-      487.46
+      432.44,
+      415.12
     ],
     "resistance_levels": [
+      484.27,
+      492.66,
+      501.56,
       506.06,
-      538.66
+      513.73,
+      550.24,
+      556.58
     ],
-    "summary": "Current-session signal: neutral. Microsoft has a 40.3% net margin, $67.0B free cash flow, debt-to-equity of about 0.13, and a 20.9x forward P/E below its 28.1x trailing P/E. Price is above all major moving averages and MACD is positive, but RSI at 85.9 indicates an overbought short-term condition."
+    "summary": "MSFT is in a strong but overextended post-earnings uptrend \u2014 price is above all three SMAs and +37.9% off the 52-week low, yet RSI 78 and a +16% stretch above the SMA-50 leave no margin of safety, and the MACD histogram just flipped negative (-0.61) as price rolled over from the 513.73 swing high. The pullback is happening on below-average volume (0.63x), which reads as consolidation rather than distribution, and the SMA-50 still sitting below the SMA-200 means the longer-term structure has not yet confirmed the move. Neutral: hold existing positions with the 477-480 shelf and the 458 SMA-20 as the line in the sand, and wait either for a reclaim of 506-514 or a pullback toward the unfilled 401-432 gap zone before committing new capital."
   },
   "macro": {
-    "signal": "buy",
-    "confidence": "high",
-    "fed_impact": "Positive. Steady rates at 4.25–4.50% with no hikes in sight reduce capex funding costs; inflation trending toward target removes urgency for tightening. Accommodative pivot in 2025–26 supports Microsoft's massive AI/cloud infrastructure buildout without refinancing risk.",
-    "interest_rate_outlook": "Likely to remain elevated but stable. Market pricing suggests 3–4 cuts possible through end-2026 if growth and inflation remain moderate. For MSFT, this translates to predictable borrowing costs and sustained enterprise spending on cloud and AI services.",
-    "fx_impact": null,
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "The 2026-07-29 FOMC held the target range at 3.50%-3.75% with three members dissenting in favour of a 25bp HIKE, and the statement still describes inflation as elevated versus 2% (partly energy-driven supply shocks) with the labour market near maximum employment. That combination removes the near-term cut option and puts a floor under the discount rate applied to a ~27x trailing P/E megacap whose value is heavily weighted to out-year cash flows; there is no August meeting, so 2026-09-16 is the next catalyst and skews hawkish rather than dovish.",
+    "interest_rate_outlook": "Base case is hold at 3.50%-3.75% into the 2026-09-16 decision, with the risk distribution tilted toward a hike given the hawkish dissent and elevated inflation rather than toward easing. For MSFT this is a valuation/multiple risk far more than a funding risk: $56.83B debt against $442.39B equity and $66.99B FCF mean rate moves barely touch its own cost of capital, but a higher-for-longer curve compresses the terminal-value component of the multiple and raises the bar for the AI capex cycle to earn its return.",
+    "fx_impact": "Roughly half of Microsoft's revenue is earned outside the US against a USD reporting currency, so translation is a material swing factor on reported revenue and margin \u2014 but no dated USD index or cross-rate observation is available in this evidence set, so no direction is asserted; treat FX as an unquantified two-sided variable this cycle.",
     "sector_macro_factors": [
-      "AI capex cycle (multi-year structural tailwind for Azure/cloud infrastructure)",
-      "Enterprise software demand tied to moderate US growth and low unemployment",
-      "Rate stability supports Microsoft's large capital investment program",
-      "Valuation-driven tech volatility from rate expectations (secondary headwind)",
-      "Wage inflation pressure on operational expenses (moderate concern)"
+      "Rate path: a 3.50%-3.75% policy rate with hawkish dissent caps multiple expansion for long-duration software/AI megacaps trading near 27x trailing earnings",
+      "Capex supercycle: global data-centre capex on course to exceed $1T in 2026; big-four hyperscalers guiding to ~$630B combined, ~+62% over 2025's $388B record",
+      "FCF compression: hyperscaler free cash flow trending down with 2026 estimates described as poor; three of the four hyperscalers lost market value after their latest earnings calls on capital-commitment concerns \u2014 the market is currently penalising, not rewarding, AI capex",
+      "Input-cost inflation: rising memory and storage prices are inflating per-unit server spend, so the same capex dollar buys less compute",
+      "Energy/power as the binding constraint: Fed-cited energy price pressure raises datacenter operating cost while Microsoft's disclosed ~$80B Azure order backlog it cannot fulfil for lack of power shows throughput, not demand, is the limiter",
+      "Second-order credit channel: MSFT's own balance sheet is insulated, but neoclouds, AI startups and SPV-financed buildouts that are Azure customers depend on private credit, transmitting tighter financing conditions into Azure demand and receivables quality",
+      "Balance-sheet defensiveness: minimal leverage and self-funded capex make MSFT a relative safe haven within the AI complex if financing conditions tighten"
     ],
     "geopolitical_risks": [
-      "US-China trade tensions and potential AI export restrictions (impacts Azure/cloud services to Asia)",
-      "Supply chain exposure to semiconductor shortage if geopolitical crisis escalates",
-      "Regulatory risk in EU (AI Act, data sovereignty rules affecting cloud business)"
+      "War in Iran driving high fuel costs \u2014 feeds the energy-led inflation the FOMC cited and raises datacenter power and buildout costs directly",
+      "Stress in the private credit sector, the financing layer behind much debt/SPV-funded datacenter construction and behind several AI-native Azure customers",
+      "Grassroots local opposition to datacenter buildouts, a permitting and siting risk that compounds the power constraint already gating ~$80B of Azure orders",
+      "Energy-sector supply shocks explicitly named by the Fed, which keep policy hawkish and datacenter opex elevated at the same time"
     ],
-    "summary": "Current-session signal: buy. Microsoft has a 40.3% net margin, $67.0B free cash flow, debt-to-equity of about 0.13, and a 20.9x forward P/E below its 28.1x trailing P/E. Price is above all major moving averages and MACD is positive, but RSI at 85.9 indicates an overbought short-term condition."
+    "summary": "The Fed held at 3.50%-3.75% on 2026-07-29 with three members wanting a hike and inflation still elevated on energy supply shocks, so the discount-rate risk to a ~27x trailing P/E megacap is skewed higher into the 2026-09-16 meeting. Microsoft's own cost of capital is near-immune \u2014 $56.83B debt against $442.39B equity, capex self-funded from $66.99B FCF \u2014 but its ecosystem is not: private-credit stress hits the SPV- and venture-financed neoclouds and AI startups that buy Azure, while Iran-war fuel costs and rising memory prices inflate both datacenter opex and buildout cost, and power constraints already strand ~$80B of Azure orders. With the market punishing hyperscaler capital commitments (three of four lost value post-earnings) and 2026 FCF estimates weakening, macro is a headwind to the multiple rather than to the franchise: neutral at medium confidence."
   },
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
+  "pipeline_mode": "in-session-claude-code"
 }
