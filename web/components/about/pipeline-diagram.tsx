@@ -63,7 +63,7 @@ export function PipelineDiagram({ pipeline }: { pipeline: Pipeline }) {
             </marker>
           </defs>
 
-          {bands.map((b) => (
+          {bands.map((b, i) => (
             <g key={b.stage.id}>
               <rect
                 x={b.x}
@@ -73,6 +73,18 @@ export function PipelineDiagram({ pipeline }: { pipeline: Pipeline }) {
                 rx={RX}
                 className="fill-secondary stroke-rule"
                 strokeWidth={1}
+              />
+              {/* Every band shares one flat fill, so six stages read as one grey
+                  column with no rhythm. A left rule stepped by stage index gives
+                  each band a distinct identity without adding a new hue. */}
+              <rect
+                x={b.x}
+                y={b.y + RX}
+                width={3}
+                height={b.h - RX * 2}
+                rx={1.5}
+                className="fill-graphite"
+                style={{ opacity: 0.15 + 0.1 * i }}
               />
               <text
                 x={b.x + L.bandPadX}
@@ -104,6 +116,13 @@ export function PipelineDiagram({ pipeline }: { pipeline: Pipeline }) {
           {boxes.map((box) => (
             <NodeBox key={box.node.id} {...box} />
           ))}
+
+          {/* Labels last: a long edge label can overrun into a box's footprint
+              (e.g. the bull/bear exchange), and an opaque box painted after it
+              would clip the overrun instead of just the box covering the line. */}
+          {edges.map(
+            (e, i) => e.label && <EdgeLabel key={`label-${i}`} edge={e} />,
+          )}
         </svg>
       </div>
       <figcaption className="text-micro leading-relaxed text-graphite">
@@ -161,7 +180,7 @@ function NodeBox({
         width={w}
         height={h}
         rx={RX}
-        strokeWidth={1}
+        strokeWidth={1.5}
         strokeDasharray={node.dashed ? "3 3" : undefined}
         className={cn(TONE_FILL[tone])}
       />
@@ -190,38 +209,68 @@ function NodeBox({
   );
 }
 
-function EdgePath({ edge }: { edge: Edge }) {
-  const d = edge.points
-    .map(([px, py], i) => `${i === 0 ? "M" : "L"}${px},${py}`)
-    .join(" ");
-  const isBus = edge.points.length === 2 && edge.points[0][1] === edge.points[1][1];
-  const arrow = edge.arrow || edge.bidirectional ? "url(#arrow)" : undefined;
+/** Corner radius for an elbow turn — small enough to stay a flowchart, not a blob. */
+const ELBOW_R = 6;
 
-  // Label the midpoint of the segment; nudge horizontal edges above the line.
+/**
+ * Round each interior turn of a polyline into a short quadratic curve instead
+ * of a hard corner. A straight 90° elbow reads as a technical schematic;
+ * mermaid's default routing rounds these, which is most of the "prettier"
+ * gap between this diagram and the mermaid ones elsewhere in the app.
+ */
+function roundedElbowPath(points: [number, number][]): string {
+  if (points.length <= 2) {
+    const [[x1, y1], [x2, y2]] = points;
+    return `M${x1},${y1} L${x2},${y2}`;
+  }
+  const parts: string[] = [`M${points[0][0]},${points[0][1]}`];
+  for (let i = 1; i < points.length - 1; i++) {
+    const [px, py] = points[i - 1];
+    const [cx, cy] = points[i];
+    const [nx, ny] = points[i + 1];
+    const inLen = Math.hypot(cx - px, cy - py);
+    const outLen = Math.hypot(nx - cx, ny - cy);
+    const r = Math.min(ELBOW_R, inLen / 2, outLen / 2);
+    const inX = cx + ((px - cx) / inLen) * r;
+    const inY = cy + ((py - cy) / inLen) * r;
+    const outX = cx + ((nx - cx) / outLen) * r;
+    const outY = cy + ((ny - cy) / outLen) * r;
+    parts.push(`L${inX},${inY}`, `Q${cx},${cy} ${outX},${outY}`);
+  }
+  const last = points[points.length - 1];
+  parts.push(`L${last[0]},${last[1]}`);
+  return parts.join(" ");
+}
+
+function EdgePath({ edge }: { edge: Edge }) {
+  const d = roundedElbowPath(edge.points);
+  const arrow = edge.arrow || edge.bidirectional ? "url(#arrow)" : undefined;
+  return (
+    <path
+      d={d}
+      fill="none"
+      strokeWidth={1.5}
+      strokeDasharray={edge.dashed ? "3 3" : undefined}
+      markerEnd={arrow}
+      markerStart={edge.bidirectional ? "url(#arrow)" : undefined}
+      className="stroke-graphite"
+    />
+  );
+}
+
+function EdgeLabel({ edge }: { edge: Edge }) {
+  const isBus = edge.points.length === 2 && edge.points[0][1] === edge.points[1][1];
   const [mx, my] = midpoint(edge.points);
   return (
-    <g>
-      <path
-        d={d}
-        fill="none"
-        strokeWidth={1}
-        strokeDasharray={edge.dashed ? "3 3" : undefined}
-        markerEnd={arrow}
-        markerStart={edge.bidirectional ? "url(#arrow)" : undefined}
-        className="stroke-graphite"
-      />
-      {edge.label && (
-        <text
-          x={mx}
-          y={isBus ? my - 5 : my}
-          textAnchor="middle"
-          fontSize={FS.caption}
-          className="fill-graphite italic"
-        >
-          {edge.label}
-        </text>
-      )}
-    </g>
+    <text
+      x={mx}
+      y={isBus ? my - 5 : my}
+      textAnchor="middle"
+      fontSize={FS.caption}
+      className="fill-graphite italic"
+    >
+      {edge.label}
+    </text>
   );
 }
 

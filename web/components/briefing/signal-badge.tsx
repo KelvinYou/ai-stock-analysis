@@ -27,11 +27,17 @@ const SIGNAL_CLS: Record<Signal, string> = {
   strong_sell: "text-bear",
 };
 
-/** Conviction in the reading itself — `halt` at medium, unmarked at low. */
+/**
+ * Conviction in the reading itself. Kept off the bull/bear channel deliberately
+ * — that hue already means "direction" everywhere else in the app, so a sell
+ * signal at high confidence would otherwise show red next to green and read as
+ * two conflicting calls instead of one direction plus one trust level. The
+ * dotted underline is the only signal: it fades out as confidence drops.
+ */
 const CONFIDENCE_CLS: Record<Confidence, string> = {
-  high: "text-bull",
-  medium: "text-halt",
-  low: "text-graphite",
+  high: "decoration-graphite/70",
+  medium: "decoration-graphite/40",
+  low: "decoration-graphite/0",
 };
 
 export function SignalBadge({
@@ -65,8 +71,13 @@ export function SignalBadge({
         {signalLabel(signal)}
       </span>
       {confidence && (
-        <span className={cn("text-micro", CONFIDENCE_CLS[confidence])}>
-          {confidence} conf.
+        <span
+          className={cn(
+            "text-micro text-graphite underline decoration-dotted underline-offset-2",
+            CONFIDENCE_CLS[confidence],
+          )}
+        >
+          {confidence}
         </span>
       )}
     </div>

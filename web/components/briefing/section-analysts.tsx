@@ -1,16 +1,17 @@
-import { BarChart3, Globe, Newspaper, TrendingUp } from "lucide-react";
+import {
+  BarChart3,
+  ChevronDown,
+  Globe,
+  Newspaper,
+  TrendingUp,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { SectionCard } from "@/components/shared/section-card";
 import { SignalBadge } from "./signal-badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import type { AnalystReports } from "@/lib/types";
-
-const TABS = [
-  { key: "fundamentals", label: "Fundamentals", Icon: BarChart3 },
-  { key: "technical", label: "Technical", Icon: TrendingUp },
-  { key: "sentiment", label: "Sentiment", Icon: Newspaper },
-  { key: "macro", label: "Macro · FX", Icon: Globe },
-] as const;
+import { clampText, fmtNumber, signalLabel } from "@/lib/format";
+import { signalPosition } from "@/lib/conviction";
+import type { AnalystReports, Confidence, Signal } from "@/lib/types";
 
 /** A named list under a report. `numeric` items are computed, so they set in mono. */
 type ListSpec = {
@@ -20,7 +21,29 @@ type ListSpec = {
   numeric?: boolean;
 };
 
+type EvidenceTone = "up" | "down" | "neutral";
+
+type Evidence = {
+  label: string;
+  text: string;
+  tone: EvidenceTone;
+};
+
+type DeskDefinition = {
+  key: string;
+  label: string;
+  Icon: LucideIcon;
+  signal: Signal;
+  confidence: Confidence;
+  summary: string;
+  evidence: Evidence[];
+  rows: Array<[string, string]>;
+  lists: ListSpec[];
+};
+
 export function AnalystSection({ data }: { data: AnalystReports }) {
+  const desks = buildDesks(data);
+
   return (
     <SectionCard
       id="analysts"
@@ -29,146 +52,265 @@ export function AnalystSection({ data }: { data: AnalystReports }) {
       title="Specialist desks"
       description="Four analysts read the tape independently"
     >
-      <Tabs defaultValue="fundamentals">
-        <TabsList>
-          {TABS.map(({ key, label, Icon }) => (
-            <TabsTrigger key={key} value={key}>
-              <Icon className="size-3.5" aria-hidden />
-              <span>{label}</span>
-            </TabsTrigger>
-          ))}
-        </TabsList>
-
-        <TabsContent value="fundamentals">
-          <ReportView
-            desk="Fundamentals"
-            summary={data.fundamentals.summary}
-            signal={data.fundamentals.signal}
-            confidence={data.fundamentals.confidence}
-            rows={[
-              ["P/E assessment", data.fundamentals.pe_assessment],
-              ["Margin analysis", data.fundamentals.margin_analysis],
-              ["Debt analysis", data.fundamentals.debt_analysis],
-              ["Growth outlook", data.fundamentals.growth_outlook],
-            ]}
-            lists={[
-              { label: "Key strengths", items: data.fundamentals.key_strengths, tone: "up" },
-              { label: "Key risks", items: data.fundamentals.key_risks, tone: "down" },
-            ]}
-          />
-        </TabsContent>
-
-        <TabsContent value="technical">
-          <ReportView
-            desk="Technical"
-            summary={data.technical.summary}
-            signal={data.technical.signal}
-            confidence={data.technical.confidence}
-            rows={[
-              ["Trend", data.technical.trend],
-              ["RSI", data.technical.rsi_assessment],
-              ["MACD", data.technical.macd_assessment],
-              ["Volume", data.technical.volume_assessment],
-            ]}
-            lists={[
-              {
-                label: "Support",
-                items: data.technical.support_levels.map((n) => n.toFixed(2)),
-                tone: "up",
-                numeric: true,
-              },
-              {
-                label: "Resistance",
-                items: data.technical.resistance_levels.map((n) => n.toFixed(2)),
-                tone: "down",
-                numeric: true,
-              },
-            ]}
-          />
-        </TabsContent>
-
-        <TabsContent value="sentiment">
-          <ReportView
-            desk="Sentiment"
-            summary={data.sentiment.summary}
-            signal={data.sentiment.signal}
-            confidence={data.sentiment.confidence}
-            rows={[
-              ["News tone", data.sentiment.news_tone],
-              ["News summary", data.sentiment.news_summary],
-              ["Social sentiment", data.sentiment.social_sentiment ?? "—"],
-            ]}
-            lists={[
-              { label: "Key themes", items: data.sentiment.key_themes },
-              { label: "Notable headlines", items: data.sentiment.notable_headlines },
-            ]}
-          />
-        </TabsContent>
-
-        <TabsContent value="macro">
-          <ReportView
-            desk="Macro · FX"
-            summary={data.macro.summary}
-            signal={data.macro.signal}
-            confidence={data.macro.confidence}
-            rows={[
-              ["Fed impact", data.macro.fed_impact],
-              ["Rates outlook", data.macro.interest_rate_outlook],
-              ["FX impact", data.macro.fx_impact ?? "—"],
-            ]}
-            lists={[
-              {
-                label: "Sector macro factors",
-                items: data.macro.sector_macro_factors,
-                tone: "up",
-              },
-              {
-                label: "Geopolitical risks",
-                items: data.macro.geopolitical_risks,
-                tone: "down",
-              },
-            ]}
-          />
-        </TabsContent>
-      </Tabs>
+      <DeskMatrix desks={desks} />
+      <DeskNotes desks={desks} />
     </SectionCard>
   );
 }
 
+function buildDesks(data: AnalystReports): DeskDefinition[] {
+  const fundamentals = data.fundamentals;
+  const technical = data.technical;
+  const sentiment = data.sentiment;
+  const macro = data.macro;
+
+  return [
+    {
+      key: "fundamentals",
+      label: "Fundamentals",
+      Icon: BarChart3,
+      signal: fundamentals.signal,
+      confidence: fundamentals.confidence,
+      summary: fundamentals.summary,
+      evidence: [
+        evidence("Strength", fundamentals.key_strengths[0] ?? fundamentals.margin_analysis, "up"),
+        evidence("Risk", fundamentals.key_risks[0] ?? fundamentals.pe_assessment, "down"),
+      ],
+      rows: [
+        ["P/E assessment", fundamentals.pe_assessment],
+        ["Margin analysis", fundamentals.margin_analysis],
+        ["Debt analysis", fundamentals.debt_analysis],
+        ["Growth outlook", fundamentals.growth_outlook],
+      ],
+      lists: [
+        { label: "Key strengths", items: fundamentals.key_strengths, tone: "up" },
+        { label: "Key risks", items: fundamentals.key_risks, tone: "down" },
+      ],
+    },
+    {
+      key: "technical",
+      label: "Technical",
+      Icon: TrendingUp,
+      signal: technical.signal,
+      confidence: technical.confidence,
+      summary: technical.summary,
+      evidence: [
+        evidence(
+          "Support",
+          technical.support_levels.length
+            ? technical.support_levels.slice(0, 2).map((n) => n.toFixed(2)).join(" · ")
+            : technical.rsi_assessment,
+          "up",
+        ),
+        evidence(
+          "Resistance",
+          technical.resistance_levels.length
+            ? technical.resistance_levels.slice(0, 2).map((n) => n.toFixed(2)).join(" · ")
+            : technical.macd_assessment,
+          "down",
+        ),
+      ],
+      rows: [
+        ["Trend", technical.trend],
+        ["RSI", technical.rsi_assessment],
+        ["MACD", technical.macd_assessment],
+        ["Volume", technical.volume_assessment],
+      ],
+      lists: [
+        {
+          label: "Support",
+          items: technical.support_levels.map((n) => n.toFixed(2)),
+          tone: "up",
+          numeric: true,
+        },
+        {
+          label: "Resistance",
+          items: technical.resistance_levels.map((n) => n.toFixed(2)),
+          tone: "down",
+          numeric: true,
+        },
+      ],
+    },
+    {
+      key: "sentiment",
+      label: "Sentiment",
+      Icon: Newspaper,
+      signal: sentiment.signal,
+      confidence: sentiment.confidence,
+      summary: sentiment.summary,
+      evidence: [
+        evidence("Tone", sentiment.news_tone, "neutral"),
+        evidence("Theme", sentiment.key_themes[0] ?? sentiment.news_summary, "neutral"),
+      ],
+      rows: [
+        ["News tone", sentiment.news_tone],
+        ["News summary", sentiment.news_summary],
+        ["Social sentiment", sentiment.social_sentiment ?? "—"],
+      ],
+      lists: [
+        { label: "Key themes", items: sentiment.key_themes },
+        { label: "Notable headlines", items: sentiment.notable_headlines },
+      ],
+    },
+    {
+      key: "macro",
+      label: "Macro · FX",
+      Icon: Globe,
+      signal: macro.signal,
+      confidence: macro.confidence,
+      summary: macro.summary,
+      evidence: [
+        evidence("Sector factor", macro.sector_macro_factors[0] ?? macro.fed_impact, "up"),
+        evidence("Risk", macro.geopolitical_risks[0] ?? macro.interest_rate_outlook, "down"),
+      ],
+      rows: [
+        ["Fed impact", macro.fed_impact],
+        ["Rates outlook", macro.interest_rate_outlook],
+        ["FX impact", macro.fx_impact ?? "—"],
+      ],
+      lists: [
+        { label: "Sector macro factors", items: macro.sector_macro_factors, tone: "up" },
+        { label: "Geopolitical risks", items: macro.geopolitical_risks, tone: "down" },
+      ],
+    },
+  ];
+}
+
+function evidence(label: string, text: string, tone: EvidenceTone): Evidence {
+  return { label, text: clampText(text || "Not reported", 150), tone };
+}
+
+function DeskMatrix({ desks }: { desks: DeskDefinition[] }) {
+  return (
+    <div>
+      <h3 className="eyebrow mb-3">Signal matrix</h3>
+
+      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        {desks.map((desk) => (
+          <article key={desk.key} className="rounded-lg border bg-card p-4">
+            <header className="flex items-start justify-between gap-3">
+              <h3 className="flex items-center gap-2 text-sm font-semibold text-ink">
+                <desk.Icon className="size-4 text-graphite" aria-hidden />
+                <span>{desk.label}</span>
+              </h3>
+              <SignalBadge signal={desk.signal} confidence={desk.confidence} size="lg" />
+            </header>
+
+            <SignalTrack signal={desk.signal} label={desk.label} />
+
+            <p className="prose-claim mt-4 line-clamp-3 text-sm">{desk.summary}</p>
+
+            <ul className="mt-4 space-y-2 border-t pt-3">
+              {desk.evidence.map((item) => (
+                <li key={item.label} className="flex gap-2 text-xs">
+                  <span
+                    className={cn(
+                      "mt-0.5 shrink-0 font-medium",
+                      item.tone === "up"
+                        ? "text-bull"
+                        : item.tone === "down"
+                          ? "text-bear"
+                          : "text-graphite",
+                    )}
+                    aria-hidden
+                  >
+                    {item.tone === "up" ? "▲" : item.tone === "down" ? "▼" : "•"}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="font-medium text-graphite">{item.label}: </span>
+                    <span className="text-ink">{item.text}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SignalTrack({ signal, label }: { signal: Signal; label: string }) {
+  const position = signalPosition(signal);
+  const left = ((position + 1) / 2) * 100;
+
+  return (
+    <div
+      className="mt-4"
+      role="img"
+      aria-label={`${label} signal ${signalLabel(signal)} on a sell to buy axis`}
+    >
+      <div className="relative h-3">
+        <div
+          className="absolute left-0 right-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-gradient-to-r from-bear/60 via-graphite/20 to-bull/60"
+          aria-hidden
+        />
+        <span
+          className="absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-ink ring-2 ring-card"
+          style={{ left: `${left}%` }}
+          aria-hidden
+        />
+      </div>
+      <div className="mt-1 flex justify-between text-mini uppercase tracking-[0.06em] text-graphite">
+        <span>Sell</span>
+        <span>Neutral</span>
+        <span>Buy</span>
+      </div>
+    </div>
+  );
+}
+
+function DeskNotes({ desks }: { desks: DeskDefinition[] }) {
+  return (
+    <div className="mt-7">
+      <h3 className="eyebrow mb-2">Full desk notes</h3>
+      <div className="border-y">
+        {desks.map((desk) => (
+          <details key={desk.key} className="group border-b last:border-b-0">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 py-3">
+              <span className="flex min-w-0 items-center gap-2">
+                <desk.Icon className="size-3.5 shrink-0 text-graphite" aria-hidden />
+                <span className="text-sm font-medium text-ink">{desk.label}</span>
+                <span className="min-w-0 truncate text-micro text-graphite">
+                  {desk.rows.map(([k]) => k).join(" · ")}
+                </span>
+              </span>
+              <ChevronDown
+                className="size-3.5 shrink-0 text-graphite transition-transform group-open:rotate-180"
+                aria-hidden
+              />
+            </summary>
+            <div className="pb-5 pt-1">
+              <ReportView rows={desk.rows} lists={desk.lists} />
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function ReportView({
-  desk,
-  summary,
-  signal,
-  confidence,
   rows,
   lists,
 }: {
-  desk: string;
-  summary: string;
-  signal: AnalystReports["fundamentals"]["signal"];
-  confidence: AnalystReports["fundamentals"]["confidence"];
   rows: Array<[string, string]>;
   lists: ListSpec[];
 }) {
   return (
-    <div className="space-y-6">
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b pb-3">
-        <h3 className="text-sm font-semibold text-ink">{desk} desk</h3>
-        <SignalBadge signal={signal} confidence={confidence} size="lg" />
-      </div>
+    <div className="space-y-5">
+      {rows.length > 0 && (
+        <dl className="grid gap-x-6 gap-y-4 border-t pt-4 sm:grid-cols-2">
+          {rows.map(([k, v]) => (
+            <div key={k} className="min-w-0">
+              <dt className="eyebrow">{k}</dt>
+              <dd className="prose-claim mt-1 text-sm text-graphite">{v || "—"}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
 
-      <p className="prose-claim max-w-[68ch]">{summary}</p>
-
-      <div className="grid gap-3 md:grid-cols-2">
-        {rows.map(([k, v]) => (
-          <div key={k} className="rounded-lg border bg-card p-4">
-            <h4 className="eyebrow">{k}</h4>
-            <p className="prose-claim mt-1.5 text-sm">{v || "—"}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid gap-5 border-t pt-4 md:grid-cols-2">
         {lists.map((list) => (
           <ItemList key={list.label} {...list} />
         ))}
@@ -178,8 +320,6 @@ function ReportView({
 }
 
 function ItemList({ label, items, tone, numeric }: ListSpec) {
-  // Direction lands on the glyph and the bullet, never on the label: "Key
-  // risks" already says which side this is, and an untoned list still reads.
   const marker =
     tone === "up" ? "bg-bull" : tone === "down" ? "bg-bear" : "bg-graphite";
   const glyphTone = tone === "up" ? "text-bull" : "text-bear";
