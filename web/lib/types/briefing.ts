@@ -2,7 +2,6 @@ import type { Signal } from "./signals";
 import type { Fundamentals, PricePoint, Technicals } from "./market";
 import type { AnalystReports } from "./analysts";
 import type { DebateResult } from "./debate";
-import type { WatchGroup } from "./watchlist";
 
 export interface ConvictionScore {
   score: number;
@@ -104,7 +103,6 @@ export interface TickerSummary {
   /** Latest date the price/technicals snapshot covers — data staleness. */
   asOfDate: string | null;
 
-  // Watchlist metadata from tickers.txt
-  group: WatchGroup | null;
+  // Watchlist theme metadata from tickers.txt
   theme: string | null;
 }

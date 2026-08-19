@@ -7,6 +7,7 @@ import { StarButton } from "@/components/ticker-list/star-button";
 import { SignalBadge } from "@/components/briefing/signal-badge";
 import {
   COLUMNS,
+  LOW_CONVERGENCE,
   isStale,
   STALE_DAYS,
   type ColumnDef,
@@ -39,8 +40,6 @@ const HIDE_CLASS: Record<NonNullable<ColumnDef["hideBelow"]>, string> = {
   xl: "hidden xl:table-cell",
 };
 
-/** Below this the four analyst desks disagree enough to distrust the levels. */
-const LOW_CONVERGENCE = 0.5;
 /** Conviction inside ±this band is a lean, not a call. */
 const CONVICTION_LEAN = 0.15;
 const RSI_OVERBOUGHT = 70;

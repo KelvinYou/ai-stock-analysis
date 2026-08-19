@@ -41,7 +41,6 @@ class PublicFundamentals(BaseModel):
 class WatchlistEntryResponse(BaseModel):
     symbol: str
     market: Literal["US", "MY"]
-    group: Literal["tracked", "candidate"]
     theme: str | None = None
 
 
@@ -67,7 +66,6 @@ class TickerSummaryResponse(BaseModel):
     rsi_14: float | None = None
     pct_from_52w_high: float | None = None
     as_of_date: str | None = None
-    group: Literal["tracked", "candidate"] | None = None
     theme: str | None = None
 
 
@@ -161,7 +159,6 @@ def _summary_from_cloud(
         rsi_14=row.get("rsi_14"),
         pct_from_52w_high=row.get("pct_from_52w_high"),
         as_of_date=row.get("market_as_of_date") or row.get("latest_price_date"),
-        group=row.get("watch_group"),
         theme=row.get("theme"),
     )
 
@@ -260,7 +257,7 @@ class PublicReadService:
                 rows = store.client.select_all(
                     "tickers",
                     {
-                        "select": "symbol,market,watch_group,theme",
+                        "select": "symbol,market,theme",
                         "enabled": "eq.true",
                         "order": "symbol.asc",
                     },
@@ -269,7 +266,6 @@ class PublicReadService:
                     WatchlistEntryResponse(
                         symbol=row["symbol"],
                         market=row.get("market", "US"),
-                        group=row.get("watch_group") or "candidate",
                         theme=row.get("theme"),
                     )
                     for row in rows
@@ -284,7 +280,6 @@ class PublicReadService:
             WatchlistEntryResponse(
                 symbol=entry.symbol,
                 market=entry.market,
-                group=entry.group,
                 theme=entry.theme,
             )
             for entry in parse_watchlist(watchlist_path.read_text())

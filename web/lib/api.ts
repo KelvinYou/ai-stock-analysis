@@ -47,14 +47,12 @@ type ApiTickerSummary = {
   rsi_14: number | null;
   pct_from_52w_high: number | null;
   as_of_date: string | null;
-  group: WatchlistEntry["group"] | null;
   theme: string | null;
 };
 
 type ApiWatchlistEntry = {
   symbol: string;
   market: WatchlistEntry["market"];
-  group: WatchlistEntry["group"];
   theme: string | null;
 };
 
@@ -123,7 +121,6 @@ function mapSummary(raw: ApiTickerSummary): TickerSummary {
     rsi14: raw.rsi_14,
     pctFrom52wHigh: raw.pct_from_52w_high,
     asOfDate: raw.as_of_date,
-    group: raw.group,
     theme: raw.theme,
   };
 }
@@ -147,7 +144,9 @@ export async function listTickerSummariesFromApi(): Promise<TickerSummary[]> {
 
 export async function loadWatchlistFromApi(): Promise<WatchlistEntry[]> {
   const payload = await apiGet<unknown>("/api/v1/watchlist");
-  return asArray(payload, "watchlist").map((row) => asRecord(row, "watchlist entry") as unknown as ApiWatchlistEntry);
+  return asArray(payload, "watchlist").map((row) =>
+    asRecord(row, "watchlist entry") as unknown as ApiWatchlistEntry,
+  );
 }
 
 export async function loadTickerFromApi(symbol: string): Promise<TickerBundle | null> {

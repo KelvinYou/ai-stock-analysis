@@ -6,6 +6,7 @@ import { getMyList } from "@/lib/client-storage";
 import { LayoutGrid, Rows3, SlidersHorizontal, X } from "lucide-react";
 import { TickerCard } from "./ticker-card";
 import { TickerTable } from "./ticker-table";
+import { ConvictionMap } from "@/components/consensus/conviction-map";
 import { cn } from "@/lib/utils";
 import { signalGlyph, signalShortLabel } from "@/lib/signal-display";
 import {
@@ -20,7 +21,6 @@ import {
 import type { Signal, TickerSummary } from "@/lib/types";
 
 type AnalyzedFilter = "all" | "briefed" | "raw";
-type GroupFilter = "all" | "tracked" | "candidate";
 type View = "table" | "cards";
 
 const SIGNAL_ORDER: Signal[] = ["strong_buy", "buy", "neutral", "sell", "strong_sell"];
@@ -77,10 +77,6 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     const v = params.get("analyzed");
     return v === "briefed" || v === "raw" ? v : "all";
   });
-  const [group, setGroup] = useState<GroupFilter>(() => {
-    const v = params.get("group");
-    return v === "tracked" || v === "candidate" ? v : "all";
-  });
   const [actionableOnly, setActionableOnly] = useState(
     () => params.get("actionable") === "1",
   );
@@ -134,7 +130,6 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     if (sectors.size) p.set("sector", [...sectors].map(encodeURIComponent).join(","));
     if (themes.size) p.set("theme", [...themes].map(encodeURIComponent).join(","));
     if (analyzed !== "all") p.set("analyzed", analyzed);
-    if (group !== "all") p.set("group", group);
     if (actionableOnly) p.set("actionable", "1");
     if (staleOnly) p.set("stale", "1");
     if (starredOnly) p.set("starred", "1");
@@ -151,7 +146,6 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     sectors,
     themes,
     analyzed,
-    group,
     actionableOnly,
     staleOnly,
     starredOnly,
@@ -169,7 +163,6 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
       briefed: tickers.filter((t) => t.signal != null).length,
       actionable: tickers.filter(isActionable).length,
       stale: tickers.filter(isStale).length,
-      tracked: tickers.filter((t) => t.group === "tracked").length,
       starred: tickers.filter((t) => starred.has(t.symbol)).length,
     }),
     [tickers, starred],
@@ -205,7 +198,6 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
         return false;
       if (analyzed === "briefed" && t.signal == null) return false;
       if (analyzed === "raw" && t.signal != null) return false;
-      if (group !== "all" && t.group !== group) return false;
       if (actionableOnly && !isActionable(t)) return false;
       if (staleOnly && !isStale(t)) return false;
       if (starredOnly && !starred.has(t.symbol)) return false;
@@ -224,7 +216,6 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     sectors,
     themes,
     analyzed,
-    group,
     actionableOnly,
     staleOnly,
     starredOnly,
@@ -240,7 +231,6 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     sectors.size > 0 ||
     themes.size > 0 ||
     analyzed !== "all" ||
-    group !== "all" ||
     actionableOnly ||
     staleOnly ||
     starredOnly;
@@ -252,7 +242,6 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     setSectors(new Set());
     setThemes(new Set());
     setAnalyzed("all");
-    setGroup("all");
     setActionableOnly(false);
     setStaleOnly(false);
     setStarredOnly(false);
@@ -320,19 +309,6 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
               { v: "all", label: `All · ${tickers.length}` },
               { v: "briefed", label: `Briefed · ${counts.briefed}` },
               { v: "raw", label: "Not briefed" },
-            ]}
-          />
-          <PillGroup
-            label="Coverage"
-            value={group}
-            onChange={(v) => {
-              setGroup(v);
-              setVisible(INITIAL_VISIBLE);
-            }}
-            options={[
-              { v: "all", label: "Any" },
-              { v: "tracked", label: `Tracked · ${counts.tracked}` },
-              { v: "candidate", label: "Candidates" },
             ]}
           />
         </div>
@@ -509,6 +485,8 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
         </div>
       )}
 
+      <ConvictionMap tickers={filtered} />
+
       <div className="flex items-center justify-between border-t pt-3">
         <span className="text-xs text-graphite">
           Showing <span className="num text-ink">{shown.length}</span> of{" "}
@@ -516,7 +494,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
           {filtered.length !== tickers.length && (
             <span>
               {" "}
-              · <span className="num">{tickers.length}</span> tracked in total
+              · <span className="num">{tickers.length}</span> tickers in total
             </span>
           )}
         </span>
@@ -535,7 +513,7 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
         <div className="rounded-lg border border-dashed p-10 text-center">
           <p className="text-sm text-ink">No ticker matches these filters.</p>
           <p className="mt-1 text-xs text-graphite">
-            Widen the signal or coverage filters, or reset them to see all{" "}
+            Widen the filters or reset them to see all{" "}
             <span className="num">{tickers.length}</span> tickers.
           </p>
           {hasActiveFilters && (

@@ -127,7 +127,6 @@ def test_public_read_routes_use_versioned_response_contract(monkeypatch):
                 api.WatchlistEntryResponse(
                     symbol="AAPL",
                     market="US",
-                    group="tracked",
                 )
             ]
 
@@ -144,7 +143,7 @@ def test_public_read_routes_use_versioned_response_contract(monkeypatch):
     assert summaries.status_code == 200
     assert summaries.json()[0]["symbol"] == "AAPL"
     assert watchlist.status_code == 200
-    assert watchlist.json()[0]["group"] == "tracked"
+    assert watchlist.json()[0] == {"symbol": "AAPL", "market": "US", "theme": None}
     assert ticker.status_code == 200
     assert ticker.json() == {
         "symbol": "AAPL",

@@ -13,7 +13,7 @@ import { signalDirection, signalPosition } from "@/lib/conviction";
 export const STALE_BRIEFING_DAYS = 5;
 
 export interface BookShape {
-  tracked: number;
+  briefed: number;
   /** Every briefed ticker's conviction, ascending — the ticks on the axis. */
   convictions: number[];
   buy: number;
@@ -44,7 +44,7 @@ export function readBook(tickers: TickerSummary[]): BookShape {
       : (convictions[convictions.length / 2 - 1] + convictions[convictions.length / 2]) / 2
     : null;
 
-  return { tracked: briefed.length, convictions, buy, hold, sell, median };
+  return { briefed: briefed.length, convictions, buy, hold, sell, median };
 }
 
 export type AttentionKind = "target" | "stop" | "at-entry" | "stale";

@@ -134,9 +134,8 @@ def import_data(data_dir: Path, settings: Settings, dry_run: bool = False) -> di
             if ticker_data:
                 cloud.merge_market_data(symbol, ticker_data)
                 counts["market"] += 1
-            # Grouping and theme exist only as tickers.txt markers. Without this
-            # the dashboard relabels every migrated ticker as an ungrouped
-            # candidate, because that is its fallback for a NULL watch_group.
+            # Theme metadata exists only as a tickers.txt marker. Keep it on the
+            # public ticker row so the screener can still filter by theme.
             cloud.upsert_ticker_metadata(
                 symbol,
                 market=(ticker_data.info.market.value if ticker_data else None)
@@ -145,7 +144,6 @@ def import_data(data_dir: Path, settings: Settings, dry_run: bool = False) -> di
                 sector=ticker_data.info.sector if ticker_data else None,
                 industry=ticker_data.info.industry if ticker_data else None,
                 currency=ticker_data.info.currency if ticker_data else None,
-                watch_group=watch.group if watch else None,
                 theme=watch.theme if watch else None,
             )
             if technicals:

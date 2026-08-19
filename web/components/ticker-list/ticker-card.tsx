@@ -34,11 +34,6 @@ export function TickerCard({ t }: { t: TickerSummary; index?: number }) {
             <span className="rounded bg-muted px-1.5 py-0.5 text-mini font-medium text-graphite">
               {t.market}
             </span>
-            {t.group === "tracked" && (
-              <span className="rounded bg-ink px-1.5 py-0.5 text-mini font-semibold uppercase tracking-[0.07em] text-background">
-                Tracked
-              </span>
-            )}
           </div>
           <p className="mt-1 truncate text-xs text-graphite">{t.name}</p>
         </div>
