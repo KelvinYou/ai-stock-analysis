@@ -7,6 +7,7 @@ import {
   listTickerSummariesFromApi,
   loadTickerFromApi,
 } from "./api";
+import { FETCH_REVALIDATE_SECONDS } from "./site";
 import { loadWatchlistMap } from "./watchlist";
 import type {
   AnalystReports,
@@ -78,7 +79,7 @@ async function cloudRows<T>(
         apikey: SUPABASE_KEY,
         Authorization: `Bearer ${SUPABASE_KEY}`,
       },
-      next: { revalidate: 60 },
+      next: { revalidate: FETCH_REVALIDATE_SECONDS },
     },
   );
   if (!response.ok) {
