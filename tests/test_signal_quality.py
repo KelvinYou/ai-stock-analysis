@@ -206,6 +206,19 @@ class SignalQualityTests(unittest.TestCase):
         self.assertEqual(payload["volume"]["ratio"], snapshot.volume_ratio)
         self.assertEqual(payload["52_week"]["pct_from_high"], snapshot.pct_from_52w_high)
 
+    def test_technical_series_is_aligned_and_ends_at_snapshot(self):
+        snapshot = compute_technicals("TEST", _ticker_data().price_history)
+
+        self.assertEqual(len(snapshot.series), 210)
+        self.assertIsNone(snapshot.series[0].sma_20)
+        self.assertIsNone(snapshot.series[13].rsi_14)
+        self.assertEqual(snapshot.series[-1].date, snapshot.as_of_date)
+        self.assertEqual(snapshot.series[-1].sma_20, snapshot.sma_20)
+        self.assertEqual(snapshot.series[-1].sma_200, snapshot.sma_200)
+        self.assertEqual(snapshot.series[-1].rsi_14, snapshot.rsi_14)
+        self.assertEqual(snapshot.series[-1].macd_histogram, snapshot.macd_histogram)
+        self.assertEqual(snapshot.series[-1].bb_pct, snapshot.bb_pct)
+
 
     def test_macro_snapshot_is_explicitly_unavailable_and_point_in_time(self):
         snapshot = build_macro_snapshot(_ticker_data())
