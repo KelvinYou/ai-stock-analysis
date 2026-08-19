@@ -2,6 +2,8 @@ import type { Signal, TickerSummary } from "./types";
 
 /** A briefing older than this is flagged stale — the tape has moved on. */
 export const STALE_DAYS = 5;
+/** Below this, the desk spread deserves a debate read before acting. */
+export const LOW_CONVERGENCE = 0.5;
 
 export const SIGNAL_WEIGHT: Record<Signal, number> = {
   strong_buy: 2,
@@ -139,7 +141,7 @@ export function isActionable(t: TickerSummary): boolean {
   return t.toEntryPct != null && t.toEntryPct >= 0;
 }
 
-export function isStale(t: TickerSummary): boolean {
+export function isStale(t: Pick<TickerSummary, "briefingAgeDays">): boolean {
   return t.briefingAgeDays != null && t.briefingAgeDays > STALE_DAYS;
 }
 

@@ -17,7 +17,6 @@ import type {
   Technicals,
   TickerBundle,
   TickerSummary,
-  WatchGroup,
   WatchlistEntry,
 } from "./types";
 import { parseRatio } from "./format";
@@ -45,7 +44,6 @@ type CloudSummaryRow = {
   sector: string | null;
   industry: string | null;
   currency: string | null;
-  watch_group: WatchGroup | null;
   theme: string | null;
   market_as_of_date: string | null;
   latest_price_date: string | null;
@@ -143,7 +141,6 @@ function summaryFromCloud(
     rsi14: row.rsi_14,
     pctFrom52wHigh: row.pct_from_52w_high,
     asOfDate: row.market_as_of_date ?? row.latest_price_date,
-    group: row.watch_group ?? watch?.group ?? null,
     theme: row.theme ?? watch?.theme ?? null,
   };
 }
@@ -440,7 +437,6 @@ async function loadTickerSummary(
     pctFrom52wHigh: technicals?.pct_from_52w_high ?? null,
     asOfDate: technicals?.as_of_date ?? closes.latestDate ?? null,
 
-    group: watch?.group ?? null,
     theme: watch?.theme ?? null,
   };
 }

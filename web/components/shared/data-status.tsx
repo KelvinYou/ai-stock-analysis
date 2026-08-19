@@ -30,11 +30,7 @@ export function DataStatus({
   const staleCount = tickers.filter(isStale).length;
 
   const haveData = new Set(tickers.map((t) => t.symbol));
-  const briefed = new Set(briefedTickers.map((t) => t.symbol));
   const notFetched = watchlist.filter((w) => !haveData.has(w.symbol));
-  const unbriefedTracked = watchlist.filter(
-    (w) => w.group === "tracked" && haveData.has(w.symbol) && !briefed.has(w.symbol),
-  );
 
   return (
     <div className="space-y-3">
@@ -62,15 +58,6 @@ export function DataStatus({
           tone={staleCount > 0 ? "warn" : undefined}
         />
       </div>
-
-      {unbriefedTracked.length > 0 && (
-        <Gap
-          title={`${unbriefedTracked.length} tracked ticker${
-            unbriefedTracked.length > 1 ? "s" : ""
-          } never briefed`}
-          entries={unbriefedTracked}
-        />
-      )}
 
       {notFetched.length > 0 && (
         <Gap

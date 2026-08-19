@@ -53,10 +53,9 @@ def _fetch_one(
         merged = store.merge_market_data(symbol, data)
         snapshot = compute_technicals(symbol, merged)
         store.save_technicals(symbol, snapshot)
-        # The cloud `tickers` table is what the dashboard reads for sector and
-        # watchlist grouping; merge_market_data only guarantees symbol+market.
-        # Without this, cloud mode renders every ticker as an ungrouped,
-        # sector-less row. No-op on the local backend.
+        # The cloud `tickers` table is what the dashboard reads for identity,
+        # sector, and watchlist theme; merge_market_data only guarantees
+        # symbol+market. No-op on the local backend.
         store.upsert_ticker_metadata(
             symbol,
             market=data.info.market.value,
@@ -64,7 +63,6 @@ def _fetch_one(
             sector=data.info.sector,
             industry=data.info.industry,
             currency=data.info.currency,
-            watch_group=watch.group if watch else None,
             theme=watch.theme if watch else None,
         )
         mode = "FULL" if start_date is None else "INC "
@@ -212,9 +210,9 @@ def cli():
 
     settings = Settings.from_env()
     store = build_store(settings)
-    # Grouping/theme live only in tickers.txt markers, so they are read here even
-    # when the tickers came from CLI args or a universe — a ticker that happens to
-    # be on the hand-curated watchlist keeps its group either way.
+    # Themes live only in tickers.txt markers, so they are read here even when
+    # the tickers came from CLI args or a universe — a ticker that happens to be
+    # on the hand-curated watchlist keeps its theme either way.
     watch_map = load_watchlist_map(args.from_file)
     fetchers = {
         "US": USMarketFetcher(period=settings.price_history_period),

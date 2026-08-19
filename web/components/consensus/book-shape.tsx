@@ -16,17 +16,17 @@ function pct(position: number) {
 
 export function BookShape({ tickers }: { tickers: TickerSummary[] }) {
   const book = readBook(tickers);
-  if (book.tracked === 0) return null;
+  if (book.briefed === 0) return null;
 
   const summary =
-    `${book.tracked} briefed: ${book.buy} buy, ${book.hold} hold, ${book.sell} sell.` +
+    `${book.briefed} briefed: ${book.buy} buy, ${book.hold} hold, ${book.sell} sell.` +
     (book.median != null ? ` Median conviction ${book.median.toFixed(2)}.` : "");
 
   return (
     <figure className="m-0 px-5 py-3">
       <div className="flex items-baseline justify-between gap-2">
         <figcaption className="eyebrow">Book shape</figcaption>
-        <span className="num text-mini text-graphite">{book.tracked} briefed</span>
+        <span className="num text-mini text-graphite">{book.briefed} briefed</span>
       </div>
 
       <div className="relative mt-3" role="img" aria-label={`Book shape. ${summary}`}>

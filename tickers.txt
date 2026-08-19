@@ -1,25 +1,22 @@
-# Watchlist — actively tracked tickers + candidates. No @us-major/@my-klci.
+# Watchlist — hand-curated tickers. No @us-major/@my-klci.
 # NOTE: inline comments are NOT supported — fetch.py:81 only skips whole-line #.
 # "MY:0166 # Inari" would parse as the ticker "0166 # INARI" and fail silently.
 #
-# MACHINE-READABLE MARKERS (parsed by web/lib/watchlist.ts, ignored by fetch.py
-# because they are whole-line comments):
-#   #group: tracked | candidate   — applies to every ticker below it
-#   #theme: <free text>           — applies to every ticker below it
-# Both persist until the next marker of the same kind. Keep them in sync when
-# you move a ticker between blocks, otherwise the dashboard mislabels it.
+# MACHINE-READABLE THEME MARKER (parsed by web/lib/watchlist.ts, ignored by
+# fetch.py because it is a whole-line comment):
+#   #theme: <free text> — applies to every ticker below it
+# Themes persist until the next marker. Keep them in sync when you move a
+# ticker between blocks.
 
-#group: tracked
 #theme: MY core banks & construction
 MY:1155
 MY:5258
 MY:5398
 
-#group: candidate
 #theme: MY conglomerate
-# 4197 Sime Darby — actively tracked ticker.
+# 4197 Sime Darby.
 MY:4197
-# 5151 Hextar Global Berhad — Hextar Group candidate.
+# 5151 Hextar Global Berhad.
 MY:5151
 
 #theme: MY diversified
@@ -43,15 +40,17 @@ MY:5005
 MY:5249
 MY:6947
 
-#group: tracked
+#theme: MY plantation
+# 5126 Sarawak Oil Palms Berhad — CPO/palm oil plantation.
+MY:5126
+
 #theme: US mega-cap
 GOOGL
 MSFT
 NVDA
 
-#group: candidate
 #theme: US mega-cap
-# META — actively tracked candidate.
+# META — Meta Platforms.
 AAPL
 AMZN
 META
@@ -68,13 +67,11 @@ V
 TSM
 
 #theme: US space / aerospace
-# RKLB Rocket Lab — space launch and systems candidate.
+# RKLB Rocket Lab — space launch and systems.
 RKLB
 
-# Added 2026-08-17. All six already have a full briefing/debate from that date;
-# they were analysed before being listed here, which is why the dashboard showed
-# them as ungrouped until now.
-#group: candidate
+# Added 2026-08-17. These symbols already have a full briefing/debate from that
+# date.
 
 #theme: US enterprise software & adtech
 # ORCL Oracle / APP AppLovin

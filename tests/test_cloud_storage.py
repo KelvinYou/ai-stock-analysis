@@ -410,7 +410,7 @@ def test_public_artifact_reader_excludes_private_artifacts():
     assert loaded.fundamentals.signal is Signal.BUY
 
 
-def test_watchlist_markers_survive_the_python_side():
+def test_watchlist_theme_markers_survive_the_python_side():
     entries = {
         entry.symbol: entry
         for entry in parse_watchlist(
@@ -429,9 +429,9 @@ def test_watchlist_markers_survive_the_python_side():
     }
 
     assert entries["1155"].market == "MY"
-    assert (entries["1155"].group, entries["1155"].theme) == ("tracked", "MY core banks")
-    # The theme persists across a group marker, matching web/lib/watchlist.ts.
-    assert (entries["AAPL"].group, entries["AAPL"].theme) == ("candidate", "MY core banks")
+    assert entries["1155"].theme == "MY core banks"
+    # Legacy group comments are ignored; the theme continues to persist.
+    assert entries["AAPL"].theme == "MY core banks"
     assert "@US-MAJOR" not in entries and len(entries) == 2
 
 

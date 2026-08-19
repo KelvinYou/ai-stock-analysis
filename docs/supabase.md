@@ -167,11 +167,10 @@ and a few ticker pages before switching scheduled fetches to cloud mode.
 
 Two things the import carries that are easy to miss:
 
-- **Watchlist grouping.** `watch_group` and `theme` exist only as `#group:` /
-  `#theme:` markers in `tickers.txt`. Both the importer and `stock-fetch` parse
-  them via `stock_analysis.data.watchlist`, which must stay in sync with
-  `web/lib/watchlist.ts`. Without them the dashboard renders every ticker as an
-  ungrouped candidate.
+- **Watchlist themes.** `theme` exists only as a `#theme:` marker in
+  `tickers.txt`. Both the importer and `stock-fetch` parse it via
+  `stock_analysis.data.watchlist`, which must stay in sync with
+  `web/lib/watchlist.ts`. All listed tickers share one coverage pool.
 - **Ticker metadata.** `name`, `sector`, `industry`, and `currency` are written
   to `tickers` on every fetch, not just at import — the screener reads those
   columns, not the snapshot JSON.

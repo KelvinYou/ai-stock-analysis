@@ -1,10 +1,8 @@
-"""Parse ``tickers.txt`` grouping markers on the Python side.
+"""Parse hand-curated ticker and theme markers from ``tickers.txt``.
 
-``web/lib/watchlist.ts`` has understood the ``#group:`` / ``#theme:`` markers
-since the dashboard gained grouping, but nothing in Python did — so in cloud
-mode ``tickers.watch_group`` and ``tickers.theme`` stayed NULL and the dashboard
-silently relabelled every ticker as ``candidate``. Both parsers must stay in
-sync; the marker semantics are documented at the top of ``tickers.txt``.
+The file is shared with ``web/lib/watchlist.ts``. Both parsers keep the
+``#theme:`` marker semantics aligned; ``#group:`` comments are intentionally
+ignored as legacy comments.
 
 ``@universe`` directives are skipped here for the same reason the TS parser
 skips them: expanding one needs a network call, and universe members are not
@@ -18,27 +16,24 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
-GROUP_MARKER = re.compile(r"^#\s*group:\s*(tracked|candidate)s?\s*$", re.IGNORECASE)
 THEME_MARKER = re.compile(r"^#\s*theme:\s*(.+?)\s*$", re.IGNORECASE)
 
 
 class WatchlistEntry(BaseModel):
     symbol: str
     market: str
-    group: str = "candidate"
     theme: str | None = None
 
 
 def parse_watchlist(text: str) -> list[WatchlistEntry]:
-    """Return the hand-listed watchlist entries with their group/theme context.
+    """Return hand-listed entries with their current theme context.
 
-    Markers persist until the next marker of the same kind, matching the TS
-    parser. The symbol is the display symbol (``MY:1155`` -> ``1155``), which is
-    what ``TickerInfo.symbol`` and therefore ``tickers.symbol`` carry.
+    Theme markers persist until the next theme marker. The symbol is the
+    display symbol (``MY:1155`` -> ``1155``), which is what ``TickerInfo.symbol``
+    and therefore ``tickers.symbol`` carry.
     """
     entries: list[WatchlistEntry] = []
     seen: set[str] = set()
-    group = "candidate"
     theme: str | None = None
 
     for raw in text.splitlines():
@@ -46,10 +41,6 @@ def parse_watchlist(text: str) -> list[WatchlistEntry]:
         if not line:
             continue
         if line.startswith("#"):
-            match = GROUP_MARKER.match(line)
-            if match:
-                group = match.group(1).lower()
-                continue
             match = THEME_MARKER.match(line)
             if match:
                 theme = match.group(1)
@@ -66,7 +57,6 @@ def parse_watchlist(text: str) -> list[WatchlistEntry]:
             WatchlistEntry(
                 symbol=symbol,
                 market="MY" if is_my else "US",
-                group=group,
                 theme=theme,
             )
         )
