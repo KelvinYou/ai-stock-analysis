@@ -9,6 +9,7 @@ import type {
   TickerSummary,
   WatchlistEntry,
 } from "./types";
+import { FETCH_REVALIDATE_SECONDS } from "./site";
 
 /** Server-side FastAPI reader. Never expose these variables as NEXT_PUBLIC_*. */
 const API_URL = (process.env.STOCK_ANALYSIS_API_URL ?? "").replace(/\/+$/, "");
@@ -87,7 +88,7 @@ async function apiGet<T>(pathname: string, allowNotFound = false): Promise<T | n
   }
   const response = await fetch(`${API_URL}${pathname}`, {
     headers: { Authorization: `Bearer ${API_TOKEN}` },
-    next: { revalidate: 60 },
+    next: { revalidate: FETCH_REVALIDATE_SECONDS },
   });
   if (allowNotFound && response.status === 404) return null;
   if (!response.ok) {
