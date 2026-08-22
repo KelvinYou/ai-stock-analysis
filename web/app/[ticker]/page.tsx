@@ -13,6 +13,7 @@ import { listTickers, loadTicker } from "@/lib/data";
 import { describeConviction } from "@/lib/conviction";
 import { clampText, fmtCurrency, fmtSignedPercent } from "@/lib/format";
 import { buildShareText } from "@/lib/share/text";
+import { buildChartData, chartLatestIndicators } from "@/lib/chart-data";
 import { tickerUrl } from "@/lib/site";
 import type { Metadata } from "next";
 
@@ -89,6 +90,8 @@ export default async function TickerPage({
     { id: "debate", label: "Debate", show: !!bundle.debate },
     { id: "briefing", label: "Synthesis", show: !!bundle.briefing },
   ].filter((s) => s.show);
+  const chartData = buildChartData(bundle.priceHistory, bundle.technicals?.series ?? []);
+  const latestChartIndicators = chartLatestIndicators(bundle.technicals);
 
   return (
     <div className="space-y-8">
@@ -171,9 +174,9 @@ export default async function TickerPage({
             {bundle.priceHistory.length > 0 && (
               <SectionCard id="chart" title="Price" description="Daily close">
                 <PriceChart
-                  data={bundle.priceHistory}
+                  data={chartData}
                   currency={currency}
-                  technicals={bundle.technicals}
+                  technicals={latestChartIndicators}
                   supportLevels={bundle.analystReports?.technical.support_levels}
                   resistanceLevels={bundle.analystReports?.technical.resistance_levels}
                   actionPlan={bundle.briefing?.action_plan}

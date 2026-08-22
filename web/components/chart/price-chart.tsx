@@ -1,29 +1,18 @@
 "use client";
 
 import * as React from "react";
+import type { ActionPlan } from "@/lib/types";
+import { CHART_RANGES } from "@/lib/chart-data";
 import type {
-  ActionPlan,
-  PricePoint,
-  TechnicalSeriesPoint,
-  Technicals,
-} from "@/lib/types";
+  ChartData,
+  ChartLatestIndicators,
+  ChartPoint,
+} from "@/lib/chart-data";
 import { cn } from "@/lib/utils";
 import { fmtCurrency, fmtDateShort, fmtNumber, fmtSignedPercent } from "@/lib/format";
 
-const RANGES = [
-  { key: "1M", days: 30 },
-  { key: "3M", days: 90 },
-  { key: "6M", days: 180 },
-  { key: "1Y", days: 365 },
-  { key: "ALL", days: Number.POSITIVE_INFINITY },
-] as const;
-
-type RangeKey = (typeof RANGES)[number]["key"];
-type IndicatorKey = Exclude<keyof TechnicalSeriesPoint, "date">;
-
-type ChartPoint = PricePoint & {
-  indicators: TechnicalSeriesPoint | null;
-};
+type RangeKey = (typeof CHART_RANGES)[number]["key"];
+type IndicatorKey = Exclude<keyof NonNullable<ChartPoint["indicators"]>, "date">;
 
 type LevelKey = "support" | "resistance" | "entry" | "stop" | "tp1" | "tp2";
 
@@ -72,6 +61,8 @@ const INDICATOR_STYLES: Array<{
 const INDICATOR_PREF_KEY = "priceChart:hiddenIndicators";
 const OSCILLATOR_PREF_KEY = "priceChart:showOscillators";
 const LEVEL_PREF_KEY = "priceChart:hiddenLevels";
+/** Stable first-render coordinate space; ResizeObserver swaps in the real width after hydration. */
+const CHART_WIDTH = 1000;
 
 export function PriceChart({
   data,
@@ -81,16 +72,16 @@ export function PriceChart({
   resistanceLevels = [],
   actionPlan,
 }: {
-  data: PricePoint[];
+  data: ChartData;
   currency?: string;
-  technicals?: Technicals | null;
+  technicals?: ChartLatestIndicators | null;
   supportLevels?: number[];
   resistanceLevels?: number[];
   actionPlan?: ActionPlan | null;
 }) {
   const [range, setRange] = React.useState<RangeKey>("6M");
   const [hoverIndex, setHoverIndex] = React.useState<number | null>(null);
-  const [width, setWidth] = React.useState(0);
+  const [width, setWidth] = React.useState(CHART_WIDTH);
   const [hiddenIndicators, setHiddenIndicators] = React.useState<Set<IndicatorKey>>(
     () => new Set(),
   );
@@ -115,6 +106,17 @@ export function PriceChart({
     } catch {
       // localStorage unavailable (e.g. private mode) — fall back to defaults.
     }
+  }, []);
+
+  React.useEffect(() => {
+    const element = containerRef.current;
+    if (!element) return;
+
+    const update = () => setWidth(Math.max(1, Math.floor(element.getBoundingClientRect().width)));
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(element);
+    return () => observer.disconnect();
   }, []);
 
   function toggleLevel(key: LevelKey) {
@@ -162,35 +164,7 @@ export function PriceChart({
     [hiddenIndicators],
   );
 
-  React.useEffect(() => {
-    const element = containerRef.current;
-    if (!element) return;
-
-    const update = () => setWidth(Math.floor(element.getBoundingClientRect().width));
-    update();
-    const observer = new ResizeObserver(update);
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
-
-  const ranged = React.useMemo(() => {
-    const config = RANGES.find((item) => item.key === range)!;
-    if (!Number.isFinite(config.days)) return data;
-    return data.slice(-config.days);
-  }, [data, range]);
-
-  const seriesByDate = React.useMemo(
-    () => new Map((technicals?.series ?? []).map((point) => [point.date, point])),
-    [technicals?.series],
-  );
-
-  const points = React.useMemo(() => {
-    const joined = ranged.map((bar) => ({
-      ...bar,
-      indicators: seriesByDate.get(bar.date) ?? null,
-    }));
-    return aggregateBars(joined, 220);
-  }, [ranged, seriesByDate]);
+  const points = data[range];
 
   const hasSeries = points.some((point) => point.indicators?.rsi_14 != null);
   const renderOscillators = hasSeries && showOscillators;
@@ -269,7 +243,7 @@ export function PriceChart({
     setHoverIndex(next);
   }
 
-  if (!data.length) {
+  if (!points.length) {
     return <p className="text-sm text-graphite">No price history available.</p>;
   }
 
@@ -296,7 +270,7 @@ export function PriceChart({
           </div>
         </div>
         <div className="inline-flex items-stretch overflow-hidden rounded-lg border bg-secondary p-0.5">
-          {RANGES.map((item) => (
+          {CHART_RANGES.map((item) => (
             <button
               key={item.key}
               type="button"
@@ -400,17 +374,16 @@ export function PriceChart({
       )}
 
       <div className="relative mt-2 h-auto min-h-[220px] w-full">
-        {width > 0 && (
-          <svg
-            width="100%"
-            height={height}
-            viewBox={`0 0 ${width} ${height}`}
-            role="img"
-            aria-label={describeChart(points, range, hasSeries)}
-            onPointerMove={handlePointerMove}
-            onPointerLeave={() => setHoverIndex(null)}
-            className="block w-full overflow-visible"
-          >
+        <svg
+          width="100%"
+          height={height}
+          viewBox={`0 0 ${width} ${height}`}
+          role="img"
+          aria-label={describeChart(points, range, hasSeries)}
+          onPointerMove={handlePointerMove}
+          onPointerLeave={() => setHoverIndex(null)}
+          className="block w-full overflow-visible"
+        >
             <title>{range} price, volume, and technical indicators</title>
             <desc>{describeChart(points, range, hasSeries)}</desc>
 
@@ -660,10 +633,9 @@ export function PriceChart({
                 {fmtDateShort(points[index].date)}
               </text>
             ))}
-          </svg>
-        )}
+        </svg>
 
-        {hovered && hoverIndex != null && width > 0 && (
+        {hovered && hoverIndex != null && (
           <div
             className="pointer-events-none absolute top-1 z-10 w-52 rounded-lg border bg-popover px-3 py-2 text-xs shadow-lg"
             style={{
@@ -696,25 +668,6 @@ export function PriceChart({
   );
 }
 
-function aggregateBars(points: ChartPoint[], maxBars: number): ChartPoint[] {
-  if (points.length <= maxBars) return points;
-  const size = Math.ceil(points.length / maxBars);
-  const output: ChartPoint[] = [];
-  for (let start = 0; start < points.length; start += size) {
-    const chunk = points.slice(start, start + size);
-    const first = chunk[0];
-    const last = chunk.at(-1)!;
-    output.push({
-      ...last,
-      open: first.open,
-      high: Math.max(...chunk.map((point) => point.high)),
-      low: Math.min(...chunk.map((point) => point.low)),
-      volume: chunk.reduce((sum, point) => sum + point.volume, 0),
-    });
-  }
-  return output;
-}
-
 function indicatorValues(point: ChartPoint, keys: IndicatorKey[]): number[] {
   return keys
     .map((key) => point.indicators?.[key])
@@ -742,7 +695,7 @@ function indicatorPath(
 }
 
 function latestIndicatorLevels(
-  technicals: Technicals | null | undefined,
+  technicals: ChartLatestIndicators | null | undefined,
   hiddenIndicators: Set<IndicatorKey>,
 ): LevelLine[] {
   if (!technicals) return [];
