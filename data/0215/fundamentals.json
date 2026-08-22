@@ -8,11 +8,11 @@
     "currency": "MYR",
     "market_cap": 2929356032.0,
     "pe_ratio": 33.666664,
-    "forward_pe": 18.594662,
+    "forward_pe": 18.49704,
     "dividend_yield": null,
     "beta": 0.6,
     "fifty_two_week_high": 3.39,
-    "fifty_two_week_low": 0.0
+    "fifty_two_week_low": 1.82
   },
   "financials": {
     "revenue": 758892000.0,
@@ -29,8 +29,8 @@
       "index": 0,
       "period": "0m",
       "strongBuy": 1,
-      "buy": 9,
-      "hold": 1,
+      "buy": 7,
+      "hold": 3,
       "sell": 0,
       "strongSell": 0
     },
@@ -46,6 +46,15 @@
     {
       "index": 2,
       "period": "-2m",
+      "strongBuy": 1,
+      "buy": 9,
+      "hold": 1,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "index": 3,
+      "period": "-3m",
       "strongBuy": 1,
       "buy": 9,
       "hold": 1,
@@ -98,12 +107,7 @@
       "title": "",
       "link": "",
       "publisher": ""
-    },
-    {
-      "title": "",
-      "link": "",
-      "publisher": ""
     }
   ],
-  "fetched_at": "2026-08-19T23:46:52.513766"
+  "fetched_at": "2026-08-22T02:46:04.265882"
 }
