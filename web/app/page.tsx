@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Link from "next/link";
 import { TickerBrowser } from "@/components/ticker-list/ticker-browser";
 import { DataStatus } from "@/components/shared/data-status";
@@ -47,9 +46,7 @@ export default async function ScreenerPage() {
         <h2 id="all-tickers" className="sr-only">
           Browse tickers
         </h2>
-        <Suspense fallback={<div className="h-12 animate-pulse rounded-lg bg-muted" />}>
-          <TickerBrowser tickers={tickers} />
-        </Suspense>
+        <TickerBrowser tickers={tickers} />
       </section>
     </div>
   );

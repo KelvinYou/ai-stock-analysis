@@ -1,12 +1,11 @@
 "use client";
 
-import { useMemo, useState, useEffect, useCallback } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useMemo, useState, useEffect, useLayoutEffect, useCallback } from "react";
+import dynamic from "next/dynamic";
 import { getMyList } from "@/lib/client-storage";
 import { LayoutGrid, Rows3, SlidersHorizontal, X } from "lucide-react";
 import { TickerCard } from "./ticker-card";
 import { TickerTable } from "./ticker-table";
-import { ConvictionMap } from "@/components/consensus/conviction-map";
 import { cn } from "@/lib/utils";
 import { signalGlyph, signalShortLabel } from "@/lib/signal-display";
 import {
@@ -22,6 +21,22 @@ import type { Signal, TickerSummary } from "@/lib/types";
 
 type AnalyzedFilter = "all" | "briefed" | "raw";
 type View = "table" | "cards";
+
+type UrlState = {
+  search: string;
+  signals: Set<Signal>;
+  markets: Set<string>;
+  sectors: Set<string>;
+  themes: Set<string>;
+  analyzed: AnalyzedFilter;
+  actionableOnly: boolean;
+  staleOnly: boolean;
+  starredOnly: boolean;
+  sortKey: SortKey;
+  sortDir: SortDir;
+  view: View;
+  moreFilters: boolean;
+};
 
 const SIGNAL_ORDER: Signal[] = ["strong_buy", "buy", "neutral", "sell", "strong_sell"];
 
@@ -58,30 +73,58 @@ function parseSet(raw: string | null): Set<string> {
   return new Set(raw.split(",").map(decodeURIComponent).filter(Boolean));
 }
 
-export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
-  const router = useRouter();
-  const params = useSearchParams();
+function readUrlState(params: URLSearchParams): UrlState {
+  const markets = parseSet(params.get("market"));
+  const sectors = parseSet(params.get("sector"));
+  const themes = parseSet(params.get("theme"));
+  const sort = params.get("sort");
 
-  const [search, setSearch] = useState(() => params.get("q") ?? "");
-  const [signals, setSignals] = useState<Set<Signal>>(() =>
-    parseSignals(params.get("signal")),
-  );
-  const [markets, setMarkets] = useState<Set<string>>(() =>
-    parseSet(params.get("market")),
-  );
-  const [sectors, setSectors] = useState<Set<string>>(() =>
-    parseSet(params.get("sector")),
-  );
-  const [themes, setThemes] = useState<Set<string>>(() => parseSet(params.get("theme")));
-  const [analyzed, setAnalyzed] = useState<AnalyzedFilter>(() => {
-    const v = params.get("analyzed");
-    return v === "briefed" || v === "raw" ? v : "all";
-  });
-  const [actionableOnly, setActionableOnly] = useState(
-    () => params.get("actionable") === "1",
-  );
-  const [staleOnly, setStaleOnly] = useState(() => params.get("stale") === "1");
-  const [starredOnly, setStarredOnly] = useState(() => params.get("starred") === "1");
+  return {
+    search: params.get("q") ?? "",
+    signals: parseSignals(params.get("signal")),
+    markets,
+    sectors,
+    themes,
+    analyzed:
+      params.get("analyzed") === "briefed" || params.get("analyzed") === "raw"
+        ? (params.get("analyzed") as AnalyzedFilter)
+        : "all",
+    actionableOnly: params.get("actionable") === "1",
+    staleOnly: params.get("stale") === "1",
+    starredOnly: params.get("starred") === "1",
+    sortKey: sort && SORT_KEYS.has(sort) ? (sort as SortKey) : "conviction",
+    sortDir: params.get("dir") === "asc" ? "asc" : "desc",
+    view: params.get("view") === "cards" ? "cards" : "table",
+    moreFilters: markets.size > 0 || sectors.size > 0 || themes.size > 0,
+  };
+}
+
+const ConvictionMap = dynamic(
+  () =>
+    import("@/components/consensus/conviction-map").then(
+      ({ ConvictionMap: Map }) => Map,
+    ),
+  {
+    loading: () => (
+      <div
+        className="h-[280px] animate-pulse rounded-lg bg-muted/40"
+        aria-hidden
+      />
+    ),
+  },
+);
+
+export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
+  const [search, setSearch] = useState("");
+  const [signals, setSignals] = useState<Set<Signal>>(new Set());
+  const [markets, setMarkets] = useState<Set<string>>(new Set());
+  const [sectors, setSectors] = useState<Set<string>>(new Set());
+  const [themes, setThemes] = useState<Set<string>>(new Set());
+  const [analyzed, setAnalyzed] = useState<AnalyzedFilter>("all");
+  const [actionableOnly, setActionableOnly] = useState(false);
+  const [staleOnly, setStaleOnly] = useState(false);
+  const [starredOnly, setStarredOnly] = useState(false);
+  const [urlReady, setUrlReady] = useState(false);
 
   // The sidebar caps "My list" to keep the rail inside one viewport, so its
   // overflow link lands here — the filter has to actually exist for that.
@@ -92,34 +135,60 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     window.addEventListener("mylist-change", refresh);
     return () => window.removeEventListener("mylist-change", refresh);
   }, []);
-  const [sortKey, setSortKey] = useState<SortKey>(() => {
-    const v = params.get("sort");
-    return v && SORT_KEYS.has(v) ? (v as SortKey) : "conviction";
-  });
-  const [sortDir, setSortDir] = useState<SortDir>(() =>
-    params.get("dir") === "asc" ? "asc" : "desc",
-  );
-  const [view, setView] = useState<View>(() =>
-    params.get("view") === "cards" ? "cards" : "table",
-  );
-  const [moreFilters, setMoreFilters] = useState(
-    () =>
-      parseSet(params.get("market")).size > 0 ||
-      parseSet(params.get("sector")).size > 0 ||
-      parseSet(params.get("theme")).size > 0,
-  );
+  const [sortKey, setSortKey] = useState<SortKey>("conviction");
+  const [sortDir, setSortDir] = useState<SortDir>("desc");
+  const [view, setView] = useState<View>("table");
+  const [moreFilters, setMoreFilters] = useState(false);
   const [visible, setVisible] = useState(INITIAL_VISIBLE);
 
-  // Remember the view across sessions; an explicit ?view= in the URL wins.
-  useEffect(() => {
-    if (params.get("view")) return;
-    const stored = localStorage.getItem(VIEW_KEY);
-    if (stored === "cards" || stored === "table") setView(stored);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  const applyUrlState = useCallback((next: UrlState) => {
+    setSearch(next.search);
+    setSignals(next.signals);
+    setMarkets(next.markets);
+    setSectors(next.sectors);
+    setThemes(next.themes);
+    setAnalyzed(next.analyzed);
+    setActionableOnly(next.actionableOnly);
+    setStaleOnly(next.staleOnly);
+    setStarredOnly(next.starredOnly);
+    setSortKey(next.sortKey);
+    setSortDir(next.sortDir);
+    setView(next.view);
+    setMoreFilters(next.moreFilters);
+    setVisible(INITIAL_VISIBLE);
   }, []);
 
+  // Reading the URL in a layout effect preserves the static server render while
+  // applying deep-link filters before the browser paints hydrated UI. `popstate`
+  // keeps browser back/forward correct without making every filter change a
+  // server navigation.
+  useLayoutEffect(() => {
+    const syncFromUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      const next = readUrlState(params);
+      if (!params.has("view")) {
+        let stored: string | null = null;
+        try {
+          stored = localStorage.getItem(VIEW_KEY);
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+        if (stored === "cards" || stored === "table") next.view = stored;
+      }
+      applyUrlState(next);
+      setUrlReady(true);
+    };
+    syncFromUrl();
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
+  }, [applyUrlState]);
+
   useEffect(() => {
-    localStorage.setItem(VIEW_KEY, view);
+    try {
+      localStorage.setItem(VIEW_KEY, view);
+    } catch {
+      // Storage can be unavailable in privacy-restricted contexts.
+    }
   }, [view]);
 
   const syncUrl = useCallback(() => {
@@ -137,9 +206,9 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
     if (sortDir !== "desc") p.set("dir", sortDir);
     if (view !== "table") p.set("view", view);
     const qs = p.toString();
-    router.replace(qs ? `?${qs}` : "?", { scroll: false });
+    const nextUrl = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
+    window.history.replaceState(null, "", nextUrl);
   }, [
-    router,
     search,
     signals,
     markets,
@@ -155,8 +224,9 @@ export function TickerBrowser({ tickers }: { tickers: TickerSummary[] }) {
   ]);
 
   useEffect(() => {
+    if (!urlReady) return;
     syncUrl();
-  }, [syncUrl]);
+  }, [syncUrl, urlReady]);
 
   const counts = useMemo(
     () => ({
