@@ -1,3 +1,5 @@
+import "server-only";
+
 import type { CSSProperties } from "react";
 import { DIRECTION_LABEL, TONE_EYEBROW } from "@/lib/conviction";
 import { clampText, fmtCurrency, fmtDate, fmtSignedPercent } from "@/lib/format";

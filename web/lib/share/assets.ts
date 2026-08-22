@@ -1,3 +1,5 @@
+import "server-only";
+
 import { renderSVG } from "uqr";
 import type { PricePoint } from "@/lib/types";
 import { shareTheme } from "./theme";
