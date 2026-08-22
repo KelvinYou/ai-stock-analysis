@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { AppShell } from "@/components/layout/app-shell";
 import { themeScript } from "@/components/shared/theme-toggle";
-import { listTickerSummaries } from "@/lib/data";
+import { listTickerNavSummaries } from "@/lib/data";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -37,8 +37,12 @@ export const metadata: Metadata = {
     "Multi-agent briefings across fundamentals, technicals, sentiment, and macro.",
 };
 
+// The shell owns live ticker navigation, so it must share the same ISR window
+// even on routes whose page content has no data fetch of its own.
+export const revalidate = 60;
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const tickers = await listTickerSummaries();
+  const navTickers = await listTickerNavSummaries();
   return (
     <html
       lang="en"
@@ -55,7 +59,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         >
           Skip to main content
         </a>
-        <AppShell tickers={tickers}>{children}</AppShell>
+        <AppShell tickers={navTickers}>{children}</AppShell>
       </body>
     </html>
   );

@@ -106,3 +106,18 @@ export interface TickerSummary {
   // Watchlist theme metadata from tickers.txt
   theme: string | null;
 }
+
+/** Small projection used by the persistent client navigation chrome. */
+export type TickerNavSummary = Pick<
+  TickerSummary,
+  | "symbol"
+  | "name"
+  | "price"
+  | "priceChangePct"
+  | "signal"
+  | "conviction"
+  | "briefingAgeDays"
+  | "stopLoss"
+  | "takeProfit1"
+  | "toEntryPct"
+>;

@@ -1,6 +1,6 @@
 import { readBook } from "@/lib/book";
 import { cn } from "@/lib/utils";
-import type { TickerSummary } from "@/lib/types";
+import type { TickerNavSummary } from "@/lib/types";
 
 /**
  * The whole watchlist on the same Sell↔Buy axis the ticker page uses, one tick
@@ -14,7 +14,7 @@ function pct(position: number) {
   return ((position + 1) / 2) * 100;
 }
 
-export function BookShape({ tickers }: { tickers: TickerSummary[] }) {
+export function BookShape({ tickers }: { tickers: TickerNavSummary[] }) {
   const book = readBook(tickers);
   if (book.briefed === 0) return null;
 

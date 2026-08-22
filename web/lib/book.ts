@@ -1,4 +1,4 @@
-import type { Signal, TickerSummary } from "@/lib/types";
+import type { Signal, TickerNavSummary } from "@/lib/types";
 import { signalDirection, signalPosition } from "@/lib/conviction";
 
 /**
@@ -22,7 +22,7 @@ export interface BookShape {
   median: number | null;
 }
 
-export function readBook(tickers: TickerSummary[]): BookShape {
+export function readBook(tickers: TickerNavSummary[]): BookShape {
   const briefed = tickers.filter((t) => t.conviction != null && t.signal != null);
   const convictions = briefed
     .map((t) => Math.max(-1, Math.min(1, t.conviction!)))
@@ -70,7 +70,7 @@ export interface AttentionItem {
  * action today, an entry reached is an opportunity, a stale briefing is merely
  * overdue.
  */
-export function readAttention(tickers: TickerSummary[]): AttentionItem[] {
+export function readAttention(tickers: TickerNavSummary[]): AttentionItem[] {
   const stops: AttentionItem[] = [];
   const targets: AttentionItem[] = [];
   const entries: AttentionItem[] = [];

@@ -1,3 +1,5 @@
+import "server-only";
+
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { cache } from "react";
@@ -17,6 +19,7 @@ import type {
   PricePoint,
   Technicals,
   TickerBundle,
+  TickerNavSummary,
   TickerSummary,
   WatchlistEntry,
 } from "./types";
@@ -294,7 +297,7 @@ export const listTickers = cache(async (): Promise<string[]> => {
   }
 });
 
-export async function loadTicker(symbol: string): Promise<TickerBundle | null> {
+export const loadTicker = cache(async (symbol: string): Promise<TickerBundle | null> => {
   assertAnalysisApiConfiguration();
   if (ANALYSIS_API_CONFIGURED) return loadTickerFromApi(symbol);
   if (CLOUD_CONFIGURED) return loadCloudTicker(symbol);
@@ -323,7 +326,7 @@ export async function loadTicker(symbol: string): Promise<TickerBundle | null> {
     debate,
     briefing,
   };
-}
+});
 
 interface LastCloses {
   latest: number | null;
@@ -442,6 +445,34 @@ async function loadTickerSummary(
   };
 }
 
+function navSummaryFromSummary(summary: TickerSummary): TickerNavSummary {
+  const {
+    symbol,
+    name,
+    price,
+    priceChangePct,
+    signal,
+    conviction,
+    briefingAgeDays,
+    stopLoss,
+    takeProfit1,
+    toEntryPct,
+  } = summary;
+  return {
+    symbol,
+    name,
+    price,
+    priceChangePct,
+    signal,
+    conviction,
+    briefingAgeDays,
+    stopLoss,
+    takeProfit1,
+    toEntryPct,
+  };
+}
+
+
 export const listTickerSummaries = cache(async (): Promise<TickerSummary[]> => {
   assertAnalysisApiConfiguration();
   if (ANALYSIS_API_CONFIGURED) return listTickerSummariesFromApi();
@@ -460,4 +491,17 @@ export const listTickerSummaries = cache(async (): Promise<TickerSummary[]> => {
     loadTickerSummary(symbol, watchMap[symbol]),
   );
   return results.filter((s): s is TickerSummary => s !== null);
+});
+
+/**
+ * Navigation owns a narrow projection so the persistent shell cannot
+ * accidentally receive the full screener summary as its contract grows.
+ *
+ * The projection is taken in memory rather than pushed into the query: the
+ * root layout renders on every route alongside pages that already load the
+ * full summaries, so a second narrower fetch is a distinct cache key and a
+ * second upstream round trip, not a saving.
+ */
+export const listTickerNavSummaries = cache(async (): Promise<TickerNavSummary[]> => {
+  return (await listTickerSummaries()).map(navSummaryFromSummary);
 });

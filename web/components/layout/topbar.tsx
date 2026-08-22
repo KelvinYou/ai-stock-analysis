@@ -9,14 +9,14 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { cn } from "@/lib/utils";
 import { signalGlyph, signalShortLabel } from "@/lib/signal-display";
-import type { TickerSummary } from "@/lib/types";
+import type { TickerNavSummary } from "@/lib/types";
 
 export function Topbar({
   onMenuClick,
   tickers,
 }: {
   onMenuClick: () => void;
-  tickers: TickerSummary[];
+  tickers: TickerNavSummary[];
 }) {
   const pathname = usePathname();
   const crumbs = buildCrumbs(pathname);
@@ -86,7 +86,7 @@ function SearchPalette({
 }: {
   open: boolean;
   onClose: () => void;
-  tickers: TickerSummary[];
+  tickers: TickerNavSummary[];
 }) {
   const router = useRouter();
   const [query, setQuery] = useState("");
