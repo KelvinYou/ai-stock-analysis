@@ -5,13 +5,13 @@ import { usePathname } from "next/navigation";
 import { Sidebar } from "./sidebar";
 import { Topbar } from "./topbar";
 import { cn } from "@/lib/utils";
-import type { TickerSummary } from "@/lib/types";
+import type { TickerNavSummary } from "@/lib/types";
 
 export function AppShell({
   tickers,
   children,
 }: {
-  tickers: TickerSummary[];
+  tickers: TickerNavSummary[];
   children: React.ReactNode;
 }) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { readAttention, type AttentionKind } from "@/lib/book";
 import { cn } from "@/lib/utils";
-import type { TickerSummary } from "@/lib/types";
+import type { TickerNavSummary } from "@/lib/types";
 
 /**
  * The rail's action queue: only tickers waiting on a decision. Short by design —
@@ -36,7 +36,7 @@ export function NeedsALook({
   onNavigate,
   max = 5,
 }: {
-  tickers: TickerSummary[];
+  tickers: TickerNavSummary[];
   onNavigate?: () => void;
   max?: number;
 }) {

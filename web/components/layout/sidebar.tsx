@@ -9,7 +9,7 @@ import { NeedsALook } from "@/components/layout/needs-a-look";
 import { cn } from "@/lib/utils";
 import { getMyList } from "@/lib/client-storage";
 import { signalShortLabel } from "@/lib/signal-display";
-import type { TickerSummary } from "@/lib/types";
+import type { TickerNavSummary } from "@/lib/types";
 
 /** The drawer is only ever hidden below `lg`; above it the aside is pinned. */
 const DESKTOP_QUERY = "(min-width: 1024px)";
@@ -22,7 +22,7 @@ export function Sidebar({
   open,
   onClose,
 }: {
-  tickers: TickerSummary[];
+  tickers: TickerNavSummary[];
   open: boolean;
   onClose: () => void;
 }) {
@@ -235,7 +235,7 @@ function NavItem({
 }
 
 /** Fill colour for the signal dot. Neutral and un-briefed stay graphite. */
-function signalDotTone(signal: TickerSummary["signal"]): string {
+function signalDotTone(signal: TickerNavSummary["signal"]): string {
   if (signal === "strong_buy" || signal === "buy") return "bg-bull";
   if (signal === "strong_sell" || signal === "sell") return "bg-bear";
   return "bg-graphite";
@@ -256,7 +256,7 @@ function TickerRow({
   onNavigate,
   metric = "price",
 }: {
-  t: TickerSummary;
+  t: TickerNavSummary;
   onNavigate?: () => void;
   metric?: "price" | "conviction";
 }) {
