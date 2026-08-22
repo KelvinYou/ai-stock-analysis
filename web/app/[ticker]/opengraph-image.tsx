@@ -2,6 +2,7 @@ import { ImageResponse } from "next/og";
 import { listTickers, loadTicker } from "@/lib/data";
 import { SHARE_CARD_SIZE, ShareCard } from "@/lib/share/card";
 import { loadShareFonts } from "@/lib/share/fonts";
+import { SHARE_METADATA_CACHE_CONTROL } from "@/lib/share/cache";
 import { shareFonts, shareTheme } from "@/lib/share/theme";
 import { tickerUrl } from "@/lib/site";
 
@@ -64,12 +65,20 @@ export default async function Image({
           Desk
         </div>
       ),
-      { ...size, fonts },
+      {
+        ...size,
+        fonts,
+        headers: { "Cache-Control": SHARE_METADATA_CACHE_CONTROL },
+      },
     );
   }
 
   return new ImageResponse(
     <ShareCard bundle={bundle} url={tickerUrl(bundle.symbol)} />,
-    { ...size, fonts },
+    {
+      ...size,
+      fonts,
+      headers: { "Cache-Control": SHARE_METADATA_CACHE_CONTROL },
+    },
   );
 }

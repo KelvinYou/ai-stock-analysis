@@ -8,6 +8,7 @@ import {
   type CardOrientation,
 } from "@/lib/share/card";
 import { loadShareFonts } from "@/lib/share/fonts";
+import { SHARE_PREVIEW_CACHE_CONTROL } from "@/lib/share/cache";
 import { tickerUrl } from "@/lib/site";
 
 /**
@@ -28,13 +29,20 @@ export async function GET(
 
   const [bundle, fonts] = await Promise.all([loadTicker(ticker), loadShareFonts()]);
   if (!bundle) {
-    return new Response("Not found", { status: 404 });
+    return new Response("Not found", {
+      status: 404,
+      headers: { "Cache-Control": SHARE_PREVIEW_CACHE_CONTROL },
+    });
   }
 
   const size = orientation === "portrait" ? SHARE_CARD_SIZE_PORTRAIT : SHARE_CARD_SIZE;
 
   return new ImageResponse(
     <ShareCard bundle={bundle} url={tickerUrl(bundle.symbol)} orientation={orientation} />,
-    { ...size, fonts },
+    {
+      ...size,
+      fonts,
+      headers: { "Cache-Control": SHARE_PREVIEW_CACHE_CONTROL },
+    },
   );
 }
