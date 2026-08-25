@@ -1,74 +1,52 @@
 {
   "ticker": "AMZN",
-  "date": "2026-08-14",
+  "date": "2026-08-25",
   "overall_signal": "buy",
   "conviction": {
-    "score": 0.4,
-    "signal_convergence": 0.63,
-    "explanation": "Current-session English batch refresh. Analyst sentiment, scale, and technical momentum favor the bull case, while weak cash conversion and forward valuation limit conviction."
+    "score": 0.31,
+    "signal_convergence": 0.3077,
+    "explanation": "Only the fundamentals report is clearly directional (buy, high confidence); sentiment, technical, and macro are each neutral on balance. Confidence-weighted directional consensus across the four analyst reports is +0.31, which caps conviction to a low-but-positive buy rather than a strong one. The debate did not overturn the fundamental thesis (AWS reacceleration, margin expansion, conservative balance sheet) but surfaced real, unresolved counterweights \u2014 FCF compression against a $220B capex plan, a bearish MACD crossover, spreadable antitrust litigation risk, and a hawkish Fed \u2014 that justify low conviction rather than high."
   },
-  "executive_summary": "Amazon has $716.9B revenue, a 10.8% net margin, and a 21.9x trailing P/E, but free cash flow is only $7.7B and the 26.4x forward P/E is higher than the trailing multiple. Price is above all major moving averages with RSI at 63.9 and a positive MACD histogram, although volume is only 59% of its 20-day average.",
-  "bull_case": "Large-scale revenue, strong analyst sentiment, and positive technical momentum support further earnings growth.",
-  "bear_case": "Low free-cash-flow conversion and a forward P/E above the trailing P/E leave the valuation exposed if earnings estimates weaken.",
+  "executive_summary": "Amazon's Q2 beat, driven by AWS's fastest growth in 18 quarters and expanding operating margins, supports a fundamentally bullish thesis backed by a near-unanimous analyst consensus and a conservative balance sheet. However, three of the four analyst lenses \u2014 sentiment, technical, and macro \u2014 read neutral rather than bullish: news flow is bifurcated between the earnings rally and an antitrust suit plus a $4B+ insider stock sale, the technical picture shows a low-volume pullback with a bearish MACD crossover inside an intact but weakening uptrend, and the macro backdrop is a mild headwind from a Fed holding rates at 3.50%-3.75% with hike risk rather than cut risk.\n\nThe bull/bear debate sharpened rather than resolved the key tension: free cash flow of $7.7B against a planned $220B FY26 capex budget is either a strength-funded investment cycle echoing 2020-2021 (bull) or a leverage-dependent gap that preceded a ~50% drawdown last time (bear). Neither side produced evidence that definitively settles this, and it is the single largest swing factor for the stock over the next several quarters.\n\nNet, this supports a low-conviction buy: the core AWS/margin thesis is real and analyst-corroborated, but conviction should stay modest until the capex-to-FCF gap starts closing and the technical pullback either finds support at the 50-day SMA or breaks it.",
+  "bull_case": "AWS is reaccelerating at scale (fastest growth in 18 quarters, operating margin up from 11.4% to 13.7% YoY) funded from a conservative ~37% debt/equity balance sheet, with the current pullback reading as a low-volume cooldown from a post-earnings spike rather than a trend break, and near-unanimous analyst support (58 of 60 buy-rated) corroborating the thesis independent of the one-week price reaction.",
+  "bear_case": "Free cash flow of just $7.7B cannot cover the announced $220B FY26 capex without added leverage, the forward P/E of 25.2x already prices in flawless execution, a bearish MACD crossover and muted bounce-volume suggest sidelined demand rather than accumulation, and the New Jersey antitrust suit plus a hawkish, higher-for-longer Fed both carry the risk of spreading rather than fading \u2014 echoing the 2020-2021 capex cycle that was followed by a roughly 50% drawdown before it eventually paid off.",
   "key_uncertainties": [
-    "Whether free-cash-flow conversion improves",
-    "Whether forward earnings estimates are achievable",
-    "Sensitivity to consumer-cycle and interest-rate conditions"
+    "Whether the $220B AI/data-center capex converts into AWS revenue and margin gains on a timeline the market will tolerate",
+    "Whether the New Jersey antitrust suit remains isolated or spreads to other states with similar delivery-labor precedents",
+    "Whether the Fed's next move (hike, hold, or eventual cut) materially re-rates AMZN's forward multiple from here",
+    "Whether the low-volume pullback resolves as accumulation (support at the 50-day SMA) or a genuine momentum breakdown"
   ],
   "catalysts_upcoming": [
-    "Next earnings update for revenue, margins, and free cash flow",
-    "Improved free-cash-flow conversion",
-    "Continued support above the 50- and 200-day averages"
+    "Next FOMC meeting, September 15-16, 2026 \u2014 rate decision and tone will directly affect the discount rate on AMZN's long-duration capex bets",
+    "Q3 earnings report \u2014 first read on whether the $220B FY26 capex run-rate is converting into AWS revenue/margin, and on free cash flow trajectory",
+    "Developments in the New Jersey antitrust suit, and whether other state AGs file similar delivery-contractor actions",
+    "Any follow-on Rule 10b5-1 insider sale filings or changes to the pace of the announced Bezos sale program"
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "High beta (1.45) — price may amplify broad-market moves.",
-      "Sector: Consumer Cyclical — use sector-specific catalysts and risks in the thesis."
+      "High beta (1.45) \u2014 price may amplify broad-market moves.",
+      "Sector: Consumer Cyclical \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 56.1% over available price history. Projected worst case (2-sigma): ~89.8% from current $272.27.",
-    "risk_reward_ratio": "1.59:1"
+    "max_drawdown_scenario": "Historical max drawdown: 56.1% over available price history. Projected worst case (2-sigma): ~89.7% from current $262.07.",
+    "risk_reward_ratio": null
   },
   "action_plan": {
-    "entry_limit": 254.37,
-    "entry_rationale": "Buy-the-dip to SMA-20 support near $254.37",
-    "stop_loss": 233.76,
-    "stop_rationale": "2x ATR-14 ($10.30) below entry — invalidates the setup",
-    "take_profit_1": 287.2,
-    "take_profit_2": 313.11,
-    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": null
+    "note": "Signal too mixed for precise levels (conviction +0.31, convergence 0.31). Wait for a clearer setup."
   },
-  "research_verdict": {
-    "ticker": "AMZN",
-    "judged_view": "buy",
-    "confidence": "medium",
-    "thesis": "The operating scale and positive trend support a buy view, but the low free-cash-flow conversion means the thesis depends on improved cash profitability.",
-    "winning_side": "bull",
-    "strongest_counterexample": "If capital intensity remains high and forward earnings decline, the 26.4x forward P/E may not provide adequate valuation support.",
-    "invalidation_conditions": [
-      "A sustained break below the 200-day average",
-      "Continued deterioration in free cash flow",
-      "Downward revisions to forward earnings"
-    ],
-    "evidence_gaps": [
-      "No current news data",
-      "No segment-level profitability or cash-flow detail",
-      "No explicit macroeconomic data"
-    ],
-    "decisive_factors": [
-      "$716.9B revenue scale",
-      "Positive price trend above all major moving averages",
-      "58 buy or strong-buy recommendations versus 2 holds"
-    ]
-  },
+  "research_verdict": null,
   "agent_signal_breakdown": {
     "fundamentals": "buy",
-    "sentiment": "buy",
-    "technical": "buy",
+    "sentiment": "neutral",
+    "technical": "neutral",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

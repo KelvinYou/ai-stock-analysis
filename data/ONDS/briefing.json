@@ -1,63 +1,53 @@
 {
   "ticker": "ONDS",
-  "date": "2026-08-17",
+  "date": "2026-08-25",
   "overall_signal": "buy",
   "conviction": {
-    "score": 0.28,
-    "signal_convergence": 0.6,
-    "explanation": "A modestly positive score reflecting a genuine fundamental inflection tempered by unusually high execution and dilution risk. Three of four analyst lanes lean neutral-to-positive (fundamentals buy, technical buy, sentiment neutral, macro neutral), and the contracted evidence \u2014 $757M backlog, a $982M U.S. Army IDIQ with $240M+ awarded, ~$1.4B of cash against $15.56M of debt \u2014 is strong enough to support a directional long view. The score is held well below 0.5 because the entire FY26 thesis rests on converting $391-416M of second-half revenue against $134M delivered in the first half, because the company remains unprofitable with a widening $50.6M quarterly EBITDA loss, and because the market has already demonstrated it will sell this stock on good news when dilution is the offsetting concern. A beta of 2.75 into a hawkish Fed compounds the position-sizing problem. This is a buy on evidence, not on comfort."
+    "score": 0.5455,
+    "signal_convergence": 0.5455,
+    "explanation": "Directional consensus across the four analyst reports is capped at 0.5455 (fundamentals and sentiment buy at medium confidence; technical and macro neutral), so the model's underlying conviction (a stronger 0.6-0.7 read on the growth/backlog story) is calibrated down to that consensus ceiling per the synthesizer's sign/magnitude rule. The debate reinforces a real but contested growth thesis: record Q2 revenue and a >10x FY2026 guidance raise backed by a $757M backlog against a wider-than-expected EPS miss, a just-closed dilutive offering, and pending insider Form 144 sales. Net: a buy, but a moderate-conviction one given the unresolved margin trajectory and dilution overhang, not a strong_buy."
   },
-  "executive_summary": "Ondas is a business the screening data no longer describes. The fetched fundamentals carry FY2025 annuals \u2014 $50.7M of revenue, a $132M net loss \u2014 while the company just printed $83.8M in a single quarter, beat the ~$68M consensus, grew more than 13x year over year, and raised FY2026 guidance 25% to $525-550M. Behind that sits contracted paper rather than narrative: $757M of backlog, more than $240M awarded under a $982M U.S. Army Lethal Unmanned Systems IDIQ including a fresh $50M+ order in August, and validated counter-UAS deployment at a majority of the North American 2026 FIFA World Cup stadiums. The balance sheet removes the failure mode that usually kills companies at this stage \u2014 roughly $1.4B of cash against $15.56M of total debt, throwing off $45-50M a year in interest at the current 3.50-3.75% policy rate.\n\nThe offsetting facts are equally concrete and are the reason conviction stays moderate. Adjusted EBITDA loss widened to $50.6M in Q2 2026, gross margin slipped to 43.1% as lower-margin acquired hardware consolidated in, and management's profitability promise is carefully scoped to 'platform-level' in Q4 2026 rather than company-level. The FY26 number requires roughly tripling the first-half run rate in two quarters with no cushion for the acceptance and appropriations delays endemic to defense procurement. Critically, the growth was largely purchased \u2014 $875.8M for Dzyne plus Rotron, Omnisys and Cyberhawk \u2014 and funded by charging shareholders rather than lenders. The market has already registered its view: the stock fell after a guidance-raising beat, explicitly on dilution fears and the Omnisys share-resale registration.\n\nThe resolution is that the operating evidence is strong enough to justify a long position while the funding structure and back-loaded guidance justify a small one. Technically the setup cooperates: price has based near $6.60-7.50, rallied roughly 40% to $9.24, reclaimed both the SMA-20 ($8.35) and SMA-50 ($8.38), with a positive and expanding MACD histogram (+0.171) and a non-overbought RSI of 60.5 \u2014 but it sits 1.4% below the SMA-200 at $9.37, directly beneath a dense resistance cluster at $9.37/$9.99/$10.10, with an ATR-14 of $0.72 (7.8% of price) and 30-40% of the float short against 'extremely bullish' retail positioning. That combination means the next 10-15% in either direction will be decided by positioning, not fundamentals. Buy with disciplined sizing; the Q3 print in November is the event that confirms or breaks the thesis.",
-  "bull_case": "The market is still pricing a company that no longer exists. Q2 2026 revenue of $83.8M beat the ~$68M consensus and grew more than 13x year over year, first-half revenue reached ~$134M, and management raised FY26 guidance 25% to $525-550M \u2014 a raise no team executes if they doubt second-half conversion. Backing it is $757M of backlog, exceeding the entire annual target, plus more than $240M awarded under a funded $982M U.S. Army LUS IDIQ, which makes conversion largely a scheduling question rather than a demand question. Growth is broad rather than single-product: Airobotics +112%, Centrix +298% pro forma, 4M +258% pro forma, and Rotron booking $34.2M of orders in one quarter against the ~$25M of full-year revenue underwritten at acquisition \u2014 the bought assets are beating their own purchase models, and pro forma figures explicitly exclude consolidation arithmetic. Counter-UAS protection across a majority of North American FIFA World Cup stadiums is public, verifiable proof the technology works at scale in the hardest civilian environment. The balance sheet eliminates existential risk: ~$1.4B of cash against $15.56M of debt means no refinancing wall, no covenant risk, no forced raise at a bad price, and $45-50M of annual interest income partially self-funding the burn. At ~7.1-7.4x EV to guided FY26 revenue for a triple-digit grower with contracted backlog, the multiple is not stretched against defense-technology comps. Technically the base is complete and the trend reclaimed, with the SMA-200 only 1.4% overhead. Sell-side support is unanimous \u2014 2 strong-buy, 7 buy, zero holds or sells, plus a Roth Capital Buy initiation on 10 August \u2014 and with 30-40% of the float short, further execution proof carries genuinely asymmetric upside.",
-  "bear_case": "A $5.27B market capitalization buys a company with 43.1% and declining gross margins, a $50.6M quarterly adjusted EBITDA loss, and no company-level profitability in sight \u2014 management's 'platform-level profitability in Q4 2026' is hedged language, and platform-level is not company-level. Backlog carries no margin: Ondas can convert every contracted dollar on schedule and still lose money against an operating cost base absorbing four freshly acquired organizations. The guidance is the most dangerous number in the file \u2014 $391-416M of second-half revenue against $134M in the first half is a tripling of run rate with zero cushion, into defense programs notorious for acceptance delays and appropriations timing entirely outside management's control. The 13x growth was purchased, not earned: $875.8M for Dzyne plus Rotron, Omnisys and Cyberhawk, with effectively zero completed quarters of integration track record, and the pro forma triple-digit segment figures sit on small bases representing modest absolute dollars. Zero debt is not prudence \u2014 it means the entire spree was charged to shareholders' ownership percentage rather than to lenders, and the Omnisys resale registration is simply the moment those claims became tradeable supply. The market has already voted: a stock that falls on a consensus beat plus a 25% guidance raise is telling you the marginal buyer has underwritten the good news and is now pricing the share count. Technically price remains below the SMA-200 at $9.37, the heaviest volume of the entire recovery (125.2M shares) came on the 13 August down day, and Bollinger %B of 0.75 puts price in the upper quartile of its band directly beneath resistance. A beta of 2.75 into a Fed holding hawkish at 3.50-3.75% with nine of eighteen participants penciling in a hike means roughly 3x market drawdown in any risk-off event \u2014 and the 52-week range of $3.20 to $15.28 shows that capacity is not theoretical. Extreme retail bullishness against 30-40% short interest more often ends with the crowded long side liquidated than vindicated.",
+  "executive_summary": "Ondas Inc (ONDS) is a hypergrowth, pre-profitability drone/defense-tech story: Q2 2026 revenue hit a record $83.8M and management raised FY2026 guidance to $525-550M, implying more than 10x revenue growth versus 2025, backed by a roughly $757M backlog and recent M&A (Cyberhawk, the $33M Aran Defense acquisition) that diversifies the business into drone inspection and Israel-based defense manufacturing. The balance sheet is clean (equity of $437.8M vs debt of only $15.6M), and sell-side coverage is unanimously Buy/Outperform with targets raised post-earnings.\n\nSet against that is a real near-term overhang: Q2 EPS loss of $0.19 missed the $0.13 estimate, operating margin remains deeply negative (-115%) and FCF is -$40.9M, a public offering just closed (dilutive), and multiple insider Form 144 filings have surfaced in the same week as the miss. Technicals are consolidating rather than trending: price ($8.24) sits above the 50-day SMA ($8.20) but below the 20-day and 200-day SMAs, with a negative MACD histogram and RSI-14 near neutral (42.5), on below-average volume.\n\nThe bull/bear debate did not resolve the central tension \u2014 whether the wider loss alongside the guidance raise is normal hypergrowth lumpiness or an early margin-trajectory warning \u2014 so this briefing carries it forward as the key uncertainty rather than picking a side beyond what the evidence weight (buy-leaning fundamentals/sentiment vs. neutral technicals/macro) supports. Signal convergence of 0.5455 reflects that split: real, but not unanimous, directional agreement.",
+  "bull_case": "Guidance implies a genuine >10x revenue inflection backed by a $757M backlog and diversifying defense/drone M&A, funded by equity rather than debt, with unanimous analyst Buy coverage and a stock still up 82% from its 52-week low despite the recent pullback. The pullback itself is happening on below-average volume above the 50-day SMA support, consistent with digestion of a strong quarter rather than a trend breakdown, and neither the backlog nor guidance has been revised down.",
+  "bear_case": "The quarter that actually printed showed a wider-than-expected EPS loss in the same period guidance was raised \u2014 a combination that should raise scrutiny on unit economics, not lower it \u2014 compounded by a just-closed dilutive offering and multiple insider Form 144 sale filings landing the same week. Technicals confirm market skepticism (price below the 20-day and 200-day SMAs, negative MACD histogram), and the stock remains 46% off its 52-week high despite the beat-and-raise headline, leaving asymmetric downside if backlog conversion or margins disappoint.",
   "key_uncertainties": [
-    "Whether the required $391-416M of second-half revenue converts on schedule \u2014 this single variable determines whether FY26 guidance holds or breaks",
-    "The magnitude and timing of further share issuance, and how much registered supply from the Omnisys and other acquisition-related resales remains to hit the market",
-    "Whether 'platform-level profitability' in Q4 2026 translates into any credible path to consolidated company-level profitability, and on what timeline",
-    "The true organic growth rate stripped of all four acquisitions, which is not disclosed in a form that settles the bull/bear dispute",
-    "Whether the 43.1% gross margin stabilizes or continues compressing as lower-margin acquired hardware scales into the mix",
-    "Integration execution across Dzyne, Rotron, Omnisys and Cyberhawk, where the track record is effectively zero completed quarters",
-    "How the 30-40% short position resolves \u2014 a squeeze higher or a liquidation of the crowded retail long side",
-    "Durability of the counter-UAS spending cycle if Middle East tensions de-escalate and remove procurement urgency",
-    "Whether price can clear the $9.37 SMA-200 and the $9.99-$10.10 resistance cluster, or whether that zone caps the recovery",
-    "The exact fully diluted share count underpinning the $5.27B market cap, which the fetched data does not disclose post-acquisition"
+    "Whether the $757M backlog converts to revenue on management's guided timeline and at an improving margin profile, or whether losses keep widening alongside revenue growth",
+    "How much further dilution (additional equity raises, insider Form 144 sales actually executing) is still ahead and its per-share impact",
+    "Whether the wider Q2 EPS miss is a one-off scaling cost or the start of a deteriorating margin trend",
+    "Exposure of the new Israel-based Aran Defense manufacturing footprint to geopolitical disruption",
+    "Whether the Fed staying at 3.50-3.75% (with hawkish dissent) into a higher-for-longer stance further pressures the valuation of a pre-profit, beta-2.75 name"
   ],
   "catalysts_upcoming": [
-    "Q3 2026 earnings (expected November 2026) \u2014 the decisive test of whether the back-end-loaded H2 ramp is converting, and the single most important event for the thesis",
-    "September 15-16 2026 FOMC meeting \u2014 a cut supports a beta-2.75 long-duration equity, a hawkish hold or hike signal pressures the multiple",
-    "Further U.S. Army Lethal Unmanned Systems task orders against the remaining ~$740M of unawarded $982M IDIQ ceiling",
-    "Q4 2026 platform-level profitability milestone, which management has explicitly guided to and which the market will treat as a credibility test",
-    "Additional share-resale registrations or follow-on equity issuance, which would extend the dilution overhang",
-    "Integration and revenue-synergy disclosures from the Cyberhawk, Omnisys, Rotron and Dzyne acquisitions",
-    "New counter-UAS contract awards following the FIFA World Cup stadium deployments, converting demonstration into recurring civilian-market revenue",
-    "Additional sell-side initiations or price-target revisions following the Roth Capital Buy initiation of 10 August 2026",
-    "Short-interest updates and any squeeze dynamics given the 30-40% float short position",
-    "U.S. defense appropriations developments affecting unmanned-systems and counter-UAS program funding"
+    "Backlog conversion updates / order announcements tied to the $757M backlog",
+    "Confirmation or resolution of the pending Form 144 insider sale filings",
+    "Next quarterly print \u2014 specifically whether operating margin trend improves alongside revenue growth",
+    "FOMC meeting Sept 15-16, 2026 \u2014 any shift in rate guidance affecting risk appetite for high-beta pre-profit growth names",
+    "Integration progress/updates on the Cyberhawk and Aran Defense acquisitions"
   ],
   "risk_assessment": {
     "correlation_notes": [
       "High beta (2.75) \u2014 price may amplify broad-market moves.",
       "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 97.8% over available price history. Projected worst case (2-sigma): ~202.7% from current $9.24.",
+    "max_drawdown_scenario": "Historical max drawdown: 97.8% over available price history. Projected worst case (2-sigma): ~174.6% from current $8.24.",
     "risk_reward_ratio": null
   },
   "action_plan": {
-    "entry_limit": null,
-    "entry_rationale": null,
-    "stop_loss": null,
-    "stop_rationale": null,
-    "take_profit_1": null,
-    "take_profit_2": null,
-    "target_rationale": null,
+    "entry_limit": 7.69,
+    "entry_rationale": "Midway between current ($8.24) and Bollinger lower band ($7.14)",
+    "stop_loss": 6.48,
+    "stop_rationale": "2x ATR-14 ($0.60) below entry \u2014 invalidates the setup",
+    "take_profit_1": 9.44,
+    "take_profit_2": 15.28,
+    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.28, convergence 0.60). Wait for a clearer setup."
+    "note": null
   },
   "research_verdict": null,
   "agent_signal_breakdown": {
     "fundamentals": "buy",
-    "sentiment": "neutral",
-    "technical": "buy",
+    "sentiment": "buy",
+    "technical": "neutral",
     "macro": "neutral"
   },
   "pipeline_mode": "in-session-claude-code"

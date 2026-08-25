@@ -2,96 +2,78 @@
   "fundamentals": {
     "signal": "sell",
     "confidence": "medium",
-    "pe_assessment": "P/E is undefined and forward P/E is -14.5x \u2014 both meaningless for a pre-revenue issuer with net income of -$355.8M. The only coherent valuation frame is market cap vs. net cash: $3.85B market cap against roughly $1.9B of cash, cash equivalents and short/long-term investments at 1H26 leaves ~$1.9-2.0B of enterprise value ascribed purely to the NRC-certified SMR design option, and that is before adjusting for the Up-C structure's Class B shares, which makes the true fully-diluted capitalization higher than the $3.85B headline. Paying ~$2B of option premium for a technology with $75,000 of quarterly revenue is a valuation resting entirely on contracts that have not been signed.",
-    "margin_analysis": "Gross margin of 36.3% is a statistical artifact of a tiny, lumpy engineering-services revenue base, not evidence of a scalable cost structure. Operating margin of -2,190% and net margin of -1,130% simply restate that opex is ~20x revenue. The decisive datapoint is the trajectory: Q2 2026 revenue fell to $75,000 from $8.05M a year earlier (-99%), because the RoPower Doicesti FEED Phase 2 and technology-license revenue completed in late 2025 and nothing replaced it. Trailing revenue of $31.5M therefore overstates the current run-rate by roughly two orders of magnitude.",
-    "debt_analysis": "Balance sheet is the genuine strength: total debt is not meaningfully reported and management characterizes the company as carrying very little debt against $1.9B of liquidity and $1.17B of book equity. There is no refinancing wall and no covenant risk. The offsetting concern is that the at-the-market equity facility has been fully drawn, so the cheapest incremental funding channel is now exhausted; further capital would require a new authorization, likely at a share price ~84% below the October 2025 high.",
-    "growth_outlook": "Negative near-term, binary long-term. Free cash flow of -$460M and an underlying operating burn of roughly $55-70M per quarter imply a nominal runway well beyond three years, but that math excludes lumpy strategic outflows such as the $259.9M Milestone Contribution paid to ENTRA1 in Q1 2026, which alone consumed more than four quarters of ordinary burn. Revenue recovery depends entirely on ENTRA1 converting its stated TVA power-purchase progress into a binding order; management has provided no timeline and no binding commitment. Until a signed customer contract exists, growth is a narrative, not a forecast.",
+    "pe_assessment": "Forward P/E of -13.9x is not meaningful given continued net losses; market cap of $3.71B against trailing revenue of just $31.5M implies a price/sales multiple above 100x, and Q2 2026 revenue collapsed ~99% YoY to $75K, showing the order book has not yet converted to recurring revenue.",
+    "margin_analysis": "Gross margin of 36.3% looks respectable on paper but operating margin (-2191%) and net margin (-1130%) show fixed R&D/SG&A costs dwarfing the current tiny revenue base; net loss of $355.8M on $31.5M revenue is a structurally pre-commercial cost profile.",
+    "debt_analysis": "Total debt is not disclosed/negligible and total equity is $1.17B; after fully tapping its ATM the company holds ~$1.07B cash and short-term investments with a current ratio near 38x, giving several years of runway without near-term insolvency risk, though the $750M share sale used to build that cushion is meaningfully dilutive to existing holders.",
+    "growth_outlook": "Revenue growth is not linear \u2014 it is lumpy and license/milestone-driven; potential catalysts include a reported 6-8GW Tennessee Valley Authority framework and a new Paragon contract advancing the Highly Integrated Protection System toward commercial SMR deployment for data-center power demand, but none of this has yet shown up in reported revenue.",
     "key_risks": [
-      "Q2 2026 revenue of $75,000, down 99% year over year, with no contracted backlog to replace completed RoPower FEED work",
-      "Customer contracts remain unsigned \u2014 ENTRA1's TVA power-purchase progress carries no disclosed timeline or binding commitment",
-      "Strategic milestone payments to ENTRA1 ($259.9M in Q1 2026) can consume liquidity far faster than the ~$60M/quarter ordinary burn implies",
-      "At-the-market facility fully tapped, removing the low-friction funding channel; any new raise dilutes at depressed prices",
-      "DOE's $400M Tier-1 SMR deployment awards went to TVA and Holtec, not NuScale \u2014 the company is not capturing the largest federal cost-share dollars",
-      "Roughly $2B of enterprise value above net cash is supported by no recurring revenue",
-      "ENTRA1-related fraud suits filed in April 2026 create legal overhang and challenge the credibility of the commercialization narrative"
+      "Revenue is negligible and volatile quarter to quarter (99% YoY drop in Q2 2026)",
+      "Continued heavy cash burn (FCF -$460M) funded by dilutive equity raises",
+      "Valuation (~118x trailing sales) prices in flawless multi-year execution on SMR deployment",
+      "Long regulatory/construction lead times mean any TVA-scale deal is years from revenue recognition"
     ],
     "key_strengths": [
-      "$1.9B in cash and investments against minimal debt \u2014 a genuine fortress balance sheet for a development-stage issuer",
-      "Roughly 12-14 quarters of runway at ordinary operating burn, removing near-term insolvency risk",
-      "Only SMR design with U.S. NRC design certification, a regulatory moat competitors must spend years replicating",
-      "Prior ATM issuance was executed at materially higher prices, so the cash was raised cheaply relative to today's share price",
-      "Commercial groundwork continues \u2014 Paragon contract advancing the Highly Integrated Protection System, and a Curio/Framatome NuCycle fuel MOU"
+      "Strong balance sheet: ~$1.07B cash and short-term investments, very low debt",
+      "First-mover NRC-approved SMR design gives a structural head start over competitors",
+      "Potential large-scale offtake (TVA 6-8GW) and Paragon HIPS contract expand the addressable pipeline",
+      "Sector tailwind from AI/data-center driven demand for firm, carbon-free power"
     ],
-    "summary": "NuScale pairs a genuinely strong balance sheet ($1.9B liquidity, minimal debt, ~3 years of runway) with a revenue line that has effectively gone to zero \u2014 $75,000 in Q2 2026 versus $8.05M a year prior \u2014 after the RoPower engineering work ended with nothing contracted behind it. At a $3.85B market cap, investors are paying roughly $2B above net cash for an unsigned commercial pipeline whose sole near-term catalyst, ENTRA1's TVA negotiation, carries no binding commitment or disclosed timeline. The balance sheet buys time, not a thesis, so the fundamental case is negative until a customer contract is actually signed."
+    "summary": "NuScale's balance sheet is solid enough to fund years of continued losses, but fundamentals remain pre-commercial: revenue essentially evaporated this quarter and the current market cap already prices in large future contract wins that have not converted to revenue. Signal leans sell on valuation/execution risk despite the cash cushion."
   },
   "sentiment": {
     "signal": "neutral",
     "confidence": "medium",
     "news_tone": "mixed",
-    "news_summary": "The yfinance headline feed returned empty, so this assessment is built from dated August 2026 coverage retrieved via web search plus the analyst recommendation distribution in the fetched fundamentals. The recent tone is genuinely two-sided: incremental commercial and technical progress (a Paragon contract moving the Highly Integrated Protection System toward commercial deployment and explicitly framed around data-center applications, and a Curio/Framatome MOU targeting an integrated NuCycle fuel solution) is landing against a Q2 print where revenue collapsed to $75,000 and analysts responded by cutting price targets. Canaccord cut its target to $15 from $25 while keeping Buy; Northland trimmed $19 to $16 while maintaining Outperform \u2014 a pattern of preserved ratings with sharply reduced targets, which reads as reluctant capitulation on timing rather than abandonment of the thesis. Price action has firmed alongside this, with the stock recovering from the $7.21 July low to the mid-$9s.",
+    "news_summary": "Coverage over the past two weeks is split: sell-side price-target cuts (RBC to $10 from $14; Citi to $6.50 from $7.50 with a Sell rating) and a shock 99% YoY revenue drop are being offset by a $750M capital raise strengthening the balance sheet, a reported 6-8GW Tennessee Valley Authority framework opportunity, and a new Paragon HIPS contract; the stock is down ~32% YTD but has stabilized/bounced off recent lows.",
     "key_themes": [
-      "AI and data-center power demand as the structural demand narrative",
-      "Commercial progress without contracts \u2014 MOUs, licenses and safety-system deals but no signed customer order",
-      "Analyst price-target compression while ratings are held (targets cut ~40% but Buy/Outperform maintained)",
-      "Post-collapse stabilization after an 84% drawdown from the October 2025 high",
-      "Credibility overhang from ENTRA1 fraud litigation filed in April 2026",
-      "Balance-sheet strength repeatedly cited as the reason the story survives the revenue miss"
+      "Analyst price-target cuts / valuation skepticism",
+      "Balance-sheet strengthening via dilutive capital raise",
+      "Large potential utility-scale offtake (TVA)",
+      "AI/data-center power demand narrative"
     ],
     "notable_headlines": [
-      "NuScale Power Q2 2026 Earnings: Revenue Falls to $75,000 as Costs Rise",
-      "SMR Stock Holds Range As Analysts Trim Price Targets \u2014 Canaccord to $15 from $25 (Buy), Northland to $16 from $19 (Outperform)",
-      "SMR Stock Holds Support As NuScale Locks In Key Deals \u2014 Paragon contract advances Highly Integrated Protection System for data-center SMR deployment",
-      "NuScale MOU with Curio and Framatome targets integrated NuCycle nuclear fuel solution",
-      "Why NuScale Power (SMR) Is Down 9.3% After ENTRA1 Fraud Suits Challenge Its Nuclear Story",
-      "NuScale Power is Still Down 32% This Year \u2014 What Will It Take to Get SMR Stock Back to $15?",
-      "Nuclear energy developer NuScale hits lowest price in years as Q1 revenue collapses 96% and customer contracts remain unsigned"
+      "NuScale Power Is Still Down 32% This Year. What Will It Take to Get SMR Stock Back to $15?",
+      "SMR Stock Slips As Analysts Slash NuScale Power Targets",
+      "SMR Stock Holds Support As NuScale Locks In Key Deals",
+      "SMR Stock Holds Support As NuScale Builds Cash And Nuclear Deals"
     ],
-    "social_sentiment": "Not directly measurable from the fetched dataset. The indirect read from coverage framing \u2014 persistent 'what will it take to get back to $15' and 'earnings could reverse a 50% decline' headlines \u2014 suggests a retail base still anchored to prior highs rather than one that has fully capitulated, which historically caps the contrarian value of a washout.",
-    "summary": "Sentiment is mixed and has already de-rated violently, with the stock down 84% from its October 2025 high and analyst targets cut roughly 40% even as Buy/Outperform ratings are preserved. The recommendation distribution \u2014 1 strong buy, 5 buy, 10 hold, 1 sell, 1 strong sell \u2014 is a hold-weighted consensus that has been essentially static for four months, indicating an analyst community waiting for contract evidence rather than taking a side. Sentiment is now running behind the fundamentals in the sense that the de-rating already reflects the revenue collapse, but there is no positive catalyst in the flow to justify a directional call."
+    "social_sentiment": "Retail/media narrative remains speculative-bullish on the long-term SMR/AI power-demand thesis even as institutional analysts turn more cautious on near-term financials \u2014 a sentiment/fundamentals gap worth flagging as a contrarian caution.",
+    "summary": "News tone is genuinely mixed: bearish analyst target cuts and a revenue collapse are being counterbalanced by capital-raise-driven balance sheet strength and incremental commercial contract wins, leaving no clear directional edge from sentiment alone."
   },
   "technical": {
     "signal": "neutral",
     "confidence": "medium",
-    "trend": "Primary downtrend with an active short-term counter-trend bounce. As of 2026-08-14 the close of $9.39 sits above the SMA-20 ($8.93) but below the SMA-50 ($9.44) and dramatically below the SMA-200 ($14.80) \u2014 price is 36.5% under its 200-day average, and the moving-average stack remains bearishly ordered (20 < 50 < 200 in trend terms, with price 83.65% below the 52-week high of $57.42). The bounce off the 2026-07-17 low of $7.21 has carried price 30.24% higher, but it has not yet reclaimed the SMA-50, so this is a rally within a downtrend, not a confirmed reversal.",
-    "rsi_14": 56.9331,
-    "rsi_assessment": "RSI-14 at 56.93 is squarely neutral \u2014 well clear of the 30 oversold line the stock traded near at the July low, and far from the 70 overbought threshold. In the context of a severe downtrend, a mid-50s RSI indicates the bounce has restored momentum to balance without generating an exhaustion signal in either direction. There is room to run higher before the indicator becomes a constraint, but no oversold tailwind remains.",
-    "macd_assessment": "MACD is the most constructive input in the panel. The MACD line at +0.1085 has crossed above the signal line at -0.0495, producing a positive histogram of +0.1581 and confirming a bullish momentum crossover. The line's move into positive territory means short-term exponential momentum has overtaken the longer baseline. This is a valid bullish momentum signal, but it is a short-horizon indicator and does not override the SMA-200 relationship.",
-    "volume_assessment": "Volume of 35.6M against a 20-day average of 31.9M gives a volume ratio of 1.1178 \u2014 only 11.8% above normal. That is mild confirmation at best. A genuine trend reversal off a capitulation low would typically show a sustained volume expansion well above this, so the bounce is not yet volume-validated. Notably the 2026-08-14 session posted this elevated volume on a down day (close $9.39 versus the $9.955 high), which hints at distribution into strength near resistance.",
+    "trend": "Short-term price action is consolidating (above the March-2026 lows, holding the $8.5-9.6 range) while the longer-term trend remains firmly down \u2014 price is below the 20/50/200-day SMAs, with the 200-day SMA far above at $13.83 (price is ~34.6% below it), consistent with the stock's ~32% YTD decline.",
+    "rsi_14": 45.7854,
+    "rsi_assessment": "RSI-14 at 45.79 sits in neutral territory (neither overbought nor oversold), indicating momentum has stabilized after the prior downtrend rather than signaling an imminent reversal in either direction.",
+    "macd_assessment": "MACD line (0.0148) sits just above the signal line (0.0086) with a small positive histogram (0.0063), a mild bullish crossover, but the magnitude is too small relative to price ($9.05) to confirm a durable trend change.",
+    "volume_assessment": "Volume of 46.1M is about 1.46x the 20-day average, showing elevated participation on the latest session, but without a clear directional volume/price alignment (close near the day's low of the range) this reads as increased two-way interest rather than confirmed accumulation.",
     "support_levels": [
-      8.93,
-      7.58,
+      8.53,
       7.21
     ],
     "resistance_levels": [
-      9.44,
-      10.14,
-      10.87
+      9.6451,
+      10.3
     ],
-    "summary": "SMR is staging a technically valid short-term bounce \u2014 MACD has crossed bullishly with a +0.1581 histogram, RSI has normalized to 56.9, and price has reclaimed the SMA-20 at $8.93 \u2014 but it is doing so 36.5% below its SMA-200 and has stalled directly beneath the SMA-50 at $9.44. Volume confirmation is weak at a 1.12 ratio, and the 2026-08-14 reversal off the $9.955 intraday high suggests supply at the $10.14 resistance shelf. With ATR-14 at $0.72 (7.7% of price), volatility is extreme; the setup is a coin-flip pending a decisive close above $9.44-$10.14 or a failure back toward $7.58."
+    "summary": "Price is range-bound and short-term-neutral (RSI mid-range, minor bullish MACD crossover) but remains in a well-established long-term downtrend below all major moving averages, so technicals do not currently support a directional call."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "The FOMC held the target range at 3.50%-3.75% at its July 2026 meeting, and the tone has turned hawkish: resurgent inflation tied to rising energy prices has led forecasters to price out further cuts, with nearly half of policymakers at the June meeting indicating they would support a rate hike before year-end. This is materially adverse for NuScale specifically. With a beta of 2.306 and no earnings to discount, SMR is a long-duration equity whose value sits almost entirely in terminal-value cash flows a decade or more out; a higher-for-longer or rising discount rate compresses that present value more than it does for any profitable industrial peer. A capital-intensive, pre-revenue developer also faces a direct project-economics channel \u2014 SMR plant economics are dominated by the cost of capital on multi-billion-dollar construction, so a hawkish path raises the levelized cost of the product itself, not just the stock's multiple.",
-    "interest_rate_outlook": "Neutral-to-tightening for the remainder of 2026. The next FOMC meeting is scheduled for September 15-16 and will carry a Summary of Economic Projections, making it the key near-term macro event for this name. Base case is a hold, but the distribution is skewed toward a hike rather than a cut, which removes the falling-discount-rate tailwind that speculative energy-transition equities enjoyed earlier in the cycle. There is a second-order irony worth flagging: the same energy-price inflation pressuring the Fed also strengthens the long-run economic argument for new baseload generation capacity.",
-    "fx_impact": "Minimal and not a driver of the thesis. NuScale is US-domiciled, US-listed and reports in USD, with costs predominantly domestic. The only meaningful non-USD exposure is the RoPower Doicesti project in Romania (RON/EUR), and since that contract's FEED Phase 2 revenue was fully recognized by late 2025 with no comparable activity in 2026, current FX translation risk is immaterial. A structurally stronger dollar would modestly raise the cost of NuScale's technology to foreign buyers, which matters only if international orders materialize.",
+    "confidence": "low",
+    "fed_impact": "The FOMC held the federal funds rate at 3.50-3.75% at its July 2026 meeting (9-3 vote, with three regional presidents dissenting in favor of a hike given inflation persisting above the 2% target for over five years); this modestly hawkish tilt raises the odds that rates stay higher for longer, which increases the discount rate applied to a cash-burning, long-duration-cash-flow company like NuScale.",
+    "interest_rate_outlook": "With no August FOMC meeting and the next decision on September 15-16, near-term rate policy is a known quantity (hold), but the hawkish dissents signal elevated risk that easing is delayed further, which is a headwind for equity-financed growth capex and makes future dilutive raises relatively more expensive.",
+    "fx_impact": "Limited direct FX exposure \u2014 NuScale's business and reported revenue are USD-denominated and domestically (US utility/DOE) focused, though a global SMR export pipeline could introduce FX considerations over time.",
     "sector_macro_factors": [
-      "Executive orders targeting an increase in US nuclear capacity from 100GW to 400GW by 2050, with 10 newly designed large reactors under construction by 2030 \u2014 the strongest federal policy backdrop the sector has had in decades",
-      "DOE re-issued a $900M SMR deployment solicitation (Tier 1 up to $800M for up to two first-mover teams, ~$100M Tier 2), plus $94M in Gen III+ SMR cost-share released to eight companies",
-      "Company-specific negative: the first $400M Tier-1 cost-share awards went to TVA and Holtec, not NuScale \u2014 sector funding is flowing, but not preferentially to this issuer",
-      "Data-center electricity demand projected to rise ~160% by 2030 (Goldman Sachs), with Microsoft, Google, Amazon and Meta signing nuclear agreements or investing directly in reactor development",
-      "SMR-enabling legislation advancing at state level across both red and blue states, easing siting and permitting friction",
-      "High cost of capital is a first-order input to SMR project economics, partially offsetting the policy tailwind",
-      "Rising energy prices strengthen the long-run baseload generation case even as they pressure monetary policy"
+      "High beta (2.306) makes SMR very sensitive to broad market/rate-driven risk-appetite swings",
+      "Elevated-for-longer rates raise the cost of capital for a company still years from self-funding via revenue",
+      "AI/data-center electricity demand and pro-nuclear federal policy remain a structural sector tailwind independent of the rate cycle"
     ],
     "geopolitical_risks": [
-      "Nuclear fuel supply chain concentration \u2014 the Curio/Framatome NuCycle MOU is explicitly aimed at reducing dependence on foreign (notably Russian) enriched uranium, an unresolved structural vulnerability",
-      "Romanian RoPower Doicesti project depends on Nuclearelectrica shareholder conditions being satisfied, exposing the flagship international reference plant to foreign political process",
-      "ENTRA1 is reportedly positioned to receive capital under the $550B US-Japan Framework Agreement, making a key funding path contingent on bilateral policy that could shift with either government",
-      "US nuclear policy support is executive-order driven and therefore vulnerable to reversal across administrations, a real risk for projects with 10-year build horizons",
-      "Chinese SMR expansion is setting a competing global deployment pace and could erode export opportunity"
+      "US nuclear regulatory/permitting timelines remain a multi-year execution risk regardless of macro backdrop",
+      "Any large utility offtake (e.g. TVA) is subject to federal energy policy continuity"
     ],
-    "summary": "The macro picture is a genuine standoff: an exceptional sector policy tailwind \u2014 400GW-by-2050 targets, a $900M DOE SMR solicitation, and data-center demand forecast to rise 160% by 2030 \u2014 set against a Fed holding at 3.50%-3.75% with roughly half of policymakers open to a hike before year-end, which is the wrong environment for a beta-2.3, zero-earnings, long-duration capital-intensive developer. Critically, the federal money is flowing to the sector but not to NuScale, with the $400M Tier-1 awards going to TVA and Holtec. FX is immaterial, and with the September 15-16 FOMC as the key near-term event, the offsetting forces justify a neutral stance."
+    "summary": "Macro is a mild headwind, not a driver: elevated-for-longer Fed policy raises NuScale's cost of capital as an unprofitable, capital-intensive business, but this is more than offset in the sector-factors column by structural AI/data-center power demand and pro-nuclear policy support, netting to a neutral, low-confidence macro read."
   },
   "pipeline_mode": "in-session-claude-code"
 }

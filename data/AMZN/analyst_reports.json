@@ -2,83 +2,80 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "high",
-    "pe_assessment": "Trailing P/E of 21.90x is reasonable for a mega-cap technology/retail hybrid, though Forward P/E of 26.36x reflects elevated growth expectations. The premium is justified given AWS's high-margin contribution, but growth must meet these expectations to justify current valuation.",
-    "margin_analysis": "Exceptional operational health: Gross Margin 50.3%, Operating Margin 11.2%, Net Margin 10.8%. Demonstrates pricing power and efficiency. However, Free Cash Flow of $7.7B (9.9% of Net Income) indicates heavy capital reinvestment in infrastructure, which is strategically sound but constrains near-term cash distribution capacity.",
-    "debt_analysis": "Conservative balance sheet with Debt-to-Equity ratio of 37.2% ($153B vs. $411B equity). Moderate debt levels are well-managed for a $2.94T company. Strong equity base and cash generation provide ample debt service capacity and financial flexibility for strategic investments.",
-    "growth_outlook": "Amazon's $717B revenue reflects maturity in retail, but AWS and international expansion provide sustained growth. Analyst consensus is exceptionally bullish (96.7% buy/strong buy), signaling Street confidence. However, forward P/E premium means growth expectations are already elevated and must be realized.",
+    "pe_assessment": "Trailing P/E of 20.8x is reasonable for a company growing revenue ~20% YoY in constant currency with expanding margins; forward P/E of 25.2x already prices in the near-term margin drag from the FY26 capex ramp but remains below AMZN's own historical forward-multiple range during prior growth cycles.",
+    "margin_analysis": "Gross margin 50.3%, operating margin 11.2% (LTM), net margin 10.8%. Management just reported Q2 operating margin expanding to 13.7% from 11.4% a year ago on AWS mix shift and retail logistics efficiency, an improving trajectory.",
+    "debt_analysis": "Total debt of $153.0B against $411.1B of total equity is a conservative ~37% debt-to-equity for a company this size; an investment-grade balance sheet comfortably supports the announced $220B FY26 capex plan without near-term refinancing risk.",
+    "growth_outlook": "LTM revenue of $716.9B with AWS posting its fastest growth in 18 quarters and a raised capex outlook aimed at AI/data-center capacity signals management confidence in demand, though free cash flow of only $7.7B (LTM) shows the capex ramp is currently consuming most operating cash flow.",
     "key_risks": [
-      "Forward P/E of 26.36x elevated vs. trailing 21.90x signals high growth expectations already priced in",
-      "Weak FCF conversion (9.9% of net income) requires sustained capex; limits dividend/buyback capacity",
-      "Beta of 1.454 indicates 45% higher volatility than market",
-      "E-commerce segment faces intense competition and margin pressure from rivals",
-      "Regulatory/antitrust risks given market dominance in retail and cloud",
-      "Macro sensitivity: Consumer Cyclical sector vulnerable in recession"
+      "Free cash flow compressed to $7.7B against a $220B planned FY26 capex budget \u2014 execution/ROI risk on AI infrastructure spend",
+      "Forward P/E of 25.2x vs trailing 20.8x prices in continued margin expansion that must be delivered",
+      "New Jersey AG antitrust suit over delivery-contractor practices adds legal/regulatory overhang",
+      "Insider selling \u2014 Bezos filed to sell over $4B of stock under a 10b5-1 plan"
     ],
     "key_strengths": [
-      "Market-leading e-commerce position with diversified revenue (retail, AWS, advertising, third-party services)",
-      "AWS provides high-margin, recurring revenue and earnings stability",
-      "Gross margin of 50.3% demonstrates competitive moat and pricing power",
-      "Healthy 37.2% Debt-to-Equity ratio with ample financial flexibility",
-      "Overwhelming analyst support: 58 of 60 analysts bullish (96.7%)",
-      "Consistent profitability: $77.7B net income on $716.9B revenue"
+      "AWS delivering its fastest growth in 18 quarters with operating margin expansion (11.4% -> 13.7% YoY)",
+      "Q2 results beat the high end of guidance on both revenue and profit",
+      "Analyst sentiment strongly positive: 58 of 60 covering analysts rate buy or strong buy, zero sell ratings",
+      "Conservative balance sheet (~37% debt/equity) funds growth without near-term dilution or distress"
     ],
-    "summary": "Current-session signal: buy. Amazon has $716.9B revenue, a 10.8% net margin, and a 21.9x trailing P/E, but free cash flow is only $7.7B and the 26.4x forward P/E is higher than the trailing multiple. Price is above all major moving averages with RSI at 63.9 and a positive MACD histogram, although volume is only 59% of its 20-day average."
+    "summary": "Amazon's fundamentals are strong and improving \u2014 AWS-driven margin expansion and a Q2 beat support a buy, though the capex ramp to $220B has temporarily compressed free cash flow and the forward multiple already prices in continued execution."
   },
   "sentiment": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
-    "news_tone": "neutral",
-    "news_summary": "Recent news headlines unavailable for sentiment assessment. Analysis based solely on analyst rating distribution.",
+    "news_tone": "mixed",
+    "news_summary": "News flow is sharply bifurcated: an AWS-driven Q2 beat sent shares up 15-17% to a record high on August 3, but within the same three-week window New Jersey's AG filed an antitrust suit over delivery-contractor practices and Bezos filed to sell over $4B of stock, and the stock has since pulled back roughly 9% from that high.",
     "key_themes": [
-      "Analyst consensus bullishness (98%+)",
-      "Marginal rating deterioration (slight buy downgrades)",
-      "Zero sell-side resistance",
-      "Potential contrarian warning from extreme agreement"
+      "AWS AI-driven growth reacceleration",
+      "Q2 earnings beat plus raised FY26 capex guidance",
+      "state-level antitrust litigation (NJ delivery contractors)",
+      "founder insider selling ($4B+ Bezos 10b5-1 sale)"
     ],
     "notable_headlines": [
-      "No recent headlines retrieved"
+      "AMZN Stock Soars As AWS AI Boom Ignites Massive Rally (Aug 3, 2026)",
+      "New Jersey AG files antitrust suit against Amazon over delivery-contractor practices (Aug 4, 2026)",
+      "Bezos files to sell over $4 billion of Amazon stock under Rule 10b5-1 plan (Aug 6, 2026)",
+      "What's Going on With Amazon Stock? (Motley Fool, Aug 3, 2026)"
     ],
     "social_sentiment": null,
-    "summary": "Current-session signal: buy. Amazon has $716.9B revenue, a 10.8% net margin, and a 21.9x trailing P/E, but free cash flow is only $7.7B and the 26.4x forward P/E is higher than the trailing multiple. Price is above all major moving averages with RSI at 63.9 and a positive MACD histogram, although volume is only 59% of its 20-day average."
+    "summary": "Sentiment is mixed: a powerful earnings-driven rally has been followed by regulatory and insider-selling headlines plus a technical pullback, leaving no clear directional edge from news flow alone."
   },
   "technical": {
-    "signal": "buy",
-    "confidence": "high",
-    "trend": "Strong uptrend; price above SMA-50 and SMA-200 with momentum continuation",
-    "rsi_14": 63.85,
-    "rsi_assessment": "RSI at 63.85 indicates healthy bullish momentum without overbought extremes (healthy entry zone)",
-    "macd_assessment": "MACD histogram at +5.75 (positive); MACD line above signal line; momentum is expanding upward",
-    "volume_assessment": "Exceptional volume on breakout (100M+ shares July 31–Aug 3); exceeds 30-day average (47.16M); confirms institutional buying",
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Primary uptrend intact (price above SMA-50 and SMA-200) but in a short-term pullback \u2014 price sits just below SMA-20 after retreating ~8.75% from the August 3 52-week high of $287.20 following the post-earnings spike.",
+    "rsi_14": 33.5547,
+    "rsi_assessment": "RSI-14 at 33.55 is approaching oversold (<30) but not yet there, reflecting the sharp post-spike cooldown rather than an established downtrend; could resolve as either a dip-buy setup or continued breakdown.",
+    "macd_assessment": "MACD line (3.16) sits below its signal line (4.63) with a negative and widening histogram (-1.47), confirming bearish short-term momentum even though price remains above the 50/200-day averages.",
+    "volume_assessment": "Volume ratio of 0.59x (well below the 20-day average) on the recent pullback suggests the decline is a low-conviction cooldown from the post-earnings spike rather than aggressive distribution.",
     "support_levels": [
-      226.65,
-      247.62
+      250.14,
+      238.39,
+      232.02
     ],
     "resistance_levels": [
-      284.02
+      262.91,
+      287.2,
+      293.8
     ],
-    "summary": "Current-session signal: buy. Amazon has $716.9B revenue, a 10.8% net margin, and a 21.9x trailing P/E, but free cash flow is only $7.7B and the 26.4x forward P/E is higher than the trailing multiple. Price is above all major moving averages with RSI at 63.9 and a positive MACD histogram, although volume is only 59% of its 20-day average."
+    "summary": "AMZN is in a short-term pullback within an intact longer-term uptrend \u2014 bearish MACD momentum and a sub-30-approaching RSI warrant caution, but low volume on the decline and support at the 50/200-day SMAs keep the technical picture balanced rather than outright bearish."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "medium",
-    "fed_impact": "Stable Fed rates at 4.25–4.50% remove near-term rate-hike risk and refinancing pressure. However, elevated absolute rate levels increase Amazon's WACC, particularly constraining returns on capital-intensive AWS infrastructure and AI buildout. No imminent cut expected; sustained higher-for-longer is the baseline.",
-    "interest_rate_outlook": "Fed likely to hold steady through 2026 absent significant economic shock. Risk tilts toward extended higher-for-longer environment, which compounds pressure on Amazon's already-high capex requirements and margin expansion plans. Potential cuts in 2027 if inflation remains controlled.",
-    "fx_impact": "Limited direct MYR exposure (US-listed company in USD). Indirect impact: elevated trade tensions historically strengthen USD. A stronger dollar would headwind Amazon's international segment (~30% of revenue), particularly affecting AWS pricing power in non-US markets and FX translation drag on reported earnings.",
+    "fed_impact": "The Fed under new Chair Kevin Warsh held the funds rate at 3.50%-3.75% at both the June and July 2026 meetings; markets have shifted from pricing cuts to acknowledging hike risk given inflation still above target, keeping the cost-of-capital environment tighter than AMZN's aggressive $220B FY26 capex plan would prefer.",
+    "interest_rate_outlook": "No near-term cut is expected; the next FOMC meeting is September 15-16, 2026. A 'higher for longer' or even hiking-bias stance raises the discount rate applied to Amazon's long-duration AI/data-center capex bets and modestly pressures growth-stock valuations sector-wide.",
+    "fx_impact": "No AMZN-specific dated FX data is available; USD strength typical of a hawkish-Fed regime would be a mild headwind to AWS/international retail revenue translated back to USD, but this is a general sector effect rather than an AMZN-specific catalyst.",
     "sector_macro_factors": [
-      "Consumer spending supported by low unemployment (~4%) and inflation trending to 2% target, benefiting e-commerce retail segment",
-      "High beta (1.454) amplifies cyclical sensitivity—Amazon outperforms in expansions but underperforms sharply in recessions",
-      "AI/data center capex cycle is capital-intensive; rising capex burden will pressure near-term margins despite strategic importance",
-      "Elevated cost of capital pressures ROI hurdle rates on large infrastructure investments"
+      "Consumer Cyclical/Internet Retail sector remains sensitive to real consumer spending power, which a higher-for-longer rate regime constrains",
+      "Elevated rates raise the opportunity cost of AMZN's $220B capex ramp into AI infrastructure",
+      "AWS's enterprise/cloud demand is comparatively rate-insensitive versus AMZN's core retail segment"
     ],
     "geopolitical_risks": [
-      "Elevated US-China trade tensions increase COGS through tariffs on imported goods and inventory",
-      "China's mixed recovery weakens AWS international growth prospects and cloud market expansion",
-      "Trade war risk could trigger USD strength (flight to safety), headwinding Amazon's ~30% non-US revenue when translated to dollars",
-      "Supply chain disruption risk from tariff escalation impacts logistics efficiency and third-party seller economics"
+      "New Jersey state antitrust suit over delivery-contractor labor practices is a company-specific regulatory risk that could presage similar suits in other states",
+      "Broader U.S. antitrust scrutiny of large-cap tech/retail platforms remains an ongoing overhang independent of Fed policy"
     ],
-    "summary": "Current-session signal: neutral. Amazon has $716.9B revenue, a 10.8% net margin, and a 21.9x trailing P/E, but free cash flow is only $7.7B and the 26.4x forward P/E is higher than the trailing multiple. Price is above all major moving averages with RSI at 63.9 and a positive MACD histogram, although volume is only 59% of its 20-day average."
+    "summary": "Macro backdrop is a mild headwind: the Fed is holding rates at 3.50%-3.75% with hike risk rather than cut risk, raising the cost of Amazon's aggressive AI capex plan, though AWS's relative rate-insensitivity partially offsets pressure on the more cyclical retail segment."
   },
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
+  "pipeline_mode": "in-session-claude-code"
 }

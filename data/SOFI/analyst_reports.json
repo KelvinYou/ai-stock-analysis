@@ -2,96 +2,74 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Trailing P/E of 37.3x looks rich in absolute terms, but the forward P/E of 22.5x is the more informative number given the growth rate: Q2 2026 net revenue of ~$1.21B was +43% YoY and net income rose ~61%, with FY26 guidance raised to $4.75-4.85B (+32-35%). At 22.5x forward against 30%+ top-line growth the implied PEG is comfortably below 1x, which is undemanding for a Credit Services name. The market cap of $23.6B against $3.61B TTM revenue is ~6.5x sales \u2014 the multiple has already de-rated hard from the 52w high of $32.73 (-44%), so the valuation risk is materially lower than it was six months ago.",
-    "margin_analysis": "TTM net margin of 13.3% ($481M net income on $3.61B revenue) is a genuine structural achievement for a company that was loss-making until recently, and the direction of travel is positive. The key caveat is the H2 ramp embedded in guidance: adjusted EBITDA is held at ~$1.6B for FY26 while H1 ran at roughly a 30% adjusted EBITDA margin, implying ~38% in H2. That is an 8-point sequential margin step in two quarters and is the single most contestable line in the model. yfinance reports gross and operating margin as null, so margin quality below the net line cannot be independently verified from this dataset.",
-    "debt_analysis": "Reported total debt of $1.93B against total equity of $10.49B gives a debt/equity of ~0.18x, which reads as pristine \u2014 but that ratio is close to meaningless for a chartered bank, because SoFi's dominant funding source is customer deposits, which do not appear in this 'total debt' line. The more relevant flag is free cash flow of -$3.99B. For a balance-sheet lender that is expansion of the loan book rather than cash burn in the operating sense, but it does mean growth is capital-intensive and self-funding is limited \u2014 precisely the concern Morgan Stanley cited when cutting to $15 Underweight. Equity of $10.49B provides a real cushion, and the company is originating at record volume ($8.8B in the quarter, $14.8B TTM-scale).",
-    "growth_outlook": "Growth is the strongest part of the case: 35% member growth, 42% product growth, record originations across personal, student and home loans, and management confident enough to raise full-year revenue guidance after the print. The fee-based/financial-services segment is the piece that would justify a re-rating away from a pure lender multiple. The offset is that guidance raised revenue while holding adjusted EBITDA and adjusted EPS (~$0.60) flat \u2014 meaning the incremental revenue is being reinvested, not dropped to the bottom line, and Wells Fargo specifically flagged reinvestment plus a higher tax rate as the reason it kept Equal Weight at a $17 target.",
+    "pe_assessment": "Trailing P/E of 38.8x looks rich, but forward P/E of 22.2x reflects the market pricing in the raised FY26 guidance (32-35% adjusted net revenue growth); the multiple compresses fast if growth is delivered.",
+    "margin_analysis": "Net margin of 13.3% on $3.61B revenue with $481M net income is solid for a scaling fintech lender; management guided EBITDA margins to 33-34% for FY26, implying continued operating leverage.",
+    "debt_analysis": "Total debt of $1.93B against $10.49B total equity is a conservative ~18% debt/equity; free cash flow of -$3.99B is not a balance-sheet red flag here \u2014 it reflects loan origination/held-for-investment growth typical of an expanding lender, not cash burn from operations.",
+    "growth_outlook": "Management raised FY26 outlook to 32-35% adjusted net revenue growth with 35% member growth and a 42% jump in products-per-customer reported in Q2 2026 \u2014 strong top-line and cross-sell momentum.",
     "key_risks": [
-      "H2 2026 adjusted EBITDA margin must expand from ~30% to ~38% to hit the unchanged $1.6B target \u2014 an 8-point step with no visible bridge",
-      "Free cash flow of -$3.99B means growth is capital-intensive; funding costs or deposit competition directly compress the model",
-      "Consumer credit cycle exposure \u2014 tighter lending conditions and any deterioration in personal-loan charge-offs hits both origination volume and gain-on-sale marks",
-      "Revenue guidance was raised while adjusted EPS guidance (~$0.60) was held flat, signalling reinvestment absorbs the upside",
-      "Beta of 2.20 means the equity amplifies any broad risk-off move regardless of company execution",
-      "Gross and operating margin are unavailable in the dataset, limiting visibility into margin composition"
+      "Negative free cash flow tied to loan book growth increases sensitivity to funding costs and credit quality",
+      "Analyst sell-side split (Morgan Stanley PT cut to $15 on capital intensity and student-loan exposure) signals real balance-sheet-risk concerns",
+      "High beta (2.2) means fundamentals-driven re-rating is amplified in both directions"
     ],
     "key_strengths": [
-      "Q2 2026 net revenue ~$1.21B, +43% YoY, a record quarter with net income up ~61%",
-      "Full-year 2026 revenue guidance raised to $4.75-4.85B (+32-35% YoY) after the print",
-      "Sustained GAAP profitability with a 13.3% TTM net margin, versus losses not long ago",
-      "Forward P/E of 22.5x against 30%+ growth implies a sub-1 PEG \u2014 the de-rate from $32.73 has removed much of the valuation premium",
-      "Equity base of $10.49B versus $1.93B reported debt provides substantial loss-absorbing capacity",
-      "Record originations of $8.8B in the quarter with breadth across personal, student and home loan products"
+      "Raised FY26 revenue and margin guidance after a Q2 beat",
+      "Strong member and cross-sell growth (35% members, 42% products/customer)",
+      "Conservative leverage relative to equity base"
     ],
-    "summary": "SoFi is compounding revenue in the low-40s percent while sustaining a 13.3% net margin, and the 44% drawdown from the 52-week high has compressed the forward multiple to 22.5x \u2014 an undemanding price for that growth. The binding risk is not the top line but the H2 margin ramp from ~30% to ~38% adjusted EBITDA and the -$3.99B free cash flow that shows this growth still consumes capital. Buy on valuation-versus-growth, medium confidence pending evidence the margin step is achievable."
+    "summary": "SoFi's forward multiple (22.2x) is reasonable against raised 32-35% growth guidance and improving margins, though trailing P/E (38.8x) and persistently negative FCF from loan-book growth warrant a moderate rather than high-conviction buy."
   },
   "sentiment": {
-    "signal": "neutral",
+    "signal": "buy",
     "confidence": "medium",
-    "news_tone": "mixed",
-    "news_summary": "The yfinance news feed returned ten empty headline records, so this assessment is built from dated web-sourced coverage of the July 29, 2026 Q2 print and the August trading that followed. The pattern is unusually clean: the operating news is uniformly good (record revenue, beat, raised guidance, record originations, a new Notre Dame Athletics sponsorship) while the market and sell-side reaction is guarded (shares initially sold off on the beat, and several houses cut price targets). Since August 3 the stock has recovered from the mid-$16s to ~$18.29, so the tape has begun to re-price the fundamentals it initially ignored, but the sell-side has not followed.",
+    "news_tone": "mixed-to-positive",
+    "news_summary": "Q2 2026 earnings beat (revenue ~$1.22B, EPS $0.12 vs $0.11 expected) and raised FY26 guidance drove the stock from the mid-$15s to near $18.9-19 in August 2026; Piper Sandler initiated Overweight, but Morgan Stanley cut its price target to $15 citing capital intensity and student-loan exposure, keeping the tape volatile.",
     "key_themes": [
-      "Sell-the-news reaction \u2014 strong beat and raised guidance met with an initial share decline",
-      "Sell-side skepticism on capital intensity \u2014 Morgan Stanley cut to $15 Underweight, Wells Fargo held Equal Weight at $17",
-      "Record-quarter narrative \u2014 43% revenue growth, 35% member growth, 42% product growth",
-      "Reinvestment and higher taxes framed as the drag on 2026 earnings quality",
-      "Consumer credit and regulatory scrutiny as the recurring bear overhang",
-      "Brand/distribution expansion via the multi-year Notre Dame Athletics partnership"
+      "earnings beat and raised guidance",
+      "member/product growth momentum",
+      "analyst split on capital intensity risk",
+      "brand marketing expansion (Notre Dame Athletics jersey-patch sponsorship)"
     ],
     "notable_headlines": [
-      "SoFi Technologies posts record Q2 revenue of ~$1.21B, +43% YoY, and raises FY26 revenue guidance to $4.75-4.85B (July 29, 2026)",
-      "Why did SoFi stock fall despite earnings beat and higher 2026 outlook? (Invezz, July 29, 2026)",
-      "SoFi Technologies posts record Q2 revenue but Wall Street cuts price targets despite 8% stock surge (July 31, 2026)",
-      "Morgan Stanley lowers SoFi price target to $15 from $16, maintains Underweight, citing more capital-intensive growth",
-      "Wells Fargo nudges target to $17, holds Equal Weight on reinvestment and higher taxes",
-      "SOFI stock holds momentum as earnings beat and new funds debut (August 13, 2026)",
-      "Multi-year Notre Dame Athletics partnership names SoFi official financial services partner and first jersey patch sponsor"
+      "SOFI Stock Holds Momentum As Earnings Beat And New Products Hit (Aug 21, 2026, StocksToTrade)",
+      "SOFI Stock Slips As Morgan Stanley Warns On Capital Intensity (Aug 18, 2026, StocksToTrade)",
+      "Piper Sandler initiates SoFi Technologies at Overweight (Aug 17, 2026)"
     ],
-    "social_sentiment": "Not measurable from the available data \u2014 no social or retail-flow feed was fetched. SoFi is historically a high-retail-participation name with an active bull following, which typically means sentiment swings are amplified in both directions, but that is a prior, not an observation from this dataset.",
-    "summary": "News tone is mixed in an informative way: the operating results are unambiguously strong while the sell-side reaction is defensive, with the analyst distribution (2 strong buy / 5 buy / 12 hold / 2 sell / 2 strong sell) sitting firmly on hold and strong-buy ratings having slipped from 3 to 2 over the last two months. Sentiment currently lags the fundamentals rather than running ahead of them, which is the less dangerous of the two errors. Neutral signal, medium confidence \u2014 there is no crowd euphoria to fade, but no clear positive catalyst in the narrative either."
+    "social_sentiment": "Retail and momentum commentary skewed bullish following the earnings beat and stock's climb off the mid-$15s, but tempered by the Morgan Stanley downgrade narrative.",
+    "summary": "Tone is net positive on the earnings beat and guidance raise, but the Morgan Stanley price-target cut to $15 (below spot) is a real bear counterweight, so conviction stays medium rather than high."
   },
   "technical": {
     "signal": "neutral",
     "confidence": "medium",
-    "trend": "Short-term uptrend inside an intact long-term downtrend. Close of $18.29 sits above both SMA-20 ($17.44) and SMA-50 ($17.49), which have converged almost exactly \u2014 a compressed base that price has broken upward from. But price remains 12.2% below the SMA-200 at $20.82, and the stock is -44.1% from its 52-week high of $32.73 while only +22.9% off the 52-week low of $14.88. The primary trend is still down; what is on the chart is a recovery leg off the July 29 capitulation low, not a confirmed trend reversal.",
-    "rsi_14": 59.5918,
-    "rsi_assessment": "RSI-14 at 59.6 is in constructive-but-unstretched territory \u2014 comfortably above the 50 midline, confirming that momentum has flipped positive since the late-July low, yet well clear of the 70 overbought threshold. There is room to run before momentum itself becomes a constraint. Notably, RSI has traveled from oversold to near-60 in roughly two weeks, so the move is fast; a consolidation to work off that velocity would be normal.",
-    "macd_assessment": "Bullish. The MACD line at +0.243 is above the signal line at +0.131, producing a positive histogram of +0.112. Both the line and the signal are above zero, which means the momentum crossover has already been confirmed rather than merely threatened. This is the cleanest bullish reading among the indicators. The caveat is that MACD is a lagging trend-follower and turned only after the sharp early-August gap up from $16.47 to $18.03 \u2014 it is describing that move, not anticipating the next one.",
-    "volume_assessment": "This is the clearest warning in the data. Volume of 34.2M on the most recent session is 0.48x the 20-day average of 70.9M \u2014 the advance to $18.29 is happening on roughly half of normal participation. The capitulation low on July 29 traded 193.6M shares and the August 3 breakout traded 83.8M, but volume has decayed steadily since ($61.3M, $56.9M, $45.4M, $51.6M, $38.2M, $38.9M, $37.2M, $61.9M, $34.2M). Rallies that thin out on volume typically stall at resistance rather than break through it. Bollinger position of 0.73 (upper band $19.29, lower $15.58) confirms price is in the upper third of its band but has not tagged the top. ATR-14 of $0.82 is 4.5% of the share price, so intraday noise alone can move this name a full percent of thesis in either direction.",
+    "trend": "Price ($18.24) is above the 20-day ($17.82) and 50-day ($17.70) SMAs, showing short-term recovery momentum, but still 10.8% below the 200-day SMA ($20.46), so the longer-term trend remains unresolved.",
+    "rsi_14": 45.8484,
+    "rsi_assessment": "RSI-14 at 45.8 is squarely neutral \u2014 neither overbought nor oversold, consistent with a stock consolidating rather than trending decisively.",
+    "macd_assessment": "MACD line (0.2523) sits above the signal line (0.2110) with a small positive histogram (0.0413), indicating mild bullish momentum, but the magnitude is weak.",
+    "volume_assessment": "Volume ratio of 0.55x the 20-day average is well below normal, meaning the recent bounce off the mid-$15s lacks strong conviction/participation.",
     "support_levels": [
-      17.49,
-      16.47,
-      15.25,
+      17.7046,
+      15.99,
       14.88
     ],
     "resistance_levels": [
-      18.86,
-      19.29,
-      20.82,
-      22.0
+      19.6574,
+      20.4593,
+      32.73
     ],
-    "summary": "Momentum indicators are constructive \u2014 price above the converged SMA-20/50, RSI at 59.6, MACD histogram positive at +0.112 \u2014 but the rally is running on 0.48x average volume and price is still 12% under the SMA-200 at $20.82. Confirmation is missing where it matters most. Neutral with medium confidence: the setup favors a continued grind toward the $18.86-19.29 resistance shelf, but a break above the 200-day requires volume expansion that is not currently present."
+    "summary": "SOFI shows a short-term bullish bounce (above 20/50-day SMA, mild positive MACD) but on weak volume and still below the 200-day SMA, so the technical picture is a neutral consolidation rather than a confirmed uptrend."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "The FOMC held the federal funds rate at 3.50-3.75% at its July 29, 2026 meeting on a 9-3 vote, and critically, all three dissents (Hammack, Kashkari, Logan) argued for a rate *increase* on inflation concerns \u2014 not a cut. For SoFi that is a two-sided exposure. As a deposit-funded chartered bank, a higher-for-longer policy rate supports net interest margin on the loan book and keeps deposit spreads workable. But as a high-multiple growth equity with a beta of 2.20, SoFi's valuation is levered to the discount rate, and a hawkish surprise compresses the forward P/E of 22.5x faster than improved NIM can offset. Consumer credit demand and charge-off behavior also deteriorate in a sustained restrictive regime, which hits the origination engine that drove $8.8B of quarterly volume.",
-    "interest_rate_outlook": "The distribution of risk around the current 3.50-3.75% band has visibly shifted hawkish. A committee with three governors dissenting toward hikes is not a committee about to ease, so the base case is a hold with a non-trivial tail toward tightening, and the market's prior of steady cuts through 2026 looks stale. Contemporary coverage of SoFi's 2026 underperformance explicitly cites expectations of rate hikes as a driver, meaning this is already partially in the price rather than a fresh shock. The asymmetry that matters: an easing cycle would be a strong positive catalyst for both the multiple and loan demand, and it is currently the less likely path.",
-    "fx_impact": "Not material. SoFi is a domestically-focused US consumer finance platform with revenue, funding and credit exposure denominated in USD; there is no meaningful foreign-currency translation or transaction exposure in the business. MYR/USD and BNM policy are irrelevant to this name. Indirect FX effects would only arise through dollar strength as a proxy for global risk appetite, which is better captured by the beta discussion than by an FX channel.",
+    "confidence": "low",
+    "fed_impact": "The Fed held the funds rate at 3.50-3.75% at the July 2026 FOMC meeting (9-3 vote, three dissents from Hammack, Kashkari, and Logan) with inflation still above the 2% target; the next decision is September 15-16, 2026. Rates-for-longer cuts both ways for SoFi: it supports net interest margin on its loan book and deposits, but keeps borrower refinancing demand and credit-quality pressure elevated.",
+    "interest_rate_outlook": "No confirmed near-term cut is priced given the divided July hold and above-target inflation; SoFi's high beta (2.2) makes it more sensitive to any shift in rate-cut expectations at the September meeting than lower-beta financials.",
+    "fx_impact": "Minimal direct FX exposure \u2014 SoFi's operations and loan book are USD-denominated and US-focused.",
     "sector_macro_factors": [
-      "Fed funds held at 3.50-3.75% with a hawkish 9-3 vote \u2014 three dissents favored hiking, not cutting",
-      "Restrictive policy is a double-edged input: supportive of net interest margin, hostile to the growth multiple and to loan demand",
-      "Consumer credit cycle is the dominant sector driver \u2014 tightening lending conditions were a named cause of SoFi's 2026 de-rating",
-      "Beta of 2.20 means macro risk-off is amplified roughly 2x into this equity regardless of company execution",
-      "Regulatory scrutiny of consumer fintech lending remains an active overhang cited in coverage of the decline",
-      "Deposit competition among digital banks sets the floor on funding cost in a higher-for-longer regime"
+      "Fintech/consumer lender sensitivity to a higher-for-longer rate environment",
+      "Student-loan-refinancing demand tied to broader rate trajectory",
+      "Credit Services sector correlation with consumer credit health"
     ],
-    "geopolitical_risks": [
-      "Limited direct exposure \u2014 SoFi has no meaningful international operations, supply chain, or cross-border revenue",
-      "Indirect exposure via broad risk-off episodes, which a 2.20 beta amplifies into outsized drawdowns",
-      "US domestic policy risk on student loan programs and consumer lending regulation is the more relevant 'political' channel than geopolitics proper",
-      "Inflation persistence driving the hawkish FOMC dissents is itself partly a function of external cost shocks"
-    ],
-    "summary": "The Fed held at 3.50-3.75% in July 2026 with three dissenters wanting hikes, so the policy risk skews toward tighter-for-longer rather than relief \u2014 a regime that helps SoFi's net interest margin but pressures both its 22.5x forward multiple and consumer credit demand. FX is immaterial for this US-only lender. Neutral with medium confidence: the rate path is a genuine headwind but one already partially discounted in a stock trading 44% below its 52-week high."
+    "geopolitical_risks": [],
+    "summary": "The Fed's steady-but-divided 3.50-3.75% hold with above-target inflation is a mixed macro backdrop for SoFi \u2014 supportive of net interest margin but not clearly supportive of loan growth or a near-term rate-cut catalyst, so no directional macro signal is warranted."
   },
   "pipeline_mode": "in-session-claude-code"
 }
