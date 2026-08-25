@@ -2,100 +2,81 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "No trailing P/E exists \u2014 Ondas is loss-making, with yfinance showing a forward P/E of -462x, which is not meaningful. Valuation must run off sales: market cap is $5.27B against management's raised FY2026 revenue guidance of $525-550M, or roughly 9.6-10.0x price/sales. Netting out the ~$1.4B cash balance disclosed at Q2 2026, enterprise value is closer to $3.9B, or ~7.1-7.4x EV/FY26 revenue guidance. That is a demanding but not absurd multiple for a defense/counter-UAS platform growing triple digits; it prices in successful execution of the second-half ramp. Note the stale-data caveat: the fetched fundamentals.json carries FY2025 annual figures (revenue $50.7M, net income -$132.0M), while Q2 2026 alone printed $83.8M of revenue, so all trailing ratios in the raw feed materially understate current scale.",
-    "margin_analysis": "Gross margin in the fetched annual data is 39.7%, and the Q2 2026 report shows 43.1% \u2014 respectable for a hardware-heavy unmanned-systems business, but declining on mix as lower-margin acquired platforms (Rotron, Dzyne, Omnisys) consolidate in. Below the gross line the picture is far worse: operating margin of -115.1% and net margin of -260.2% on the annual base, and an adjusted EBITDA loss that widened to $50.6M in Q2 2026. Management guides to platform-level profitability only in Q4 2026, which means the company will have burned through most of 2026 before any segment crosses over. Operating leverage is the entire thesis here and it is still unproven at scale.",
-    "debt_analysis": "The balance sheet is the strongest part of the story. Total debt is only $15.56M against $437.8M of book equity in the annual data, and Q2 2026 disclosed roughly $1.4B of cash following a series of capital raises. Net cash is therefore enormous relative to the debt load, and there is effectively no leverage or refinancing risk. The cost of that safety, however, is paid in shares rather than interest: the cash was raised through equity issuance and acquisition stock consideration (Dzyne alone at $875.8M), and a share-resale filing tied to the Omnisys deal has already pressured the stock. Free cash flow of -$40.9M on the annual base, plus the widening EBITDA loss, means the burn continues \u2014 but with $1.4B on hand the runway is measured in years, not quarters.",
-    "growth_outlook": "Growth is exceptional on the headline: Q2 2026 revenue of $83.8M beat the ~$68M consensus and rose more than 13x year over year, first-half revenue reached ~$134M, backlog stands at $757M, and total awards under the U.S. Army Lethal Unmanned Systems program exceed $240M within a $982M IDIQ ceiling. Segment growth is broad \u2014 Airobotics/Iron Drone +112%, Centrix +298% pro forma, 4M +258% pro forma, and Rotron booking $34.2M of orders in Q2 versus the ~$25M of 2026 revenue underwritten at acquisition. The critical caveat is that much of this is inorganic and the guidance is back-end loaded: hitting $525-550M for the year requires $391-416M in the second half versus $134M in the first, roughly a tripling of run-rate in two quarters. Backlog plus IDIQ coverage makes that plausible, but it leaves no room for delivery slippage.",
+    "pe_assessment": "Trailing P/E is not meaningful (net loss, P/E=null) and forward P/E is -412x, reflecting continued near-term unprofitability priced against a market cap of ~$4.70B. Valuation is entirely a growth/backlog story, not an earnings multiple story.",
+    "margin_analysis": "Gross margin 39.7% is respectable for a hardware/defense-tech mix, but operating margin -115.1% and net margin -260.2% show the company is still burning heavily to scale. Trailing revenue in this filing ($50.7M) looks stale versus management's own FY2026 guidance of $525-550M and a reported record Q2 of $83.8M, so margin ratios computed off this base will understate the current run-rate materially.",
+    "debt_analysis": "Balance sheet is not distressed: total debt of $15.6M against total equity of $437.8M is a very light leverage load. Cash burn (FCF -$40.9M) is being funded primarily via equity issuance (a public offering closed recently per news), which is dilutive but not a solvency risk.",
+    "growth_outlook": "Management guidance implies >10x revenue growth vs 2025 and >30% organic growth, backed by a ~$757M backlog plus recent defense wins (Cyberhawk acquisition, $33M Aran Defense deal expanding Israel-based manufacturing). If the backlog converts on schedule this is a genuine inflection, not a promotional guide-up.",
     "key_risks": [
-      "Guidance is severely back-end loaded: $391-416M of second-half revenue is required against $134M delivered in the first half, so any delivery or acceptance slippage breaks the FY26 number",
-      "Ongoing equity dilution \u2014 the $1.4B cash pile and the $875.8M Dzyne acquisition were funded largely with stock, and the Omnisys resale registration added visible supply",
-      "Persistent unprofitability: adjusted EBITDA loss widened to $50.6M in Q2 2026 and platform-level profitability is only promised for Q4 2026",
-      "Gross margin compression to 43.1% as lower-margin acquired hardware businesses consolidate into the mix",
-      "Integration risk across an unusually rapid acquisition sequence (Dzyne, Rotron, Omnisys, Cyberhawk) with limited track record of realized synergies",
-      "Revenue concentration in U.S. government and defense programs, exposing the company to appropriations timing and program-level cancellation risk",
-      "Reported figures in the raw data feed lag the current business by a full fiscal year, raising the risk that screening-based investors misprice the company in either direction"
+      "Deep and continuing unprofitability (net margin -260%, negative FCF) with no clear near-term path to breakeven",
+      "Recent dilutive equity offering plus pending Form 144 insider sale filings signal supply overhang",
+      "Guidance-to-trailing-financials gap is large; execution risk on the $757M backlog converting to recognized revenue on schedule",
+      "Q2 EPS loss of $0.19 came in wider than the $0.13 expected, showing profitability is not yet tracking with revenue growth"
     ],
     "key_strengths": [
-      "Backlog of $757M provides revenue visibility well beyond the current guidance year",
-      "Position under a $982M U.S. Army LUS IDIQ with more than $240M already awarded, including a fresh $50M+ order",
-      "Roughly $1.4B of cash against only $15.6M of total debt \u2014 no leverage risk and multi-year funding runway",
-      "Raised FY2026 revenue guidance to $525-550M, a ~25% increase over the prior target, signalling management confidence",
-      "Broad-based segment growth rather than a single-product story: Airobotics +112%, Centrix +298%, 4M +258% pro forma",
-      "Validated counter-UAS deployment at a majority of North American 2026 FIFA World Cup stadiums \u2014 real-world proof at scale",
-      "Unanimous sell-side support with 2 strong-buy and 7 buy ratings and no holds or sells"
+      "Record Q2 revenue and a raised FY2026 guide to $525-550M",
+      "Strong balance sheet with low debt relative to equity",
+      "Diversifying backlog via recent M&A (Cyberhawk, Aran Defense) into drone inspection and defense manufacturing",
+      "Analyst coverage uniformly Buy/Outperform (2 strong buy, 7 buy, 0 hold/sell) with raised price targets post-earnings"
     ],
-    "summary": "Ondas has transformed from a sub-$100M-revenue speculative name into a $525-550M-guidance defense platform with a $757M backlog, ~$1.4B of cash and effectively no debt, and the fetched annual financials badly understate that. The offsetting facts are real: adjusted EBITDA losses are widening, guidance requires roughly tripling the first-half run rate, and the balance sheet was built with shareholder dilution. At ~7.1-7.4x EV to guided FY26 revenue the stock demands execution, but the backlog and IDIQ coverage make the setup favourable enough to warrant a buy at medium confidence."
+    "summary": "Fundamentals are a high-growth, pre-profitability story: guidance implies explosive revenue growth and a healthy balance sheet, but current-period margins are deeply negative and a recent dilutive raise plus insider-sale filings are real near-term overhangs. Net: buy on the growth trajectory, medium confidence given the unresolved path to profitability."
   },
   "sentiment": {
-    "signal": "neutral",
-    "confidence": "medium",
-    "news_tone": "mixed",
-    "news_summary": "The yfinance news feed returned ten empty headline records, so this assessment is built from dated web coverage from the first half of August 2026. The flow is genuinely two-sided. Operationally the news is strongly positive: a record Q2 print of $83.8M against a ~$68M consensus, raised FY26 guidance to $525-550M, a $757M backlog, a fresh U.S. Army order above $50M lifting LUS awards past $240M, the completed Cyberhawk acquisition, and a Buy initiation from Roth Capital on 10 August 2026. Yet the market's reaction has been the opposite of the headlines: the stock fell after the earnings beat, and coverage explicitly framed the move as 'dilution fears fight defense wins' following a share-resale filing tied to the Omnisys deal. The stock trades at roughly $9.24, about 40% below its 52-week high of $15.28, even as fundamentals inflected upward.",
-    "key_themes": [
-      "Defense contract momentum \u2014 U.S. Army LUS awards past $240M under a $982M IDIQ",
-      "Dilution overhang from acquisition-funded equity issuance and the Omnisys share-resale registration",
-      "Counter-UAS credibility from FIFA World Cup stadium deployments",
-      "Serial M&A as the growth engine (Dzyne, Rotron, Omnisys, Cyberhawk) and the integration scepticism it invites",
-      "Short-squeeze speculation with short interest around 30-40% of float",
-      "A widening gap between improving fundamentals and a falling share price"
-    ],
-    "notable_headlines": [
-      "Ondas Posts Record Q2 2026 Revenue of $83.8 Million on Strong Bookings and Backlog Growth; Raises Full-Year Outlook (Ondas IR)",
-      "ONDS Stock Drops After Earnings - CEO Expects 'Sustained Momentum', Raises 2026 Revenue Outlook To $550M (Yahoo Finance)",
-      "Ondas Stock Climbs As Defense Orders And Backlog Surge (StocksToTrade, 14 Aug 2026)",
-      "ONDS Stock Gains Traction On Big Defense Contracts And AI Push (StocksToTrade, 7 Aug 2026)",
-      "ONDS Short Interest Has Stayed Above 30% Since March Despite A 24% Drop In Stock Price - Now, Retail's Betting Against The Bears (Stocktwits)",
-      "Ondas Stock Breaches $10 Ahead Of Earnings: Retail Bulls Expect A 'Short Squeeze' (Yahoo Finance)",
-      "Ondas was initiated with a Buy at Roth Capital (10 Aug 2026)"
-    ],
-    "social_sentiment": "Extremely bullish and crowded. Stocktwits sentiment has been in 'extremely bullish' territory with message volume rising from 'high' to 'extremely high', and the dominant retail narrative is an imminent short squeeze against short interest that has held above 30% of float since March and reportedly approached 40%. This is a classic contrarian warning sign: extreme retail bullishness combined with heavy short positioning produces violent two-way moves rather than a durable trend, and it means positioning rather than fundamentals is likely to drive the next 10-15% in either direction.",
-    "summary": "Sell-side and operational sentiment are unambiguously positive \u2014 2 strong-buy plus 7 buy ratings with zero holds or sells, a fresh Roth Capital Buy initiation, and a record quarter with raised guidance \u2014 yet the stock sold off on the beat, which says the market is trading the dilution and the back-end-loaded guidance rather than the print. With retail sentiment at 'extremely bullish' extremes against 30-40% short interest, positioning is crowded on both sides and the signal value of sentiment is low. Net assessment is neutral at medium confidence: the news tone is good but sentiment is running ahead of demonstrated profitability and is being actively rejected by price."
-  },
-  "technical": {
     "signal": "buy",
     "confidence": "medium",
-    "trend": "Recovering intermediate uptrend inside a broken longer-term downtrend. As of 2026-08-14 the close of $9.24 sits above the SMA-20 at $8.35 and the SMA-50 at $8.38 but still below the SMA-200 at $9.37 \u2014 a rally off the July base that has not yet reclaimed the long-term trend line. The 20- and 50-day averages have converged almost exactly ($8.35 vs $8.38), which is the signature of a completed base rather than a trending market, and price has advanced roughly 40% off the 2026-07-20 close of $6.87 in under a month. The stock remains 39.5% below its 52-week high of $15.28 while sitting 188.8% above its 52-week low of $3.20.",
-    "rsi_14": 60.4811,
-    "rsi_assessment": "RSI-14 at 60.5 is constructive rather than stretched. It is well clear of the 50 midline, confirming that buyers control the intermediate timeframe, but far from the 70 overbought threshold, so there is headroom before momentum becomes a contrarian concern. For a name with this volatility profile a reading in the low 60s after a 40% advance is notably restrained and suggests the move has been absorbed rather than blown off. No bearish divergence is evident \u2014 the price highs on 12 August coincide with the strongest momentum readings of the recovery.",
-    "macd_assessment": "MACD is bullish and improving. The MACD line at +0.363 sits above the signal line at +0.192, producing a positive histogram of +0.171. Both the line and the signal are above zero, meaning the fast and slow EMAs have completed a bullish crossover and the trend component has flipped positive, not merely the momentum component. The histogram is expanding rather than contracting, which indicates the crossover is still gaining energy rather than decaying \u2014 though at this magnitude relative to a $9.24 share price the signal is moderate, not extreme.",
-    "volume_assessment": "Volume is confirming without exceptional conviction. The most recent session traded 96.5M shares against a 20-day average of 99.4M for a volume ratio of 0.97, essentially in line. More informative is the structure of the advance: the 20-21 July breakout off the base traded 187M and 284M shares, roughly double to triple current averages, so the base breakout itself was volume-confirmed. The 13 August down day traded 125.2M shares, the heaviest of the recent stretch, which is a mild negative \u2014 distribution on weakness \u2014 but the 14 August recovery to $9.24 on 96.5M reclaimed most of that ground. Overall: adequate confirmation, no divergence, but no fresh volume thrust to power a breakout through resistance.",
+    "news_tone": "mixed-to-positive",
+    "news_summary": "Ondas posted record Q2 2026 revenue of $83.8M and raised FY2026 guidance to $525-550M on Aug 13, 2026, prompting Oppenheimer, Ladenburg, and Roth to reaffirm/raise Buy and Outperform ratings. Since then the stock has slipped roughly 5.5% on a wider-than-expected EPS loss (-$0.19 vs -$0.13 est.) and multiple Form 144 filings signaling pending insider share sales.",
+    "key_themes": [
+      "Post-earnings guidance raise driving analyst price-target increases",
+      "Defense/drone M&A expansion (Cyberhawk, Aran Defense) broadening the growth narrative",
+      "Insider Form 144 filings creating a near-term overhang despite the earnings beat on revenue",
+      "Widening net loss per share tempering enthusiasm on the earnings print itself"
+    ],
+    "notable_headlines": [
+      "Ondas Stock Draws Bullish Targets After Record Q2 Surge",
+      "ONDS Stock Slips As Loss Widens And Insider Sales Loom",
+      "ONDS Stock Slips As Earnings Miss Meets Insider Sale Plans",
+      "Ondas Holdings Completes Successful Public Offering"
+    ],
+    "social_sentiment": null,
+    "summary": "Sentiment is net positive on the growth/guidance story (unanimous analyst Buy/Outperform coverage) but tempered by a wider EPS miss and insider-sale-driven weakness in the days since earnings. Sentiment currently looks slightly ahead of the near-term fundamentals given the still-heavy losses."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Mixed/consolidating pullback: price ($8.24) is above the 50-day SMA ($8.20) but below both the 20-day SMA ($8.65, EMA20 $8.63) and the 200-day SMA ($9.44), consistent with a stock that rallied hard off its 52-week low ($4.53, +81.9%) and has since pulled back ~46% from its 52-week high ($15.28).",
+    "rsi_14": 42.5121,
+    "rsi_assessment": "RSI-14 at 42.5 is neutral (below the 50 midline but well clear of the 30 oversold threshold), indicating momentum has cooled from the post-earnings highs without being oversold enough to signal a bounce is imminent.",
+    "macd_assessment": "MACD line (0.150) sits below its signal line (0.226), producing a negative histogram (-0.076) \u2014 short-term momentum is bearish/decelerating, consistent with the price sliding back through its 20-day average this week.",
+    "volume_assessment": "Volume ratio of 0.661 (49.1M vs 20-day average 74.3M) shows the recent pullback is happening on below-average volume, suggesting distribution pressure so far is moderate rather than a high-conviction breakdown.",
     "support_levels": [
-      8.38,
-      8.35,
-      7.49,
-      6.87,
-      6.59
+      8.2,
+      7.14,
+      4.53
     ],
     "resistance_levels": [
-      9.37,
-      9.99,
-      10.1,
+      8.65,
+      9.44,
+      10.16,
       15.28
     ],
-    "summary": "ONDS has completed a base near $6.60-7.50 and rallied roughly 40% to $9.24, reclaiming both the SMA-20 and SMA-50 with a positive expanding MACD histogram and a healthy, non-overbought RSI of 60.5. The decisive test sits immediately overhead: the SMA-200 at $9.37, the recent swing high at $9.99, and the upper Bollinger Band at $10.10 form a dense resistance cluster within 9% of spot, and Bollinger %B of 0.75 shows price already in the upper quartile of its volatility envelope. Buy at medium confidence, with an ATR-14 of $0.72 (7.8% of price) as a reminder that position sizing matters far more than entry precision here."
+    "summary": "Technicals are neutral: the stock is digesting its post-earnings volatility in a range between the 50-day SMA support (~$8.20) and 20/200-day SMA resistance (~$8.65-$9.44), with bearish short-term momentum (negative MACD histogram) but no oversold extreme and only light volume behind the pullback."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "The Fed held its benchmark at 3.50-3.75% on 29 July 2026, a fifth consecutive hold and the second decision under Chair Kevin Warsh, on a 9-3 vote. The June Summary of Economic Projections turned hawkish, lifting the median end-2026 fed funds projection to 3.8% with nine of eighteen participants penciling in at least one hike, and markets have swung from expecting cuts to pricing some probability of a hike. This matters more for Ondas than for a typical industrial. With a beta of 2.75, no earnings, and a valuation resting almost entirely on out-year cash flows, the stock carries maximum duration risk: higher discount rates compress the present value of the 2028-2030 profitability that the current ~7x EV/sales multiple assumes. The offsetting fact is that the company already holds roughly $1.4B of cash against $15.6M of debt, so it does not need to borrow at these rates \u2014 and at 3.50-3.75% that cash balance now earns a meaningful $45-50M annualized, partially funding the operating burn. The real Fed transmission channel is equity risk appetite, not the cost of debt.",
-    "interest_rate_outlook": "Consensus points to roughly one further 25bp cut to 3.25-3.50% by year-end 2026, with September or October the most probable timing and 55-65% of participants holding that view \u2014 but a meaningful 30-40% probability that the Fed does not cut at all this year. The next FOMC meeting is 15-16 September 2026. Inflation remains above the 2% goal, driven partly by energy and supply shocks tied to Middle East tensions, which limits the Fed's freedom to ease into any growth scare. For ONDS this is a two-sided setup: a September cut would be a direct multiple tailwind for a high-beta, long-duration name, while a hawkish hold or a hike signal would hit this cohort harder than the broad market. Given the balance of probabilities is only modestly tilted toward easing, rates are best treated as a source of volatility rather than a directional thesis.",
-    "fx_impact": "Minimal and not a driver of the thesis. Ondas reports in USD and its dominant revenue stream is U.S. Department of Defense and U.S. Army programs, contracted in USD, so there is little translation exposure on the core business. The genuine FX exposure is on the periphery: Airobotics operations in Israel carry a shekel-denominated cost base, and the acquired Cyberhawk (UK) and Omnisys operations introduce modest GBP and other non-USD cost exposure. A stronger dollar would marginally reduce reported foreign operating costs and marginally pressure any non-U.S. revenue. Net effect on FY26 results is immaterial relative to the execution and dilution variables.",
+    "confidence": "low",
+    "fed_impact": "The FOMC held the federal funds rate at 3.50-3.75% at its July 2026 meeting (9-3 vote, with three regional presidents dissenting in favor of a hike given inflation above target for over five years). No August meeting is scheduled; the next decision is Sept 15-16, 2026. A steady-to-hawkish-leaning Fed keeps the cost of capital elevated for a company that is still deeply unprofitable and funding growth partly via equity issuance.",
+    "interest_rate_outlook": "Rates are more likely to stay higher-for-longer than to cut soon, given persistent above-target inflation and internal hawkish dissent. That is a mild headwind for high-beta (2.75), pre-profit growth names like ONDS whose valuation rests on distant cash flows, though ONDS's own leverage is low so the direct interest-expense impact is limited.",
+    "fx_impact": "Ondas is USD-reporting with a new Israel-based manufacturing footprint via the Aran Defense acquisition, introducing modest USD/ILS translation and operational FX exposure that was not previously material to the business.",
     "sector_macro_factors": [
-      "Defense and counter-UAS budgets are in a structural upcycle, with the $982M U.S. Army LUS IDIQ providing multi-year contracted visibility that is largely insulated from the business cycle",
-      "Heightened Middle East tensions \u2014 cited by the Fed as an inflation driver \u2014 simultaneously raise demand for counter-drone and unmanned systems, making geopolitical stress a partial revenue hedge for this name",
-      "High beta of 2.75 means ONDS amplifies broad equity-market direction roughly threefold; macro-driven risk-off episodes will dominate company-specific news in the short run",
-      "Long-duration profile: with profitability promised only from Q4 2026 at the platform level, the valuation is unusually sensitive to the discount rate",
-      "U.S. government appropriations timing and any continuing-resolution or shutdown dynamics can delay contract awards and revenue recognition independent of demand",
-      "Roughly $1.4B of cash earning 3.50-3.75% generates meaningful non-operating income that partially offsets the cash burn \u2014 an underappreciated benefit of the current rate regime"
+      "Elevated-for-longer US rates raise the discount rate applied to long-duration, pre-profit growth equities",
+      "Defense/drone segment has some insulation via government and defense-budget-linked demand rather than pure consumer-rate sensitivity",
+      "High beta (2.75) means ONDS will amplify broad market/macro risk-off moves regardless of company-specific news"
     ],
     "geopolitical_risks": [
-      "Middle East tensions are a genuine two-sided exposure: they drive demand for Ondas' counter-UAS and unmanned systems while creating operational and personnel risk for the Israel-based Airobotics operations",
-      "Any de-escalation in active conflicts would remove urgency from counter-drone procurement and could compress both order flow and the sector's valuation multiple",
-      "Dependence on U.S. defense procurement exposes the company to shifts in appropriations priorities and to political changes in defense spending posture",
-      "Supply-chain exposure for drone components, where export controls and sourcing restrictions on critical parts remain an active policy risk",
-      "Export-control and end-user restrictions constrain the addressable international market for lethal and counter-UAS systems"
+      "New Israel-based manufacturing exposure from the Aran Defense acquisition ties a portion of operations to Middle East geopolitical/security conditions",
+      "Defense-sector revenue can be sensitive to shifts in government procurement priorities and geopolitical budget cycles"
     ],
-    "summary": "The macro setup is genuinely balanced. A hawkish Fed holding at 3.50-3.75% with a live hike scenario is a headwind for a beta-2.75, pre-profit, long-duration equity, and the September FOMC is a real volatility event \u2014 but Ondas' ~$1.4B net cash position insulates it from any funding-cost transmission and even earns $45-50M a year at current rates. Against that, the defense and counter-UAS spending cycle and elevated geopolitical tension are structural demand tailwinds that partly offset rate sensitivity. Neutral at medium confidence: macro will drive short-term volatility here but is not the deciding variable in the thesis."
+    "summary": "Macro is a mild, non-decisive headwind: a steady-to-hawkish Fed (funds rate 3.50-3.75%, no near-term cut signaled) raises the discount rate on this pre-profit, high-beta name, while new Israel-linked manufacturing exposure adds a modest geopolitical variable. Neither factor is company-specific enough to drive the thesis, hence low confidence and a neutral signal."
   },
   "pipeline_mode": "in-session-claude-code"
 }

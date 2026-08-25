@@ -1,99 +1,80 @@
 {
   "fundamentals": {
-    "signal": "neutral",
+    "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "At 35.6x trailing and 32.6x forward earnings, AAPL trades at a marked premium to both the broad market (~22x) and its own historical mid-20s range, with only ~9% forward earnings-growth implied by the P/E compression from 35.6x to 32.6x. The $330.53 consensus target (~+8% upside) prices in continued multiple support rather than expansion, and at a $4.52T market cap the stock is priced for flawless execution against guidance that just came in light.",
-    "margin_analysis": "Trailing margins are elite \u2014 46.9% gross, 32.0% operating, 26.9% net \u2014 and the June quarter's 50.1% gross margin was an all-time-caliber print. But the September guide of 47%-48% implies a 2-3pp sequential step down, and it flatters itself with roughly 1pp of tariff-refund benefit, so underlying gross margin is closer to 46%-47%; with management flagging rising DRAM/NAND costs, this looks like the start of a margin down-cycle rather than a one-quarter blip.",
-    "debt_analysis": "Total debt of $98.7B against $73.7B of equity gives a debt/equity of 1.34x, optically levered \u2014 but that equity base is the artifact of ~$700B of cumulative buybacks, not balance-sheet stress. Against $98.8B of trailing free cash flow, total debt is covered roughly 1.0x in a single year and net income of $112.0B exceeds gross debt outright, so leverage is immaterial to the credit; capital structure is a non-risk here.",
-    "growth_outlook": "The June quarter's +16% YoY revenue growth is not the run rate: September is guided to +9%-11% versus the ~12% the street modeled, an abrupt 5-7pp deceleration. Upside drivers are real \u2014 China iPhone sales +23% over the first nine weeks of 2026 and demand exceeding supply \u2014 but the binding constraint has moved from demand to advanced-node SoC availability, which caps near-term revenue conversion regardless of demand strength, and the Services miss removes the highest-margin growth offset.",
+    "pe_assessment": "P/E of 35.5x (forward 32.5x) is rich vs. Apple's historical mid-20s average and vs. broad market, but is being paid down by earnings growth (forward < trailing) and is not extreme for a $4.5T mega-cap with 27% net margins.",
+    "margin_analysis": "Gross margin 46.9%, operating margin 32.0%, net margin 26.9% -- best-in-class for a hardware/services hybrid and consistent with Apple's services mix shielding hardware commoditization pressure.",
+    "debt_analysis": "Total debt $98.7B vs. total equity $73.7B (debt/equity ~1.34x) is elevated on the balance sheet, but is more than covered by $98.8B of free cash flow generated in the period, so leverage reads as capital-structure optimization (buybacks/dividends) rather than distress.",
+    "growth_outlook": "Revenue $416.2B / net income $112.0B with FCF roughly matching net income indicates high earnings quality. Analyst recommendation mix has improved over the last 3 months (strong buy+buy rising from 25 to 30 of 44 covering analysts, sell-side shrinking from 5 to 3), signaling improving Street conviction on forward growth (services, AI-adjacent product cycle).",
     "key_risks": [
-      "September gross margin guide of 47%-48% includes ~1pp of tariff refunds, so clean margin is ~46%-47% versus 50.1% in June \u2014 a 3-4pp underlying compression",
-      "Revenue deceleration from +16% to a guided +9%-11%, below the ~12% consensus, on a 32.6x forward multiple that leaves no room for a miss",
-      "Worsening supply constraints on advanced-node SoCs for iPhone and Mac convert strong demand into deferred rather than recognized revenue",
-      "Rising DRAM/NAND input costs pressure hardware margins with limited pricing offset in the near term",
-      "Services revenue missed consensus \u2014 the segment carrying the highest-margin, most durable growth narrative and the primary multiple-support argument",
-      "Analyst sentiment quietly eroding: sell + strongSell went from 3 to 5 over four months while strongBuy/buy slipped from 30 to 28",
-      "Stock fell ~7.4% on a double beat, evidence that positioning is crowded and good news is fully discounted"
+      "Valuation multiple (35x trailing) leaves little room for execution missteps",
+      "Debt/equity of ~1.34x is high relative to net income coverage if FCF were to compress",
+      "CEO transition (Tim Cook to John Ternus, effective Sept 1 2026) is an execution/continuity unknown"
     ],
     "key_strengths": [
-      "Exceptional profitability at scale: 26.9% net margin on $416.2B of revenue, producing $112.0B of net income",
-      "$98.8B of trailing free cash flow funds buybacks and the dividend while covering total debt roughly 1.0x annually",
-      "Q3 FY26 double beat \u2014 EPS $2.02 vs $1.89 and revenue $109.42B vs $108.86B \u2014 on record quarterly revenue",
-      "China iPhone sales up 23% over the first nine weeks of 2026, reversing the region's prior drag",
-      "Demand exceeding expectations means the constraint is supply, not consumer appetite \u2014 a deferral, not a demand impairment",
-      "Beta of 1.086 with a fortress cash-generative model; leverage risk is optical only given equity shrunk by buybacks",
-      "Current $310.03 sits ~10% below the 52-week high of $344.57, having already de-rated on the guidance reset"
+      "Best-in-class margins (27% net) and FCF conversion",
+      "Improving analyst sentiment trend over the last quarter",
+      "$4.5T scale with diversified hardware + services revenue base"
     ],
-    "summary": "Apple remains a best-in-class compounder \u2014 26.9% net margin, $98.8B of free cash flow, and a China reacceleration to +23% \u2014 but at 32.6x forward earnings the stock is priced for the +16% growth it just guided away from, toward +9%-11%. The September gross margin guide of 47%-48% flatters itself with ~1pp of tariff refunds against 50.1% in June, and with supply constraints worsening and memory costs rising, both growth and margin are stepping down simultaneously. The ~7.4% drawdown on a double beat tells you the multiple, not the fundamentals, is the risk; we would wait for a better entry than +8% to consensus."
+    "summary": "Apple's premium valuation is backed by industry-leading margins and strong free cash flow, and the analyst trend has been improving, but the multiple leaves limited room for error, especially through a CEO transition."
   },
   "sentiment": {
     "signal": "buy",
     "confidence": "medium",
-    "news_tone": "mixed",
-    "news_summary": "Apple beat on Q3 FY2026 EPS and revenue with record quarterly sales, but a light September-quarter guide (+9-11% vs ~12% modeled), a gross-margin step-down to 47-48% from 50.1%, and a Services miss drove a -7.35% single-session drop on 2026-07-31. Since then the narrative has turned constructive: BofA and Morgan Stanley published bullish notes on 2026-08-18 around a September foldable iPhone (~81% implied on prediction markets), and China iPhone sales running +23% over the first nine weeks of 2026 is being framed as removing a major overhang. Sell-side ratings drift is quietly negative in the tails (sell 1->3, strongBuy 7->6) even as consensus target $330.53 sits ~8% above spot and one fresh target reaches $400.",
+    "news_tone": "mixed-to-positive",
+    "news_summary": "yfinance returned no usable headlines (empty title/link/publisher fields), so this report is grounded in web-search news from the past two weeks: Apple confirmed a leadership transition (Tim Cook stepping down as CEO, incoming CEO John Ternus effective September 1, 2026), announced $60B of its US investment push is going to a new Texas manufacturing facility, faces analyst optimism around a rumored foldable iPhone, and is cutting jobs in Vision Pro/Siri/Intelligent Systems Experiences teams to redirect resources toward AI. Sell-side average rating is 'Buy' with a 12-month price target of $326.34 (~5.1% above the $310.34 close).",
     "key_themes": [
-      "Beat-and-lower: record revenue against below-consensus guidance",
-      "Gross-margin compression from memory (DRAM/NAND) costs and supply constraints",
-      "Supply constrained by demand, not demand-constrained (advanced-node SoC, Mac supply)",
-      "China recovery removing a structural overhang",
-      "Foldable iPhone as the next catalyst (September 2026)",
-      "Siri/Apple Intelligence execution and timing risk",
-      "Analyst tail dispersion: rising sell count alongside a $400 street high"
+      "CEO succession / leadership transition",
+      "US/Texas manufacturing reshoring (tariff and supply-chain resilience)",
+      "AI resource reallocation (Vision Pro/Siri cuts funding AI push)",
+      "Foldable iPhone as next hardware catalyst"
     ],
     "notable_headlines": [
-      "Apple Shares Tumble Over 6% Even as Revenue and Profit Top Estimates (2026-07-31)",
-      "Record Revenue, Worsening Mac Supply, and a Below-Consensus Q4 Outlook (2026-07-31)",
-      "Record Quarter, Weak Guidance, Siri Timing (2026-07-31)",
-      "BofA and Morgan Stanley constructive notes targeting a September 2026 foldable iPhone launch (2026-08-18)",
-      "China iPhone sales +23% over first nine weeks of 2026, removing one of the market's biggest overhangs"
+      "Interesting News for Apple Stock Investors (Motley Fool, Aug 18 2026) -- CEO transition and Texas investment coverage",
+      "Apple stock price ended at $310.34 on Monday, after gaining 0.320% (stockinvest.us, Aug 24 2026)",
+      "Analyst consensus: 45 analysts rate AAPL 'Buy' with $326.34 average 12-month price target"
     ],
     "social_sentiment": null,
-    "summary": "Sentiment is mixed but improving: the post-earnings de-rating priced the margin and guidance disappointment, and the newest dated catalysts (foldable iPhone notes, China +23%) are constructive rather than defensive. Sentiment looks to have overshot behind the fundamentals here \u2014 demand is exceeding supply and China is inflecting, yet the stock is -9.95% off its high with RSI-14 at 28.2 and trades ~8% below consensus target. The contrarian caution is the quiet analyst tail drift (sell count 1->3, strongBuy 7->6) plus an unresolved Siri/Apple Intelligence timeline, which is why this is a buy rather than a strong buy, at medium confidence."
+    "summary": "News tone is mixed-to-positive: a CEO transition and internal team cuts introduce near-term uncertainty, but they are framed as a deliberate AI-focused reallocation, and manufacturing reshoring plus a foldable-iPhone narrative give the sell-side (uniformly 'Buy' rated, above-market target) a positive lean."
   },
   "technical": {
     "signal": "neutral",
     "confidence": "medium",
-    "trend": "Intact long-term uptrend (price +10.57% above SMA-200, +0.36% above SMA-50) but short-term downtrend after the 2026-07-31 earnings gap, with price 1.99% below SMA-20 and below EMA-20; SMA-20 has rolled over as the 300-313 chop persists.",
-    "rsi_14": 28.1975,
-    "rsi_assessment": "At 28.20 RSI-14 is oversold, reflecting the gap-down plus 13 sessions of drift rather than a fresh breakdown; in a market still above its 50- and 200-day averages this reads as washed-out short-term momentum and a mean-reversion setup, not trend confirmation of further downside.",
-    "macd_assessment": "Bearish: MACD line -2.3837 sits below its signal at -0.7503 with a -1.6334 histogram, so momentum is negative and still widening \u2014 no bullish crossover yet, which argues against front-running the oversold RSI.",
-    "volume_assessment": "Unconfirmed weakness: volume ratio 0.90 means the decline is happening on below-average participation, and the only conviction print was the 132.5M-share earnings gap (2.6x avg). The 46.5M shares on 2026-08-18's higher close is the strongest volume since 2026-08-06, a mild positive but not a breakout.",
+    "trend": "Mixed / consolidating within a long-term uptrend: price ($310.34) sits +10.3% above the rising 200-day SMA ($281.24, long-term uptrend intact) and marginally above the 50-day SMA ($310.29, essentially flat), but is below the 20-day SMA ($312.89) and below the 20-day EMA ($311.79), indicating a short-term pullback/pause rather than trend reversal.",
+    "rsi_14": 51.5935,
+    "rsi_assessment": "RSI-14 at 51.6 is neutral -- neither overbought nor oversold, consistent with a stock consolidating rather than trending strongly in either direction.",
+    "macd_assessment": "MACD line (-1.41) is below its signal line (-1.19) with a negative histogram (-0.23), a short-term bearish momentum reading, though the magnitude is small relative to ATR (6.02) and sits within a longer-term uptrend rather than confirming a breakdown.",
+    "volume_assessment": "Volume of 34.4M is well below its 20-day average of 52.3M (ratio 0.66x), indicating the recent pullback is occurring on light volume -- a low-conviction move rather than aggressive distribution.",
     "support_levels": [
-      302.25,
-      299.74,
-      290.3,
-      280.38
+      310.29,
+      290.91,
+      281.24,
+      223.86
     ],
     "resistance_levels": [
-      313.06,
-      316.31,
-      325.61,
-      333.14,
+      312.89,
+      334.87,
       344.27
     ],
-    "summary": "AAPL remains in a longer-term uptrend above its 50- and 200-day averages, but post-earnings momentum is bearish with MACD negative and expanding while RSI at 28.2 flags oversold conditions \u2014 conflicting signals that argue for patience. Price is coiled mid-range in a 300-313 band (Bollinger %B 0.38) on declining volume, with ATR-14 at 8.28 implying the chop is normal volatility rather than a trend break. Wait for either a volume-backed reclaim of the 313-316 zone (SMA-20 / range high) to turn constructive, or a close below 300 to invalidate the base and confirm distribution."
+    "summary": "AAPL is consolidating just under short-term moving averages after a strong long-term uptrend (+10% above the 200-day SMA), with a mildly bearish MACD but neutral RSI and below-average volume -- a low-conviction pause rather than a trend change, so technicals alone do not support a directional call."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "Fed on hold at 3.50-3.75% with a hawkish 9-3 divide and one to two hikes priced by end-2026, which compresses the multiple math on a 32.6x forward P/E name and removes the rate-cut tailwind large-cap tech enjoyed in prior cycles. The cost-of-capital channel itself is nearly irrelevant to Apple's operations: $98.7B total debt against $98.8B trailing FCF and a large net-cash position means higher rates are a mild net interest income benefit, not a funding problem.",
-    "interest_rate_outlook": "Higher-for-longer with genuine hike risk into the 2026-09-15/16 FOMC; inflation described as elevated for a fifth-plus year, and energy (WTI above $84 after an April spike to $113) is an active upward inflation channel. For AAPL this transmits almost entirely through valuation and consumer demand rather than through the balance sheet.",
-    "fx_impact": "Apple reports in USD with majority-international revenue, so a hawkish Fed and firmer USD are a modest translational headwind to reported revenue and margin. MYR/USD and BNM policy are not relevant to this name.",
+    "confidence": "low",
+    "fed_impact": "The FOMC held the federal funds rate at 3.5%-3.75% at its July 29, 2026 meeting in a divided 9-3 vote, with three regional presidents dissenting in favor of cuts as inflation has remained above the Fed's 2% target for over five years. The next meeting (Sept 15-16, 2026) is the near-term catalyst for a possible rate-path shift.",
+    "interest_rate_outlook": "Rates are in a 'higher-for-longer, but increasingly contested' stance -- a dovish minority is growing, which caps downside from further hikes but also means no near-term relief on the discount rate used to value Apple's long-duration cash flows and premium P/E multiple.",
+    "fx_impact": "No dated USD trade-weighted or region-specific FX data was available in this session's macro tool for a specific currency-impact call; Apple's large non-US revenue base gives it some general USD-strength sensitivity, but this is a qualitative note, not a dated quantified factor.",
     "sector_macro_factors": [
-      "Memory cost shock is the dominant macro-adjacent driver: Samsung blended DRAM+NAND ASP +146% vs the 2025 average, conventional DRAM contracts +90-95% and NAND +55-60% in Q1 2026, as capacity was reallocated to AI HBM/DDR5 with no meaningful new supply until 2027-2028.",
-      "NAND demand growth of 20-22% YoY against 15-17% supply growth keeps shortage conditions in place through 2026, an input-cost squeeze independent of the Fed.",
-      "Management-confirmed margin transmission: September-quarter gross margin guided to 47-48% from 50.1%, with explicit warnings on rising memory costs and advanced-node SoC constraints.",
-      "Consumer-discretionary demand risk: peers are raising handset prices and cutting specs into a softening demand environment, so Apple faces a price-versus-volume tradeoff at a time when a restrictive rate path pressures the consumer.",
-      "Tariffs remain a live policy variable \u2014 roughly 1pp of the guided gross margin is tariff-refund benefit, an inherently non-recurring, policy-dependent item.",
-      "Offset: China iPhone sales +23% over the first nine weeks of 2026, a genuine improvement on prior-year weakness and the clearest demand positive in the dated evidence."
+      "Elevated-for-longer real rates pressure high-multiple growth/tech valuations more than value sectors",
+      "New $60B Texas manufacturing investment reduces China/tariff supply-chain concentration risk, a positive structural macro factor for a large-cap hardware exporter",
+      "Consumer discretionary spending on premium hardware (iPhone/foldable) is rate-sensitive via consumer credit costs"
     ],
     "geopolitical_risks": [
-      "Iran conflict is an active inflation channel via crude (2026 range roughly $57 to $113, above $84 at the July FOMC), reinforcing the hawkish Fed path and squeezing discretionary consumer budgets.",
-      "US-China tension on two fronts simultaneously \u2014 Apple's manufacturing footprint and one of its largest end markets \u2014 making the current China sales recovery politically contingent.",
-      "Tariff policy uncertainty, with tariff refunds currently flattering guided gross margin by about 1pp.",
-      "Concentration of advanced-node SoC and memory supply in East Asia, leaving Apple exposed to any Taiwan/Korea disruption on top of the existing allocation shortage."
+      "Continued reliance on China-based assembly/supply chain despite Texas diversification",
+      "US-China trade/tariff policy risk given Apple's global hardware supply chain",
+      "Taiwan Strait tensions (semiconductor/component sourcing exposure)"
     ],
-    "summary": "The dated macro setup is mildly negative for AAPL but the transmission is valuation and demand, not balance sheet: a hawkish Fed holding at 3.50-3.75% with hikes priced pressures a 32.6x forward multiple, while Apple's net-cash position makes it nearly immune to cost-of-capital stress. The more binding force is the memory cost shock, already visible in management's guide from 50.1% to 47-48% gross margin, which no policy easing can relieve before new supply arrives in 2027-2028. Neutral at medium confidence: real, dated, quantified headwinds are partly offset by +23% China iPhone sales and fortress cash flow, and most of what matters here is sector supply economics rather than the macro rate path per se. FX/BNM/MYR are not applicable to this name."
+    "summary": "The Fed's divided hold at 3.5-3.75% keeps the discount-rate backdrop neutral-to-mildly-restrictive for Apple's premium multiple, while the new Texas manufacturing investment is a modest structural positive against tariff/geopolitical supply-chain risk; net macro read is neutral given no clear near-term catalyst until the September FOMC meeting."
   },
   "pipeline_mode": "in-session-claude-code"
 }
