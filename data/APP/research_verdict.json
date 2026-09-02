@@ -1,0 +1,27 @@
+{
+  "ticker": "APP",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Neither side carried the debate because the evidence is split between exceptional single-snapshot fundamentals and a severe, unconfirmed price downtrend. APP merits monitoring, but the missing multi-period trend and dated catalyst evidence prevent a reliable ruling that the forward valuation reflects durable growth rather than estimates at risk.",
+  "winning_side": "neither",
+  "strongest_counterexample": "The strongest counterexample to a neutral stance is the combination of 75.8% operating margin, 60.8% net margin, free cash flow above net income, and a 14.9x forward P/E. If those economics are durable and estimates are met, the 58.1% drawdown could represent a valuation opportunity and the bear case would be overly anchored to lagging technicals.",
+  "invalidation_conditions": [
+    "A close above SMA-20 near $334.30 followed by a reclaim of SMA-50 near $411.62 with volume above the 20-day average would resolve the neutral stance toward a constructive view.",
+    "A close below the 52-week low near $297.50 with a negative MACD histogram would resolve the neutral stance toward a bearish view.",
+    "Operating margin falls below 60% or free cash flow falls below net income for two consecutive reported periods.",
+    "Forward earnings estimates are revised down enough that forward P/E returns above 24x without a corresponding price recovery."
+  ],
+  "evidence_gaps": [
+    "No multi-period financial or segment-level trend was supplied.",
+    "No dated news headlines or dated analyst recommendation changes were supplied.",
+    "No dated company-specific catalyst or earnings-event calendar was supplied.",
+    "No explanation for the large trailing-to-forward P/E difference was supplied."
+  ],
+  "decisive_factors": [
+    "Fundamentals and technicals point in opposite directions: buy versus sell.",
+    "The technical drawdown is severe, with price below SMA-20, SMA-50, and SMA-200.",
+    "The fundamental snapshot is strong but lacks the time series needed to test durability.",
+    "Macro and sentiment are neutral/low and cannot break the tie."
+  ],
+  "pipeline_mode": "in-session-claude-code"
+}

@@ -165,6 +165,16 @@ already `completed` is left untouched rather than reset to `running`, so
 re-running the importer does not blank live ticker pages. Verify ticker counts
 and a few ticker pages before switching scheduled fetches to cloud mode.
 
+For a machine-checkable post-import gate, verify every local briefing has a
+completed remote run with all four public pipeline stages:
+
+```bash
+python scripts/verify_supabase_sync.py --data-dir data
+```
+
+The command exits non-zero unless every local ticker passes, including the
+Layer 3.5 `research_verdict` stage.
+
 Two things the import carries that are easy to miss:
 
 - **Watchlist themes.** `theme` exists only as a `#theme:` marker in
