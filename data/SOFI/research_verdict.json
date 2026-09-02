@@ -1,0 +1,27 @@
+{
+  "ticker": "SOFI",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "SoFi has a profitable base, moderate debt relative to equity, and a forward P/E below its trailing P/E, but the thesis cannot be resolved from the available evidence. Negative free cash flow, unavailable operating margins, missing lending-quality detail, and a price still below the 200-day SMA leave the bull and bear cases balanced.",
+  "winning_side": "neither",
+  "strongest_counterexample": "Negative free cash flow may primarily reflect controlled loan-book growth rather than deterioration, and the current net margin and moderate leverage could support a re-rating if future disclosures confirm funding and credit quality. The early technical recovery could precede that confirmation.",
+  "invalidation_conditions": [
+    "Reported cash-flow composition shows sustained funding or credit stress rather than controlled loan-book investment",
+    "Operating margin remains unavailable or net margin falls below 10% while reported credit losses or funding costs rise",
+    "Price reclaims and sustains above the 200-day SMA near $20.32 with volume at or above its 20-day average",
+    "Reported revenue or earnings growth materially decelerates while forward P/E remains above 25x"
+  ],
+  "evidence_gaps": [
+    "No dated news or dated analyst recommendation evidence",
+    "No cash-flow decomposition, loan-book, funding-cost, liquidity, or credit-loss detail",
+    "Gross and operating margins are unavailable",
+    "No established direction for the future Fed path or USD/MYR trend"
+  ],
+  "decisive_factors": [
+    "$481.3M net income and 13.3% net margin",
+    "Forward P/E of 23.3x versus trailing P/E of 39.1x",
+    "Negative $3.99B free cash flow creates a material unresolved risk",
+    "Price above the 20- and 50-day averages but below the $20.32 200-day SMA on 0.77x volume"
+  ],
+  "pipeline_mode": "in-session-claude-code"
+}

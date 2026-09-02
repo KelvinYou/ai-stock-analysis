@@ -1,0 +1,25 @@
+{
+  "ticker": "NFLX",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Netflix has strong current profitability and free cash flow, and its forward P/E is below its trailing P/E. The debate remains unresolved because the growth assumption is not evidenced in Layer 1 and the stock is still below the 200-day SMA without a dated catalyst.",
+  "winning_side": "neither",
+  "strongest_counterexample": "The market may already be discounting the damaged technical picture: if earnings growth and cash generation continue, the 20.9x forward P/E and improving short-term momentum could support a re-rating before the 200-day average is reclaimed.",
+  "invalidation_conditions": [
+    "Price reclaims and sustains above the 200-day SMA near $87.84 with volume at or above its 20-day average",
+    "Reported revenue and free-cash-flow growth materially accelerate without operating margin falling below 28%",
+    "Reported revenue growth decelerates materially or operating margin falls below 25%, invalidating the constructive fundamental case"
+  ],
+  "evidence_gaps": [
+    "No dated news or dated analyst recommendation evidence",
+    "No dated revenue, subscriber, advertising, content-cost, or management-guidance trend",
+    "No evidence establishing the future Fed path or USD/MYR trend"
+  ],
+  "decisive_factors": [
+    "29.5% operating margin, 24.3% net margin, and $9.46B free cash flow",
+    "Forward P/E of 20.9x versus trailing P/E of 25.1x",
+    "Price above the 20- and 50-day averages with positive MACD",
+    "Price remains below the $87.84 200-day SMA and sentiment evidence is unavailable"
+  ],
+  "pipeline_mode": "in-session-claude-code"
+}
