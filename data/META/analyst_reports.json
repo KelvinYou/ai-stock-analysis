@@ -2,79 +2,71 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Trailing P/E of 20.7x sits well below META's own 3-5yr historical average (mid-20s) and below mega-cap tech peers; forward P/E of 16.1x (a ~22% discount to trailing) signals the market expects continued EPS growth despite the AI-capex overhang.",
-    "margin_analysis": "Exceptional profitability: 82.0% gross margin, 41.4% operating margin, 30.1% net margin on $200.97B TTM revenue ($60.46B net income) \u2014 among the highest in mega-cap tech, showing the core ads business still scales efficiently even as AI infrastructure spend ramps.",
-    "debt_analysis": "Total debt of $83.9B against $217.2B total equity (debt/equity ~0.39) is conservative for the balance sheet size; $46.1B TTM free cash flow comfortably covers debt service and funds the AI capex buildout without near-term solvency risk.",
-    "growth_outlook": "Core digital-ad demand remains resilient per recent coverage, and the forward-vs-trailing P/E discount implies consensus EPS growth; consensus analyst price target of ~$754 (62 analysts, average 'Strong Buy') implies ~35% upside from current ~$559, though realized growth depends on AI capex converting to revenue on the timeline management has promised.",
+    "pe_assessment": "Trailing P/E is 22.33x and forward P/E is 16.96x. The large forward discount supports a buy bias if earnings continue to grow, while AI-capex returns and ad durability remain assumptions.",
+    "margin_analysis": "Gross margin is 82.0%, operating margin 41.4%, and net margin 30.1% on $201.0B revenue. These margins show considerable platform economics and capacity to fund AI investment.",
+    "debt_analysis": "$83.9B debt versus $217.2B equity is approximately 38.6% debt/equity, while FCF is $46.1B. The balance sheet is manageable, but capex and legal settlement costs can reduce flexibility.",
+    "growth_outlook": "Layer 1 shows $201.0B revenue, $60.5B net income, $46.1B FCF, and recommendations of 8 strong buy, 47 buy, and 7 hold with no sells. It lacks an incremental-revenue bridge for AI investment, so the forward discount is supportive but not conclusive.",
     "key_risks": [
-      "Rising AI infrastructure capex is compressing free-cash-flow visibility and drawing investor skepticism about ROI timing",
-      "Active federal trial (opened Aug 18, 2026) brought by 29 state AGs alleging Facebook/Instagram were engineered to be addictive to teens; Meta's own filing cites a theoretical maximum penalty of $1.4T (plaintiffs' estimate closer to $200B), an unresolved tail risk",
-      "Ongoing regulatory/antitrust exposure (EU DMA and similar) on top of the litigation overhang"
+      "AI infrastructure spending may reduce FCF visibility before revenue catches up.",
+      "The social-media safety settlement may cost up to $18B over time and includes operating restrictions.",
+      "Ad demand and platform regulation remain policy-sensitive.",
+      "The close is 24.79% below the 52-week high."
     ],
     "key_strengths": [
-      "Best-in-class margins (82% gross / 41% operating) show pricing power and platform scale",
-      "Strong, growing free cash flow ($46.1B TTM) funds AI investment without needing external financing",
-      "Conservative leverage (debt/equity ~0.39) leaves balance sheet flexibility",
-      "Analyst community remains overwhelmingly bullish (Strong Buy consensus, 8 strong buy / 47 buy / 7 hold, 0 sell) despite the ~31% drawdown from all-time highs"
+      "82.0% gross margin and 41.4% operating margin.",
+      "$46.1B FCF and manageable leverage.",
+      "Forward P/E of 16.96x is materially below trailing P/E.",
+      "Overwhelmingly positive recommendation panel."
     ],
-    "summary": "META's fundamentals are strong \u2014 high margins, solid FCF, and conservative leverage \u2014 with a forward P/E discount suggesting the market still expects EPS growth. The main overhangs are capex-driven FCF compression and a genuinely large-tail-risk litigation event, which caps confidence at medium despite a buy-leaning signal."
+    "summary": "Meta's fundamentals support a buy bias: exceptional margins, FCF, manageable leverage, and a sizeable forward/trailing P/E discount. AI-capex returns, advertising durability, and settlement costs keep confidence below high."
   },
   "sentiment": {
     "signal": "neutral",
     "confidence": "medium",
     "news_tone": "mixed",
-    "news_summary": "Coverage is split: a high-profile federal trial (29 state AGs vs. Meta over alleged teen-addictive design of Facebook/Instagram, opened Aug 18 2026, expected to run ~6 weeks, headline exposure up to $1.4T) is weighing on sentiment and has coincided with the stock trading ~31% below its August 2025 all-time closing high and down ~17% YTD. Against that, sell-side sentiment stayed firmly bullish (62 analysts, 'Strong Buy' consensus, ~$754 average target, +35% implied upside), and Morgan Stanley specifically reassured investors on AI infrastructure spend prospects.",
+    "news_summary": "Layer 1 news fields are empty, so dated public sources were used. Meta released Muse Spark 1.3 on 2026-09-02 with claimed coding and agentic improvements, a positive AI/product narrative. Reporting on the social-media addiction case says Meta agreed to payments of up to $18B over ten years and new minor-use restrictions; this removes a larger trial uncertainty but creates a material cash and operating overhang.",
     "key_themes": [
-      "Teen-safety/addictive-design litigation overhang",
-      "AI capex spending anxiety vs. ROI skepticism",
-      "Analyst bullishness diverging from price action",
-      "Resilient core digital-ad business"
+      "AI model/product progress",
+      "Child-safety settlement",
+      "AI-capex ROI",
+      "Analyst bullishness versus price drawdown"
     ],
     "notable_headlines": [
-      "What Is Going on With Meta Platforms Stock on Thursday? (Benzinga, Aug 2026 \u2014 re: $1.4T teen-addiction trial)",
-      "Meta's AI Spending Could Unlock Abundant Revenue, Analyst Says (Benzinga)",
-      "Meta Stock Today: RSI Hits 35 as $1.4T Trial Looms (Vantage Markets, Aug 20 2026)",
-      "Why Meta Platforms Stock Popped Today (Motley Fool, Aug 3 2026)"
+      "Meta debuts Muse Spark 1.3 \u2014 https://www.axios.com/2026/09/02/meta-debuts-muse-spark-13-as-personal-agent-work-continues",
+      "Meta settles landmark social-media addiction case \u2014 https://www.lemonde.fr/en/economy/article/2026/08/27/meta-settles-landmark-social-media-addiction-case-avoiding-jury_6756899_19.html",
+      "Meta Q2 2026 investor relations \u2014 https://investor.atmeta.com/home/"
     ],
     "social_sentiment": null,
-    "summary": "Sentiment is genuinely mixed: a large litigation tail-risk and AI-capex anxiety have driven a sharp drawdown, while sell-side analysts remain strongly bullish on valuation and AI upside. That divergence between price action and analyst conviction argues for a neutral read until the litigation outcome or capex ROI becomes clearer."
+    "summary": "Sentiment is mixed: the AI release is constructive and the settlement removes extreme trial uncertainty, but the cost and restrictions are material. With no Layer 1 headlines or social series, sentiment stays neutral."
   },
   "technical": {
-    "signal": "sell",
-    "confidence": "medium",
-    "trend": "Downtrend \u2014 price is below the 20/50/200-day SMAs (a fully bearish moving-average stack), roughly 2.7% below SMA-20 (574.74), 5.7% below SMA-50 (592.79), and 10.3% below SMA-200 (623.03), with price down ~29.1% from its 52-week high and only ~7.6% above its 52-week low.",
-    "rsi_14": 37.38,
-    "rsi_assessment": "RSI-14 at 37.4 is in bearish territory but not yet oversold (<30); it reflects sustained selling pressure with some room left before a classic oversold reversal signal would trigger.",
-    "macd_assessment": "MACD line (-13.76) sits well below the signal line (-10.64) with a negative histogram (-3.11), confirming bearish momentum; no bullish crossover yet.",
-    "volume_assessment": "Volume ratio of 0.74x the 20-day average shows the recent decline is happening on below-average volume \u2014 a lack of high-conviction selling that leaves room for either a low-volume grind lower or a sharp reversal on a volume spike.",
-    "support_levels": [
-      541.34,
-      519.78
-    ],
-    "resistance_levels": [
-      574.74,
-      592.79,
-      623.03
-    ],
-    "summary": "Technicals are bearish: price is below all major moving averages with negative MACD momentum, though RSI is not yet oversold and volume is subdued rather than climactic. The setup favors continued downside or consolidation over an imminent reversal."
+    "signal": "buy",
+    "confidence": "low",
+    "trend": "Rebound bias but incomplete: the 2026-09-02 close of $592.85 is above non-null EMA-20 of $576.5590 and MACD has a positive histogram. The close remains 24.79% below the 52-week high, while SMA-20/50/200, RSI, Bollinger Bands, ATR, and support/resistance are unavailable after the non-finite 2026-08-28 bar.",
+    "rsi_14": null,
+    "rsi_assessment": "Unavailable: RSI-14 is null in the 2026-09-02 Layer 1 snapshot; no overbought/oversold conclusion is assigned.",
+    "macd_assessment": "MACD line -5.0594 is above signal line -8.7098, with histogram +3.6504, indicating improving momentum from a negative base. Without RSI or averages this is not proof of reversal.",
+    "volume_assessment": "Volume ratio is 1.1015 versus the 20-day average; this is limited confirmation and cannot establish accumulation without trend context.",
+    "support_levels": [],
+    "resistance_levels": [],
+    "summary": "Available technical fields lean bullish, but confidence is low because core indicators and direct levels are unavailable. No levels are inferred."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "medium",
-    "fed_impact": "The FOMC held the federal funds rate steady at 3.50%-3.75% in its July 2026 meeting (9-3 vote), with three regional presidents dissenting in favor of higher rates \u2014 the first three-way hawkish dissent since September 2016 \u2014 reflecting inflation that has stayed above the Fed's 2% target for over five years. A higher-for-longer stance keeps the discount rate applied to long-duration growth/AI-capex cash flows elevated.",
-    "interest_rate_outlook": "The committee is visibly divided with no clear near-term easing signal; the next FOMC decision is September 15-16, 2026. Persistent above-target inflation and hawkish dissent make further hikes at least as plausible as cuts in the near term, an incremental headwind for high-multiple, high-capex tech names like META.",
-    "fx_impact": "No dated, company-specific FX data is available for META; qualitatively, the bulk of ad revenue is USD-denominated with international billings translated back, so a persistently elevated-rate, stronger-dollar backdrop would be a mild (not primary) drag on reported international ad revenue growth.",
+    "fed_impact": "The 2026-07-29 FOMC statement maintained the federal-funds target range at 3.50%-3.75% by a 9-3 vote; three voters preferred a 25bp increase. It also said inflation remains elevated relative to 2% and cited Middle East conflict uncertainty. For this company, the elevated-rate backdrop is a valuation/cost-of-capital consideration rather than a complete operating signal.",
+    "interest_rate_outlook": "BNM maintained OPR at 2.75% on 2026-07-09 and described resilient growth while flagging tighter global financial conditions, valuation concerns, and conflict-related inflation and supply risks. The supplied statements support a stable but uncertain policy backdrop; they do not justify assuming imminent easing or tightening.",
+    "fx_impact": "For a MYR-based investor, USD assets translate using BNM FMIP reported KL USD/MYR at 4.0420 as of 2026-09-02. A stronger USD can lift MYR value of a USD holding but can pressure international revenue translated back into USD; this single fixing does not establish a trend. Sources: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm; https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026; https://financialmarkets.bnm.gov.my/about-myor-myor-i.",
     "sector_macro_factors": [
-      "AI infrastructure capex across the sector is capital-intensive and increasingly sensitive to the cost of capital in a higher-for-longer rate regime",
-      "Digital ad spend (META's core revenue driver) is cyclical and correlates with broader consumer/enterprise macro conditions",
-      "Elevated long-term rates compress valuation multiples on long-duration growth cash flows more than on value/cyclical peers"
+      "Digital advertising is cyclical and sensitive to business confidence.",
+      "AI infrastructure capex has a higher hurdle rate in an elevated-rate environment.",
+      "BNM context supports regional translation but does not determine global ad demand."
     ],
     "geopolitical_risks": [
-      "Ongoing EU regulatory exposure (Digital Markets Act and related antitrust actions) affecting platform business practices",
-      "Domestic litigation risk from the 29-state-AG teen-safety trial, which is a legal/regulatory rather than pure macro risk but has similar tail-risk characteristics",
-      "Trade-policy/tariff shifts that could indirectly affect global advertiser budgets (e.g., cross-border e-commerce advertisers)"
+      "FOMC and BNM flag conflict and supply/inflation uncertainty.",
+      "Platform regulation and child-safety policy can create operating restrictions and cash costs; no new policy shock beyond dated settlement reporting is assumed."
     ],
-    "summary": "Macro backdrop is a mild headwind, not a company-specific catalyst: the Fed is holding rates at 3.50-3.75% with a divided, potentially hawkish committee, which keeps discount rates elevated for capex-heavy growth names. No dated FX shock is evident. Net macro read is neutral with medium confidence given the real but non-directional nature of the rate uncertainty."
+    "summary": "Macro/FX is neutral with a mild restrictive tilt: high rates raise the AI-capex hurdle and can pressure ad valuations, while cash generation offsets some funding risk. USD/MYR affects translation rather than operating direction."
   },
   "pipeline_mode": "in-session-claude-code"
 }

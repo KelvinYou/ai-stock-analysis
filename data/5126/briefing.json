@@ -1,36 +1,33 @@
 {
   "ticker": "5126",
-  "date": "2026-08-19",
-  "overall_signal": "buy",
+  "date": "2026-09-03",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": 0.3,
-    "signal_convergence": 0.45,
-    "explanation": "Fundamentals and sentiment both point buy on the same underlying facts (B50 mandate, gasoil-diesel substitution, undemanding 9.77x forward P/E, 4.14% yield, strong balance sheet), while technicals are neutral-to-cautious due to overbought RSI and unconfirmed low-volume advance, and macro offers no view. The bull case rests on a real, legislated demand catalyst not yet reflected in analyst ratings, but the bear case correctly flags that price has run ahead of volume and momentum confirmation. Net: valuation and fundamentals justify a positive medium-term stance, but near-term technical exhaustion caps conviction and argues against chasing strength here."
+    "score": 0.0,
+    "signal_convergence": 0.3333,
+    "explanation": "Fundamentals are buy at medium confidence, while sentiment, technicals and macro are neutral at low confidence. The resulting 0.3333 convergence is low: valuation and low leverage support the business, but RSI 71.7949, the above-upper-Bollinger close, zero final volume and the reported 52-week-high conflict prevent a trustworthy directional entry signal."
   },
-  "executive_summary": "SOP presents a case of fundamentals leading price rather than price leading fundamentals. Trailing 12.18x / forward 9.77x P/E, a 4.14% yield, low leverage (D/E ~15%) and solid free cash flow (MYR262M) sit against a legislated B50 biodiesel mandate and gasoil-diesel substitution dynamic that constitutes a genuine, policy-backed demand floor for CPO rather than speculative narrative. Sentiment corroborates this without running ahead of it: news tone is positive but measured, and analyst ratings (2 buy/2 hold) have not re-rated the stock despite the catalyst, suggesting either an unpriced opportunity or a market that has already correctly sized a stock with thin institutional coverage.\n\nThe technical picture complicates the timing of any entry. RSI at 78.4, price +25.44% above SMA200, a stalling MACD histogram, and volume at only 27% of the 20-day average together describe an advance that has outrun its own confirmation - this looks more like a low-conviction, policy-driven grind than an institutionally-backed breakout. The 2.5M-tonne H1 stockpile is a manageable seasonal feature per MPOC guidance, but that guidance carries zero margin for a B50 timeline slip, and ASEAN biodiesel mandates have a history of slipping. Macro/FX offers no directional input given the lack of a dated snapshot.\n\nOn balance, the fundamental and sentiment signals outweigh the technical caution because the key disagreement (is the catalyst priced in?) resolves in the bulls' favor on valuation grounds - 9.77x forward earnings and a 4%+ yield are not pricing in confident 2026 recovery, they are pricing in continuation of an unremarkable present. But the technical exhaustion signals are real and specific enough (RSI, stalling momentum, thin volume at resistance) that this is a buy-the-thesis-not-the-breakout situation: conviction is capped at low-to-moderate until either volume confirms above resistance or the stock pulls back toward support without breaking the uptrend.",
-  "bull_case": "The B50 mandate and gasoil-diesel substitution economics are a legislated, non-speculative demand catalyst that the market has not yet re-rated into consensus estimates (ratings stable at 2 buy/2 hold despite the news flow). Valuation is undemanding at 9.77x forward P/E with a 4.14% yield, backed by a strong balance sheet (D/E ~15%) and real free cash flow generation (MYR262M), giving a margin of safety even if the recovery is gradual. Low trading volume during the advance indicates an orderly re-rating without forced or panic buying, and overbought conditions inside a fundamentally-supported uptrend have historically continued rather than reversed. The H1 stockpile build is consistent with normal seasonality already incorporated into MPOC's RM4,400-4,650/t guidance for August 2026.",
-  "bear_case": "Stable analyst ratings more plausibly indicate the market has already correctly priced SOP as an unremarkable, thinly-covered plantation stock - if the catalyst were as compelling as the bull case suggests, at least one of four covering analysts would have moved. The technical setup (RSI 78.4, +25.44% above SMA200, stalling MACD) at resistance reads as exhaustion or a confirmation test, not continuation, and the low volume behind the advance signals absent institutional conviction rather than orderly calm. The stockpile build coinciding with a 4-month price high raises the risk that current strength is policy-anticipation rather than fundamental delivery, and MPOC's guidance has no room for a B50 timeline slip - a real risk given ASEAN mandates' history of delay. The 9.77x forward multiple may already reflect some recovery expectation rather than being genuinely unpriced upside, and thin coverage means less institutional smoothing if 2026 yield/margin recovery disappoints in an actual reported quarter (it remains unconfirmed by any results to date).",
+  "executive_summary": "SOP's Layer 1 snapshot through 2026-09-02 supports a measured value case: RM5.6803B revenue, RM447.3M net income, RM262.2M free cash flow, 11.6863x trailing P/E, 10.3382x forward P/E, a supplied 3.42% yield and approximately 0.15x debt/equity. The offset is a thin 7.87% net margin and the absence of production, yield, realized-price, inventory and through-cycle cash-flow data.\n\nTechnicals show close 5.96 above SMA-20, SMA-50 and SMA-200 with positive MACD, but RSI 71.7949 is overbought, price is above the upper Bollinger Band, final volume is zero, and the reported 52-week high of 5.64 is below the latest close. This is a high-data-quality-risk, low-confidence neutral signal: wait for a pullback or reliable-volume confirmation rather than chase.",
+  "bull_case": "Low valuation, positive free cash flow and approximately 0.15x debt/equity provide a real fundamental cushion. If commodity and production conditions remain supportive, the established moving-average structure and positive MACD could extend after a controlled pullback toward SMA-20 at 5.3685 or SMA-50 at 5.1136.",
+  "bear_case": "A farm-products company can look cheap at the top of a commodity cycle, and the 7.87% net margin has limited buffer. The overbought RSI, close above the upper Bollinger Band, zero final volume and inconsistent 52-week high mean the bullish chart is not verified by reliable participation or internally consistent range data.",
   "key_uncertainties": [
-    "Whether the B50 mandate rolls out on the guided schedule or slips, given ASEAN biodiesel mandates' history of delay",
-    "Whether any of the 4 covering analysts revise ratings/estimates in response to the CPO/B50 catalyst",
-    "Whether volume confirms on the next test of resistance (5.369/5.4) or the advance stalls further",
-    "Whether 2026 yield and margin recovery materializes in an actual reported quarter versus remaining guidance-only",
-    "Whether the H1 stockpile keeps building into H2 beyond normal seasonal patterns",
-    "How CPO prices react if US-Iran tensions ease and broader energy/commodity risk premium unwinds"
+    "Whether the forward P/E reflects durable earnings or a cyclical peak",
+    "Whether production, yields, realized prices and margins will improve or deteriorate",
+    "Whether RM262.2M free cash flow remains durable after capex and dividends",
+    "Whether the zero-volume fields and 5.64 versus 5.96 range conflict are data artifacts",
+    "Whether a pullback attracts reliable volume and holds trend support"
   ],
   "catalysts_upcoming": [
-    "B50 mandate implementation progress and any official timeline updates",
-    "Next reported quarter showing (or failing to show) yield/margin recovery",
-    "MPOC monthly CPO price guidance updates and stockpile data releases",
-    "Analyst rating/estimate revisions in response to the CPO price and demand catalyst",
-    "Price action at resistance (5.369/5.4) with volume confirmation or rejection"
+    "Next operating update with production, yield, realized-price, margin and free-cash-flow data",
+    "Reliable-volume confirmation of a hold above the current price or a controlled pullback to SMA-20 at 5.3685",
+    "Reconciled 52-week range and a fresh dated recommendation or commodity-news signal"
   ],
   "risk_assessment": {
     "correlation_notes": [
       "Low beta (-0.23) \u2014 historically less sensitive to broad-market moves.",
       "Sector: Consumer Defensive \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 57.6% over available price history. Projected worst case (2-sigma): ~49.5% from current $5.36.",
+    "max_drawdown_scenario": "Historical max drawdown: 57.6% over available price history. Projected worst case (2-sigma): ~57.0% from current $5.96.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -42,12 +39,36 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.30, convergence 0.45). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.33). Wait for a clearer setup."
   },
-  "research_verdict": null,
+  "research_verdict": {
+    "ticker": "5126",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "SOP has a credible value and balance-sheet case, but the current price is technically extended and the dataset has a direct 52-week-high inconsistency plus zero final volume. Without commodity, production and through-cycle cash-flow evidence, the debate supports waiting for a pullback or data-confirmed continuation rather than assigning a clean buy verdict.",
+    "winning_side": "neither",
+    "strongest_counterexample": "If the next operating update confirms stable or improving production, realized prices, margins and free cash flow while reliable volume supports the trend, the low forward multiple and low leverage could justify a buy on strength or a pullback.",
+    "invalidation_conditions": [
+      "A reported period with materially lower production or realized commodity prices and net margin below 6% would invalidate the value-support case",
+      "A sustained close below SMA-50 at 5.1136 would invalidate the current medium-term uptrend",
+      "A reliable-volume hold above 5.96 with reconciliation of the 5.64 reported 52-week high would invalidate the current breakout caution"
+    ],
+    "evidence_gaps": [
+      "No usable dated company or commodity-news headlines",
+      "No production, yield, realized-price, inventory, labor or input-cost series",
+      "No multi-period free-cash-flow or dividend durability evidence",
+      "The latest zero-volume/zero-OHLC fields and 52-week-high conflict require data reconciliation"
+    ],
+    "decisive_factors": [
+      "11.6863x trailing P/E, 10.3382x forward P/E and approximately 0.15x debt/equity support value",
+      "RSI 71.7949, close above upper Bollinger Band and zero final volume make timing extended and unconfirmed",
+      "Only four analyst recommendations are available and split 2 buy/2 hold",
+      "The four analyst layers converge only weakly: buy, neutral, neutral and neutral"
+    ]
+  },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
-    "sentiment": "buy",
+    "sentiment": "neutral",
     "technical": "neutral",
     "macro": "neutral"
   },

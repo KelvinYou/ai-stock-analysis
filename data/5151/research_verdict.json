@@ -2,25 +2,24 @@
   "ticker": "5151",
   "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "Hextar is a neutral watch with a bearish risk tilt: the short-term chart has improved, but the local fundamentals do not provide enough evidence to support the valuation or leverage.",
+  "thesis": "The bear case is stronger on current evidence because valuation and reported leverage are high relative to flat-to-weaker earnings, while the property catalyst is only gross development value and lacks funding/economics detail. Nevertheless, positive free cash flow and agriculture improvement mean the evidence supports a neutral, negative-bias watch rather than a definitive sell.",
   "winning_side": "bear",
-  "strongest_counterexample": "A sustained earnings recovery could make the current trailing multiple less relevant and validate the recent price and volume strength.",
+  "strongest_counterexample": "The agriculture recovery and 70%-owned PKNS partnership could create meaningful incremental cash flow or asset value, and positive free cash flow means the group is not an immediately distressed operating story; a neutral investor could be paid for waiting if milestones arrive.",
   "invalidation_conditions": [
-    "Price loses SMA-20 and SMA-50 with MACD turning negative.",
-    "Reported free cash flow reverses or leverage worsens.",
-    "A break above SMA-200 is not sustained."
+    "Two consecutive reporting periods show sustained revenue and profit growth with improving specialty-chemical and fruit contributions.",
+    "The property JV publishes funded, approved milestones with attributable profit/cash-flow evidence sufficient to justify the current multiple.",
+    "Net debt declines materially while free cash flow remains positive and price reclaims SMA-200 on usable volume."
   ],
   "evidence_gaps": [
-    "Forward earnings estimates and earnings-recovery path.",
-    "Debt maturity, restructuring, and corporate-action details.",
-    "Usable current news and analyst coverage."
+    "Property JV funding, approvals, launch schedule, margin, and attributable cash-flow details.",
+    "Segment-level earnings, margins, working capital, and debt maturities.",
+    "A clean dated volume series and a valid 52-week low from the completed-close input.",
+    "Independent analyst estimates and a peer-relative valuation benchmark."
   ],
   "decisive_factors": [
-    "39.5x trailing P/E with no forward P/E.",
-    "1.77 debt-to-equity ratio and 7.0% reported net margin.",
-    "RSI 75.0, price above the upper Bollinger band, and below SMA-200."
+    "38.75x trailing P/E with no forward estimate is demanding against flat-to-weaker recent earnings.",
+    "Positive free cash flow and agriculture improvement prevent a strong-sell ruling.",
+    "The property headline is optionality, not yet evidence of earnings or cash-flow delivery."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

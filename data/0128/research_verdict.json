@@ -2,25 +2,26 @@
   "ticker": "0128",
   "judged_view": "buy",
   "confidence": "medium",
-  "thesis": "Frontken's operating quality and positive trend support a buy view, but the valuation requires continued semiconductor growth and earnings execution.",
+  "thesis": "The bull carried the debate on the evidence because FRONTKN pairs unusually strong supplied margins and free-cash-flow generation with very low leverage and fresh Q2/1H growth. The ruling is a measured buy rather than a high-conviction chase: the 45.0x trailing/36.461403x forward valuation and unconfirmed short-term chart require a stabilization or valuation-discipline trigger.",
   "winning_side": "bull",
-  "strongest_counterexample": "A semiconductor slowdown or customer-specific order loss could compress both earnings expectations and the premium multiple.",
+  "strongest_counterexample": "The company may be a good business bought at the wrong price: if semiconductor demand normalizes or margins regress, a 36.461403x forward P/E can compress sharply while the current negative MACD and zero-volume snapshot provide no evidence that the pullback has ended.",
   "invalidation_conditions": [
-    "Revenue, margins, or free cash flow deteriorate for multiple periods",
-    "Analyst estimates begin to move lower",
-    "Price breaks below SMA-50 and SMA-200 with negative MACD"
+    "Operating margin falls below 30% for two consecutive reported quarters, versus 36.9% in the supplied snapshot.",
+    "Free cash flow turns negative for a reported quarter without a clearly disclosed one-off investment explanation.",
+    "Price closes below the supplied SMA-200 level of RM4.4181 for two consecutive weekly closes and fails to reclaim it.",
+    "Forward earnings expectations are materially cut while the forward P/E remains above 30x."
   ],
   "evidence_gaps": [
-    "No current news headlines in the local Layer 1 snapshot",
-    "No customer concentration, backlog, or contract-duration detail",
-    "Price history and technical indicators end on 2026-08-10"
+    "No usable dated Layer 1 headlines or publisher metadata; sentiment required external supplementation.",
+    "Customer concentration, geographic revenue mix, USD exposure, and hedging are not supplied.",
+    "Latest guidance and the next-quarter order/run-rate detail are not in the Layer 1 financial snapshot.",
+    "Latest volume is zero and the 52-week-low-derived technical fields are null."
   ],
   "decisive_factors": [
-    "25.4% net margin, 36.9% operating margin, and debt-to-equity near 2.8%",
-    "Price above SMA-20, SMA-50, and SMA-200 with positive MACD",
-    "47.8x trailing P/E and 38.7x forward P/E near the 52-week high"
+    "49.6% gross, 36.9% operating, and 25.4% net margins in the supplied financial snapshot.",
+    "RM160.17m free cash flow against RM154.23m net income and approximately 2.8% debt-to-equity.",
+    "Q2/1H 2026 filing evidence of strong revenue and attributable-profit growth.",
+    "The premium multiple and bearish/low-confirmation short-term chart preventing a stronger ruling."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

@@ -2,81 +2,79 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Trailing P/E is not meaningful (net loss, P/E=null) and forward P/E is -412x, reflecting continued near-term unprofitability priced against a market cap of ~$4.70B. Valuation is entirely a growth/backlog story, not an earnings multiple story.",
-    "margin_analysis": "Gross margin 39.7% is respectable for a hardware/defense-tech mix, but operating margin -115.1% and net margin -260.2% show the company is still burning heavily to scale. Trailing revenue in this filing ($50.7M) looks stale versus management's own FY2026 guidance of $525-550M and a reported record Q2 of $83.8M, so margin ratios computed off this base will understate the current run-rate materially.",
-    "debt_analysis": "Balance sheet is not distressed: total debt of $15.6M against total equity of $437.8M is a very light leverage load. Cash burn (FCF -$40.9M) is being funded primarily via equity issuance (a public offering closed recently per news), which is dilutive but not a solvency risk.",
-    "growth_outlook": "Management guidance implies >10x revenue growth vs 2025 and >30% organic growth, backed by a ~$757M backlog plus recent defense wins (Cyberhawk acquisition, $33M Aran Defense deal expanding Israel-based manufacturing). If the backlog converts on schedule this is a genuine inflection, not a promotional guide-up.",
+    "pe_assessment": "Trailing P/E is unavailable because the Layer 1 snapshot is loss-making, and forward P/E is -380.5x, which is not meaningful. The $4.349B market cap against $50.731M supplied revenue makes this a growth/backlog valuation rather than an earnings-multiple valuation.",
+    "margin_analysis": "Gross margin is 39.7311%, but operating margin is -115.0855% and net margin is -260.2334% on $50.731M revenue. Net loss is $132.019M, so current profitability is weak despite the gross margin; the file does not provide a trend.",
+    "debt_analysis": "Total debt is $15.564M against $437.808M of equity, approximately 0.036x debt/equity, while free cash flow is negative $40.885M. Reported debt is light in the supplied fields, but cash-burn and acquisition funding remain relevant and no post-quarter liquidity schedule is included.",
+    "growth_outlook": "The Layer 1 snapshot contains no backlog or forward-revenue series. Ondas' official Q2 2026 release reported record $83.8M quarterly revenue, $175M of new Q2 orders, approximately $613M reported backlog ($757M pro forma), raised FY2026 revenue guidance to $525M-$550M, and approximately $1.4B of cash, cash equivalents, restricted cash, and short-term investments as of June 30 (https://ir.ondas.com/press-releases/detail/326/ondas-posts-record-q2-2026-revenue-of-83-8-million-on). These are strong growth markers, but they require execution and acquisition integration; they are not the same as the older Layer 1 trailing snapshot.",
     "key_risks": [
-      "Deep and continuing unprofitability (net margin -260%, negative FCF) with no clear near-term path to breakeven",
-      "Recent dilutive equity offering plus pending Form 144 insider sale filings signal supply overhang",
-      "Guidance-to-trailing-financials gap is large; execution risk on the $757M backlog converting to recognized revenue on schedule",
-      "Q2 EPS loss of $0.19 came in wider than the $0.13 expected, showing profitability is not yet tracking with revenue growth"
+      "Loss-making profile with -$40.885M free cash flow and -260.2334% net margin in the Layer 1 snapshot",
+      "Forward P/E is negative and market cap is roughly 86x supplied trailing revenue",
+      "Large gap between the Layer 1 trailing snapshot and newer management guidance raises conversion and integration risk",
+      "Future equity issuance or acquisition spending could dilute shareholders"
     ],
     "key_strengths": [
-      "Record Q2 revenue and a raised FY2026 guide to $525-550M",
-      "Strong balance sheet with low debt relative to equity",
-      "Diversifying backlog via recent M&A (Cyberhawk, Aran Defense) into drone inspection and defense manufacturing",
-      "Analyst coverage uniformly Buy/Outperform (2 strong buy, 7 buy, 0 hold/sell) with raised price targets post-earnings"
+      "Official Q2 release reported record revenue, new orders, backlog growth, and raised FY2026 guidance",
+      "Reported debt/equity is approximately 0.036x in the supplied balance-sheet fields",
+      "Layer 1 recommendations are uniformly buy/strong-buy in the latest period: 2 strong-buy and 7 buy"
     ],
-    "summary": "Fundamentals are a high-growth, pre-profitability story: guidance implies explosive revenue growth and a healthy balance sheet, but current-period margins are deeply negative and a recent dilutive raise plus insider-sale filings are real near-term overhangs. Net: buy on the growth trajectory, medium confidence given the unresolved path to profitability."
+    "summary": "Ondas has a compelling reported growth and backlog trajectory, and the supplied debt load is light relative to equity. The buy signal is medium confidence because the official Q2 guidance and backlog are strong but current Layer 1 profitability remains deeply negative, free cash flow is negative, and the gap between the trailing data snapshot and the newer guidance must be converted into audited earnings."
   },
   "sentiment": {
     "signal": "buy",
     "confidence": "medium",
-    "news_tone": "mixed-to-positive",
-    "news_summary": "Ondas posted record Q2 2026 revenue of $83.8M and raised FY2026 guidance to $525-550M on Aug 13, 2026, prompting Oppenheimer, Ladenburg, and Roth to reaffirm/raise Buy and Outperform ratings. Since then the stock has slipped roughly 5.5% on a wider-than-expected EPS loss (-$0.19 vs -$0.13 est.) and multiple Form 144 filings signaling pending insider share sales.",
+    "news_tone": "positive",
+    "news_summary": "The Layer 1 news array contains no usable headline text, so sentiment is supplemented with the official Q2 release. The company reported record revenue, strong orders/backlog, raised FY2026 guidance, and substantial liquidity; the main counterweight is that the same growth story remains pre-profit and acquisition/integration dependent. The Layer 1 recommendation snapshot is uniformly buy/strong-buy, but the sample is small.",
     "key_themes": [
-      "Post-earnings guidance raise driving analyst price-target increases",
-      "Defense/drone M&A expansion (Cyberhawk, Aran Defense) broadening the growth narrative",
-      "Insider Form 144 filings creating a near-term overhang despite the earnings beat on revenue",
-      "Widening net loss per share tempering enthusiasm on the earnings print itself"
+      "Record revenue and order/backlog acceleration",
+      "Raised FY2026 outlook and acquisition-led scale",
+      "Pre-profit execution and integration risk"
     ],
     "notable_headlines": [
-      "Ondas Stock Draws Bullish Targets After Record Q2 Surge",
-      "ONDS Stock Slips As Loss Widens And Insider Sales Loom",
-      "ONDS Stock Slips As Earnings Miss Meets Insider Sale Plans",
-      "Ondas Holdings Completes Successful Public Offering"
+      "Ondas Q2 2026 release: record $83.8M revenue, $175M Q2 orders, backlog growth, and raised FY2026 outlook \u2014 Ondas IR, August 13, 2026 (https://ir.ondas.com/press-releases/detail/326/ondas-posts-record-q2-2026-revenue-of-83-8-million-on)",
+      "Ondas Q2 2026 results filed as Exhibit 99.1 \u2014 SEC, August 13, 2026 (https://www.sec.gov/Archives/edgar/data/1646188/000119312526347973/onds-ex99_1.htm)",
+      "Layer 1 analyst recommendations: 2 strong-buy, 7 buy, and no hold/sell ratings in the latest period"
     ],
-    "social_sentiment": null,
-    "summary": "Sentiment is net positive on the growth/guidance story (unanimous analyst Buy/Outperform coverage) but tempered by a wider EPS miss and insider-sale-driven weakness in the days since earnings. Sentiment currently looks slightly ahead of the near-term fundamentals given the still-heavy losses."
+    "social_sentiment": "Not measured directly; no usable Layer 1 social feed is available.",
+    "summary": "Sentiment is positive at medium confidence because the official Q2 operating update and recommendation panel support the growth narrative. It is not high confidence because the news is not present in Layer 1, the recommendation sample is small, and current profitability remains deeply negative."
   },
   "technical": {
-    "signal": "neutral",
-    "confidence": "medium",
-    "trend": "Mixed/consolidating pullback: price ($8.24) is above the 50-day SMA ($8.20) but below both the 20-day SMA ($8.65, EMA20 $8.63) and the 200-day SMA ($9.44), consistent with a stock that rallied hard off its 52-week low ($4.53, +81.9%) and has since pulled back ~46% from its 52-week high ($15.28).",
-    "rsi_14": 42.5121,
-    "rsi_assessment": "RSI-14 at 42.5 is neutral (below the 50 midline but well clear of the 30 oversold threshold), indicating momentum has cooled from the post-earnings highs without being oversold enough to signal a bounce is imminent.",
-    "macd_assessment": "MACD line (0.150) sits below its signal line (0.226), producing a negative histogram (-0.076) \u2014 short-term momentum is bearish/decelerating, consistent with the price sliding back through its 20-day average this week.",
-    "volume_assessment": "Volume ratio of 0.661 (49.1M vs 20-day average 74.3M) shows the recent pullback is happening on below-average volume, suggesting distribution pressure so far is moderate rather than a high-conviction breakdown.",
+    "signal": "sell",
+    "confidence": "low",
+    "trend": "The 2026-09-02 close is $7.29, well below the available EMA-20 of $8.2649, and MACD histogram is negative at -0.1989. Price is 52.29% below the stored 52-week high and 48.78% above the low. The existing 2026-08-28 non-finite OHLC bar makes RSI-14, SMA-20/50/200, Bollinger Bands, and ATR-14 null; this is a low-confidence downside-momentum signal.",
+    "rsi_14": null,
+    "rsi_assessment": "Unavailable: the existing technical snapshot has no finite RSI-14 after the non-finite 2026-08-28 OHLC bar.",
+    "macd_assessment": "MACD line -0.1918 is below the signal line 0.0071, with a negative histogram of -0.1989. This supports bearish short-term momentum, but the absence of rolling indicators and ATR limits confidence.",
+    "volume_assessment": "Volume is 6,626,632 versus the stored 20-day average of 65,059,350.2, a ratio of 0.1019. The decline is occurring on very light participation, so the breakdown is not strongly volume-confirmed.",
     "support_levels": [
-      8.2,
-      7.14,
-      4.53
+      7.04,
+      7.18,
+      7.68,
+      4.9
     ],
     "resistance_levels": [
-      8.65,
-      9.44,
-      10.16,
+      7.3,
+      7.445,
+      7.93,
+      8.24,
       15.28
     ],
-    "summary": "Technicals are neutral: the stock is digesting its post-earnings volatility in a range between the 50-day SMA support (~$8.20) and 20/200-day SMA resistance (~$8.65-$9.44), with bearish short-term momentum (negative MACD histogram) but no oversold extreme and only light volume behind the pullback."
+    "summary": "Technicals lean sell because price is below EMA-20 and MACD is materially negative, while the stock remains far below its 52-week high. Confidence is low because volume is only 0.1019x the stored average and the non-finite source bar removes the rolling trend, RSI, Bollinger, and ATR fields."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The FOMC held the federal funds rate at 3.50-3.75% at its July 2026 meeting (9-3 vote, with three regional presidents dissenting in favor of a hike given inflation above target for over five years). No August meeting is scheduled; the next decision is Sept 15-16, 2026. A steady-to-hawkish-leaning Fed keeps the cost of capital elevated for a company that is still deeply unprofitable and funding growth partly via equity issuance.",
-    "interest_rate_outlook": "Rates are more likely to stay higher-for-longer than to cut soon, given persistent above-target inflation and internal hawkish dissent. That is a mild headwind for high-beta (2.75), pre-profit growth names like ONDS whose valuation rests on distant cash flows, though ONDS's own leverage is low so the direct interest-expense impact is limited.",
-    "fx_impact": "Ondas is USD-reporting with a new Israel-based manufacturing footprint via the Aran Defense acquisition, introducing modest USD/ILS translation and operational FX exposure that was not previously material to the business.",
+    "fed_impact": "The supplied dated Fed context says the July 29, 2026 FOMC maintained a 3.50%-3.75% federal-funds target range (https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm). A stable but not explicitly easing policy backdrop can weigh on a high-beta, pre-profit growth multiple, while defense demand may be less consumer-rate-sensitive; no directional effect is inferred without a forward path.",
+    "interest_rate_outlook": "The supplied BNM context reports OPR at 2.75% (https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026). It is primarily MYR-investor context for a US company; no future BNM or Fed move is inferred.",
+    "fx_impact": "The supplied BNM KL USD/MYR reference is 4.0420 as of 2026-09-02 (https://financialmarkets.bnm.gov.my/about-myor-myor-i). It affects MYR translation of a USD position; the supplied company data is reported in USD.",
     "sector_macro_factors": [
-      "Elevated-for-longer US rates raise the discount rate applied to long-duration, pre-profit growth equities",
-      "Defense/drone segment has some insulation via government and defense-budget-linked demand rather than pure consumer-rate sensitivity",
-      "High beta (2.75) means ONDS will amplify broad market/macro risk-off moves regardless of company-specific news"
+      "Defense and autonomous-systems demand may be tied to government procurement rather than consumer cycles",
+      "Higher discount rates can pressure the valuation of a pre-profit growth company",
+      "Acquisition financing and public-sector procurement timing are macro-sensitive execution variables"
     ],
     "geopolitical_risks": [
-      "New Israel-based manufacturing exposure from the Aran Defense acquisition ties a portion of operations to Middle East geopolitical/security conditions",
-      "Defense-sector revenue can be sensitive to shifts in government procurement priorities and geopolitical budget cycles"
+      "Defense procurement, export controls, and cross-border operations can change with geopolitical conditions; no single new dated event was supplied"
     ],
-    "summary": "Macro is a mild, non-decisive headwind: a steady-to-hawkish Fed (funds rate 3.50-3.75%, no near-term cut signaled) raises the discount rate on this pre-profit, high-beta name, while new Israel-linked manufacturing exposure adds a modest geopolitical variable. Neither factor is company-specific enough to drive the thesis, hence low confidence and a neutral signal."
+    "summary": "Macro is neutral and low confidence. The supplied Fed, BNM OPR, and USD/MYR observations provide context, but defense demand and acquisition execution pull in opposite directions and no forward policy path is available."
   },
   "pipeline_mode": "in-session-claude-code"
 }

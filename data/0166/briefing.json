@@ -1,30 +1,33 @@
 {
   "ticker": "0166",
-  "date": "2026-08-14",
+  "date": "2026-09-03",
   "overall_signal": "neutral",
   "conviction": {
-    "score": 0.12,
-    "signal_convergence": 0.55,
-    "explanation": "Current-session English batch refresh. Technical momentum and the balance sheet favor the bull case, while valuation, a hold-heavy analyst distribution, and overbought positioning favor caution. The unresolved issue is whether operating recovery can catch up with the price."
+    "score": 0.0,
+    "signal_convergence": 0.3,
+    "explanation": "The analyst layers are high-divergence: fundamentals are sell on the latest earnings deterioration and valuation, technicals are buy on moving-average and MACD alignment but low confidence because volume is zero, while sentiment and macro are neutral. The balance-sheet strength is real, but the directional thesis depends on an unproven earnings recovery, so conviction is deliberately near zero and precise levels should not be used."
   },
-  "executive_summary": "Inari has a very strong balance sheet and cash conversion: debt-to-equity is about 0.5%, free cash flow is MYR209 million, and price is above all major moving averages. However, the 62.5x trailing P/E, 35.2x forward P/E, hold-heavy analyst distribution, and price above the upper Bollinger band argue for neutral rather than a high-conviction buy.",
-  "bull_case": "A recovery in semiconductor content, customer volumes, and utilization could validate the forward earnings multiple while the balance sheet limits financial risk.",
-  "bear_case": "The stock already prices in a meaningful recovery, so customer concentration, delayed earnings normalization, or a semiconductor-cycle reversal could trigger a sharp valuation reset.",
+  "executive_summary": "INARI\u2019s supplied balance sheet is robust: RM14.682m debt against RM2.764bn equity, positive supplied free cash flow of RM209.269m, and a 16.2% net margin. The technical snapshot is constructive, with RM2.55 above SMA-20/SMA-50/SMA-200 and a positive MACD histogram. The recovery case is therefore plausible.\n\nThe problem is evidence and price. The latest 4QFY2026 filing reported revenue down to RM288.942m and attributable profit down to RM6.146m from RM49.169m, while the supplied trailing P/E is 85.0x and the forward P/E of 28.934528x assumes a large rebound. With zero latest volume, a null 52-week-low-derived field, a disclosed Philippines fire, and no reconciled explanation for the earnings decline, the final signal is neutral/low-confidence pending operational and earnings confirmation. Macro context\u2014Fed 3.50%-3.75%, BNM OPR 2.75%, USD/MYR 4.0420\u2014does not resolve the company-specific question.",
+  "bull_case": "INARI has the financial capacity to wait through a cyclical setback: leverage is approximately 0.5% of equity, supplied free cash flow is positive, and semiconductor/OSAT exposure could benefit from renewed technology spending. If the latest profit decline is temporary, 28.934528x forward P/E and the bullish moving-average alignment could support a recovery.",
+  "bear_case": "The earnings recovery is not yet demonstrated. 4QFY2026 revenue declined year over year and attributable profit fell approximately 87.5%, while 85.0x trailing earnings leaves little room for another miss. Near-high price without volume, the disclosed Philippines facility fire, and the mismatch between supplied trailing data and latest reported figures make a directional buy premature.",
   "key_uncertainties": [
-    "Timing and size of the expected earnings recovery",
-    "Major-customer contracts, concentration, and content growth",
-    "Whether the current momentum can persist without a valuation pullback"
+    "The supplied financial snapshot does not reconcile cleanly with the latest 4QFY2026 cumulative filing; the current earnings base needs confirmation.",
+    "The cause and duration of the latest profit decline and the quantified impact of the Philippines fire are not available.",
+    "Latest volume is 0 versus a 20-day average of 19,747,810, so the bullish chart lacks confirmation.",
+    "The supplied 52-week-low field is 0.0 and its derived percentage is null; no low-based technical conclusion is made.",
+    "Forward earnings estimates, customer/product mix, and currency exposure are not in Layer 1."
   ],
   "catalysts_upcoming": [
-    "Quarterly earnings and customer-contract updates",
-    "Semiconductor-capex and content-growth confirmation",
-    "A consolidation that holds SMA-50 and SMA-200"
+    "Next quarterly result showing whether revenue and attributable profit recover year over year.",
+    "Disclosure of the Philippines facility\u2019s operational/financial recovery and insurance status.",
+    "Continued semiconductor, RF, datacom, and OSAT demand recovery.",
+    "A move above RM2.6181 with usable volume would strengthen the technical case; a break below SMA-200 at RM1.9120 would weaken it."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "Sector: Technology — use sector-specific catalysts and risks in the thesis."
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 68.6% over available price history. Projected worst case (2-sigma): ~95.1% from current $2.52.",
+    "max_drawdown_scenario": "Historical max drawdown: 68.6% over available price history. Projected worst case (2-sigma): ~84.4% from current $2.55.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -36,38 +39,39 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.12, convergence 0.55). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.30). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "0166",
     "judged_view": "neutral",
-    "confidence": "medium",
-    "thesis": "Inari has investable quality but the current price already discounts a meaningful recovery; fresh data supports waiting for earnings confirmation or a less extended setup.",
+    "confidence": "low",
+    "thesis": "Neither side carried the debate decisively. INARI has the balance sheet and technical structure to support an earnings recovery, but the latest 4QFY2026 profit collapse and 85.0x trailing valuation make the forward P/E too assumption-dependent to underwrite a directional call. The evidence supports waiting for reported recovery and usable price/volume confirmation.",
     "winning_side": "neither",
-    "strongest_counterexample": "A rapid semiconductor recovery could validate the forward multiple and sustain the current momentum.",
+    "strongest_counterexample": "The neutral ruling could be too cautious if the weak quarter was a contained operational or product-mix event: even a partial earnings rebound would make 28.934528x forward P/E look conservative, and the bullish moving-average alignment could precede a re-rating.",
     "invalidation_conditions": [
-      "Earnings and free cash flow accelerate beyond current expectations",
-      "Analyst recommendations shift materially from hold to buy",
-      "Price breaks below SMA-50 and SMA-200 with deteriorating fundamentals"
+      "The next two reported quarters each show year-over-year revenue and attributable-profit growth, with operating margin recovering toward or above the supplied 14.0% level.",
+      "Price reclaims and holds above the supplied 52-week high of RM2.6181 with usable volume confirmation while forward earnings estimates remain intact.",
+      "Attributable profit remains below RM10m for two consecutive quarters or the close falls below SMA-200 at RM1.9120, invalidating the recovery setup."
     ],
     "evidence_gaps": [
-      "No current news headlines in the local Layer 1 snapshot",
-      "No customer, contract, or business-segment detail",
-      "Price history and technical indicators end on 2026-08-10"
+      "No usable dated Layer 1 headlines or publisher metadata; sentiment required external supplementation.",
+      "The cause, quantified cost, insurance recovery, and operating impact of the Philippines facility fire are not in the supplied package.",
+      "The supplied trailing financial snapshot does not reconcile cleanly with the latest 4QFY2026 cumulative filing.",
+      "Customer/product mix, currency exposure, and the earnings impact of the terminated joint acquisition are unavailable.",
+      "Latest volume is zero and the 52-week-low-derived technical fields are null."
     ],
     "decisive_factors": [
-      "62.5x trailing P/E versus 35.2x forward P/E",
-      "MYR209 million free cash flow with debt-to-equity near 0.5%",
-      "Price 3.8% below the 52-week high and above all major averages"
+      "Latest 4QFY2026 attributable profit of RM6.146m versus RM49.169m a year earlier.",
+      "85.0x supplied trailing P/E versus 28.934528x forward P/E.",
+      "Very low leverage and positive supplied free cash flow provide a credible recovery foundation.",
+      "Bullish moving-average/MACD alignment is offset by near-high positioning and absent volume confirmation."
     ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "neutral",
+    "fundamentals": "sell",
     "sentiment": "neutral",
     "technical": "buy",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

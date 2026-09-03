@@ -1,27 +1,24 @@
 {
   "ticker": "APP",
-  "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Neither side carried the debate because the evidence is split between exceptional single-snapshot fundamentals and a severe, unconfirmed price downtrend. APP merits monitoring, but the missing multi-period trend and dated catalyst evidence prevent a reliable ruling that the forward valuation reflects durable growth rather than estimates at risk.",
-  "winning_side": "neither",
-  "strongest_counterexample": "The strongest counterexample to a neutral stance is the combination of 75.8% operating margin, 60.8% net margin, free cash flow above net income, and a 14.9x forward P/E. If those economics are durable and estimates are met, the 58.1% drawdown could represent a valuation opportunity and the bear case would be overly anchored to lagging technicals.",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "The bull carried the reported operating and valuation evidence, but the ruling is bounded because the stock is near its 52-week low and the technical window is contaminated.",
+  "winning_side": "bull",
+  "strongest_counterexample": "Continued margin and cash-flow delivery with a repaired, improving price trend would validate the buy view.",
   "invalidation_conditions": [
-    "A close above SMA-20 near $334.30 followed by a reclaim of SMA-50 near $411.62 with volume above the 20-day average would resolve the neutral stance toward a constructive view.",
-    "A close below the 52-week low near $297.50 with a negative MACD histogram would resolve the neutral stance toward a bearish view.",
-    "Operating margin falls below 60% or free cash flow falls below net income for two consecutive reported periods.",
-    "Forward earnings estimates are revised down enough that forward P/E returns above 24x without a corresponding price recovery."
+    "Margins or free cash flow materially deteriorate",
+    "A repaired technical series confirms a sustained primary downtrend",
+    "Forward valuation rises without corresponding earnings delivery"
   ],
   "evidence_gaps": [
-    "No multi-period financial or segment-level trend was supplied.",
-    "No dated news headlines or dated analyst recommendation changes were supplied.",
-    "No dated company-specific catalyst or earnings-event calendar was supplied.",
-    "No explanation for the large trailing-to-forward P/E difference was supplied."
+    "No populated dated news headlines are available in Layer 1.",
+    "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
+    "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory."
   ],
   "decisive_factors": [
-    "Fundamentals and technicals point in opposite directions: buy versus sell.",
-    "The technical drawdown is severe, with price below SMA-20, SMA-50, and SMA-200.",
-    "The fundamental snapshot is strong but lacks the time series needed to test durability.",
-    "Macro and sentiment are neutral/low and cannot break the tie."
+    "Analyst signals: fundamentals=buy, sentiment=buy, technical=neutral, macro=neutral.",
+    "Reported margins and free cash flow are strong",
+    "Whether exceptional margins justify a directional call while price is near the 52-week low"
   ],
   "pipeline_mode": "in-session-claude-code"
 }

@@ -1,26 +1,26 @@
 {
   "ticker": "AMZN",
-  "judged_view": "buy",
+  "judged_view": "neutral",
   "confidence": "medium",
-  "thesis": "The operating scale and positive trend support a buy view, but the low free-cash-flow conversion means the thesis depends on improved cash profitability.",
-  "winning_side": "bull",
-  "strongest_counterexample": "If capital intensity remains high and forward earnings decline, the 26.4x forward P/E may not provide adequate valuation support.",
+  "thesis": "Neither side fully carried the debate. Amazon's AWS and operating evidence are strong, but the cash-flow discrepancy, forward P/E premium, and bearish available momentum make a directional edge impossible without reconciled FCF and complete technical data.",
+  "winning_side": "neither",
+  "strongest_counterexample": "AWS growth could compound fast enough to offset near-term investment, making the pullback a temporary reset rather than structural deterioration.",
   "invalidation_conditions": [
-    "A sustained break below the 200-day average",
-    "Continued deterioration in free cash flow",
-    "Downward revisions to forward earnings"
+    "Trailing FCF is reconciled to a positive figure above $15B for two consecutive reporting periods while capex returns remain supported.",
+    "AWS growth falls below 25% for two consecutive reported quarters.",
+    "Operating margin falls below 9% for two consecutive reported quarters.",
+    "A complete technical snapshot confirms a sustained breakdown while cash conversion remains negative."
   ],
   "evidence_gaps": [
-    "No current news data",
-    "No segment-level profitability or cash-flow detail",
-    "No explicit macroeconomic data"
+    "Layer 1 FCF of +$7.7B conflicts with the Q2 company release's $7.6B TTM outflow.",
+    "Layer 1 lacks AWS profitability, capex, and return detail.",
+    "SMA/RSI/Bollinger/ATR/support/resistance are unavailable after the non-finite 2026-08-28 bar."
   ],
   "decisive_factors": [
-    "$716.9B revenue scale",
-    "Positive price trend above all major moving averages",
-    "58 buy or strong-buy recommendations versus 2 holds"
+    "Strong AWS and Q2 operating evidence.",
+    "FCF/capex data conflict.",
+    "Forward P/E of 24.53x exceeds trailing P/E of 20.50x.",
+    "Available EMA/MACD momentum is bearish but incomplete."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

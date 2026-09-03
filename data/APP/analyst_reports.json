@@ -2,77 +2,62 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Trailing P/E of 23.5x looks rich for a stock down ~60% YTD, but forward P/E of 14.2x is well below trailing, implying the market expects continued strong EPS growth even after the selloff.",
-    "margin_analysis": "Exceptional profitability: gross margin 87.9%, operating margin 75.8%, net margin 60.8% on Q2 revenue of $5.48B (TTM) \u2014 margins expanding (Q2 adj. EBITDA margin 84%, +58% YoY) as the AXON ad-engine scales.",
-    "debt_analysis": "Total debt $3.54B vs. total equity $2.13B (debt/equity ~1.66x) is elevated, but free cash flow of $3.94B comfortably covers debt service; balance sheet risk is manageable given cash generation.",
-    "growth_outlook": "Q2 2026 revenue grew 53% YoY to $1.92B and net income hit $1.27B for the quarter; SEC inquiry opened Oct 2025 was closed in Aug 2026 with no action, removing a legal overhang.",
+    "pe_assessment": "Trailing P/E is 24.54x and forward P/E is 15.21x; the forward discount is supportive only if the supplied earnings outlook is delivered.",
+    "margin_analysis": "Gross margin is 87.9%, operating margin is 75.8%, and net margin is 60.8%. These are the reported Layer 1 margins; no trend comparison is inferred.",
+    "debt_analysis": "Total debt is 3.545e+09 against equity of 2.135e+09, or about 1.66x debt/equity; free cash flow is 3.943e+09.",
+    "growth_outlook": "Layer 1 reports revenue of 5.481e+09 but does not provide a dated growth-rate series. No growth acceleration or deceleration is assumed.",
     "key_risks": [
-      "Elevated leverage (debt/equity ~1.66x) versus equity base",
-      "High beta (2.53) means earnings strength has not stopped a ~60% YTD price decline, signaling market skepticism about durability of ad-tech growth",
-      "Multiple sell-side price-target cuts (Piper Sandler to $325, Wells Fargo to $325) even after a beat suggests deceleration/valuation concerns"
+      "The valuation still depends on maintaining strong future earnings despite the forward P/E discount.",
+      "Debt/equity is above 1x, so balance-sheet resilience should be monitored.",
+      "Layer 1 does not provide a dated growth or customer-concentration series."
     ],
     "key_strengths": [
-      "Industry-leading margins and FCF conversion",
-      "Forward P/E well below trailing P/E on continued triple-digit EBITDA growth",
-      "SEC inquiry closed with no enforcement action, removing a key overhang",
-      "Analyst base still skews heavily buy/strong-buy (26 of 33 covering analysts)"
+      "Reported gross, operating, and net margins are 87.9%, 75.8%, and 60.8%.",
+      "Free cash flow is positive at 3.943e+09.",
+      "Forward P/E of 15.21x is below trailing P/E of 24.54x in the supplied snapshot."
     ],
-    "summary": "Fundamentals remain excellent \u2014 margins, FCF, and growth are all strong, and forward valuation has compressed sharply after the drawdown. Leverage and the market's skepticism about growth durability keep this at buy rather than strong buy."
+    "summary": "Fundamentals are constructive on the reported margins, cash flow, and forward valuation, with medium confidence because the snapshot lacks a dated growth-rate series."
   },
   "sentiment": {
-    "signal": "neutral",
-    "confidence": "medium",
-    "news_tone": "mixed",
-    "news_summary": "AppLovin beat Q2 2026 estimates (revenue +53% YoY, EBITDA +58%) and closed its SEC inquiry with no action, yet the stock kept falling (-53% YTD, -31% in the past month) and BofA downgraded to Neutral on Aug 11; Piper Sandler and Wells Fargo cut price targets despite maintaining ratings.",
+    "signal": "buy",
+    "confidence": "low",
+    "news_tone": "unavailable",
+    "news_summary": "Layer 1 contains no populated news headlines (the fetched headline records have empty title/link/publisher fields). The current recommendation snapshot is 26 buy/strong-buy versus 7 hold/sell/strong-sell, so the directional read is recommendation-only and low confidence.",
     "key_themes": [
-      "Post-earnings selloff despite a beat (growth-deceleration fear)",
-      "Analyst price-target cuts even from firms keeping bullish ratings",
-      "SEC inquiry closure removes a legal overhang",
-      "Leadership transition (new CTO, CAL&O retirement)"
+      "Recommendation snapshot is net positive",
+      "No populated dated headlines"
     ],
-    "notable_headlines": [
-      "AppLovin's Real Problem Isn't Revenue - It's How the Growth Engine Actually Works (Yahoo Finance)",
-      "AppLovin Is Down Over 50% in 2026: Falling Knife or Fire Sale? (24/7 Wall St, Aug 12 2026)",
-      "AppLovin Rises as Investors Position Ahead of Earnings (Quiver Quant)"
-    ],
-    "social_sentiment": "Retail/analyst commentary framed as a 'falling knife vs. fire sale' debate \u2014 sentiment is polarized rather than uniformly bearish or bullish.",
-    "summary": "Sentiment is genuinely mixed: fundamentals commentary stayed constructive (beat, SEC closure) while price-action and target cuts reflect a market pricing in decelerating growth or multiple compression, so no clear directional edge from sentiment alone."
+    "notable_headlines": [],
+    "social_sentiment": null,
+    "summary": "Sentiment is a low-confidence recommendation-only read because the Layer 1 news fields are empty; no headline or social signal is invented."
   },
   "technical": {
-    "signal": "sell",
-    "confidence": "medium",
-    "trend": "Strong, established downtrend \u2014 price ($298.59) is below the 20/50/200-day SMAs (348.81 / 423.65 / 498.62) and only 0.37% above the 52-week low, down 60% from the 52-week high of $745.61.",
-    "rsi_14": 15.16,
-    "rsi_assessment": "RSI-14 at 15.16 is deeply oversold (<30), which raises the odds of a near-term relief bounce, but in a confirmed downtrend extreme oversold readings can persist rather than immediately reverse.",
-    "macd_assessment": "MACD line (-36.93) sits just below the signal line (-36.93, histogram -0.004) \u2014 bearish momentum that is flattening but not yet turning positive.",
-    "volume_assessment": "Volume ratio of 0.62x the 20-day average shows the latest decline is happening on below-average volume, i.e. no fresh capitulation spike confirming the move, but also no accumulation evidence yet.",
-    "support_levels": [
-      297.5,
-      254.96
-    ],
-    "resistance_levels": [
-      348.81,
-      423.65,
-      498.62
-    ],
-    "summary": "Every trend measure (price vs. all SMAs, MACD, proximity to 52-week low) is bearish, so the technical picture is a sell; the extreme RSI oversold reading is the main risk to that call and argues for waiting for a base rather than chasing further downside."
+    "signal": "neutral",
+    "confidence": "low",
+    "trend": "Close is 311.7 versus EMA-20 of 329.4; SMA-20/50/200 are unavailable. The close is -58.2% from the 52-week high and 4.8% above the 52-week low. The 2026-08-28 price row has non-finite OHLC values. Consequently RSI-14, SMA-20/50/200, Bollinger Bands, and ATR-14 are null in Layer 1; no missing value is imputed and no support/resistance price is invented.",
+    "rsi_14": null,
+    "rsi_assessment": "Unavailable because the upstream OHLC series contains a non-finite bar; no RSI interpretation is assigned.",
+    "macd_assessment": "MACD line -26, signal -31.02, histogram 5.026; positive MACD histogram is offset by a negative MACD level, price below EMA-20, and exceptionally low volume.",
+    "volume_assessment": "Volume ratio is 0.0776 versus the 20-day average, with current volume 432127 and 20-day average 5.566e+06. This is descriptive only because the recent technical window is contaminated by the non-finite OHLC row.",
+    "support_levels": [],
+    "resistance_levels": [],
+    "summary": "Technical signal is neutral with low confidence: positive MACD histogram is offset by a negative MACD level, price below EMA-20, and exceptionally low volume. The 2026-08-28 price row has non-finite OHLC values. Consequently RSI-14, SMA-20/50/200, Bollinger Bands, and ATR-14 are null in Layer 1; no missing value is imputed and no support/resistance price is invented."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "medium",
-    "fed_impact": "The Fed held the federal funds rate at 3.5%-3.75% at its July 2026 meeting (9-3 vote, three regional presidents dissenting as inflation has stayed above the 2% target for 5+ years); next decision is Sep 15-16, 2026. A 'higher for longer' stance keeps discount rates elevated for high-multiple growth/ad-tech names.",
-    "interest_rate_outlook": "No near-term cut is signaled; persistent above-target inflation and committee dissent point to rates staying restrictive into Q4 2026, a headwind for AppLovin's beta (2.53) and long-duration earnings growth story.",
-    "fx_impact": "Limited \u2014 AppLovin's mobile-advertising business is predominantly USD-denominated with modest direct FX translation risk versus commodity or heavy-exporter names.",
+    "fed_impact": "Official context: the Federal Reserve target range was 3.50%-3.75% on 2026-07-29 (https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm). the Fed hold is a mixed input for a high-beta technology name; no dated advertising-demand or FX series is available.",
+    "interest_rate_outlook": "The supplied macro context establishes the current target range but does not establish a future cut or hike; no unprovided forecast is used.",
+    "fx_impact": "BNM's USD/MYR reference was around 4.0420 on 2026-09-02 (https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate). This run does not contain the company's currency mix, so no quantified FX effect is assigned.",
     "sector_macro_factors": [
-      "Digital ad spend is cyclical and sensitive to advertiser budgets, which correlate with broader growth/rate expectations",
-      "AI-driven ad-tech re-rating: investors are re-assessing durability of AI-optimized ad-engine growth across the sector",
-      "High-beta growth stocks are disproportionately hit by 'higher for longer' rate repricing"
+      "The Fed target range is a valuation and funding input for US-listed risk assets.",
+      "BNM's OPR was 2.75% in the supplied official context (https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026); this is background context rather than a company-specific earnings forecast.",
+      "No additional dated sector macro series is present in Layer 1."
     ],
     "geopolitical_risks": [
-      "Mobile app-store/platform policy risk (Apple/Google) affecting ad measurement and distribution",
-      "Regulatory scrutiny of ad-tech/data practices, though AppLovin's own SEC inquiry was closed with no action in Aug 2026"
+      "No dated geopolitical snapshot is present in Layer 1; no directional geopolitical claim is assigned."
     ],
-    "summary": "Macro is a mild headwind rather than a company-specific issue: a restrictive, higher-for-longer Fed keeps pressure on high-beta growth names like AppLovin, but nothing here is AppLovin-specific enough to override the fundamental or technical signals."
+    "summary": "Macro signal is neutral: the Fed hold is a mixed input for a high-beta technology name; no dated advertising-demand or FX series is available. Official context is limited to the Fed, BNM OPR, and BNM USD/MYR observations stated in the run request."
   },
   "pipeline_mode": "in-session-claude-code"
 }

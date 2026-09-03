@@ -1,92 +1,75 @@
 {
   "fundamentals": {
     "signal": "buy",
-    "confidence": "high",
-    "pe_assessment": "P/E of 12.3x (forward 11.3x) is 25–35% below developed-market bank average of 15–17x, providing a solid margin of safety for a profitable, dividend-yielding bank with 37.7% net margins.",
-    "margin_analysis": "Net margin of 37.7% is exceptional and well above regional bank peers (~25–30%), demonstrating superior operational leverage and cost management. Stable and defensible given entrenched market position.",
-    "debt_analysis": "Debt-to-equity of 0.56x is conservative and appropriate for a regional bank. Total equity of 93.4B MYR provides solid capital buffer. Balance sheet strength supports dividend sustainability and weathering of credit cycles.",
-    "growth_outlook": "Organic growth expected in low-to-mid single digits, constrained by Malaysian GDP growth and market maturity. Limited by domestic market size; consolidation and cost initiatives more likely than top-line expansion. Dividend growth may be sole return driver.",
+    "confidence": "medium",
+    "pe_assessment": "Trailing P/E is 12.18x and forward P/E is 11.43x; the forward multiple is about 6.2% below the trailing multiple. No peer benchmark is present in Layer 1, so the valuation looks reasonable for a profitable, high-yield bank but is not proven undervalued.",
+    "margin_analysis": "Reported net margin is 37.7% on MYR10.51bn of net income and MYR27.86bn of revenue. Gross and operating margins are unavailable, and there is no historical series, so margin stability and trend cannot be established.",
+    "debt_analysis": "Reported total debt is MYR52.70bn versus MYR93.44bn of equity, a raw debt-to-equity ratio of about 0.56x. For a bank, solvency and leverage require CET1, risk-weighted assets, liquidity, NPL, loan-to-deposit, and provisioning data; none is supplied. Reported negative free cash flow of MYR16.02bn is not a clean bank liquidity signal.",
+    "growth_outlook": "Layer 1 provides no growth time series. Maybank's mature regional-bank profile makes modest loan and fee growth plus dividend carry plausible, but the earnings trajectory cannot be quantified here. A stable domestic policy rate may support demand, while future rate changes can still pressure net interest margins.",
     "key_risks": [
-      "Negative FCF of -16B MYR limits capital flexibility despite banking norms",
-      "Mature single-digit growth outlook; limited upside catalysts",
-      "Malaysia interest-rate sensitivity could compress net interest margins",
-      "Regional concentration creates country-risk exposure",
-      "Analyst consensus split: 50% Hold suggests fair-value pricing concerns"
+      "NIM, NPL, CET1, ROE, provisioning, loan growth, and dividend coverage are missing.",
+      "The negative reported free-cash-flow figure is difficult to interpret for a bank and should not be used as a standalone distress signal.",
+      "A mature regional franchise may offer income more than rapid earnings growth.",
+      "The valuation and dividend case fails if asset quality or capital buffers deteriorate."
     ],
     "key_strengths": [
-      "Exceptional 37.7% net margin vs. peer 25–30%",
-      "Attractive 11.3x forward P/E with 26% discount to sector average",
-      "High 6.19% dividend yield with strong payout coverage",
-      "Ultra-low beta (0.11) provides defensive shelter in downturns",
-      "Solid 0.56x D/E ratio and well-capitalized balance sheet"
+      "MYR10.60 price against 12.18x trailing and 11.43x forward P/E.",
+      "6.25% reported dividend yield supports an income-oriented thesis.",
+      "37.7% reported net margin and MYR10.51bn net income show current profitability.",
+      "Beta of 0.11 suggests historically low sensitivity to broad equity moves."
     ],
-    "summary": "Current-session signal: buy. Maybank trades at 12.3x trailing and 11.3x forward earnings with a 6.23% dividend yield, 37.7% reported net margin, and low beta of 0.11. The 10.56 close is below all three moving averages, RSI is 34.3, MACD is negative, and the local snapshot has no usable news headlines."
+    "summary": "At MYR10.60 as of 2026-09-02, 1155 reports trailing P/E of 12.18x, forward P/E of 11.43x, dividend yield of 6.25%, net margin of 37.7%, and beta of 0.11. These support a value-and-income case, but missing bank-specific risk metrics and the non-bank-like negative free-cash-flow figure keep conviction at medium rather than high."
   },
   "sentiment": {
     "signal": "neutral",
-    "confidence": "medium",
-    "news_tone": "mixed",
-    "news_summary": "MAYBANK shows mixed sentiment with analyst recommendations tilted toward BUY (7) over HOLD (9) and isolated SELL signals. Macro backdrop supportive: JP Morgan upgraded Malaysia equities to Overweight with FBM KLCI target of 1,800 by year-end. Foreign investors remain net buyers of Malaysian financials (RM84.2M inflows). Company executing strategically with Etiqa stake acquisition. Price recovery visible YTD (+13.42%) from Feb 2026 highs (12.42 MYR), though 1-year performance remains negative (-9.38%).",
+    "confidence": "low",
+    "news_tone": "unavailable / neutral",
+    "news_summary": "No usable news text or source links are present: the four Layer 1 headline records have blank title, link, and publisher fields. The available recommendation counts are 2 strong buy, 7 buy, 8 hold, 0 sell, and 1 strong sell; that is mildly constructive but not decisive.",
     "key_themes": [
-      "Banking sector consolidation and M&A activity",
-      "Regional market strength in Malaysian equities",
-      "Foreign investor inflows into financial services",
-      "Insurance/Takaful expansion strategy",
-      "Mixed analyst consensus with HOLD dominance",
-      "YTD recovery from weakness"
+      "Analyst-rating dispersion rather than a clear consensus",
+      "Income and value appeal from the reported dividend yield and P/E",
+      "No verifiable current news narrative in the supplied Layer 1 snapshot"
     ],
-    "notable_headlines": [
-      "JP Morgan upgrades Malaysia equities to Overweight",
-      "MAYBANK acquires remaining equity stake in Etiqa (insurance/takaful)",
-      "Foreign investors net buyers of RM75.3M for week ended July 10, 2026",
-      "Financial sector attracts RM84.2M net foreign inflows",
-      "FBM KLCI forecast to reach 1,800 by year-end 2026"
-    ],
+    "notable_headlines": [],
     "social_sentiment": null,
-    "summary": "Current-session signal: neutral. Maybank trades at 12.3x trailing and 11.3x forward earnings with a 6.23% dividend yield, 37.7% reported net margin, and low beta of 0.11. The 10.56 close is below all three moving averages, RSI is 34.3, MACD is negative, and the local snapshot has no usable news headlines."
+    "summary": "Sentiment is neutral with low confidence: recommendations lean positive, but eight holds and one strong sell prevent a clean consensus. No usable dated headlines are available to validate a current market narrative."
   },
   "technical": {
     "signal": "sell",
     "confidence": "medium",
-    "trend": "Downtrend — price below both SMA-50 and SMA-200; recent 20-day decline from 11.20 to 10.66",
-    "rsi_14": 26.32,
-    "rsi_assessment": "Deeply oversold (RSI 26.32 < 30). Signals exhaustion of selling pressure and potential for tactical bounce or reversal, but does not guarantee upside breakout in a bearish context.",
-    "macd_assessment": "Bearish momentum confirmed. MACD histogram -0.0763 (negative), MACD line -0.081 below signal line -0.0047. Suggests continued downward pressure despite oversold RSI conditions.",
-    "volume_assessment": "Average 30-day volume: 11.3M shares. Recent volume elevated on down days (Aug 4: 30.6M), confirming institutional selling pressure during the decline. Normal volume on recent flat/bounce attempts.",
+    "trend": "Mild bearish trend: the MYR10.60 close is below SMA-20 at 10.643, SMA-50 at 10.7884, and SMA-200 at 10.8567, while valid recent closes have been range-bound around MYR10.56\u201310.72.",
+    "rsi_14": 52.7778,
+    "rsi_assessment": "RSI-14 is 52.78, which is neutral rather than oversold or overbought; it does not confirm a reversal or capitulation.",
+    "macd_assessment": "MACD line is -0.0581 and signal line is -0.0649, both below zero. The +0.0067 histogram shows a small positive turn, so momentum is mixed rather than cleanly bearish.",
+    "volume_assessment": "Latest volume is 0 and volume ratio is 0.0 because the 2026-09-02 row is zero-filled; 2026-08-28 and 2026-09-01 also contain zero or partial OHLC/volume fields. Volume confirmation and the computed ATR-14 of 1.61 are contaminated; valid recent volume evidence ends on 2026-08-27.",
     "support_levels": [
-      10.66,
-      10.78,
-      10.5,
-      4.12
+      10.4823,
+      10.52
     ],
     "resistance_levels": [
-      11.2,
-      11.02,
-      10.96,
-      12.03
+      10.7884,
+      10.8567,
+      12.0727
     ],
-    "summary": "Current-session signal: sell. Maybank trades at 12.3x trailing and 11.3x forward earnings with a 6.23% dividend yield, 37.7% reported net margin, and low beta of 0.11. The 10.56 close is below all three moving averages, RSI is 34.3, MACD is negative, and the local snapshot has no usable news headlines."
+    "summary": "Price structure is mildly bearish because the close is below all three moving averages and about 12.2% below the supplied 52-week high of MYR12.0727. RSI and the small positive MACD histogram leave room for a bounce, but the zero-filled tail makes volume and volatility confirmation unreliable; the supplied 52-week low of 0.0 is not usable."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "medium",
-    "fed_impact": "Steady Fed rates at 4.25-4.50% support stable NIMs; no rate cuts expected near-term benefit regional bank margins and predictability.",
-    "interest_rate_outlook": "BNM's accommodative 3.00% OPR with growth focus supports lending expansion; stable Fed rates reduce refinancing risk and support yield curves in both markets.",
-    "fx_impact": "Stable MYR at 4.30-4.40 is supportive; currency predictability reduces hedging costs. MYR strength would enhance cross-border competitiveness; weakness would pressurize FX-exposed lending portfolio.",
+    "fed_impact": "The Federal Reserve maintained the target range for the federal funds rate at 3.50\u20133.75% at the 2026-07-29 FOMC and described growth as solid while inflation remained elevated. [Source: Federal Reserve, Federal Reserve issues FOMC statement, 2026-07-29, https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm] For Maybank, stable higher US rates can support returns on USD-linked assets, but they can also keep global funding conditions tight; the net effect is neutral without a balance-sheet currency breakdown.",
+    "interest_rate_outlook": "Bank Negara Malaysia maintained the OPR at 2.75% on 2026-07-09 and said the stance was appropriate for price stability and sustainable growth. [Source: Bank Negara Malaysia, Monetary Policy Statement, 2026-07-09, https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026] A stable domestic rate can support credit demand and planning, but it does not prove NIM expansion; the 0.75\u20131.00 percentage-point Fed-versus-BNM gap leaves external-rate and funding sensitivity.",
+    "fx_impact": "The KL USD/MYR reference rate was 4.0420 on 2026-09-02. [Source: Bank Negara Malaysia FMIP, KL USD/MYR Reference Rate, 2026-09-02, https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate] A stronger MYR can lower the MYR cost of USD funding and imported services, while reducing the ringgit value of foreign earnings; Maybank's net FX impact is mixed and the required exposure data is unavailable.",
     "sector_macro_factors": [
-      "Stable-to-expanding NIM in higher-for-longer rate environment",
-      "Accommodative BNM policy supports credit growth and loan origination",
-      "Defensive positioning with low beta (0.11) reduces equity volatility correlation",
-      "Moderate Malaysian inflation and low unemployment support credit quality"
+      "Stable BNM OPR is a modest support for domestic credit demand, but margin direction remains unverified.",
+      "Higher-for-longer US rates can tighten global funding and raise risk sensitivity for regional borrowers.",
+      "Domestic growth and borrower asset quality matter more than the policy rate alone; no loan or NPL data is supplied.",
+      "MYR4.0420 per USD reduces some dollar-cost pressure but can create translation headwinds on overseas earnings."
     ],
     "geopolitical_risks": [
-      "China's mixed economic recovery may dampen regional credit demand given Malaysia's trade/investment ties",
-      "Elevated US-China trade tensions could pressure Malaysian export sector and corporate lending",
-      "MYR/USD stability at 4.30-4.40 range reduces FX hedging costs but currency weakness would pressurize asset quality"
+      "The Fed and BNM statements flag Middle East conflict, energy-supply inflation, and global uncertainty; renewed escalation could raise funding and credit stress. [Sources: Federal Reserve FOMC statement, 2026-07-29, https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm; Bank Negara Malaysia Monetary Policy Statement, 2026-07-09, https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026]",
+      "A regional trade or growth slowdown could weaken loan demand and borrower quality; Maybank's geographic exposure breakdown is not present in Layer 1."
     ],
-    "summary": "Current-session signal: neutral. Maybank trades at 12.3x trailing and 11.3x forward earnings with a 6.23% dividend yield, 37.7% reported net margin, and low beta of 0.11. The 10.56 close is below all three moving averages, RSI is 34.3, MACD is negative, and the local snapshot has no usable news headlines."
+    "summary": "Macro/FX is neutral: official policy facts are stable enough to avoid an immediate shock, but they do not establish Maybank's NIM, credit-quality, or overseas-earnings response. The Fed rate, BNM OPR, and USD/MYR reference are therefore context rather than a directional signal."
   },
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
+  "pipeline_mode": "in-session-claude-code"
 }

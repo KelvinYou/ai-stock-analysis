@@ -1,52 +1,76 @@
 {
   "ticker": "SOFI",
-  "date": "2026-08-25",
-  "overall_signal": "buy",
+  "date": "2026-09-03",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": 0.5455,
-    "signal_convergence": 0.5455,
-    "explanation": "Fundamentals and sentiment both point to buy (medium confidence) on the back of the Q2 2026 earnings beat and raised FY26 guidance (32-35% revenue growth, 33-34% EBITDA margin), while technical and macro remain neutral given the stock's position below its 200-day SMA on weak volume and a Fed on hold at 3.50-3.75%. Confidence-weighted directional consensus across the four analysts caps conviction at 0.5455 -- a moderate, not high-conviction, buy. The debate reinforced this: the bull case (growth, margins, conservative leverage) is credible but the bear case (negative FCF, Morgan Stanley's structural capital-intensity concern, unconfirmed technical reversal) is not dismissible, so conviction is capped rather than pushed toward strong_buy."
+    "score": 0.0,
+    "signal_convergence": 0.3,
+    "explanation": "The panel contains a medium-confidence buy from fundamentals, medium-confidence neutral sentiment, low-confidence sell technicals, and low-confidence neutral macro. Confidence-weighted directional consensus is only +0.10 and convergence is 0.30, because the Q2 growth case is offset by valuation, negative cash flow, weak momentum, and missing credit/rolling technical data. Neutral is the appropriate result; RiskChecker should not emit precise levels."
   },
-  "executive_summary": "SoFi Technologies delivered a Q2 2026 beat (~$1.22B revenue, $0.12 EPS vs $0.11 expected) and raised FY26 guidance to 32-35% adjusted net revenue growth with 33-34% EBITDA margins, driven by 35% member growth and 42% growth in products per customer. The forward P/E of 22.2x is reasonable against that trajectory, and the balance sheet carries a conservative ~18% debt-to-equity ratio even as free cash flow remains sharply negative (-$3.99B) from loan-origination growth.\n\nThe adversarial debate surfaced a real fork: bulls point to the guidance raise, margin expansion, and a stock that has reclaimed its 20- and 50-day SMAs, while bears point to Morgan Stanley's price-target cut to $15 (below the current $18.24) on capital intensity and student-loan exposure, a trailing P/E of 38.8x that still prices in flawless execution, and a technical picture that remains 10.8% below the 200-day SMA on unconvincing (0.55x average) volume.\n\nWith a Fed holding steady at 3.50-3.75% amid above-target inflation and no near-term rate-cut catalyst, the macro backdrop is a wash for a rate-sensitive lender. Net: the fundamental and sentiment tailwinds are real but not yet confirmed by technicals or macro, producing a moderate buy with capped conviction (0.5455) rather than a high-conviction call.",
-  "bull_case": "SoFi's Q2 2026 beat and raised FY26 guidance (32-35% revenue growth, 33-34% EBITDA margins) reflect a compounding cross-sell engine (35% member growth, 42% products-per-customer growth) rather than one-off strength. The forward P/E of 22.2x is a reasonable price for that growth, the balance sheet is conservatively levered (~18% debt/equity) even while funding loan-book growth, and the stock has technically reclaimed both its 20- and 50-day SMAs with MACD turning positive -- reinforced by Piper Sandler's fresh Overweight initiation.",
-  "bear_case": "Free cash flow of -$3.99B signals real capital intensity, and Morgan Stanley's price-target cut to $15 -- below the current price -- specifically flags student-loan exposure as a structural risk, not generic bearishness. The trailing P/E of 38.8x still prices in flawless execution of the guidance raise, the stock remains 10.8% below its 200-day SMA on weak (0.55x average) volume -- consistent with a bear-market bounce rather than a confirmed reversal -- and a Fed holding at 3.50-3.75% with above-target inflation offers no near-term catalyst to ease funding costs.",
+  "executive_summary": "SoFi's official Q2 2026 release provides a real growth catalyst: record adjusted net revenue, strong member and product growth, and a raised FY2026 revenue guide. The Layer 1 snapshot also shows positive net income and a lower forward than trailing P/E. The fundamental case is constructive, but trailing valuation is high and the supplied files do not include the credit-quality, deposit, funding-cost, or operating-margin trends needed to establish durable earnings quality.\n\nThe final signal is neutral and low confidence. Price is below EMA-20, MACD momentum is negative, and volume is only 0.1788x the stored average; the non-finite 2026-08-28 bar also makes RSI, SMAs, Bollinger Bands, and ATR unavailable. With convergence below the deterministic action gate, no precise entry, stop, or target is justified.",
+  "bull_case": "Rapid reported revenue, member, and product growth plus raised FY2026 guidance could make the trailing valuation less relevant if credit quality and cash conversion hold. Positive net income and low reported debt/equity add a financial base.",
+  "bear_case": "The 36.4082x trailing P/E and negative $3.994B free cash flow leave little margin for a growth or credit-quality miss. The post-earnings tape is weak, price is below EMA-20, and the missing technical and credit fields prevent confirmation.",
   "key_uncertainties": [
-    "Whether FY26 guidance (32-35% revenue growth) will actually be delivered given historical guidance-vs-actual variance in fintech lenders",
-    "How sensitive SoFi's loan funding costs are to the Fed's September 15-16, 2026 decision",
-    "Whether the recent price recovery will be confirmed by a volume increase in coming weeks",
-    "The true scale of student-loan-related credit risk that Morgan Stanley is flagging versus what is already priced into the stock",
-    "Whether the current bounce above the 20/50-day SMA is a trend reversal or a bear-market rally given the stock remains well below its 200-day SMA"
+    "Credit-loss, delinquency, deposit, and funding-cost trends",
+    "Whether the raised FY2026 guidance is achieved",
+    "Whether negative free cash flow improves as lending growth normalizes",
+    "Whether price reclaims EMA-20 with stronger participation",
+    "Whether technical indicators become finite after the 2026-08-28 source-bar issue is resolved"
   ],
   "catalysts_upcoming": [
-    "FOMC rate decision on September 15-16, 2026",
-    "Q3 2026 earnings report and any further guidance revision",
-    "Additional analyst rating/price-target updates following the Morgan Stanley cut and Piper Sandler initiation",
-    "Volume confirmation (or failure) of the current bounce above the 20-/50-day SMAs"
+    "Goldman Sachs Communacopia & Technology Conference on September 8, 2026",
+    "Next earnings release with credit-quality and cash-conversion detail",
+    "A repaired finite technical snapshot and a high-volume reclaim of the $18.08 EMA-20 area"
   ],
   "risk_assessment": {
     "correlation_notes": [
       "High beta (2.20) \u2014 price may amplify broad-market moves.",
       "Sector: Financial Services \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 83.3% over available price history. Projected worst case (2-sigma): ~115.5% from current $18.24.",
+    "max_drawdown_scenario": "Historical max drawdown: 83.3% over available price history. Projected worst case (2-sigma): ~nan% from current $17.43.",
     "risk_reward_ratio": null
   },
   "action_plan": {
-    "entry_limit": 17.82,
-    "entry_rationale": "Buy-the-dip to SMA-20 support near $17.82",
-    "stop_loss": 16.34,
-    "stop_rationale": "2x ATR-14 ($0.74) below entry \u2014 invalidates the setup",
-    "take_profit_1": 19.66,
-    "take_profit_2": 32.73,
-    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": null
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.30). Wait for a clearer setup."
   },
-  "research_verdict": null,
+  "research_verdict": {
+    "ticker": "SOFI",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Neither side carried the debate decisively. SoFi has unusually strong reported growth and a credible profitability trajectory, but valuation, negative free cash flow, weak price momentum, and missing credit-quality evidence prevent a reliable directional conclusion from the completed-close snapshot.",
+    "winning_side": "neither",
+    "strongest_counterexample": "If the Q2 growth rate and raised FY2026 guide are accompanied by stable credit losses, improving cash conversion, and a technical reclaim of EMA-20, the current selloff could be a valuation reset rather than a broken thesis.",
+    "invalidation_conditions": [
+      "Next reported quarter shows adjusted net-revenue growth below 25% or management withdraws the FY2026 $4.75B-$4.85B adjusted net-revenue guide",
+      "Credit-loss or delinquency metrics materially worsen while price remains below the recent $17.37 support area",
+      "A sustained close above EMA-20 near $18.08 with volume materially above the stored average would invalidate the immediate downside-momentum case"
+    ],
+    "evidence_gaps": [
+      "No usable dated Layer 1 news headlines",
+      "No credit-loss, delinquency, deposit, funding-cost, or loan-growth trend in Layer 1",
+      "Gross and operating margins are null",
+      "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
+      "No dated forward Fed path"
+    ],
+    "decisive_factors": [
+      "Official Q2 reported record revenue, member/product growth, and raised guidance",
+      "36.4082x trailing P/E and negative $3.994B free cash flow",
+      "Price below EMA-20 with negative MACD histogram and 0.1788x volume ratio",
+      "Mixed recommendation distribution and missing credit-quality evidence"
+    ]
+  },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
-    "sentiment": "buy",
-    "technical": "neutral",
+    "sentiment": "neutral",
+    "technical": "sell",
     "macro": "neutral"
   },
   "pipeline_mode": "in-session-claude-code"

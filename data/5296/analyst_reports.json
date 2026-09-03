@@ -1,83 +1,71 @@
 {
   "fundamentals": {
     "signal": "buy",
-    "confidence": "high",
-    "pe_assessment": "P/E of 21.7x is fair for a profitable, market-leading home improvement retailer. Forward P/E of 19.3x reflects realistic single-digit earnings growth assumptions. Not cheap, but not overvalued.",
-    "margin_analysis": "Exceptional margins (47.5% gross, 18.7% operating, 12.8% net) demonstrate operational excellence and pricing power. Margins are stable and sustainable, indicating competitive strength in the Malaysian market.",
-    "debt_analysis": "Moderate leverage (D/E 0.77x) is well-managed. Free cash flow of 854M MYR provides comfortable debt service. Balance sheet is conservative and presents no solvency concerns for the sector.",
-    "growth_outlook": "Muted growth expectations priced into forward valuation. Cyclical business tied to Malaysian consumer confidence and housing activity. No structural acceleration anticipated; stock poised as a stable holder rather than growth engine.",
+    "confidence": "medium",
+    "pe_assessment": "Trailing P/E is 19.43x and forward P/E is 17.60x. The lower forward multiple is supportive of a positive earnings outlook, but the valuation is not a deep-discount signal and the Layer 1 artifact does not include a sector comparator.",
+    "margin_analysis": "Gross margin is 47.52%, operating margin 18.71%, and net margin 12.77%, indicating solid profitability. No quarterly trend series is present, so stability and direction cannot be confirmed.",
+    "debt_analysis": "Total debt is RM1.546bn against RM2.017bn equity; free cash flow is RM853.994m. This is meaningful leverage with cash-flow support, but no maturity schedule or interest coverage is present.",
+    "growth_outlook": "Revenue is RM4.954bn and net income RM632.694m; forward P/E below trailing P/E supports cautious growth expectations. Growth rate, store expansion, and same-store sales are absent, so the outlook is cautiously positive rather than high-confidence.",
     "key_risks": [
-      "Cyclical downturn risk to consumer spending",
-      "Competitive pricing pressure in retail",
-      "Valuation leaves limited upside surprise",
-      "Debt pressure if economy deteriorates",
-      "Maturing market with modest growth runway"
+      "Consumer-cyclical exposure could weaken revenue if Malaysian household spending slows.",
+      "Competitive pricing pressure could compress the reported margins.",
+      "A 19.43x trailing P/E leaves room for downside if earnings growth disappoints.",
+      "Meaningful debt could increase balance-sheet pressure during a demand downturn.",
+      "The artifact lacks quarterly trend and operating-detail data needed to confirm the thesis."
     ],
     "key_strengths": [
-      "12:0 analyst buy:sell ratio—exceptional consensus",
-      "Strong & stable margins across all levels",
-      "Dividend yield of 4.24% for income seekers",
-      "Low beta (0.499)—defensive equity",
-      "Market-leading position in home improvement retail"
+      "Gross, operating, and net margins are 47.52%, 18.71%, and 12.77%.",
+      "Free cash flow of RM853.994m exceeds reported net income of RM632.694m.",
+      "Forward P/E of 17.60x is below trailing P/E of 19.43x.",
+      "Reported beta is low at 0.499 and dividend yield is 3.82%.",
+      "The recommendation table is buy-skewed with 1 strong buy, 11 buys, 4 holds, and no sells in the latest row."
     ],
-    "summary": "Current-session signal: buy. MR DIY has solid operating economics: 47.5% gross margin, 18.7% operating margin, 12.8% net margin, MYR854 million free cash flow, and a 19.3x forward P/E. The fresh price snapshot is below all three moving averages with RSI 29.0, negative MACD, and 1.38x average volume, so near-term downside pressure outweighs the fundamental support."
+    "summary": "MRDIY has a credible fundamental base: RM4.954bn revenue, RM632.694m net income, healthy reported margins, RM853.994m free cash flow, and a 17.60x forward P/E. The fundamentals layer is buy at medium confidence, but missing trend detail and the preserved market-data defect prevent a high-confidence thesis."
   },
   "sentiment": {
     "signal": "neutral",
-    "confidence": "medium",
+    "confidence": "low",
     "news_tone": "neutral",
-    "news_summary": "No recent news headlines available for sentiment analysis. Assessment based solely on analyst recommendation consensus.",
+    "news_summary": "The preserved Layer 1 artifact has ten blank headline records with no usable titles, links, or publishers. Its recommendation table is directionally positive\u20141 strong buy, 11 buys, 4 holds, and no sells in the latest row\u2014but the periods are not dated evidence of current news flow.",
     "key_themes": [
-      "Analyst consensus bullishness",
-      "Home improvement retail sector",
-      "Consumer cyclical exposure",
-      "Contrarian warning - unanimous bullishness",
-      "Housing market sensitivity"
+      "Positive recommendation skew",
+      "No usable dated news",
+      "Consumer-cyclical narrative cannot be confirmed from headlines"
     ],
     "notable_headlines": [],
-    "social_sentiment": null,
-    "summary": "Current-session signal: neutral. MR DIY has solid operating economics: 47.5% gross margin, 18.7% operating margin, 12.8% net margin, MYR854 million free cash flow, and a 19.3x forward P/E. The fresh price snapshot is below all three moving averages with RSI 29.0, negative MACD, and 1.38x average volume, so near-term downside pressure outweighs the fundamental support."
+    "social_sentiment": "unavailable",
+    "summary": "Sentiment is mildly constructive only because the recommendation table is buy-skewed; blank headline records and absent social evidence make the view neutral and low-confidence."
   },
   "technical": {
     "signal": "sell",
-    "confidence": "high",
-    "trend": "Downtrend; price below SMA-50 and SMA-200; lower highs and lows over 20 days",
-    "rsi_14": null,
-    "rsi_assessment": "RSI at 29.03 (oversold), but in a downtrend context signals weakness rather than reversal potential. Oversold does not equal bottom.",
-    "macd_assessment": "MACD line negative (−0.0522), signal line negative (−0.0341), histogram negative (−0.0181). Bearish momentum persists; no crossover signals recovery.",
-    "volume_assessment": "30-day average ~12.6M shares. Recent volume elevated (15–19M daily) with 44.5M spike on Aug 4, confirming heavy selling pressure. Volume confirms downtrend conviction.",
-    "support_levels": [
-      1.51,
-      1.42,
-      0.996
-    ],
-    "resistance_levels": [
-      1.69,
-      1.62,
-      2.4871
-    ],
-    "summary": "Current-session signal: sell. MR DIY has solid operating economics: 47.5% gross margin, 18.7% operating margin, 12.8% net margin, MYR854 million free cash flow, and a 19.3x forward P/E. The fresh price snapshot is below all three moving averages with RSI 29.0, negative MACD, and 1.38x average volume, so near-term downside pressure outweighs the fundamental support."
+    "confidence": "low",
+    "trend": "Reported bearish trend: the RM1.36 close is below SMA-20 RM1.4708, SMA-50 RM1.5644, and SMA-200 RM1.5790. The latest three rows contain zero OHLC/volume fields, so this trend is not execution-grade.",
+    "rsi_14": 17.5221,
+    "rsi_assessment": "Layer 1 reports RSI-14 17.5221, mechanically oversold. Because the latest MY bars are zero-filled in OHLC/volume fields, this is a contaminated snapshot and must not be used to infer a rebound.",
+    "macd_assessment": "Layer 1 reports MACD line -0.0514, signal -0.0408, and histogram -0.0106, mechanically bearish. These values are preserved inputs, not repaired estimates; zero-filled recent bars reduce their reliability.",
+    "volume_assessment": "Layer 1 reports 0 current volume against a 20-day average of 15,767,085 (ratio 0.0). Volume confirmation is unavailable; no substitute volume or price level is inferred.",
+    "support_levels": [],
+    "resistance_levels": [],
+    "summary": "The preserved indicator snapshot is mechanically bearish and oversold, but the latest three MY rows contain zero-filled OHLC/volume fields and the reported 52-week low is 0.0. Technical levels and execution conclusions are unavailable until Layer 1 is repaired; no technical values were invented."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "Restrictive 4.25-4.50% Fed funds rate dampens global discretionary consumer spending and home financing demand; no near-term relief expected.",
-    "interest_rate_outlook": "Fed holding steady; BNM accommodative at 3.00%. Rate differential favors USD, pressuring MYR and import costs for home improvement goods.",
-    "fx_impact": "MYR weakness (driven by Fed-BNM rate differential) increases import costs and erodes consumer purchasing power for home goods; margin compression likely absent offsetting pricing power.",
+    "confidence": "low",
+    "fed_impact": "The Federal Reserve maintained a 3.50%-3.75% target range on 2026-07-29 (https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm). For a Malaysian retailer this is an indirect global-financial-conditions input, not a direct MRDIY revenue driver.",
+    "interest_rate_outlook": "Bank Negara Malaysia maintained OPR at 2.75% on 2026-07-09 (https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026). This is a broadly supportive domestic-rate backdrop, but the artifact does not establish a future policy path or company-specific demand response.",
+    "fx_impact": "BNM's KL USD/MYR reference rate was 4.0420 on 2026-09-02 (https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate). MYR movement can affect imported merchandise and logistics costs; the Layer 1 data does not provide MRDIY's import mix or hedging.",
     "sector_macro_factors": [
-      "Consumer spending under pressure from Fed restrictive stance and modest GDP growth",
-      "MYR weakness from rate differential increases input costs and reduces consumer purchasing power",
-      "Home improvement retail sensitive to mortgage rates and employment; discretionary nature of non-essential renovations vulnerable",
-      "Elevated trade tensions create supply chain risk for imported materials and inventory costs"
+      "Household consumption and discretionary spending",
+      "Domestic rates and financing conditions",
+      "Imported inventory and logistics costs with MYR sensitivity",
+      "Employment, inflation, and housing activity"
     ],
     "geopolitical_risks": [
-      "Global trade tensions threaten supply chain for imported home improvement goods",
-      "Tariff and supply chain disruptions could raise COGS and inventory volatility",
-      "Regional economic slowdown from geopolitical uncertainty reducing home spending appetite"
+      "Trade or shipping disruption affecting imported merchandise",
+      "Energy and freight inflation pressuring retail margins",
+      "Regional risk-off conditions affecting consumer confidence"
     ],
-    "summary": "Current-session signal: neutral. MR DIY has solid operating economics: 47.5% gross margin, 18.7% operating margin, 12.8% net margin, MYR854 million free cash flow, and a 19.3x forward P/E. The fresh price snapshot is below all three moving averages with RSI 29.0, negative MACD, and 1.38x average volume, so near-term downside pressure outweighs the fundamental support."
+    "summary": "Macro conditions are balanced: domestic OPR is supportive while global rates and FX/import-cost uncertainty remain. With no company-specific macro sensitivity or forward path in Layer 1, no directional macro signal is assigned."
   },
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
+  "pipeline_mode": "in-session-claude-code"
 }

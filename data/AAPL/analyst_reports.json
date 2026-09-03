@@ -2,79 +2,71 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "P/E of 35.5x (forward 32.5x) is rich vs. Apple's historical mid-20s average and vs. broad market, but is being paid down by earnings growth (forward < trailing) and is not extreme for a $4.5T mega-cap with 27% net margins.",
-    "margin_analysis": "Gross margin 46.9%, operating margin 32.0%, net margin 26.9% -- best-in-class for a hardware/services hybrid and consistent with Apple's services mix shielding hardware commoditization pressure.",
-    "debt_analysis": "Total debt $98.7B vs. total equity $73.7B (debt/equity ~1.34x) is elevated on the balance sheet, but is more than covered by $98.8B of free cash flow generated in the period, so leverage reads as capital-structure optimization (buybacks/dividends) rather than distress.",
-    "growth_outlook": "Revenue $416.2B / net income $112.0B with FCF roughly matching net income indicates high earnings quality. Analyst recommendation mix has improved over the last 3 months (strong buy+buy rising from 25 to 30 of 44 covering analysts, sell-side shrinking from 5 to 3), signaling improving Street conviction on forward growth (services, AI-adjacent product cycle).",
+    "pe_assessment": "Trailing P/E is 37.31x and forward P/E is 34.06x. The small forward discount provides limited valuation support, so the premium requires continued earnings quality and successful execution through the leadership transition.",
+    "margin_analysis": "Gross margin is 46.9%, operating margin 32.0%, and net margin 26.9% on $416.2B revenue. These are strong margins for a hardware/services mix.",
+    "debt_analysis": "$98.7B debt versus $73.7B equity is approximately 133.8% debt/equity, but $98.8B free cash flow is similar to net income and provides meaningful coverage. Leverage is a monitoring item, not evidence of distress.",
+    "growth_outlook": "Revenue of $416.2B, net income of $112.0B, and free cash flow of $98.8B support a durable base. The Layer 1 recommendation mix is mixed (25 buy-or-better, 13 hold, 6 sell-or-worse), so growth optimism is not unanimous.",
     "key_risks": [
-      "Valuation multiple (35x trailing) leaves little room for execution missteps",
-      "Debt/equity of ~1.34x is high relative to net income coverage if FCF were to compress",
-      "CEO transition (Tim Cook to John Ternus, effective Sept 1 2026) is an execution/continuity unknown"
+      "37.31x trailing P/E leaves limited room for execution misses.",
+      "Debt/equity of approximately 133.8% is high despite strong cash flow.",
+      "CEO transition and AI execution create near-term continuity and roadmap risk.",
+      "Forward P/E remains close to trailing P/E."
     ],
     "key_strengths": [
-      "Best-in-class margins (27% net) and FCF conversion",
-      "Improving analyst sentiment trend over the last quarter",
-      "$4.5T scale with diversified hardware + services revenue base"
+      "26.9% net margin and 32.0% operating margin.",
+      "$98.8B free cash flow against $112.0B net income.",
+      "Large, diversified hardware and services ecosystem.",
+      "Strong absolute scale and cash generation."
     ],
-    "summary": "Apple's premium valuation is backed by industry-leading margins and strong free cash flow, and the analyst trend has been improving, but the multiple leaves limited room for error, especially through a CEO transition."
+    "summary": "Apple's financial quality supports a modest buy bias, but the 37.31x P/E and small forward discount leave little room for execution error. Strong cash flow offsets the high debt/equity ratio, while the leadership and AI transition cap confidence."
   },
   "sentiment": {
-    "signal": "buy",
-    "confidence": "medium",
-    "news_tone": "mixed-to-positive",
-    "news_summary": "yfinance returned no usable headlines (empty title/link/publisher fields), so this report is grounded in web-search news from the past two weeks: Apple confirmed a leadership transition (Tim Cook stepping down as CEO, incoming CEO John Ternus effective September 1, 2026), announced $60B of its US investment push is going to a new Texas manufacturing facility, faces analyst optimism around a rumored foldable iPhone, and is cutting jobs in Vision Pro/Siri/Intelligent Systems Experiences teams to redirect resources toward AI. Sell-side average rating is 'Buy' with a 12-month price target of $326.34 (~5.1% above the $310.34 close).",
-    "key_themes": [
-      "CEO succession / leadership transition",
-      "US/Texas manufacturing reshoring (tariff and supply-chain resilience)",
-      "AI resource reallocation (Vision Pro/Siri cuts funding AI push)",
-      "Foldable iPhone as next hardware catalyst"
-    ],
-    "notable_headlines": [
-      "Interesting News for Apple Stock Investors (Motley Fool, Aug 18 2026) -- CEO transition and Texas investment coverage",
-      "Apple stock price ended at $310.34 on Monday, after gaining 0.320% (stockinvest.us, Aug 24 2026)",
-      "Analyst consensus: 45 analysts rate AAPL 'Buy' with $326.34 average 12-month price target"
-    ],
-    "social_sentiment": null,
-    "summary": "News tone is mixed-to-positive: a CEO transition and internal team cuts introduce near-term uncertainty, but they are framed as a deliberate AI-focused reallocation, and manufacturing reshoring plus a foldable-iPhone narrative give the sell-side (uniformly 'Buy' rated, above-market target) a positive lean."
-  },
-  "technical": {
     "signal": "neutral",
     "confidence": "medium",
-    "trend": "Mixed / consolidating within a long-term uptrend: price ($310.34) sits +10.3% above the rising 200-day SMA ($281.24, long-term uptrend intact) and marginally above the 50-day SMA ($310.29, essentially flat), but is below the 20-day SMA ($312.89) and below the 20-day EMA ($311.79), indicating a short-term pullback/pause rather than trend reversal.",
-    "rsi_14": 51.5935,
-    "rsi_assessment": "RSI-14 at 51.6 is neutral -- neither overbought nor oversold, consistent with a stock consolidating rather than trending strongly in either direction.",
-    "macd_assessment": "MACD line (-1.41) is below its signal line (-1.19) with a negative histogram (-0.23), a short-term bearish momentum reading, though the magnitude is small relative to ATR (6.02) and sits within a longer-term uptrend rather than confirming a breakdown.",
-    "volume_assessment": "Volume of 34.4M is well below its 20-day average of 52.3M (ratio 0.66x), indicating the recent pullback is occurring on light volume -- a low-conviction move rather than aggressive distribution.",
-    "support_levels": [
-      310.29,
-      290.91,
-      281.24,
-      223.86
+    "news_tone": "mixed",
+    "news_summary": "Layer 1 news fields are empty, so dated public coverage was used. John Ternus took over as CEO on 2026-09-01 and coverage reported a positive initial share reaction, but the transition leaves AI and product execution unresolved. Layer 1 recommendations are constructive but not dominant: 6 strong buy, 19 buy, 13 hold, 3 sell, and 3 strong sell.",
+    "key_themes": [
+      "CEO succession",
+      "AI execution and product roadmap",
+      "Services-driven profitability",
+      "Positive initial reaction with unresolved execution risk"
     ],
-    "resistance_levels": [
-      312.89,
-      334.87,
-      344.27
+    "notable_headlines": [
+      "Tim Cook's golden Apple \u2014 https://www.axios.com/2026/09/01/apple-ceo-cook-stock",
+      "Apple shares rise as John Ternus takes over \u2014 https://au.finance.yahoo.com/quote/AAPL/latest-news/",
+      "Apple's new CEO compensation coverage \u2014 https://au.finance.yahoo.com/quote/AAPL/latest-news/"
     ],
-    "summary": "AAPL is consolidating just under short-term moving averages after a strong long-term uptrend (+10% above the 200-day SMA), with a mildly bearish MACD but neutral RSI and below-average volume -- a low-conviction pause rather than a trend change, so technicals alone do not support a directional call."
+    "social_sentiment": null,
+    "summary": "Sentiment is mixed: the CEO handoff was initially received positively, but AI and roadmap uncertainty remains and the recommendation panel contains a meaningful hold and sell minority."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "low",
+    "trend": "Constructive but low confidence: the 2026-09-02 close of $324.74 is above non-null EMA-20 of $314.4961 and MACD is positive. SMA-20/50/200, RSI, Bollinger Bands, ATR, and support/resistance are unavailable after the non-finite 2026-08-28 bar.",
+    "rsi_14": null,
+    "rsi_assessment": "Unavailable: RSI-14 is null in the 2026-09-02 Layer 1 snapshot; no overbought/oversold conclusion is assigned.",
+    "macd_assessment": "MACD line 1.4742 is above signal line -0.1593, with histogram +1.6335, indicating improving momentum. Missing averages and RSI prevent a complete trend conclusion.",
+    "volume_assessment": "Volume ratio is 0.1389 versus the 20-day average; the low ratio does not confirm the price move.",
+    "support_levels": [],
+    "resistance_levels": [],
+    "summary": "Available EMA/MACD fields lean bullish, but technical confidence is low and no support/resistance levels are inferred from null fields."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "low",
-    "fed_impact": "The FOMC held the federal funds rate at 3.5%-3.75% at its July 29, 2026 meeting in a divided 9-3 vote, with three regional presidents dissenting in favor of cuts as inflation has remained above the Fed's 2% target for over five years. The next meeting (Sept 15-16, 2026) is the near-term catalyst for a possible rate-path shift.",
-    "interest_rate_outlook": "Rates are in a 'higher-for-longer, but increasingly contested' stance -- a dovish minority is growing, which caps downside from further hikes but also means no near-term relief on the discount rate used to value Apple's long-duration cash flows and premium P/E multiple.",
-    "fx_impact": "No dated USD trade-weighted or region-specific FX data was available in this session's macro tool for a specific currency-impact call; Apple's large non-US revenue base gives it some general USD-strength sensitivity, but this is a qualitative note, not a dated quantified factor.",
+    "confidence": "medium",
+    "fed_impact": "The 2026-07-29 FOMC statement maintained the federal-funds target range at 3.50%-3.75% by a 9-3 vote; three voters preferred a 25bp increase. It also said inflation remains elevated relative to 2% and cited Middle East conflict uncertainty. For this company, the elevated-rate backdrop is a valuation/cost-of-capital consideration rather than a complete operating signal.",
+    "interest_rate_outlook": "BNM maintained OPR at 2.75% on 2026-07-09 and described resilient growth while flagging tighter global financial conditions, valuation concerns, and conflict-related inflation and supply risks. The supplied statements support a stable but uncertain policy backdrop; they do not justify assuming imminent easing or tightening.",
+    "fx_impact": "For a MYR-based investor, USD assets translate using BNM FMIP reported KL USD/MYR at 4.0420 as of 2026-09-02. A stronger USD can lift MYR value of a USD holding but can pressure international revenue translated back into USD; this single fixing does not establish a trend. Sources: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm; https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026; https://financialmarkets.bnm.gov.my/about-myor-myor-i.",
     "sector_macro_factors": [
-      "Elevated-for-longer real rates pressure high-multiple growth/tech valuations more than value sectors",
-      "New $60B Texas manufacturing investment reduces China/tariff supply-chain concentration risk, a positive structural macro factor for a large-cap hardware exporter",
-      "Consumer discretionary spending on premium hardware (iPhone/foldable) is rate-sensitive via consumer credit costs"
+      "Premium consumer demand can soften if higher rates reduce discretionary spending.",
+      "Cash generation and services mix provide insulation from financing conditions.",
+      "USD/MYR affects MYR translation more directly than it establishes an Apple operating signal."
     ],
     "geopolitical_risks": [
-      "Continued reliance on China-based assembly/supply chain despite Texas diversification",
-      "US-China trade/tariff policy risk given Apple's global hardware supply chain",
-      "Taiwan Strait tensions (semiconductor/component sourcing exposure)"
+      "FOMC and BNM identify conflict, energy, and supply shocks as uncertainties.",
+      "Global hardware supply-chain and trade-policy exposure remains structural; no new dated shock is assumed."
     ],
-    "summary": "The Fed's divided hold at 3.5-3.75% keeps the discount-rate backdrop neutral-to-mildly-restrictive for Apple's premium multiple, while the new Texas manufacturing investment is a modest structural positive against tariff/geopolitical supply-chain risk; net macro read is neutral given no clear near-term catalyst until the September FOMC meeting."
+    "summary": "Macro/FX is neutral with a mild valuation headwind from the elevated Fed range. Strong cash flow offsets part of the rate sensitivity; 4.0420 USD/MYR mainly affects MYR translation."
   },
   "pipeline_mode": "in-session-claude-code"
 }

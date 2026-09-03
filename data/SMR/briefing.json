@@ -1,36 +1,34 @@
 {
   "ticker": "SMR",
-  "date": "2026-08-25",
-  "overall_signal": "neutral",
+  "date": "2026-09-03",
+  "overall_signal": "sell",
   "conviction": {
-    "score": 0.0,
-    "signal_convergence": 0.2727,
-    "explanation": "Three of the four analyst reports (sentiment, technical, macro) are neutral and only fundamentals leans directional (sell, medium confidence); confidence-weighted directional consensus is -0.27, too weak and too one-sided-by-a-single-analyst to support a directional call. Per the calibration rule, a neutral overall signal forces conviction.score to 0.0 regardless of the strategist's stated confidence in the underlying thesis. signal_convergence of 0.27 (max directional weight / total weight = 0.75/2.75) reflects genuinely low agreement across the panel, not a rounding artifact \u2014 this is a case where the evidence is real but mixed, not a case of missing data."
+    "score": -0.28,
+    "signal_convergence": 0.5,
+    "explanation": "Fundamentals and technicals are directionally sell (medium and low confidence), while sentiment and macro are neutral. The resulting convergence is 0.50, but conviction is held to -0.28 because official liquidity and project milestones create real optionality and the technical snapshot is incomplete. The sell view is a valuation/execution warning, not a claim that NuScale's technology has no long-term value, and it is below the deterministic level-quoting threshold."
   },
-  "executive_summary": "NuScale Power presents a real but currently unresolved investment case. The fundamentals picture is the most clearly negative: Q2 2026 revenue collapsed 99% YoY to $75K, net losses ran $355.8M against that near-zero revenue base, and the ~$3.71B market cap implies roughly 118x trailing sales \u2014 a valuation that already prices in substantial future execution. Offsetting that, the company's balance sheet is unusually strong for a pre-commercial name: a recent $750M raise brought cash and short-term investments to ~$1.07B against negligible debt, removing near-term solvency risk for several years. Sentiment is genuinely split \u2014 sell-side analysts are cutting price targets and Citi has moved to an outright Sell, even as commercial-pipeline news (a reported 6-8GW TVA framework, a new Paragon HIPS contract) keeps the long-term nuclear/AI-power-demand thesis alive. Technically, the stock has stabilized in the short term (RSI near 46, a small bullish MACD crossover) but remains 34.6% below its 200-day moving average, confirming the primary trend is still down. Macro is a mild, low-confidence headwind: the Fed's July 2026 hold at 3.50-3.75% with hawkish dissents raises the cost of capital for a cash-burning, high-beta (2.31) name, though this is largely offset by structural, policy-driven demand for nuclear power. Taken together, the debate surfaced strong arguments on both sides without a clear resolution \u2014 the bull case depends on unsigned frameworks converting to real contracts, and the bear case depends on execution risk materializing before that conversion happens. With confidence-weighted analyst signals genuinely split (signal_convergence of only 0.27), neutral is the honest synthesis: the evidence does not currently support conviction in either direction, and forcing a call would substitute narrative for analysis.",
-  "bull_case": "NuScale is the only NRC-design-approved SMR vendor, giving it a multi-year regulatory head start as AI/data-center demand and federal policy increasingly favor firm, carbon-free nuclear power. A reported 6-8GW TVA framework and a new Paragon HIPS contract show the commercial pipeline advancing beyond pure speculation. A recent $750M capital raise built a ~$1.07B cash position against negligible debt, giving the company multi-year runway to reach the point where even one large utility-scale contract converts to meaningful revenue \u2014 a fortress balance sheet that removes near-term solvency risk as a variable. Short-term technicals (RSI ~46, mild bullish MACD crossover) suggest the worst of the selling pressure may be behind the stock, at least for now.",
-  "bear_case": "Revenue is effectively zero and fell 99% YoY in the most recent quarter against a $355.8M net loss and roughly $460M of annual free cash flow burn, at a market cap implying about 118x trailing sales \u2014 a valuation that requires near-flawless multi-year execution to justify. The balance-sheet strength cited by bulls is dilution-funded, not operational, and a large capital raise ahead of supposedly 'imminent' contract conversion is itself a signal of funding uncertainty. Sell-side sentiment is deteriorating, not improving \u2014 RBC cut its target to $10 and Citi moved to an outright Sell at $6.50 \u2014 and the stock remains firmly below its 20/50/200-day moving averages, 34.6% under the 200-day SMA, confirming a long-term downtrend that a short-term stabilization has not reversed. The TVA opportunity remains a non-binding framework, not a signed, revenue-generating contract, and treating it as de-risked pipeline repeats the overconfidence that preceded this year's 32% drawdown.",
+  "executive_summary": "NuScale's bull case has real evidence: the official Q2 2026 release reported $1.9B of liquidity and progress on TVA, RoPower, and Paragon HIPS milestones. Those facts could support a future commercial inflection. However, the Layer 1 financial snapshot remains pre-commercial: $31.479M revenue against a $3.923B market cap, $355.794M net loss, -$460.118M free cash flow, and deeply negative operating and net margins. P/E fields are not meaningful and total debt is unavailable.\n\nThe final signal is a low-confidence sell driven by valuation and execution risk. Price is near EMA-20 but MACD is slightly negative, volume is only 0.0939x the stored average, and the 2026-08-28 non-finite bar leaves RSI, SMAs, Bollinger Bands, and ATR unavailable. RiskChecker therefore emits no precise levels; a binding contract with credible economics and revenue conversion would be the key thesis-changing evidence.",
+  "bull_case": "Substantial reported liquidity and progress toward TVA, RoPower, and component-readiness milestones give NuScale long-term optionality in a potentially large nuclear-power market. A binding deployment agreement could make current sales-based valuation look backward-looking.",
+  "bear_case": "The company is currently valued at roughly 125x supplied trailing sales while losing $355.794M and consuming $460.118M of free cash flow. Future project optionality is not current revenue, debt/funding data is incomplete, and the technical snapshot cannot confirm a reversal or supply precise risk levels.",
   "key_uncertainties": [
-    "Timing and probability of the TVA framework converting into a signed, revenue-generating contract",
-    "Whether NuScale reaches positive operating cash flow before needing further dilutive capital raises",
-    "How much of the current market cap already prices in successful execution of announced-but-unsigned deals",
-    "Whether the small bullish MACD crossover marks a durable reversal or a pause within the larger downtrend",
-    "Whether the Fed stays on hold or the hawkish dissents translate into an actual rate hike, changing the cost-of-capital backdrop for a cash-burning issuer"
+    "Binding customer contracts, economics, and revenue-recognition timing",
+    "Cash burn, future equity issuance, and dilution",
+    "Regulatory and construction progress for TVA and RoPower",
+    "Whether technical indicators become finite after the source-bar issue is repaired",
+    "Forward Fed policy and discount-rate impact on long-duration valuation"
   ],
   "catalysts_upcoming": [
-    "Any binding conversion of the reported 6-8GW TVA framework into a signed offtake/construction agreement",
-    "Further Paragon HIPS / Highly Integrated Protection System commercial milestones",
-    "Next quarterly earnings report \u2014 whether revenue stabilizes/recovers from the Q2 2026 collapse or continues to be lumpy near zero",
-    "September 15-16 FOMC meeting and any shift in rate-path guidance",
-    "Further sell-side rating/target revisions following the recent RBC and Citi cuts"
+    "Binding offtake or deployment agreement with disclosed economics",
+    "Next quarterly update showing project conversion and improving cash burn",
+    "A repaired finite technical snapshot with high-volume reclaim of the $9.385-$9.97 zone"
   ],
   "risk_assessment": {
     "correlation_notes": [
       "High beta (2.31) \u2014 price may amplify broad-market moves.",
       "Sector: Industrials \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 87.5% over available price history. Projected worst case (2-sigma): ~180.7% from current $9.05.",
-    "risk_reward_ratio": null
+    "max_drawdown_scenario": "Historical max drawdown: 87.5% over available price history. Projected worst case (2-sigma): ~nan% from current $9.29.",
+    "risk_reward_ratio": "N/A (bearish signal)"
   },
   "action_plan": {
     "entry_limit": null,
@@ -41,13 +39,38 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.27). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction -0.28, convergence 0.50). Wait for a clearer setup."
   },
-  "research_verdict": null,
+  "research_verdict": {
+    "ticker": "SMR",
+    "judged_view": "sell",
+    "confidence": "low",
+    "thesis": "The bear carried the debate on currently observable evidence: the company is deeply loss-making, free-cash-flow negative, and valued at roughly 125x the supplied trailing revenue, while the bullish project milestones remain future and execution-dependent. The ruling is low confidence because reported liquidity and nuclear deployment optionality could change the valuation if they convert into binding contracts and recognized revenue.",
+    "winning_side": "bear",
+    "strongest_counterexample": "The official $1.9B liquidity position and progress on TVA, RoPower, and HIPS milestones could fund the company through a commercial inflection; if a binding large-scale deployment agreement is signed, current sales-based valuation would understate the option value.",
+    "invalidation_conditions": [
+      "A binding customer deployment agreement is announced with disclosed timing and economics sufficient to support material revenue recognition",
+      "Reported revenue begins converting the project pipeline while quarterly free cash flow improves materially from -$460.118M",
+      "The next finite technical snapshot reclaims the recent $9.385-$9.97 resistance zone with stronger volume and positive momentum"
+    ],
+    "evidence_gaps": [
+      "No usable dated Layer 1 news headlines",
+      "No binding-contract, backlog-conversion, customer-funding, or revenue-recognition trend in Layer 1",
+      "Total debt is null and current liquidity/capital-raise detail is not in Layer 1",
+      "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
+      "No dated forward Fed path"
+    ],
+    "decisive_factors": [
+      "$31.479M revenue against $3.923B market cap",
+      "$355.794M net loss, -$460.118M free cash flow, and -2190.5747% operating margin",
+      "Negative/meaningless P/E fields and missing total debt",
+      "Project milestones are not yet recognized earnings, while MACD is slightly negative"
+    ]
+  },
   "agent_signal_breakdown": {
     "fundamentals": "sell",
     "sentiment": "neutral",
-    "technical": "neutral",
+    "technical": "sell",
     "macro": "neutral"
   },
   "pipeline_mode": "in-session-claude-code"

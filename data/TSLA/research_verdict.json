@@ -1,26 +1,24 @@
 {
   "ticker": "TSLA",
   "judged_view": "sell",
-  "confidence": "medium",
-  "thesis": "The combination of a 305.3x trailing P/E, 150.0x forward P/E, 4.0% net margin, and price below all major moving averages outweighs positive free cash flow and mixed analyst support.",
+  "confidence": "low",
+  "thesis": "The bear case carries the current evidence: 333.6542x trailing P/E, 165.39114x forward P/E, and a 4.00% net margin are difficult to underwrite without a demonstrated future earnings bridge. Positive free cash flow and low leverage keep this from being a strong sell.",
   "winning_side": "bear",
-  "strongest_counterexample": "An oversold RSI, positive MACD histogram, and materially lower forward P/E could signal that the current weakness is temporary rather than structural.",
+  "strongest_counterexample": "Autonomy or robotics could convert the premium into earnings, and the balance sheet can fund that transition; the current Layer 1 data does not quantify the timing or magnitude.",
   "invalidation_conditions": [
-    "Sustained improvement in revenue, margin, and free cash flow",
-    "Price recovery above the 50- and 200-day moving averages",
-    "Evidence that future earnings can justify the current valuation"
+    "Sustained margin and free-cash-flow improvement",
+    "A credible earnings bridge from autonomy or robotics",
+    "A durable price recovery once clean technical indicators are available"
   ],
   "evidence_gaps": [
-    "No non-empty current news headlines",
-    "No breakdown of forward earnings assumptions",
-    "Latest technical snapshot is dated 2026-08-11"
+    "No non-empty dated news headlines",
+    "No forward earnings bridge for the valuation",
+    "Nonfinite OHLC data on 2026-08-28 makes latest RSI, SMA, ATR, and Bollinger outputs null"
   ],
   "decisive_factors": [
-    "305.3x trailing P/E and 150.0x forward P/E",
-    "4.0% net margin",
-    "Price below all three major moving averages"
+    "333.6542x trailing P/E and 165.39114x forward P/E",
+    "4.00% net margin",
+    "$6.220B free cash flow and approximately 0.18x debt-to-equity as mitigating strengths"
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

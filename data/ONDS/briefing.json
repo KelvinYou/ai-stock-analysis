@@ -1,53 +1,75 @@
 {
   "ticker": "ONDS",
-  "date": "2026-08-25",
+  "date": "2026-09-03",
   "overall_signal": "buy",
   "conviction": {
-    "score": 0.5455,
-    "signal_convergence": 0.5455,
-    "explanation": "Directional consensus across the four analyst reports is capped at 0.5455 (fundamentals and sentiment buy at medium confidence; technical and macro neutral), so the model's underlying conviction (a stronger 0.6-0.7 read on the growth/backlog story) is calibrated down to that consensus ceiling per the synthesizer's sign/magnitude rule. The debate reinforces a real but contested growth thesis: record Q2 revenue and a >10x FY2026 guidance raise backed by a $757M backlog against a wider-than-expected EPS miss, a just-closed dilutive offering, and pending insider Form 144 sales. Net: a buy, but a moderate-conviction one given the unresolved margin trajectory and dilution overhang, not a strong_buy."
+    "score": 0.28,
+    "signal_convergence": 0.6,
+    "explanation": "Fundamentals and sentiment are medium-confidence buy, technicals are low-confidence sell, and macro is low-confidence neutral. The confidence-weighted convergence is 0.60, but conviction is held to +0.28 because current Layer 1 profitability and cash flow are deeply negative, the newer Q2 guidance must be reconciled with the trailing snapshot, technical momentum is bearish, and ATR/rolling indicators are unavailable. This is a conditional growth thesis below the deterministic level-quoting threshold."
   },
-  "executive_summary": "Ondas Inc (ONDS) is a hypergrowth, pre-profitability drone/defense-tech story: Q2 2026 revenue hit a record $83.8M and management raised FY2026 guidance to $525-550M, implying more than 10x revenue growth versus 2025, backed by a roughly $757M backlog and recent M&A (Cyberhawk, the $33M Aran Defense acquisition) that diversifies the business into drone inspection and Israel-based defense manufacturing. The balance sheet is clean (equity of $437.8M vs debt of only $15.6M), and sell-side coverage is unanimously Buy/Outperform with targets raised post-earnings.\n\nSet against that is a real near-term overhang: Q2 EPS loss of $0.19 missed the $0.13 estimate, operating margin remains deeply negative (-115%) and FCF is -$40.9M, a public offering just closed (dilutive), and multiple insider Form 144 filings have surfaced in the same week as the miss. Technicals are consolidating rather than trending: price ($8.24) sits above the 50-day SMA ($8.20) but below the 20-day and 200-day SMAs, with a negative MACD histogram and RSI-14 near neutral (42.5), on below-average volume.\n\nThe bull/bear debate did not resolve the central tension \u2014 whether the wider loss alongside the guidance raise is normal hypergrowth lumpiness or an early margin-trajectory warning \u2014 so this briefing carries it forward as the key uncertainty rather than picking a side beyond what the evidence weight (buy-leaning fundamentals/sentiment vs. neutral technicals/macro) supports. Signal convergence of 0.5455 reflects that split: real, but not unanimous, directional agreement.",
-  "bull_case": "Guidance implies a genuine >10x revenue inflection backed by a $757M backlog and diversifying defense/drone M&A, funded by equity rather than debt, with unanimous analyst Buy coverage and a stock still up 82% from its 52-week low despite the recent pullback. The pullback itself is happening on below-average volume above the 50-day SMA support, consistent with digestion of a strong quarter rather than a trend breakdown, and neither the backlog nor guidance has been revised down.",
-  "bear_case": "The quarter that actually printed showed a wider-than-expected EPS loss in the same period guidance was raised \u2014 a combination that should raise scrutiny on unit economics, not lower it \u2014 compounded by a just-closed dilutive offering and multiple insider Form 144 sale filings landing the same week. Technicals confirm market skepticism (price below the 20-day and 200-day SMAs, negative MACD histogram), and the stock remains 46% off its 52-week high despite the beat-and-raise headline, leaving asymmetric downside if backlog conversion or margins disappoint.",
+  "executive_summary": "Ondas has the strongest operating-catalyst narrative of the four assigned names. Its official Q2 2026 release reported record $83.8M revenue, $175M of Q2 orders, approximately $613M reported backlog ($757M pro forma), raised FY2026 revenue guidance of $525M-$550M, and substantial reported liquidity. The Layer 1 recommendation panel is also uniformly buy/strong-buy. These facts support a constructive long-term growth case.\n\nThe final signal is a low-conviction buy, not an actionable breakout call. The existing Layer 1 financial snapshot is still deeply loss-making with -$40.885M free cash flow and -260.2334% net margin, price is below EMA-20 with a negative MACD histogram, volume is only 0.1019x the stored average, and the non-finite 2026-08-28 bar removes RSI, SMAs, Bollinger Bands, and ATR. RiskChecker therefore emits no precise levels; backlog conversion, margin improvement, and a repaired finite technical snapshot are required for higher confidence.",
+  "bull_case": "Record Q2 revenue, new orders, backlog, raised guidance, reported liquidity, and uniformly positive small-sample recommendations indicate a possible defense/autonomous-systems scale-up. If backlog converts and acquisitions integrate, the current trailing loss profile could improve rapidly.",
+  "bear_case": "The current Layer 1 snapshot remains pre-profit with negative cash flow, deeply negative operating/net margins, and a valuation roughly 86x supplied trailing revenue. Price and MACD are bearish, volume is very light, and the lack of finite ATR/rolling indicators prevents precise risk control; guidance remains an expectation until audited conversion appears.",
   "key_uncertainties": [
-    "Whether the $757M backlog converts to revenue on management's guided timeline and at an improving margin profile, or whether losses keep widening alongside revenue growth",
-    "How much further dilution (additional equity raises, insider Form 144 sales actually executing) is still ahead and its per-share impact",
-    "Whether the wider Q2 EPS miss is a one-off scaling cost or the start of a deteriorating margin trend",
-    "Exposure of the new Israel-based Aran Defense manufacturing footprint to geopolitical disruption",
-    "Whether the Fed staying at 3.50-3.75% (with hawkish dissent) into a higher-for-longer stance further pressures the valuation of a pre-profit, beta-2.75 name"
+    "Backlog conversion into recognized revenue and free cash flow",
+    "Post-acquisition gross-margin and operating-margin trajectory",
+    "Future equity issuance, acquisition funding, and dilution",
+    "Whether price can reclaim EMA-20 with positive MACD and stronger volume",
+    "Whether technical indicators become finite after the 2026-08-28 source-bar issue is resolved"
   ],
   "catalysts_upcoming": [
-    "Backlog conversion updates / order announcements tied to the $757M backlog",
-    "Confirmation or resolution of the pending Form 144 insider sale filings",
-    "Next quarterly print \u2014 specifically whether operating margin trend improves alongside revenue growth",
-    "FOMC meeting Sept 15-16, 2026 \u2014 any shift in rate guidance affecting risk appetite for high-beta pre-profit growth names",
-    "Integration progress/updates on the Cyberhawk and Aran Defense acquisitions"
+    "Next quarterly report showing backlog conversion and margin improvement",
+    "Execution against the $525M-$550M FY2026 revenue guide",
+    "A repaired finite technical snapshot with high-volume reclaim of the $8.2649 EMA-20 area"
   ],
   "risk_assessment": {
     "correlation_notes": [
       "High beta (2.75) \u2014 price may amplify broad-market moves.",
       "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 97.8% over available price history. Projected worst case (2-sigma): ~174.6% from current $8.24.",
+    "max_drawdown_scenario": "Historical max drawdown: 97.8% over available price history. Projected worst case (2-sigma): ~nan% from current $7.29.",
     "risk_reward_ratio": null
   },
   "action_plan": {
-    "entry_limit": 7.69,
-    "entry_rationale": "Midway between current ($8.24) and Bollinger lower band ($7.14)",
-    "stop_loss": 6.48,
-    "stop_rationale": "2x ATR-14 ($0.60) below entry \u2014 invalidates the setup",
-    "take_profit_1": 9.44,
-    "take_profit_2": 15.28,
-    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": null
+    "note": "Signal too mixed for precise levels (conviction +0.28, convergence 0.60). Wait for a clearer setup."
   },
-  "research_verdict": null,
+  "research_verdict": {
+    "ticker": "ONDS",
+    "judged_view": "buy",
+    "confidence": "low",
+    "thesis": "The bull carried the debate narrowly because the official Q2 release supplies concrete evidence of revenue, orders, backlog, guidance, and liquidity, and the Layer 1 recommendation panel is uniformly positive. The ruling remains low confidence: current Layer 1 margins and free cash flow are deeply negative, the valuation embeds substantial execution, and technical momentum is bearish with core risk fields unavailable.",
+    "winning_side": "bull",
+    "strongest_counterexample": "The reported growth may not convert to cash or profit after acquisition costs and integration, while price below EMA-20 and a negative MACD histogram show the market is not currently confirming the bull thesis.",
+    "invalidation_conditions": [
+      "FY2026 revenue guidance of $525M-$550M is materially reduced or backlog fails to convert into recognized revenue over the next two reported quarters",
+      "Operating margin remains below -50% and free cash flow remains negative while dilution increases",
+      "The next finite technical snapshot remains below EMA-20 with negative MACD and price breaks below the recent $7.04 support area"
+    ],
+    "evidence_gaps": [
+      "No usable dated Layer 1 news headlines",
+      "No backlog-conversion, acquisition-integration, or forward-margin trend in Layer 1",
+      "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
+      "No dated forward Fed path"
+    ],
+    "decisive_factors": [
+      "Official Q2 record revenue, orders, backlog, raised FY2026 guidance, and reported liquidity",
+      "Uniform 2 strong-buy/7 buy Layer 1 recommendation panel",
+      "Negative Layer 1 net income, free cash flow, and operating/net margins",
+      "Price below EMA-20 with negative MACD and 0.1019x volume ratio"
+    ]
+  },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
     "sentiment": "buy",
-    "technical": "neutral",
+    "technical": "sell",
     "macro": "neutral"
   },
   "pipeline_mode": "in-session-claude-code"

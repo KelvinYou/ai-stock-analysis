@@ -6,43 +6,75 @@
       "bull_argument": {
         "position": "bull",
         "round_number": 1,
-        "argument": "Positive reported free cash flow, short-term price strength, and above-average volume could indicate an early operating or sentiment re-rating.",
+        "argument": "Hextar still has a credible optionality case. Free cash flow is positive, agriculture revenue improved sharply in the latest quarter, and the PKNS township JV gives the group access to a large development opportunity. The core chemicals and agriculture businesses have real operating margins, while a beta below zero suggests the stock may diversify broad-market risk. At RM0.775, a successful property and agriculture execution path could make the high multiple look backward-looking.",
         "key_points": [
-          "Positive reported free cash flow, short-term price strength, and above-average volume could indicate an early operating or sentiment re-rating.",
-          "Several quarters of improving earnings and free cash flow.",
-          "A sustained break and hold above SMA-200."
+          "Positive free cash flow provides some operating support.",
+          "Agriculture drove 12.1% quarterly revenue growth.",
+          "The RM3.8bn PKNS JV creates property optionality.",
+          "Core segments remain profitable with positive operating margin."
         ],
         "rebuttal_to_previous": null
       },
       "bear_argument": {
         "position": "bear",
         "round_number": 1,
-        "argument": "High valuation, heavy leverage, no forward earnings estimate, long-term resistance at SMA-200, and overbought momentum make the downside risk difficult to justify.",
+        "argument": "The bull case capitalises a headline gross development value before showing funding, timing, margins, or attributable profit. Meanwhile, the stock trades at 38.75x trailing earnings with no forward estimate, 1H revenue declined, and recent net profit fell despite higher quarterly revenue. Debt is roughly 1.77x equity by the reported fields. The technical picture is below SMA-20 and SMA-200, MACD is negative, and zero latest volume prevents a reliable recovery call.",
         "key_points": [
-          "High valuation, heavy leverage, no forward earnings estimate, long-term resistance at SMA-200, and overbought momentum make the downside risk difficult to justify.",
-          "Whether earnings and free cash flow can improve sustainably.",
-          "Debt, restructuring, and execution risk are not resolved by the local snapshot."
+          "RM3.8bn GDV is not current revenue, earnings, or free cash flow.",
+          "High valuation is unsupported by recent earnings acceleration.",
+          "Reported debt exceeds equity by a wide margin on simple arithmetic.",
+          "Technical structure is weak and volume confirmation is unavailable."
         ],
         "rebuttal_to_previous": null
       }
+    },
+    {
+      "round_number": 2,
+      "bull_argument": {
+        "position": "bull",
+        "round_number": 2,
+        "argument": "The bear case is right that GDV is not profit, but it underweights the value of a credible land-development partnership and an agriculture segment that is already improving. A neutral rather than sell conclusion is appropriate because the group remains cash-generative and a successful property launch can create incremental asset value. The high P/E reflects optionality as well as current earnings, so the key is to monitor financing and milestones rather than reject the thesis outright.",
+        "key_points": [
+          "The property JV is a real partnership, not only a speculative rumour.",
+          "Agriculture improvement provides current operating evidence.",
+          "Positive FCF argues against treating the group as immediately distressed.",
+          "Milestone monitoring can resolve the optionality question."
+        ],
+        "rebuttal_to_previous": "The bear case correctly rejects using GDV as earnings, but a neutral view can still recognise asset optionality without assigning it full value today."
+      },
+      "bear_argument": {
+        "position": "bear",
+        "round_number": 2,
+        "argument": "Optionality is only useful after the capital structure and economics are visible. A 70%-owned property vehicle can require substantial funding and execution effort, increasing risk for a group already carrying more reported debt than equity. Core 1H revenue fell and earnings were flat, no analyst coverage is available, and the price has not reclaimed its longer moving average. Until property approvals, funding, launch, and segment margins are evidenced, the prudent research view is neutral with a negative bias, not a buy.",
+        "key_points": [
+          "Property development can consume capital before it creates cash.",
+          "Core earnings have not yet validated the valuation.",
+          "No analyst coverage reduces an external cross-check.",
+          "The longer-term trend remains below SMA-200."
+        ],
+        "rebuttal_to_previous": "The bull case calls the JV credible, but credibility of the partnership does not establish project economics, funding capacity, or attributable shareholder returns."
+      }
     }
   ],
-  "bull_case_summary": "Positive reported free cash flow, short-term price strength, and above-average volume could indicate an early operating or sentiment re-rating.",
-  "bear_case_summary": "High valuation, heavy leverage, no forward earnings estimate, long-term resistance at SMA-200, and overbought momentum make the downside risk difficult to justify.",
+  "bull_case_summary": "Positive free cash flow, agriculture recovery, profitable core segments, and a real PKNS property partnership provide optionality that could improve the earnings profile if funded and executed well.",
+  "bear_case_summary": "A 38.75x multiple, flat-to-weaker recent earnings, high simple debt/equity, no forward estimate or analyst coverage, and a weak/incompletely confirmed technical structure make the optionality too unproven for a buy.",
   "key_points_of_agreement": [
-    "Positive cash flow and short-term momentum support the bull case, but valuation, leverage, missing forward estimates, and overbought price action leave the risk case slightly stronger."
+    "Agriculture improved in the latest quarter and the group remains profitable/cash-generative.",
+    "The RM3.8bn property figure is GDV, not current earnings or cash flow.",
+    "Funding, milestone, and segment-margin data are needed to value the new property strategy.",
+    "The latest technical volume and 52-week-low fields are not reliable for confirmation."
   ],
   "key_points_of_disagreement": [
-    "Whether earnings and free cash flow can improve sustainably.",
-    "Debt, restructuring, and execution risk are not resolved by the local snapshot.",
-    "There is no usable current news or analyst coverage."
+    "Whether the PKNS JV should be treated as meaningful near-term optionality or ignored until execution evidence exists.",
+    "Whether positive free cash flow offsets the high valuation and reported leverage.",
+    "Whether the result should be neutral or a negative-bias view while the project remains unproven."
   ],
   "unresolved_uncertainties": [
-    "Whether earnings and free cash flow can improve sustainably.",
-    "Debt, restructuring, and execution risk are not resolved by the local snapshot.",
-    "There is no usable current news or analyst coverage."
+    "Property JV funding, approvals, launch schedule, margins, and attributable cash flows.",
+    "Segment-level earnings and cash conversion for agriculture, specialty chemicals, and fruits.",
+    "Latest stored volume is zero and pct_from_52w_low is null because the 52-week low is a zero placeholder.",
+    "No analyst recommendation data is available in Layer 1.",
+    "The stable OPR and Fed range do not resolve commodity, trade, climate, or property funding risk."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

@@ -1,26 +1,24 @@
 {
   "ticker": "RKLB",
   "judged_view": "neutral",
-  "confidence": "medium",
-  "thesis": "The operating business shows traction, but negative profitability, negative free cash flow, and extreme forward valuation make the risk-reward unfavorable until execution improves.",
-  "winning_side": "bear",
-  "strongest_counterexample": "If revenue scales rapidly while gross margin holds and free cash flow turns positive, the current earnings-based valuation could become less restrictive.",
+  "confidence": "low",
+  "thesis": "Neither side carried a sufficient evidence edge: recommendation optimism is offset by losses, negative cash flow, extreme forward valuation, and bearish but incomplete technicals.",
+  "winning_side": "neither",
+  "strongest_counterexample": "A demonstrated path to positive earnings and free cash flow could turn the current neutral view constructive.",
   "invalidation_conditions": [
-    "Free cash flow turns positive and remains positive",
-    "Operating margin improves materially",
-    "Price recovers above the 50-day moving average with stronger volume"
+    "The company demonstrates sustained positive earnings and free cash flow",
+    "A repaired technical series establishes a durable uptrend",
+    "Forward valuation falls through operating improvement rather than price-only compression"
   ],
   "evidence_gaps": [
-    "No non-empty current news headlines",
-    "No detailed forward earnings composition",
-    "Latest technical snapshot is dated 2026-08-13"
+    "No populated dated news headlines are available in Layer 1.",
+    "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
+    "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory."
   ],
   "decisive_factors": [
-    "Negative net income and negative free cash flow",
-    "1,602x forward P/E",
-    "Price below the 50-day moving average despite positive short-term momentum"
+    "Analyst signals: fundamentals=neutral, sentiment=buy, technical=sell, macro=neutral.",
+    "The company is not profitable in the supplied snapshot",
+    "Whether the recommendation snapshot reflects future execution that Layer 1 cannot yet measure"
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

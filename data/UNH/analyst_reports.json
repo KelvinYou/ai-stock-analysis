@@ -2,82 +2,70 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Trailing P/E of 25.1x looks full, but forward P/E of 17.8x is materially cheaper, reflecting the raised FY2026 EPS guidance of $19.50-$20.00 (56% adjusted EPS growth reported in Q2) and implying the market has not fully re-rated the earnings recovery.",
-    "margin_analysis": "Operating margin of 4.24% and net margin of 2.69% remain well below UNH's historical high-single-digit levels, reflecting elevated medical cost trends through 2025-2026, but the Q2 2026 beat was explicitly driven by margin expansion, the first sign of stabilization after last year's reset.",
-    "debt_analysis": "Total debt of $78.4B against $94.1B equity (~0.83x debt/equity) is serviceable given $16.1B of free cash flow, though the current 3.50%-3.75% Fed funds rate (with futures pricing further tightening toward 4% by year-end) keeps refinancing costs elevated versus the low-rate era.",
-    "growth_outlook": "Q2 2026 revenue was roughly flat year-over-year at ~$112B while EPS grew sharply on margin recovery; growth is now being driven by cost discipline and Medicare Advantage repricing rather than top-line expansion, and management raised full-year guidance on the back of it.",
+    "pe_assessment": "Trailing P/E is 25.668594x and forward P/E is 17.813837x. The forward discount is attractive if the earnings recovery holds, but it is not sufficient by itself to remove operating uncertainty.",
+    "margin_analysis": "Gross margin is 18.53%, operating margin 4.24%, and net margin 2.69%; the low net margin means modest medical-cost or reimbursement pressure can materially affect earnings.",
+    "debt_analysis": "Debt is $78.389B against $94.110B of equity, approximately 0.83x debt-to-equity, while free cash flow is $16.075B. Cash generation is meaningful but leverage remains a material risk factor.",
+    "growth_outlook": "The forward valuation and cash flow allow for a recovery case, but current Layer 1 data does not establish that margin improvement is durable.",
     "key_risks": [
-      "IRS scrutiny of tax practices with unknown cash cost",
-      "Regulatory investigation into Medicare Advantage billing practices",
-      "Shareholder lawsuits related to 2025-2026 disclosures",
-      "Political pressure on vertical integration (insurer + PBM structure)",
-      "Net margin still thin at 2.69%, leaving little room for cost surprises"
+      "Low net margin and sensitivity to medical-cost trends",
+      "Debt-to-equity of approximately 0.83x",
+      "Reimbursement and policy dependence"
     ],
     "key_strengths": [
-      "Raised FY2026 EPS guidance to $19.50-$20.00 after a Q2 beat",
-      "Forward P/E of 17.8x is a discount to the trailing multiple and UNH's own history",
-      "Strong free cash flow generation of $16.1B",
-      "Analyst recommendation mix has improved over the trailing quarter (strongBuy 7/buy 16/hold 4/sell 0 vs. strongBuy 6/buy 16/hold 5/sell 1 three months ago)"
+      "$16.075B free cash flow",
+      "17.813837x forward P/E below trailing P/E",
+      "Defensive healthcare demand profile"
     ],
-    "summary": "UNH's Q2 2026 beat and raised guidance are early evidence of margin stabilization after a rough prior year, and the forward P/E discount looks attractive if that recovery holds, but net margins remain thin and the recovery is only one quarter old. Signal: buy, medium confidence."
+    "summary": "UnitedHealth's forward valuation and $16.075B free cash flow support a buy bias, but the 2.69% net margin and approximately 0.83x debt-to-equity ratio make the recovery case dependent on sustained operating improvement."
   },
   "sentiment": {
-    "signal": "neutral",
-    "confidence": "medium",
-    "news_tone": "mixed",
-    "news_summary": "Coverage in August 2026 is split between a genuinely strong Q2 earnings beat with raised FY guidance (stock +18.4% YTD, +30.3% trailing year) and a steady stream of legal/regulatory headlines: IRS scrutiny of tax practices, Medicare Advantage billing investigations, shareholder litigation, and continued political pressure on vertical integration. The August 14, 2026 guilty plea in the UnitedHealthcare CEO killing case keeps reputational headlines alive without being a direct financial catalyst.",
+    "signal": "buy",
+    "confidence": "low",
+    "news_tone": "unavailable",
+    "news_summary": "Layer 1 contains no non-empty dated news headlines. The recommendation snapshot is positive, with 23 strong-buy/buy ratings, 4 holds, and no sells.",
     "key_themes": [
-      "Q2 2026 earnings beat and raised FY EPS guidance",
-      "IRS tax practice and Medicare Advantage billing scrutiny",
-      "Political pressure on vertical integration",
-      "Reputational overhang from CEO killing case litigation",
-      "Valuation seen as cheap by some sell-side commentary despite headline risk"
+      "Positive recommendation distribution",
+      "No usable dated headline evidence"
     ],
-    "notable_headlines": [
-      "UnitedHealth Group stock advances as Q2 2026 earnings beat drives guidance hike",
-      "UnitedHealth Group (UNH) Stock Looks Cheap On Value But Faces Risk On News",
-      "UnitedHealth Group stock steadies after strong second quarter beat and FY 2026 EPS guidance",
-      "Mangione pleads guilty in federal case related to UnitedHealthcare CEO killing"
-    ],
+    "notable_headlines": [],
     "social_sentiment": null,
-    "summary": "News flow is genuinely mixed rather than one-sided: a strong earnings beat and raised guidance are being weighed against unresolved regulatory, tax, and legal overhangs. Analyst recommendation trends have improved modestly, but no clear sentiment direction dominates. Signal: neutral, medium confidence."
+    "summary": "Available recommendations lean bullish, but the absence of dated headlines makes the sentiment buy signal low confidence and unsuitable as a standalone catalyst."
   },
   "technical": {
     "signal": "neutral",
-    "confidence": "medium",
-    "trend": "Price ($398.76 as of 2026-08-24) sits below both SMA-20 ($405.06) and SMA-50 ($413.61) but remains well above SMA-200 ($345.68, +15.4%), indicating a short-term pullback within an intact longer-term uptrend.",
-    "rsi_14": 43.6017,
-    "rsi_assessment": "RSI-14 at 43.6 is neutral, leaning mildly bearish but far from the oversold (<30) threshold \u2014 no momentum extreme in either direction.",
-    "macd_assessment": "MACD line (-6.63) sits below its signal line (-5.20) with a negative histogram (-1.43), confirming short-term bearish momentum consistent with the pullback below the 20/50-day averages.",
-    "volume_assessment": "Volume ratio of 1.07x the 20-day average is unremarkable \u2014 the pullback is not being confirmed by an unusual surge in selling volume.",
+    "confidence": "low",
+    "trend": "Short-term direction is indeterminate: the latest close is just below EMA-20, while MACD histogram is positive; current SMA trend is unavailable.",
+    "rsi_14": null,
+    "rsi_assessment": "Unavailable: latest RSI-14 is null because the upstream OHLC series contains nonfinite data on 2026-08-28.",
+    "macd_assessment": "Latest stored MACD line is -4.4934 versus signal -5.1758 with histogram 0.6824, suggesting improving momentum, but the nonfinite row contaminates the chain and prevents a confident directional call.",
+    "volume_assessment": "Latest volume is 273,424 versus the stored 20-day average of 3,438,652.9 (ratio 0.0795); very low volume weakens confirmation.",
     "support_levels": [
-      381.84,
-      345.68
+      384.85,
+      388.61,
+      391.05
     ],
     "resistance_levels": [
-      405.06,
-      413.61,
-      428.28,
-      461.62
+      399.26,
+      400.8,
+      401.01
     ],
-    "summary": "UNH is consolidating below its 20/50-day moving averages after a strong run (still +56.7% off 52-week lows, -13.6% off 52-week highs), with short-term bearish momentum (negative MACD) offset by an intact long-term uptrend above the 200-day average. Signal: neutral, medium confidence."
+    "summary": "Recent observed closes range from $384.85 to $401.01, with the latest at $398.23. RSI, SMAs, ATR, and Bollinger outputs are null after the 2026-08-28 nonfinite row, so no precise technical setup is assigned."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The Fed held its funds rate at 3.50%-3.75% after the July 2026 FOMC meeting (3 of 12 members dissented in favor of a hike); fed funds futures now price roughly 4% by year-end, a hawkish shift versus earlier 2026 expectations of cuts.",
-    "interest_rate_outlook": "A drift toward higher-for-longer rates modestly raises UNH's cost of servicing its $78.4B debt load, but UNH's low beta (0.632) and defensive healthcare profile make it far less rate-sensitive than growth-oriented sectors.",
-    "fx_impact": "Minimal \u2014 UNH's revenue is almost entirely US-dollar denominated as a domestic health insurer/PBM operator.",
+    "fed_impact": "The Federal Reserve held the target range at 3.50%-3.75% on 2026-07-29. Higher rates modestly increase financing costs for a leveraged insurer, but healthcare demand is less cyclical than most sectors. Official source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+    "interest_rate_outlook": "The supplied higher-for-longer context is a mild headwind to debt servicing and valuation. BNM's OPR is 2.75%, but UNH is primarily a US-dollar domestic healthcare operator. Official source: https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026",
+    "fx_impact": "USD/MYR around 4.0420 on 2026-09-02 is mainly relevant to a Malaysian investor's translated return; no material company-specific FX exposure is quantified in Layer 1. Official source: https://financialmarkets.bnm.gov.my/about-myor-myor-i",
     "sector_macro_factors": [
-      "Defensive healthcare demand is largely non-cyclical and less exposed to a slowing-growth environment",
-      "Medicare Advantage reimbursement policy is a larger swing factor for UNH than the Fed funds rate itself",
-      "Higher-for-longer rates pressure debt service costs and the discount rate applied to future cash flows"
+      "Defensive healthcare demand limits broad economic sensitivity",
+      "Higher rates modestly pressure debt service and discount rates",
+      "Reimbursement policy is more important than FX for the operating thesis"
     ],
     "geopolitical_risks": [
-      "US domestic regulatory risk: Medicare Advantage billing scrutiny and IRS tax practice investigation",
-      "Domestic political pressure on vertical integration in health insurance/PBM structures"
+      "No new ticker-specific geopolitical evidence is present in Layer 1; domestic healthcare policy remains the principal structural uncertainty"
     ],
-    "summary": "Fed funds sits at 3.50%-3.75% with hawkish risk (futures pricing ~4% by year-end) rather than the rate cuts priced earlier in 2026, a mild net negative for UNH's borrowing costs, but the stock's low beta and defensive profile limit direct macro sensitivity relative to sector-specific and regulatory factors. Signal: neutral, low confidence."
+    "summary": "Macro is neutral with a mild financing headwind. UNH's low beta and defensive demand profile offset some rate sensitivity, but no dated company-specific macro catalyst is available."
   },
   "pipeline_mode": "in-session-claude-code"
 }

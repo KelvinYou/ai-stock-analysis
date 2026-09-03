@@ -1,80 +1,63 @@
 {
   "fundamentals": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
-    "pe_assessment": "Trailing P/E of 25.1x looks full for a company with negative free cash flow, but forward P/E of 13.1x implies the market expects earnings to roughly double as AI cloud infrastructure revenue scales \u2014 cheap if execution holds.",
-    "margin_analysis": "Gross margin 65.8%, operating margin 33.3%, net margin 25.4% are all strong and consistent with a mature enterprise software/cloud franchise; no sign of margin erosion in the reported financials.",
-    "debt_analysis": "Total debt of $156.2B against equity of $42.5B is a debt/equity ratio of ~3.7x, and free cash flow is deeply negative (-$23.7B) as Oracle borrows heavily to fund AI data center buildout (~$260B in lease obligations per recent reporting). S&P downgraded Oracle to BBB- (one notch above speculative grade) in July 2026 \u2014 this is the single biggest balance-sheet risk.",
-    "growth_outlook": "Record $638B remaining performance obligation (RPO) backlog and 93% growth in Cloud Infrastructure Services, plus a new Google Cloud partnership, point to a large multi-year growth runway if Oracle can finance and deliver the capacity build-out on schedule.",
+    "pe_assessment": "Trailing P/E is 24.96x and forward P/E is 13.34x; the forward discount is supportive only if the supplied earnings outlook is delivered.",
+    "margin_analysis": "Gross margin is 65.8%, operating margin is 33.3%, and net margin is 25.4%. These are the reported Layer 1 margins; no trend comparison is inferred.",
+    "debt_analysis": "Total debt is 1.562e+11 against equity of 4.251e+10, or about 3.67x debt/equity; free cash flow is -2.369e+10.",
+    "growth_outlook": "Layer 1 reports revenue of 6.736e+10 but does not provide a dated growth-rate series. No growth acceleration or deceleration is assumed.",
     "key_risks": [
-      "Credit downgrade to BBB- raises refinancing cost and narrows the margin for execution error",
-      "Negative free cash flow while capex/lease commitments are still rising",
-      "Reported 6-month delay to the $165B Project Jupiter data center pipeline signals execution risk on the backlog conversion timeline",
-      "Planned layoffs ahead of FY Q2 suggest cost discipline pressure even as the company scales up capex"
+      "Free cash flow is deeply negative in the supplied snapshot.",
+      "Debt/equity is about 3.67x, making financing conditions material.",
+      "Forward valuation depends on earnings delivery that is not independently forecast in Layer 1."
     ],
     "key_strengths": [
-      "Record $638B RPO backlog gives multi-year revenue visibility",
-      "93% Cloud Infrastructure Services growth and a new Google Cloud partnership",
-      "High and stable gross/operating margins",
-      "Forward P/E of 13x is cheap relative to the growth narrative if backlog converts on schedule"
+      "Reported gross, operating, and net margins are 65.8%, 33.3%, and 25.4%.",
+      "Forward P/E of 13.34x is below trailing P/E of 24.96x in the supplied snapshot.",
+      "The company reports positive net income despite negative free cash flow, separating accounting profitability from cash conversion risk."
     ],
-    "summary": "Oracle's backlog and cloud growth support a constructive valuation case (13x forward P/E), but negative free cash flow, ~3.7x debt/equity, and a BBB- downgrade make this a leveraged bet on flawless AI capex execution. Net: buy, but with real balance-sheet risk."
+    "summary": "Fundamentals are mixed: margins and forward valuation are constructive, while negative free cash flow and high debt/equity prevent a directional buy call."
   },
   "sentiment": {
-    "signal": "neutral",
-    "confidence": "medium",
-    "news_tone": "mixed",
-    "news_summary": "Headlines split cleanly between bullish catalysts (Google Cloud partnership, record backlog, 9% single-day pop on Aug 3) and bearish developments (S&P downgrade to BBB- in July, a 6-month delay to the $165B Project Jupiter pipeline reported Aug 18, and a new round of planned layoffs ahead of Q2 FY2027). Stock is down roughly 28% year-to-date despite the backlog growth story.",
+    "signal": "buy",
+    "confidence": "low",
+    "news_tone": "unavailable",
+    "news_summary": "Layer 1 contains no populated news headlines (the fetched headline records have empty title/link/publisher fields). The current recommendation snapshot is 36 buy/strong-buy versus 8 hold/sell/strong-sell, so the directional read is recommendation-only and low confidence.",
     "key_themes": [
-      "AI data center capex funded by debt",
-      "Credit/balance-sheet risk (BBB- downgrade)",
-      "Cloud infrastructure growth and hyperscaler partnerships",
-      "Execution/delivery risk (Project Jupiter delay)",
-      "Cost discipline (layoffs)"
+      "Recommendation snapshot is net positive",
+      "No populated dated headlines"
     ],
-    "notable_headlines": [
-      "Oracle planning new round of layoffs in August 2026 amid AI-debt-funded buildout (Quartz)",
-      "Oracle Stock Is Gaining Monday: Google Cloud partnership and contract wins drive +9% (Benzinga)",
-      "Oracle Stock Holds $142 as Pipeline Delay Meets Debt Fears (Vantage Markets, Aug 21)",
-      "Oracle (ORCL) Stock Forecast: $638B Backlog, Down 28% YTD (TradingKey, Aug 4)",
-      "Oracle Stock Is One To Avoid In The Last Half Of 2026 (Forbes)"
-    ],
+    "notable_headlines": [],
     "social_sentiment": null,
-    "summary": "News flow is genuinely mixed \u2014 real growth catalysts (backlog, Google Cloud deal) are being offset by real balance-sheet and execution concerns (BBB- downgrade, Jupiter delay, layoffs), consistent with a stock down 28% YTD but still capable of sharp single-day rallies on good news. No clear directional tilt yet."
+    "summary": "Sentiment is a low-confidence recommendation-only read because the Layer 1 news fields are empty; no headline or social signal is invented."
   },
   "technical": {
-    "signal": "neutral",
-    "confidence": "medium",
-    "trend": "Price ($142.45) is above the 20-day SMA ($141.92) but below the 50-day SMA ($144.39) and well below the 200-day SMA ($171.58) \u2014 a short-term stabilization/bounce sitting inside a longer-term downtrend.",
-    "rsi_14": 46.7599,
-    "rsi_assessment": "RSI-14 at 46.76 is squarely neutral \u2014 no overbought/oversold extreme, consistent with a stock consolidating rather than trending strongly in either direction.",
-    "macd_assessment": "MACD line (1.01) is above the signal line (0.54) with a positive, widening histogram (0.46), indicating short-term bullish momentum, but this is occurring below both the 50- and 200-day SMAs, so it reads as a relief bounce rather than a confirmed trend reversal.",
-    "volume_assessment": "Volume ratio of 0.51 (current volume well below its 20-day average of ~27.8M) suggests the recent bounce lacks strong conviction/participation, tempering the bullish MACD signal.",
-    "support_levels": [
-      121.3,
-      114.5
-    ],
-    "resistance_levels": [
-      141.92,
-      144.39,
-      162.53
-    ],
-    "summary": "Short-term momentum (MACD) is turning up and price has reclaimed the 20-day SMA, but the stock remains below its 50- and 200-day SMAs on below-average volume \u2014 a tentative bounce within a longer downtrend, not yet a confirmed reversal. Net neutral."
+    "signal": "sell",
+    "confidence": "low",
+    "trend": "Close is 143.4 versus EMA-20 of 144.8; SMA-20/50/200 are unavailable. The close is -58.0% from the 52-week high and 25.3% above the 52-week low. The 2026-08-28 price row has non-finite OHLC values. Consequently RSI-14, SMA-20/50/200, Bollinger Bands, and ATR-14 are null in Layer 1; no missing value is imputed and no support/resistance price is invented.",
+    "rsi_14": null,
+    "rsi_assessment": "Unavailable because the upstream OHLC series contains a non-finite bar; no RSI interpretation is assigned.",
+    "macd_assessment": "MACD line 1.155, signal 1.269, histogram -0.1137; MACD is below its signal line and price is below EMA-20, but the missing moving-average and ATR fields limit confidence.",
+    "volume_assessment": "Volume ratio is 0.1542 versus the 20-day average, with current volume 3086128 and 20-day average 2.001e+07. This is descriptive only because the recent technical window is contaminated by the non-finite OHLC row.",
+    "support_levels": [],
+    "resistance_levels": [],
+    "summary": "Technical signal is sell with low confidence: MACD is below its signal line and price is below EMA-20, but the missing moving-average and ATR fields limit confidence. The 2026-08-28 price row has non-finite OHLC values. Consequently RSI-14, SMA-20/50/200, Bollinger Bands, and ATR-14 are null in Layer 1; no missing value is imputed and no support/resistance price is invented."
   },
   "macro": {
     "signal": "sell",
     "confidence": "medium",
-    "fed_impact": "The FOMC held the fed funds rate at 3.50%-3.75% at its July 2026 meeting (9-3 vote, with three regional presidents dissenting \u2014 the first three-way dissent since 2016), with inflation still running above the 2% target for five-plus years. This 'higher for longer' stance directly raises Oracle's cost of capital at the exact moment it is issuing large amounts of debt to fund its AI data center buildout.",
-    "interest_rate_outlook": "Markets expect the fed funds rate to stay around 3.75% through this quarter and only ease toward ~3.25% longer-term; near-term relief for highly levered borrowers like Oracle looks limited, with the next FOMC decision due Sept 15-16, 2026.",
-    "fx_impact": "Not material to Oracle's US-dollar-denominated reporting relative to its financing/rate exposure; no significant dated FX catalyst identified.",
+    "fed_impact": "Official context: the Federal Reserve target range was 3.50%-3.75% on 2026-07-29 (https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm). a 3.50%-3.75% Fed target is a direct headwind for a company with negative FCF and high debt/equity; BNM/MYR context is not material to the USD financing question.",
+    "interest_rate_outlook": "The supplied macro context establishes the current target range but does not establish a future cut or hike; no unprovided forecast is used.",
+    "fx_impact": "BNM's USD/MYR reference was around 4.0420 on 2026-09-02 (https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate). This run does not contain the company's currency mix, so no quantified FX effect is assigned.",
     "sector_macro_factors": [
-      "Technology/software-infrastructure sector is broadly rate-sensitive on the discount-rate side, but Oracle's specific exposure here is more acute: it is actively raising tens of billions in new debt (~$260B in data center lease obligations) into a higher-for-longer rate environment",
-      "S&P's July 2026 downgrade to BBB- compounds the rate backdrop by raising Oracle's marginal borrowing cost further"
+      "The Fed target range is a valuation and funding input for US-listed risk assets.",
+      "BNM's OPR was 2.75% in the supplied official context (https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026); this is background context rather than a company-specific earnings forecast.",
+      "No additional dated sector macro series is present in Layer 1."
     ],
     "geopolitical_risks": [
-      "AI infrastructure buildout depends on continued hyperscaler capex cycles (e.g., Google Cloud partnership) that could be disrupted by trade/export-control shifts affecting chip supply"
+      "No dated geopolitical snapshot is present in Layer 1; no directional geopolitical claim is assigned."
     ],
-    "summary": "Rates are being held higher for longer amid above-target inflation, which is a direct headwind for a company financing an AI capex boom largely with new debt while already carrying a fresh BBB- downgrade. Net negative macro backdrop for Oracle specifically, even though the broader rate level itself is unchanged this month."
+    "summary": "Macro signal is sell: a 3.50%-3.75% Fed target is a direct headwind for a company with negative FCF and high debt/equity; BNM/MYR context is not material to the USD financing question. Official context is limited to the Fed, BNM OPR, and BNM USD/MYR observations stated in the run request."
   },
   "pipeline_mode": "in-session-claude-code"
 }
