@@ -1,73 +1,79 @@
 {
   "ticker": "5005",
-  "date": "2026-08-14",
-  "overall_signal": "neutral",
+  "date": "2026-09-03",
+  "overall_signal": "sell",
   "conviction": {
-    "score": -0.16,
-    "signal_convergence": 0.55,
-    "explanation": "Current-session English batch refresh. The bull case depends on a cyclical recovery, while the bear case is supported by current cash burn, weak operating leverage, expensive trailing valuation, and short-term technical weakness. The evidence favors caution, but the stock remains above SMA-200 and a recovery could change the balance."
+    "score": -0.32,
+    "signal_convergence": 0.5,
+    "explanation": "Fundamentals and technicals lean sell, while sentiment and macro are neutral; convergence is only moderate because Q2 revenue/profit recovery and above-SMA-200 price action offer a credible countercase. The negative score is deliberately moderate rather than extreme because the next quarter can materially change the thesis if margin and cash flow improve."
   },
-  "executive_summary": "Unisem has a long-term semiconductor recovery angle, but the fresh snapshot shows only 4.2% operating margin, 4.6% net margin, negative MYR164 million free cash flow, and a 109.8x trailing P/E despite a lower 33.7x forward P/E. Price is below SMA-20 and SMA-50 with RSI 31.8 and negative MACD, although it remains above SMA-200.",
-  "bull_case": "Higher utilization, MPS expansion, and stronger AI-related semiconductor demand could improve margins and turn free cash flow positive.",
-  "bear_case": "Negative free cash flow, low operating leverage, high trailing valuation, and short-term technical weakness leave the recovery thesis dependent on evidence that is not yet visible.",
+  "executive_summary": "UNISEM\u2019s top line is improving: Q2 2026 revenue grew about 20.0% year over year and 1H revenue about 15.1%, with Q2 net profit of RM9.910m. However, the supplied snapshot shows only a 4.2% operating margin and negative RM164.451m free cash flow, while the latest 1H filing reports a RM3.445m net loss. The 106.75x trailing P/E and 32.73536x forward P/E make the recovery assumption central.\n\nThe technical picture is mixed but leans weak: RM4.27 is below SMA-20 and SMA-50, RSI-14 is 44.7368, MACD histogram is only 0.0080, and latest volume is reported as zero; price remains above SMA-200. The final signal is a moderate sell pending proof of sustained positive earnings and cash flow. Fed 3.50%-3.75%, BNM OPR 2.75%, and USD/MYR 4.0420 provide macro context, but company-specific FX, trade, and financing exposures remain incomplete.",
+  "bull_case": "Revenue growth and a profitable Q2 could mark the beginning of a cyclical recovery. The supplied gross margin is 60.0%, the price remains above SMA-200, and if FX/operating-cost pressure normalizes, the 32.73536x forward P/E could become supportable.",
+  "bear_case": "The current cash and earnings evidence does not yet support the valuation: supplied free cash flow is negative, operating margin is 4.2%, 1H2026 is loss-making, and trailing P/E is 106.75x. Below-SMA-20/SMA-50 price action without volume confirmation, potential private-placement dilution, and semiconductor/trade risks keep downside risk elevated.",
   "key_uncertainties": [
-    "Timing of free-cash-flow and margin recovery",
-    "Actual contribution from MPS expansion and customer orders",
-    "Whether the 33.7x forward P/E rests on achievable earnings normalization"
+    "Whether Q2\u2019s revenue and profit improvement persists into positive half-year earnings.",
+    "The composition and reversibility of negative free cash flow and the 1H FX/operating-expense loss.",
+    "Proposed private-placement terms, dilution, and use of proceeds.",
+    "Latest volume is 0 versus a 20-day average of 3,222,730, so technical confirmation is unavailable.",
+    "The supplied 52-week-low field is 0.0 and its derived percentage is null; no low-based technical conclusion is made.",
+    "Company-specific FX, customer, utilization, and trade exposure are not in Layer 1."
   ],
   "catalysts_upcoming": [
-    "Quarterly operating-margin and free-cash-flow data",
-    "MPS expansion, utilization, and customer-order updates",
-    "Price reclaiming SMA-20 and SMA-50 with improving MACD"
+    "Next quarterly result showing sustained positive attributable profit and operating-margin expansion.",
+    "A return to positive free cash flow without financing-driven distortion.",
+    "Clarification and completion terms for the proposed private placement.",
+    "A reclaim of SMA-50 (RM4.5306) with usable volume would improve technical confirmation."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "Sector: Technology — use sector-specific catalysts and risks in the thesis."
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 59.3% over available price history. Projected worst case (2-sigma): ~105.1% from current $4.38.",
+    "max_drawdown_scenario": "Historical max drawdown: 59.3% over available price history. Projected worst case (2-sigma): ~92.9% from current $4.27.",
     "risk_reward_ratio": "N/A (bearish signal)"
   },
   "action_plan": {
     "entry_limit": null,
-    "entry_rationale": null,
-    "stop_loss": null,
-    "stop_rationale": null,
-    "take_profit_1": null,
-    "take_profit_2": null,
-    "target_rationale": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 5.77,
+    "stop_rationale": "Thesis invalidated if price breaks above $5.77.",
+    "take_profit_1": 4.27,
+    "take_profit_2": 4.1,
+    "target_rationale": "Primary: reduce/exit at/near current $4.27. Next downside watch: $4.10 (nearest support).",
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction -0.16, convergence 0.55). Wait for a clearer setup."
+    "note": null
   },
   "research_verdict": {
     "ticker": "5005",
-    "judged_view": "neutral",
+    "judged_view": "sell",
     "confidence": "medium",
-    "thesis": "Recovery optionality is not yet reflected in cash generation or margins, so the stock remains neutral with a downside bias until operating evidence improves.",
+    "thesis": "The bear carried the debate because current cash and earnings evidence is weaker than the revenue headline: the supplied free cash flow is negative, operating margin is thin, the latest half-year is loss-making, and the trailing valuation is extreme. The Q2 recovery is a credible counterweight, but until it produces sustained positive earnings and cash flow, the forward P/E remains an assumption-heavy basis for a buy.",
     "winning_side": "bear",
-    "strongest_counterexample": "The gap between the 109.8x trailing and 33.7x forward P/E could reflect a real earnings inflection if orders and utilization recover quickly.",
+    "strongest_counterexample": "The sell ruling could be too negative if the 1H loss is temporary FX/operating-cost noise: Q2 revenue grew 20.0%, Q2 profit was RM9.910m, and price remains above SMA-200. A second consecutive improvement could quickly make the forward valuation and current price look less demanding.",
     "invalidation_conditions": [
-      "Free cash flow turns positive and expands",
-      "Operating margin improves materially without a revenue-quality deterioration",
-      "Price reclaims SMA-20 and SMA-50 with positive MACD"
+      "The next two reported quarters each show positive attributable profit, operating margin above 8%, and year-over-year revenue growth.",
+      "Free cash flow turns positive for two consecutive reporting periods without a one-off financing explanation.",
+      "Price reclaims SMA-50 at RM4.5306 and then the supplied 52-week high of RM5.38 with usable volume confirmation while forward estimates remain intact.",
+      "The proposed private placement is completed without material dilution to per-share earnings or is demonstrably accretive."
     ],
     "evidence_gaps": [
-      "No current news headlines in the local Layer 1 snapshot",
-      "No customer-order, capex, or utilization detail",
-      "Price history and technical indicators end on 2026-08-10"
+      "No usable dated Layer 1 headlines or publisher metadata; sentiment required external supplementation.",
+      "The supplied negative FCF is not broken down into capex, working capital, or one-off components.",
+      "The proposed private-placement terms, use of proceeds, pricing, and dilution are not in the supplied package.",
+      "Customer/utilization data, forward guidance, and the company\u2019s net FX/hedging exposure are unavailable.",
+      "Latest volume is zero and the 52-week-low-derived technical fields are null."
     ],
     "decisive_factors": [
-      "Negative MYR164 million free cash flow and 4.2% operating margin",
-      "109.8x trailing P/E despite a 33.7x forward P/E",
-      "Price below SMA-20 and SMA-50 with RSI 31.8 and negative MACD"
+      "Negative supplied free cash flow of RM164.451m.",
+      "1H2026 net loss of RM3.445m despite 15.1% revenue growth.",
+      "106.75x supplied trailing P/E and only 4.2% operating margin.",
+      "Q2 recovery and above-SMA-200 price action are credible but unconfirmed offsets."
     ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "neutral",
+    "fundamentals": "sell",
     "sentiment": "neutral",
     "technical": "sell",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

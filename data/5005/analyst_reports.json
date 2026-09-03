@@ -1,89 +1,81 @@
 {
   "fundamentals": {
-    "signal": "neutral",
+    "signal": "sell",
     "confidence": "medium",
-    "pe_assessment": "Trailing P/E of 109.75x is exceptionally elevated, suggesting either severe earnings cyclicality or market expectations of significant recovery. Forward P/E of 33.66x is more reasonable for semiconductors and aligns with industry peers (25-40x range). The dramatic gap indicates expected earnings improvement, but dependent on execution and market conditions.",
-    "margin_analysis": "Gross margin of 59.95% is respectable for semiconductor assembly/testing. However, operating margin of 4.24% and net margin of 4.63% are weak compared to semiconductor peers (typically 15-25% operating margin). This indicates high operating leverage, significant capex burden, or commodity-like competitive positioning. The company operates in a thin-margin segment with limited pricing power or differentiation.",
-    "debt_analysis": "Conservative leverage with debt-to-equity ratio of 0.193 (total debt MYR 406.71M vs. equity MYR 2.10B) is a significant strength. Low financial risk and balance sheet flexibility provide capacity for capex investment or dividends. However, low leverage paired with weak returns on equity suggests the company may not be optimizing its capital structure or generating sufficient profitability to justify higher debt utilization.",
-    "growth_outlook": "Critical concern: negative free cash flow of -MYR 164.45M despite MYR 86.65M net income. This -8.78% FCF-to-revenue ratio indicates cash burn from capex and working capital demands. Unsustainable without operational improvement or external financing. Growth trajectory depends on: (1) FCF inflection toward positive, (2) revenue acceleration above capex requirements, (3) working capital optimization. Current trajectory suggests earnings quality concerns.",
+    "pe_assessment": "The supplied trailing P/E is 106.75x versus a forward P/E of 32.73536x, so the valuation assumes a major earnings recovery. That recovery is difficult to underwrite while the latest 1H2026 filing reports a net loss of RM3.445m and the supplied free cash flow is negative.",
+    "margin_analysis": "The supplied snapshot reports RM1,872,065,000 revenue, RM86,650,000 net income, and gross, operating, and net margins of 60.0%, 4.2%, and 4.6%. The high gross margin but thin operating margin indicates substantial operating-cost sensitivity; the latest Q2 filing reported quarterly net profit of RM9.910m but a six-month net loss of RM3.445m.",
+    "debt_analysis": "Total debt is RM406,711,000 against RM2,102,164,000 equity, approximately 19.3% debt-to-equity. This is not an immediate solvency alarm, but it is less conservative than the other assigned names and matters more when free cash flow is negative.",
+    "growth_outlook": "Revenue is recovering at the reported quarterly level: Q2 2026 revenue was RM570.119m versus RM475.150m, up about 20.0%, and 1H revenue was RM1.034865bn versus RM898.774m, up about 15.1%. Profit quality remains weak because 1H2026 was loss-making and the reported explanation cited foreign-exchange movements and higher operating expenses; a sustained margin and cash-flow recovery is not yet demonstrated.",
     "key_risks": [
-      "Negative free cash flow (-MYR 164.45M) is unsustainable and signals earnings quality issues",
-      "Trailing P/E of 109.75x is unsustainably high unless earnings recover sharply",
-      "Weak operating margins (4.24%) indicate commodity-like competitive positioning",
-      "Beta of 1.249 shows 25% higher volatility than market average",
-      "Mixed analyst sentiment (22% sell, only 33% buy/strong buy) reflects investor uncertainty",
-      "Semiconductor sector cyclicality exposed; timing of cycle matters significantly"
+      "106.75x trailing P/E and 32.73536x forward P/E leave the valuation dependent on recovery.",
+      "Supplied free cash flow is negative RM164,451,000 and the latest 1H2026 filing reports a net loss.",
+      "Operating margin is only 4.2% in the supplied snapshot despite a 60.0% gross margin.",
+      "The company announced a proposed private placement of up to 10% of issued shares, creating potential dilution; terms and completion are not assessed here."
     ],
     "key_strengths": [
-      "Low financial leverage (D/E 0.193) provides balance sheet resilience",
-      "Solid gross margins (59.95%) indicate cost control and supply chain positioning",
-      "Positive net income (MYR 86.65M) shows operational profitability",
-      "Modest dividend yield (0.91%) supports income sustainability",
-      "Forward P/E (33.66x) is reasonable if earnings growth materializes"
+      "Q2 2026 revenue grew about 20.0% year over year and 1H revenue grew about 15.1%.",
+      "Supplied gross margin is 60.0%, indicating meaningful gross profit before operating costs.",
+      "Q2 2026 remained profitable at RM9.910m despite the 1H loss.",
+      "Debt-to-equity of approximately 19.3% is manageable relative to equity, though cash burn reduces comfort."
     ],
-    "summary": "Current-session signal: neutral. Unisem has a long-term semiconductor recovery angle, but the fresh snapshot shows only 4.2% operating margin, 4.6% net margin, negative MYR164 million free cash flow, and a 109.8x trailing P/E despite a lower 33.7x forward P/E. Price is below SMA-20 and SMA-50 with RSI 31.8 and negative MACD, although it remains above SMA-200."
+    "summary": "UNISEM\u2019s revenue is recovering, but earnings quality and valuation remain unfavorable: the supplied snapshot has a 106.75x trailing P/E, 4.2% operating margin, and negative RM164.451m free cash flow, while the latest 1H2026 filing reports a RM3.445m net loss. Q2 revenue grew about 20.0% year over year and Q2 profit was RM9.910m, but this has not yet translated into sustained half-year profitability or cash generation. The fundamental signal is sell at medium confidence, with a recovery case dependent on material margin and cash-flow improvement."
   },
   "sentiment": {
     "signal": "neutral",
     "confidence": "medium",
-    "news_tone": "positive",
-    "news_summary": "UNISEM is benefiting from MPS's capacity expansion in Malaysia and strategic outsourcing growth. HLG issued a BUY with 25.6% upside, citing MPS revenue contribution expected to rise to 40-46% in FY26-28. However, BIMB Research notes current valuation already reflects much of this positive outlook, suggesting limited near-term upside.",
+    "news_tone": "mixed",
+    "news_summary": "The stored Layer 1 headline titles are blank, so dated company and filing pages were used as supplemental evidence. Current recommendations are mixed (1 strong-buy, 2 buy, 4 hold, 2 sell), while the latest Q2 release shows strong revenue growth and a small quarterly profit but a six-month net loss; a proposed private placement and new CTO appointment add strategic/financing context without resolving the earnings risk.",
     "key_themes": [
-      "MPS outsourcing growth and Malaysia hub preference",
-      "Semiconductor manufacturing capacity expansion",
-      "Capital allocation through private placement",
-      "Revenue diversification and customer concentration",
-      "Valuation concerns — price may have run ahead"
+      "Revenue growth versus continuing earnings loss",
+      "Operating-cost and foreign-exchange pressure",
+      "Semiconductor demand and utilization recovery",
+      "Potential private-placement dilution",
+      "Technology leadership refresh"
     ],
     "notable_headlines": [
-      "HLG initiates BUY recommendation, RM5.20 price target (2026-05-20)",
-      "MPS raises capacity target from USD4bn to USD6bn with Malaysia preference",
-      "Private placement proposed to ease funding constraints and strengthen balance sheet",
-      "UNISEM positioned to capture rising share of MPS outsourcing requirements"
+      "31 Jul 2026 \u2014 Q2 2026 results: https://www.klsescreener.com/v2/stock/financial-report/5005/2026-06-30",
+      "31 Jul 2026 \u2014 Unisem remains in the red despite RM9m PAT in 2QFY26; 1H loss linked to FX movements and higher operating expenses: https://www.businesstoday.com.my/2026/07/31/unisem-remains-in-the-red-despite-rm9-million-pat-in-2qfy26/",
+      "02 Jul 2026 \u2014 Company announcements list a proposed private placement of up to 10% of issued shares: https://www.unisemgroup.com/investor-relations/announcements3/",
+      "17 Aug 2026 \u2014 Appointment of Wong Kwai Hong as Chief Technology Officer effective 1 Sep 2026: https://www.marketscreener.com/quote/stock/UNISEM-M-6491121/news/"
     ],
     "social_sentiment": null,
-    "summary": "Current-session signal: neutral. Unisem has a long-term semiconductor recovery angle, but the fresh snapshot shows only 4.2% operating margin, 4.6% net margin, negative MYR164 million free cash flow, and a 109.8x trailing P/E despite a lower 33.7x forward P/E. Price is below SMA-20 and SMA-50 with RSI 31.8 and negative MACD, although it remains above SMA-200."
+    "summary": "Sentiment is mixed: revenue growth and a quarterly profit are constructive, but the 1H loss, negative cash flow, financing/dilution possibility, and no clear earnings normalization keep the narrative from being bullish. The signal is neutral at medium confidence because the dated evidence conflicts directionally and the stored news payload is unusable."
   },
   "technical": {
     "signal": "sell",
-    "confidence": "medium",
-    "trend": "Long-term uptrend with near-term pullback. Price above SMA-200 (+21.36%), but below SMA-50 (−6.69%).",
-    "rsi_14": 31.78,
-    "rsi_assessment": "RSI at 31.78 is near oversold territory (<30) but not yet critical. Suggests selling pressure is moderating but hasn't fully exhausted; potential for further downside before a bounce.",
-    "macd_assessment": "MACD histogram is negative (−0.0107) with MACD line (0.0117) below signal line (0.0224). Bearish momentum dominates; no bullish crossover in sight.",
-    "volume_assessment": "Average 30-day volume: 3.6M shares. Recent spikes (5.7M+ on July 21 & 31; 7.5M+ on Aug 5) indicate elevated institutional interest during the pullback. Volume supports the correction narrative.",
+    "confidence": "low",
+    "trend": "Short-term bearish below SMA-20 and SMA-50, but still above SMA-200; momentum is mixed rather than decisively improving.",
+    "rsi_14": 44.7368,
+    "rsi_assessment": "RSI-14 is 44.7368, below the midpoint but not oversold. It offers no oversold-rebound argument and is consistent with weak/neutral momentum.",
+    "macd_assessment": "MACD line is -0.0644 versus signal line -0.0723, with histogram 0.0080. The positive histogram suggests short-term improvement in momentum, but both lines remain below zero and the broader moving-average trend is weaker.",
+    "volume_assessment": "Latest volume is 0 against a 20-day volume SMA of 3,222,730 and a reported ratio of 0.0. No breakout or selloff confirmation can be drawn; this is an explicit data limitation.",
     "support_levels": [
-      4.35,
-      4.0,
-      3.6
+      4.1015,
+      3.6775
     ],
     "resistance_levels": [
-      4.86,
-      5.1,
-      5.3
+      4.3775,
+      4.5306,
+      5.38
     ],
-    "summary": "Current-session signal: sell. Unisem has a long-term semiconductor recovery angle, but the fresh snapshot shows only 4.2% operating margin, 4.6% net margin, negative MYR164 million free cash flow, and a 109.8x trailing P/E despite a lower 33.7x forward P/E. Price is below SMA-20 and SMA-50 with RSI 31.8 and negative MACD, although it remains above SMA-200."
+    "summary": "At RM4.27, price is below SMA-20 (RM4.3775) and SMA-50 (RM4.5306) but above SMA-200 (RM3.6775), and it is 20.6% below the supplied 52-week high of RM5.38. RSI-14 is 44.7368 and MACD histogram is slightly positive at 0.0080, so the signal is not an unqualified downtrend. The technical signal is sell at low confidence because the latest volume is zero and the 52-week-low-derived field is null (the supplied low is 0.0)."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "Fed holding at 4.25–4.50% with only one expected cut in 2026 tightens cost of capital for UNISEM's capex-heavy operations; offset by AI-driven semiconductor demand surge (93% of industry leaders expect 2026 revenue growth).",
-    "interest_rate_outlook": "Rates likely remain elevated through 2026 (no major cuts expected); BNM accommodative at 3.00% provides some domestic support, but the 125bp US–Malaysia rate spread may shift capital toward USD assets and increase UNISEM's foreign-debt servicing costs.",
-    "fx_impact": null,
+    "confidence": "low",
+    "fed_impact": "The Federal Reserve maintained the federal-funds target range at 3.50%-3.75% on 29 Jul 2026. Stable but elevated US rates can pressure semiconductor valuations and global capital spending; source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+    "interest_rate_outlook": "Bank Negara Malaysia maintained OPR at 2.75% on 9 Jul 2026. The stable domestic rate backdrop is supportive of local financing conditions, but it does not offset UNISEM\u2019s company-specific margin, cash-flow, and global-demand risks. Source: https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026",
+    "fx_impact": "BNM FMIP listed KL USD/MYR at 4.0420 as of 2 Sep 2026. The latest 1H results commentary cites foreign-exchange movements, but the Layer 1 package does not provide the company\u2019s currency positions or hedge structure, so the net FX direction cannot be quantified; source: https://financialmarkets.bnm.gov.my/about-myor-myor-i",
     "sector_macro_factors": [
-      "AI capex boom driving semiconductor demand; memory/HBM products surging (parity with microprocessors in growth outlook)",
-      "Higher-for-longer US rates increase equipment capex burden; beta of 1.249 signals above-market sensitivity",
-      "Tariffs/trade policy ranked as industry's top concern; Malaysia exposed to US–China trade tensions and potential supply-chain disruption",
-      "Energy inflation and geopolitical premium (Iran conflict) threaten manufacturing cost structure"
+      "Semiconductor utilization and global electronics demand are central to revenue recovery.",
+      "US-China trade and supply-chain conditions can affect customer demand, sourcing, and valuation.",
+      "Higher global rates may compress high-duration semiconductor multiples and raise the hurdle for capacity investment."
     ],
     "geopolitical_risks": [
-      "US–China trade tensions and tariff escalation risk (Malaysia's semiconductor ecosystem sits in the crosshairs)",
-      "Iran conflict-driven energy commodity inflation threatens fab operating costs",
-      "Semiconductor supply-chain fragmentation (on-shoring trends) may marginalize non-US, non-leading-edge fabs"
+      "Middle East conflict and associated energy/supply-chain disruption are risks identified in the supplied central-bank context.",
+      "Trade restrictions or a semiconductor inventory correction could delay utilization recovery; the company-specific exposure is not quantified."
     ],
-    "summary": "Current-session signal: neutral. Unisem has a long-term semiconductor recovery angle, but the fresh snapshot shows only 4.2% operating margin, 4.6% net margin, negative MYR164 million free cash flow, and a 109.8x trailing P/E despite a lower 33.7x forward P/E. Price is below SMA-20 and SMA-50 with RSI 31.8 and negative MACD, although it remains above SMA-200."
+    "summary": "Macro is neutral: BNM OPR at 2.75% provides a stable domestic backdrop, while the Fed\u2019s 3.50%-3.75% target range and global trade/supply-chain risks can weigh on semiconductor capital spending and valuation. USD/MYR at 4.0420 matters because FX movements were cited in the 1H loss commentary, but the company\u2019s net exposure is unavailable. The macro/FX view is neutral at low confidence."
   },
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
+  "pipeline_mode": "in-session-claude-code"
 }

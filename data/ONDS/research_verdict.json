@@ -1,26 +1,26 @@
 {
   "ticker": "ONDS",
   "judged_view": "buy",
-  "confidence": "medium",
-  "thesis": "The bull carried the debate after the dated Q2 result showed that ONDS is executing a much larger revenue and order program than the older trailing snapshot implies. Record Q2 revenue, orders, backlog, raised guidance, and reported liquidity make the growth inflection credible, but the ruling remains medium confidence because adjusted EBITDA and free cash flow are still negative and acquisition integration must translate backlog into per-share cash economics.",
+  "confidence": "low",
+  "thesis": "The bull carried the debate narrowly because the official Q2 release supplies concrete evidence of revenue, orders, backlog, guidance, and liquidity, and the Layer 1 recommendation panel is uniformly positive. The ruling remains low confidence: current Layer 1 margins and free cash flow are deeply negative, the valuation embeds substantial execution, and technical momentum is bearish with core risk fields unavailable.",
   "winning_side": "bull",
-  "strongest_counterexample": "The Q2 result could be a top-line acquisition and order spike that fails to produce durable margins: GAAP net loss was $89.7M, adjusted EBITDA was negative $50.6M, and the market still lacks a verified multi-period cash-flow and diluted-share-count trend. If backlog conversion requires repeated equity financing, strong revenue growth may not create attractive shareholder returns.",
+  "strongest_counterexample": "The reported growth may not convert to cash or profit after acquisition costs and integration, while price below EMA-20 and a negative MACD histogram show the market is not currently confirming the bull thesis.",
   "invalidation_conditions": [
-    "Q3 revenue falls below the company-guided $140M floor and full-year revenue guidance is reduced; this would invalidate the growth-acceleration component of the buy thesis.",
-    "Two consecutive quarters show adjusted EBITDA remaining below negative $50M and free cash flow worsening without a clear backlog conversion explanation; this would invalidate the operating-leverage component.",
-    "The share price closes below the SMA-50 area near $8.14 for 20 trading sessions while MACD remains negative and diluted shares rise materially; this would invalidate the constructive execution setup."
+    "FY2026 revenue guidance of $525M-$550M is materially reduced or backlog fails to convert into recognized revenue over the next two reported quarters",
+    "Operating margin remains below -50% and free cash flow remains negative while dilution increases",
+    "The next finite technical snapshot remains below EMA-20 with negative MACD and price breaks below the recent $7.04 support area"
   ],
   "evidence_gaps": [
-    "The detailed Q2 cash-flow statement, cash-runway duration, restricted-cash composition, and diluted-share-count trend are not in Layer 1.",
-    "The margin and cash economics of the acquired businesses inside the approximately $757M pro forma backlog are not fully disclosed.",
-    "No current consensus-estimate revision series or independently verified backlog delivery schedule is available.",
-    "No dated USD/MYR return path is available to quantify the MYR investor's FX contribution."
+    "No usable dated Layer 1 news headlines",
+    "No backlog-conversion, acquisition-integration, or forward-margin trend in Layer 1",
+    "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
+    "No dated forward Fed path"
   ],
   "decisive_factors": [
-    "Q2 revenue reached $83.8M, up 67% sequentially and more than 13-fold year over year.",
-    "$175M of Q2 orders, approximately $613M reported backlog, and approximately $757M pro forma backlog support visibility.",
-    "Full-year guidance increased to $525-$550M and reported liquidity reached $1.4B.",
-    "Negative adjusted EBITDA, negative FCF, acquisition integration, and incomplete technical confirmation cap conviction."
+    "Official Q2 record revenue, orders, backlog, raised FY2026 guidance, and reported liquidity",
+    "Uniform 2 strong-buy/7 buy Layer 1 recommendation panel",
+    "Negative Layer 1 net income, free cash flow, and operating/net margins",
+    "Price below EMA-20 with negative MACD and 0.1019x volume ratio"
   ],
   "pipeline_mode": "in-session-claude-code"
 }

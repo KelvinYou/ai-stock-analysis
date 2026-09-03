@@ -1,48 +1,69 @@
 {
   "ticker": "TSM",
-  "date": "2026-08-25",
+  "date": "2026-09-03",
   "overall_signal": "buy",
   "conviction": {
-    "score": 0.4,
-    "signal_convergence": 0.5385,
-    "explanation": "Two of four analyst layers (fundamentals, sentiment) point buy with high/medium confidence on raised guidance, best-in-class margins, a self-funded balance sheet, and stable bullish analyst coverage. The other two (technical, macro) are neutral: short-term momentum has rolled over into a low-volume pullback while the long-term uptrend stays intact, and macro is a genuine push-pull between a stable Fed backdrop and unresolved Taiwan geopolitical/export-control risk. The debate reinforced that the long-term thesis is durable but the near-term entry is not obviously mispriced in the bull's favor, so conviction is moderate rather than high \u2014 a real edge exists, but it is capped by two non-trivial neutral votes and live near-term catalysts (Sept FOMC, Taiwan export-control policy) that could move the stock either way before the thesis is confirmed."
+    "score": 0.3,
+    "signal_convergence": 0.5455,
+    "explanation": "The four analyst signals are fundamentals=buy, sentiment=buy, technical=neutral, macro=neutral. Deterministic confidence-weighted directional consensus is 0.5455 and signal convergence is 0.5455; the score is bounded by the incomplete technical snapshot and explicitly does not use invented levels."
   },
-  "executive_summary": "TSMC remains the dominant, best-positioned supplier to the AI capex supercycle: management just raised 2026 revenue growth guidance to slightly above 40% and lifted capex to a ~$62B midpoint (plus an incremental $100B Arizona commitment), while sustaining industry-leading margins (60% gross / 51% operating / 45% net) on a conservatively levered balance sheet (~20% debt-to-equity, ~NT$992B free cash flow). Sell-side coverage has stayed almost unanimously bullish (6 strong buy / 12 buy / 1 hold / 0 sell) for four straight months, and recent news flow \u2014 the raised guidance, a $100B Arizona expansion, and reported institutional accumulation \u2014 reinforces a constructive fundamental and sentiment picture.\n\nSet against this, the stock has pulled back 14.4% from its 52-week high on low volume, with price now below its 20- and 50-day moving averages and MACD confirming near-term bearish momentum, even as it remains comfortably above its 200-day SMA. The adversarial debate surfaced a real, unresolved tension: the bull case treats Taiwan concentration risk and the recent pullback as already-priced and low-conviction respectively, while the bear case argues the trailing 31.3x multiple still assumes near-flawless execution against two live near-term catalysts \u2014 the September 15-16 FOMC decision and prospective Taiwan export-control tightening on AI chips to China \u2014 that have not yet been tested.\n\nNet, this synthesizes to a buy with moderate conviction: the long-term structural thesis (irreplaceable leading-edge capacity, self-funded AI-driven growth, expanding margins) is intact and well-supported by fundamentals and sentiment, but technical momentum has clearly cooled and macro/geopolitical uncertainty is real and unresolved rather than fully priced, which caps conviction below a high-confidence strong buy.",
-  "bull_case": "TSMC's raised 2026 guidance (+40% revenue growth, $62B capex midpoint), expanding best-in-class margins, self-funded balance sheet, and four straight months of near-unanimous analyst bullishness argue that the market is paying a reasonable forward multiple (18.8x) for real, visible AI-driven earnings growth. The recent pullback happened on below-average volume with RSI still neutral (44.7) and price well above the 200-day SMA, consistent with routine profit-taking rather than a fundamentals-driven reversal. Geopolitical/Taiwan concentration risk is long-known, not new information, and TSMC is actively self-hedging through a multi-year, self-funded geographic diversification program (Arizona, Kumamoto, Dresden) now totaling $265B cumulative in the US alone.",
-  "bear_case": "The trailing 31.3x P/E already prices in near-flawless execution of an aggressive, AI-demand-dependent capex program, right as two live catalysts \u2014 the September 15-16 FOMC decision and Taiwan's prospective stricter export controls on AI chips to China \u2014 approach without having been tested. Short-term technicals have already rolled over (price below the 20- and 50-day SMAs, negative MACD, down 14.4% from highs), suggesting the market itself is recalibrating extrapolated best-case AI-demand assumptions. TSMC's irreplaceable role in leading-edge capacity is also a systemic, industry-wide single point of failure: unlike a diversifiable company-specific risk, there is no alternative supply chain the industry can fall back on if a Taiwan-specific shock (tariff, export ban, or escalation) materializes, and TSMC's own diversification capex helps the 2028+ picture, not the risks sitting on the calendar in the next one to two quarters.",
+  "executive_summary": "The bull carried the evidence-weighted case because profitability, cash flow, valuation, and recommendation data are constructive; conviction is capped by incomplete technicals and unquantified company-specific risks. The two-round debate and research-manager ruling were carried into synthesis without manufacturing certainty. Layer 1 is as of 2026-09-02; the technical series contains a non-finite 2026-08-28 OHLC row, so RSI/SMA/Bollinger/ATR-dependent conclusions remain unavailable.",
+  "bull_case": "Neutral moderator summary \u2014 constructive evidence: The bull case rests on the strongest reported profitability in this batch: positive free cash flow, high margins, a forward P/E below trailing P/E, and a heavily positive recommendation snapshot. The latest close is still materially above the supplied 52-week low, while the negative MACD should not be treated as a complete trend reversal because the upstream moving-average and ATR fields are unavailable.",
+  "bear_case": "Neutral moderator summary \u2014 cautionary evidence: The bear case is that trailing valuation and a capital-intensive business leave little room for execution error, while the current technical evidence is incomplete and MACD is negative. The Fed range is not an easing tailwind, the 52-week drawdown is material, and the supplied Layer 1 data cannot quantify customer, geography, or policy risks.",
   "key_uncertainties": [
-    "Whether AI accelerator capex demand from hyperscalers sustains at a pace that justifies TSMC's $62B+ annual capex budget through 2027-2028",
-    "The scope and market impact of Taiwan's prospective stricter export controls on advanced AI chips to China",
-    "Whether the recent low-volume pullback resolves as routine profit-taking (reclaiming the 50-day SMA) or extends toward the 200-day SMA support near $365.85",
-    "How the September 15-16 FOMC decision shifts the rate backdrop for capex-heavy growth valuations",
-    "How much of the current forward P/E discount survives a genuine AI-demand slowdown, which has not yet been tested"
+    "No populated dated news headlines are available in Layer 1.",
+    "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
+    "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory.",
+    "Next reported earnings and cash-flow trajectory",
+    "Repair and recomputation of technicals after the non-finite OHLC row",
+    "Dated company-specific policy/geopolitical evidence"
   ],
   "catalysts_upcoming": [
-    "FOMC meeting and rate decision, September 15-16, 2026",
-    "TSMC quarterly earnings and updated 2026/2027 capex and demand commentary",
-    "Taiwan government action on export controls for advanced AI chips to China",
-    "Progress updates on the $100B incremental Arizona investment and overseas fab ramp (3nm production in Arizona from late 2026)",
-    "Potential Sony image-sensor joint-venture developments and other secondary demand signals (e.g., Xiaomi Xring chip ramp)"
+    "Next company-reported earnings and cash-flow update; date is not present in Layer 1.",
+    "Next official central-bank or FX observation affecting the applicable funding/valuation backdrop.",
+    "A repaired Layer 1 price series producing valid moving-average and ATR readings."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 56.5% over available price history. Projected worst case (2-sigma): ~98.2% from current $410.12.",
+    "max_drawdown_scenario": "Historical max drawdown: 56.5% over available price history. Projected worst case (2-sigma): ~nan% from current $415.50.",
     "risk_reward_ratio": null
   },
   "action_plan": {
-    "entry_limit": 398.58,
-    "entry_rationale": "Midway between current ($410.12) and Bollinger lower band ($387.04)",
-    "stop_loss": 376.09,
-    "stop_rationale": "2x ATR-14 ($11.24) below entry \u2014 invalidates the setup",
-    "take_profit_1": 440.77,
-    "take_profit_2": 479.0,
-    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": null
+    "note": "Signal too mixed for precise levels (conviction +0.30, convergence 0.55). Wait for a clearer setup."
   },
-  "research_verdict": null,
+  "research_verdict": {
+    "ticker": "TSM",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "The bull carried the evidence-weighted case because profitability, cash flow, valuation, and recommendation data are constructive; conviction is capped by incomplete technicals and unquantified company-specific risks.",
+    "winning_side": "bull",
+    "strongest_counterexample": "A durable earnings and cash-flow trajectory could validate the constructive view despite the current technical gap.",
+    "invalidation_conditions": [
+      "Reported profitability or free cash flow materially deteriorates",
+      "Forward valuation support disappears without corresponding earnings delivery",
+      "Repaired technical data confirms a sustained primary downtrend"
+    ],
+    "evidence_gaps": [
+      "No populated dated news headlines are available in Layer 1.",
+      "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
+      "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory."
+    ],
+    "decisive_factors": [
+      "Analyst signals: fundamentals=buy, sentiment=buy, technical=neutral, macro=neutral.",
+      "Reported profitability and cash flow are strong",
+      "Whether the forward P/E discount is sufficient compensation for execution risk"
+    ]
+  },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
     "sentiment": "buy",

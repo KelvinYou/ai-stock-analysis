@@ -1,33 +1,34 @@
 {
   "ticker": "APP",
-  "date": "2026-08-25",
-  "overall_signal": "neutral",
+  "date": "2026-09-03",
+  "overall_signal": "buy",
   "conviction": {
-    "score": 0.0,
-    "signal_convergence": 0.25,
-    "explanation": "Analyst signals genuinely cancel: fundamentals (buy, medium confidence) is offset one-for-one by technical (sell, medium confidence), while sentiment and macro are both neutral/medium. Confidence-weighted directional consensus is exactly 0.0 (0.75 buy-weight vs 0.75 sell-weight out of 3.0 total), so calibration correctly zeroes conviction rather than manufacturing a direction. This reflects a real fork: exceptional current fundamentals (53% revenue growth, 84% EBITDA margin, SEC overhang resolved) versus a confirmed technical downtrend (below all SMAs, negative MACD, near 52-week low) in a restrictive, higher-for-longer rate environment that disproportionately pressures this high-beta (2.53) name."
+    "score": 0.22,
+    "signal_convergence": 0.5,
+    "explanation": "The four analyst signals are fundamentals=buy, sentiment=buy, technical=neutral, macro=neutral. Deterministic confidence-weighted directional consensus is 0.5000 and signal convergence is 0.5000; the score is bounded by the incomplete technical snapshot and explicitly does not use invented levels."
   },
-  "executive_summary": "AppLovin enters this review as a story of two conflicting truths. On fundamentals, the business just had an outstanding quarter -- revenue up 53% YoY, EBITDA up 58% at an 84% margin, and $1.27B of net income -- while its SEC inquiry closed with no enforcement action and its forward P/E (14.2x) sits well below its trailing P/E (23.5x), implying the market still expects growth even as the stock has fallen ~60% from its 52-week high. On technicals, the picture is uniformly bearish: price is below the 20/50/200-day SMAs, MACD is negative, RSI-14 is a deeply oversold 15.16, and the stock sits just 0.37% above its 52-week low. The bull/bear debate surfaced a genuine, unresolved disagreement rather than a one-sided case: bulls see a macro-driven valuation reset on low-conviction (low-volume) selling; bears see a trend that has not been volume-confirmed to reverse, compounded by a restrictive Fed heading into the September 15-16 FOMC meeting that disproportionately hits high-beta names. With confidence-weighted analyst signals canceling out exactly (one buy, one sell, two neutral, all at medium confidence), a neutral rating with zero net conviction is the honest read of the evidence -- this is not indecision, it is a stock where strong fundamentals and a confirmed bearish trend are both real and currently offsetting.",
-  "bull_case": "Q2 2026 results were exceptional (53% revenue growth, 84% EBITDA margin, $1.27B net income) and the SEC inquiry closed with no action, removing a legal overhang. The forward P/E of 14.2x versus trailing 23.5x shows the market still prices in growth despite the drawdown, and the stock's decline has occurred on below-average volume (0.62x), suggesting a macro-driven de-risking rather than a fundamentals-driven repricing. Even reduced sell-side targets ($325 from Piper Sandler and Wells Fargo) imply meaningful upside from the $298.59 close, and no covering analyst has moved to an outright sell.",
-  "bear_case": "The stock fell despite beating estimates and is down 31% in the past month, with BofA downgrading to Neutral and two other firms cutting targets even while keeping bullish ratings -- a signal that sell-side analysts see growth-durability risk, not just multiple compression. Technically, price is below every major moving average with negative MACD and sits near its 52-week low; RSI's extreme oversold reading has not yet produced a volume-confirmed reversal. A 2.53 beta name is disproportionately exposed heading into a September FOMC meeting where the Fed remains restrictive (3.5%-3.75%, three hawkish dissents) with no cut currently signaled.",
+  "executive_summary": "The bull carried the reported operating and valuation evidence, but the ruling is bounded because the stock is near its 52-week low and the technical window is contaminated. The two-round debate and research-manager ruling were carried into synthesis without manufacturing certainty. Layer 1 is as of 2026-09-02; the technical series contains a non-finite 2026-08-28 OHLC row, so RSI/SMA/Bollinger/ATR-dependent conclusions remain unavailable.",
+  "bull_case": "Neutral moderator summary \u2014 constructive evidence: The bull case is supported by very high reported gross, operating, and net margins, positive free cash flow, and a forward P/E below trailing P/E. The positive MACD histogram may indicate an early momentum improvement, although the absence of valid moving averages and ATR prevents a high-confidence entry call.",
+  "bear_case": "Neutral moderator summary \u2014 cautionary evidence: The bear case is that the stock is close to its supplied 52-week low, below EMA-20, and trading at only 0.0776x its 20-day average volume, while the positive MACD histogram may be only a short-term bounce. A high-beta name remains sensitive to the Fed target range, and the missing technical fields prevent confirmation.",
   "key_uncertainties": [
-    "Whether AppLovin's AXON ad-engine growth is decelerating or merely normalizing off a very high base",
-    "How the stock trades into and after the September 15-16, 2026 FOMC decision",
-    "Whether the next earnings print reaccelerates sentiment or validates the recent round of target cuts",
-    "Whether price reclaims the 20/50-day SMAs on above-average volume, which would resolve the technical/fundamental conflict"
+    "No populated dated news headlines are available in Layer 1.",
+    "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
+    "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory.",
+    "Next reported growth and cash-flow trajectory",
+    "Whether price can reclaim valid moving-average levels",
+    "Whether high-beta volatility is compensated by fundamentals"
   ],
   "catalysts_upcoming": [
-    "September 15-16, 2026 FOMC meeting and any shift in rate-cut signaling",
-    "Next quarterly earnings report (Q3 2026) for confirmation or reversal of the growth-deceleration narrative",
-    "Further sell-side rating or target revisions following the recent BofA downgrade and target cuts",
-    "Any technical trend-reversal signal (volume-confirmed reclaim of 20-day/50-day SMA)"
+    "Next company-reported earnings and cash-flow update; date is not present in Layer 1.",
+    "Next official central-bank or FX observation affecting the applicable funding/valuation backdrop.",
+    "A repaired Layer 1 price series producing valid moving-average and ATR readings."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "High beta (2.53) \u2014 price may amplify broad-market moves.",
       "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 91.9% over available price history. Projected worst case (2-sigma): ~141.6% from current $298.59.",
+    "max_drawdown_scenario": "Historical max drawdown: 91.9% over available price history. Projected worst case (2-sigma): ~nan% from current $311.74.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -39,13 +40,35 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.25). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.22, convergence 0.50). Wait for a clearer setup."
   },
-  "research_verdict": null,
+  "research_verdict": {
+    "ticker": "APP",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "The bull carried the reported operating and valuation evidence, but the ruling is bounded because the stock is near its 52-week low and the technical window is contaminated.",
+    "winning_side": "bull",
+    "strongest_counterexample": "Continued margin and cash-flow delivery with a repaired, improving price trend would validate the buy view.",
+    "invalidation_conditions": [
+      "Margins or free cash flow materially deteriorate",
+      "A repaired technical series confirms a sustained primary downtrend",
+      "Forward valuation rises without corresponding earnings delivery"
+    ],
+    "evidence_gaps": [
+      "No populated dated news headlines are available in Layer 1.",
+      "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
+      "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory."
+    ],
+    "decisive_factors": [
+      "Analyst signals: fundamentals=buy, sentiment=buy, technical=neutral, macro=neutral.",
+      "Reported margins and free cash flow are strong",
+      "Whether exceptional margins justify a directional call while price is near the 52-week low"
+    ]
+  },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
-    "sentiment": "neutral",
-    "technical": "sell",
+    "sentiment": "buy",
+    "technical": "neutral",
     "macro": "neutral"
   },
   "pipeline_mode": "in-session-claude-code"

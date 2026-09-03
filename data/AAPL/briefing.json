@@ -1,51 +1,74 @@
 {
   "ticker": "AAPL",
-  "date": "2026-08-25",
+  "date": "2026-09-03",
   "overall_signal": "buy",
   "conviction": {
-    "score": 0.4,
-    "signal_convergence": 0.5455,
-    "explanation": "Two of four analysts (fundamentals, sentiment) lean buy on strong margins/FCF and a mixed-to-positive news backdrop; the other two (technical, macro) are neutral rather than opposing, reflecting short-term consolidation and an unresolved rate/FOMC catalyst rather than genuine bearish evidence. Confidence-weighted directional consensus is 0.55, so conviction is capped well below max: a moderate buy, not a high-conviction one."
+    "score": 0.24,
+    "signal_convergence": 0.4545,
+    "explanation": "Fundamentals and available technical fields are bullish while sentiment and macro are neutral. The score is held at +0.24 because convergence is only 0.4545 and core technical fields are null after the non-finite 2026-08-28 bar; this is a high-divergence/low-confidence buy bias, not a precise entry signal."
   },
-  "executive_summary": "Apple enters this analysis window with best-in-class profitability (27% net margin, FCF matching net income) and a long-term uptrend that remains intact 10% above its rising 200-day SMA, while sell-side sentiment has been improving for three straight months and a new $60B Texas manufacturing investment structurally reduces China/tariff supply-chain risk. Against that, the stock trades at a rich 35.5x trailing P/E in a Fed environment still holding rates at 3.5-3.75% (a divided, higher-for-longer stance with the next catalyst at the September 15-16 FOMC), and it is running two live management transitions at once -- a first-time CEO (John Ternus, effective September 1) and a Siri/Vision Pro team reallocation toward AI that reads as either capital discipline or an admission those bets underdelivered. Short-term technicals show a low-volume pullback below the 20-day SMA/EMA with a small negative MACD histogram, which both sides in the debate agree is more consistent with a low-conviction pause than a trend reversal, given the still-strong long-term trend structure. On balance, the strength of the fundamentals and the improving analyst trend outweigh the near-term technical stall and macro ambiguity, but not by enough to justify a high-conviction call while the CEO handoff and foldable-iPhone catalyst remain unresolved -- a moderate buy with explicit watch items into September.",
-  "bull_case": "Apple's cash-generation quality (FCF essentially equal to net income), a long-term uptrend well above its 200-day SMA, three months of improving analyst conviction, an internal 15-year hardware veteran taking over as CEO, a Texas manufacturing build-out de-risking the supply chain, and an unpriced foldable-iPhone catalyst together support paying up for quality even at a premium multiple.",
-  "bear_case": "At 35.5x trailing earnings with the Fed still holding a restrictive stance and no rate relief until at least the September FOMC meeting, Apple is running two simultaneous management transitions -- an unproven first-time CEO and a Siri/Vision Pro reallocation that could reflect underdelivered AI bets -- while three aligned short-term technical signals (below the 20-day SMA, below the 20-day EMA, negative MACD histogram) suggest the rally is stalling, leaving little room for a valuation de-rating if any of these threads goes wrong.",
+  "executive_summary": "Apple's Layer 1 data shows a high-quality but richly valued business: $416.2B revenue, $112.0B net income, 26.9% net margin, and $98.8B free cash flow. The 37.31x trailing and 34.06x forward P/E leaves a small margin for error, while debt/equity is approximately 133.8%. John Ternus's 2026-09-01 CEO handoff received an initially positive reaction, but AI/product execution remains unresolved. The debate supports a modest buy bias rather than a clean signal; RSI, SMA, ATR, Bollinger, and support/resistance are unavailable after the non-finite 2026-08-28 bar, so no precise order levels are quoted.",
+  "bull_case": "A large recurring-revenue ecosystem, high margins, and near-$100B free cash flow can support compounding through the CEO handoff. Improving non-null EMA/MACD momentum provides a modest tailwind.",
+  "bear_case": "The 37.31x P/E already prices in strong execution, while AI/leadership uncertainty, mixed recommendations, and high debt/equity leave a narrow margin of safety.",
   "key_uncertainties": [
-    "How the market and Apple's product roadmap respond once John Ternus formally becomes CEO on September 1, 2026",
-    "Whether the Siri/Vision Pro reallocation produces a visible AI product win within the next few quarters or reads as a retreat in hindsight",
-    "Whether the foldable iPhone ships on the rumored timeline and at what price/margin profile",
-    "Whether the September 15-16 FOMC meeting shifts the rate path in a way that re-rates high-multiple tech names",
-    "Whether the current below-20-SMA/EMA technical setup resolves as a brief pause (bull view) or an early stalling signal (bear view)"
+    "AI and product-roadmap execution under the new CEO.",
+    "Whether future earnings growth justifies 34.06x forward P/E.",
+    "SMA/RSI/ATR/support/resistance remain unavailable because of the non-finite 2026-08-28 bar.",
+    "Whether the initial CEO-transition reaction persists."
   ],
   "catalysts_upcoming": [
-    "John Ternus formally assumes CEO role -- September 1, 2026",
-    "FOMC meeting and rate decision -- September 15-16, 2026",
-    "Potential foldable iPhone announcement/launch window",
-    "Next quarterly earnings report (services/hardware mix, margin trend confirmation)"
+    "Product and AI execution evidence under John Ternus.",
+    "Next earnings update on services growth, margins, and free cash flow.",
+    "A future complete-close technical refresh.",
+    "Subsequent Fed communication and USD/MYR observations."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 38.5% over available price history. Projected worst case (2-sigma): ~64.9% from current $310.34.",
+    "max_drawdown_scenario": "Historical max drawdown: 38.5% over available price history. Projected worst case (2-sigma): ~nan% from current $324.74.",
     "risk_reward_ratio": null
   },
   "action_plan": {
-    "entry_limit": 300.62,
-    "entry_rationale": "Midway between current ($310.34) and Bollinger lower band ($290.91)",
-    "stop_loss": 288.57,
-    "stop_rationale": "2x ATR-14 ($6.02) below entry \u2014 invalidates the setup",
-    "take_profit_1": 334.87,
-    "take_profit_2": 356.89,
-    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": null
+    "note": "Signal too mixed for precise levels (conviction +0.24, convergence 0.45). Wait for a clearer setup."
   },
-  "research_verdict": null,
+  "research_verdict": {
+    "ticker": "AAPL",
+    "judged_view": "buy",
+    "confidence": "low",
+    "thesis": "The bull has the better long-term business case: strong margins, cash flow, and ecosystem scale outweigh the balance-sheet concern. The ruling is low confidence because valuation, leadership/AI execution, and incomplete technical coverage leave little margin for error.",
+    "winning_side": "bull",
+    "strongest_counterexample": "A premium multiple can compress materially if the new leadership team fails to show AI/product progress or earnings growth does not outrun the 34.06x forward P/E.",
+    "invalidation_conditions": [
+      "Net margin falls below 25% for two consecutive reported quarters.",
+      "Trailing free cash flow falls below $80B for two consecutive Layer 1 refreshes.",
+      "The recommendation panel reaches at least 10 sell-or-worse ratings or broad estimates turn down.",
+      "CEO-transition execution produces a sustained reduction in earnings expectations."
+    ],
+    "evidence_gaps": [
+      "SMA/RSI/Bollinger/ATR/support/resistance are unavailable after the non-finite 2026-08-28 bar.",
+      "Layer 1 has no detailed forward earnings bridge for the AI/product roadmap.",
+      "No debt-maturity or buyback-allocation breakdown is present."
+    ],
+    "decisive_factors": [
+      "26.9% net margin and $98.8B free cash flow.",
+      "37.31x trailing P/E with only a modest forward discount.",
+      "CEO transition and AI execution are unresolved.",
+      "Available EMA/MACD is positive but insufficient for precise levels."
+    ]
+  },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
-    "sentiment": "buy",
-    "technical": "neutral",
+    "sentiment": "neutral",
+    "technical": "buy",
     "macro": "neutral"
   },
   "pipeline_mode": "in-session-claude-code"

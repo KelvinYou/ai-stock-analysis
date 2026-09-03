@@ -2,25 +2,24 @@
   "ticker": "0097",
   "judged_view": "neutral",
   "confidence": "medium",
-  "thesis": "ViTrox is a strong business priced for strong growth; the fresh Layer 1 data supports quality but does not provide a sufficient margin of safety at the current price.",
+  "thesis": "ViTrox is fundamentally strong but priced for substantial execution. The near-term technical pullback and impaired volume/OHLC data prevent a reliable directional entry, so the evidence supports monitoring rather than a high-conviction buy or sell.",
   "winning_side": "neither",
-  "strongest_counterexample": "A sustained semiconductor-capex upcycle could make the forward multiple reasonable as earnings compound.",
+  "strongest_counterexample": "A sustained semiconductor-capex and advanced-packaging cycle could produce earnings growth strong enough to validate the premium multiple and make the current pullback temporary.",
   "invalidation_conditions": [
-    "Revenue, orders, and free-cash-flow conversion accelerate enough to support the current multiple",
-    "Price consolidates above SMA-50 with volume confirmation",
-    "A material earnings miss or margin decline forces a lower valuation"
+    "A confirmed acceleration in orders, revenue, and free-cash-flow conversion would weaken the valuation bear case.",
+    "A verified data repair showing strong volume-backed price recovery above SMA20 would weaken the technical bear case.",
+    "A material earnings or order miss would invalidate the constructive growth case."
   ],
   "evidence_gaps": [
-    "No current news headlines in the local Layer 1 snapshot",
-    "No customer-level order, backlog, or concentration detail",
-    "Price history and technical indicators end on 2026-08-10"
+    "No usable current-news headlines",
+    "No reliable volume confirmation because the latest volume is zero",
+    "No detailed order-book, customer-concentration, or forward-cash-flow evidence"
   ],
   "decisive_factors": [
-    "86.7x trailing P/E and 47.6x forward P/E",
-    "61.4% gross margin, 37.5% operating margin, and only 8.2% debt-to-equity",
-    "RSI 84.9 at the 52-week high with volume at 0.71x its 20-day average"
+    "82.0x trailing and 45.1x forward valuation",
+    "61.36% gross margin and low leverage",
+    "Price below SMA20 with negative MACD but above SMA50/SMA200",
+    "Zero-filled OHLC/volume fields and invalid 52-week-low data"
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

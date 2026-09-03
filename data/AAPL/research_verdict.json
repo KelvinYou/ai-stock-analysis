@@ -1,26 +1,26 @@
 {
   "ticker": "AAPL",
-  "judged_view": "neutral",
-  "confidence": "medium",
-  "thesis": "Apple remains financially strong, but the valuation and weakening short-term trend require clearer earnings support before a bullish conclusion is justified.",
-  "winning_side": "bear",
-  "strongest_counterexample": "The decline may be a technical pullback rather than a fundamental deterioration because price remains above the 200-day average and free cash flow is substantial.",
+  "judged_view": "buy",
+  "confidence": "low",
+  "thesis": "The bull has the better long-term business case: strong margins, cash flow, and ecosystem scale outweigh the balance-sheet concern. The ruling is low confidence because valuation, leadership/AI execution, and incomplete technical coverage leave little margin for error.",
+  "winning_side": "bull",
+  "strongest_counterexample": "A premium multiple can compress materially if the new leadership team fails to show AI/product progress or earnings growth does not outrun the 34.06x forward P/E.",
   "invalidation_conditions": [
-    "A sustained break below the 200-day average",
-    "Deterioration in margins or free cash flow",
-    "Further analyst downgrades or lower earnings estimates"
+    "Net margin falls below 25% for two consecutive reported quarters.",
+    "Trailing free cash flow falls below $80B for two consecutive Layer 1 refreshes.",
+    "The recommendation panel reaches at least 10 sell-or-worse ratings or broad estimates turn down.",
+    "CEO-transition execution produces a sustained reduction in earnings expectations."
   ],
   "evidence_gaps": [
-    "No current news data",
-    "No detailed forward earnings assumptions",
-    "No breakdown of debt maturity or cash-flow allocation"
+    "SMA/RSI/Bollinger/ATR/support/resistance are unavailable after the non-finite 2026-08-28 bar.",
+    "Layer 1 has no detailed forward earnings bridge for the AI/product roadmap.",
+    "No debt-maturity or buyback-allocation breakdown is present."
   ],
   "decisive_factors": [
-    "34.7x trailing P/E and 31.8x forward P/E",
-    "$98.8B free cash flow alongside elevated leverage",
-    "Price below the 20- and 50-day averages with negative MACD"
+    "26.9% net margin and $98.8B free cash flow.",
+    "37.31x trailing P/E with only a modest forward discount.",
+    "CEO transition and AI execution are unresolved.",
+    "Available EMA/MACD is positive but insufficient for precise levels."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

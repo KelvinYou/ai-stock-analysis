@@ -1,32 +1,32 @@
 {
   "ticker": "META",
-  "date": "2026-08-25",
-  "overall_signal": "neutral",
+  "date": "2026-09-03",
+  "overall_signal": "buy",
   "conviction": {
-    "score": 0.0,
-    "signal_convergence": 0.25,
-    "explanation": "The four analyst reports are exactly offsetting on direction: fundamentals lean buy (medium confidence) on strong margins, FCF, and a favorable forward/trailing P/E spread, while technicals lean sell (medium confidence) on a fully bearish moving-average stack and negative MACD momentum; sentiment and macro are both neutral given genuinely mixed evidence (litigation/capex anxiety vs. unanimous sell-side bullishness; a stable-but-hawkish-leaning Fed hold). Confidence-weighted, buy-side and sell-side conviction are equal (0.0 net directional consensus), so no directional call is statistically supported by the analyst panel itself \u2014 a conviction score near zero is the honest output, not a hedge. The debate did not surface a decisive tiebreaker: the bear's technical/macro/litigation case and the bull's fundamentals/valuation case both hold up under cross-examination, with the real swing factor (AI-capex ROI showing up in revenue) still unconfirmed."
+    "score": 0.25,
+    "signal_convergence": 0.4545,
+    "explanation": "Fundamentals and available technicals are bullish while sentiment and macro are neutral. Convergence is only 0.4545, so this is explicitly a high-divergence/low-confidence buy bias; the score is held at +0.25, below the RiskChecker precise-level gate, because core technical fields are null and AI-capex/legal evidence remains unresolved."
   },
-  "executive_summary": "Meta Platforms presents a genuine split decision: best-in-class profitability (82% gross margin, 41.4% operating margin, $46.1B TTM free cash flow) and a conservative balance sheet (0.39x debt/equity) sit underneath a stock that is down ~29% from its August 2025 all-time high and trading below every major moving average with negative MACD momentum. Sell-side analysts remain overwhelmingly bullish (Strong Buy consensus, ~$754 average target, +35% implied upside), but that same panel was equally bullish before the drawdown began, so it is treated as a lagging rather than leading signal here. Two dated, real risks are actively in play: a federal trial from 29 state attorneys general over alleged teen-addictive design of Facebook/Instagram (Meta's own filing cites a theoretical maximum of $1.4T; plaintiffs estimate closer to $200B, six weeks of trial expected) and a Fed holding rates at 3.50-3.75% with three hawkish dissents ahead of the September 15-16 meeting, which keeps discount rates elevated for AI-capex-heavy growth names. With fundamentals and technicals pulling in exactly opposite directions at equal confidence-weighted magnitude, and sentiment/macro both genuinely mixed rather than directional, the evidence does not support a directional call today. This is a name to watch for a resolution catalyst \u2014 either AI-capex showing up in revenue, a technical base forming above the 50-day SMA, or clarity on the litigation outcome \u2014 rather than to trade on the current mixed signal set.",
-  "bull_case": "META's core ad business is highly profitable and self-funding (82% gross / 41.4% operating margin, $46.1B TTM FCF, 0.39x debt/equity), and the forward P/E's 22% discount to trailing P/E implies the market expects earnings to grow into the multiple. The ~29% drawdown from all-time highs looks more like a sentiment/valuation reset than fundamental deterioration, and it has occurred on below-average volume, leaving room for a sharp reversal once AI-capex spend shows up as confirmed revenue. Sell-side analysts remain unanimously bullish, with a Strong Buy consensus and ~35% implied upside to the average target.",
-  "bear_case": "The technical trend is unambiguously bearish \u2014 price below the 20/50/200-day SMAs with negative, widening MACD \u2014 and it tracks a real macro headwind: the Fed's July hold at 3.50-3.75% with three hawkish dissents keeps discount rates elevated for a name whose valuation depends on AI-capex converting into revenue on an unconfirmed timeline. Layered on top is a genuinely open tail risk from the 29-state-AG teen-safety trial (headline theoretical maximum $1.4T, plaintiffs' estimate ~$200B) running through six weeks of trial coverage. Unanimous sell-side bullishness is treated skeptically here because the same consensus was equally strong before the 29% drawdown began.",
+  "executive_summary": "Meta's Layer 1 fundamentals are strong: $201.0B revenue, 82.0% gross margin, 41.4% operating margin, $46.1B FCF, and approximately 38.6% debt/equity. The 16.96x forward P/E versus 22.33x trailing P/E creates a credible valuation cushion, and recent public evidence includes an AI-model release plus a settlement that removes extreme trial uncertainty. But the settlement can cost up to $18B and impose restrictions, while AI-capex returns are not visible in Layer 1. The debate gave the bull a narrow edge. The close is above EMA-20 with a positive MACD histogram but remains 24.79% below the 52-week high; SMA/RSI/ATR/Bollinger/support fields are unavailable after the non-finite 2026-08-28 bar, so RiskChecker ran without emitting precise levels.",
+  "bull_case": "Meta's cash-generative ad platform can fund AI investment and absorb legal costs, while the forward P/E discount and AI progress create room for a confidence reset.",
+  "bear_case": "AI capex may not produce revenue on time, the settlement can reduce cash and operating flexibility, and a rebound from a 24.79% drawdown may fail without full technical confirmation.",
   "key_uncertainties": [
-    "Financial outcome and timeline of the 29-state-AG teen-safety litigation (verdict, damages, appeals)",
-    "Whether and when AI infrastructure capex converts into confirmed incremental revenue growth",
-    "The Fed's rate path beyond the September 15-16, 2026 meeting given a divided, dissent-heavy FOMC",
-    "Whether the recent low-volume decline reflects seller exhaustion (bullish reversal setup) or an unresolved downtrend with no buyers stepping in"
+    "Incremental revenue and margin returns from AI investment.",
+    "Settlement payment conditions and operating restrictions.",
+    "SMA/RSI/ATR/support/resistance remain unavailable because of the non-finite 2026-08-28 bar.",
+    "Whether the drawdown reflects temporary sentiment or lower earnings expectations."
   ],
   "catalysts_upcoming": [
-    "Federal teen-safety trial proceedings and any verdict/settlement signal over the ~6-week trial window that started August 18, 2026",
-    "FOMC rate decision on September 15-16, 2026",
-    "Next quarterly earnings report for evidence of AI-capex translating into revenue growth",
-    "Technical confirmation of a base (e.g., reclaiming the 50-day SMA at ~592.79) or further breakdown toward the 52-week low (~519.78)"
+    "Next earnings update on ad demand, capex, margins, and FCF.",
+    "Evidence that AI products create measurable monetization.",
+    "Settlement approval/implementation details and earnings impact.",
+    "A future complete-close technical refresh confirming or rejecting the rebound."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 76.7% over available price history. Projected worst case (2-sigma): ~96.4% from current $559.02.",
+    "max_drawdown_scenario": "Historical max drawdown: 76.7% over available price history. Projected worst case (2-sigma): ~nan% from current $592.85.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -38,13 +38,37 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.25). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.25, convergence 0.45). Wait for a clearer setup."
   },
-  "research_verdict": null,
+  "research_verdict": {
+    "ticker": "META",
+    "judged_view": "buy",
+    "confidence": "low",
+    "thesis": "The bull carried the debate narrowly because Meta's exceptional margins, free cash flow, leverage, and forward P/E discount provide a stronger base than the price action suggests. The ruling remains low confidence: AI-capex returns, settlement costs, and missing technical structure make this a monitoring bias rather than a precise trade instruction.",
+    "winning_side": "bull",
+    "strongest_counterexample": "If AI spending fails to create incremental revenue while settlement payments and restrictions reduce platform economics, the 16.96x forward P/E can represent deteriorating earnings rather than undervaluation.",
+    "invalidation_conditions": [
+      "Operating margin falls below 35% for two consecutive reported quarters.",
+      "Trailing FCF falls below $35B for two consecutive Layer 1 refreshes.",
+      "AI investment is followed by two quarters of revenue growth below 10% without margin improvement.",
+      "Settlement costs or restrictions cause a material downward revision to earnings expectations."
+    ],
+    "evidence_gaps": [
+      "SMA/RSI/Bollinger/ATR/support/resistance are unavailable after the non-finite 2026-08-28 bar.",
+      "Layer 1 has no incremental AI-revenue bridge or capex-return schedule.",
+      "Exact settlement payment conditions and operating impact require primary-company confirmation."
+    ],
+    "decisive_factors": [
+      "82.0% gross margin and 41.4% operating margin.",
+      "$46.1B FCF with approximately 38.6% debt/equity.",
+      "16.96x forward P/E versus 22.33x trailing P/E.",
+      "Available EMA/MACD rebound evidence tempered by incomplete technical coverage."
+    ]
+  },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
     "sentiment": "neutral",
-    "technical": "sell",
+    "technical": "buy",
     "macro": "neutral"
   },
   "pipeline_mode": "in-session-claude-code"

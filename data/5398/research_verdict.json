@@ -2,25 +2,24 @@
   "ticker": "5398",
   "judged_view": "buy",
   "confidence": "medium",
-  "thesis": "Gamuda has a constructive trend and strong analyst support, but the buy view depends on forward earnings and project execution converting into cash flow.",
+  "thesis": "The bull case carried the debate because Gamuda combines fresh data-centre awards, a large replenished order book, and positive earnings-revision momentum with a still-constructive medium-term price structure. The buy view is conditional on execution and cash conversion; the premium multiple and negative free cash flow prevent a high-confidence ruling.",
   "winning_side": "bull",
-  "strongest_counterexample": "A failure to convert revenue into cash, or a normalisation of project earnings, could make the 19.7x forward P/E look expensive.",
+  "strongest_counterexample": "A large order book can destroy value if project costs, financing, delays, or working-capital requirements consume the expected margin; RM883.6m of negative free cash flow and only 6.28% net margin show that this is not a theoretical risk.",
   "invalidation_conditions": [
-    "The price closes below SMA-200 with negative momentum.",
-    "Free cash flow and project margins deteriorate further.",
-    "Analyst recommendations or forward earnings estimates are materially revised down."
+    "Two consecutive reporting periods show negative free cash flow without a credible milestone-collection explanation, alongside declining operating margin.",
+    "Material delays, cancellations, or margin deterioration affect the newly reported data-centre or major infrastructure awards.",
+    "Price breaks below the observed RM4.30 support area and SMA-200 on usable volume after the data-quality limitation is resolved."
   ],
   "evidence_gaps": [
-    "Project backlog quality, timing, and margin detail.",
-    "The drivers and duration of negative reported free cash flow.",
-    "Usable current news and macro inputs."
+    "Contract-level margin, milestone timing, backlog ageing, and cash-collection data.",
+    "A clean dated volume series and a valid 52-week low from the completed-close input.",
+    "Net USD/MYR sensitivity of overseas projects, imported materials, and financing.",
+    "Peer-relative valuation and return-on-capital comparison."
   ],
   "decisive_factors": [
-    "16 buy and 2 hold recommendations.",
-    "Price above all three major moving averages with positive MACD.",
-    "19.7x forward P/E versus negative reported free cash flow."
+    "Fresh data-centre awards and record order-book evidence provide more than a purely aspirational growth narrative.",
+    "The stock remains above SMA-50 and SMA-200 despite short-term momentum softening.",
+    "The negative FCF and premium valuation were treated as conditions to monitor, not proof that the growth thesis is broken."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

@@ -1,26 +1,26 @@
 {
   "ticker": "5296",
-  "judged_view": "sell",
+  "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "Strong fundamentals do not yet offset confirmed price weakness and the absence of fresh evidence that earnings momentum is improving.",
-  "winning_side": "bear",
-  "strongest_counterexample": "The RSI near 29 and dividend-supported valuation could produce a sharp technical rebound before fundamentals change.",
+  "thesis": "MRDIY has supportive reported fundamentals, but the directional debate cannot be resolved while the latest MY OHLC/volume fields are zero-filled and dated operating/news evidence is absent. The correct ruling is to monitor rather than assign a buy or sell direction.",
+  "winning_side": "neither",
+  "strongest_counterexample": "If the zero-filled rows are an ingestion artifact and valid trading data shows a base and reclaim, the reported oversold RSI together with strong cash flow and a 17.60x forward P/E could support a rebound; the neutral ruling would then be too cautious.",
   "invalidation_conditions": [
-    "Price reclaims SMA-50 and SMA-200 with positive MACD",
-    "Earnings and same-store sales improve without margin compression",
-    "Analyst estimates are revised higher on fresh operating data"
+    "A validated market-data refresh shows that the 2026-08-28 to 2026-09-02 sequence was an ingestion artifact and price subsequently reclaims the 20-, 50-, and 200-day averages with non-zero volume.",
+    "Two consecutive reported quarters show revenue and net-income growth while net margin remains at or above the current 12.77% baseline.",
+    "Free cash flow turns negative or net margin falls below 10% for two consecutive quarters, invalidating the supportive fundamental case."
   ],
   "evidence_gaps": [
-    "No current news headlines in the local Layer 1 snapshot",
-    "No same-store sales, store growth, or recent earnings detail",
-    "Price history and technical indicators end on 2026-08-10"
+    "The latest three MY rows contain zero OHLC/volume fields; no literal NaN/Inf tokens were present, but the zeros contaminate the technical snapshot.",
+    "The reported 52-week low is 0.0 and therefore not usable as a market reference.",
+    "The ten Layer 1 news records are blank and provide no dated headline evidence.",
+    "No quarterly earnings trend, same-store sales, store-growth, or import/hedging detail is present."
   ],
   "decisive_factors": [
-    "Close at 1.51 below SMA-20 at 1.602, SMA-50 at 1.6164, and SMA-200 at 1.6007",
-    "RSI 29.0 and MACD histogram -0.0111",
-    "Strong cash generation and a 4.24% dividend yield"
+    "Fundamentals are constructive: 47.52% gross margin, 18.71% operating margin, 12.77% net margin, and RM853.994m free cash flow.",
+    "The technical snapshot is mechanically bearish but low-confidence because the latest rows are zero-filled.",
+    "Sentiment and macro do not supply reliable directional confirmation.",
+    "Data integrity prevents a defensible entry, stop, or target level."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

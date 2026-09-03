@@ -2,87 +2,78 @@
   "fundamentals": {
     "signal": "neutral",
     "confidence": "medium",
-    "pe_assessment": "Trailing P/E of 34.79x vs. sector avg ~22x is 58% above peer average; forward P/E of 28.61x shows forward moderation but still above-market. Valuation is aggressive and leaves limited margin of safety for execution misses.",
-    "margin_analysis": "Excellent profitability: gross margin 71.7% (indicating strong pricing power), operating margin 15.19%, net margin 8.16%. Margins well above typical medical care facilities, suggesting competitive strength and operational efficiency. Strong across all levels.",
-    "debt_analysis": "Conservative leverage: D/E ratio 0.51x, debt-to-capital 34%. Total debt of MYR 15.5B against equity of MYR 30.3B is prudent. FCF of MYR 1.9B provides 2.3x debt service coverage, supporting dividend (1.32%) and organic reinvestment without financial stress.",
-    "growth_outlook": "Strong positive indicators: 78% of analysts recommend buy/strong-buy (18 of 23) with zero sell ratings, suggesting conviction in growth trajectory. Solid FCF generation supports both dividend growth and strategic investment. Healthcare sector provides secular tailwinds, but growth must justify 34.79x multiple.",
+    "pe_assessment": "Trailing P/E is 32.32x and forward P/E is 27.48x. The premium is defensible only if IHH sustains growth and healthcare demand, but the Layer 1 package has no peer valuation or multi-period growth series to establish a margin of safety.",
+    "margin_analysis": "Revenue is RM25.745bn and net income is RM2.101bn. Gross margin is 71.70%, operating margin 15.19%, and net margin 8.16%; the gross margin is strong, while the net margin leaves room for operating, financing, and expansion costs to matter.",
+    "debt_analysis": "Total debt of RM15.539bn versus equity of RM30.303bn gives debt/equity of about 0.51. Leverage is significant in absolute terms but moderate relative to equity; free cash flow of RM1.897bn is about 90% of net income and provides useful support, subject to capital spending and expansion needs.",
+    "growth_outlook": "IHH has scale, defensive healthcare demand, and positive operating cash generation. The forward P/E is below the trailing multiple, implying expected earnings improvement, but the available data does not show the growth rate, hospital occupancy, pricing, or expansion returns needed to justify the premium.",
     "key_risks": [
-      "Valuation risk: 34.79x trailing P/E leaves no margin of safety if growth disappoints or sector rotates",
-      "Emerging market exposure: Malaysia regulatory/currency risk",
-      "Analyst consensus clustering: overwhelmingly positive sentiment can precede reversals",
-      "Healthcare regulation: policy changes could compress the exceptional 71.7% gross margin",
-      "Sector rotation: defensive healthcare could underperform if risk appetite increases"
+      "A trailing P/E above 32x and forward P/E above 27x leave meaningful de-rating risk if earnings growth slows.",
+      "Debt is large in absolute terms and expansion can keep capital requirements high.",
+      "Net margin of 8.16% is more sensitive to staffing, financing, and operating-cost pressure than the gross margin suggests.",
+      "Country, regulatory, reimbursement, and currency exposures are not detailed in Layer 1.",
+      "No usable dated news headlines are available for a current catalyst or risk check."
     ],
     "key_strengths": [
-      "Exceptional margins: 71.7% gross margin indicates pricing power and competitive moat",
-      "Analyst consensus: 78% buy/strong-buy rating reflects institutional confidence",
-      "Defensive profile: beta of 0.143 provides low-volatility upside",
-      "Strong cash generation: MYR 1.9B FCF supports dividend yield of 1.32% plus growth reinvestment",
-      "Conservative balance sheet: 0.51x D/E ratio provides financial flexibility"
+      "Large healthcare platform with defensive demand characteristics.",
+      "High gross margin of 71.70% and positive operating and net income.",
+      "Free cash flow of RM1.897bn is about 90% of reported net income.",
+      "Debt/equity of about 0.51 is moderate relative to the equity base.",
+      "Analyst recommendation breadth is strongly positive."
     ],
-    "summary": "Current-session signal: neutral. IHH has 8.2% reported net margin, 15.2% operating margin, RM1.90 billion of reported free cash flow, and 18 buy versus 5 hold recommendations, but trades at 34.6x trailing and 28.5x forward earnings. The 8.31 close is below SMA-20, SMA-50, and SMA-200, RSI is 51.1, and volume is only 3% of its 20-day average despite a slightly positive MACD histogram."
+    "summary": "IHH has high-quality defensive characteristics and strong reported cash generation, but a trailing P/E of 32.32x and forward P/E of 27.48x require continued earnings growth. The evidence supports a neutral valuation view: business quality is attractive, but the current data does not establish enough margin of safety for a buy signal."
   },
   "sentiment": {
     "signal": "buy",
-    "confidence": "high",
-    "news_tone": "neutral",
-    "news_summary": "No recent news headlines available in the data feed, but analyst consensus remains uniformly positive with 78% buy recommendations and zero sell-side ratings maintained consistently over 3 months.",
+    "confidence": "medium",
+    "news_tone": "positive recommendation breadth; headline evidence unavailable",
+    "news_summary": "The Layer 1 news feed contains no usable headline text, links, or publishers. The 0m recommendation snapshot shows 5 strong buys, 16 buys, 2 holds, and no sells or strong sells; 21 of 23 ratings are positive, although the snapshot has no explicit calendar date.",
     "key_themes": [
-      "Unanimous analyst bullishness",
-      "No downside coverage",
-      "Healthcare sector strength",
-      "Stable institutional support",
-      "Medical care facilities segment resilience"
+      "broad analyst support",
+      "defensive healthcare demand",
+      "headline evidence unavailable",
+      "premium valuation requiring earnings delivery"
     ],
-    "notable_headlines": [
-      "23 analysts tracked: 5 Strong Buy, 13 Buy, 5 Hold, 0 Sell/Strong Sell",
-      "Ratings stable over past 3 months—no downgrades",
-      "100% positive-or-neutral recommendation distribution"
-    ],
+    "notable_headlines": [],
     "social_sentiment": null,
-    "summary": "Current-session signal: buy. IHH has 8.2% reported net margin, 15.2% operating margin, RM1.90 billion of reported free cash flow, and 18 buy versus 5 hold recommendations, but trades at 34.6x trailing and 28.5x forward earnings. The 8.31 close is below SMA-20, SMA-50, and SMA-200, RSI is 51.1, and volume is only 3% of its 20-day average despite a slightly positive MACD histogram."
+    "summary": "Analyst recommendation breadth is strongly constructive and consistent with IHH's defensive healthcare profile, but there is no usable dated headline or social evidence. Sentiment is therefore a medium-confidence buy input rather than a complete current-news signal."
   },
   "technical": {
     "signal": "sell",
-    "confidence": "medium",
-    "trend": "bearish downtrend; price below both SMA-50 and SMA-200",
-    "rsi_14": null,
-    "rsi_assessment": "RSI-14 at 40.0 is neutral; stock not oversold yet, room for further decline before reversal signals emerge",
-    "macd_assessment": "MACD histogram negative (-0.0413); bearish momentum with both MACD and signal line below zero, indicating sustained selling pressure",
-    "volume_assessment": "30-day average 6.5M; recent volume declining (5.3M on latest); late-July spikes (31.8M) suggest past event; current low volume weakens conviction",
+    "confidence": "low",
+    "trend": "Bearish across the supplied moving averages: the close is below SMA-20, SMA-50, and SMA-200, with a short-term oversold reading but no confirmed reversal.",
+    "rsi_14": 36.8932,
+    "rsi_assessment": "RSI-14 at 36.8932 is weak and near oversold territory, but it is not below 30; weakness has not yet produced a confirmed momentum reversal.",
+    "macd_assessment": "MACD line -0.0648 is below the -0.0576 signal line and histogram is -0.0072, confirming negative momentum.",
+    "volume_assessment": "The latest recorded volume is 0 versus a 20-day average of 3,273,640. Recent OHLC fields are incomplete/zero-valued in the Layer 1 CSV, so volume confirmation and fine-grained support/resistance interpretation are limited.",
     "support_levels": [
-      8.3,
-      8.35,
-      4.1
+      8.0661
     ],
     "resistance_levels": [
-      8.5,
-      9.33
+      8.256,
+      8.347,
+      8.61,
+      10.4161
     ],
-    "summary": "Current-session signal: sell. IHH has 8.2% reported net margin, 15.2% operating margin, RM1.90 billion of reported free cash flow, and 18 buy versus 5 hold recommendations, but trades at 34.6x trailing and 28.5x forward earnings. The 8.31 close is below SMA-20, SMA-50, and SMA-200, RSI is 51.1, and volume is only 3% of its 20-day average despite a slightly positive MACD histogram."
+    "summary": "As of 2026-09-02, the close is RM8.08 versus SMA-20 RM8.256, SMA-50 RM8.347, and SMA-200 RM8.61; it is 22.43% below the 52-week-high reference of RM10.4161. The lower Bollinger band is RM8.0661, while the 52-week-low distance is null and recent volume is zero, so the bearish technical signal is low confidence and no missing values are invented."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "Fed holds at 4.25–4.50%; IHH's low rate sensitivity (0.143 beta) and defensive healthcare profile insulate from rate-driven volatility. Stable US rates support dividend sustainability.",
-    "interest_rate_outlook": "BNM OPR steady at 2.75%, accommodative through 2026 (4%–5% GDP growth support). Low inflation backdrop reduces cost pressures. Rate environment favors dividend-yielding, low-beta healthcare.",
-    "fx_impact": "MYR strength forecast (3.70–3.85 vs. 4.30–4.40 currently) is major positive for Malaysia-domiciled healthcare operator; reduces FX headwinds on MYR-denominated earnings and improves ROIC. International ops (Singapore, India, Turkey) face natural USD-weakness headwind, but Malaysia home-market benefit offsets.",
+    "confidence": "low",
+    "fed_impact": "The Federal Reserve maintained a 3.50%-3.75% federal-funds target range on 2026-07-29 (https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm). Higher-for-longer global rates can pressure valuation multiples and financing costs, but healthcare demand is generally less cyclical; IHH's specific US-dollar exposure is not in Layer 1.",
+    "interest_rate_outlook": "Bank Negara Malaysia maintained the OPR at 2.75% on 2026-07-09 (https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026). Stable domestic rates are supportive for household affordability and local financing, but the input does not show IHH's country-level debt, refinancing schedule, or rate sensitivity.",
+    "fx_impact": "BNM FMIP's KL USD/MYR reference was 4.0420 on 2026-09-02 (https://financialmarkets.bnm.gov.my/about-myor-myor-i). IHH's multinational operations could have translation and funding effects, but the entity-level currency mix is not supplied, so FX is treated as an uncertainty rather than a directional driver.",
     "sector_macro_factors": [
-      "Malaysia GDP 4–5% growth supports healthcare demand growth",
-      "Moderate inflation limits operator cost pressures",
-      "Acyclical healthcare demand sustains utilization and pricing power",
-      "Digital modernization (Virtusa partnership) improves operational efficiency and margins",
-      "Dividend (10.5 sen) sustainable in low-rate, stable-inflation regime"
+      "Healthcare utilization, pricing, and reimbursement conditions.",
+      "Interest rates and funding costs for hospital expansion.",
+      "Domestic consumer affordability and medical-tourism flows.",
+      "Regulatory and labor-cost conditions across operating markets."
     ],
     "geopolitical_risks": [
-      "US–China trade tensions disrupt medical equipment/pharma supply chains",
-      "Middle East escalation risk (oil spike temporary MYR pressure, but healthcare inflation hedge offsets)",
-      "Staff mobility constraints across 10-country footprint if escalation widens",
-      "Mitigation: geographic diversification (UK, developed markets reduce concentration)"
+      "Regulatory or reimbursement changes in the countries where hospitals operate.",
+      "Cross-border medical-tourism disruption or travel restrictions.",
+      "Currency and geopolitical exposure across the multinational footprint."
     ],
-    "summary": "Current-session signal: neutral. IHH has 8.2% reported net margin, 15.2% operating margin, RM1.90 billion of reported free cash flow, and 18 buy versus 5 hold recommendations, but trades at 34.6x trailing and 28.5x forward earnings. The 8.31 close is below SMA-20, SMA-50, and SMA-200, RSI is 51.1, and volume is only 3% of its 20-day average despite a slightly positive MACD histogram."
+    "summary": "IHH's defensive healthcare demand and stable BNM OPR are constructive, while the Fed's 3.50%-3.75% range keeps global valuation and funding pressure relevant. Because country mix, debt currency, and reimbursement sensitivity are not in the input, the macro view remains neutral and low confidence."
   },
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Layer 1 was refreshed on 2026-08-14. Analyst direction and synthesis were regenerated in English during the current session; structured auxiliary metrics are retained where the public report contract requires them."
+  "pipeline_mode": "in-session-claude-code"
 }

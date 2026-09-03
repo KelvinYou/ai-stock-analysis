@@ -2,83 +2,62 @@
   "fundamentals": {
     "signal": "neutral",
     "confidence": "medium",
-    "pe_assessment": "No trailing P/E (net income -$198.2M); forward P/E of ~1365.6x prices in essentially no near-term earnings, an extreme multiple versus profitable aerospace/defense peers (typically 20-30x) and even versus high-growth space peers.",
-    "margin_analysis": "Gross margin is healthy at 34.4%, but operating margin is -38.0% and net margin -32.9% \u2014 the company is still losing money at scale as it invests in Neutron and manufacturing capacity; the gross-to-operating gap signals heavy opex/R&D relative to revenue.",
-    "debt_analysis": "Total debt of $254.0M against total equity of $1.72B (~0.15x D/E) is conservative leverage; balance sheet risk is low, though FCF of -$321.8M means the company continues to burn cash and may need capital markets access to fund Neutron development.",
-    "growth_outlook": "Trailing revenue of $601.8M understates current momentum: Q2 2026 revenue was a record $234M (+62% YoY) with record backlog and guidance for another record Q3 2026, driven by Electron cadence, Space Systems, and the pending Iridium acquisition.",
+    "pe_assessment": "Trailing P/E is unavailable because the company reports negative earnings; forward P/E is 1385x, so valuation depends on very strong future earnings delivery.",
+    "margin_analysis": "Gross margin is 34.4%, operating margin is -38.0%, and net margin is -32.9%. These are the reported Layer 1 margins; no trend comparison is inferred.",
+    "debt_analysis": "Total debt is 2.54e+08 against equity of 1.722e+09, or about 0.15x debt/equity; free cash flow is -3.218e+08.",
+    "growth_outlook": "Layer 1 reports revenue of 6.018e+08 but does not provide a dated growth-rate series. No growth acceleration or deceleration is assumed.",
     "key_risks": [
-      "Extreme forward P/E leaves no room for execution missteps",
-      "Continued negative FCF (-$321.8M) implies ongoing capital needs / dilution risk",
-      "Iridium acquisition still pending HSR/FCC review \u2014 integration and regulatory risk",
-      "Operating leverage has not yet turned profitable despite scale"
+      "No trailing P/E is available because earnings are negative.",
+      "Forward P/E is extremely high and depends on future earnings delivery.",
+      "Operating margin, net margin, and free cash flow are negative."
     ],
     "key_strengths": [
-      "62% YoY revenue growth with record backlog",
-      "Low leverage (~0.15x D/E) gives balance sheet flexibility",
-      "Healthy 34.4% gross margin shows unit economics are workable",
-      "Sell-side consensus stable and skewed bullish (3 strong buy / 11 buy / 4 hold / 0 sell over the last 4 months)"
+      "Reported gross margin is positive at 34.4%.",
+      "Total debt is about 0.15x equity in the supplied snapshot.",
+      "The recommendation snapshot is 15 buy/strong-buy versus 4 other ratings, though this is not a profitability measure."
     ],
-    "summary": "RKLB shows strong top-line growth and low leverage, but persistent net losses, deeply negative free cash flow, and a forward P/E above 1300x make the current valuation hard to justify on fundamentals alone. Net neutral: growth quality is real, but there is no margin of safety."
+    "summary": "Fundamentals are neutral: positive gross margin and a relatively modest debt/equity ratio are offset by losses, negative cash flow, and an extreme forward P/E."
   },
   "sentiment": {
     "signal": "buy",
-    "confidence": "medium",
-    "news_tone": "positive",
-    "news_summary": "News flow in the past two weeks has been uniformly positive: record Q2 2026 results with raised guidance, a run of U.S. Space Force/DoD contract and consortium wins, a successful hypersonic mission for the Department of War, continued Electron launch cadence (93rd mission), and forward progress on the Iridium acquisition (HSR lapse, S-4 filed, FCC applications). No negative headlines surfaced in this window.",
+    "confidence": "low",
+    "news_tone": "unavailable",
+    "news_summary": "Layer 1 contains no populated news headlines (the fetched headline records have empty title/link/publisher fields). The current recommendation snapshot is 15 buy/strong-buy versus 4 hold/sell/strong-sell, so the directional read is recommendation-only and low confidence.",
     "key_themes": [
-      "Record revenue and backlog growth",
-      "Expanding U.S. government/defense contract base",
-      "Iridium acquisition progressing through regulatory milestones",
-      "Steady Electron launch cadence and execution"
+      "Recommendation snapshot is net positive",
+      "No populated dated headlines"
     ],
-    "notable_headlines": [
-      "Rocket Lab Announces Second Quarter 2026 Financial Results: Posts Record Revenue and Record Backlog, Guides To Another Record Revenue Quarter in Q3 2026",
-      "MISSION SUCCESS: Rocket Lab Launches 93rd Electron Mission",
-      "Rocket Lab (RKLB) Launches Cassowary Vex Hypersonic Mission for the U.S. Department of War",
-      "Rocket Lab onboarded to U.S. Space Force NITE-STAR program",
-      "Rocket Lab onboarded into U.S. Space Force Space Data Network (SDN) Consortium",
-      "Rocket Lab progresses proposed Iridium acquisition: HSR period lapses, Form S-4 and FCC applications filed"
-    ],
-    "social_sentiment": "Not directly measured (no social data source available); sell-side positioning (3 strong buy / 11 buy / 4 hold / 0 sell, stable over 4 months) corroborates the positive news tone.",
-    "summary": "News tone is strongly positive \u2014 record revenue/backlog, multiple defense contract wins, and M&A progress \u2014 while the stock is down ~55% from its 52-week high, a notable sentiment/price divergence worth flagging as a potential contrarian setup rather than a reason for alarm."
+    "notable_headlines": [],
+    "social_sentiment": null,
+    "summary": "Sentiment is a low-confidence recommendation-only read because the Layer 1 news fields are empty; no headline or social signal is invented."
   },
   "technical": {
     "signal": "sell",
-    "confidence": "medium",
-    "trend": "Bearish/corrective: price ($68.28) is below the SMA-20 ($74.14), SMA-50 ($81.12), and SMA-200 ($78.78), a fully bearish moving-average stack, and down ~55% from the 52-week high of $151.00.",
-    "rsi_14": 39.3763,
-    "rsi_assessment": "RSI-14 at 39.4 is below the midline but not oversold (<30), indicating bearish momentum with room to fall further before a mean-reversion bounce becomes likely.",
-    "macd_assessment": "MACD line (-1.4592) sits below the signal line (-1.3522) with a negative histogram (-0.107), confirming bearish momentum, though the histogram is only mildly negative \u2014 the down-move is not accelerating sharply.",
-    "volume_assessment": "Volume ratio of 0.77x the 20-day average shows below-average participation on the recent decline, i.e. weak conviction behind the sell-off rather than capitulation-level selling.",
-    "support_levels": [
-      60.12,
-      37.57
-    ],
-    "resistance_levels": [
-      74.14,
-      81.12,
-      88.16
-    ],
-    "summary": "Price sits below all major moving averages with negative MACD, a bearish technical picture, but RSI is not yet oversold and volume is below average, suggesting the down-move lacks strong conviction and could stabilize near the lower Bollinger Band (~$60) before the 52-week low ($37.57)."
+    "confidence": "low",
+    "trend": "Close is 62.46 versus EMA-20 of 70.56; SMA-20/50/200 are unavailable. The close is -58.6% from the 52-week high and 66.2% above the 52-week low. The 2026-08-28 price row has non-finite OHLC values. Consequently RSI-14, SMA-20/50/200, Bollinger Bands, and ATR-14 are null in Layer 1; no missing value is imputed and no support/resistance price is invented.",
+    "rsi_14": null,
+    "rsi_assessment": "Unavailable because the upstream OHLC series contains a non-finite bar; no RSI interpretation is assigned.",
+    "macd_assessment": "MACD line -3.918, signal -2.829, histogram -1.089; bearish MACD and price below EMA-20, but the missing moving-average and ATR fields prevent a complete trend call.",
+    "volume_assessment": "Volume ratio is 0.2391 versus the 20-day average, with current volume 3834736 and 20-day average 1.604e+07. This is descriptive only because the recent technical window is contaminated by the non-finite OHLC row.",
+    "support_levels": [],
+    "resistance_levels": [],
+    "summary": "Technical signal is sell with low confidence: bearish MACD and price below EMA-20, but the missing moving-average and ATR fields prevent a complete trend call. The 2026-08-28 price row has non-finite OHLC values. Consequently RSI-14, SMA-20/50/200, Bollinger Bands, and ATR-14 are null in Layer 1; no missing value is imputed and no support/resistance price is invented."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "low",
-    "fed_impact": "As of Aug 25, 2026, the Fed has held the fed funds rate at 3.50%-3.75% since the July 2026 FOMC meeting (9-3 vote, three regional presidents dissenting), with the next decision on Sept 15-16, 2026. Elevated-for-longer rates raise the discount rate applied to RKLB's still-distant profitability (forward P/E >1300x), a headwind for a high-beta (2.63), negative-FCF name.",
-    "interest_rate_outlook": "Outlook is unusually uncertain: Chair Warsh has given little forward guidance, inflation has stayed above the 2% target for 5+ years, and three dissents this cycle argue for easier policy \u2014 no clear near-term cut is signaled ahead of the September meeting.",
-    "fx_impact": "Limited direct read-through; RKLB reports in USD with predominantly U.S. government and domestic commercial contracts, so near-term FX sensitivity is low relative to rate/duration risk.",
+    "confidence": "medium",
+    "fed_impact": "Official context: the Federal Reserve target range was 3.50%-3.75% on 2026-07-29 (https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm). the Fed hold leaves no immediate rate shock, but the effect on a loss-making, high-beta aerospace name cannot be quantified from Layer 1.",
+    "interest_rate_outlook": "The supplied macro context establishes the current target range but does not establish a future cut or hike; no unprovided forecast is used.",
+    "fx_impact": "BNM's USD/MYR reference was around 4.0420 on 2026-09-02 (https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate). This run does not contain the company's currency mix, so no quantified FX effect is assigned.",
     "sector_macro_factors": [
-      "U.S. Space Force/DoD budget growth is a structural tailwind independent of the rate cycle (NITE-STAR, SDN Consortium wins)",
-      "Aerospace & defense demand is comparatively insulated from consumer rate sensitivity",
-      "High beta (2.63) and negative earnings make RKLB more duration-sensitive to the rate path than typical defense names",
-      "Pending Iridium acquisition adds regulatory/antitrust timeline risk independent of macro conditions"
+      "The Fed target range is a valuation and funding input for US-listed risk assets.",
+      "BNM's OPR was 2.75% in the supplied official context (https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026); this is background context rather than a company-specific earnings forecast.",
+      "No additional dated sector macro series is present in Layer 1."
     ],
     "geopolitical_risks": [
-      "Elevated geopolitical tension is a net tailwind for defense/space launch demand (e.g., hypersonic DoW mission)",
-      "Government shutdown/budget-continuing-resolution risk could delay contract awards or payments",
-      "Regulatory review (HSR/FCC) of the Iridium deal introduces antitrust/approval risk"
+      "No dated geopolitical snapshot is present in Layer 1; no directional geopolitical claim is assigned."
     ],
-    "summary": "The Fed's on-hold, high-uncertainty stance is a mild valuation headwind for a high-beta, pre-profit name like RKLB, but strong and growing U.S. defense/space budget tailwinds partly offset it \u2014 net neutral with low confidence given the lack of a dated, purpose-built macro data feed."
+    "summary": "Macro signal is neutral: the Fed hold leaves no immediate rate shock, but the effect on a loss-making, high-beta aerospace name cannot be quantified from Layer 1. Official context is limited to the Fed, BNM OPR, and BNM USD/MYR observations stated in the run request."
   },
   "pipeline_mode": "in-session-claude-code"
 }

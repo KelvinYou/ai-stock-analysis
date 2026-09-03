@@ -2,25 +2,25 @@
   "ticker": "5225",
   "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "IHH has quality and cash-flow support, but the local snapshot does not justify a directional buy while price remains below all major averages and volume confirmation is absent.",
+  "thesis": "Neither side carried the debate decisively. IHH has strong cash generation, defensive demand, low beta, and broad recommendation support, but the premium valuation and breakdown below the major moving averages leave no demonstrated margin of safety in this data package.",
   "winning_side": "neither",
-  "strongest_counterexample": "Defensive healthcare demand and continued earnings growth could make the 28.5x forward P/E reasonable and restore the long-term trend.",
+  "strongest_counterexample": "A scaled healthcare platform can continue to compound earnings through cycles; if expansion returns and cash generation remain strong, the current premium may be justified and the technical decline may be a temporary entry window.",
   "invalidation_conditions": [
-    "Earnings or free cash flow weaken while valuation remains elevated.",
-    "The price breaks below the 52-week low.",
-    "A sustained recovery above SMA-200 fails to develop."
+    "The neutral/valuation caution is weakened if two consecutive reporting periods show earnings growth that brings the forward P/E below 22x without margin deterioration.",
+    "The bearish timing case is weakened if price reclaims the RM8.61 SMA-200 reference with reliable volume and holds above it for at least two weeks.",
+    "The quality case is invalidated if net margin falls below 8.16% for two consecutive reporting periods while free cash flow falls below 80% of net income."
   ],
   "evidence_gaps": [
-    "Forward earnings assumptions and segment-level growth.",
-    "International exposure, regulation, and currency sensitivity.",
-    "Usable current news, macro inputs, and volume confirmation."
+    "No multi-period earnings-growth, occupancy, pricing, reimbursement, or expansion-return history.",
+    "No usable dated news headlines or current company-specific catalysts.",
+    "No country-level debt, refinancing, regulatory, or currency exposure breakdown.",
+    "Recent volume and some OHLC fields are unavailable/zero-valued."
   ],
   "decisive_factors": [
-    "34.6x trailing P/E and 28.5x forward P/E.",
-    "18 buy and 5 hold recommendations.",
-    "Price below all major moving averages with volume at 3% of its 20-day average."
+    "High gross margin and RM1.897bn free cash flow support business quality.",
+    "Trailing P/E of 32.32x and forward P/E of 27.48x limit valuation comfort.",
+    "Close below SMA-20, SMA-50, and SMA-200 with negative MACD weakens near-term timing.",
+    "Analyst breadth is positive but lacks a calendar-dated news catalyst."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

@@ -1,26 +1,28 @@
 {
   "ticker": "5005",
-  "judged_view": "neutral",
+  "judged_view": "sell",
   "confidence": "medium",
-  "thesis": "Recovery optionality is not yet reflected in cash generation or margins, so the stock remains neutral with a downside bias until operating evidence improves.",
+  "thesis": "The bear carried the debate because current cash and earnings evidence is weaker than the revenue headline: the supplied free cash flow is negative, operating margin is thin, the latest half-year is loss-making, and the trailing valuation is extreme. The Q2 recovery is a credible counterweight, but until it produces sustained positive earnings and cash flow, the forward P/E remains an assumption-heavy basis for a buy.",
   "winning_side": "bear",
-  "strongest_counterexample": "The gap between the 109.8x trailing and 33.7x forward P/E could reflect a real earnings inflection if orders and utilization recover quickly.",
+  "strongest_counterexample": "The sell ruling could be too negative if the 1H loss is temporary FX/operating-cost noise: Q2 revenue grew 20.0%, Q2 profit was RM9.910m, and price remains above SMA-200. A second consecutive improvement could quickly make the forward valuation and current price look less demanding.",
   "invalidation_conditions": [
-    "Free cash flow turns positive and expands",
-    "Operating margin improves materially without a revenue-quality deterioration",
-    "Price reclaims SMA-20 and SMA-50 with positive MACD"
+    "The next two reported quarters each show positive attributable profit, operating margin above 8%, and year-over-year revenue growth.",
+    "Free cash flow turns positive for two consecutive reporting periods without a one-off financing explanation.",
+    "Price reclaims SMA-50 at RM4.5306 and then the supplied 52-week high of RM5.38 with usable volume confirmation while forward estimates remain intact.",
+    "The proposed private placement is completed without material dilution to per-share earnings or is demonstrably accretive."
   ],
   "evidence_gaps": [
-    "No current news headlines in the local Layer 1 snapshot",
-    "No customer-order, capex, or utilization detail",
-    "Price history and technical indicators end on 2026-08-10"
+    "No usable dated Layer 1 headlines or publisher metadata; sentiment required external supplementation.",
+    "The supplied negative FCF is not broken down into capex, working capital, or one-off components.",
+    "The proposed private-placement terms, use of proceeds, pricing, and dilution are not in the supplied package.",
+    "Customer/utilization data, forward guidance, and the company\u2019s net FX/hedging exposure are unavailable.",
+    "Latest volume is zero and the 52-week-low-derived technical fields are null."
   ],
   "decisive_factors": [
-    "Negative MYR164 million free cash flow and 4.2% operating margin",
-    "109.8x trailing P/E despite a 33.7x forward P/E",
-    "Price below SMA-20 and SMA-50 with RSI 31.8 and negative MACD"
+    "Negative supplied free cash flow of RM164.451m.",
+    "1H2026 net loss of RM3.445m despite 15.1% revenue growth.",
+    "106.75x supplied trailing P/E and only 4.2% operating margin.",
+    "Q2 recovery and above-SMA-200 price action are credible but unconfirmed offsets."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

@@ -2,25 +2,26 @@
   "ticker": "1155",
   "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "The snapshot supports a value-oriented watch, not a confirmed entry, because the attractive valuation is offset by a clear downtrend and incomplete bank risk data.",
+  "thesis": "The debate supports a value-oriented watch rather than a confirmed entry. Current profitability, a 6.25% reported yield, and reasonable P/E multiples make the bull case credible, but the price remains below its moving averages and the bank-specific evidence needed to test earnings and capital quality is absent. The zero-filled tail further weakens confidence in technical confirmation.",
   "winning_side": "neither",
-  "strongest_counterexample": "Low beta, strong reported profitability, and an RSI near 34 could support a defensive technical rebound.",
+  "strongest_counterexample": "The bear case may be too conservative if the missing fields are merely an ingestion gap: low beta, current profitability, a 6.25% yield, neutral RSI, and a positive MACD histogram could support a defensive rebound or re-rating once clean price data and stable NIM, NPL, and CET1 figures are confirmed.",
   "invalidation_conditions": [
-    "Bank asset quality or capital metrics deteriorate materially.",
-    "The price breaks below the 52-week low.",
-    "The dividend or earnings profile weakens materially."
+    "Reported net income declines by more than 10% year over year for two consecutive quarters or the dividend is cut.",
+    "NIM contracts by more than 15 basis points year over year for two consecutive quarters, or the reported NPL ratio rises by more than 50 basis points from its latest disclosed baseline.",
+    "CET1 falls below the bank's disclosed internal or regulatory capital buffer, after clean quarterly data is available.",
+    "A valid, non-zero-volume close below MYR10.4823 is sustained for three sessions, or a valid close above SMA-50 and SMA-200 for five sessions changes the neutral setup into a directional review."
   ],
   "evidence_gaps": [
-    "NIM, NPL, CET1, provisioning, and ROE data.",
-    "Bank-appropriate cash-flow and dividend coverage analysis.",
-    "Usable current news and macro inputs."
+    "NIM, NPL, CET1, ROE, provisioning, loan/deposit growth, liquidity, and dividend coverage.",
+    "A bank-appropriate interpretation of free cash flow and capital generation.",
+    "Valid OHLC and volume fields for the final three rows, plus a trustworthy 52-week low and ATR.",
+    "Usable dated news and company-specific geographic exposure to rate, FX, and geopolitical shocks."
   ],
   "decisive_factors": [
-    "12.3x trailing P/E, 11.3x forward P/E, and 6.23% yield.",
-    "Price below SMA-20, SMA-50, and SMA-200 with negative MACD.",
-    "Incomplete bank-specific risk evidence."
+    "12.18x trailing P/E, 11.43x forward P/E, 6.25% reported dividend yield, and 37.7% reported net margin.",
+    "Close below SMA-20, SMA-50, and SMA-200, with neutral RSI and only a small positive MACD histogram.",
+    "Missing bank-specific risk evidence and zero-filled recent market-data fields.",
+    "Official macro facts are stable but not sufficiently specific to resolve Maybank's NIM, credit, or FX exposure."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

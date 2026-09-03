@@ -1,26 +1,25 @@
 {
   "ticker": "5258",
   "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "BIMB looks inexpensive and income-oriented, but the local evidence does not yet show the operating or technical catalyst needed to convert that value into a high-conviction view.",
+  "confidence": "medium",
+  "thesis": "The valuation and yield make BIMB worth monitoring, and the latest quarter supplies some evidence of operational resilience. However, nearly flat 1H earnings, higher impairment pressure, weak price structure, and absent bank-specific risk metrics prevent the bull case from carrying the debate decisively.",
   "winning_side": "neither",
-  "strongest_counterexample": "An 8.8x forward P/E and 8.72% yield may already discount the slow-growth and technical concerns.",
+  "strongest_counterexample": "An income investor could reasonably argue that a low-beta bank at 8.4x earnings and an 8.76% yield needs only stable asset quality and normalising impairments to produce a good risk-adjusted return; the current evidence does not prove that thesis wrong.",
   "invalidation_conditions": [
-    "Credit quality, capital, or dividend coverage deteriorates.",
-    "The price breaks below the 52-week low.",
-    "A sustained recovery above the long-term averages is not achieved."
+    "Reported impairments or credit costs rise materially for two consecutive reporting periods while 1H-style earnings stagnation persists.",
+    "The dividend is reduced without a corresponding improvement in capital or growth prospects.",
+    "Price remains below SMA-200 and breaks the observed RM2.10 area on usable volume after the data-quality limitation is resolved."
   ],
   "evidence_gaps": [
-    "Bank-specific credit, capital, and margin metrics.",
-    "Dividend payout and coverage details.",
-    "Usable current news and macro inputs."
+    "Current CET1/capital adequacy, gross impaired financing, coverage, net interest margin, and cost-of-risk data.",
+    "A clean dated volume series and a valid 52-week low from the completed-close input.",
+    "Primary terms and financial impact of the reported restructuring/listing-transfer proposal.",
+    "A peer and historical valuation benchmark."
   ],
   "decisive_factors": [
-    "8.9x trailing P/E, 8.8x forward P/E, and 8.72% yield.",
-    "Price below SMA-50 and SMA-200 despite a mildly positive MACD histogram.",
-    "Current recommendations are 1 buy and 7 holds."
+    "1H net profit was almost flat despite 2Q improvement.",
+    "The valuation/yield cushion is real but not enough to compensate for missing bank-risk evidence.",
+    "The price is below all reported moving averages and the technical confirmation fields are impaired."
   ],
-  "pipeline_mode": "in-session-claude-code",
-  "refresh_scope": "all-watchlist-current-session-batch",
-  "source_note": "Fresh Layer 1 data plus current-session English research-only analysis. Portfolio and Layer 5 are excluded."
+  "pipeline_mode": "in-session-claude-code"
 }

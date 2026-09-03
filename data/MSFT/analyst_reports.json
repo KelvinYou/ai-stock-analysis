@@ -2,77 +2,71 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "high",
-    "pe_assessment": "Trailing P/E of 26.95x is above the broad market average (~22x) but forward P/E compresses to 20.67x on expected earnings growth, reflecting an Azure/Copilot growth premium rather than pure multiple expansion.",
-    "margin_analysis": "Gross margin 67.9%, operating margin 46.8%, net margin 40.3% -- best-in-class profitability, supported by Azure crossing a $100B annual run-rate with 43% YoY growth in the latest quarter.",
-    "debt_analysis": "Total debt of $56.8B against $442.4B total equity (~13% debt/equity) alongside $67.0B free cash flow is a fortress balance sheet; leverage is immaterial relative to cash generation.",
-    "growth_outlook": "Commercial backlog grew 84% YoY to $678B and Copilot surpassed 30M paid seats, signaling accelerating AI monetization, though capex guided above $50B/quarter will pressure near-term FCF conversion before it shows up as durable growth.",
+    "pe_assessment": "Trailing P/E is 27.6934x versus forward P/E of 21.0756x. The lower forward multiple implies the market is assuming earnings growth, but the Layer 1 snapshot has no forecast bridge or growth time series, so the discount is supportive rather than conclusive. The valuation requires continued execution from a high-quality but large-capitalization business.",
+    "margin_analysis": "Revenue is $331.839B and net income is $133.749B. Gross margin is 67.94%, operating margin 46.78% and net margin 40.31%, providing an unusually strong profitability buffer. Free cash flow is $66.987B, approximately 20.19% of revenue, but it is below net income and the snapshot lacks capex detail, so cash conversion and investment intensity need monitoring.",
+    "debt_analysis": "Total debt of $56.826B against $442.387B of equity implies debt/equity of approximately 0.13x. This is conservative leverage and reduces direct balance-sheet and refinancing risk. It does not remove execution, capital-allocation or opportunity-cost risk because the dataset does not include cash balances, maturities or investment spending.",
+    "growth_outlook": "The forward P/E discount, high operating margin and positive free cash flow support a quality-growth thesis, but no period-over-period revenue, earnings, backlog or segment data is available. The fundamental conclusion is therefore based on current profitability and balance-sheet strength, with future growth treated as an assumption that must be checked against the next report.",
     "key_risks": [
-      "Capex intensity ($50B+/quarter guided) could compress free cash flow margins if AI ROI lags expectations",
-      "Elevated absolute valuation leaves limited room for a growth disappointment",
-      "Regulatory/antitrust scrutiny of AI bundling and cloud competition practices"
+      "27.6934x trailing P/E still requires strong execution even with a 21.0756x forward P/E",
+      "Free cash flow of $66.987B is below net income and capex or investment detail is absent",
+      "Large-scale technology investment can pressure future cash conversion and returns",
+      "No growth or segment series is available to test the forward valuation"
     ],
     "key_strengths": [
-      "Azure accelerating to 43% YoY growth, cloud crossing $100B annual run-rate",
-      "Commercial backlog +84% YoY to $678B provides multi-year revenue visibility",
-      "40%+ net margins and $67B free cash flow fund capex without balance sheet strain",
-      "Analyst consensus overwhelmingly Strong Buy/Buy (52 of 55 ratings in the latest read)"
+      "$133.749B net income and 40.31% net margin",
+      "46.78% operating margin and $66.987B free cash flow",
+      "Approximately 0.13x debt/equity reduces direct financing risk",
+      "52 current buy or strong-buy recommendations versus 3 holds and no sells"
     ],
-    "summary": "Microsoft's fundamentals are strong: hyperscale margins, an accelerating Azure/Copilot growth story, and a fortress balance sheet justify a premium multiple despite heavy near-term capex."
+    "summary": "Microsoft's current snapshot supports a high-quality fundamental buy: $133.749B net income, 46.78% operating margin, 40.31% net margin, $66.987B free cash flow and approximately 0.13x debt/equity. The forward P/E of 21.0756x is below trailing 27.6934x, but the missing growth and capex series means the thesis depends on continued execution and cash-conversion discipline."
   },
   "sentiment": {
     "signal": "buy",
     "confidence": "medium",
-    "news_tone": "positive with pockets of volatility",
-    "news_summary": "Q4 FY26 earnings (reported July 29, 2026) beat on Azure acceleration (43% YoY) and a record commercial backlog ($678B, +84% YoY); Copilot surpassed 30M paid seats. The stock nonetheless pulled back double digits from its post-earnings high on capex/margin concerns before stabilizing near $487-488 in late August, up roughly 1% on the day and cited as up ~30% over the trailing month by some trackers.",
+    "news_tone": "neutral",
+    "news_summary": "The Layer 1 news_headlines array contains only blank entries, so no dated company-news tone is usable. The current recommendation snapshot is strongly positive at 14 strong-buy, 38 buy and 3 hold, with no sell ratings; this supports a positive sentiment signal, but missing headlines and absent rating-change detail keep confidence at medium.",
     "key_themes": [
-      "AI monetization via Copilot seat growth",
-      "Azure hyperscale acceleration",
-      "capex vs. margin debate",
-      "large backlog as forward revenue visibility"
+      "Strong but uncorroborated analyst consensus",
+      "No usable dated news",
+      "No observable recent consensus change"
     ],
-    "notable_headlines": [
-      "Microsoft's Answer to the Capex Question Is $678 Billion (Eastern Herald, Aug 25 2026)",
-      "Microsoft Corporation (MSFT) Down More Than 12% Since Q1 2026 Results (Yahoo Finance)",
-      "Why Microsoft (MSFT) Stock Is Up +29.8% in the Last 30 Days (Tickeron)"
-    ],
+    "notable_headlines": [],
     "social_sentiment": null,
-    "summary": "News tone is net positive -- record backlog and Azure growth reinforce the AI thesis -- but the market has treated the print with real skepticism on capex, producing a mixed-but-improving tape rather than unambiguous euphoria."
+    "summary": "Sentiment is positive at medium confidence because 52 of 55 recommendations are buy or strong-buy and none are sell. The feed has no usable dated headlines, so the consensus is supportive but not independently verified by current narrative evidence."
   },
   "technical": {
     "signal": "neutral",
-    "confidence": "medium",
-    "trend": "Primary uptrend intact -- price above SMA-20/50/200 -- but short-term momentum has stalled: MACD histogram is negative (-3.36) even as price sits mid-range in the Bollinger Bands (58th percentile).",
-    "rsi_14": 46.7703,
-    "rsi_assessment": "RSI-14 at 46.77 is neutral, neither overbought nor oversold, consistent with consolidation rather than a clear directional signal.",
-    "macd_assessment": "MACD line (19.05) sits below its signal line (22.41), producing a negative histogram (-3.36) -- a bearish short-term momentum cross inside a longer-term uptrend, warranting caution on immediate entries.",
-    "volume_assessment": "Volume of 16.75M is well below the 20-day average of 36.1M (ratio 0.46), indicating low conviction behind recent price action and weak confirmation of any near-term breakout or breakdown.",
+    "confidence": "low",
+    "trend": "Technical evidence is incomplete. Close is 497.28 versus EMA-20 of 484.9522, but MACD line 17.4766 is below signal line 19.1484 with a -1.6717 histogram. Price is 9.45% below the reported 52-week high of 549.2013. SMA-20, SMA-50, SMA-200, RSI-14, Bollinger Bands and ATR-14 are null because the completed-close input includes a non-finite 2026-08-28 bar; no substitute values are invented.",
+    "rsi_14": null,
+    "rsi_assessment": "RSI-14 is unavailable in the authoritative technical snapshot. Overbought or oversold status cannot be assigned.",
+    "macd_assessment": "MACD line 17.4766 is below signal line 19.1484 and the histogram is -1.6717, indicating bearish short-term momentum despite price remaining above EMA-20.",
+    "volume_assessment": "Latest volume is 2,368,901 against a 20-day average of 21,762,382.3, a 0.1089 ratio. Participation is light, and the non-finite 2026-08-28 bar contaminates rolling indicators; the technical signal is therefore low confidence.",
     "support_levels": [
-      477.24,
-      429.32,
-      421.05
+      484.9522,
+      348.5439
     ],
     "resistance_levels": [
-      541.38,
-      549.2
+      549.2013
     ],
-    "summary": "MSFT remains in a long-term uptrend above all major moving averages, but a negative MACD histogram and below-average volume point to short-term consolidation rather than fresh upside momentum."
+    "summary": "Microsoft has mixed available technicals: price is above EMA-20 but MACD momentum is negative and volume is only 0.1089 of its average. Because the authoritative SMA, RSI, Bollinger and ATR fields are null after the non-finite 2026-08-28 bar, the technical signal is neutral at low confidence and no missing value is filled in."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The Fed funds rate is held at 3.50%-3.75% (July 2026 FOMC), with the next meeting Sept 15-16, 2026. Markets have shifted from pricing cuts to pricing a real chance of a hike, with fed funds futures implying roughly 4% by year-end -- a firmer-for-longer backdrop than earlier in 2026.",
-    "interest_rate_outlook": "Policy uncertainty is elevated: persistent above-target inflation, a resilient labor market, and a Fed leadership transition have widened the range of plausible FOMC outcomes. A firmer rate path raises the discount rate applied to MSFT's long-duration AI capex/earnings growth -- a modest headwind to its premium multiple -- though Microsoft's balance sheet strength and $67B FCF limit direct financing-cost exposure.",
-    "fx_impact": "USD strength would typically pressure Microsoft's large international revenue base on translation; no dated FX rate snapshot was available for this pass, so this is treated as a secondary, unquantified factor.",
+    "fed_impact": "The Federal Reserve maintained a 3.50%-3.75% federal-funds target range in its 2026-07-29 statement (https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm). The hold remains a valuation headwind for long-duration technology multiples and can raise the hurdle rate for infrastructure investment, while Microsoft's profitability and low leverage reduce direct funding stress.",
+    "interest_rate_outlook": "Bank Negara Malaysia maintained OPR at 2.75% on 2026-07-09 (https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026). BNM policy is secondary to Microsoft's US/global revenue and funding base; no future path beyond the dated hold is assumed, so the signal remains neutral.",
+    "fx_impact": "BNM FMIP's KL USD/MYR reference was 4.0420 on 2026-09-02 (https://financialmarkets.bnm.gov.my/about-myor-myor-i). The reference matters to a MYR-based investor translating a USD holding, but no FX-change series or Microsoft revenue-currency split is supplied; no directional currency claim is made.",
     "sector_macro_factors": [
-      "Rate-sensitive valuation multiple on a mega-cap growth/AI compounder",
-      "Massive capex cycle ($50B+/quarter) increasingly self-funded from internal FCF rather than debt, limiting direct rate sensitivity",
-      "Hyperscaler AI capex arms race is largely macro-agnostic near term but exposed to any growth-scare-driven rotation out of high multiples"
+      "Higher rates can compress technology valuation multiples",
+      "Enterprise technology demand is sensitive to economic activity and IT budgets",
+      "Large infrastructure investment requires continued return and cash-conversion discipline"
     ],
     "geopolitical_risks": [
-      "US-China tech/export-control tensions affecting AI chip and hardware supply chains",
-      "Growing AI regulatory scrutiny (EU, US) over data practices and cloud/AI bundling"
+      "Technology export controls and supply-chain disruption can affect cloud and infrastructure capacity",
+      "Cross-border regulation, privacy and competition policy can affect software and cloud economics"
     ],
-    "summary": "The macro backdrop is genuinely uncertain -- the Fed is holding at 3.50-3.75% with markets now debating hikes rather than cuts, a modest headwind to MSFT's growth multiple, but not enough dated evidence to take a directional view."
+    "summary": "The Fed's 3.50%-3.75% hold is a modest valuation headwind, but Microsoft's margins, cash flow and low leverage cushion direct financing exposure. BNM OPR 2.75% and USD/MYR 4.0420 are relevant mainly to the MYR-based investor; without a path or change series, macro remains neutral at low confidence."
   },
   "pipeline_mode": "in-session-claude-code"
 }
