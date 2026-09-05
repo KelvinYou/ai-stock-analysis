@@ -6,11 +6,11 @@
     "industry": "Internet Retail",
     "market": "US",
     "currency": "USD",
-    "market_cap": 2775803756544.0,
-    "pe_ratio": 20.40801,
-    "forward_pe": 24.74395,
+    "market_cap": 2788369891328.0,
+    "pe_ratio": 20.797264,
+    "forward_pe": 24.855967,
     "dividend_yield": null,
-    "beta": 1.454,
+    "beta": 1.443,
     "fifty_two_week_high": 287.2,
     "fifty_two_week_low": 196.0
   },
@@ -37,6 +37,15 @@
     {
       "index": 1,
       "period": "-1m",
+      "strongBuy": 15,
+      "buy": 44,
+      "hold": 2,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "index": 2,
+      "period": "-2m",
       "strongBuy": 16,
       "buy": 44,
       "hold": 3,
@@ -44,8 +53,8 @@
       "strongSell": 0
     },
     {
-      "index": 2,
-      "period": "-2m",
+      "index": 3,
+      "period": "-3m",
       "strongBuy": 15,
       "buy": 47,
       "hold": 4,
@@ -105,5 +114,5 @@
       "publisher": ""
     }
   ],
-  "fetched_at": "2026-09-04T13:50:29.854221"
+  "fetched_at": "2026-09-05T00:13:20.928043"
 }
