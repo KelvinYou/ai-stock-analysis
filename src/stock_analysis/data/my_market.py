@@ -12,7 +12,7 @@ from stock_analysis.models.market_data import (
     TickerInfo,
 )
 
-from .fetcher_base import BaseFetcher, has_splits_since
+from .fetcher_base import BaseFetcher, has_splits_since, reject_unusable_bars
 
 # Common Bursa Malaysia ticker aliases — map friendly names to stock codes
 BURSA_ALIASES: dict[str, str] = {
@@ -96,17 +96,22 @@ class MYMarketFetcher(BaseFetcher):
             if start_date is not None
             else stock.history(period=self.period)
         )
-        price_history = [
-            PriceBar(
-                date=idx.date(),
-                open=round(row["Open"], 4),
-                high=round(row["High"], 4),
-                low=round(row["Low"], 4),
-                close=round(row["Close"], 4),
-                volume=int(row["Volume"]),
-            )
-            for idx, row in hist.iterrows()
-        ]
+        # See USMarketFetcher: a NaN OHLC row from the feed is rejected before
+        # it can reach TickerData, where it would void 200 bars of indicators.
+        price_history = reject_unusable_bars(
+            display_symbol,
+            [
+                PriceBar(
+                    date=idx.date(),
+                    open=round(row["Open"], 4),
+                    high=round(row["High"], 4),
+                    low=round(row["Low"], 4),
+                    close=round(row["Close"], 4),
+                    volume=int(row["Volume"]),
+                )
+                for idx, row in hist.iterrows()
+            ],
+        )
 
         financials = self._extract_financials(stock)
         news = self._extract_news(stock)

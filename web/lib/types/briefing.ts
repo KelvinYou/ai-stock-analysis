@@ -41,7 +41,14 @@ export interface ResearchVerdict {
 
 export interface Briefing {
   ticker: string;
+  /** When the run happened. */
   date: string;
+  /**
+   * Newest price bar this analysis actually read. Absent on briefings written
+   * before the field existed. See lib/freshness.ts for why `date` alone is
+   * not enough to judge whether a signal is current.
+   */
+  data_as_of?: string | null;
   overall_signal: Signal;
   conviction: ConvictionScore;
   executive_summary: string;
@@ -63,6 +70,8 @@ export interface TickerBundle {
   analystReports: AnalystReports | null;
   debate: DebateResult | null;
   briefing: Briefing | null;
+  briefingStale: boolean;
+  briefingStaleReason: string | null;
 }
 
 /**
@@ -87,6 +96,14 @@ export interface TickerSummary {
   briefingDate: string | null;
   /** Days between the briefing date and today — analysis staleness. */
   briefingAgeDays: number | null;
+  /**
+   * True when the briefing's signal was formed on older price data than the
+   * tape shown beside it. Age alone does not catch this: a 5-day-old briefing
+   * is fine if nothing moved, and misleading if the stock ran 8%.
+   */
+  briefingStale: boolean;
+  /** Human-readable explanation of the staleness, for the badge tooltip. */
+  briefingStaleReason: string | null;
 
   // Action plan
   entryLimit: number | null;
@@ -117,6 +134,7 @@ export type TickerNavSummary = Pick<
   | "signal"
   | "conviction"
   | "briefingAgeDays"
+  | "briefingStale"
   | "stopLoss"
   | "takeProfit1"
   | "toEntryPct"

@@ -46,6 +46,29 @@ dated `data/<TICKER>/<DATE>/` layout is a backtest-only fallback used when
 ### Layer 1 — Data Ingestion (`data/`)
 Deterministic, no LLM. `USMarketFetcher` uses yfinance to produce a `TickerData` object (price history, financials, analyst recs, news). `MYMarketFetcher` covers Bursa/KLSE, resolving names to codes via `BURSA_ALIASES` and appending `.KL`. `DataStore` persists the flat layout above.
 
+**Every bar passes `data/bars.py` before it is stored or computed on**, and that
+gate is load-bearing rather than defensive tidying:
+
+- A **non-finite OHLC row** (yfinance returns them intermittently) is not a
+  local defect. Every indicator in `compute_technicals` is a NaN-propagating
+  `rolling()` window, so one bad row voids SMA-20/50/200, RSI, Bollinger and
+  ATR for up to 200 following bars — while `ewm()`-based EMA and MACD survive
+  by skipping NaN. The surviving pair are the two that turn positive first in
+  a bounce, so the failure mode is not neutral: it deletes the bear's evidence
+  and biases the technical agent bullish. `drop_invalid_bars` makes a bad bar
+  cost only itself.
+- A **provisional tail bar** — an intraday snapshot stored as a completed daily
+  bar, spotted by volume far below the recent median — is dropped rather than
+  kept-and-flagged, because the incremental fetch window would never revisit
+  that date and the snapshot would be permanent. For the same reason
+  `fetch.py` re-requests the newest stored bar (`start_date = last`, not
+  `last + 1 day`) so a revised bar can overwrite it.
+
+The check runs at ingestion, in `DataStore` both ways, and again in
+`compute_technicals`, so a CSV poisoned before the gate existed heals without
+a refetch. `scripts/audit_data_health.py [--fix]` sweeps every ticker for both
+defects plus stale briefings.
+
 ### Layer 2 — Analyst Agents (`agents/`)
 Four specialist agents run **concurrently** (each inherits `BaseAnalystAgent`): Fundamentals, Sentiment, Technical, MacroFX. Each uses the Claude Agent SDK with custom MCP tools that expose `TickerData` as structured inputs, and returns a typed `*Report` with a `Signal` (strong_buy → strong_sell) and `Confidence`.
 
@@ -73,6 +96,17 @@ Two invariants here, both load-bearing:
   value would let the model talk itself into a trade setup.
 - **Neutral is a valid output.** `overall_signal=neutral` is a complete research
   result. Do not add prompt pressure to force a trade direction.
+- **A briefing carries the newest bar it read** (`Briefing.data_as_of`), and
+  `synthesis/freshness.py` — not the LLM — decides whether it may be presented
+  as current. The layers refresh independently: `stock-fetch` rewrites prices
+  daily while the LLM layers only rerun with the full pipeline, so without the
+  comparison a `buy` formed on a $592.85 close reads as live beside a $617.79
+  tape. Age alone does not catch this; the check is bar-date against bar-date.
+  `web/lib/freshness.ts` mirrors the rule for the direct-Supabase read path —
+  keep the two in step.
+- **RiskChecker declines rather than degrades.** `missing_level_inputs` refuses
+  to quote levels when the snapshot lacks ATR or every entry anchor, because
+  the fallbacks ("2% of price") produce numbers that look derived and are not.
 
 Default model: Sonnet (`synthesis_model`).
 

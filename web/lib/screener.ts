@@ -141,7 +141,20 @@ export function isActionable(t: TickerSummary): boolean {
   return t.toEntryPct != null && t.toEntryPct >= 0;
 }
 
-export function isStale(t: Pick<TickerSummary, "briefingAgeDays">): boolean {
+/**
+ * Two independent ways a briefing stops describing the present:
+ *
+ * - `briefingStale` — its analysis read older bars than the tape shown beside
+ *   it. Computed server-side (lib/freshness.ts). This fires on day one of a
+ *   divergence, which is the case age cannot see: a briefing written yesterday
+ *   against a close two sessions old is wrong immediately, not in five days.
+ * - age — nothing has reanalysed it in over `STALE_DAYS`, regardless of
+ *   whether the price moved.
+ */
+export function isStale(
+  t: Pick<TickerSummary, "briefingAgeDays" | "briefingStale">,
+): boolean {
+  if (t.briefingStale) return true;
   return t.briefingAgeDays != null && t.briefingAgeDays > STALE_DAYS;
 }
 

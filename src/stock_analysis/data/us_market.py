@@ -12,7 +12,7 @@ from stock_analysis.models.market_data import (
     TickerInfo,
 )
 
-from .fetcher_base import BaseFetcher, has_splits_since
+from .fetcher_base import BaseFetcher, has_splits_since, reject_unusable_bars
 
 
 class USMarketFetcher(BaseFetcher):
@@ -51,17 +51,24 @@ class USMarketFetcher(BaseFetcher):
             if start_date is not None
             else stock.history(period=self.period)
         )
-        price_history = [
-            PriceBar(
-                date=idx.date(),
-                open=round(row["Open"], 4),
-                high=round(row["High"], 4),
-                low=round(row["Low"], 4),
-                close=round(row["Close"], 4),
-                volume=int(row["Volume"]),
-            )
-            for idx, row in hist.iterrows()
-        ]
+        # yfinance intermittently returns a NaN OHLC row with a plausible
+        # volume. Rejecting it here keeps it out of TickerData entirely; the
+        # store re-screens the merged series for the provisional-tail case,
+        # which needs a volume baseline this slice may not have.
+        price_history = reject_unusable_bars(
+            ticker.upper(),
+            [
+                PriceBar(
+                    date=idx.date(),
+                    open=round(row["Open"], 4),
+                    high=round(row["High"], 4),
+                    low=round(row["Low"], 4),
+                    close=round(row["Close"], 4),
+                    volume=int(row["Volume"]),
+                )
+                for idx, row in hist.iterrows()
+            ],
+        )
 
         financials = self._extract_financials(stock)
         news = self._extract_news(stock)

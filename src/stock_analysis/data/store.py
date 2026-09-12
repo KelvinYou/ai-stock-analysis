@@ -2,18 +2,22 @@ from __future__ import annotations
 
 import csv
 import json
+import logging
 from datetime import date
 from pathlib import Path
 from typing import TypeVar
 
 from pydantic import BaseModel
 
+from stock_analysis.data.bars import drop_invalid_bars, sanitize_bars
 from stock_analysis.models.agent_reports import AnalystReports
 from stock_analysis.models.debate import DebateResult, ResearchVerdict
 from stock_analysis.models.market_data import PriceBar, TechnicalSnapshot, TickerData
 from stock_analysis.models.synthesis import Briefing
 
 T = TypeVar("T", bound=BaseModel)
+
+logger = logging.getLogger(__name__)
 
 
 class DataStore:
@@ -50,15 +54,37 @@ class DataStore:
 
     # --- Layer 1 ---
 
+    def _screen(self, ticker: str, bars: list[PriceBar]) -> list[PriceBar]:
+        """Gate every bar on its way to disk.
+
+        `price_history.csv` is the only durable copy, so a bar rejected here is
+        never seen by the indicator layer, the agents, or the dashboard. The
+        rejects are logged rather than raised: one bad row out of 2,600 should
+        cost that row, not the whole refresh.
+        """
+        audit = sanitize_bars(bars)
+        if audit.dropped:
+            logger.warning(
+                "%s: rejected %d price bar(s) before write: %s",
+                ticker.upper(),
+                len(audit.dropped),
+                "; ".join(audit.dropped),
+            )
+        return audit.bars
+
+    @staticmethod
+    def _write_bars(csv_path: Path, bars: list[PriceBar]) -> None:
+        with csv_path.open("w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(["date", "open", "high", "low", "close", "volume"])
+            for bar in bars:
+                writer.writerow([bar.date, bar.open, bar.high, bar.low, bar.close, bar.volume])
+
     def save_market_data(self, ticker: str, data: TickerData) -> Path:
         d = self._flat_dir(ticker)
 
         csv_path = d / "price_history.csv"
-        with csv_path.open("w", newline="") as f:
-            writer = csv.writer(f)
-            writer.writerow(["date", "open", "high", "low", "close", "volume"])
-            for bar in data.price_history:
-                writer.writerow([bar.date, bar.open, bar.high, bar.low, bar.close, bar.volume])
+        self._write_bars(csv_path, self._screen(ticker, data.price_history))
 
         fund_dict = json.loads(data.model_dump_json())
         del fund_dict["price_history"]
@@ -105,13 +131,12 @@ class DataStore:
         for bar in data.price_history:
             bars_by_date[bar.date] = bar
 
-        merged = sorted(bars_by_date.values(), key=lambda b: b.date)
+        # Screened after the merge, not before: the provisional-tail check
+        # needs the full history to have a volume baseline, and screening here
+        # also heals a bad row written by an earlier version of this code.
+        merged = self._screen(ticker, sorted(bars_by_date.values(), key=lambda b: b.date))
 
-        with csv_path.open("w", newline="") as f:
-            writer = csv.writer(f)
-            writer.writerow(["date", "open", "high", "low", "close", "volume"])
-            for bar in merged:
-                writer.writerow([bar.date, bar.open, bar.high, bar.low, bar.close, bar.volume])
+        self._write_bars(csv_path, merged)
 
         fund_dict = json.loads(data.model_dump_json())
         del fund_dict["price_history"]
@@ -138,8 +163,23 @@ class DataStore:
                     volume=int(row["volume"]),
                 ))
 
+        # Invalid rows only — a CSV written before the write-side screen
+        # existed can still hold a NaN row, and every downstream consumer
+        # (agents, RiskChecker, dashboard) reads through here. The
+        # provisional-tail check is deliberately not repeated: it belongs to
+        # the write path, so readers and `last_price_bar_date` cannot disagree
+        # about what the file contains.
+        audit = drop_invalid_bars(bars)
+        if audit.dropped:
+            logger.warning(
+                "%s: %d unusable bar(s) in price_history.csv, skipped on load: %s",
+                ticker.upper(),
+                len(audit.dropped),
+                "; ".join(audit.dropped[:5]),
+            )
+
         fund_dict = json.loads(fund_path.read_text())
-        fund_dict["price_history"] = [json.loads(b.model_dump_json()) for b in bars]
+        fund_dict["price_history"] = [json.loads(b.model_dump_json()) for b in audit.bars]
         return TickerData.model_validate(fund_dict)
 
     # --- Technicals (computed, no LLM) ---

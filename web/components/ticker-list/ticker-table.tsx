@@ -329,9 +329,13 @@ export function TickerTable({
                   )}
                   title={
                     t.briefingDate
-                      ? `Briefing ${t.briefingDate}${
-                          t.asOfDate ? ` · price data ${t.asOfDate}` : ""
-                        }`
+                      ? [
+                          `Briefing ${t.briefingDate}`,
+                          t.asOfDate ? `price data ${t.asOfDate}` : null,
+                          t.briefingStaleReason,
+                        ]
+                          .filter(Boolean)
+                          .join(" · ")
                       : undefined
                   }
                 >
@@ -344,7 +348,10 @@ export function TickerTable({
                       {fmtAge(t.briefingAgeDays)}
                       {stale ? (
                         <Marker
-                          reason={`briefing is older than ${STALE_DAYS} days; the tape has moved on`}
+                          reason={
+                            t.briefingStaleReason ??
+                            `briefing is older than ${STALE_DAYS} days; the tape has moved on`
+                          }
                         />
                       ) : (
                         <span className="sr-only"> since this briefing was written</span>

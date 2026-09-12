@@ -1,9 +1,31 @@
 from __future__ import annotations
 
+import logging
 from abc import ABC, abstractmethod
 from datetime import date
 
-from stock_analysis.models.market_data import TickerData
+from stock_analysis.data.bars import drop_invalid_bars
+from stock_analysis.models.market_data import PriceBar, TickerData
+
+logger = logging.getLogger(__name__)
+
+
+def reject_unusable_bars(ticker: str, bars: list[PriceBar]) -> list[PriceBar]:
+    """Drop bars whose OHLC cannot be computed on, logging what went.
+
+    The upstream feed is the origin of the defect, so this is where it is
+    named. The provisional-tail check is left to the store, which always holds
+    the full history the volume baseline needs.
+    """
+    audit = drop_invalid_bars(bars)
+    if audit.dropped:
+        logger.warning(
+            "%s: upstream returned %d unusable bar(s), dropped: %s",
+            ticker,
+            len(audit.dropped),
+            "; ".join(audit.dropped),
+        )
+    return audit.bars
 
 
 def has_splits_since(stock, since: date) -> bool:

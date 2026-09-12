@@ -21,6 +21,22 @@ def is_actionable(conviction_score: float, signal_convergence: float) -> bool:
     )
 
 
+def missing_level_inputs(snap: TechnicalSnapshot) -> list[str]:
+    """Return the indicators a level plan needs but does not have.
+
+    Both level planners degrade silently when indicators are null: ATR falls
+    back to a flat 2% of price and the entry to "2% below current", so an
+    incomplete snapshot yields numbers that look derived but are arbitrary.
+    Naming the gap lets the caller decline instead.
+    """
+    missing = []
+    if snap.atr_14 is None:
+        missing.append("ATR-14 (stop distance)")
+    if snap.sma_20 is None and snap.bb_lower is None and snap.sma_200 is None:
+        missing.append("SMA-20/SMA-200/Bollinger (entry and target anchors)")
+    return missing
+
+
 class RiskChecker:
     """Deterministic risk assessment — no LLM, pure computation."""
 
@@ -129,6 +145,18 @@ class RiskChecker:
             )
 
         snap = compute_technicals(ticker_data.info.symbol, ticker_data.price_history)
+
+        missing = missing_level_inputs(snap)
+        if missing:
+            return ActionPlan(
+                note=(
+                    "Technical snapshot is incomplete — no levels quoted. "
+                    f"Missing: {', '.join(missing)}. "
+                    "Refresh the price history and rerun rather than trading "
+                    "the fallback values."
+                ),
+            )
+
         close = snap.close
         atr = snap.atr_14 or (close * 0.02)  # fallback: 2% of price if ATR unavailable
 

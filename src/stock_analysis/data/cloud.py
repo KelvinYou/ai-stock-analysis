@@ -11,6 +11,7 @@ dates/status fields used for querying, freshness, and idempotency.
 
 from __future__ import annotations
 
+import logging
 import uuid
 from datetime import UTC, date, datetime
 from typing import Any, TypeVar
@@ -19,12 +20,16 @@ import httpx
 from pydantic import BaseModel, Field
 
 from stock_analysis.config import Settings
+from stock_analysis.data.bars import drop_invalid_bars, sanitize_bars
 from stock_analysis.models.agent_reports import AnalystReports
 from stock_analysis.models.debate import DebateResult, ResearchVerdict
 from stock_analysis.models.market_data import PriceBar, TechnicalSnapshot, TickerData
 from stock_analysis.models.synthesis import Briefing
 
 T = TypeVar("T", bound=BaseModel)
+
+logger = logging.getLogger(__name__)
+
 
 class SupabaseError(RuntimeError):
     """A useful error for a failed Supabase REST/RPC request."""
@@ -439,7 +444,22 @@ class SupabaseAnalysisStore:
         incoming = {bar.date: bar for bar in data.price_history}
         existing = {bar.date: bar for bar in self._load_price_bars(symbol)}
         existing.update(incoming)
-        merged = sorted(existing.values(), key=lambda bar: bar.date)
+
+        # Same gate as the local backend: a non-finite bar voids 200 bars of
+        # rolling indicators and a provisional tail bar corrupts volume_ratio.
+        # Rejected bars are excluded from both the upsert and the returned
+        # series, so a bad row already in `price_bars` cannot reach
+        # compute_technicals even before it is overwritten.
+        audit = sanitize_bars(sorted(existing.values(), key=lambda bar: bar.date))
+        if audit.dropped:
+            logger.warning(
+                "%s: rejected %d price bar(s): %s",
+                symbol,
+                len(audit.dropped),
+                "; ".join(audit.dropped),
+            )
+        merged = audit.bars
+        writable = {bar.date for bar in merged}
 
         rows = [
             {
@@ -452,6 +472,7 @@ class SupabaseAnalysisStore:
                 "volume": bar.volume,
             }
             for bar in sorted(incoming.values(), key=lambda bar: bar.date)
+            if bar.date in writable
         ]
         for chunk in _chunked(rows):
             self.client.upsert("price_bars", chunk, on_conflict="symbol,bar_date")
@@ -505,9 +526,15 @@ class SupabaseAnalysisStore:
         if not snapshot:
             return None
         fundamentals = dict(snapshot.get("fundamentals") or {})
-        fundamentals["price_history"] = [
-            bar.model_dump(mode="json") for bar in self._load_price_bars(ticker)
-        ]
+        audit = drop_invalid_bars(self._load_price_bars(ticker))
+        if audit.dropped:
+            logger.warning(
+                "%s: %d unusable bar(s) in price_bars, skipped on load: %s",
+                ticker.upper(),
+                len(audit.dropped),
+                "; ".join(audit.dropped[:5]),
+            )
+        fundamentals["price_history"] = [bar.model_dump(mode="json") for bar in audit.bars]
         return TickerData.model_validate(fundamentals)
 
     def save_technicals(self, ticker: str, snapshot: TechnicalSnapshot) -> None:

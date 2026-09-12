@@ -43,6 +43,11 @@ class Briefing(BaseModel):
 
     ticker: str
     date: str
+    # The newest price bar this analysis actually read, as distinct from `date`
+    # (when the run happened). Without it a consumer cannot tell a briefing
+    # that is merely a few days old from one whose signal predates a large move
+    # in the tape. Optional for briefings written before the field existed.
+    data_as_of: str | None = None
     overall_signal: Signal
     conviction: ConvictionScore
     executive_summary: str

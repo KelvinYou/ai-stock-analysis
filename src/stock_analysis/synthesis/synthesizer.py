@@ -253,9 +253,14 @@ class SynthesizerAgent:
         )
         conviction = _reconcile_conviction(signal, conviction)
 
+        bars = ticker_data.price_history
         return Briefing(
             ticker=ticker_data.info.symbol,
             date=ticker_data.fetched_at.date().isoformat(),
+            # Provenance, not decoration: this is what lets a later reader see
+            # that the signal was formed on an older tape than the one shown
+            # beside it. `date` alone cannot distinguish the two.
+            data_as_of=bars[-1].date.isoformat() if bars else None,
             overall_signal=signal,
             conviction=conviction,
             executive_summary=result["executive_summary"],

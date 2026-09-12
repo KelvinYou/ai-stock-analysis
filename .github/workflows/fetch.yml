@@ -59,11 +59,28 @@ jobs:
           fi
           stock-fetch --from-file tickers.txt --workers 8 $FLAGS -v
 
+      # Reports, never blocks: a stale briefing needs an LLM pipeline rerun,
+      # which this workflow deliberately does not do. The point is that the
+      # run's own summary says so instead of the data looking healthy.
+      - name: Audit data health
+        if: always() && steps.fetch.outcome != 'cancelled'
+        run: |
+          python scripts/audit_data_health.py | tee /tmp/data-health.txt || true
+          {
+            echo "## Data health"
+            echo
+            echo '```'
+            cat /tmp/data-health.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
       - name: Commit updated data
         if: always() && steps.fetch.outcome != 'cancelled'
         env:
           OK: ${{ steps.fetch.outputs.success_count }}
           TOTAL: ${{ steps.fetch.outputs.total_count }}
+          STALE: ${{ steps.fetch.outputs.stale_count }}
+          NEWEST_BAR: ${{ steps.fetch.outputs.newest_bar_date }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -75,9 +92,20 @@ jobs:
           fi
           COUNTS=""
           if [ -n "${OK:-}" ] && [ -n "${TOTAL:-}" ]; then
-            COUNTS=" (${OK}/${TOTAL} ok)"
+            COUNTS=" (${OK}/${TOTAL} ok"
+            if [ -n "${STALE:-}" ] && [ "${STALE}" != "0" ]; then
+              COUNTS="${COUNTS}, ${STALE} stale"
+            fi
+            COUNTS="${COUNTS})"
           fi
-          git commit -m "data: fetch $(date -u +%Y-%m-%d)${COUNTS}"
+          # Date the commit by the newest bar actually written, not by the
+          # wall clock: "fetch 2026-09-09" on a CSV whose last bar is 09-08 is
+          # how a lagging feed reads as a healthy run.
+          AS_OF="${NEWEST_BAR:-}"
+          if [ -z "$AS_OF" ]; then
+            AS_OF="$(date -u +%Y-%m-%d) (no bars)"
+          fi
+          git commit -m "data: fetch ${AS_OF}${COUNTS}"
           for i in 1 2 3; do
             if git pull --rebase origin main && git push; then
               exit 0

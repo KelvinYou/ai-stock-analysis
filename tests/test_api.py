@@ -153,6 +153,8 @@ def test_public_read_routes_use_versioned_response_contract(monkeypatch):
         "analyst_reports": None,
         "debate": None,
         "briefing": None,
+        "briefing_stale": False,
+        "briefing_stale_reason": None,
     }
 def test_point_in_time_input_is_rejected(monkeypatch):
     _reset_local_state(monkeypatch)

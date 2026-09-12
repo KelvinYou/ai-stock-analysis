@@ -1,10 +1,14 @@
 from __future__ import annotations
 
+import logging
 import math
 
 import pandas as pd
 
+from stock_analysis.data.bars import drop_invalid_bars
 from stock_analysis.models.market_data import PriceBar, TechnicalSeriesPoint, TechnicalSnapshot
+
+logger = logging.getLogger(__name__)
 
 
 def compute_technicals(ticker: str, bars: list[PriceBar]) -> TechnicalSnapshot:
@@ -12,7 +16,24 @@ def compute_technicals(ticker: str, bars: list[PriceBar]) -> TechnicalSnapshot:
     if not bars:
         raise ValueError(f"No price bars for {ticker}")
 
-    df = pd.DataFrame([b.model_dump() for b in bars])
+    # Every rolling window below is NaN-propagating: one non-finite close voids
+    # SMA-200 for the next 200 bars while ewm()-based EMA/MACD survive, which
+    # leaves a technically bullish rump of indicators rather than an obvious
+    # failure. Drop the offending bars so a bad bar costs only itself. Layer 1
+    # already screens these; this repeats the check because a CSV written
+    # before the screen existed is still on disk.
+    audit = drop_invalid_bars(bars)
+    if audit.dropped:
+        logger.warning(
+            "%s: ignoring %d unusable price bar(s) before computing indicators: %s",
+            ticker,
+            len(audit.dropped),
+            "; ".join(audit.dropped[:5]),
+        )
+    if not audit.bars:
+        raise ValueError(f"{ticker}: no usable price bars ({len(bars)} rejected)")
+
+    df = pd.DataFrame([b.model_dump() for b in audit.bars])
     df["date"] = pd.to_datetime(df["date"])
     df = df.sort_values("date").reset_index(drop=True)
 

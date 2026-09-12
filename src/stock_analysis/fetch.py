@@ -6,7 +6,7 @@ import os
 import sys
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import timedelta
+from datetime import date
 from pathlib import Path
 
 from stock_analysis.config import Settings, load_env
@@ -20,6 +20,11 @@ from stock_analysis.data.watchlist import WatchlistEntry, load_watchlist_map
 logger = logging.getLogger(__name__)
 _print_lock = threading.Lock()
 
+# A ticker whose newest bar trails the freshest bar in the run by more than this
+# many calendar days is reported stale. Three days absorbs a weekend plus one
+# market holiday without a per-exchange trading calendar.
+_STALE_LAG_DAYS = 3
+
 
 def _fetch_one(
     idx: int,
@@ -30,14 +35,15 @@ def _fetch_one(
     store,
     full: bool,
     watch: WatchlistEntry | None = None,
-) -> tuple[bool, str]:
+) -> tuple[bool, str, date | None]:
     """Fetch, persist, and compute technicals for a single ticker.
 
-    Incremental by default: asks yfinance only for bars since the last stored date,
-    then merges into the configured storage backend. ``full=True`` forces a full history
-    refetch (used weekly to resync dividend-adjusted historical closes).
+    Incremental by default: asks yfinance only for bars from the last stored date
+    onward, then merges into the configured storage backend. ``full=True`` forces a
+    full history refetch (used weekly to resync dividend-adjusted historical closes).
 
-    Returns (ok, symbol_or_ticker). Output is serialized via a module-level lock.
+    Returns (ok, symbol_or_ticker, newest_bar_date). Output is serialized via a
+    module-level lock.
     """
     fetcher = fetchers[market]
     start_date = None
@@ -45,7 +51,12 @@ def _fetch_one(
         storage_symbol = fetcher.resolve_symbol(ticker)
         last = store.last_price_bar_date(storage_symbol)
         if last is not None:
-            start_date = last + timedelta(days=1)
+            # Deliberately re-request the newest stored bar rather than the day
+            # after it. Upstream revises a bar after the close (and the store
+            # rejects a provisional intraday bar outright), so a window that
+            # starts the day after would leave the last bar frozen at whatever
+            # mid-session values it was first seen with, forever.
+            start_date = last
 
     try:
         data = fetcher.fetch(ticker, start_date=start_date)
@@ -70,15 +81,40 @@ def _fetch_one(
             print(
                 f"[{idx}/{total}] OK  {symbol} {mode} +{len(data.price_history):>4} new "
                 f"(total {len(merged)} bars, "
+                f"as_of={snapshot.as_of_date}, "
                 f"RSI={snapshot.rsi_14}, "
                 f"MACD={'▲' if (snapshot.macd_histogram or 0) > 0 else '▼'})",
                 flush=True,
             )
-        return True, symbol
+        return True, symbol, snapshot.as_of_date
     except Exception as e:
         with _print_lock:
             print(f"[{idx}/{total}] ERR {ticker}: {e}", file=sys.stderr, flush=True)
-        return False, ticker
+        return False, ticker, None
+
+
+def _stale_symbols(as_of: dict[str, date]) -> tuple[list[tuple[str, date]], date | None]:
+    """Return tickers whose newest bar trails the freshest bar in the run.
+
+    A fetch call that succeeds proves the network round-trip worked, not that
+    the data moved — an incremental window returning zero bars is "OK" and
+    leaves the ticker sitting on a week-old close. Rather than carry a trading
+    calendar per exchange, the run's own freshest bar is the reference: if 32
+    tickers reached Tuesday and one stopped at the previous Wednesday, that one
+    is the anomaly.
+    """
+    if not as_of:
+        return [], None
+    freshest = max(as_of.values())
+    stale = sorted(
+        (
+            (symbol, bar_date)
+            for symbol, bar_date in as_of.items()
+            if (freshest - bar_date).days > _STALE_LAG_DAYS
+        ),
+        key=lambda item: item[1],
+    )
+    return stale, freshest
 
 
 def _parse_tickers(lines: list[str]) -> list[tuple[str, str]]:
@@ -229,6 +265,7 @@ def cli():
 
     failures: list[str] = []
     successes: list[str] = []
+    as_of: dict[str, date] = {}
     try:
         with ThreadPoolExecutor(max_workers=max(1, args.workers)) as ex:
             futures = [
@@ -246,26 +283,46 @@ def cli():
                 for i, (ticker, market) in enumerate(pairs, 1)
             ]
             for fut in as_completed(futures):
-                ok, name = fut.result()
+                ok, name, newest_bar = fut.result()
                 (successes if ok else failures).append(name)
+                if ok and newest_bar is not None:
+                    as_of[name] = newest_bar
     finally:
         close = getattr(store, "close", None)
         if close:
             close()
 
+    stale, freshest = _stale_symbols(as_of)
+
     summary = f"Fetched {len(successes)}/{total} tickers"
+    if freshest is not None:
+        summary += f" (newest bar {freshest})"
     if failures:
         shown = ", ".join(failures[:20])
         more = " ..." if len(failures) > 20 else ""
         summary += f"; {len(failures)} failed: {shown}{more}"
+    if stale:
+        shown = ", ".join(f"{sym}@{bar}" for sym, bar in stale[:20])
+        more = " ..." if len(stale) > 20 else ""
+        summary += f"; {len(stale)} STALE: {shown}{more}"
     print(summary, file=sys.stderr)
 
     step_summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if step_summary:
         with open(step_summary, "a") as f:
-            f.write(f"## Fetch summary\n\n- OK: {len(successes)}\n- Failed: {len(failures)}\n")
+            f.write(
+                f"## Fetch summary\n\n- OK: {len(successes)}\n"
+                f"- Failed: {len(failures)}\n"
+                f"- Stale: {len(stale)}\n"
+                f"- Newest bar: {freshest}\n"
+            )
             if failures:
                 f.write(f"- Failures: {', '.join(failures[:50])}\n")
+            if stale:
+                f.write(
+                    "- Stale tickers: "
+                    f"{', '.join(f'{sym} @ {bar}' for sym, bar in stale[:50])}\n"
+                )
 
     gh_output = os.environ.get("GITHUB_OUTPUT")
     if gh_output:
@@ -273,6 +330,8 @@ def cli():
             f.write(f"success_count={len(successes)}\n")
             f.write(f"failure_count={len(failures)}\n")
             f.write(f"total_count={total}\n")
+            f.write(f"stale_count={len(stale)}\n")
+            f.write(f"newest_bar_date={freshest or ''}\n")
 
     # Exit non-zero only when nothing succeeded — partial failures shouldn't
     # block the workflow's commit step from saving good data.
