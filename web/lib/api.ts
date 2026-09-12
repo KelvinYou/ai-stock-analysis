@@ -51,6 +51,8 @@ type ApiTickerSummary = {
   pct_from_52w_high: number | null;
   as_of_date: string | null;
   theme: string | null;
+  briefing_stale: boolean;
+  briefing_stale_reason: string | null;
 };
 
 type ApiWatchlistEntry = {
@@ -67,6 +69,8 @@ type ApiTickerBundle = {
   analyst_reports: AnalystReports | null;
   debate: DebateResult | null;
   briefing: Briefing | null;
+  briefing_stale: boolean;
+  briefing_stale_reason: string | null;
 };
 
 function asRecord(value: unknown, context: string): Record<string, unknown> {
@@ -125,6 +129,8 @@ function mapSummary(raw: ApiTickerSummary): TickerSummary {
     pctFrom52wHigh: raw.pct_from_52w_high,
     asOfDate: raw.as_of_date,
     theme: raw.theme,
+    briefingStale: raw.briefing_stale ?? false,
+    briefingStaleReason: raw.briefing_stale_reason ?? null,
   };
 }
 
@@ -137,6 +143,8 @@ function mapBundle(raw: ApiTickerBundle): TickerBundle {
     analystReports: raw.analyst_reports,
     debate: raw.debate,
     briefing: raw.briefing,
+    briefingStale: raw.briefing_stale ?? false,
+    briefingStaleReason: raw.briefing_stale_reason ?? null,
   };
 }
 

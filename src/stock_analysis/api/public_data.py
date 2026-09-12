@@ -29,6 +29,11 @@ from stock_analysis.models.market_data import (
     TickerInfo,
 )
 from stock_analysis.models.synthesis import Briefing
+from stock_analysis.synthesis.freshness import (
+    Freshness,
+    assess_freshness,
+    briefing_freshness,
+)
 
 
 class PublicFundamentals(BaseModel):
@@ -67,6 +72,10 @@ class TickerSummaryResponse(BaseModel):
     pct_from_52w_high: float | None = None
     as_of_date: str | None = None
     theme: str | None = None
+    # True when the briefing's signal predates the price data shown next to it.
+    # The dashboard must not present a stale signal as a current one.
+    briefing_stale: bool = False
+    briefing_stale_reason: str | None = None
 
 
 class TickerBundleResponse(BaseModel):
@@ -77,6 +86,8 @@ class TickerBundleResponse(BaseModel):
     analyst_reports: AnalystReports | None = None
     debate: DebateResult | None = None
     briefing: Briefing | None = None
+    briefing_stale: bool = False
+    briefing_stale_reason: str | None = None
 
 
 _RATIO_RE = re.compile(r"^\s*(\d+(?:\.\d+)?)\s*:\s*(\d+(?:\.\d+)?)")
@@ -132,6 +143,16 @@ def _summary_from_cloud(
         else None
     )
     entry = row.get("entry_limit")
+    as_of_date = row.get("market_as_of_date") or row.get("latest_price_date")
+    freshness = (
+        assess_freshness(
+            row.get("briefing_date"),
+            row.get("briefing_data_as_of"),
+            as_of_date,
+        )
+        if row.get("briefing_date")
+        else Freshness(stale=False)
+    )
     to_entry_pct = (
         (float(entry) - float(price)) / float(price) * 100
         if entry is not None and price is not None and float(price) != 0
@@ -158,8 +179,10 @@ def _summary_from_cloud(
         pe_ratio=row.get("pe_ratio"),
         rsi_14=row.get("rsi_14"),
         pct_from_52w_high=row.get("pct_from_52w_high"),
-        as_of_date=row.get("market_as_of_date") or row.get("latest_price_date"),
+        as_of_date=as_of_date,
         theme=row.get("theme"),
+        briefing_stale=freshness.stale,
+        briefing_stale_reason=freshness.reason,
     )
 
 
@@ -179,6 +202,11 @@ def _summary_from_local(
     )
     plan = briefing.action_plan if briefing else None
     entry = plan.entry_limit if plan else None
+    freshness = briefing_freshness(
+        briefing,
+        technicals,
+        latest_bar_date=bars[-1].date if bars else None,
+    )
     to_entry = (
         (entry - price) / price * 100
         if entry is not None and price not in (None, 0)
@@ -209,6 +237,40 @@ def _summary_from_local(
         pct_from_52w_high=technicals.pct_from_52w_high if technicals else None,
         as_of_date=(technicals.as_of_date.isoformat() if technicals else None)
         or (bars[-1].date.isoformat() if bars else None),
+        briefing_stale=freshness.stale,
+        briefing_stale_reason=freshness.reason,
+    )
+
+
+def _bundle(
+    symbol: str,
+    data: TickerData | None,
+    technicals: TechnicalSnapshot | None,
+    reports: AnalystReports | None,
+    debate: DebateResult | None,
+    briefing: Briefing | None,
+) -> TickerBundleResponse:
+    """Assemble one ticker's public bundle, flagged if the briefing is stale.
+
+    Shared by the Supabase and offline paths so both backends answer the
+    freshness question identically.
+    """
+    bars = data.price_history if data else []
+    freshness = briefing_freshness(
+        briefing,
+        technicals,
+        latest_bar_date=bars[-1].date if bars else None,
+    )
+    return TickerBundleResponse(
+        symbol=symbol,
+        fundamentals=_public_fundamentals(data),
+        technicals=technicals,
+        price_history=bars,
+        analyst_reports=reports,
+        debate=debate,
+        briefing=briefing,
+        briefing_stale=freshness.stale,
+        briefing_stale_reason=freshness.reason,
     )
 
 
@@ -297,15 +359,7 @@ class PublicReadService:
                 briefing = store.load_public_artifact(normalized, "briefing", Briefing)
                 if data is None and technicals is None and not any((reports, debate, briefing)):
                     return None
-                return TickerBundleResponse(
-                    symbol=normalized,
-                    fundamentals=_public_fundamentals(data),
-                    technicals=technicals,
-                    price_history=data.price_history if data else [],
-                    analyst_reports=reports,
-                    debate=debate,
-                    briefing=briefing,
-                )
+                return _bundle(normalized, data, technicals, reports, debate, briefing)
             finally:
                 store.close()
 
@@ -317,12 +371,4 @@ class PublicReadService:
         briefing = data_store.load_briefing(normalized)
         if data is None and technicals is None and not any((reports, debate, briefing)):
             return None
-        return TickerBundleResponse(
-            symbol=normalized,
-            fundamentals=_public_fundamentals(data),
-            technicals=technicals,
-            price_history=data.price_history if data else [],
-            analyst_reports=reports,
-            debate=debate,
-            briefing=briefing,
-        )
+        return _bundle(normalized, data, technicals, reports, debate, briefing)

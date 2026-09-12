@@ -241,6 +241,17 @@
           "conviction": {
             "$ref": "#/components/schemas/ConvictionScore"
           },
+          "data_as_of": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data As Of"
+          },
           "date": {
             "title": "Date",
             "type": "string"
@@ -1521,6 +1532,22 @@
               }
             ]
           },
+          "briefing_stale": {
+            "default": false,
+            "title": "Briefing Stale",
+            "type": "boolean"
+          },
+          "briefing_stale_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Briefing Stale Reason"
+          },
           "debate": {
             "anyOf": [
               {
@@ -1729,6 +1756,22 @@
               }
             ],
             "title": "Briefing Date"
+          },
+          "briefing_stale": {
+            "default": false,
+            "title": "Briefing Stale",
+            "type": "boolean"
+          },
+          "briefing_stale_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Briefing Stale Reason"
           },
           "convergence": {
             "anyOf": [

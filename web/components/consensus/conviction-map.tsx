@@ -24,6 +24,7 @@ type MapPoint = {
   convergence: number;
   signal: NonNullable<TickerSummary["signal"]>;
   briefingAgeDays: number | null;
+  briefingStale: boolean;
 };
 
 const GROUPS = [
@@ -51,6 +52,7 @@ export function ConvictionMap({ tickers }: { tickers: TickerSummary[] }) {
       convergence: Math.max(0, Math.min(1, ticker.convergence)),
       signal: ticker.signal,
       briefingAgeDays: ticker.briefingAgeDays,
+      briefingStale: ticker.briefingStale,
     }));
 
   if (points.length === 0) return null;

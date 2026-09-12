@@ -24,6 +24,7 @@ import type {
   WatchlistEntry,
 } from "./types";
 import { parseRatio } from "./format";
+import { assessFreshness, type Freshness } from "./freshness";
 
 const DATA_DIR = process.env.STOCK_DATA_DIR
   ? path.resolve(process.env.STOCK_DATA_DIR)
@@ -58,6 +59,7 @@ type CloudSummaryRow = {
   pct_from_52w_high: number | null;
   latest_run_id: string | null;
   briefing_date: string | null;
+  briefing_data_as_of: string | null;
   signal: TickerSummary["signal"];
   conviction: number | null;
   convergence: number | null;
@@ -136,6 +138,15 @@ function summaryFromCloud(
     convergence: row.convergence,
     briefingDate: row.briefing_date,
     briefingAgeDays: ageInDays(row.briefing_date),
+    ...staleFields(
+      row.briefing_date
+        ? assessFreshness(
+            row.briefing_date,
+            row.briefing_data_as_of,
+            row.market_as_of_date ?? row.latest_price_date,
+          )
+        : FRESH_BRIEFING,
+    ),
     entryLimit: row.entry_limit,
     stopLoss: row.stop_loss,
     takeProfit1: row.take_profit_1,
@@ -190,6 +201,7 @@ async function loadCloudTicker(symbol: string): Promise<TickerBundle | null> {
   const artifacts = Object.fromEntries(
     artifactRows.map((row) => [row.stage, row.payload]),
   );
+  const bundleBriefing = (artifacts.briefing as Briefing | null) ?? null;
 
   return {
     symbol: normalized,
@@ -205,7 +217,16 @@ async function loadCloudTicker(symbol: string): Promise<TickerBundle | null> {
     })),
     analystReports: (artifacts.analyst_reports as AnalystReports | null) ?? null,
     debate: (artifacts.debate_result as DebateResult | null) ?? null,
-    briefing: (artifacts.briefing as Briefing | null) ?? null,
+    briefing: bundleBriefing,
+    ...staleFields(
+      bundleBriefing
+        ? assessFreshness(
+            bundleBriefing.date,
+            bundleBriefing.data_as_of,
+            priceRows.at(-1)?.bar_date ?? summary?.market_as_of_date ?? null,
+          )
+        : FRESH_BRIEFING,
+    ),
   };
 }
 
@@ -325,6 +346,15 @@ export const loadTicker = cache(async (symbol: string): Promise<TickerBundle | n
     analystReports,
     debate,
     briefing,
+    ...staleFields(
+      briefing
+        ? assessFreshness(
+            briefing.date,
+            briefing.data_as_of,
+            technicals?.as_of_date ?? priceHistory.at(-1)?.date ?? null,
+          )
+        : FRESH_BRIEFING,
+    ),
   };
 });
 
@@ -364,6 +394,22 @@ async function readLastTwoCloses(filePath: string): Promise<LastCloses> {
 }
 
 /** Whole days from `iso` (YYYY-MM-DD) to today, UTC. Null if unparseable. */
+/**
+ * A briefing that is absent is not stale — the screener shows "no analysis",
+ * which is a different and honest state.
+ */
+const FRESH_BRIEFING: Freshness = { stale: false, reason: null };
+
+function staleFields(freshness: Freshness): {
+  briefingStale: boolean;
+  briefingStaleReason: string | null;
+} {
+  return {
+    briefingStale: freshness.stale,
+    briefingStaleReason: freshness.reason,
+  };
+}
+
 function ageInDays(iso: string | null | undefined): number | null {
   if (!iso) return null;
   const then = Date.parse(`${iso.slice(0, 10)}T00:00:00Z`);
@@ -429,6 +475,15 @@ async function loadTickerSummary(
     convergence: briefing?.conviction?.signal_convergence ?? null,
     briefingDate: briefing?.date ?? null,
     briefingAgeDays: ageInDays(briefing?.date),
+    ...staleFields(
+      briefing
+        ? assessFreshness(
+            briefing.date,
+            briefing.data_as_of,
+            technicals?.as_of_date ?? closes.latestDate ?? null,
+          )
+        : FRESH_BRIEFING,
+    ),
 
     entryLimit: entry,
     stopLoss: plan?.stop_loss ?? null,
@@ -454,6 +509,7 @@ function navSummaryFromSummary(summary: TickerSummary): TickerNavSummary {
     signal,
     conviction,
     briefingAgeDays,
+    briefingStale,
     stopLoss,
     takeProfit1,
     toEntryPct,
@@ -466,6 +522,7 @@ function navSummaryFromSummary(summary: TickerSummary): TickerNavSummary {
     signal,
     conviction,
     briefingAgeDays,
+    briefingStale,
     stopLoss,
     takeProfit1,
     toEntryPct,

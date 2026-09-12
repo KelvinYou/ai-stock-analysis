@@ -143,6 +143,22 @@ export default async function TickerPage({
           </div>
         </div>
 
+        {bundle.briefing && bundle.briefingStale && (
+          // Above the decision card, not beside it: the signal, conviction and
+          // levels below were formed on an older tape, so the warning has to
+          // be read before the numbers are.
+          <div
+            role="status"
+            className="mt-6 border-l-2 border-halt bg-card px-3 py-2.5 text-xs"
+          >
+            <span className="eyebrow mr-2 text-halt">Stale analysis</span>
+            <span className="text-graphite">
+              {bundle.briefingStaleReason ??
+                "This briefing predates the price data shown on this page."}
+            </span>
+          </div>
+        )}
+
         {bundle.briefing && (
           <DecisionCard briefing={bundle.briefing} currency={currency} />
         )}
