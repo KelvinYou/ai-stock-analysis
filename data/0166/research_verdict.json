@@ -1,27 +1,23 @@
 {
   "ticker": "0166",
-  "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Neither side carried the debate decisively. INARI has the balance sheet and technical structure to support an earnings recovery, but the latest 4QFY2026 profit collapse and 85.0x trailing valuation make the forward P/E too assumption-dependent to underwrite a directional call. The evidence supports waiting for reported recovery and usable price/volume confirmation.",
-  "winning_side": "neither",
-  "strongest_counterexample": "The neutral ruling could be too cautious if the weak quarter was a contained operational or product-mix event: even a partial earnings rebound would make 28.934528x forward P/E look conservative, and the bullish moving-average alignment could precede a re-rating.",
+  "judged_view": "sell",
+  "confidence": "medium",
+  "thesis": "RF demand weakness is independent of the fire provision, while valuation embeds a substantial recovery. Removing an exceptional charge does not establish that recovery.",
+  "winning_side": "bear",
+  "strongest_counterexample": "Minimal debt and positive cash flow provide capacity to withstand weakness; the fire charge is a material non-routine profit drag.",
   "invalidation_conditions": [
-    "The next two reported quarters each show year-over-year revenue and attributable-profit growth, with operating margin recovering toward or above the supplied 14.0% level.",
-    "Price reclaims and holds above the supplied 52-week high of RM2.6181 with usable volume confirmation while forward earnings estimates remain intact.",
-    "Attributable profit remains below RM10m for two consecutive quarters or the close falls below SMA-200 at RM1.9120, invalidating the recovery setup."
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of year-on-year RF revenue growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive normalized EPS growth excluding identified fire charges."
   ],
   "evidence_gaps": [
-    "No usable dated Layer 1 headlines or publisher metadata; sentiment required external supplementation.",
-    "The cause, quantified cost, insurance recovery, and operating impact of the Philippines facility fire are not in the supplied package.",
-    "The supplied trailing financial snapshot does not reconcile cleanly with the latest 4QFY2026 cumulative filing.",
-    "Customer/product mix, currency exposure, and the earnings impact of the terminated joint acquisition are unavailable.",
-    "Latest volume is zero and the 52-week-low-derived technical fields are null."
+    "RF utilization, fire-normalized earnings and dated forward EPS.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
   ],
   "decisive_factors": [
-    "Latest 4QFY2026 attributable profit of RM6.146m versus RM49.169m a year earlier.",
-    "85.0x supplied trailing P/E versus 28.934528x forward P/E.",
-    "Very low leverage and positive supplied free cash flow provide a credible recovery foundation.",
-    "Bullish moving-average/MACD alignment is offset by near-high positioning and absent volume confirmation."
+    "Quoted trailing P/E 86.00x; forward P/E 29.27x",
+    "Low debt and positive cash flow provide financial flexibility",
+    "Separating the fire provision is correct, and financial flexibility reduces financing risk"
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
 }

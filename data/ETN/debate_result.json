@@ -1,0 +1,69 @@
+{
+  "ticker": "ETN",
+  "rounds": [
+    {
+      "round_number": 1,
+      "bull_argument": {
+        "position": "bull",
+        "round_number": 1,
+        "argument": "Price is above SMA-20/50/200 and returns are positive across all listed windows, with a positive MACD histogram. Data-center and AI-energy headlines support a possible demand theme, but no Eaton-specific order data is supplied.",
+        "key_points": [
+          "Broad positive technical alignment supports a conditional trend-continuation case.",
+          "The trend is technically positive but near-term price is extended.",
+          "Eaton-specific bookings and margin effect from AI/data-center demand."
+        ],
+        "rebuttal_to_previous": null
+      },
+      "bear_argument": {
+        "position": "bear",
+        "round_number": 1,
+        "argument": "The demand theme is not verified in company results, and the financial snapshot has no statement period. Price is near the upper band/20-bar high with RSI 67 and below-average volume, making the trend vulnerable to a pullback.",
+        "key_points": [
+          "Financial provenance and company-specific demand are missing; price is near recent highs on below-average volume.",
+          "AI/data-center headlines do not verify Eaton orders.",
+          "Financial snapshot period and availability date."
+        ],
+        "rebuttal_to_previous": "Price is above SMA-20/50/200 and returns are positive across all listed windows, with a positive MACD histogram. Data-center and AI-energy headlines support a possible demand theme, but no Eaton-specific order data is supplied."
+      }
+    },
+    {
+      "round_number": 2,
+      "bull_argument": {
+        "position": "bull",
+        "round_number": 2,
+        "argument": "The bear\u2019s provenance and extension concerns cap conviction, but the technical trend is broadly aligned and remains above all three averages. A modest trend-following view is possible if it is kept separate from unverified AI demand.",
+        "key_points": [
+          "Broad positive technical alignment supports a conditional trend-continuation case.",
+          "The trend is technically positive but near-term price is extended.",
+          "Eaton-specific bookings and margin effect from AI/data-center demand."
+        ],
+        "rebuttal_to_previous": "The demand theme is not verified in company results, and the financial snapshot has no statement period. Price is near the upper band/20-bar high with RSI 67 and below-average volume, making the trend vulnerable to a pullback."
+      },
+      "bear_argument": {
+        "position": "bear",
+        "round_number": 2,
+        "argument": "A near-high technical trend without volume confirmation can reverse, and comparative headlines are not booked revenue. Without dated filings or order evidence, the evidence is insufficient to call the fundamental thesis bullish.",
+        "key_points": [
+          "Financial provenance and company-specific demand are missing; price is near recent highs on below-average volume.",
+          "AI/data-center headlines do not verify Eaton orders.",
+          "Financial snapshot period and availability date."
+        ],
+        "rebuttal_to_previous": "The bear\u2019s provenance and extension concerns cap conviction, but the technical trend is broadly aligned and remains above all three averages. A modest trend-following view is possible if it is kept separate from unverified AI demand."
+      }
+    }
+  ],
+  "bull_case_summary": "Broad positive technical alignment supports a conditional trend-continuation case.",
+  "bear_case_summary": "Financial provenance and company-specific demand are missing; price is near recent highs on below-average volume.",
+  "key_points_of_agreement": [
+    "The trend is technically positive but near-term price is extended.",
+    "AI/data-center headlines do not verify Eaton orders."
+  ],
+  "key_points_of_disagreement": [
+    "Whether the aligned technical trend is sufficient for direction despite missing fundamental provenance."
+  ],
+  "unresolved_uncertainties": [
+    "Eaton-specific bookings and margin effect from AI/data-center demand.",
+    "Financial snapshot period and availability date."
+  ],
+  "pipeline_mode": "in-session"
+}

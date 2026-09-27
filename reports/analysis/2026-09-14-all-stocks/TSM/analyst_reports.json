@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 31.95x; forward P/E 19.76x. Indicated yield 0.94% is not a guaranteed forward payout. ADR quote is USD but statement currency is absent; do not label statement amounts USD or mix them with market capitalization.",
+    "margin_analysis": "gross 59.89%; operating 50.83%; net 44.57%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 19.88%. Snapshot FCF 992378.40m unverified reporting-currency units. FCF/net income 0.58x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Strong foundry margins and modest gross leverage support quality, but the ADR quote and unlabelled statement currency preclude reliable cross-currency valuation checks. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Statement currency, ADR unit basis and semiconductor reinvestment needs require verification.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Unlabelled statement currency and ADR basis prevent cross-currency valuation arithmetic."
+    ],
+    "key_strengths": [
+      "50.83% operating margin and positive cash flow are constructive currency-independent indicators."
+    ],
+    "summary": "Strong foundry margins and modest gross leverage support quality, but the ADR quote and unlabelled statement currency preclude reliable cross-currency valuation checks. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "September 10: TSMC August revenue increased 53.3% year on year and 10.1% month on month to NT$514.81bn. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=6, buy=14, hold=1, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Foundry demand",
+      "Monthly sales growth"
+    ],
+    "notable_headlines": [
+      "2026-09-10 https://pr.cld.tsmc.com/english/news/3340"
+    ],
+    "social_sentiment": null,
+    "summary": "The latest monthly sales substantiate strong demand more directly than a generic AI theme. Revenue strength does not by itself verify future margins, geopolitical risk pricing or a cheap entry. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 433.24: above SMA20 421.71, above SMA50 418.93, above SMA200 374.99. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 58.8769,
+    "rsi_assessment": "RSI14 58.9: neutral-to-firm.",
+    "macd_assessment": "MACD line 3.6066, signal 1.8607, histogram 1.7458: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 10,629,200; ratio 1.15x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      424.05,
+      428.9
+    ],
+    "resistance_levels": [
+      439.4,
+      444.29
+    ],
+    "summary": "Price above all major averages, positive histogram and RSI near 59 form the clearest constructive trend-following setup; the recent 444.29 high still needs a sustained break. As of 2026-09-11, ATR14 is 9.88 (2.3% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 9.6%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Foundry demand and capital intensity transmit semiconductor and AI spending cycles.",
+      "Taiwan concentration and export-policy exposure are structural risks; ADR and reporting currencies differ."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Taiwan Semiconductor Manufactur: Foundry demand and capital intensity transmit semiconductor and AI spending cycles. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

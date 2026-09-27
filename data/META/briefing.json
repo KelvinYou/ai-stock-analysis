@@ -1,32 +1,29 @@
 {
   "ticker": "META",
-  "date": "2026-09-03",
-  "overall_signal": "buy",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-23",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": 0.25,
-    "signal_convergence": 0.4545,
-    "explanation": "Fundamentals and available technicals are bullish while sentiment and macro are neutral. Convergence is only 0.4545, so this is explicitly a high-divergence/low-confidence buy bias; the score is held at +0.25, below the RiskChecker precise-level gate, because core technical fields are null and AI-capex/legal evidence remains unresolved."
+    "score": 0.0,
+    "signal_convergence": 0.5556,
+    "explanation": "Neutral: the financial snapshot is strong, but RSI 84.56 and an unusually extended short-term move make trend continuation risk/reward uncertain; product adoption is unquantified."
   },
-  "executive_summary": "Meta's Layer 1 fundamentals are strong: $201.0B revenue, 82.0% gross margin, 41.4% operating margin, $46.1B FCF, and approximately 38.6% debt/equity. The 16.96x forward P/E versus 22.33x trailing P/E creates a credible valuation cushion, and recent public evidence includes an AI-model release plus a settlement that removes extreme trial uncertainty. But the settlement can cost up to $18B and impose restrictions, while AI-capex returns are not visible in Layer 1. The debate gave the bull a narrow edge. The close is above EMA-20 with a positive MACD histogram but remains 24.79% below the 52-week high; SMA/RSI/ATR/Bollinger/support fields are unavailable after the non-finite 2026-08-28 bar, so RiskChecker ran without emitting precise levels.",
-  "bull_case": "Meta's cash-generative ad platform can fund AI investment and absorb legal costs, while the forward P/E discount and AI progress create room for a confidence reset.",
-  "bear_case": "AI capex may not produce revenue on time, the settlement can reduce cash and operating flexibility, and a rebound from a 24.79% drawdown may fail without full technical confirmation.",
+  "executive_summary": "Meta's short-term momentum is unusually strong, but the setup is extended: RSI is 84.56 and the price is over 21% above SMA-50, while its 252-bar return remains negative. Product headlines describe launches and trust questions, not sales evidence; the pipeline therefore avoids treating a momentum burst as a fundamental buy signal. The snapshot reports 41.4% operating margin, 30.1% net margin, FCF $46.11B (22.9% of revenue), and debt/equity 0.39. These support positive fundamentals at the observed level, but do not validate recent product adoption or trends.",
+  "bull_case": "Positive 5/20/60-bar returns, positive MACD, above-average volume, and price above SMA-50/SMA-200 show an active uptrend. The product headlines provide possible follow-through if later disclosures confirm adoption.",
+  "bear_case": "The RSI is overbought, price is far above SMA-50, and long-horizon return remains negative. No dated adoption, monetization, or statement evidence confirms that the product narrative supports this rapid repricing.",
   "key_uncertainties": [
-    "Incremental revenue and margin returns from AI investment.",
-    "Settlement payment conditions and operating restrictions.",
-    "SMA/RSI/ATR/support/resistance remain unavailable because of the non-finite 2026-08-28 bar.",
-    "Whether the drawdown reflects temporary sentiment or lower earnings expectations."
+    "Whether the recent surge holds after an RSI reading of 84.56.",
+    "Whether Muse and smart glasses gain measurable adoption or revenue.",
+    "Financial statement periods and dated analyst recommendations are not supplied."
   ],
   "catalysts_upcoming": [
-    "Next earnings update on ad demand, capex, margins, and FCF.",
-    "Evidence that AI products create measurable monetization.",
-    "Settlement approval/implementation details and earnings impact.",
-    "A future complete-close technical refresh confirming or rejecting the rebound."
+    "Any company-reported adoption or monetization for Muse or smart glasses; no quantified measure is in the packet."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 76.7% over available price history. Projected worst case (2-sigma): ~nan% from current $592.85.",
+    "max_drawdown_scenario": "Historical max drawdown: 76.7% over available price history. Projected worst case (2-sigma): ~100.3% from current $744.10.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -38,31 +35,26 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.25, convergence 0.45). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.56). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "META",
-    "judged_view": "buy",
+    "judged_view": "neutral",
     "confidence": "low",
-    "thesis": "The bull carried the debate narrowly because Meta's exceptional margins, free cash flow, leverage, and forward P/E discount provide a stronger base than the price action suggests. The ruling remains low confidence: AI-capex returns, settlement costs, and missing technical structure make this a monitoring bias rather than a precise trade instruction.",
-    "winning_side": "bull",
-    "strongest_counterexample": "If AI spending fails to create incremental revenue while settlement payments and restrictions reduce platform economics, the 16.96x forward P/E can represent deteriorating earnings rather than undervaluation.",
+    "thesis": "Neutral: the financial snapshot is strong, but RSI 84.56 and an unusually extended short-term move make trend continuation risk/reward uncertain; product adoption is unquantified. The financial snapshot contains measured levels, but a single period cannot establish trends.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Neutral: the financial snapshot is strong, but RSI 84.56 and an unusually extended short-term move make trend continuation risk/reward uncertain; product adoption is unquantified. A later dated comparative filing or sustained price confirmation could change the ruling.",
     "invalidation_conditions": [
-      "Operating margin falls below 35% for two consecutive reported quarters.",
-      "Trailing FCF falls below $35B for two consecutive Layer 1 refreshes.",
-      "AI investment is followed by two quarters of revenue growth below 10% without margin improvement.",
-      "Settlement costs or restrictions cause a material downward revision to earnings expectations."
+      "A sustained hold above the observed 20-bar high of $763.90 followed by dated adoption or monetization evidence would weaken the overextension concern."
     ],
     "evidence_gaps": [
-      "SMA/RSI/Bollinger/ATR/support/resistance are unavailable after the non-finite 2026-08-28 bar.",
-      "Layer 1 has no incremental AI-revenue bridge or capex-return schedule.",
-      "Exact settlement payment conditions and operating impact require primary-company confirmation."
+      "Dated financial statement periods are absent.",
+      "No company-specific Muse/smart-glasses adoption or monetization data.",
+      "Dated analyst recommendations are not supplied."
     ],
     "decisive_factors": [
-      "82.0% gross margin and 41.4% operating margin.",
-      "$46.1B FCF with approximately 38.6% debt/equity.",
-      "16.96x forward P/E versus 22.33x trailing P/E.",
-      "Available EMA/MACD rebound evidence tempered by incomplete technical coverage."
+      "The snapshot reports 41.4% operating margin, 30.1% net margin, FCF $46.11B (22.9% of revenue), and debt/equity 0.39. These support positive fundamentals at the observed level, but do not validate recent product adoption or trends.",
+      "The last 5/20/60 bars show a sharp advance above both moving averages with positive MACD and above-average volume, but RSI is 84.56 and the 252-bar return remains slightly negative. Trend is positive while entry timing risk is high."
     ]
   },
   "agent_signal_breakdown": {
@@ -71,5 +63,7 @@
     "technical": "buy",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
 }

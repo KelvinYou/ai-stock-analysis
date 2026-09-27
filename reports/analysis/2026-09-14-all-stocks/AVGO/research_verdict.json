@@ -1,0 +1,23 @@
+{
+  "ticker": "AVGO",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "AI growth and cash generation are strong but earnings-basis discrepancies prevent adjudicating the valuation. Neither establishes a reliable forward-return denominator.",
+  "winning_side": "neither",
+  "strongest_counterexample": "AI semiconductor revenue rose 221% and FCF exceeds profit, offering unusually tangible growth evidence.",
+  "invalidation_conditions": [
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative AI semiconductor revenue growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive normalized EPS and FCF growth after valuation-basis reconciliation."
+  ],
+  "evidence_gaps": [
+    "Acquisition accounting and comparable dated EPS estimates.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
+  ],
+  "decisive_factors": [
+    "Quoted trailing P/E 46.05x; forward P/E 18.67x",
+    "AI revenue growth and strong cash generation substantiate demand",
+    "Strong AI sales and free cash flow make the operating case credible"
+  ],
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

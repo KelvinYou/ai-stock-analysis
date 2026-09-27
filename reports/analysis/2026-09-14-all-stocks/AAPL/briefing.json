@@ -1,0 +1,81 @@
+{
+  "ticker": "AAPL",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.2727,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: Broad growth supports durability while the 38.15x multiple requires a longer growth bridge. Both cases leave the justified premium unresolved. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: Apple's broad operating growth supports franchise strength, but premium valuation and an overbought rally leave limited swing margin of safety. The current setup is stronger as a consolidation watch than a dip-buy claim.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Broad product growth and cash generation support quality. The premium must be tested against durable growth; consolidation after the overbought rally offers a more disciplined route than chasing strength. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Broad growth across products and regions supports durability more than a single product story. It still does not quantify the long-run growth needed for 38.15x earnings, while the technically extended entry adds timing risk rather than a valuation cushion.",
+  "key_uncertainties": [
+    "Multi-quarter normalized growth and current cash-versus-buyback bridge.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative year-on-year EPS growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of EPS growth above 15% with positive FCF growth.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Sustained broad product growth and post-rally consolidation; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 38.5% over available price history. Projected worst case (2-sigma): ~64.0% from current $332.27.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.27). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "AAPL",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Broad growth supports durability while the 38.15x multiple requires a longer growth bridge. Both cases leave the justified premium unresolved.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Double-digit growth across products and geographies plus strong cash generation make the premium more credible than a single-cycle story.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative year-on-year EPS growth.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of EPS growth above 15% with positive FCF growth."
+    ],
+    "evidence_gaps": [
+      "Multi-quarter normalized growth and current cash-versus-buyback bridge.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 38.15x; forward P/E 34.70x",
+      "Broad product growth and cash generation support quality",
+      "Broad growth across products and regions supports durability more than a single product story"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "2c4ec20dac247092dac76263185ac8c550fbb27b1134d1b7c0a8faeea63b4d9b",
+    "technicals.json": "047299aec7bd61b7b1caafa95ad5289ae1fa10948120499c609bd34279a05554",
+    "price_history.csv": "aee7db36c7a18745b51ff958b21bff5f0a2c4e0a15b6f3601f07f12c99306bce"
+  }
+}

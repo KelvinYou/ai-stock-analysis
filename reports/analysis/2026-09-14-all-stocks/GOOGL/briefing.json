@@ -1,0 +1,82 @@
+{
+  "ticker": "GOOGL",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.0,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: The operating franchise is strong, but the large investment gain and incompatible earnings bases prevent judging apparent cheapness. Both sides lack a normalized valuation bridge. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: Alphabet's operating growth is sound, but investment gains distort the apparent trailing bargain and the chart is only attempting a recovery. A normalized earnings basis is needed before attaching value to the low quoted multiple.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Operating margins and cash flow support an established growth business. Normalized earnings and investment returns remain prerequisites for fair value; the affirmative thesis survives, but a numerical bargain claim does not. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "The operating case survives removal of investment marks, but the valuation case must then use an explicitly normalized earnings denominator. The cited USD98bn investment gain and incompatible multiples are not marginal details; they determine whether apparent cheapness survives adjustment.",
+  "key_uncertainties": [
+    "Comparable recurring EPS excluding investment marks and capex-return bridge.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of declining operating profit excluding investment effects.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive recurring EPS growth and positive FCF growth after a matched-period valuation reconciliation.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote.",
+    "Quoted trailing P/E 16.98x; forward P/E 22.76x. Indicated yield 0.26% is not a guaranteed forward payout. Market cap/snapshot net income is 31.32x, materially different; periods, EPS basis and share counts need reconciliation."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Recurring earnings reconciliation and evidence of AI capex returns; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 44.3% over available price history. Projected worst case (2-sigma): ~72.2% from current $338.50.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "GOOGL",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "The operating franchise is strong, but the large investment gain and incompatible earnings bases prevent judging apparent cheapness. Both sides lack a normalized valuation bridge.",
+    "winning_side": "neither",
+    "strongest_counterexample": "High operating profitability, strong revenue growth and cash generation remain after separating investment gains.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of declining operating profit excluding investment effects.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive recurring EPS growth and positive FCF growth after a matched-period valuation reconciliation."
+    ],
+    "evidence_gaps": [
+      "Comparable recurring EPS excluding investment marks and capex-return bridge.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 16.98x; forward P/E 22.76x",
+      "Operating margins and cash flow support an established growth business",
+      "The operating case survives removal of investment marks, but the valuation case must then use an explicitly normalized earnings denominator"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "213bc8c1db7466e3e6a0bc3f7ddc35ce22f730f7d8a2b5235d8f878480fd1b6f",
+    "technicals.json": "4e92042df3700c79142ccf86764b56ba45a23c1e661918489e760a88702495c1",
+    "price_history.csv": "f66d94d3b06dcd308b41c2eee0bfb711ba705d15c5fa6c8224fde7a1b84a8435"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 38.50x; forward P/E missing. Indicated yield 1.25% is not a guaranteed forward payout. Market cap/snapshot net income is 49.12x, materially different; periods, EPS basis and share counts need reconciliation.",
+    "margin_analysis": "gross 29.73%; operating 14.21%; net 7.02%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 176.94%. Snapshot FCF 103.82m MYR. FCF/net income 1.69x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "A 38.50x trailing valuation coupled with elevated gross leverage offers weak fundamental compensation for risk despite positive cash generation. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Debt is large relative to equity and no forward earnings estimate is supplied.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Quoted P/E and market-cap/snapshot-profit differ materially; valuation confidence is reduced."
+    ],
+    "key_strengths": [
+      "Positive free cash flow and a 14.21% operating margin are constructive."
+    ],
+    "summary": "A 38.50x trailing valuation coupled with elevated gross leverage offers weak fundamental compensation for risk despite positive cash generation. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "August 19 filing: Hextar Q2 revenue rose to RM199.054m from RM177.522m, but attributable profit fell to RM15.121m from RM15.934m; H1 attributable earnings were nearly unchanged. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive.",
+    "key_themes": [
+      "Revenue-profit divergence",
+      "Flat H1 earnings"
+    ],
+    "notable_headlines": [
+      "2026-08-19 https://ir2.chartnexus.com/hextar/onenew.php?id=3695916&type=Announcement"
+    ],
+    "social_sentiment": null,
+    "summary": "Sales improvement is offset by weaker quarterly earnings conversion. There is no dated evidence here of broad enthusiasm or capitulation. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 0.77: below SMA20 0.78, below SMA50 0.77, below SMA200 0.80. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 44.4444,
+    "rsi_assessment": "RSI14 44.4: weak but not oversold.",
+    "macd_assessment": "MACD line 0.0009, signal 0.0023, histogram -0.0013: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 9,229,500; ratio 0.81x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      0.765
+    ],
+    "resistance_levels": [
+      0.78,
+      0.785
+    ],
+    "summary": "Price slipped beneath a narrow 0.775-0.785 recent range and all major averages; the near-flat MACD line does not offset a negative histogram. As of 2026-09-14, ATR14 is 0.0121 (1.6% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 15.6%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Agricultural input demand depends on plantation economics and farmer spending.",
+      "Imported chemical costs and export receipts can have offsetting currency effects."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "HEXTAR: Agricultural input demand depends on plantation economics and farmer spending. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

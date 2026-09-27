@@ -1,0 +1,70 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 24.88x; forward P/E 15.44x. Market cap/snapshot net income is 32.65x, materially different; periods, EPS basis and share counts need reconciliation.",
+    "margin_analysis": "gross 87.86%; operating 75.75%; net 60.83%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 166.06%. Snapshot FCF 3942.78m USD. FCF/net income 1.18x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Exceptional reported margins and free cash flow support quality, but high gross leverage and earnings-basis differences warrant reconciliation before a positive valuation call. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Profit composition, platform concentration and gross debt relative to equity need verification.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Quoted P/E and market-cap/snapshot-profit differ materially; valuation confidence is reduced."
+    ],
+    "key_strengths": [
+      "Reported free cash flow exceeds net income and operating margin is high."
+    ],
+    "summary": "Exceptional reported margins and free cash flow support quality, but high gross leverage and earnings-basis differences warrant reconciliation before a positive valuation call. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "August 5: AppLovin revenue increased 53% and continuing-operations net income 64%; August 6 market coverage reported a sharp negative reaction to mixed results. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=7, buy=20, hold=6, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Strong growth",
+      "High expectations",
+      "Negative earnings reaction"
+    ],
+    "notable_headlines": [
+      "2026-08-05 https://www.sec.gov/Archives/edgar/data/1751008/000175100826000057/exhibit991-2q26earningspre.htm",
+      "2026-08-06 https://apnews.com/article/2f4f2638cb8430bb7c8e5d59a7b50731"
+    ],
+    "social_sentiment": null,
+    "summary": "Strong reported growth coexists with disappointment relative to expectations. This mismatch is worth investigating, but does not by itself prove a contrarian bargain. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 323.96: above SMA20 312.01, below SMA50 377.58, below SMA200 481.83. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 59.9519,
+    "rsi_assessment": "RSI14 60.0: neutral-to-firm.",
+    "macd_assessment": "MACD line -15.1324, signal -21.0171, histogram 5.8847: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 3,751,600; ratio 0.82x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      300.09,
+      304.21
+    ],
+    "resistance_levels": [
+      325.6
+    ],
+    "summary": "Positive short-term momentum and an upper-band breakout suggest a rebound, but price remains far below SMA50 and SMA200 and volume does not confirm a major trend change. As of 2026-09-11, ATR14 is 13.8 (4.2% of price), price is above the upper band, and the adjusted 52-week-high drawdown is 56.5%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Advertising budgets and customer acquisition spending are cyclical.",
+      "Privacy regulation and platform dependence are relevant but no new policy event is assumed."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Applovin Corporation: Advertising budgets and customer acquisition spending are cyclical. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

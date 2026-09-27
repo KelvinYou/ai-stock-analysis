@@ -1,0 +1,63 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "medium",
+    "pe_assessment": "As fetched 2026-09-24, P/E is 16.74 and forward P/E is 14.73; no peer benchmark is supplied.",
+    "margin_analysis": "Snapshot reports gross margin 24.0%, operating margin 11.7%, and net margin 7.0%; no trend is inferred.",
+    "debt_analysis": "Reported debt/equity is about 1.76. The snapshot does not include cash balances or debt maturities.",
+    "growth_outlook": "No growth rate is inferred from one snapshot. It reports revenue MYR 67.72B and net income MYR 4.77B.",
+    "key_risks": [
+      "Negative reported FCF of MYR 439.7M (about -0.65% of revenue).",
+      "Debt/equity is about 1.76, without cash or maturity detail.",
+      "Price is below both SMA-50 and SMA-200 and near the bottom of its 52-week range."
+    ],
+    "key_strengths": [
+      "Positive net income and a reported 3.81% dividend yield; no future payout is assumed.",
+      "Reported P/E is 16.74, without a peer comparison."
+    ],
+    "summary": "Snapshot reports negative FCF of MYR 439.7M and debt/equity near 1.76, despite positive net income and 7.0% net margin. This aligns with weak technicals, but the single snapshot cannot establish persistence."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "stale and mixed",
+    "news_summary": "The newest supplied company headline is a 2026-05-30 fair-value story. A 2025-11-19 Reuters headline reported electricity-theft losses over a multi-year period, but the packet gives no current exposure or financial-period linkage.",
+    "key_themes": [
+      "Older valuation commentary; electricity-theft report from 2025; no recent operating headline"
+    ],
+    "notable_headlines": [
+      "2026-05-30 Simply Wall St.: How the Tenaga Nasional Berhad story is shifting with a higher fair value.",
+      "2025-11-19 Reuters: Malaysia\u2019s Tenaga Nasional incurs losses of more than $1 billion from crypto power theft."
+    ],
+    "social_sentiment": null,
+    "summary": "The headline set is stale, and the 2025 Reuters item is not linked to a current reporting period. Sentiment remains neutral/low."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "Close MYR 13.06 on 2026-09-24 was 7.40% below SMA-50 and 6.77% below SMA-200; 20/60-bar returns were -8.67%/-8.03%, and 252-bar return +1.15%.",
+    "rsi_14": 28.7671,
+    "rsi_assessment": "RSI-14 at 28.77 is below 30, an oversold reading but not a confirmed reversal.",
+    "macd_assessment": "MACD histogram was -0.0447, still negative.",
+    "volume_assessment": "Latest volume was 0.78x its 20-bar average, so the decline had no above-average turnover confirmation on the latest bar.",
+    "support_levels": [
+      12.8
+    ],
+    "resistance_levels": [
+      14.44,
+      14.8
+    ],
+    "summary": "Price is below both moving averages with negative 20/60-bar returns, RSI below 30, and negative MACD. The nearly flat 252-bar return and below-average latest volume temper but do not reverse the bearish trend."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official macro context says Bank Negara Malaysia held OPR at 2.75% on 2026-09-03. Source: https://www.bnm.gov.my/-/monetary-policy-statement-03092026. The ticker packet has no issuer-specific rate-sensitivity data, so no company impact is assigned.",
+    "interest_rate_outlook": "The supplied context reports the OPR decision only; no forward rate path is provided.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "BNM held OPR at 2.75% as of 2026-09-03. Without issuer-specific sensitivity evidence, the macro signal stays neutral/low; USD/MYR is absent and no FX direction is inferred."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -6,24 +6,20 @@
       "bull_argument": {
         "position": "bull",
         "round_number": 1,
-        "argument": "Meta's $201.0B revenue, 82.0% gross margin, 41.4% operating margin, $46.1B FCF, and approximately 38.6% debt/equity form a strong base. Forward P/E of 16.96x is well below trailing P/E, while Muse Spark 1.3 and settlement clarity can reset the narrative. Available momentum is above EMA-20 with a positive MACD histogram.",
+        "argument": "The constructive case rests on observed evidence: Price gained 30.53% over 20 bars and 32.26% over 60 bars, sits above both moving averages, and has a strongly positive MACD histogram with above-average volume. The dated smart-glasses/Muse headlines show active product development, though not adoption or monetization. The evidence supports a conditional thesis, not an extrapolation beyond the supplied dates.",
         "key_points": [
-          "Exceptional platform economics",
-          "Strong FCF and manageable leverage",
-          "Forward P/E discount",
-          "AI progress and settlement clarity"
+          "Strong 5/20/60-bar returns, price above moving averages, positive MACD and above-average volume.",
+          "Separate dated headline evidence from unverified business impact."
         ],
         "rebuttal_to_previous": null
       },
       "bear_argument": {
         "position": "bear",
         "round_number": 1,
-        "argument": "The bull treats an incomplete rebound as a reversal and treats settlement as purely positive. Meta remains 24.79% below its high, the settlement can cost up to $18B with restrictions, AI-capex returns are unproven, and elevated Fed rates pressure long-duration investment and ad valuations.",
+        "argument": "The risk case is that RSI-14 is 84.56, the close is more than 21% above SMA-50, and the 252-bar return is still negative. Muse trust and smart-glasses headlines do not prove product economics, so a sharp run may be vulnerable to a pullback. The packet cannot resolve the key business question with dated statements, so the bull case should not be treated as established.",
         "key_points": [
-          "Large drawdown",
-          "Settlement cost/restrictions",
-          "AI-capex ROI unproven",
-          "Rate and ad-cycle sensitivity"
+          "RSI 84.56 and price 21.57% above SMA-50; 252-bar return remains negative.",
+          "Undated financial statement fields do not support point-in-time trend claims."
         ],
         "rebuttal_to_previous": null
       }
@@ -33,45 +29,39 @@
       "bull_argument": {
         "position": "bull",
         "round_number": 2,
-        "argument": "Legal and capex costs are real but manageable against $46.1B FCF and $60.5B net income if the ad engine remains resilient. Settlement removes a larger litigation tail risk and the AI release is execution evidence. A low-confidence buy bias recognizes that the rebound is not technically confirmed.",
+        "argument": "The bear's overbought warning is valid, but the move is supported by positive 5/20/60-bar returns, positive MACD, and above-average volume. The bullish case is a trend continuation watch, not a claim that product adoption is already proven.",
         "key_points": [
-          "Cash flow can absorb costs",
-          "Settlement reduces extreme tail risk",
-          "AI product progress",
-          "Low-confidence buy avoids false precision"
+          "Strong 5/20/60-bar returns, price above moving averages, positive MACD and above-average volume.",
+          "Keep the conclusion conditional on new, dated evidence."
         ],
-        "rebuttal_to_previous": "The bear correctly says the technical rebound is not confirmed."
+        "rebuttal_to_previous": "Direct response to the bear's first-round point: The bear's overbought warning is valid, but the move is supported by positive 5/20/60-bar returns, positive MACD, and above-average volume. The bullish case is a trend continuation watch, not a claim that product adoption is already proven."
       },
       "bear_argument": {
         "position": "bear",
         "round_number": 2,
-        "argument": "The bull assumes the core can fund future claims and capex without margin or valuation consequences. The drawdown is market evidence and null SMA/RSI/ATR fields prevent distinguishing a durable reversal from a short squeeze. Neutral is safer until the earnings/capex bridge improves.",
+        "argument": "The bull cites several confirming price measures, yet all describe the same rapid move and are not independent evidence of business value. RSI above 84, an extended distance from SMA-50, and a negative 252-bar return argue against treating the rebound as a settled long-term trend.",
         "key_points": [
-          "Cash costs reduce flexibility",
-          "Drawdown is market evidence",
-          "Reversal not confirmed",
-          "No precise risk levels"
+          "Product headlines provide no user adoption or revenue measure.",
+          "The main uncertainty remains unresolved by the supplied packet."
         ],
-        "rebuttal_to_previous": "The bull has not shown timely AI monetization."
+        "rebuttal_to_previous": "Direct response to the bull's second-round case: The bull cites several confirming price measures, yet all describe the same rapid move and are not independent evidence of business value. RSI above 84, an extended distance from SMA-50, and a negative 252-bar return argue against treating the rebound as a settled long-term trend."
       }
     }
   ],
-  "bull_case_summary": "Meta's advertising platform generates exceptional margins and cash, the forward P/E is discounted, and AI progress plus settlement clarity can rebuild confidence.",
-  "bear_case_summary": "The drawdown persists, AI-capex returns are unproven, the settlement is costly/restrictive, and the rebound is not confirmed.",
+  "bull_case_summary": "Positive 5/20/60-bar returns, positive MACD, above-average volume, and price above SMA-50/SMA-200 show an active uptrend. The product headlines provide possible follow-through if later disclosures confirm adoption.",
+  "bear_case_summary": "The RSI is overbought, price is far above SMA-50, and long-horizon return remains negative. No dated adoption, monetization, or statement evidence confirms that the product narrative supports this rapid repricing.",
   "key_points_of_agreement": [
-    "Core profitability is strong.",
-    "AI-capex ROI and legal costs are swing factors.",
-    "Technical coverage is incomplete."
+    "The reported price indicators are descriptive, not forecasts.",
+    "Financial statement period labels and dated analyst recommendations are not supplied."
   ],
   "key_points_of_disagreement": [
-    "Whether settlement is net risk reduction or burden.",
-    "Whether EMA/MACD marks a reversal.",
-    "How much support the forward P/E provides."
+    "Strong 5/20/60-bar returns, price above moving averages, positive MACD and above-average volume.",
+    "RSI 84.56 and price 21.57% above SMA-50; 252-bar return remains negative."
   ],
   "unresolved_uncertainties": [
-    "AI revenue bridge.",
-    "Settlement conditions and restrictions.",
-    "Full technical confirmation."
+    "Whether the recent surge holds after an RSI reading of 84.56.",
+    "Whether Muse and smart glasses gain measurable adoption or revenue.",
+    "Financial statement periods and dated analyst recommendations are not supplied."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

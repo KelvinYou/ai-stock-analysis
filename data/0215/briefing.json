@@ -1,77 +1,69 @@
 {
   "ticker": "0215",
-  "date": "2026-09-03",
-  "overall_signal": "buy",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-24",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": 0.45,
-    "signal_convergence": 0.5556,
-    "explanation": "The profitable operating base, positive recommendation breadth, lower forward P/E, and price above SMA-200 support a cautious buy. Conviction is capped because the technical report is low confidence, recent volume/OHLC evidence is incomplete, headlines are unusable, and the forward earnings normalization has not been verified."
+    "score": 0.0,
+    "signal_convergence": 0.3333,
+    "explanation": "Evidence is mixed or insufficient for a directional conclusion; deterministic finalization will recompute convergence and apply the actionability gate."
   },
-  "executive_summary": "SLVEST has a credible but conditional recovery thesis: it is profitable, generates positive free cash flow, carries moderate leverage, and trades on a forward P/E of 18.62x versus a trailing 33.89x. The close of RM3.05 remains above SMA-200 at RM2.8032, but short-term momentum is soft and the latest volume/OHLC observations are not reliable enough to confirm a reversal.\n\nThe overall view is buy with medium conviction, not a high-confidence signal. The next decision-relevant evidence is earnings and cash-flow delivery, project/backlog visibility, and a technically confirmed recovery; the supplied Fed, BNM, and USD/MYR context is mixed and company-specific FX exposure is unknown.",
-  "bull_case": "Earnings normalization could make the 18.62x forward P/E reasonable. Positive margins and cash flow, manageable debt/equity, positive recommendation breadth, and price above SMA-200 leave room for a recovery if solar-project execution remains sound.",
-  "bear_case": "The forward earnings denominator is unverified, FCF conversion is modest, and the short-term chart has negative MACD momentum. No usable headlines and zero/incomplete recent volume mean the apparent support cannot be treated as a confirmed base.",
+  "executive_summary": "Solarvest has a strong technical trend\u2014above all moving averages, positive across listed return windows, with above-average volume\u2014but RSI is 72.97 near the 52-week high. The current snapshot shows positive margins yet a high P/E and modest FCF; mixed dated earnings-quality coverage keeps the overall signal neutral.",
+  "bull_case": "The trend could continue if current profitability is sustained and later reporting confirms earnings growth converts into cash.",
+  "bear_case": "The stock is extended near its yearly high, and FCF is modest versus snapshot net income while P/E is 43.33; the May earnings-quality concern remains unresolved.",
   "key_uncertainties": [
-    "Whether forward earnings normalize as implied by the 18.62x forward P/E.",
-    "Project backlog, margin durability, and cash-flow conversion.",
-    "Company-specific USD exposure under the 4.0420 USD/MYR reference.",
-    "Whether recent zero/incomplete volume and OHLC fields are data limitations or reflect weak trading confirmation.",
-    "The 52-week-low distance is null in the input and is not inferred."
+    "Cash conversion and multi-period earnings trend are unavailable.",
+    "Recent overbought conditions may lead to a pullback.",
+    "Dated headlines conflict on earnings quality."
   ],
   "catalysts_upcoming": [
-    "Next financial results showing revenue/net-income growth and sustained operating margin.",
-    "Evidence of project awards, backlog conversion, or improved free-cash-flow conversion.",
-    "A close above the RM3.1969 upper Bollinger reference with reliable volume confirmation.",
-    "A decline in financing pressure or supportive renewable-energy procurement policy."
+    "A future dated filing showing sustained cash conversion and earnings quality."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "Low beta (0.60) \u2014 historically less sensitive to broad-market moves.",
       "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 71.1% over available price history. Projected worst case (2-sigma): ~62.4% from current $3.05.",
+    "max_drawdown_scenario": "Historical max drawdown: 71.1% over available price history. Projected worst case (2-sigma): ~82.8% from current $3.90.",
     "risk_reward_ratio": null
   },
   "action_plan": {
-    "entry_limit": 3.02,
-    "entry_rationale": "Midway between current ($3.05) and Bollinger lower band ($2.98)",
-    "stop_loss": 2.0,
-    "stop_rationale": "2x ATR-14 ($0.51) below entry \u2014 invalidates the setup",
-    "take_profit_1": 3.2,
-    "take_profit_2": 3.51,
-    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": null
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.33). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "0215",
-    "judged_view": "buy",
-    "confidence": "medium",
-    "thesis": "The bull carried the debate narrowly because SLVEST has verified positive profitability and cash flow, moderate leverage, and a forward P/E below the trailing multiple while price remains above SMA-200. This is a conditional buy thesis: it requires earnings normalization and better cash conversion, and the missing growth, backlog, headline, and volume evidence prevents high confidence.",
-    "winning_side": "bull",
-    "strongest_counterexample": "The forward P/E may simply embed an optimistic earnings denominator that the available data cannot verify; modest FCF conversion, negative short-term momentum, and missing reliable volume could precede a valuation de-rating rather than a recovery.",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Momentum and volume are strong, but price is overbought near its 52-week high and the current snapshot\u2019s high multiple/modest FCF is offset by conflicting earnings-quality headlines.",
+    "winning_side": "neither",
+    "strongest_counterexample": "The strongest counterexample is continued high-volume momentum backed by positive margins and a later confirmation that earnings convert to cash; the latter is not available in the packet.",
     "invalidation_conditions": [
-      "Two consecutive reporting periods show declining revenue or net income while the trailing P/E remains above 30x.",
-      "Operating margin falls below the current 15.08% level for two consecutive reporting periods without a clear project-cycle explanation.",
-      "Price closes below the RM2.8032 SMA-200 reference and fails to reclaim it on reliable volume."
+      "A close below the observed 20-bar low would materially weaken the trend thesis."
     ],
     "evidence_gaps": [
-      "No multi-period earnings, revenue-growth, or order-book history in the Layer 1 package.",
-      "No usable dated news headlines or company-specific catalyst evidence.",
-      "Company-level USD exposure and project-financing mix are unavailable.",
-      "Recent volume and some OHLC fields are unavailable/zero-valued."
+      "Dated multi-period financial statements and cash-conversion history are missing.",
+      "The supplied earnings-quality headlines do not contain the underlying company evidence."
     ],
     "decisive_factors": [
-      "Positive net income, margins, and free cash flow.",
-      "Forward P/E of 18.62x versus trailing P/E of 33.89x.",
-      "Price above SMA-200 despite short-term momentum weakness.",
-      "Moderate debt/equity of about 0.53 rather than balance-sheet distress."
+      "All return windows are positive and price is above SMA-20/50/200.",
+      "RSI is 72.97, P/E is 43.33, and FCF is RM30.25M."
     ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "buy",
-    "sentiment": "buy",
-    "technical": "neutral",
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "buy",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
 }

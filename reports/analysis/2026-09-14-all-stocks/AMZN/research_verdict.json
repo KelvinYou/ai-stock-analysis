@@ -1,0 +1,23 @@
+{
+  "ticker": "AMZN",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Dated negative FCF and the enlarged investment plan defeat an immediate cash-return argument. Demand remains strong, so the ruling is restraint rather than business impairment.",
+  "winning_side": "bear",
+  "strongest_counterexample": "AWS and retail growth demonstrate real demand for investment on a large existing profitable platform.",
+  "invalidation_conditions": [
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if trailing twelve-month FCF turns positive in two consecutive quarterly releases.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if a disclosed investment funding shortfall requires unplanned equity issuance."
+  ],
+  "evidence_gaps": [
+    "Investment funding commitments and segment returns on incremental capital.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
+  ],
+  "decisive_factors": [
+    "Quoted trailing P/E 20.66x; forward P/E 24.68x",
+    "AWS and retail growth establish operating demand",
+    "A mature platform can finance reinvestment without delivering attractive near-term shareholder cash returns"
+  ],
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

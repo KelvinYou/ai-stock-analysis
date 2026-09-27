@@ -1,0 +1,69 @@
+{
+  "ticker": "SNDK",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-23",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.5556,
+    "explanation": "Neutral: snapshot profitability is strong, but the recent 60-bar return is negative, dated coverage describes a fading rally, and the extreme reported 252-bar return needs price-series comparability review."
+  },
+  "executive_summary": "SanDisk's near-term technicals are positive, but the 60-bar return is negative and the packet includes dated coverage describing a fading memory rally. The reported 252-bar return is +1,665.03% and the 52-week range is exceptionally wide; without price-series comparability checks and dated demand/fundamental data, that history should not be extrapolated. The snapshot reports 61.6% operating margin, 56.5% net margin, FCF $11.49B (56.8% of revenue), and debt/equity near 0.01. This is positive single-period evidence, but persistence is uncertain and the extreme price history needs separate validation.",
+  "bull_case": "Price is above SMA-50/SMA-200, the 20-bar return is positive, and MACD is positive. The short-term uptrend can continue if later evidence confirms memory demand and the unusually large historical return is comparable.",
+  "bear_case": "The 60-bar return is negative, the stock is 22.84% below its 52-week high, and latest volume is below average. The fading-rally headline and unresolved price-series comparability undermine extrapolation from the 252-bar return.",
+  "key_uncertainties": [
+    "Whether recent memory demand is durable or the rally is fading.",
+    "Whether the extraordinary 252-bar return and 52-week range are comparable on the supplied price series.",
+    "No dated financial statement or company-specific memory-demand evidence is supplied."
+  ],
+  "catalysts_upcoming": [
+    "A 2026-09-24 Stocktwits headline described Micron results as due the following week and a test of AI memory demand; the packet gives no exact event date or SNDK-specific linkage."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 56.5% over available price history. Projected worst case (2-sigma): ~247.2% from current $1816.57.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.56). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "SNDK",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Neutral: snapshot profitability is strong, but the recent 60-bar return is negative, dated coverage describes a fading rally, and the extreme reported 252-bar return needs price-series comparability review. The financial snapshot contains measured levels, but a single period cannot establish trends.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Neutral: snapshot profitability is strong, but the recent 60-bar return is negative, dated coverage describes a fading rally, and the extreme reported 252-bar return needs price-series comparability review. A later dated comparative filing or sustained price confirmation could change the ruling.",
+    "invalidation_conditions": [
+      "A sustained close above the observed 20-bar high of $1,909.48, along with comparable price history and dated evidence of memory-demand durability, would strengthen the bullish case."
+    ],
+    "evidence_gaps": [
+      "Financial statement period/availability dates are absent.",
+      "Price-series corporate-action/comparability context is not included despite an extreme reported 252-bar return and 52-week range.",
+      "Memory pricing and company-specific demand data are absent."
+    ],
+    "decisive_factors": [
+      "The snapshot reports 61.6% operating margin, 56.5% net margin, FCF $11.49B (56.8% of revenue), and debt/equity near 0.01. This is positive single-period evidence, but persistence is uncertain and the extreme price history needs separate validation.",
+      "Price is well above both moving averages, with a strong 20-bar return and positive MACD, but the 60-bar return is negative and price remains 22.84% below its 52-week high. The reported 252-bar return and 52-week range are exceptionally large; verify price-series adjustments before extrapolating them."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "sell",
+    "technical": "buy",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

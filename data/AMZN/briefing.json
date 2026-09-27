@@ -1,33 +1,30 @@
 {
   "ticker": "AMZN",
-  "date": "2026-09-03",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-23",
   "overall_signal": "neutral",
   "conviction": {
     "score": 0.0,
-    "signal_convergence": 0.1818,
-    "explanation": "The panel is highly divergent: fundamentals, sentiment, and macro are neutral while the incomplete technical panel is sell/low confidence. Deterministic convergence is only 0.1818, so the honest result is neutral rather than a forced buy or sell; the FCF discrepancy and null technical fields further reduce confidence."
+    "signal_convergence": 0.0,
+    "explanation": "Neutral: the financial snapshot shows positive earnings but low FCF relative to revenue; short-term weakness and longer-term positive returns conflict."
   },
-  "executive_summary": "Amazon has a compelling operating story but not a clean current signal. Layer 1 shows $716.9B revenue, 50.3% gross margin, 11.2% operating margin, and approximately 37.2% debt/equity; public Q2 information adds 37% AWS growth and strong operating-income growth. The central problem is cash conversion: Layer 1 reports $7.7B FCF while the dated Q2 release reports a $7.6B TTM outflow, and forward P/E of 24.53x is above trailing P/E. The debate ended without a decisive side. Available technicals are bearish, but SMA, RSI, ATR, Bollinger, and support/resistance are unavailable after the non-finite 2026-08-28 bar; RiskChecker ran and no precise levels are emitted.",
-  "bull_case": "AWS growth and operating leverage can convert heavy AI investment into durable high-margin earnings, while scale and the balance sheet provide time to realize returns.",
-  "bear_case": "AI capex may keep FCF negative, the forward multiple may be too high for the cash profile, and bearish available momentum can worsen if patience breaks.",
+  "executive_summary": "Amazon's near-term tape is weak but the longer structure remains positive: price is below SMA-50 and above SMA-200, with a negative 20-bar return and MACD. The AI-shopping headline is a strategic datapoint without quantified business impact; the packet has a financial snapshot without a statement-period label for a stronger ruling. The snapshot reports $716.92B revenue and $77.67B net income, but FCF is $7.70B (1.1% of revenue) and operating margin is 11.2%. With no comparative periods, this supports a mixed fundamental view.",
+  "bull_case": "The close remains above SMA-200 and 60/252-bar returns are positive. The shopping-agent headline may reflect platform policy choices rather than demonstrable sales damage.",
+  "bear_case": "Price is below SMA-50, 20-bar momentum is negative, and MACD is below its signal. Neither the agent-access story nor single-period financial figures with no reported period label show how retail or cloud economics are changing.",
   "key_uncertainties": [
-    "Reconcile Layer 1 positive FCF with the company release's TTM outflow.",
-    "AWS profitability and return on AI/data-center capex.",
-    "SMA/RSI/ATR/support/resistance remain unavailable because of the non-finite 2026-08-28 bar.",
-    "Fed financial conditions and consumer demand."
+    "Whether the AI-shopping-agent policy changes customer conversion, seller access, or revenue.",
+    "Whether the short-term pullback stabilizes above SMA-200.",
+    "Point-in-time financial statements and dated recommendations are unavailable."
   ],
   "catalysts_upcoming": [
-    "Next results reconciling FCF, capex, AWS growth, and operating margin.",
-    "Evidence that AWS AI demand converts into cash returns.",
-    "A future complete-close technical refresh.",
-    "Subsequent Fed communication and USD/MYR observations."
+    "Any later company disclosure quantifying the effect of third-party AI shopping agents; none is provided in this packet."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "High beta (1.45) \u2014 price may amplify broad-market moves.",
+      "High beta (1.44) \u2014 price may amplify broad-market moves.",
       "Sector: Consumer Cyclical \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 56.1% over available price history. Projected worst case (2-sigma): ~nan% from current $254.98.",
+    "max_drawdown_scenario": "Historical max drawdown: 56.1% over available price history. Projected worst case (2-sigma): ~83.4% from current $249.27.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -39,38 +36,35 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.18). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "AMZN",
     "judged_view": "neutral",
-    "confidence": "medium",
-    "thesis": "Neither side fully carried the debate. Amazon's AWS and operating evidence are strong, but the cash-flow discrepancy, forward P/E premium, and bearish available momentum make a directional edge impossible without reconciled FCF and complete technical data.",
+    "confidence": "low",
+    "thesis": "Neutral: the financial snapshot shows positive earnings but low FCF relative to revenue; short-term weakness and longer-term positive returns conflict. The financial snapshot contains measured levels, but a single period cannot establish trends.",
     "winning_side": "neither",
-    "strongest_counterexample": "AWS growth could compound fast enough to offset near-term investment, making the pullback a temporary reset rather than structural deterioration.",
+    "strongest_counterexample": "Neutral: the financial snapshot shows positive earnings but low FCF relative to revenue; short-term weakness and longer-term positive returns conflict. A later dated comparative filing or sustained price confirmation could change the ruling.",
     "invalidation_conditions": [
-      "Trailing FCF is reconciled to a positive figure above $15B for two consecutive reporting periods while capex returns remain supported.",
-      "AWS growth falls below 25% for two consecutive reported quarters.",
-      "Operating margin falls below 9% for two consecutive reported quarters.",
-      "A complete technical snapshot confirms a sustained breakdown while cash conversion remains negative."
+      "A sustained move back above the observed 20-bar high of $267.56 with improving dated operating results would make the cautious neutral stance too conservative."
     ],
     "evidence_gaps": [
-      "Layer 1 FCF of +$7.7B conflicts with the Q2 company release's $7.6B TTM outflow.",
-      "Layer 1 lacks AWS profitability, capex, and return detail.",
-      "SMA/RSI/Bollinger/ATR/support/resistance are unavailable after the non-finite 2026-08-28 bar."
+      "Financial statement period/availability dates are absent.",
+      "Shopping-agent headline provides no transaction, seller, or revenue impact.",
+      "Dated analyst recommendations are not supplied."
     ],
     "decisive_factors": [
-      "Strong AWS and Q2 operating evidence.",
-      "FCF/capex data conflict.",
-      "Forward P/E of 24.53x exceeds trailing P/E of 20.50x.",
-      "Available EMA/MACD momentum is bearish but incomplete."
+      "The snapshot reports $716.92B revenue and $77.67B net income, but FCF is $7.70B (1.1% of revenue) and operating margin is 11.2%. With no comparative periods, this supports a mixed fundamental view.",
+      "Price is below SMA-50 but remains above SMA-200; the 20-bar return and MACD are negative while longer supplied returns are positive. The evidence is mixed, with no clean directional confirmation."
     ]
   },
   "agent_signal_breakdown": {
     "fundamentals": "neutral",
     "sentiment": "neutral",
-    "technical": "sell",
+    "technical": "neutral",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
 }

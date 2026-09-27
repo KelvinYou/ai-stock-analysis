@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "low",
+    "pe_assessment": "Trailing P/E unavailable because the snapshot is loss-making; negative forward P/E denotes expected losses, not cheapness. Market cap/snapshot revenue 81.4x is period-dependent, not a verified TTM multiple.",
+    "margin_analysis": "gross 39.73%; operating -115.09%; net -260.23%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 3.55%. Snapshot FCF -40.88m USD. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Losses exceed revenue and free cash flow is negative while market capitalization is roughly 81x snapshot sales; substantial future execution is already necessary. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Deployment execution, profit conversion and financing needs dominate the current evidence.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Low reported gross debt and a positive gross margin provide limited financial support."
+    ],
+    "summary": "Losses exceed revenue and free cash flow is negative while market capitalization is roughly 81x snapshot sales; substantial future execution is already necessary. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "August 13: Ondas reported $83.8m Q2 revenue and raised annual revenue targets; pro forma same-portfolio growth of 85% is distinct from the much larger reported increase. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=2, buy=7, hold=0, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Defense demand",
+      "Acquisitions",
+      "Raised outlook"
+    ],
+    "notable_headlines": [
+      "2026-08-13 https://ir.ondas.com/press-releases/detail/326/ondas-posts-record-q2-2026-revenue-of-83-8-million-on"
+    ],
+    "social_sentiment": null,
+    "summary": "Order and sales momentum support positive news tone. Acquisition-driven scale, pro forma backlog and ongoing losses prevent treating reported growth as fully organic or already profitable. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 7.23: below SMA20 8.08, below SMA50 7.98, below SMA200 9.53. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 30.1075,
+    "rsi_assessment": "RSI14 30.1: weak but not oversold.",
+    "macd_assessment": "MACD line -0.3150, signal -0.2071, histogram -0.1079: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 41,875,300; ratio 0.67x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      7.145,
+      7.18
+    ],
+    "resistance_levels": [
+      7.32,
+      7.54
+    ],
+    "summary": "Price is hovering just above recent lows after a sustained decline; RSI near 30 is not proof of exhaustion while negative MACD and the bearish average stack persist. As of 2026-09-11, ATR14 is 0.421 (5.8% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 52.7%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Drone and communications demand depends partly on procurement cycles and customer budgets.",
+      "Funding access and trade or defense policy can affect commercialization timelines."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Ondas Inc: Drone and communications demand depends partly on procurement cycles and customer budgets. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

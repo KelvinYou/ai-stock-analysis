@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 105.00x; forward P/E 32.20x. Indicated yield 0.94% is not a guaranteed forward payout. Market cap/snapshot net income is 83.11x, materially different; periods, EPS basis and share counts need reconciliation.",
+    "margin_analysis": "gross 59.95%; operating 4.24%; net 4.63%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 19.35%. Snapshot FCF -164.45m MYR. FCF/net income -1.90x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "A 105.00x trailing multiple, thin net margin and negative cash flow make this an earnings-recovery speculation rather than a demonstrated value opportunity. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Capacity spending and semiconductor-cycle weakness may extend negative cash flow.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Quoted P/E and market-cap/snapshot-profit differ materially; valuation confidence is reduced."
+    ],
+    "key_strengths": [
+      "Gross debt remains modest against the equity base."
+    ],
+    "summary": "A 105.00x trailing multiple, thin net margin and negative cash flow make this an earnings-recovery speculation rather than a demonstrated value opportunity. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "July 31: Unisem Q2 profit improved to RM9.91m and revenue to RM570.12m, but H1 remained loss-making at RM3.445m and no dividend was declared. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=1, buy=2, hold=4, sell=2, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Quarterly recovery",
+      "Half-year loss"
+    ],
+    "notable_headlines": [
+      "2026-07-31 https://www.klsescreener.com/v2/announcements/view/11640713"
+    ],
+    "social_sentiment": null,
+    "summary": "The second-quarter rebound is encouraging but not a completed recovery. Mixed news is more defensible than transferring upstream AI optimism directly to this issuer. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 4.2: below SMA20 4.27, below SMA50 4.45, above SMA200 3.72. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 54.717,
+    "rsi_assessment": "RSI14 54.7: neutral-to-firm.",
+    "macd_assessment": "MACD line -0.0584, signal -0.0625, histogram 0.0042: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 1,122,900; ratio 0.50x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-25, 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      4.15,
+      4.16
+    ],
+    "resistance_levels": [
+      4.34,
+      4.36
+    ],
+    "summary": "A small positive histogram suggests stabilization within a correction, yet price remains below SMA20 and SMA50 and has slipped under recent 4.21 support. As of 2026-09-14, ATR14 is 0.152 (3.6% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 21.9%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Semiconductor assembly and test utilization drive cyclicality and operating leverage.",
+      "Trade restrictions and imported equipment spending can affect expansion economics."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "UNISEM: Semiconductor assembly and test utilization drive cyclicality and operating leverage. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

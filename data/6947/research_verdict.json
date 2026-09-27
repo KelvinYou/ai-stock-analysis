@@ -2,25 +2,21 @@
   "ticker": "6947",
   "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "CDB's profitability, free cash flow and yield support the business case, but the current snapshot does not confirm that the price weakness is temporary. The combination of approximately 0.87x debt/equity, missing operating-growth and payout detail, a below-SMA-200 chart and unreliable final-bar volume makes waiting for evidence preferable to a directional call.",
+  "thesis": "Positive FCF, net income, and reported yield contrast with price near its 52-week low and below both moving averages. The single snapshot has no period comparison and recent company news is stale, so neither side dominates.",
   "winning_side": "neither",
-  "strongest_counterexample": "If the next financial update confirms stable or improving free cash flow and leverage while price reclaims SMA-200 at 3.0435, the current weakness could be an attractive income entry rather than deterioration.",
+  "strongest_counterexample": "A sustained close above SMA-50 alongside a later filing that maintains positive FCF would weaken the bear case; a new low under MYR 2.58 would weaken the bull case.",
   "invalidation_conditions": [
-    "Two consecutive closes above SMA-200 at 3.0435 with non-zero volume confirmation would invalidate the current technical caution",
-    "A reported period showing sustained free-cash-flow coverage of dividends and stable or lower debt/equity would weaken the balance-sheet objection",
-    "A close below the available 2.7752 lower-Bollinger area followed by a new closing low would invalidate the mean-reversion case"
+    "A sustained close above SMA-50 alongside a later filing that maintains positive FCF would weaken the bear case; a new low under MYR 2.58 would weaken the bull case."
   ],
   "evidence_gaps": [
-    "No usable dated company-news headlines",
-    "No revenue, EPS, subscriber, ARPU or multi-period growth series",
-    "No capex, debt-maturity, interest-cost or dividend-payout detail",
-    "Recent zero-valued OHLCV fields prevent reliable final-bar participation analysis"
+    "No statement-period label or comparative periods.",
+    "No recent company-specific news or dated recommendations.",
+    "No company-specific macro snapshot and no USD/MYR data."
   ],
   "decisive_factors": [
-    "RM2.2649B free cash flow and 29.69% operating margin support the business case",
-    "Approximately 0.87x debt/equity and missing cash-allocation detail limit balance-sheet confidence",
-    "Price below SMA-20, SMA-50, EMA-20 and SMA-200 with negative MACD favors caution",
-    "The four analyst layers do not converge: buy, neutral, sell and neutral"
+    "Snapshot reports MYR 2.26B FCF and 5.17% dividend yield.",
+    "Price is below SMA-50/SMA-200, near its 52-week low, with negative MACD.",
+    "Company headlines are from February-June 2026, not a current results update."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

@@ -1,33 +1,31 @@
 {
   "ticker": "TSLA",
-  "date": "2026-09-03",
-  "overall_signal": "sell",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-23",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": -0.25,
-    "signal_convergence": 0.4545,
-    "explanation": "Fundamentals and macro are sell, while sentiment and technical are neutral. The resulting signal is low-confidence/high-divergence: valuation is the clearest negative, but the nonfinite OHLC row leaves the latest technical counterweight incomplete and no precise levels should be quoted."
+    "score": 0.0,
+    "signal_convergence": 0.2222,
+    "explanation": "Raw synthesis reflects the evidence in the analyst reports; deterministic finalization recomputes convergence and applies the actionability gate."
   },
-  "executive_summary": "Tesla's reported financial profile does not justify its 333.6542x trailing P/E or 165.39114x forward P/E: net margin is 4.00% despite $6.220B of free cash flow and low leverage. The In-Session Pipeline therefore returns a modest sell, not a high-conviction trade; the 2026-08-28 nonfinite OHLC row makes latest RSI, SMA, ATR, and Bollinger outputs null.",
-  "bull_case": "Positive free cash flow, low debt-to-equity, and future autonomy/robotics execution could eventually support a premium valuation.",
-  "bear_case": "Current earnings and margins are too thin for the present multiple, and the supplied restrictive rate environment raises the burden on distant optionality.",
+  "executive_summary": "Tesla\u2019s short-term trend improved above SMA-20/50, and dated headlines report a positive EU registration comparison and a commercial-truck order. However, price remains below SMA-200, longer returns are negative, and the single financial snapshot with no reported period label cannot confirm profitability or growth; the signal remains neutral.",
+  "bull_case": "A durable rebound could be supported if the registration and commercial order headlines translate into repeatable deliveries and margin improvement.",
+  "bear_case": "Reported P/E is very high, long-term momentum is still negative, and the news does not quantify operating contribution.",
   "key_uncertainties": [
-    "No dated earnings bridge quantifies the autonomy/robotics value embedded in the multiple",
-    "Layer 1 contains no non-empty current news headlines",
-    "Nonfinite OHLC data on 2026-08-28 leaves latest RSI, SMA, ATR, and Bollinger outputs null",
-    "RiskChecker's volatility estimate may be NaN because the upstream return series includes the nonfinite bar"
+    "Current earnings and financial-period dates are unknown.",
+    "Repeatability and margin impact of the EU registration and truck order headlines are unverified.",
+    "Short-term recovery may fail below the long-term trend."
   ],
   "catalysts_upcoming": [
-    "Clean replacement or correction of the nonfinite OHLC row",
-    "Evidence of durable margin and free-cash-flow improvement",
-    "Quantified autonomy or robotics earnings conversion"
+    "Future dated delivery and margin results that validate sustained growth."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "High beta (1.83) \u2014 price may amplify broad-market moves.",
+      "High beta (1.84) \u2014 price may amplify broad-market moves.",
       "Sector: Consumer Cyclical \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 73.6% over available price history. Projected worst case (2-sigma): ~nan% from current $352.38.",
-    "risk_reward_ratio": "N/A (bearish signal)"
+    "max_drawdown_scenario": "Historical max drawdown: 73.6% over available price history. Projected worst case (2-sigma): ~106.3% from current $380.12.",
+    "risk_reward_ratio": null
   },
   "action_plan": {
     "entry_limit": null,
@@ -38,36 +36,34 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction -0.25, convergence 0.45). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.22). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "TSLA",
-    "judged_view": "sell",
+    "judged_view": "neutral",
     "confidence": "low",
-    "thesis": "The bear case carries the current evidence: 333.6542x trailing P/E, 165.39114x forward P/E, and a 4.00% net margin are difficult to underwrite without a demonstrated future earnings bridge. Positive free cash flow and low leverage keep this from being a strong sell.",
-    "winning_side": "bear",
-    "strongest_counterexample": "Autonomy or robotics could convert the premium into earnings, and the balance sheet can fund that transition; the current Layer 1 data does not quantify the timing or magnitude.",
+    "thesis": "Short-term momentum improved above SMA-20/50, but price remains below SMA-200 with negative 60/252-bar returns; dated headlines do not verify a sustained earnings recovery.",
+    "winning_side": "neither",
+    "strongest_counterexample": "The strongest counterexample is durable EU demand and commercial-truck adoption converting the recent headlines into profitable growth, which is not shown in the supplied data.",
     "invalidation_conditions": [
-      "Sustained margin and free-cash-flow improvement",
-      "A credible earnings bridge from autonomy or robotics",
-      "A durable price recovery once clean technical indicators are available"
+      "A close below the observed 20-bar low would weaken the short-term recovery case."
     ],
     "evidence_gaps": [
-      "No non-empty dated news headlines",
-      "No forward earnings bridge for the valuation",
-      "Nonfinite OHLC data on 2026-08-28 makes latest RSI, SMA, ATR, and Bollinger outputs null"
+      "Financial statement dates and current earnings trajectory are missing.",
+      "Headlines do not quantify repeatability or margin impact."
     ],
     "decisive_factors": [
-      "333.6542x trailing P/E and 165.39114x forward P/E",
-      "4.00% net margin",
-      "$6.220B free cash flow and approximately 0.18x debt-to-equity as mitigating strengths"
+      "Positive 5/20-bar returns and MACD conflict with negative 60/252-bar returns.",
+      "Price remains 4.09% below SMA-200."
     ]
   },
   "agent_signal_breakdown": {
     "fundamentals": "sell",
     "sentiment": "neutral",
     "technical": "neutral",
-    "macro": "sell"
+    "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
 }

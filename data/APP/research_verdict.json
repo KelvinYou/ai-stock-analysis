@@ -1,24 +1,21 @@
 {
   "ticker": "APP",
-  "judged_view": "buy",
-  "confidence": "medium",
-  "thesis": "The bull carried the reported operating and valuation evidence, but the ruling is bounded because the stock is near its 52-week low and the technical window is contaminated.",
-  "winning_side": "bull",
-  "strongest_counterexample": "Continued margin and cash-flow delivery with a repaired, improving price trend would validate the buy view.",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Neutral: the single financial snapshot is strongly profitable, but elevated debt/equity conflicts with growth-warning headlines and a deeply negative 60/252-bar price trend. The financial snapshot contains measured levels, but a single period cannot establish trends.",
+  "winning_side": "neither",
+  "strongest_counterexample": "Neutral: the single financial snapshot is strongly profitable, but elevated debt/equity conflicts with growth-warning headlines and a deeply negative 60/252-bar price trend. A later dated comparative filing or sustained price confirmation could change the ruling.",
   "invalidation_conditions": [
-    "Margins or free cash flow materially deteriorate",
-    "A repaired technical series confirms a sustained primary downtrend",
-    "Forward valuation rises without corresponding earnings delivery"
+    "A sustained close above the observed 20-bar high of $338.34, accompanied by dated company results confirming client and revenue growth, would invalidate the near-term bearish thesis."
   ],
   "evidence_gaps": [
-    "No populated dated news headlines are available in Layer 1.",
-    "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
-    "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory."
+    "Financial statement period/availability dates are absent.",
+    "No client, advertiser, revenue, or guidance data is supplied to adjudicate the attributed research claims.",
+    "Dated analyst recommendations are not supplied."
   ],
   "decisive_factors": [
-    "Analyst signals: fundamentals=buy, sentiment=buy, technical=neutral, macro=neutral.",
-    "Reported margins and free cash flow are strong",
-    "Whether exceptional margins justify a directional call while price is near the 52-week low"
+    "The snapshot reports 75.8% operating margin, 60.8% net margin, and FCF $3.94B (71.9% of revenue), offset by debt/equity of 1.66. This is strong but single-period profitability evidence, not a growth trend.",
+    "Price remains well below SMA-50 and SMA-200 and the 60/252-bar returns are deeply negative, while the 20-bar return and MACD histogram improved. This can be an early bounce within a downtrend; evidence supports a bearish technical signal with medium confidence."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

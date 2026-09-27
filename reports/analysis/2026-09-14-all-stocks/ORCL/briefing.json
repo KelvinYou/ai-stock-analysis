@@ -1,0 +1,82 @@
+{
+  "ticker": "ORCL",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "sell",
+  "conviction": {
+    "score": -0.5455,
+    "signal_convergence": 0.5455,
+    "explanation": "Consensus-capped research conviction for the sell thesis, not a probability or backtested expected return. I retain the research-manager ruling: Negative FCF and debt far above equity make funding the decisive issue. Cloud demand validates spending opportunity but does not establish funded shareholder returns. The adverse operating/valuation case is supported but counterevidence and data limitations prevent a strong-sell claim. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "SELL: Oracle's cloud demand is strong, but debt, cash burn and capex funding dominate the immediate swing assessment. A heavy-volume rejection reinforces caution rather than validating the low forward multiple.\n\nUnfavorable for fresh swing exposure on the supplied evidence; this research label is not an instruction to short or to liquidate an existing holding without portfolio context. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Cloud growth and established operating income support demand. Debt maturities and capex funding must be resolved before buying; the current evidence supports a conditional future case rather than forcing a favorable immediate signal. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Triple-digit cloud growth supports the demand premise, but does not settle the funding premise. Negative cash flow and debt far above equity require returns, maturities and financing coverage before a lower forward multiple can justify exposure; the adverse-volume rejection adds no confirmation.",
+  "key_uncertainties": [
+    "Debt maturities, interest cover and contracted capacity cash returns.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive FCF.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if dated disclosed cash and committed facilities cover the next twelve months of debt maturities and committed capex.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Debt coverage and funded capacity producing cash returns; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (1.73) \u2014 price may amplify broad-market moves.",
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 64.6% over available price history. Projected worst case (2-sigma): ~111.3% from current $150.28.",
+    "risk_reward_ratio": "N/A (bearish signal)"
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 165.26,
+    "stop_rationale": "Thesis invalidated if price breaks above $165.26.",
+    "take_profit_1": 150.28,
+    "take_profit_2": 136.83,
+    "target_rationale": "Primary: reduce/exit at/near current $150.28. Next downside watch: $136.83 (nearest support).",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "ORCL",
+    "judged_view": "sell",
+    "confidence": "medium",
+    "thesis": "Negative FCF and debt far above equity make funding the decisive issue. Cloud demand validates spending opportunity but does not establish funded shareholder returns.",
+    "winning_side": "bear",
+    "strongest_counterexample": "Triple-digit cloud-infrastructure growth on an established profitable base could generate strong future monetization.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive FCF.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if dated disclosed cash and committed facilities cover the next twelve months of debt maturities and committed capex."
+    ],
+    "evidence_gaps": [
+      "Debt maturities, interest cover and contracted capacity cash returns.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 23.52x; forward P/E 13.67x",
+      "Cloud growth and established operating income support demand",
+      "Triple-digit cloud growth supports the demand premise, but does not settle the funding premise"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "sell",
+    "sentiment": "neutral",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "adb32dd7def2b7a76ae59a619e073a4d265a98ab994be3afd2f2168910ac4ea2",
+    "technicals.json": "e0e8a6b13c2ed52071a82236365661cdaf59abe5d937d4e756b0a8f84eb3dd43",
+    "price_history.csv": "ce4e0eaf6ab7ea3a15635a48defb1ac37aed525220c9778dc35e63f766f5be44"
+  }
+}

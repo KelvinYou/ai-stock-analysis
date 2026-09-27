@@ -1,0 +1,82 @@
+{
+  "ticker": "UNH",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.2727,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: Raised guidance is positive evidence but claims and reserves needed to validate it are absent. Neither side can establish the quality of the recovery from industrial ratios. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: UnitedHealth's guidance improvement supports recovery, but medical-cost and reserve evidence remains crucial to thin margins. Heavy-volume downside means the swing setup has not confirmed management's more constructive outlook.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Raised guidance provides dated evidence for a recovery scenario. Validate medical-loss and reserve trends before material exposure; the case is conditional improvement rather than certainty that past pressures have ended. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Raised guidance is relevant evidence for recovery, but a thin net margin makes claims assumptions and reserve adequacy decisive. The bearish conclusion does not assume management is wrong; it requires the evidence that makes the improved outlook robust against medical-cost shocks.",
+  "key_uncertainties": [
+    "Medical-loss ratio, reserve development and regulated capital.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if management cuts the current annual adjusted EPS guidance.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters meet or exceed disclosed adjusted EPS guidance without adverse reserve development.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Claims and reserve data validating raised guidance; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Low beta (0.62) \u2014 historically less sensitive to broad-market moves.",
+      "Sector: Healthcare \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 61.4% over available price history. Projected worst case (2-sigma): ~47.8% from current $379.09.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.27). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "UNH",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Raised guidance is positive evidence but claims and reserves needed to validate it are absent. Neither side can establish the quality of the recovery from industrial ratios.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Raised annual guidance and adjusted EPS of $6.38 give concrete issuer support to the recovery thesis.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if management cuts the current annual adjusted EPS guidance.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters meet or exceed disclosed adjusted EPS guidance without adverse reserve development."
+    ],
+    "evidence_gaps": [
+      "Medical-loss ratio, reserve development and regulated capital.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 24.39x; forward P/E 16.90x",
+      "Raised guidance provides dated evidence for a recovery scenario",
+      "Raised guidance is relevant evidence for recovery, but a thin net margin makes claims assumptions and reserve adequacy decisive"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "buy",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "731e86b9ea94f813b9d83b75d7b393e04c57c05204c01716a97fe575ac69aff3",
+    "technicals.json": "883f892cc1725dc3495ba9776319860a3e84b1abdecd5a49af7661a6fb2b250f",
+    "price_history.csv": "a59878bce665d3665b561e7a02b1a9f8186e6ddc686955340f7c574a79aa2b88"
+  }
+}

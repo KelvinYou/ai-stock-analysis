@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 16.98x; forward P/E 22.76x. Indicated yield 0.26% is not a guaranteed forward payout. Market cap/snapshot net income is 31.32x, materially different; periods, EPS basis and share counts need reconciliation.",
+    "margin_analysis": "gross 59.65%; operating 32.03%; net 32.81%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 14.28%. Snapshot FCF 73266.00m USD. FCF/net income 0.55x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Strong operating margins and cash generation are attractive, but the trailing/forward multiple reversal and earnings-basis mismatch prevent treating 16.98x as established cheapness. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Earnings adjustments, capital spending and regulatory exposure require separate evaluation.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Quoted P/E and market-cap/snapshot-profit differ materially; valuation confidence is reduced."
+    ],
+    "key_strengths": [
+      "32.03% operating margin and low gross debt/equity indicate substantial operating capacity."
+    ],
+    "summary": "Strong operating margins and cash generation are attractive, but the trailing/forward multiple reversal and earnings-basis mismatch prevent treating 16.98x as established cheapness. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "July 22 earnings showed strong revenue growth, but other income included a $98bn net gain primarily from unrealized equity investments. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=13, buy=45, hold=5, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Cloud and advertising",
+      "Investment gains"
+    ],
+    "notable_headlines": [
+      "2026-07-22 https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm"
+    ],
+    "social_sentiment": null,
+    "summary": "Operating growth is constructive while headline net profit substantially overstates recurring earnings momentum. A bullish AI narrative needs separation from investment marks and capex returns. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 338.5: below SMA20 340.89, below SMA50 346.98, above SMA200 336.38. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 44.4617,
+    "rsi_assessment": "RSI14 44.5: weak but not oversold.",
+    "macd_assessment": "MACD line -3.5523, signal -3.1509, histogram -0.4013: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 24,677,500; ratio 1.08x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      327.74,
+      333.22
+    ],
+    "resistance_levels": [
+      342.98,
+      343.53
+    ],
+    "summary": "The rebound reclaimed SMA200, but SMA50 overhead and negative MACD keep this a recovery attempt rather than a confirmed resumed uptrend. As of 2026-09-11, ATR14 is 7.32 (2.2% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 17.1%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Advertising demand is cyclical; AI capital expenditure changes cash-flow duration.",
+      "International revenue translates with FX; regulation and cross-border data rules are scenario risks."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Alphabet Inc.: Advertising demand is cyclical; AI capital expenditure changes cash-flow duration. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

@@ -1,26 +1,21 @@
 {
   "ticker": "META",
-  "judged_view": "buy",
+  "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "The bull carried the debate narrowly because Meta's exceptional margins, free cash flow, leverage, and forward P/E discount provide a stronger base than the price action suggests. The ruling remains low confidence: AI-capex returns, settlement costs, and missing technical structure make this a monitoring bias rather than a precise trade instruction.",
-  "winning_side": "bull",
-  "strongest_counterexample": "If AI spending fails to create incremental revenue while settlement payments and restrictions reduce platform economics, the 16.96x forward P/E can represent deteriorating earnings rather than undervaluation.",
+  "thesis": "Neutral: the financial snapshot is strong, but RSI 84.56 and an unusually extended short-term move make trend continuation risk/reward uncertain; product adoption is unquantified. The financial snapshot contains measured levels, but a single period cannot establish trends.",
+  "winning_side": "neither",
+  "strongest_counterexample": "Neutral: the financial snapshot is strong, but RSI 84.56 and an unusually extended short-term move make trend continuation risk/reward uncertain; product adoption is unquantified. A later dated comparative filing or sustained price confirmation could change the ruling.",
   "invalidation_conditions": [
-    "Operating margin falls below 35% for two consecutive reported quarters.",
-    "Trailing FCF falls below $35B for two consecutive Layer 1 refreshes.",
-    "AI investment is followed by two quarters of revenue growth below 10% without margin improvement.",
-    "Settlement costs or restrictions cause a material downward revision to earnings expectations."
+    "A sustained hold above the observed 20-bar high of $763.90 followed by dated adoption or monetization evidence would weaken the overextension concern."
   ],
   "evidence_gaps": [
-    "SMA/RSI/Bollinger/ATR/support/resistance are unavailable after the non-finite 2026-08-28 bar.",
-    "Layer 1 has no incremental AI-revenue bridge or capex-return schedule.",
-    "Exact settlement payment conditions and operating impact require primary-company confirmation."
+    "Dated financial statement periods are absent.",
+    "No company-specific Muse/smart-glasses adoption or monetization data.",
+    "Dated analyst recommendations are not supplied."
   ],
   "decisive_factors": [
-    "82.0% gross margin and 41.4% operating margin.",
-    "$46.1B FCF with approximately 38.6% debt/equity.",
-    "16.96x forward P/E versus 22.33x trailing P/E.",
-    "Available EMA/MACD rebound evidence tempered by incomplete technical coverage."
+    "The snapshot reports 41.4% operating margin, 30.1% net margin, FCF $46.11B (22.9% of revenue), and debt/equity 0.39. These support positive fundamentals at the observed level, but do not validate recent product adoption or trends.",
+    "The last 5/20/60 bars show a sharp advance above both moving averages with positive MACD and above-average volume, but RSI is 84.56 and the 252-bar return remains slightly negative. Trend is positive while entry timing risk is high."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

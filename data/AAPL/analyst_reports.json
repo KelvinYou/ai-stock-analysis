@@ -1,72 +1,62 @@
 {
   "fundamentals": {
-    "signal": "buy",
-    "confidence": "medium",
-    "pe_assessment": "Trailing P/E is 37.31x and forward P/E is 34.06x. The small forward discount provides limited valuation support, so the premium requires continued earnings quality and successful execution through the leadership transition.",
-    "margin_analysis": "Gross margin is 46.9%, operating margin 32.0%, and net margin 26.9% on $416.2B revenue. These are strong margins for a hardware/services mix.",
-    "debt_analysis": "$98.7B debt versus $73.7B equity is approximately 133.8% debt/equity, but $98.8B free cash flow is similar to net income and provides meaningful coverage. Leverage is a monitoring item, not evidence of distress.",
-    "growth_outlook": "Revenue of $416.2B, net income of $112.0B, and free cash flow of $98.8B support a durable base. The Layer 1 recommendation mix is mixed (25 buy-or-better, 13 hold, 6 sell-or-worse), so growth optimism is not unanimous.",
-    "key_risks": [
-      "37.31x trailing P/E leaves limited room for execution misses.",
-      "Debt/equity of approximately 133.8% is high despite strong cash flow.",
-      "CEO transition and AI execution create near-term continuity and roadmap risk.",
-      "Forward P/E remains close to trailing P/E."
-    ],
-    "key_strengths": [
-      "26.9% net margin and 32.0% operating margin.",
-      "$98.8B free cash flow against $112.0B net income.",
-      "Large, diversified hardware and services ecosystem.",
-      "Strong absolute scale and cash generation."
-    ],
-    "summary": "Apple's financial quality supports a modest buy bias, but the 37.31x P/E and small forward discount leave little room for execution error. Strong cash flow offsets the high debt/equity ratio, while the leadership and AI transition cap confidence."
-  },
-  "sentiment": {
     "signal": "neutral",
     "confidence": "medium",
-    "news_tone": "mixed",
-    "news_summary": "Layer 1 news fields are empty, so dated public coverage was used. John Ternus took over as CEO on 2026-09-01 and coverage reported a positive initial share reaction, but the transition leaves AI and product execution unresolved. Layer 1 recommendations are constructive but not dominant: 6 strong buy, 19 buy, 13 hold, 3 sell, and 3 strong sell.",
+    "pe_assessment": "Reported P/E is 38.60 and forward P/E is 35.15; without a peer benchmark, the multiples cannot establish overvaluation.",
+    "margin_analysis": "The snapshot reports gross margin 46.9%, operating margin 32.0%, and net margin 26.9%; no multi-period trend is available.",
+    "debt_analysis": "Reported debt/equity is 1.34; cash balance and debt maturities are not supplied.",
+    "growth_outlook": "One snapshot reports revenue $416.16B, net income $112.01B, and FCF $98.77B (23.7% of revenue). Growth cannot be inferred.",
+    "key_risks": [
+      "Statement periods and peer valuation comparisons are absent.",
+      "Debt exceeds reported equity; the packet does not include cash or maturity detail.",
+      "The AI-cost opinion headline has no supporting figures in the packet."
+    ],
+    "key_strengths": [
+      "Positive reported margins and substantial free cash flow in the single snapshot."
+    ],
+    "summary": "The snapshot reports operating margin 32.0% and FCF $98.77B (23.7% of revenue), offset by debt/equity of 1.34 and P/E 38.60 without peer context. The high-level data support a balanced rather than directional fundamental view."
+  },
+  "sentiment": {
+    "signal": "sell",
+    "confidence": "low",
+    "news_tone": "mixed to negative",
+    "news_summary": "A 2026-09-24 Simply Wall St. headline says Apple could be 32% overpriced after AI cost warnings; this is an opinion headline, not a verified valuation or cost measure. Other packet items concern Meta's glasses and broad tech narratives. No dated analyst-recommendation evidence is included in the current packet.",
     "key_themes": [
-      "CEO succession",
-      "AI execution and product roadmap",
-      "Services-driven profitability",
-      "Positive initial reaction with unresolved execution risk"
+      "AI-related cost and valuation concern; wearables competition; mixed tech coverage"
     ],
     "notable_headlines": [
-      "Tim Cook's golden Apple \u2014 https://www.axios.com/2026/09/01/apple-ceo-cook-stock",
-      "Apple shares rise as John Ternus takes over \u2014 https://au.finance.yahoo.com/quote/AAPL/latest-news/",
-      "Apple's new CEO compensation coverage \u2014 https://au.finance.yahoo.com/quote/AAPL/latest-news/"
+      "2026-09-24 Simply Wall St.: Apple stock could be 32% overpriced after fresh AI cost warnings (opinion headline; underlying figures are absent).",
+      "2026-09-24 Barron's: Meta puts Apple firmly in its sights with new VR glasses."
     ],
     "social_sentiment": null,
-    "summary": "Sentiment is mixed: the CEO handoff was initially received positively, but AI and roadmap uncertainty remains and the recommendation panel contains a meaningful hold and sell minority."
+    "summary": "A 2026-09-24 Simply Wall St. headline says Apple could be 32% overpriced after AI cost warnings; this is an opinion headline, not a verified valuation or cost measure. Other packet items concern Meta's glasses and broad tech narratives. No dated analyst-recommendation evidence is included in the current packet."
   },
   "technical": {
     "signal": "buy",
-    "confidence": "low",
-    "trend": "Constructive but low confidence: the 2026-09-02 close of $324.74 is above non-null EMA-20 of $314.4961 and MACD is positive. SMA-20/50/200, RSI, Bollinger Bands, ATR, and support/resistance are unavailable after the non-finite 2026-08-28 bar.",
+    "confidence": "medium",
+    "trend": "Positive: close $337.02 was 4.86% above SMA-50 and 17.52% above SMA-200; 20/60/252-bar returns were +8.75%, +19.72%, and +32.09%.",
     "rsi_14": null,
-    "rsi_assessment": "Unavailable: RSI-14 is null in the 2026-09-02 Layer 1 snapshot; no overbought/oversold conclusion is assigned.",
-    "macd_assessment": "MACD line 1.4742 is above signal line -0.1593, with histogram +1.6335, indicating improving momentum. Missing averages and RSI prevent a complete trend conclusion.",
-    "volume_assessment": "Volume ratio is 0.1389 versus the 20-day average; the low ratio does not confirm the price move.",
-    "support_levels": [],
-    "resistance_levels": [],
-    "summary": "Available EMA/MACD fields lean bullish, but technical confidence is low and no support/resistance levels are inferred from null fields."
+    "rsi_assessment": "RSI-14 was 62.44, firm but below the conventional 70 overbought threshold.",
+    "macd_assessment": "MACD histogram was +1.195, supporting positive momentum.",
+    "volume_assessment": "Latest volume was 0.73x its 20-bar average, so the advance lacks above-average volume confirmation on the latest bar.",
+    "support_levels": [
+      308.8,
+      280.4581
+    ],
+    "resistance_levels": [
+      345.34
+    ],
+    "summary": "Price is above SMA-50 and SMA-200, momentum returns are positive, RSI is firm but below 70, and MACD is positive. The latest volume is below average and price is close to the observed 52-week high, so the technical case is positive but not low-risk."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "The 2026-07-29 FOMC statement maintained the federal-funds target range at 3.50%-3.75% by a 9-3 vote; three voters preferred a 25bp increase. It also said inflation remains elevated relative to 2% and cited Middle East conflict uncertainty. For this company, the elevated-rate backdrop is a valuation/cost-of-capital consideration rather than a complete operating signal.",
-    "interest_rate_outlook": "BNM maintained OPR at 2.75% on 2026-07-09 and described resilient growth while flagging tighter global financial conditions, valuation concerns, and conflict-related inflation and supply risks. The supplied statements support a stable but uncertain policy backdrop; they do not justify assuming imminent easing or tightening.",
-    "fx_impact": "For a MYR-based investor, USD assets translate using BNM FMIP reported KL USD/MYR at 4.0420 as of 2026-09-02. A stronger USD can lift MYR value of a USD holding but can pressure international revenue translated back into USD; this single fixing does not establish a trend. Sources: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm; https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026; https://financialmarkets.bnm.gov.my/about-myor-myor-i.",
-    "sector_macro_factors": [
-      "Premium consumer demand can soften if higher rates reduce discretionary spending.",
-      "Cash generation and services mix provide insulation from financing conditions.",
-      "USD/MYR affects MYR translation more directly than it establishes an Apple operating signal."
-    ],
-    "geopolitical_risks": [
-      "FOMC and BNM identify conflict, energy, and supply shocks as uncertainties.",
-      "Global hardware supply-chain and trade-policy exposure remains structural; no new dated shock is assumed."
-    ],
-    "summary": "Macro/FX is neutral with a mild valuation headwind from the elevated Fed range. Strong cash flow offsets part of the rate sensitivity; 4.0420 USD/MYR mainly affects MYR translation."
+    "confidence": "low",
+    "fed_impact": "The supplied macro context says the Fed target range was 3.75%-4.00%, effective 2026-09-17, after a 25 bp increase announced 2026-09-16. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm. The ticker packet has no dated issuer-specific macro snapshot, so net company impact is undetermined.",
+    "interest_rate_outlook": "No forward rate path is supplied; no forecast is assigned.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "Macro evidence is limited to the supplied Fed snapshot; no company-specific effect, FX direction, or forward policy view is inferred. Signal remains neutral with low confidence."
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

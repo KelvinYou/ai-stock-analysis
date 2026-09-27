@@ -2,26 +2,22 @@
   "ticker": "1155",
   "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "The debate supports a value-oriented watch rather than a confirmed entry. Current profitability, a 6.25% reported yield, and reasonable P/E multiples make the bull case credible, but the price remains below its moving averages and the bank-specific evidence needed to test earnings and capital quality is absent. The zero-filled tail further weakens confidence in technical confirmation.",
+  "thesis": "Neutral is appropriate: a supplied 6.11% yield and moderate P/E do not outweigh the price below SMA-50/200 and the dated earnings-miss headline. The financial snapshot has no period date and bank credit/capital evidence is missing.",
   "winning_side": "neither",
-  "strongest_counterexample": "The bear case may be too conservative if the missing fields are merely an ingestion gap: low beta, current profitability, a 6.25% yield, neutral RSI, and a positive MACD histogram could support a defensive rebound or re-rating once clean price data and stable NIM, NPL, and CET1 figures are confirmed.",
+  "strongest_counterexample": "The bull case is supported by the 6.11% indicated yield and lower forward P/E, together with RSI 24.8 near the observed 20/60-bar low.",
   "invalidation_conditions": [
-    "Reported net income declines by more than 10% year over year for two consecutive quarters or the dividend is cut.",
-    "NIM contracts by more than 15 basis points year over year for two consecutive quarters, or the reported NPL ratio rises by more than 50 basis points from its latest disclosed baseline.",
-    "CET1 falls below the bank's disclosed internal or regulatory capital buffer, after clean quarterly data is available.",
-    "A valid, non-zero-volume close below MYR10.4823 is sustained for three sessions, or a valid close above SMA-50 and SMA-200 for five sessions changes the neutral setup into a directional review."
+    "A future dated report showing sustained revenue and earnings recovery would weaken the neutral view.",
+    "A persistent close below the observed 20/60-bar low would strengthen the technical bear case."
   ],
   "evidence_gaps": [
-    "NIM, NPL, CET1, ROE, provisioning, loan/deposit growth, liquidity, and dividend coverage.",
-    "A bank-appropriate interpretation of free cash flow and capital generation.",
-    "Valid OHLC and volume fields for the final three rows, plus a trustworthy 52-week low and ATR.",
-    "Usable dated news and company-specific geographic exposure to rate, FX, and geopolitical shocks."
+    "Financial snapshot lacks fiscal-period and availability dates.",
+    "No bank asset-quality, capital-adequacy or dividend-coverage measures.",
+    "No USD/MYR snapshot; the current recommendation feed has no dated ratings and was excluded."
   ],
   "decisive_factors": [
-    "12.18x trailing P/E, 11.43x forward P/E, 6.25% reported dividend yield, and 37.7% reported net margin.",
-    "Close below SMA-20, SMA-50, and SMA-200, with neutral RSI and only a small positive MACD histogram.",
-    "Missing bank-specific risk evidence and zero-filled recent market-data fields.",
-    "Official macro facts are stable but not sufficiently specific to resolve Maybank's NIM, credit, or FX exposure."
+    "Price is below SMA-50 and SMA-200 with negative 20/60-bar returns.",
+    "The 2026-05-31 dated headline reports an earnings miss and weaker revenue.",
+    "The yield and valuation do not resolve missing credit-quality evidence."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

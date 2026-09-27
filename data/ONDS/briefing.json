@@ -1,34 +1,33 @@
 {
   "ticker": "ONDS",
-  "date": "2026-09-03",
-  "overall_signal": "buy",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "sell",
   "conviction": {
-    "score": 0.28,
-    "signal_convergence": 0.6,
-    "explanation": "Fundamentals and sentiment are medium-confidence buy, technicals are low-confidence sell, and macro is low-confidence neutral. The confidence-weighted convergence is 0.60, but conviction is held to +0.28 because current Layer 1 profitability and cash flow are deeply negative, the newer Q2 guidance must be reconciled with the trailing snapshot, technical momentum is bearish, and ATR/rolling indicators are unavailable. This is a conditional growth thesis below the deterministic level-quoting threshold."
+    "score": -0.2,
+    "signal_convergence": 0.5,
+    "explanation": "Consensus-capped research conviction for the sell thesis, not a probability or backtested expected return. I retain the research-manager ruling: Same-portfolio growth is material, but profitability and financing through deployment remain unestablished. The bull does not quantify returns sufficient to outweigh losses and valuation. The adverse operating/valuation case is supported but counterevidence and data limitations prevent a strong-sell claim. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
   },
-  "executive_summary": "Ondas has the strongest operating-catalyst narrative of the four assigned names. Its official Q2 2026 release reported record $83.8M revenue, $175M of Q2 orders, approximately $613M reported backlog ($757M pro forma), raised FY2026 revenue guidance of $525M-$550M, and substantial reported liquidity. The Layer 1 recommendation panel is also uniformly buy/strong-buy. These facts support a constructive long-term growth case.\n\nThe final signal is a low-conviction buy, not an actionable breakout call. The existing Layer 1 financial snapshot is still deeply loss-making with -$40.885M free cash flow and -260.2334% net margin, price is below EMA-20 with a negative MACD histogram, volume is only 0.1019x the stored average, and the non-finite 2026-08-28 bar removes RSI, SMAs, Bollinger Bands, and ATR. RiskChecker therefore emits no precise levels; backlog conversion, margin improvement, and a repaired finite technical snapshot are required for higher confidence.",
-  "bull_case": "Record Q2 revenue, new orders, backlog, raised guidance, reported liquidity, and uniformly positive small-sample recommendations indicate a possible defense/autonomous-systems scale-up. If backlog converts and acquisitions integrate, the current trailing loss profile could improve rapidly.",
-  "bear_case": "The current Layer 1 snapshot remains pre-profit with negative cash flow, deeply negative operating/net margins, and a valuation roughly 86x supplied trailing revenue. Price and MACD are bearish, volume is very light, and the lack of finite ATR/rolling indicators prevents precise risk control; guidance remains an expectation until audited conversion appears.",
+  "executive_summary": "SELL: Ondas has underlying demand evidence beyond acquisition-only growth, but losses and cash consumption still require profitable conversion. The bearish price structure offers no confirmation that this commercial progress is sufficient for an attractive swing entry.\n\nUnfavorable for fresh swing exposure on the supplied evidence; this research label is not an instruction to short or to liquidate an existing holding without portfolio context. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Same-portfolio growth and raised targets substantiate more than acquisition-only expansion. Cash runway and deployment margins must convert commercial momentum into shareholder economics; the resulting bull remains explicitly conditional. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "The pro forma same-portfolio growth measure is stronger evidence than raw acquisition-driven sales alone. Even that growth must translate into profitable cash conversion, and backlog plus raised targets cannot verify runway or the returns on acquired capital.",
   "key_uncertainties": [
-    "Backlog conversion into recognized revenue and free cash flow",
-    "Post-acquisition gross-margin and operating-margin trajectory",
-    "Future equity issuance, acquisition funding, and dilution",
-    "Whether price can reclaim EMA-20 with positive MACD and stronger volume",
-    "Whether technical indicators become finite after the 2026-08-28 source-bar issue is resolved"
+    "Acquisition cash returns, deployment margin and unrestricted runway.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating cash flow.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating margin.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote."
   ],
   "catalysts_upcoming": [
-    "Next quarterly report showing backlog conversion and margin improvement",
-    "Execution against the $525M-$550M FY2026 revenue guide",
-    "A repaired finite technical snapshot with high-volume reclaim of the $8.2649 EMA-20 area"
+    "Observation trigger, not a dated scheduled event: Deployment margins, funded execution and organic profit conversion; no event date verified."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "High beta (2.75) \u2014 price may amplify broad-market moves.",
+      "High beta (2.74) \u2014 price may amplify broad-market moves.",
       "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 97.8% over available price history. Projected worst case (2-sigma): ~nan% from current $7.29.",
-    "risk_reward_ratio": null
+    "max_drawdown_scenario": "Historical max drawdown: 97.8% over available price history. Projected worst case (2-sigma): ~164.7% from current $7.23.",
+    "risk_reward_ratio": "N/A (bearish signal)"
   },
   "action_plan": {
     "entry_limit": null,
@@ -39,38 +38,45 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.28, convergence 0.60). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction -0.20, convergence 0.50). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "ONDS",
-    "judged_view": "buy",
+    "judged_view": "sell",
     "confidence": "low",
-    "thesis": "The bull carried the debate narrowly because the official Q2 release supplies concrete evidence of revenue, orders, backlog, guidance, and liquidity, and the Layer 1 recommendation panel is uniformly positive. The ruling remains low confidence: current Layer 1 margins and free cash flow are deeply negative, the valuation embeds substantial execution, and technical momentum is bearish with core risk fields unavailable.",
-    "winning_side": "bull",
-    "strongest_counterexample": "The reported growth may not convert to cash or profit after acquisition costs and integration, while price below EMA-20 and a negative MACD histogram show the market is not currently confirming the bull thesis.",
+    "thesis": "Same-portfolio growth is material, but profitability and financing through deployment remain unestablished. The bull does not quantify returns sufficient to outweigh losses and valuation.",
+    "winning_side": "bear",
+    "strongest_counterexample": "Pro forma same-portfolio growth of 85% and raised targets show that expansion is not merely acquisition arithmetic.",
     "invalidation_conditions": [
-      "FY2026 revenue guidance of $525M-$550M is materially reduced or backlog fails to convert into recognized revenue over the next two reported quarters",
-      "Operating margin remains below -50% and free cash flow remains negative while dilution increases",
-      "The next finite technical snapshot remains below EMA-20 with negative MACD and price breaks below the recent $7.04 support area"
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating cash flow.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating margin."
     ],
     "evidence_gaps": [
-      "No usable dated Layer 1 news headlines",
-      "No backlog-conversion, acquisition-integration, or forward-margin trend in Layer 1",
-      "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
-      "No dated forward Fed path"
+      "Acquisition cash returns, deployment margin and unrestricted runway.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
     ],
     "decisive_factors": [
-      "Official Q2 record revenue, orders, backlog, raised FY2026 guidance, and reported liquidity",
-      "Uniform 2 strong-buy/7 buy Layer 1 recommendation panel",
-      "Negative Layer 1 net income, free cash flow, and operating/net margins",
-      "Price below EMA-20 with negative MACD and 0.1019x volume ratio"
+      "Trailing P/E unavailable because the snapshot is loss-making; negative forward P/E denotes expected losses, not cheapness",
+      "Same-portfolio growth and raised targets substantiate more than acquisition-only expansion",
+      "The pro forma same-portfolio growth measure is stronger evidence than raw acquisition-driven sales alone"
     ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "buy",
+    "fundamentals": "sell",
     "sentiment": "buy",
     "technical": "sell",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "0e36b989bd95d1500be730a3ecb143fd8e922ed226fd3f08218a0e873ba01b8c",
+    "technicals.json": "c98e4708f5766c8b0843338acc061a89c9a3cf47b4b284c19e86147dffaf5930",
+    "price_history.csv": "206032e2cfd6aa460ac8e13fa8d3dc92876d002e642e642863a26b1fad35b489"
+  }
 }

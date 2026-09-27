@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 27.63x; forward P/E 14.02x. Indicated yield 0.46% is not a guaranteed forward payout. Market cap/snapshot net income is 43.90x, materially different; periods, EPS basis and share counts need reconciliation.",
+    "margin_analysis": "gross 71.07%; operating 60.38%; net 55.60%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 7.02%. Snapshot FCF 96676.00m USD. FCF/net income 0.81x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Exceptional margins and cash generation are compelling, but the quoted 14.02x forward multiple and mismatched earnings bases need reconciliation before asserting a bargain. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Forward estimates may embed rapid growth vulnerable to AI spending concentration and competition.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Quoted P/E and market-cap/snapshot-profit differ materially; valuation confidence is reduced."
+    ],
+    "key_strengths": [
+      "60.38% operating margin, strong cash generation and low gross leverage support business quality."
+    ],
+    "summary": "Exceptional margins and cash generation are compelling, but the quoted 14.02x forward multiple and mismatched earnings bases need reconciliation before asserting a bargain. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "August 26: Nvidia reported Q2FY27 revenue of $96.2bn, up 106% year on year, driven by AI infrastructure demand. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=10, buy=48, hold=2, sell=1, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "AI infrastructure demand",
+      "Rapid revenue growth"
+    ],
+    "notable_headlines": [
+      "2026-08-26 https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+    ],
+    "social_sentiment": null,
+    "summary": "Dated results substantiate the strong demand narrative. With bullish expectations already prominent, growth delivery and customer economics matter more than assuming good news implies undervaluation. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 218.29: below SMA20 219.94, above SMA50 212.36, above SMA200 197.11. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 52.568,
+    "rsi_assessment": "RSI14 52.6: neutral-to-firm.",
+    "macd_assessment": "MACD line 2.6048, signal 3.1119, histogram -0.5071: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 88,804,100; ratio 0.70x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      217.2,
+      218.15
+    ],
+    "resistance_levels": [
+      222.0,
+      225.93
+    ],
+    "summary": "Four consecutive declines have brought price below SMA20 while SMA50 and SMA200 remain underneath; the longer trend survives but short-term momentum is deteriorating. As of 2026-09-11, ATR14 is 7.67 (3.5% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 7.5%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "AI infrastructure capital budgets and semiconductor cycles drive demand sensitivity.",
+      "Export controls and concentrated advanced-chip manufacturing are structural risks; no new rule asserted."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "NVIDIA Corporation: AI infrastructure capital budgets and semiconductor cycles drive demand sensitivity. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

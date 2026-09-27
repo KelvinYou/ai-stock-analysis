@@ -1,77 +1,83 @@
 {
   "ticker": "0166",
-  "date": "2026-09-03",
-  "overall_signal": "neutral",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-14",
+  "overall_signal": "sell",
   "conviction": {
-    "score": 0.0,
-    "signal_convergence": 0.3,
-    "explanation": "The analyst layers are high-divergence: fundamentals are sell on the latest earnings deterioration and valuation, technicals are buy on moving-average and MACD alignment but low confidence because volume is zero, while sentiment and macro are neutral. The balance-sheet strength is real, but the directional thesis depends on an unproven earnings recovery, so conviction is deliberately near zero and precise levels should not be used."
+    "score": -0.45,
+    "signal_convergence": 0.5455,
+    "explanation": "Consensus-capped research conviction for the sell thesis, not a probability or backtested expected return. I retain the research-manager ruling: RF demand weakness is independent of the fire provision, while valuation embeds a substantial recovery. Removing an exceptional charge does not establish that recovery. The adverse operating/valuation case is supported but counterevidence and data limitations prevent a strong-sell claim. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
   },
-  "executive_summary": "INARI\u2019s supplied balance sheet is robust: RM14.682m debt against RM2.764bn equity, positive supplied free cash flow of RM209.269m, and a 16.2% net margin. The technical snapshot is constructive, with RM2.55 above SMA-20/SMA-50/SMA-200 and a positive MACD histogram. The recovery case is therefore plausible.\n\nThe problem is evidence and price. The latest 4QFY2026 filing reported revenue down to RM288.942m and attributable profit down to RM6.146m from RM49.169m, while the supplied trailing P/E is 85.0x and the forward P/E of 28.934528x assumes a large rebound. With zero latest volume, a null 52-week-low-derived field, a disclosed Philippines fire, and no reconciled explanation for the earnings decline, the final signal is neutral/low-confidence pending operational and earnings confirmation. Macro context\u2014Fed 3.50%-3.75%, BNM OPR 2.75%, USD/MYR 4.0420\u2014does not resolve the company-specific question.",
-  "bull_case": "INARI has the financial capacity to wait through a cyclical setback: leverage is approximately 0.5% of equity, supplied free cash flow is positive, and semiconductor/OSAT exposure could benefit from renewed technology spending. If the latest profit decline is temporary, 28.934528x forward P/E and the bullish moving-average alignment could support a recovery.",
-  "bear_case": "The earnings recovery is not yet demonstrated. 4QFY2026 revenue declined year over year and attributable profit fell approximately 87.5%, while 85.0x trailing earnings leaves little room for another miss. Near-high price without volume, the disclosed Philippines facility fire, and the mismatch between supplied trailing data and latest reported figures make a directional buy premature.",
+  "executive_summary": "SELL: Inari's low debt helps it withstand disruption, but RF demand weakness remains after removing the fire provision. Its earnings-recovery valuation and extended longer trend make immediate fresh exposure difficult to justify.\n\nUnfavorable for fresh swing exposure on the supplied evidence; this research label is not an instruction to short or to liquidate an existing holding without portfolio context. Technical observations as of 2026-09-14 include a potentially intraday Malaysian bar; price and volume confirmation remain provisional. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Low debt and positive cash flow provide financial flexibility. At 86x earnings, financial flexibility alone is insufficient; an operating recovery must be observed before this speculative bull scenario becomes investable. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Separating the fire provision is correct, and financial flexibility reduces financing risk. RF loading weakness remains independent of that adjustment, however, so the 86x-to-29.27x earnings recovery cannot be justified by removing one exceptional cost.",
   "key_uncertainties": [
-    "The supplied financial snapshot does not reconcile cleanly with the latest 4QFY2026 cumulative filing; the current earnings base needs confirmation.",
-    "The cause and duration of the latest profit decline and the quantified impact of the Philippines fire are not available.",
-    "Latest volume is 0 versus a 20-day average of 19,747,810, so the bullish chart lacks confirmation.",
-    "The supplied 52-week-low field is 0.0 and its derived percentage is null; no low-based technical conclusion is made.",
-    "Forward earnings estimates, customer/product mix, and currency exposure are not in Layer 1."
+    "RF utilization, fire-normalized earnings and dated forward EPS.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of year-on-year RF revenue growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive normalized EPS growth excluding identified fire charges.",
+    "Technical observations as of 2026-09-14 include a potentially intraday Malaysian bar; price and volume confirmation remain provisional.",
+    "Recent source CSV contains zero-volume rows; supplied indicators include them, which may distort rolling averages. All last-25 OHLC rows were present and positive."
   ],
   "catalysts_upcoming": [
-    "Next quarterly result showing whether revenue and attributable profit recover year over year.",
-    "Disclosure of the Philippines facility\u2019s operational/financial recovery and insurance status.",
-    "Continued semiconductor, RF, datacom, and OSAT demand recovery.",
-    "A move above RM2.6181 with usable volume would strengthen the technical case; a break below SMA-200 at RM1.9120 would weaken it."
+    "Observation trigger, not a dated scheduled event: RF loading recovery and separation of exceptional fire costs; no event date verified."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 68.6% over available price history. Projected worst case (2-sigma): ~84.4% from current $2.55.",
-    "risk_reward_ratio": null
+    "max_drawdown_scenario": "Historical max drawdown: 68.6% over available price history. Projected worst case (2-sigma): ~82.2% from current MYR 2.58.",
+    "risk_reward_ratio": "N/A (bearish signal)"
   },
   "action_plan": {
     "entry_limit": null,
-    "entry_rationale": null,
-    "stop_loss": null,
-    "stop_rationale": null,
-    "take_profit_1": null,
-    "take_profit_2": null,
-    "target_rationale": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 2.8,
+    "stop_rationale": "Thesis invalidated if price breaks above MYR 2.80.",
+    "take_profit_1": 2.58,
+    "take_profit_2": 2.2,
+    "target_rationale": "Primary: reduce/exit at/near current MYR 2.58. Next downside watch: MYR 2.20 (nearest support).",
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.30). Wait for a clearer setup."
+    "note": "September14 input may be intraday; confirm completed-session data before acting."
   },
   "research_verdict": {
     "ticker": "0166",
-    "judged_view": "neutral",
-    "confidence": "low",
-    "thesis": "Neither side carried the debate decisively. INARI has the balance sheet and technical structure to support an earnings recovery, but the latest 4QFY2026 profit collapse and 85.0x trailing valuation make the forward P/E too assumption-dependent to underwrite a directional call. The evidence supports waiting for reported recovery and usable price/volume confirmation.",
-    "winning_side": "neither",
-    "strongest_counterexample": "The neutral ruling could be too cautious if the weak quarter was a contained operational or product-mix event: even a partial earnings rebound would make 28.934528x forward P/E look conservative, and the bullish moving-average alignment could precede a re-rating.",
+    "judged_view": "sell",
+    "confidence": "medium",
+    "thesis": "RF demand weakness is independent of the fire provision, while valuation embeds a substantial recovery. Removing an exceptional charge does not establish that recovery.",
+    "winning_side": "bear",
+    "strongest_counterexample": "Minimal debt and positive cash flow provide capacity to withstand weakness; the fire charge is a material non-routine profit drag.",
     "invalidation_conditions": [
-      "The next two reported quarters each show year-over-year revenue and attributable-profit growth, with operating margin recovering toward or above the supplied 14.0% level.",
-      "Price reclaims and holds above the supplied 52-week high of RM2.6181 with usable volume confirmation while forward earnings estimates remain intact.",
-      "Attributable profit remains below RM10m for two consecutive quarters or the close falls below SMA-200 at RM1.9120, invalidating the recovery setup."
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of year-on-year RF revenue growth.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive normalized EPS growth excluding identified fire charges."
     ],
     "evidence_gaps": [
-      "No usable dated Layer 1 headlines or publisher metadata; sentiment required external supplementation.",
-      "The cause, quantified cost, insurance recovery, and operating impact of the Philippines facility fire are not in the supplied package.",
-      "The supplied trailing financial snapshot does not reconcile cleanly with the latest 4QFY2026 cumulative filing.",
-      "Customer/product mix, currency exposure, and the earnings impact of the terminated joint acquisition are unavailable.",
-      "Latest volume is zero and the 52-week-low-derived technical fields are null."
+      "RF utilization, fire-normalized earnings and dated forward EPS.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
     ],
     "decisive_factors": [
-      "Latest 4QFY2026 attributable profit of RM6.146m versus RM49.169m a year earlier.",
-      "85.0x supplied trailing P/E versus 28.934528x forward P/E.",
-      "Very low leverage and positive supplied free cash flow provide a credible recovery foundation.",
-      "Bullish moving-average/MACD alignment is offset by near-high positioning and absent volume confirmation."
+      "Quoted trailing P/E 86.00x; forward P/E 29.27x",
+      "Low debt and positive cash flow provide financial flexibility",
+      "Separating the fire provision is correct, and financial flexibility reduces financing risk"
     ]
   },
   "agent_signal_breakdown": {
     "fundamentals": "sell",
-    "sentiment": "neutral",
-    "technical": "buy",
+    "sentiment": "sell",
+    "technical": "neutral",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound.",
+    "September14 observations may be intraday; zero-volume rows can distort technical indicators."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "38d09be235b766267a5d68a2e0d23fe73660c090f0c06a5cb9b5c2919b204caa",
+    "technicals.json": "13618a5ac30753b2ad3542005fc62f362c37412887cb46d929fa272bfe1fa41b",
+    "price_history.csv": "6a89f5b5bafa74f7aaea9049e973e89724a423a6c83fbd3507f4ccf908b599aa"
+  }
 }

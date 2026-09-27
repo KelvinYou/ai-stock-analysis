@@ -1,0 +1,81 @@
+{
+  "ticker": "V",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.2727,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: Growth and cash conversion support a durable network, but neither values the premium relative to future transaction economics. Technical recovery does not resolve fair value. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: Visa's high margins and cash conversion support business quality, but a premium valuation needs durable growth. The longer price trend is constructive while short-term momentum remains mixed, leaving a balanced swing view.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "High operating margins and positive cash conversion support business quality. The justified premium still needs a growth scenario and regulatory review; constructive longer averages support disciplined exposure only after that valuation work. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Steady EPS growth and exceptional margins support a durable network, but a 31.55x multiple must be justified by forward growth after regulation and spending sensitivity. Treating quality as sufficient for entry skips the expected-return question.",
+  "key_uncertainties": [
+    "Current transaction mix, regulatory sensitivity and dated growth valuation.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative year-on-year payment-volume growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of adjusted EPS growth above 15% and positive FCF growth.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Transaction growth and earnings delivery with repaired momentum; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Financial Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 36.4% over available price history. Projected worst case (2-sigma): ~39.9% from current $370.45.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.27). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "V",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Growth and cash conversion support a durable network, but neither values the premium relative to future transaction economics. Technical recovery does not resolve fair value.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Adjusted EPS rose 11% and margins and cash conversion are exceptional, supporting continued compounding.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative year-on-year payment-volume growth.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of adjusted EPS growth above 15% and positive FCF growth."
+    ],
+    "evidence_gaps": [
+      "Current transaction mix, regulatory sensitivity and dated growth valuation.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 31.55x; forward P/E 24.69x",
+      "High operating margins and positive cash conversion support business quality",
+      "Steady EPS growth and exceptional margins support a durable network, but a 31.55x multiple must be justified by forward growth after regulation and spending sensitivity"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "9fcb3afbe5eb238cf50bbbaf394e128dae8773f2e7db3e18973013783c72a30d",
+    "technicals.json": "baea1676527bf1152e0661968498e52c585cd77f6c5bf6a2f730af1901b873a0",
+    "price_history.csv": "08902bbf8baf8113add60c3f70aa0474ece7b026c54a517bacbad9c79c79c477"
+  }
+}

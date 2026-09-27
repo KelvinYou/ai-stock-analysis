@@ -2,25 +2,19 @@
   "ticker": "5225",
   "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "Neither side carried the debate decisively. IHH has strong cash generation, defensive demand, low beta, and broad recommendation support, but the premium valuation and breakdown below the major moving averages leave no demonstrated margin of safety in this data package.",
+  "thesis": "The current snapshot is profitable, but the stock is below all key averages and supplied headlines raise earnings concerns; the recent bounce is too short to establish a reversal.",
   "winning_side": "neither",
-  "strongest_counterexample": "A scaled healthcare platform can continue to compound earnings through cycles; if expansion returns and cash generation remain strong, the current premium may be justified and the technical decline may be a temporary entry window.",
+  "strongest_counterexample": "The strongest counterexample is that positive FCF and the Aug strategy plan support a recovery that has begun to appear in the 5-bar rebound; no dated result validates it.",
   "invalidation_conditions": [
-    "The neutral/valuation caution is weakened if two consecutive reporting periods show earnings growth that brings the forward P/E below 22x without margin deterioration.",
-    "The bearish timing case is weakened if price reclaims the RM8.61 SMA-200 reference with reliable volume and holds above it for at least two weeks.",
-    "The quality case is invalidated if net margin falls below 8.16% for two consecutive reporting periods while free cash flow falls below 80% of net income."
+    "A close below the observed 20-bar low would weaken stabilization."
   ],
   "evidence_gaps": [
-    "No multi-period earnings-growth, occupancy, pricing, reimbursement, or expansion-return history.",
-    "No usable dated news headlines or current company-specific catalysts.",
-    "No country-level debt, refinancing, regulatory, or currency exposure breakdown.",
-    "Recent volume and some OHLC fields are unavailable/zero-valued."
+    "Updated dated earnings/guidance and debt maturities are missing.",
+    "The strategic plan\u2019s effect is not quantified."
   ],
   "decisive_factors": [
-    "High gross margin and RM1.897bn free cash flow support business quality.",
-    "Trailing P/E of 32.32x and forward P/E of 27.48x limit valuation comfort.",
-    "Close below SMA-20, SMA-50, and SMA-200 with negative MACD weakens near-term timing.",
-    "Analyst breadth is positive but lacks a calendar-dated news catalyst."
+    "Price below SMA-20/50/200 and negative 20/60-bar returns.",
+    "Positive 5-bar return and MACD histogram are early counter-signals."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

@@ -1,0 +1,72 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 9.44x; forward P/E 19.68x. Indicated yield 2.11% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 55.56%; operating 67.54%; net 48.48%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 98.65%. Snapshot FCF 2149.78m MYR. FCF/net income 1.00x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "The 9.44x trailing P/E may be misleading when forward P/E is 19.68x and operating margin exceeds gross margin; reconcile non-operating and revaluation effects before buying. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Property accounting gains, development timing and large debt can distort apparent cheapness.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Operating margin above gross margin requires an accounting bridge; recurring earnings are not isolated."
+    ],
+    "key_strengths": [
+      "Positive snapshot cash flow and a substantial property equity base support further diligence."
+    ],
+    "summary": "The 9.44x trailing P/E may be misleading when forward P/E is 19.68x and operating margin exceeds gross margin; reconcile non-operating and revaluation effects before buying. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "August 27 FY26 results: IOI Properties attributable profit doubled to RM2.15bn and revenue rose 45.1%; reported Q4 profit fell 36.5%. August 31 coverage reported a CGS upgrade tied to earnings and REIT catalysts. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=0, buy=6, hold=4, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Property earnings",
+      "REIT catalyst",
+      "One-off comparability"
+    ],
+    "notable_headlines": [
+      "2026-08-28 https://www.edgeprop.my/content/1917264/ioi-properties-fy2026-net-profit-doubles-rm215b-revenue-hits-record-rm444b",
+      "2026-08-31 https://www.minichart.com.sg/2026/08/31/ioi-properties-upgraded-to-add-by-cgs-on-fy26-earnings-beat-reit-catalysts/"
+    ],
+    "social_sentiment": null,
+    "summary": "The full-year results and reported upgrade support positive sentiment. Land sales and valuation effects require separation before treating headline profit as recurring. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 3.68: below SMA20 3.93, below SMA50 3.87, above SMA200 3.57. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 33.3333,
+    "rsi_assessment": "RSI14 33.3: weak but not oversold.",
+    "macd_assessment": "MACD line -0.0459, signal -0.0112, histogram -0.0347: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 1,076,200; ratio 0.39x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      3.51,
+      3.58
+    ],
+    "resistance_levels": [
+      3.7,
+      3.75,
+      3.85
+    ],
+    "summary": "The abrupt September 11 repricing and provisional bounce remain below the lower Bollinger band and SMA50; adjusted OHLC and possible corporate-action effects need reconciliation before attributing the entire gap to selling. As of 2026-09-14, ATR14 is 0.103 (2.8% of price), price is below the lower band, and the adjusted 52-week-high drawdown is 20.3%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Property development is sensitive to financing costs, demand and sales conversion.",
+      "Cross-border assets and funding introduce FX and jurisdiction risks."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "IOIPG: Property development is sensitive to financing costs, demand and sales conversion. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

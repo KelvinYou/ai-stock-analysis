@@ -1,0 +1,82 @@
+{
+  "ticker": "TSLA",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "sell",
+  "conviction": {
+    "score": -0.5,
+    "signal_convergence": 0.5455,
+    "explanation": "Consensus-capped research conviction for the sell thesis, not a probability or backtested expected return. I retain the research-manager ruling: The gap between 332.22x earnings and current operating economics is not filled by quantified future cash flows. The bull concedes its remaining case is speculative optionality. The adverse operating/valuation case is supported but counterevidence and data limitations prevent a strong-sell claim. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "SELL: Tesla's cash-generating business can pursue future opportunities, but its valuation remains far beyond demonstrated earnings. A partial technical recovery does not turn unvalued autonomy and robotics optionality into a supported swing investment thesis.\n\nUnfavorable for fresh swing exposure on the supplied evidence; this research label is not an instruction to short or to liquidate an existing holding without portfolio context. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "The business has revenue and cash-generation capacity. The remaining bull is speculative execution optionality only; without quantified future earnings, an immediate fundamental buy is not established. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Positive cash generation and revenue growth allow a speculative development thesis, but the central gap remains between current earnings and a 332.22x multiple. Future autonomy or robotics cannot justify allocation without probabilities, capital needs and prospective returns; financial flexibility is not valuation.",
+  "key_uncertainties": [
+    "Probability-weighted new-business cash flows and capital requirements.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of operating margin above 10% with positive FCF.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if a new disclosed business segment records positive operating profit for two consecutive quarters.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Demonstrated per-share profit conversion and quantified new-business economics; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (1.84) \u2014 price may amplify broad-market moves.",
+      "Sector: Consumer Cyclical \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 73.6% over available price history. Projected worst case (2-sigma): ~113.6% from current $365.44.",
+    "risk_reward_ratio": "N/A (bearish signal)"
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 393.98,
+    "stop_rationale": "Thesis invalidated if price breaks above $393.98.",
+    "take_profit_1": 365.44,
+    "take_profit_2": 333.4,
+    "target_rationale": "Primary: reduce/exit at/near current $365.44. Next downside watch: $333.40 (nearest support).",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "TSLA",
+    "judged_view": "sell",
+    "confidence": "medium",
+    "thesis": "The gap between 332.22x earnings and current operating economics is not filled by quantified future cash flows. The bull concedes its remaining case is speculative optionality.",
+    "winning_side": "bear",
+    "strongest_counterexample": "Revenue grew 26% and positive cash generation provides resources to develop potentially valuable new businesses.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of operating margin above 10% with positive FCF.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if a new disclosed business segment records positive operating profit for two consecutive quarters."
+    ],
+    "evidence_gaps": [
+      "Probability-weighted new-business cash flows and capital requirements.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 332.22x; forward P/E 169.30x.",
+      "The business has revenue and cash-generation capacity",
+      "Positive cash generation and revenue growth allow a speculative development thesis, but the central gap remains between current earnings and a 332.22x multiple"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "sell",
+    "sentiment": "sell",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "de4eb588ff5231282b2c0980801f71a960c0216651b9ae6429912121876d446b",
+    "technicals.json": "9a5bc3f1e56700c349bd3f66776eafc234ad9805a6a0cc99bf45f5c809a84b3d",
+    "price_history.csv": "75ad4f544eff19a7c4250b117414c5a4fe0ad8ee7ed8c693c29d6c17771aa95b"
+  }
+}

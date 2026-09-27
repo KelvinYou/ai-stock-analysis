@@ -2,26 +2,22 @@
   "ticker": "SMR",
   "judged_view": "sell",
   "confidence": "low",
-  "thesis": "The bear carried the debate on currently observable evidence: the company is deeply loss-making, free-cash-flow negative, and valued at roughly 125x the supplied trailing revenue, while the bullish project milestones remain future and execution-dependent. The ruling is low confidence because reported liquidity and nuclear deployment optionality could change the valuation if they convert into binding contracts and recognized revenue.",
+  "thesis": "Reported liquidity reduces immediate funding concern but does not establish commercial deployment economics at the valuation. The bear wins on execution and cash returns, not an unsupported insolvency claim.",
   "winning_side": "bear",
-  "strongest_counterexample": "The official $1.9B liquidity position and progress on TVA, RoPower, and HIPS milestones could fund the company through a commercial inflection; if a binding large-scale deployment agreement is signed, current sales-based valuation would understate the option value.",
+  "strongest_counterexample": "Reported $1.9bn liquidity and progressing commercial discussions materially improve the ability to pursue deployment.",
   "invalidation_conditions": [
-    "A binding customer deployment agreement is announced with disclosed timing and economics sufficient to support material revenue recognition",
-    "Reported revenue begins converting the project pipeline while quarterly free cash flow improves materially from -$460.118M",
-    "The next finite technical snapshot reclaims the recent $9.385-$9.97 resistance zone with stronger volume and positive momentum"
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if a binding customer contract reaches financial close with all disclosed conditions precedent satisfied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating cash flow."
   ],
   "evidence_gaps": [
-    "No usable dated Layer 1 news headlines",
-    "No binding-contract, backlog-conversion, customer-funding, or revenue-recognition trend in Layer 1",
-    "Total debt is null and current liquidity/capital-raise detail is not in Layer 1",
-    "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
-    "No dated forward Fed path"
+    "Liquidity restrictions, binding customer economics and prospective project funding.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
   ],
   "decisive_factors": [
-    "$31.479M revenue against $3.923B market cap",
-    "$355.794M net loss, -$460.118M free cash flow, and -2190.5747% operating margin",
-    "Negative/meaningless P/E fields and missing total debt",
-    "Project milestones are not yet recognized earnings, while MACD is slightly negative"
+    "Trailing P/E unavailable because the snapshot is loss-making; negative forward P/E denotes expected losses, not cheapness",
+    "Reported liquidity supports runway and commercial work has progressed",
+    "Reported liquidity materially improves the runway argument and should not be ignored"
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
 }

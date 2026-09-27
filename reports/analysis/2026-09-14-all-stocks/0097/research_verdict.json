@@ -1,0 +1,23 @@
+{
+  "ticker": "0097",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Extraordinary growth prevents a confident sell ruling, but valuation-basis and cash-conversion gaps defeat an immediate buy at 83.82x. The bear carries the entry argument, not a claim that operations are deteriorating.",
+  "winning_side": "bear",
+  "strongest_counterexample": "H1 revenue grew 98% and attributable profit 160.5%, with low leverage supporting expansion.",
+  "invalidation_conditions": [
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive normalized EPS growth with FCF/net income above 0.8.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of declining normalized EPS."
+  ],
+  "evidence_gaps": [
+    "Tax-normalized earnings, matched valuation period and receivable collection.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
+  ],
+  "decisive_factors": [
+    "Quoted trailing P/E 83.82x; forward P/E 46.05x",
+    "Exceptional reported growth and low leverage support operating capacity",
+    "Exceptional reported growth deserves weight, but tax effects, low snapshot cash conversion and conflicting earnings bases prevent assigning the growth a reliable valuation"
+  ],
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

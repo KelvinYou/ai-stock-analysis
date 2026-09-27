@@ -1,76 +1,69 @@
 {
   "ticker": "NFLX",
-  "date": "2026-09-03",
-  "overall_signal": "buy",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-23",
+  "overall_signal": "sell",
   "conviction": {
-    "score": 0.28,
-    "signal_convergence": 0.5,
-    "explanation": "The four-agent panel has buy signals from fundamentals (medium confidence) and technicals (low confidence), with neutral sentiment (medium) and macro (low). The resulting confidence-weighted convergence is 0.50, but the score is held to +0.28 because the dated growth evidence is incomplete, the news feed is unusable, volume is weak, and the non-finite 2026-08-28 bar removes RSI, SMAs, Bollinger Bands, and ATR. The buy view is therefore conditional and below the deterministic level-quoting threshold."
+    "score": -0.3333,
+    "signal_convergence": 0.5556,
+    "explanation": "Raw synthesis reflects the evidence in the analyst reports; deterministic finalization recomputes convergence and applies the actionability gate."
   },
-  "executive_summary": "Netflix's Layer 1 snapshot shows a high-quality current financial profile: 29.4947% operating margin, 24.3038% net margin, $9.461B free cash flow, and moderate leverage. Trailing P/E is 26.0157x versus forward P/E 21.6519x, and the recommendation snapshot contains no sell ratings. These facts support a constructive fundamental view.\n\nThe signal is a low-conviction buy, not a confirmed breakout. Q2 web coverage was mixed on revenue and advertising, the latest volume is only 0.1133x the stored 20-day average, and the 2026-08-28 non-finite OHLC bar leaves the core rolling technical indicators and ATR unavailable. RiskChecker therefore receives no actionable level gate at this conviction; the next operating update and a repaired finite technical snapshot are needed for higher confidence.",
-  "bull_case": "Netflix's scale, margins, free cash flow, and moderate leverage create a durable financial base. If advertising and content monetization re-accelerate, the lower forward P/E relative to trailing P/E and positive short-term EMA/MACD readings could support further recovery.",
-  "bear_case": "The multiple still requires forward execution, while available Q2 coverage points to a slower advertising ramp and no Layer 1 growth trend resolves that concern. The price move lacks volume confirmation, and missing rolling indicators mean the apparent momentum cannot yet be distinguished from a fragile bounce.",
+  "executive_summary": "Netflix shows a broad technical downtrend: price is below SMA-20/50/200, every listed return window is negative, and RSI is 25.42. Dated headlines add competition concerns, while the positive financial snapshot is undated; a cautious sell view reflects trend risk, with oversold reversal risk acknowledged.",
+  "bull_case": "Reported positive margins and FCF could support a rebound if subscriber retention and engagement remain durable; oversold RSI also leaves room for mean reversion.",
+  "bear_case": "The price is down 41.86% over 252 bars, below every moving average, and recent headlines raise YouTube competition concerns. The packet has no dated subscriber data to refute that risk.",
   "key_uncertainties": [
-    "Next reported revenue, subscriber, and advertising growth",
-    "Whether operating margins remain near the current 29.4947% snapshot",
-    "Whether the 2026-08-28 non-finite bar can be repaired so RSI, SMAs, Bollinger Bands, and ATR are finite",
-    "Whether price recovery is confirmed by materially stronger volume",
-    "Forward Fed policy beyond the supplied July hold"
+    "Subscriber/engagement/retention data are not supplied.",
+    "Financial statement period and current FCF durability are unknown.",
+    "Oversold RSI can rebound or stay weak."
   ],
   "catalysts_upcoming": [
-    "Next Netflix earnings release and advertising-growth update",
-    "A finite technical refresh that confirms trend and ATR without adding a partial same-day row",
-    "Sustained closes above the recent finite-bar resistance zone near $82.855 with stronger participation"
+    "A dated operating update showing subscriber and engagement resilience against competition."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "High beta (1.51) \u2014 price may amplify broad-market moves.",
+      "High beta (1.53) \u2014 price may amplify broad-market moves.",
       "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 75.9% over available price history. Projected worst case (2-sigma): ~nan% from current $82.47.",
-    "risk_reward_ratio": null
+    "max_drawdown_scenario": "Historical max drawdown: 75.9% over available price history. Projected worst case (2-sigma): ~74.8% from current $71.36.",
+    "risk_reward_ratio": "N/A (bearish signal)"
   },
   "action_plan": {
     "entry_limit": null,
-    "entry_rationale": null,
-    "stop_loss": null,
-    "stop_rationale": null,
-    "take_profit_1": null,
-    "take_profit_2": null,
-    "target_rationale": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 76.07,
+    "stop_rationale": "Thesis invalidated if price breaks above $76.07.",
+    "take_profit_1": 71.36,
+    "take_profit_2": 70.39,
+    "target_rationale": "Primary: reduce/exit at/near current $71.36. Next downside watch: $70.39 (nearest support).",
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.28, convergence 0.50). Wait for a clearer setup."
+    "note": null
   },
   "research_verdict": {
     "ticker": "NFLX",
-    "judged_view": "buy",
-    "confidence": "low",
-    "thesis": "The bull carried the debate narrowly because Netflix's current margins, free cash flow, and moderate leverage are directly evidenced in Layer 1, while the bearish case depends on forward growth and advertising uncertainty that cannot yet be resolved from the available snapshot. This is a conditional, low-confidence buy rather than an actionable price-level call because the technical data is incomplete.",
-    "winning_side": "bull",
-    "strongest_counterexample": "A slower advertising ramp or revenue-growth deceleration could expose the 26.0157x trailing P/E to multiple compression, and the positive MACD/EMA reading may fail because volume is only 0.1133x the stored average.",
+    "judged_view": "sell",
+    "confidence": "medium",
+    "thesis": "The technical evidence is consistently weak below SMA-20/50/200 with negative returns across all windows, and dated headlines raise competition concerns; the reported financial snapshot is undated.",
+    "winning_side": "bear",
+    "strongest_counterexample": "The strongest counterexample is that the packet\u2019s positive margins/FCF could remain durable and the RSI of 25.42 may precede a mean-reversion bounce; no dated operating data confirms it.",
     "invalidation_conditions": [
-      "Next reported revenue growth falls below 10% or operating margin falls below 28% for two consecutive reported quarters",
-      "The close breaks below the recent finite-bar support near $79.28 for three sessions without recovery",
-      "The next usable technical snapshot remains below EMA-20 with a negative MACD histogram"
+      "A close above SMA-50 would challenge the current downtrend thesis."
     ],
     "evidence_gaps": [
-      "No usable dated Layer 1 news headlines",
-      "No dated revenue, subscriber, or advertising-growth trend in the Layer 1 files",
-      "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
-      "No dated forward Fed path"
+      "No dated subscriber, engagement, or retention series is supplied.",
+      "Financial statement period and first-available date are absent."
     ],
     "decisive_factors": [
-      "29.4947% operating margin and 24.3038% net margin",
-      "$9.461B free cash flow against approximately 0.54x debt/equity",
-      "35 buy/strong-buy recommendations and no sell recommendations in Layer 1",
-      "Price above EMA-20 and positive MACD, albeit with low volume and incomplete rolling indicators"
+      "Price is below SMA-20/50/200 and down 41.86% over 252 bars.",
+      "RSI is 25.42 and near the observed low, creating reversal risk."
     ]
   },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
-    "sentiment": "neutral",
-    "technical": "buy",
+    "sentiment": "sell",
+    "technical": "sell",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "synthesized_signal": "sell",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
 }

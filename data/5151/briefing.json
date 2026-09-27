@@ -1,77 +1,85 @@
 {
   "ticker": "5151",
-  "date": "2026-09-03",
-  "overall_signal": "neutral",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-14",
+  "overall_signal": "sell",
   "conviction": {
-    "score": 0.0,
-    "signal_convergence": 0.3333,
-    "explanation": "Fundamentals are sell while sentiment, technicals, and macro are neutral. The high valuation, flat-to-weaker earnings, reported leverage, and unproven property economics create a negative bias, but positive free cash flow and agriculture improvement keep the complete research result neutral with low convergence."
+    "score": -0.5,
+    "signal_convergence": 0.5,
+    "explanation": "Consensus-capped research conviction for the sell thesis, not a probability or backtested expected return. I retain the research-manager ruling: High leverage, 38.50x quoted earnings and weakening quarterly conversion outweigh sales growth. The bull concedes recovery remains a prerequisite rather than established evidence. The adverse operating/valuation case is supported but counterevidence and data limitations prevent a strong-sell claim. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
   },
-  "executive_summary": "Hextar's Layer 1 snapshot presents a demanding valuation and incomplete growth proof: trailing P/E is 38.75x with no forward estimate, reported debt is RM466.4m versus RM263.6m equity, and 1H revenue declined while profit was broadly flat. Positive free cash flow and a stronger agriculture contribution are meaningful offsets.\n\nThe RM3.8bn PKNS township JV is a potential catalyst, but gross development value is not current revenue, profit, or cash flow, and funding/milestone economics are not provided. At RM0.775, price is below SMA-20 and SMA-200, RSI is 50.0, and MACD is slightly negative; latest volume is zero and the 52-week-low field is an invalid zero placeholder, so technical confirmation is limited. The Research Manager therefore assigns a low-confidence neutral view with a negative bias pending core earnings and property execution evidence.",
-  "bull_case": "Agriculture recovery, positive free cash flow, profitable core operations, and a credible PKNS partnership could create incremental earnings and asset value. If property funding and milestones are delivered while debt falls, the current multiple may become more defensible.",
-  "bear_case": "A high P/E, no forward estimate, flat-to-weaker earnings, high simple debt/equity, no analyst coverage, and a property GDV headline without economics leave substantial value-trap and execution risk.",
+  "executive_summary": "SELL: Hextar's revenue growth has not repaired profit conversion, while leverage and a premium valuation compound the weak chart. The immediate swing case is unfavorable until margins and the earnings basis improve.\n\nUnfavorable for fresh swing exposure on the supplied evidence; this research label is not an instruction to short or to liquidate an existing holding without portfolio context. Technical observations as of 2026-09-14 include a potentially intraday Malaysian bar; price and volume confirmation remain provisional. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Revenue growth and positive FCF show continuing operating activity. That remains conditional rather than an immediate purchase recommendation; margin recovery and a reconciled multiple must come first. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Sales recovery offers a possible route to better margins, but the supplied evidence has not shown that route materializing. At high leverage and 38.50x earnings, margin recovery is a required assumption rather than optional upside; waiting for earnings conversion is financially meaningful.",
   "key_uncertainties": [
-    "Property JV funding, approvals, timing, margins, and attributable cash flows are not available.",
-    "Segment-level cash conversion and debt maturities are not in Layer 1.",
-    "Latest stored volume is zero, so the technical structure is not volume-confirmed.",
-    "The 52-week-low value is a zero placeholder and pct_from_52w_low is null; no replacement value is inferred.",
-    "No analyst recommendation data or peer valuation benchmark is available.",
-    "Fed, OPR, and USD/MYR observations do not resolve commodity, trade, climate, or property-funding risks."
+    "Current interest cover, debt maturities and comparable EPS basis.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive year-on-year EPS growth and positive FCF.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if gross debt/equity falls below 100% in a dated balance sheet.",
+    "Technical observations as of 2026-09-14 include a potentially intraday Malaysian bar; price and volume confirmation remain provisional.",
+    "Recent source CSV contains zero-volume rows; supplied indicators include them, which may distort rolling averages. All last-25 OHLC rows were present and positive.",
+    "Quoted trailing P/E 38.50x; forward P/E missing. Indicated yield 1.25% is not a guaranteed forward payout. Market cap/snapshot net income is 49.12x, materially different; periods, EPS basis and share counts need reconciliation."
   ],
   "catalysts_upcoming": [
-    "Quarterly results showing sustained agriculture growth and recovery in specialty chemicals/fruits.",
-    "Disclosed funding, approvals, launches, and attributable economics for the PKNS township JV.",
-    "Debt reduction alongside continued positive free cash flow.",
-    "A reclaim of SMA-200 with usable volume and improved MACD momentum."
+    "Observation trigger, not a dated scheduled event: Margin recovery and debt-service disclosure; no event date verified."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "Low beta (-0.35) \u2014 historically less sensitive to broad-market moves.",
       "Sector: Basic Materials \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 54.9% over available price history. Projected worst case (2-sigma): ~36.1% from current $0.78.",
-    "risk_reward_ratio": null
+    "max_drawdown_scenario": "Historical max drawdown: 54.9% over available price history. Projected worst case (2-sigma): ~32.5% from current MYR 0.77.",
+    "risk_reward_ratio": "N/A (bearish signal)"
   },
   "action_plan": {
     "entry_limit": null,
-    "entry_rationale": null,
-    "stop_loss": null,
-    "stop_rationale": null,
-    "take_profit_1": null,
-    "take_profit_2": null,
-    "target_rationale": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 0.79,
+    "stop_rationale": "Thesis invalidated if price breaks above MYR 0.79.",
+    "take_profit_1": 0.77,
+    "take_profit_2": 0.76,
+    "target_rationale": "Primary: reduce/exit at/near current MYR 0.77. Next downside watch: MYR 0.76 (nearest support).",
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.33). Wait for a clearer setup."
+    "note": "September14 input may be intraday; confirm completed-session data before acting."
   },
   "research_verdict": {
     "ticker": "5151",
-    "judged_view": "neutral",
-    "confidence": "low",
-    "thesis": "The bear case is stronger on current evidence because valuation and reported leverage are high relative to flat-to-weaker earnings, while the property catalyst is only gross development value and lacks funding/economics detail. Nevertheless, positive free cash flow and agriculture improvement mean the evidence supports a neutral, negative-bias watch rather than a definitive sell.",
+    "judged_view": "sell",
+    "confidence": "medium",
+    "thesis": "High leverage, 38.50x quoted earnings and weakening quarterly conversion outweigh sales growth. The bull concedes recovery remains a prerequisite rather than established evidence.",
     "winning_side": "bear",
-    "strongest_counterexample": "The agriculture recovery and 70%-owned PKNS partnership could create meaningful incremental cash flow or asset value, and positive free cash flow means the group is not an immediately distressed operating story; a neutral investor could be paid for waiting if milestones arrive.",
+    "strongest_counterexample": "Revenue increased and FCF is positive, so recovering conversion could support a meaningful turnaround without a sales revival.",
     "invalidation_conditions": [
-      "Two consecutive reporting periods show sustained revenue and profit growth with improving specialty-chemical and fruit contributions.",
-      "The property JV publishes funded, approved milestones with attributable profit/cash-flow evidence sufficient to justify the current multiple.",
-      "Net debt declines materially while free cash flow remains positive and price reclaims SMA-200 on usable volume."
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive year-on-year EPS growth and positive FCF.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if gross debt/equity falls below 100% in a dated balance sheet."
     ],
     "evidence_gaps": [
-      "Property JV funding, approvals, launch schedule, margin, and attributable cash-flow details.",
-      "Segment-level earnings, margins, working capital, and debt maturities.",
-      "A clean dated volume series and a valid 52-week low from the completed-close input.",
-      "Independent analyst estimates and a peer-relative valuation benchmark."
+      "Current interest cover, debt maturities and comparable EPS basis.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
     ],
     "decisive_factors": [
-      "38.75x trailing P/E with no forward estimate is demanding against flat-to-weaker recent earnings.",
-      "Positive free cash flow and agriculture improvement prevent a strong-sell ruling.",
-      "The property headline is optionality, not yet evidence of earnings or cash-flow delivery."
+      "Quoted trailing P/E 38.50x; forward P/E missing",
+      "Revenue growth and positive FCF show continuing operating activity",
+      "Sales recovery offers a possible route to better margins, but the supplied evidence has not shown that route materializing"
     ]
   },
   "agent_signal_breakdown": {
     "fundamentals": "sell",
     "sentiment": "neutral",
-    "technical": "neutral",
+    "technical": "sell",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound.",
+    "September14 observations may be intraday; zero-volume rows can distort technical indicators."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "b71bf3f7c159df5aaa637376f89eb017c851a32a561e1b3e3c5203f07b097617",
+    "technicals.json": "d1576a15cf7d4b02f14977a83d4a9b32077923d5477fd45a2fb653007d1fcc50",
+    "price_history.csv": "8cd3f81b8c764ef7bcb86c9387956129bb10a227203d43730d1430d6de239a9a"
+  }
 }

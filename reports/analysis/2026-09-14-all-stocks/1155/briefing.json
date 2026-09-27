@@ -1,0 +1,84 @@
+{
+  "ticker": "1155",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.2727,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: Income resilience is established, but bank-specific capital and payout evidence is missing. Neither side establishes an immediate valuation advantage. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: Maybank remains a reasonable income candidate, but the swing setup is weak and capital-quality checks are unresolved. The declared interim dividend is supportive evidence, not a guarantee of annual yield or immediate price recovery.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "The declared interim dividend and stable earnings support an income thesis. CET1, provisioning and payout coverage should gate scaling; conditional accumulation remains credible once verified. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "The 31-sen interim declaration is concrete income evidence, but the revised case still requires capital and asset-quality checks before a material purchase. That supports a watchlist priority rather than a completed investment decision; stable distributions do not themselves establish a bank-specific valuation discount.",
+  "key_uncertainties": [
+    "CET1, impaired-loan coverage and dividend coverage.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if annual ordinary dividend cut versus the prior year.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive year-on-year EPS growth with CET1 above the disclosed regulatory minimum.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote.",
+    "Recent source CSV contains zero-volume rows; supplied indicators include them, which may distort rolling averages. All last-25 OHLC rows were present and positive."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Bank capital, provisioning and payout disclosure; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Low beta (0.11) \u2014 historically less sensitive to broad-market moves.",
+      "Sector: Financial Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 26.5% over available price history. Projected worst case (2-sigma): ~22.1% from current MYR 10.38.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.27). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "1155",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Income resilience is established, but bank-specific capital and payout evidence is missing. Neither side establishes an immediate valuation advantage.",
+    "winning_side": "neither",
+    "strongest_counterexample": "The higher declared 31-sen interim dividend and Q2 profit growth support a credible income buy at 12.02x earnings.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if annual ordinary dividend cut versus the prior year.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive year-on-year EPS growth with CET1 above the disclosed regulatory minimum."
+    ],
+    "evidence_gaps": [
+      "CET1, impaired-loan coverage and dividend coverage.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 12.02x; forward P/E 11.28x",
+      "The declared interim dividend and stable earnings support an income thesis",
+      "The 31-sen interim declaration is concrete income evidence, but the revised case still requires capital and asset-quality checks before a material purchase"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "neutral",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound.",
+    "September14 observations may be intraday; zero-volume rows can distort technical indicators."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "0d9b4f38e131d9f7288283c916002304d99379574c57a2fb4f378b4a2a71cfa5",
+    "technicals.json": "fcd88730c74db46daf3d78eee10157b846df3d4de5ede556c28dba59001e682b",
+    "price_history.csv": "c1416aee93c9bab064d88942b453bf98ccbb38cef0d5d6b3cd992448da9d936d"
+  }
+}

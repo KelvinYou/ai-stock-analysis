@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 24.39x; forward P/E 18.54x. Indicated yield 0.32% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 82.00%; operating 41.44%; net 30.08%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 38.62%. Snapshot FCF 46109.00m USD. FCF/net income 0.76x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "A 24.39x trailing multiple, strong operating margins and positive cash generation support conditional accumulation, with investment returns the main unresolved issue. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "AI infrastructure and other investment commitments can reduce future cash conversion.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "41.44% operating margin and substantial free cash flow provide a strong operating base."
+    ],
+    "summary": "A 24.39x trailing multiple, strong operating margins and positive cash generation support conditional accumulation, with investment returns the main unresolved issue. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "July 29: Meta revenue grew 28% but costs and expenses grew 55%, operating income fell 8% and EPS fell 13%. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=9, buy=47, hold=6, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Advertising growth",
+      "Expense pressure"
+    ],
+    "notable_headlines": [
+      "2026-07-29 https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm"
+    ],
+    "social_sentiment": null,
+    "summary": "Strong sales support demand, but earnings conversion weakened materially. AI enthusiasm should be balanced against expense growth rather than equated with near-term profit acceleration. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 648.03: above SMA20 586.47, above SMA50 600.90, above SMA200 622.58. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 83.8917,
+    "rsi_assessment": "RSI14 83.9: overbought, increasing extension risk without automatically reversing the trend.",
+    "macd_assessment": "MACD line 14.0234, signal 4.1481, histogram 9.8752: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 16,908,400; ratio 0.94x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      638.56,
+      642.14
+    ],
+    "resistance_levels": [
+      663.5,
+      664.24
+    ],
+    "summary": "Strong positive momentum has carried price above major averages, but RSI near 84 and two closes below the intraday highs indicate an extended entry rather than a low-risk dip. As of 2026-09-11, ATR14 is 21.3 (3.3% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 17.8%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Advertising revenue depends on business spending while AI capex consumes cash.",
+      "Global regulation and FX translation may offset operating growth."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Meta Platforms, Inc.: Advertising revenue depends on business spending while AI capex consumes cash. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

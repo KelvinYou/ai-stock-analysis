@@ -1,24 +1,20 @@
 {
   "ticker": "TSLA",
-  "judged_view": "sell",
+  "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "The bear case carries the current evidence: 333.6542x trailing P/E, 165.39114x forward P/E, and a 4.00% net margin are difficult to underwrite without a demonstrated future earnings bridge. Positive free cash flow and low leverage keep this from being a strong sell.",
-  "winning_side": "bear",
-  "strongest_counterexample": "Autonomy or robotics could convert the premium into earnings, and the balance sheet can fund that transition; the current Layer 1 data does not quantify the timing or magnitude.",
+  "thesis": "Short-term momentum improved above SMA-20/50, but price remains below SMA-200 with negative 60/252-bar returns; dated headlines do not verify a sustained earnings recovery.",
+  "winning_side": "neither",
+  "strongest_counterexample": "The strongest counterexample is durable EU demand and commercial-truck adoption converting the recent headlines into profitable growth, which is not shown in the supplied data.",
   "invalidation_conditions": [
-    "Sustained margin and free-cash-flow improvement",
-    "A credible earnings bridge from autonomy or robotics",
-    "A durable price recovery once clean technical indicators are available"
+    "A close below the observed 20-bar low would weaken the short-term recovery case."
   ],
   "evidence_gaps": [
-    "No non-empty dated news headlines",
-    "No forward earnings bridge for the valuation",
-    "Nonfinite OHLC data on 2026-08-28 makes latest RSI, SMA, ATR, and Bollinger outputs null"
+    "Financial statement dates and current earnings trajectory are missing.",
+    "Headlines do not quantify repeatability or margin impact."
   ],
   "decisive_factors": [
-    "333.6542x trailing P/E and 165.39114x forward P/E",
-    "4.00% net margin",
-    "$6.220B free cash flow and approximately 0.18x debt-to-equity as mitigating strengths"
+    "Positive 5/20-bar returns and MACD conflict with negative 60/252-bar returns.",
+    "Price remains 4.09% below SMA-200."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

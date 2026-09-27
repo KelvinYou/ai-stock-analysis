@@ -1,79 +1,67 @@
 {
   "fundamentals": {
     "signal": "neutral",
-    "confidence": "medium",
-    "pe_assessment": "Trailing P/E is 32.32x and forward P/E is 27.48x. The premium is defensible only if IHH sustains growth and healthcare demand, but the Layer 1 package has no peer valuation or multi-period growth series to establish a margin of safety.",
-    "margin_analysis": "Revenue is RM25.745bn and net income is RM2.101bn. Gross margin is 71.70%, operating margin 15.19%, and net margin 8.16%; the gross margin is strong, while the net margin leaves room for operating, financing, and expansion costs to matter.",
-    "debt_analysis": "Total debt of RM15.539bn versus equity of RM30.303bn gives debt/equity of about 0.51. Leverage is significant in absolute terms but moderate relative to equity; free cash flow of RM1.897bn is about 90% of net income and provides useful support, subject to capital spending and expansion needs.",
-    "growth_outlook": "IHH has scale, defensive healthcare demand, and positive operating cash generation. The forward P/E is below the trailing multiple, implying expected earnings improvement, but the available data does not show the growth rate, hospital occupancy, pricing, or expansion returns needed to justify the premium.",
+    "confidence": "low",
+    "pe_assessment": "Provider-current snapshot fetched 2026-09-24 reports P/E 32.24 and forward P/E 27.34; no peer comparison or dated growth path is included.",
+    "margin_analysis": "Snapshot gross/operating/net margins are 71.70%/15.19%/8.16%; period dates are absent, so no trend is inferred.",
+    "debt_analysis": "Debt RM15.54B versus equity RM30.30B, with FCF RM1.90B, is a mixed balance-sheet/cash-flow picture; maturities and period context are unavailable.",
+    "growth_outlook": "Snapshot revenue/net income are RM25.75B/RM2.10B. The packet provides no dated multi-period comparison to validate earnings growth.",
     "key_risks": [
-      "A trailing P/E above 32x and forward P/E above 27x leave meaningful de-rating risk if earnings growth slows.",
-      "Debt is large in absolute terms and expansion can keep capital requirements high.",
-      "Net margin of 8.16% is more sensitive to staffing, financing, and operating-cost pressure than the gross margin suggests.",
-      "Country, regulatory, reimbursement, and currency exposures are not detailed in Layer 1.",
-      "No usable dated news headlines are available for a current catalyst or risk check."
+      "P/E 32.24 and debt require growth and balance-sheet context.",
+      "Recent supplied headlines discuss sluggish/weak earnings and an EPS miss.",
+      "Statement period and multi-period trajectory are unavailable."
     ],
     "key_strengths": [
-      "Large healthcare platform with defensive demand characteristics.",
-      "High gross margin of 71.70% and positive operating and net income.",
-      "Free cash flow of RM1.897bn is about 90% of reported net income.",
-      "Debt/equity of about 0.51 is moderate relative to the equity base.",
-      "Analyst recommendation breadth is strongly positive."
+      "Snapshot shows positive net income and RM1.90B FCF.",
+      "Reported gross margin is 71.70%."
     ],
-    "summary": "IHH has high-quality defensive characteristics and strong reported cash generation, but a trailing P/E of 32.32x and forward P/E of 27.48x require continued earnings growth. The evidence supports a neutral valuation view: business quality is attractive, but the current data does not establish enough margin of safety for a buy signal."
+    "summary": "Current profitability is positive, but valuation, debt, and recent earnings-warning headlines pull the view toward neutral. The period trend remains unavailable."
   },
   "sentiment": {
-    "signal": "buy",
-    "confidence": "medium",
-    "news_tone": "positive recommendation breadth; headline evidence unavailable",
-    "news_summary": "The Layer 1 news feed contains no usable headline text, links, or publishers. The 0m recommendation snapshot shows 5 strong buys, 16 buys, 2 holds, and no sells or strong sells; 21 of 23 ratings are positive, although the snapshot has no explicit calendar date.",
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "negative",
+    "news_summary": "Aug 26 coverage discusses IHH\u2019s longer-lived Asia strategy; June headlines include a Q1 revenue-growth call summary alongside sluggish-earnings concerns and an EPS miss. The strategic plan\u2019s effect is not quantified and the latest results are not in the feed, so sentiment is cautious and low-confidence.",
     "key_themes": [
-      "broad analyst support",
-      "defensive healthcare demand",
-      "headline evidence unavailable",
-      "premium valuation requiring earnings delivery"
+      "Longer-lived Asia strategy",
+      "Revenue growth amid challenges",
+      "Earnings and EPS concerns"
     ],
-    "notable_headlines": [],
+    "notable_headlines": [
+      "2026-08-26 \u2014 Fortune: How IHH Healthcare CEO Prem Kumar Nair is planning for a longer-lived Asia",
+      "2026-06-09 \u2014 GuruFocus.com: IHH Healthcare Bhd (IHHHF) Q1 2026 Earnings Call Highlights: Strong Revenue Growth Amidst Challenges",
+      "2026-06-02 \u2014 Simply Wall St.: We Think That There Are More Issues For IHH Healthcare Berhad (KLSE:IHH) Than Just Sluggish Earnings",
+      "2026-05-30 \u2014 Simply Wall St.: IHH Healthcare Berhad Just Missed EPS By 8.6%: Here's What Analysts Think Will Happen Next"
+    ],
     "social_sentiment": null,
-    "summary": "Analyst recommendation breadth is strongly constructive and consistent with IHH's defensive healthcare profile, but there is no usable dated headline or social evidence. Sentiment is therefore a medium-confidence buy input rather than a complete current-news signal."
+    "summary": "Aug 26 coverage discusses IHH\u2019s longer-lived Asia strategy; June headlines include a Q1 revenue-growth call summary alongside sluggish-earnings concerns and an EPS miss. The strategic plan\u2019s effect is not quantified and the latest results are not in the feed, so sentiment is cautious and low-confidence."
   },
   "technical": {
-    "signal": "sell",
+    "signal": "neutral",
     "confidence": "low",
-    "trend": "Bearish across the supplied moving averages: the close is below SMA-20, SMA-50, and SMA-200, with a short-term oversold reading but no confirmed reversal.",
-    "rsi_14": 36.8932,
-    "rsi_assessment": "RSI-14 at 36.8932 is weak and near oversold territory, but it is not below 30; weakness has not yet produced a confirmed momentum reversal.",
-    "macd_assessment": "MACD line -0.0648 is below the -0.0576 signal line and histogram is -0.0072, confirming negative momentum.",
-    "volume_assessment": "The latest recorded volume is 0 versus a 20-day average of 3,273,640. Recent OHLC fields are incomplete/zero-valued in the Layer 1 CSV, so volume confirmation and fine-grained support/resistance interpretation are limited.",
+    "trend": "Price is below SMA-20/50/200; 20/60-bar returns are negative, while 5-bar and 252-bar returns are positive.",
+    "rsi_14": 52.9412,
+    "rsi_assessment": "RSI 52.94 is neutral.",
+    "macd_assessment": "MACD histogram is slightly positive (+0.0360), though MACD remains below zero; momentum may be stabilizing but is not a confirmed trend change.",
+    "volume_assessment": "Volume is 1.04x its 20-bar average, close to normal.",
     "support_levels": [
-      8.0661
+      7.54
     ],
     "resistance_levels": [
-      8.256,
-      8.347,
-      8.61,
-      10.4161
+      8.37,
+      8.71
     ],
-    "summary": "As of 2026-09-02, the close is RM8.08 versus SMA-20 RM8.256, SMA-50 RM8.347, and SMA-200 RM8.61; it is 22.43% below the 52-week-high reference of RM10.4161. The lower Bollinger band is RM8.0661, while the 52-week-low distance is null and recent volume is zero, so the bearish technical signal is low confidence and no missing values are invented."
+    "summary": "Price remains below the 200-day average and is down over 20/60 bars; recent 5-bar rebound and positive MACD histogram are early stabilization signs. The trend is mixed: price is below all key averages, but the short rebound and MACD histogram have improved."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The Federal Reserve maintained a 3.50%-3.75% federal-funds target range on 2026-07-29 (https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm). Higher-for-longer global rates can pressure valuation multiples and financing costs, but healthcare demand is generally less cyclical; IHH's specific US-dollar exposure is not in Layer 1.",
-    "interest_rate_outlook": "Bank Negara Malaysia maintained the OPR at 2.75% on 2026-07-09 (https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026). Stable domestic rates are supportive for household affordability and local financing, but the input does not show IHH's country-level debt, refinancing schedule, or rate sensitivity.",
-    "fx_impact": "BNM FMIP's KL USD/MYR reference was 4.0420 on 2026-09-02 (https://financialmarkets.bnm.gov.my/about-myor-myor-i). IHH's multinational operations could have translation and funding effects, but the entity-level currency mix is not supplied, so FX is treated as an uncertainty rather than a directional driver.",
-    "sector_macro_factors": [
-      "Healthcare utilization, pricing, and reimbursement conditions.",
-      "Interest rates and funding costs for hospital expansion.",
-      "Domestic consumer affordability and medical-tourism flows.",
-      "Regulatory and labor-cost conditions across operating markets."
-    ],
-    "geopolitical_risks": [
-      "Regulatory or reimbursement changes in the countries where hospitals operate.",
-      "Cross-border medical-tourism disruption or travel restrictions.",
-      "Currency and geopolitical exposure across the multinational footprint."
-    ],
-    "summary": "IHH's defensive healthcare demand and stable BNM OPR are constructive, while the Fed's 3.50%-3.75% range keeps global valuation and funding pressure relevant. Because country mix, debt currency, and reimbursement sensitivity are not in the input, the macro view remains neutral and low confidence."
+    "fed_impact": "Official BNM context dated 2026-09-03: OPR 2.75%; BNM held the OPR unchanged at 2.75%. Source: https://www.bnm.gov.my/-/monetary-policy-statement-03092026 No issuer-specific rate effect is established.",
+    "interest_rate_outlook": "A hold at the stated OPR does not establish a future policy path or the company\u2019s sensitivity; keep neutral/low confidence.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "BNM context is dated, but no issuer-specific impact or forward rate path is evidenced. USD/MYR was not supplied and no FX direction is inferred."
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

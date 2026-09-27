@@ -1,0 +1,82 @@
+{
+  "ticker": "RKLB",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "sell",
+  "conviction": {
+    "score": -0.2,
+    "signal_convergence": 0.5,
+    "explanation": "Consensus-capped research conviction for the sell thesis, not a probability or backtested expected return. I retain the research-manager ruling: Commercial momentum does not yet fund losses or establish profitable backlog conversion. The bear wins on valuation and financing evidence, without asserting imminent distress. The adverse operating/valuation case is supported but counterevidence and data limitations prevent a strong-sell claim. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "SELL: Rocket Lab's revenue and backlog show commercial traction, but loss-making execution and negative cash flow leave funding and dilution central. An oversold deep downtrend provides no reliable bottom confirmation.\n\nUnfavorable for fresh swing exposure on the supplied evidence; this research label is not an instruction to short or to liquidate an existing holding without portfolio context. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Record revenue and backlog establish commercial scaling. The bullish scenario remains conditional on financed conversion and margin improvement; deep drawdown alone cannot support purchase. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Revenue and backlog growth establish commercial traction, but a growing backlog does not fund itself. Cash runway, dilution and profitable execution remain unresolved against negative FCF and a high period-dependent sales multiple; oversold price is not a financing solution.",
+  "key_uncertainties": [
+    "Unrestricted liquidity, burn runway and contract contribution margins.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating cash flow.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating profit.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Funded backlog conversion and operating-margin improvement; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (2.61) \u2014 price may amplify broad-market moves.",
+      "Sector: Industrials \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 83.0% over available price history. Projected worst case (2-sigma): ~159.7% from current $62.95.",
+    "risk_reward_ratio": "N/A (bearish signal)"
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction -0.20, convergence 0.50). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "RKLB",
+    "judged_view": "sell",
+    "confidence": "low",
+    "thesis": "Commercial momentum does not yet fund losses or establish profitable backlog conversion. The bear wins on valuation and financing evidence, without asserting imminent distress.",
+    "winning_side": "bear",
+    "strongest_counterexample": "Record revenue growth of 62% and a $2.36bn backlog demonstrate substantial commercial traction.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating cash flow.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating profit."
+    ],
+    "evidence_gaps": [
+      "Unrestricted liquidity, burn runway and contract contribution margins.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Trailing P/E unavailable because the snapshot is loss-making; forward P/E 1381.69x",
+      "Record revenue and backlog establish commercial scaling",
+      "Revenue and backlog growth establish commercial traction, but a growing backlog does not fund itself"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "sell",
+    "sentiment": "buy",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "8af88fd53081def7d6a7d1f5a42dbe0363077c10eb7dd8fcf699e866d24a30a1",
+    "technicals.json": "b19996943d5593e8ecb2f0f03ffcf7ba8e1eb28c434fc64fe871afba9cb87376",
+    "price_history.csv": "040c4588e8ecce78936474d1cb22206ffd7f002eecf6ce9b0ded57785413c41d"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "ticker": "IBM",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-23",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.0,
+    "explanation": "Neutral: reported FCF/profitability are positive but debt/equity is about 1.98, while price structure and AI narrative are mixed."
+  },
+  "executive_summary": "IBM's technicals are mixed: price is slightly above SMA-50 but remains below SMA-200, and 60/252-bar returns are negative while the 20-bar return is nearly flat. AI and quantum coverage remains narrative-level in this packet; no dated operating evidence beyond the single financial snapshot establishes a durable turnaround. The snapshot reports FCF $11.46B (17.0% of revenue), operating margin 18.5%, and debt/equity 1.98. This is a mixed level-based picture; AI/quantum coverage does not provide commercial metrics.",
+  "bull_case": "A small positive 20-bar return and price above SMA-50 are early stabilization signals. Later reported AI or quantum adoption could support the thesis if it translates into measurable revenue or productivity.",
+  "bear_case": "Price remains below SMA-200 with negative 60/252-bar returns, negative MACD, and light volume. The narrative headlines do not establish a commercial payoff, and the financial snapshot is has no reported statement-period label, so no trend can be inferred.",
+  "key_uncertainties": [
+    "Whether price stabilization persists beyond 20 bars.",
+    "Whether AI and quantum initiatives produce measurable commercial results.",
+    "Dated financials and exact recommendation periods are unavailable."
+  ],
+  "catalysts_upcoming": [
+    "Later company reporting with measurable AI/quantum revenue or productivity impact; no dated event is supplied."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 40.6% over available price history. Projected worst case (2-sigma): ~123.0% from current $232.76.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "IBM",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Neutral: reported FCF/profitability are positive but debt/equity is about 1.98, while price structure and AI narrative are mixed. The financial snapshot contains measured levels, but a single period cannot establish trends.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Neutral: reported FCF/profitability are positive but debt/equity is about 1.98, while price structure and AI narrative are mixed. A later dated comparative filing or sustained price confirmation could change the ruling.",
+    "invalidation_conditions": [
+      "A sustained close above the observed 20-bar high of $251.82, together with dated evidence of AI/quantum revenue or productivity gains, would make neutrality too cautious."
+    ],
+    "evidence_gaps": [
+      "Financial statement period/availability dates are absent.",
+      "No measured AI/quantum adoption, revenue, or productivity data is supplied.",
+      "Dated analyst recommendations are not supplied."
+    ],
+    "decisive_factors": [
+      "The snapshot reports FCF $11.46B (17.0% of revenue), operating margin 18.5%, and debt/equity 1.98. This is a mixed level-based picture; AI/quantum coverage does not provide commercial metrics.",
+      "Price is slightly above SMA-50 but below SMA-200; the 20-bar return is nearly flat while 60/252-bar returns are negative. Neutral RSI and weak MACD/volume leave no confirmed reversal or acceleration."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

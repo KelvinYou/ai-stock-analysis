@@ -1,70 +1,64 @@
 {
   "ticker": "SMR",
-  "date": "2026-09-03",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
   "overall_signal": "sell",
   "conviction": {
-    "score": -0.28,
+    "score": -0.45,
     "signal_convergence": 0.5,
-    "explanation": "Fundamentals and technicals are directionally sell (medium and low confidence), while sentiment and macro are neutral. The resulting convergence is 0.50, but conviction is held to -0.28 because official liquidity and project milestones create real optionality and the technical snapshot is incomplete. The sell view is a valuation/execution warning, not a claim that NuScale's technology has no long-term value, and it is below the deterministic level-quoting threshold."
+    "explanation": "Consensus-capped research conviction for the sell thesis, not a probability or backtested expected return. I retain the research-manager ruling: Reported liquidity reduces immediate funding concern but does not establish commercial deployment economics at the valuation. The bear wins on execution and cash returns, not an unsupported insolvency claim. The adverse operating/valuation case is supported but counterevidence and data limitations prevent a strong-sell claim. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
   },
-  "executive_summary": "NuScale's bull case has real evidence: the official Q2 2026 release reported $1.9B of liquidity and progress on TVA, RoPower, and Paragon HIPS milestones. Those facts could support a future commercial inflection. However, the Layer 1 financial snapshot remains pre-commercial: $31.479M revenue against a $3.923B market cap, $355.794M net loss, -$460.118M free cash flow, and deeply negative operating and net margins. P/E fields are not meaningful and total debt is unavailable.\n\nThe final signal is a low-confidence sell driven by valuation and execution risk. Price is near EMA-20 but MACD is slightly negative, volume is only 0.0939x the stored average, and the 2026-08-28 non-finite bar leaves RSI, SMAs, Bollinger Bands, and ATR unavailable. RiskChecker therefore emits no precise levels; a binding contract with credible economics and revenue conversion would be the key thesis-changing evidence.",
-  "bull_case": "Substantial reported liquidity and progress toward TVA, RoPower, and component-readiness milestones give NuScale long-term optionality in a potentially large nuclear-power market. A binding deployment agreement could make current sales-based valuation look backward-looking.",
-  "bear_case": "The company is currently valued at roughly 125x supplied trailing sales while losing $355.794M and consuming $460.118M of free cash flow. Future project optionality is not current revenue, debt/funding data is incomplete, and the technical snapshot cannot confirm a reversal or supply precise risk levels.",
+  "executive_summary": "SELL: NuScale's reported liquidity supports development runway, but definitive deployment economics remain unproved. Large losses and a severe high-volume decline make the immediate swing thesis unfavorable without new execution evidence.\n\nUnfavorable for fresh swing exposure on the supplied evidence; this research label is not an instruction to short or to liquidate an existing holding without portfolio context. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Reported liquidity supports runway and commercial work has progressed. Definitive projects and deployment economics are still missing; the bull survives only as speculative commercialization optionality, not an immediate earnings-based buy. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Reported liquidity materially improves the runway argument and should not be ignored. It does not itself establish unrestricted funding through deployment, definitive customer economics or shareholder returns; the bear case is valuation and execution uncertainty, not an unsupported claim of immediate insolvency.",
   "key_uncertainties": [
-    "Binding customer contracts, economics, and revenue-recognition timing",
-    "Cash burn, future equity issuance, and dilution",
-    "Regulatory and construction progress for TVA and RoPower",
-    "Whether technical indicators become finite after the source-bar issue is repaired",
-    "Forward Fed policy and discount-rate impact on long-duration valuation"
+    "Liquidity restrictions, binding customer economics and prospective project funding.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if a binding customer contract reaches financial close with all disclosed conditions precedent satisfied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating cash flow.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote."
   ],
   "catalysts_upcoming": [
-    "Binding offtake or deployment agreement with disclosed economics",
-    "Next quarterly update showing project conversion and improving cash burn",
-    "A repaired finite technical snapshot with high-volume reclaim of the $9.385-$9.97 zone"
+    "Observation trigger, not a dated scheduled event: Definitive funded customer projects and unrestricted runway confirmation; no event date verified."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "High beta (2.31) \u2014 price may amplify broad-market moves.",
       "Sector: Industrials \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 87.5% over available price history. Projected worst case (2-sigma): ~nan% from current $9.29.",
+    "max_drawdown_scenario": "Historical max drawdown: 87.5% over available price history. Projected worst case (2-sigma): ~183.8% from current $8.61.",
     "risk_reward_ratio": "N/A (bearish signal)"
   },
   "action_plan": {
     "entry_limit": null,
-    "entry_rationale": null,
-    "stop_loss": null,
-    "stop_rationale": null,
-    "take_profit_1": null,
-    "take_profit_2": null,
-    "target_rationale": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 10.14,
+    "stop_rationale": "Thesis invalidated if price breaks above $10.14.",
+    "take_profit_1": 8.61,
+    "take_profit_2": 8.26,
+    "target_rationale": "Primary: reduce/exit at/near current $8.61. Next downside watch: $8.26 (nearest support).",
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction -0.28, convergence 0.50). Wait for a clearer setup."
+    "note": null
   },
   "research_verdict": {
     "ticker": "SMR",
     "judged_view": "sell",
     "confidence": "low",
-    "thesis": "The bear carried the debate on currently observable evidence: the company is deeply loss-making, free-cash-flow negative, and valued at roughly 125x the supplied trailing revenue, while the bullish project milestones remain future and execution-dependent. The ruling is low confidence because reported liquidity and nuclear deployment optionality could change the valuation if they convert into binding contracts and recognized revenue.",
+    "thesis": "Reported liquidity reduces immediate funding concern but does not establish commercial deployment economics at the valuation. The bear wins on execution and cash returns, not an unsupported insolvency claim.",
     "winning_side": "bear",
-    "strongest_counterexample": "The official $1.9B liquidity position and progress on TVA, RoPower, and HIPS milestones could fund the company through a commercial inflection; if a binding large-scale deployment agreement is signed, current sales-based valuation would understate the option value.",
+    "strongest_counterexample": "Reported $1.9bn liquidity and progressing commercial discussions materially improve the ability to pursue deployment.",
     "invalidation_conditions": [
-      "A binding customer deployment agreement is announced with disclosed timing and economics sufficient to support material revenue recognition",
-      "Reported revenue begins converting the project pipeline while quarterly free cash flow improves materially from -$460.118M",
-      "The next finite technical snapshot reclaims the recent $9.385-$9.97 resistance zone with stronger volume and positive momentum"
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if a binding customer contract reaches financial close with all disclosed conditions precedent satisfied.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating cash flow."
     ],
     "evidence_gaps": [
-      "No usable dated Layer 1 news headlines",
-      "No binding-contract, backlog-conversion, customer-funding, or revenue-recognition trend in Layer 1",
-      "Total debt is null and current liquidity/capital-raise detail is not in Layer 1",
-      "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
-      "No dated forward Fed path"
+      "Liquidity restrictions, binding customer economics and prospective project funding.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
     ],
     "decisive_factors": [
-      "$31.479M revenue against $3.923B market cap",
-      "$355.794M net loss, -$460.118M free cash flow, and -2190.5747% operating margin",
-      "Negative/meaningless P/E fields and missing total debt",
-      "Project milestones are not yet recognized earnings, while MACD is slightly negative"
+      "Trailing P/E unavailable because the snapshot is loss-making; negative forward P/E denotes expected losses, not cheapness",
+      "Reported liquidity supports runway and commercial work has progressed",
+      "Reported liquidity materially improves the runway argument and should not be ignored"
     ]
   },
   "agent_signal_breakdown": {
@@ -73,5 +67,16 @@
     "technical": "sell",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "710b2ccc29d25edbd7b523640023ae36f5a62f67da385991a211421fc9c84974",
+    "technicals.json": "233234dad2b5dbdc006c0967b3d36677ee441512d25876319677cd7eade13f3f",
+    "price_history.csv": "8eea2e2829fd701826ed23f90a9cbed46a21e5943777343c177a623453df1c6c"
+  }
 }

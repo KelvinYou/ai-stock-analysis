@@ -1,0 +1,23 @@
+{
+  "ticker": "5151",
+  "judged_view": "sell",
+  "confidence": "medium",
+  "thesis": "High leverage, 38.50x quoted earnings and weakening quarterly conversion outweigh sales growth. The bull concedes recovery remains a prerequisite rather than established evidence.",
+  "winning_side": "bear",
+  "strongest_counterexample": "Revenue increased and FCF is positive, so recovering conversion could support a meaningful turnaround without a sales revival.",
+  "invalidation_conditions": [
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive year-on-year EPS growth and positive FCF.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if gross debt/equity falls below 100% in a dated balance sheet."
+  ],
+  "evidence_gaps": [
+    "Current interest cover, debt maturities and comparable EPS basis.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
+  ],
+  "decisive_factors": [
+    "Quoted trailing P/E 38.50x; forward P/E missing",
+    "Revenue growth and positive FCF show continuing operating activity",
+    "Sales recovery offers a possible route to better margins, but the supplied evidence has not shown that route materializing"
+  ],
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

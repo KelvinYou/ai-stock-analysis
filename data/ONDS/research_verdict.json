@@ -1,26 +1,23 @@
 {
   "ticker": "ONDS",
-  "judged_view": "buy",
+  "judged_view": "sell",
   "confidence": "low",
-  "thesis": "The bull carried the debate narrowly because the official Q2 release supplies concrete evidence of revenue, orders, backlog, guidance, and liquidity, and the Layer 1 recommendation panel is uniformly positive. The ruling remains low confidence: current Layer 1 margins and free cash flow are deeply negative, the valuation embeds substantial execution, and technical momentum is bearish with core risk fields unavailable.",
-  "winning_side": "bull",
-  "strongest_counterexample": "The reported growth may not convert to cash or profit after acquisition costs and integration, while price below EMA-20 and a negative MACD histogram show the market is not currently confirming the bull thesis.",
+  "thesis": "Same-portfolio growth is material, but profitability and financing through deployment remain unestablished. The bull does not quantify returns sufficient to outweigh losses and valuation.",
+  "winning_side": "bear",
+  "strongest_counterexample": "Pro forma same-portfolio growth of 85% and raised targets show that expansion is not merely acquisition arithmetic.",
   "invalidation_conditions": [
-    "FY2026 revenue guidance of $525M-$550M is materially reduced or backlog fails to convert into recognized revenue over the next two reported quarters",
-    "Operating margin remains below -50% and free cash flow remains negative while dilution increases",
-    "The next finite technical snapshot remains below EMA-20 with negative MACD and price breaks below the recent $7.04 support area"
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating cash flow.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating margin."
   ],
   "evidence_gaps": [
-    "No usable dated Layer 1 news headlines",
-    "No backlog-conversion, acquisition-integration, or forward-margin trend in Layer 1",
-    "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
-    "No dated forward Fed path"
+    "Acquisition cash returns, deployment margin and unrestricted runway.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
   ],
   "decisive_factors": [
-    "Official Q2 record revenue, orders, backlog, raised FY2026 guidance, and reported liquidity",
-    "Uniform 2 strong-buy/7 buy Layer 1 recommendation panel",
-    "Negative Layer 1 net income, free cash flow, and operating/net margins",
-    "Price below EMA-20 with negative MACD and 0.1019x volume ratio"
+    "Trailing P/E unavailable because the snapshot is loss-making; negative forward P/E denotes expected losses, not cheapness",
+    "Same-portfolio growth and raised targets substantiate more than acquisition-only expansion",
+    "The pro forma same-portfolio growth measure is stronger evidence than raw acquisition-driven sales alone"
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
 }

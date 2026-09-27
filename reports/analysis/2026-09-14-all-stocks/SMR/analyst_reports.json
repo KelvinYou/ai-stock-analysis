@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "low",
+    "pe_assessment": "Trailing P/E unavailable because the snapshot is loss-making; negative forward P/E denotes expected losses, not cheapness. Market cap/snapshot revenue 112.2x is period-dependent, not a verified TTM multiple.",
+    "margin_analysis": "gross 36.31%; operating -2190.57%; net -1130.26%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Debt missing; do not infer debt-free status. Snapshot FCF -460.12m USD. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Very small revenue relative to losses and cash outflow provides no fundamental support for roughly 112x snapshot sales; forward losses do not create a cheap P/E. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Commercial deployment, financing runway and dilution dominate; missing debt is not zero debt.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Positive gross margin and positive equity are the limited observable strengths."
+    ],
+    "summary": "Very small revenue relative to losses and cash outflow provides no fundamental support for roughly 112x snapshot sales; forward losses do not create a cheap P/E. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "August 5: NuScale reported progress in commercial discussions and $1.9bn liquidity, but TVA arrangements were still being discussed and Romania project conditions remained outstanding. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=1, buy=5, hold=9, sell=2, strongSell=1. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Commercial readiness",
+      "Conditional deployment",
+      "Liquidity"
+    ],
+    "notable_headlines": [
+      "2026-08-05 https://www.nuscalepower.com/press-releases/2026/nuscale-power-reports-second-quarter-2026-results"
+    ],
+    "social_sentiment": null,
+    "summary": "Progress is constructive but the commercialization narrative runs ahead of definitive deployment execution. Discussions and conditional approvals are not operating-reactor earnings. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 8.61: below SMA20 9.52, below SMA50 9.11, below SMA200 12.82. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 44.5816,
+    "rsi_assessment": "RSI14 44.6: weak but not oversold.",
+    "macd_assessment": "MACD line 0.1786, signal 0.1763, histogram 0.0023: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 92,251,100; ratio 2.52x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      8.57
+    ],
+    "resistance_levels": [
+      9.77,
+      10.1
+    ],
+    "summary": "The September 11 plunge on 2.52 times average volume closed near its low, overwhelming the near-zero positive histogram; ATR near 9% of price highlights substantial gap and volatility risk. As of 2026-09-11, ATR14 is 0.767 (8.9% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 85.0%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Nuclear development economics depend on financing costs, licensing and customer commitments.",
+      "Long project duration makes capital access and policy continuity central uncertainties."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "NuScale Power Corporation: Nuclear development economics depend on financing costs, licensing and customer commitments. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

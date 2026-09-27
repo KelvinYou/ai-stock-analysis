@@ -1,0 +1,23 @@
+{
+  "ticker": "MSFT",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Adjusted EPS growth of 23% excluding investment effects gives the bull actual earnings evidence alongside high margins and low leverage. The bear identifies unresolved incremental capex returns but does not overturn the established quality-growth case.",
+  "winning_side": "bull",
+  "strongest_counterexample": "FCF is about half snapshot profit, so large AI investments may deliver accounting growth without commensurate distributable returns.",
+  "invalidation_conditions": [
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of non-positive year-on-year adjusted EPS growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative FCF."
+  ],
+  "evidence_gaps": [
+    "Discrete-item normalization and incremental infrastructure cash returns.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
+  ],
+  "decisive_factors": [
+    "Quoted trailing P/E 27.63x; forward P/E 21.03x",
+    "Cloud growth and operating profitability support a quality-growth case",
+    "Adjusted EPS growth strengthens the business thesis and cannot be dismissed because capex is high"
+  ],
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

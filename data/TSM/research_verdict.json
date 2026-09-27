@@ -1,24 +1,22 @@
 {
   "ticker": "TSM",
   "judged_view": "buy",
-  "confidence": "medium",
-  "thesis": "The bull carried the evidence-weighted case because profitability, cash flow, valuation, and recommendation data are constructive; conviction is capped by incomplete technicals and unquantified company-specific risks.",
+  "confidence": "low",
+  "thesis": "The snapshot reports 50.8% operating margin, 44.6% net margin, and FCF equal to about 26.1% of revenue; price remains above both moving averages with a strong 252-bar return. The 60-bar return is slightly negative and financial currency/period labels are absent, so the buy view is moderate-confidence.",
   "winning_side": "bull",
-  "strongest_counterexample": "A durable earnings and cash-flow trajectory could validate the constructive view despite the current technical gap.",
+  "strongest_counterexample": "A close above the observed 60-bar high of $479.00 with later dated results confirming demand would make the neutral stance too cautious.",
   "invalidation_conditions": [
-    "Reported profitability or free cash flow materially deteriorates",
-    "Forward valuation support disappears without corresponding earnings delivery",
-    "Repaired technical data confirms a sustained primary downtrend"
+    "A close above the observed 60-bar high of $479.00 with later dated results confirming demand would make the neutral stance too cautious."
   ],
   "evidence_gaps": [
-    "No populated dated news headlines are available in Layer 1.",
-    "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
-    "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory."
+    "Financial statement period/availability dates are absent.",
+    "No issuer-specific macro or geopolitical snapshot is supplied.",
+    "Dated analyst recommendations are not supplied."
   ],
   "decisive_factors": [
-    "Analyst signals: fundamentals=buy, sentiment=buy, technical=neutral, macro=neutral.",
-    "Reported profitability and cash flow are strong",
-    "Whether the forward P/E discount is sufficient compensation for execution risk"
+    "The snapshot reports 50.8% operating margin, 44.6% net margin, FCF/revenue of about 26.1%, and debt/equity of about 0.20. Absolute statement amounts have no currency label, and no trend or peer-relative valuation claim is made.",
+    "Price is above both moving averages and the 5/20/252-bar returns are positive, but the 60-bar return is slightly negative and RSI is firm. MACD is positive with ordinary volume, supporting a constructive but not uniform trend.",
+    "Statement period is not specified; no multi-period trend is inferred."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

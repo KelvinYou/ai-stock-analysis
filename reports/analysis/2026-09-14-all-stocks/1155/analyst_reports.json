@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 12.02x; forward P/E 11.28x. Indicated yield 5.97% is not a guaranteed forward payout.",
+    "margin_analysis": "gross unavailable; operating unavailable; net 37.73%. No historical series is supplied, so margin trends cannot be established. NIM, cost/income, credit costs and capital metrics are required for banking analysis.",
+    "debt_analysis": "Gross debt/equity 56.40%. Snapshot FCF -16023.47m MYR. FCF/net income -1.52x; periods unverified. Cash, net debt, interest cover and maturities are unavailable. Lending/bank cash flow and gross debt/equity are not stand-alone solvency tests; CET1, liquidity and credit-quality data are missing.",
+    "growth_outlook": "Income valuation is attractive enough for conditional accumulation, but bank solvency and payout verification must precede a substantial position. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Loan repricing and credit costs may weaken distributions.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Indicated 5.97% yield and positive earnings support an income thesis."
+    ],
+    "summary": "Income valuation is attractive enough for conditional accumulation, but bank solvency and payout verification must precede a substantial position. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "August 27: Q2 profit rose 2.4% but H1 profit slipped 0.9%; interim dividend increased to 31 sen. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=2, buy=7, hold=8, sell=0, strongSell=1. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Income resilience",
+      "Flat half-year earnings"
+    ],
+    "notable_headlines": [
+      "2026-08-27 https://maybank.listedcompany.com/news.html/id/2625840"
+    ],
+    "social_sentiment": null,
+    "summary": "Dividend news supports the income narrative, while earnings do not establish acceleration. No verified sentiment extreme warrants a contrarian call. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 10.38: below SMA20 10.58, below SMA50 10.75, below SMA200 10.90. Latest supplied MY daily bar is September 11; no September 14 completed-session observation supplied.",
+    "rsi_14": 37.8378,
+    "rsi_assessment": "RSI14 37.8: weak but not oversold.",
+    "macd_assessment": "MACD line -0.0730, signal -0.0601, histogram -0.0130: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 11,956,900; ratio 0.67x the 20-bar average. Recent zero-volume rows: 2026-08-25, 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      10.38
+    ],
+    "resistance_levels": [
+      10.46,
+      10.58
+    ],
+    "summary": "Downtrend at its recent low; RSI is weak rather than oversold, leaving no clear exhaustion signal. As of 2026-09-11, ATR14 is 0.106 (1.0% of price), price is below the lower band, and the adjusted 52-week-high drawdown is 14.0%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Bank funding and loan repricing determine net interest margin; stable OPR alone does not imply expansion.",
+      "Regional credit conditions and overseas currency translation require exposure data."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "MAYBANK: Bank funding and loan repricing determine net interest margin; stable OPR alone does not imply expansion. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

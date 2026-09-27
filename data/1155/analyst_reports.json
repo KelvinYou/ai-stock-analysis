@@ -1,75 +1,65 @@
 {
   "fundamentals": {
-    "signal": "buy",
-    "confidence": "medium",
-    "pe_assessment": "Trailing P/E is 12.18x and forward P/E is 11.43x; the forward multiple is about 6.2% below the trailing multiple. No peer benchmark is present in Layer 1, so the valuation looks reasonable for a profitable, high-yield bank but is not proven undervalued.",
-    "margin_analysis": "Reported net margin is 37.7% on MYR10.51bn of net income and MYR27.86bn of revenue. Gross and operating margins are unavailable, and there is no historical series, so margin stability and trend cannot be established.",
-    "debt_analysis": "Reported total debt is MYR52.70bn versus MYR93.44bn of equity, a raw debt-to-equity ratio of about 0.56x. For a bank, solvency and leverage require CET1, risk-weighted assets, liquidity, NPL, loan-to-deposit, and provisioning data; none is supplied. Reported negative free cash flow of MYR16.02bn is not a clean bank liquidity signal.",
-    "growth_outlook": "Layer 1 provides no growth time series. Maybank's mature regional-bank profile makes modest loan and fee growth plus dividend carry plausible, but the earnings trajectory cannot be quantified here. A stable domestic policy rate may support demand, while future rate changes can still pressure net interest margins.",
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "P/E 11.63 and forward P/E 10.91; indicated dividend yield 6.11%. No peer benchmark or payout-history comparison is supplied.",
+    "margin_analysis": "Reported net margin is 37.7%. The financial snapshot has no fiscal-period or availability date, so no margin trend is claimed.",
+    "debt_analysis": "Total debt RM52.70b and equity RM93.44b are reported. For a bank, these alone do not measure capital adequacy or asset quality; reported FCF is negative RM16.02b and should be interpreted cautiously without its period context.",
+    "growth_outlook": "Revenue and net income are single provider-snapshot values with unknown statement period; growth cannot be assessed.",
     "key_risks": [
-      "NIM, NPL, CET1, ROE, provisioning, loan growth, and dividend coverage are missing.",
-      "The negative reported free-cash-flow figure is difficult to interpret for a bank and should not be used as a standalone distress signal.",
-      "A mature regional franchise may offer income more than rapid earnings growth.",
-      "The valuation and dividend case fails if asset quality or capital buffers deteriorate."
+      "A dated 2026-05-31 headline reports an earnings miss and weaker-than-expected revenue.",
+      "Bank asset-quality, capital-adequacy and dividend-coverage evidence is absent.",
+      "Negative reported FCF requires bank-specific context."
     ],
     "key_strengths": [
-      "MYR10.60 price against 12.18x trailing and 11.43x forward P/E.",
-      "6.25% reported dividend yield supports an income-oriented thesis.",
-      "37.7% reported net margin and MYR10.51bn net income show current profitability.",
-      "Beta of 0.11 suggests historically low sensitivity to broad equity moves."
+      "6.11% indicated dividend yield.",
+      "P/E and forward P/E are both supplied.",
+      "Reported net margin is 37.7%."
     ],
-    "summary": "At MYR10.60 as of 2026-09-02, 1155 reports trailing P/E of 12.18x, forward P/E of 11.43x, dividend yield of 6.25%, net margin of 37.7%, and beta of 0.11. These support a value-and-income case, but missing bank-specific risk metrics and the non-bank-like negative free-cash-flow figure keep conviction at medium rather than high."
+    "summary": "The supplied valuation and yield are visible positives, but the financial record is undated and lacks bank-specific credit and capital measures. A dated earnings-miss headline and weak short-term tape leave the fundamental signal neutral."
   },
   "sentiment": {
     "signal": "neutral",
     "confidence": "low",
-    "news_tone": "unavailable / neutral",
-    "news_summary": "No usable news text or source links are present: the four Layer 1 headline records have blank title, link, and publisher fields. The available recommendation counts are 2 strong buy, 7 buy, 8 hold, 0 sell, and 1 strong sell; that is mildly constructive but not decisive.",
+    "news_tone": "mixed",
+    "news_summary": "The latest dated operating headline by the cutoff is the 2026-05-31 Simply Wall St. report of an earnings miss and weaker revenue; an April 2026 ESG leadership story is not earnings evidence. The feed has no newer operating headline, so this is stale and mixed.",
     "key_themes": [
-      "Analyst-rating dispersion rather than a clear consensus",
-      "Income and value appeal from the reported dividend yield and P/E",
-      "No verifiable current news narrative in the supplied Layer 1 snapshot"
+      "earnings quality",
+      "sustainability disclosure"
     ],
-    "notable_headlines": [],
+    "notable_headlines": [
+      "Malayan Banking Berhad Just Missed Earnings And Its Revenue Numbers Were Weaker Than Expected",
+      "Islamic finance aligns naturally with ESG, says Maybank\u2019s first-ever chief sustainability officer"
+    ],
     "social_sentiment": null,
-    "summary": "Sentiment is neutral with low confidence: recommendations lean positive, but eight holds and one strong sell prevent a clean consensus. No usable dated headlines are available to validate a current market narrative."
+    "summary": "Sentiment is neutral and low confidence because the dated headlines are several months old and provide mixed company context."
   },
   "technical": {
     "signal": "sell",
     "confidence": "medium",
-    "trend": "Mild bearish trend: the MYR10.60 close is below SMA-20 at 10.643, SMA-50 at 10.7884, and SMA-200 at 10.8567, while valid recent closes have been range-bound around MYR10.56\u201310.72.",
-    "rsi_14": 52.7778,
-    "rsi_assessment": "RSI-14 is 52.78, which is neutral rather than oversold or overbought; it does not confirm a reversal or capitulation.",
-    "macd_assessment": "MACD line is -0.0581 and signal line is -0.0649, both below zero. The +0.0067 histogram shows a small positive turn, so momentum is mixed rather than cleanly bearish.",
-    "volume_assessment": "Latest volume is 0 and volume ratio is 0.0 because the 2026-09-02 row is zero-filled; 2026-08-28 and 2026-09-01 also contain zero or partial OHLC/volume fields. Volume confirmation and the computed ATR-14 of 1.61 are contaminated; valid recent volume evidence ends on 2026-08-27.",
+    "trend": "Price is 4.75% below SMA-50 and 7.25% below SMA-200. Five-bar return is +0.67%, but 20/60-bar returns are -5.6%/-5.1%.",
+    "rsi_14": 24.8028,
+    "rsi_assessment": "RSI-14 is oversold at 24.8, but an oversold reading does not confirm a reversal.",
+    "macd_assessment": "Both MACD lines are negative and the histogram is -0.0286.",
+    "volume_assessment": "Latest volume is 0.33x the 20-bar average; the small 5-bar rebound lacks volume confirmation.",
     "support_levels": [
-      10.4823,
-      10.52
+      10.0136
     ],
     "resistance_levels": [
-      10.7884,
-      10.8567,
-      12.0727
+      10.84,
+      11.38
     ],
-    "summary": "Price structure is mildly bearish because the close is below all three moving averages and about 12.2% below the supplied 52-week high of MYR12.0727. RSI and the small positive MACD histogram leave room for a bounce, but the zero-filled tail makes volume and volatility confirmation unreliable; the supplied 52-week low of 0.0 is not usable."
+    "summary": "Trend is down across the 20/50/200-day averages despite a slight 5-bar bounce. RSI is oversold, but negative MACD and sub-average volume do not confirm a reversal."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "The Federal Reserve maintained the target range for the federal funds rate at 3.50\u20133.75% at the 2026-07-29 FOMC and described growth as solid while inflation remained elevated. [Source: Federal Reserve, Federal Reserve issues FOMC statement, 2026-07-29, https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm] For Maybank, stable higher US rates can support returns on USD-linked assets, but they can also keep global funding conditions tight; the net effect is neutral without a balance-sheet currency breakdown.",
-    "interest_rate_outlook": "Bank Negara Malaysia maintained the OPR at 2.75% on 2026-07-09 and said the stance was appropriate for price stability and sustainable growth. [Source: Bank Negara Malaysia, Monetary Policy Statement, 2026-07-09, https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026] A stable domestic rate can support credit demand and planning, but it does not prove NIM expansion; the 0.75\u20131.00 percentage-point Fed-versus-BNM gap leaves external-rate and funding sensitivity.",
-    "fx_impact": "The KL USD/MYR reference rate was 4.0420 on 2026-09-02. [Source: Bank Negara Malaysia FMIP, KL USD/MYR Reference Rate, 2026-09-02, https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate] A stronger MYR can lower the MYR cost of USD funding and imported services, while reducing the ringgit value of foreign earnings; Maybank's net FX impact is mixed and the required exposure data is unavailable.",
-    "sector_macro_factors": [
-      "Stable BNM OPR is a modest support for domestic credit demand, but margin direction remains unverified.",
-      "Higher-for-longer US rates can tighten global funding and raise risk sensitivity for regional borrowers.",
-      "Domestic growth and borrower asset quality matter more than the policy rate alone; no loan or NPL data is supplied.",
-      "MYR4.0420 per USD reduces some dollar-cost pressure but can create translation headwinds on overseas earnings."
-    ],
-    "geopolitical_risks": [
-      "The Fed and BNM statements flag Middle East conflict, energy-supply inflation, and global uncertainty; renewed escalation could raise funding and credit stress. [Sources: Federal Reserve FOMC statement, 2026-07-29, https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm; Bank Negara Malaysia Monetary Policy Statement, 2026-07-09, https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026]",
-      "A regional trade or growth slowdown could weaken loan demand and borrower quality; Maybank's geographic exposure breakdown is not present in Layer 1."
-    ],
-    "summary": "Macro/FX is neutral: official policy facts are stable enough to avoid an immediate shock, but they do not establish Maybank's NIM, credit-quality, or overseas-earnings response. The Fed rate, BNM OPR, and USD/MYR reference are therefore context rather than a directional signal."
+    "confidence": "low",
+    "fed_impact": "No company-specific Fed transmission evidence is supplied for this Malaysian bank.",
+    "interest_rate_outlook": "BNM held the OPR at 2.75% on 2026-09-03 (official macro context); this is one observation, so no rate trajectory is inferred.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "Macro/FX remains neutral and low confidence: only the dated BNM OPR hold is available; no USD/MYR observation or company-specific exposure is supplied."
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

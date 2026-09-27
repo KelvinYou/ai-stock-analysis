@@ -1,0 +1,21 @@
+{
+  "ticker": "SNDK",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Neutral: snapshot profitability is strong, but the recent 60-bar return is negative, dated coverage describes a fading rally, and the extreme reported 252-bar return needs price-series comparability review. The financial snapshot contains measured levels, but a single period cannot establish trends.",
+  "winning_side": "neither",
+  "strongest_counterexample": "Neutral: snapshot profitability is strong, but the recent 60-bar return is negative, dated coverage describes a fading rally, and the extreme reported 252-bar return needs price-series comparability review. A later dated comparative filing or sustained price confirmation could change the ruling.",
+  "invalidation_conditions": [
+    "A sustained close above the observed 20-bar high of $1,909.48, along with comparable price history and dated evidence of memory-demand durability, would strengthen the bullish case."
+  ],
+  "evidence_gaps": [
+    "Financial statement period/availability dates are absent.",
+    "Price-series corporate-action/comparability context is not included despite an extreme reported 252-bar return and 52-week range.",
+    "Memory pricing and company-specific demand data are absent."
+  ],
+  "decisive_factors": [
+    "The snapshot reports 61.6% operating margin, 56.5% net margin, FCF $11.49B (56.8% of revenue), and debt/equity near 0.01. This is positive single-period evidence, but persistence is uncertain and the extreme price history needs separate validation.",
+    "Price is well above both moving averages, with a strong 20-bar return and positive MACD, but the 60-bar return is negative and price remains 22.84% below its 52-week high. The reported 252-bar return and 52-week range are exceptionally large; verify price-series adjustments before extrapolating them."
+  ],
+  "pipeline_mode": "in-session"
+}

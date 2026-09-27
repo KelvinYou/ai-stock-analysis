@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 46.05x; forward P/E 18.67x. Indicated yield 0.72% is not a guaranteed forward payout. Market cap/snapshot net income is 74.72x, materially different; periods, EPS basis and share counts need reconciliation.",
+    "margin_analysis": "gross 67.77%; operating 40.81%; net 36.20%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 80.13%. Snapshot FCF 26914.00m USD. FCF/net income 1.16x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Healthy operating margins and cash conversion support quality, but the gap between 46.05x trailing and 18.67x forward earnings requires accounting and forecast reconciliation. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Debt, acquisition accounting and earnings-basis differences complicate apparent forward value.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Quoted P/E and market-cap/snapshot-profit differ materially; valuation confidence is reduced."
+    ],
+    "key_strengths": [
+      "Free cash flow exceeds snapshot net income with a 40.81% operating margin."
+    ],
+    "summary": "Healthy operating margins and cash conversion support quality, but the gap between 46.05x trailing and 18.67x forward earnings requires accounting and forecast reconciliation. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "September 2: Broadcom's Q3 AI semiconductor revenue reached $16.7bn, up 221% year on year, according to its issuer release. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=7, buy=40, hold=3, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Custom AI chips",
+      "Infrastructure growth"
+    ],
+    "notable_headlines": [
+      "2026-09-02 https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial"
+    ],
+    "social_sentiment": null,
+    "summary": "Recent results substantiate AI demand and support positive news tone. Rapid growth alone cannot establish that expectations are conservative or that the valuation has a margin of safety. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 361.99: below SMA20 367.49, below SMA50 383.09, below SMA200 369.44. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 45.1487,
+    "rsi_assessment": "RSI14 45.1: weak but not oversold.",
+    "macd_assessment": "MACD line -7.4881, signal -7.5841, histogram 0.0960: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 21,142,900; ratio 0.82x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      353.7,
+      357.75
+    ],
+    "resistance_levels": [
+      366.78,
+      372.7
+    ],
+    "summary": "A barely positive histogram suggests slowing downside, but price below every major average means the broader trend has not turned bullish. As of 2026-09-11, ATR14 is 10.4 (2.9% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 26.8%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "AI networking demand and traditional semiconductor cycles need separate treatment.",
+      "Funding costs and export restrictions can affect leveraged cash-flow growth."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Broadcom Inc.: AI networking demand and traditional semiconductor cycles need separate treatment. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

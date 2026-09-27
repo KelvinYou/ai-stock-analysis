@@ -2,78 +2,68 @@
   "fundamentals": {
     "signal": "sell",
     "confidence": "medium",
-    "pe_assessment": "The supplied trailing P/E is 85.0x versus a forward P/E of 28.934528x, implying the market is pricing a large earnings recovery. That recovery is not yet evidenced by the latest 4QFY2026 filing, which reported attributable profit of RM6.146m versus RM49.169m a year earlier.",
-    "margin_analysis": "The supplied snapshot reports RM1,351,937,000 revenue, RM218,745,000 net income, and gross, operating, and net margins of 21.7%, 14.0%, and 16.2%. However, the latest 4QFY2026 filing reported quarterly revenue of RM288.942m versus RM306.712m and attributable profit of RM6.146m versus RM49.169m, showing severe recent earnings pressure; the reason and persistence of that pressure are not resolved in Layer 1.",
-    "debt_analysis": "Total debt is RM14,682,000 against RM2,763,719,000 equity, approximately 0.5% debt-to-equity. The balance sheet is a clear strength and gives the company capacity to absorb a cyclical or operational setback, but it does not by itself justify the current earnings multiple.",
-    "growth_outlook": "The forward P/E assumes a rebound from the weak FY2026 exit. Current evidence is mixed: the company remains a cash-generative, lightly levered semiconductor/EMS operator in the supplied snapshot, but the latest quarterly result shows falling revenue and an approximately 87.5% year-over-year drop in attributable profit. Recovery must be demonstrated in subsequent quarters before the premium can be underwritten.",
+    "pe_assessment": "Quoted trailing P/E 86.00x; forward P/E 29.27x. Indicated yield 1.77% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 19.25%; operating 8.20%; net 10.74%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 0.50%. Snapshot FCF 222.85m MYR. FCF/net income 1.75x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Minimal gross debt is a strength, but 86.00x trailing earnings versus 29.27x forward implies a recovery that the supplied history cannot establish. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
     "key_risks": [
-      "85.0x trailing P/E depends on a substantial earnings recovery implied by the 28.934528x forward P/E.",
-      "Latest 4QFY2026 attributable profit fell sharply year over year while revenue also declined.",
-      "A 10 May 2026 fire incident at the Philippines subsidiary is a disclosed operational risk; its financial impact is not quantified in the supplied data.",
-      "The supplied financial snapshot and latest reported FY2026 figures do not align cleanly, limiting confidence in the current earnings base."
+      "The implied earnings recovery may fail to justify the current premium.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
     ],
     "key_strengths": [
-      "Very low leverage at approximately 0.5% debt-to-equity.",
-      "Positive supplied free cash flow of RM209,269,000.",
-      "Supplied snapshot shows RM218,745,000 net income and a 16.2% net margin.",
-      "Exposure to semiconductor/OSAT and electronics manufacturing can benefit from a cyclical recovery if execution normalizes."
+      "Low gross debt and positive free cash flow provide balance-sheet flexibility."
     ],
-    "summary": "INARI has a strong balance sheet and positive supplied cash flow, but the investment case currently depends on a large earnings recovery: the supplied trailing P/E is 85.0x versus 28.934528x forward. The latest 4QFY2026 filing showed revenue down to RM288.942m from RM306.712m and attributable profit down to RM6.146m from RM49.169m, so the recovery is not yet proven. The fundamental signal is sell at medium confidence until earnings and margins stabilize; low leverage is the main offset."
+    "summary": "Minimal gross debt is a strength, but 86.00x trailing earnings versus 29.27x forward implies a recovery that the supplied history cannot establish. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
   },
   "sentiment": {
-    "signal": "neutral",
+    "signal": "sell",
     "confidence": "medium",
-    "news_tone": "mixed",
-    "news_summary": "The stored Layer 1 headline titles are blank, so dated company and filing pages were used as supplemental evidence. The latest recommendation mix is positive but hold-heavy (2 strong-buy, 9 buy, 7 hold, and no sell ratings), while 4QFY2026 results and a fourth interim dividend are positive corporate disclosures offset by the May Philippines fire incident and the earnings decline.",
+    "news_tone": "negative",
+    "news_summary": "August 27: Inari attributable quarterly profit fell about 88% to RM6.15m as a RM41.9m fire-related provision compounded lower RF loading and revenue. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=2, buy=9, hold=7, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
     "key_themes": [
-      "Earnings recovery versus recent profit contraction",
-      "Semiconductor/OSAT and electronics manufacturing cycle",
-      "Fourth interim dividend",
-      "Philippines facility fire and operational continuity"
+      "Philippines fire",
+      "Weak RF loading",
+      "Lower earnings"
     ],
     "notable_headlines": [
-      "27 Aug 2026 \u2014 4QFY2026 quarterly report: https://mobapp.klsescreener.com/v2/stock/financial-report/0166/2026-06-30",
-      "27 Aug 2026 \u2014 Fourth interim dividend announcement: https://www.inari-amertron.com/news-press-releases/",
-      "12 May 2026 \u2014 Fire incident at Amertron Philippines manufacturing facility: https://www.inari-amertron.com/news-press-releases/",
-      "Apr 2026 \u2014 Termination of proposed Lumileds joint acquisition agreements, listed in company latest news: https://www.inari-amertron.com/category/latest-news/"
+      "2026-08-27 https://theedgemalaysia.com/node/816042"
     ],
     "social_sentiment": null,
-    "summary": "Sentiment is mixed rather than cleanly bullish: recommendations lean positive and the company continues to declare dividends, but the newest financial disclosure shows a sharp profit decline and the company has disclosed a Philippines facility fire. With no usable stored headline text and no social evidence, the sentiment signal is neutral at medium confidence."
+    "summary": "Negative news has identifiable operating and exceptional components. Removing the fire provision would not eliminate the separately reported RF demand weakness. Representative social sentiment is unavailable."
   },
   "technical": {
-    "signal": "buy",
-    "confidence": "low",
-    "trend": "Bullish across the supplied moving-average snapshot, with neutral mid-range RSI and price close to the 52-week high.",
-    "rsi_14": 53.3333,
-    "rsi_assessment": "RSI-14 is 53.3333, near the middle of its range: it is neither overbought nor oversold and does not provide a strong timing edge.",
-    "macd_assessment": "MACD line is 0.0651 versus signal line 0.0464, with histogram 0.0186; momentum is positive on the supplied snapshot.",
-    "volume_assessment": "Latest volume is 0 against a 20-day volume SMA of 19,747,810 and a reported ratio of 0.0. The bullish move therefore lacks usable volume confirmation; this is an explicit data limitation.",
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 2.58: above SMA20 2.50, above SMA50 2.36, above SMA200 1.92. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 70.5128,
+    "rsi_assessment": "RSI14 70.5: overbought, increasing extension risk without automatically reversing the trend.",
+    "macd_assessment": "MACD line 0.0852, signal 0.0817, histogram 0.0034: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 6,863,400; ratio 0.32x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
     "support_levels": [
-      2.1833,
-      1.912
+      2.55,
+      2.56
     ],
     "resistance_levels": [
-      2.6181,
-      2.6467
+      2.67,
+      2.72
     ],
-    "summary": "At RM2.55, price is above SMA-20 (RM2.4150), SMA-50 (RM2.2916), and SMA-200 (RM1.9120), with positive MACD and RSI-14 at 53.3333. It is only 2.6% below the supplied 52-week high of RM2.6181, so the trend is constructive but not deeply discounted. Confidence is low because latest volume is reported as zero and the 52-week-low-derived field is null (the supplied low is 0.0); technicals alone cannot validate the earnings-recovery thesis."
+    "summary": "Positive longer trend persists but overbought RSI and retreat from 2.72 argue for patience; positive MACD histogram is small and does not confirm renewed acceleration. As of 2026-09-14, ATR14 is 0.111 (4.3% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 5.8%. September 14 readings and latest swing references remain provisional."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The Federal Reserve maintained the federal-funds target range at 3.50%-3.75% on 29 Jul 2026. Stable but elevated US rates may cap high-growth semiconductor valuations and global electronics risk appetite; source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
-    "interest_rate_outlook": "Bank Negara Malaysia maintained OPR at 2.75% on 9 Jul 2026. That is a stable domestic funding backdrop, but it does not remove demand and margin risks in a global semiconductor/EMS cycle. Source: https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026",
-    "fx_impact": "BNM FMIP listed KL USD/MYR at 4.0420 as of 2 Sep 2026. INARI\u2019s currency revenue, cost, and hedging mix is not supplied, so the FX effect remains unassigned; source: https://financialmarkets.bnm.gov.my/about-myor-myor-i",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
     "sector_macro_factors": [
-      "Global smartphone, RF, datacom, and semiconductor demand can drive utilization and product mix.",
-      "Higher global rates can pressure long-duration semiconductor valuations even when domestic rates are stable.",
-      "Supply-chain normalization and global technology spending are potential recovery supports, but company-specific sensitivity is unavailable."
+      "OSAT demand is linked to semiconductor inventories and end-device spending.",
+      "USD-linked export receipts and local costs can diverge; hedge data unavailable."
     ],
     "geopolitical_risks": [
-      "Middle East conflict and energy/supply-chain disruption are risks identified in the supplied central-bank context.",
-      "INARI operates across Malaysia, the Philippines, and China according to its company materials, so trade, logistics, and local operating disruption are relevant risks; the exact exposure is not quantified here."
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
     ],
-    "summary": "Macro conditions offer no decisive edge: BNM policy is stable at 2.75% and the Fed held 3.50%-3.75%, but global semiconductor demand, supply chains, and valuation sensitivity remain uncertain. USD/MYR at 4.0420 is a reference point only because the company\u2019s currency mix is unavailable. The macro/FX signal is neutral at low confidence."
+    "summary": "INARI: OSAT demand is linked to semiconductor inventories and end-device spending. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
 }

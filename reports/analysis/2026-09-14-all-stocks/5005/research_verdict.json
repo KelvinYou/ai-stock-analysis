@@ -1,0 +1,23 @@
+{
+  "ticker": "5005",
+  "judged_view": "sell",
+  "confidence": "medium",
+  "thesis": "A single quarterly rebound does not offset H1 losses, negative FCF and 105x quoted earnings. Current evidence makes recovery a required assumption rather than a margin of safety.",
+  "winning_side": "bear",
+  "strongest_counterexample": "Q2 returned to RM9.91m profit and leverage is modest, so operating recovery may have started.",
+  "invalidation_conditions": [
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive FCF.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of operating margin above 8%."
+  ],
+  "evidence_gaps": [
+    "Dated normalized earnings and investment-versus-operating cash-flow bridge.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
+  ],
+  "decisive_factors": [
+    "Quoted trailing P/E 105.00x; forward P/E 32.20x",
+    "The latest quarter returned to profit",
+    "Returning to quarterly profit is a useful early signal, not proof of normalized earnings or positive investment-cycle cash flow"
+  ],
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 12.10x; forward P/E 11.16x. Indicated yield 3.11% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 16.87%; operating 10.05%; net 7.87%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 15.13%. Snapshot FCF 262.23m MYR. FCF/net income 0.59x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "A 12.10x trailing multiple, low gross leverage and positive free cash flow form a conditional value case, subject to normalizing commodity-cycle earnings. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Palm-oil price and production-cost changes can make current profits unrepresentative.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Debt is modest versus equity and the business generates positive cash flow."
+    ],
+    "summary": "A 12.10x trailing multiple, low gross leverage and positive free cash flow form a conditional value case, subject to normalizing commodity-cycle earnings. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "August 28: Sarawak Oil Palms Q2 profit increased 67.2% on higher volumes, realizations and derivative gains; H1 profit rose only about 6%. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=0, buy=2, hold=2, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Palm realizations",
+      "Volume growth",
+      "Derivative volatility"
+    ],
+    "notable_headlines": [
+      "2026-08-28 https://theedgemalaysia.com/node/816181",
+      "2026-08-28 https://www.thestar.com.my/business/business-news/2026/08/28/sarawak-oil-palms-2q-net-profit-surges-67-to-rm154mil"
+    ],
+    "social_sentiment": null,
+    "summary": "The recent quarter supports positive news tone. The smaller half-year increase and derivative effects caution against extrapolating the headline quarterly rate. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 6.17: above SMA20 5.72, above SMA50 5.37, above SMA200 4.46. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 68.4932,
+    "rsi_assessment": "RSI14 68.5: neutral-to-firm.",
+    "macd_assessment": "MACD line 0.2415, signal 0.2068, histogram 0.0347: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 453,500; ratio 0.75x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-25, 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      5.99,
+      6.0
+    ],
+    "resistance_levels": [
+      6.2
+    ],
+    "summary": "Strong trend and positive momentum are testing the yearly high at 6.20; extension above SMA20 and RSI near 70 favor waiting for a hold or a confirmed breakout rather than chasing. As of 2026-09-14, ATR14 is 0.197 (3.2% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 0.5%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Palm-oil selling prices and fertilizer costs shape plantation earnings.",
+      "Commodity and FX sensitivities are material but current CPO and hedge observations are absent."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "SOP: Palm-oil selling prices and fertilizer costs shape plantation earnings. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}
