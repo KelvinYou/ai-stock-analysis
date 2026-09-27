@@ -30,6 +30,27 @@ class FinancialStatements(BaseModel):
     operating_margin: float | None = None
     net_margin: float | None = None
 
+    # Provenance for point-in-time consumers. Ordinary live fetches may leave
+    # these unknown; backtests must not infer availability from fiscal period
+    # end alone.
+    fiscal_period_end: date | None = None
+    available_as_of: date | None = None
+    availability_source: str | None = None
+
+
+class MacroSnapshot(BaseModel):
+    """Dated macro evidence suitable for a point-in-time replay."""
+
+    as_of_date: date
+    available_as_of: date
+    source: str
+    fed_funds_rate: float | None = None
+    inflation: float | None = None
+    bnm_opr: float | None = None
+    usd_myr: float | None = None
+    sector_factors: list[str] = Field(default_factory=list)
+    geopolitical_risks: list[str] = Field(default_factory=list)
+
 
 class TickerInfo(BaseModel):
     symbol: str
@@ -119,6 +140,7 @@ class TickerData(BaseModel):
     info: TickerInfo
     price_history: list[PriceBar]
     financials: FinancialStatements | None = None
+    macro_snapshot: MacroSnapshot | None = None
     analyst_recommendations: list[dict] | None = None
     news_headlines: list[dict] | None = None
     fetched_at: datetime

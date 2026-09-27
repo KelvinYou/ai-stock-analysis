@@ -165,6 +165,55 @@ stock-analysis-backtest --tickers AAPL --start 2024-01-01 --end 2024-12-31 \
     --record-outcomes
 ```
 
+API backtests regenerate every briefing. The old cache was keyed only by ticker
+and date, so a changed model or prompt could inherit an older prediction while
+the report named the new settings. `--no-resume` remains accepted for older
+scripts but is now redundant. Portfolio comparisons stop if any requested trial
+has a failed or missing outcome. Same-day orders size from one pre-session cash
+balance, with equal scaling if their combined target exceeds that balance.
+
+For an implementation-only rerun, keep the original scored trials, forward
+price paths, and allocator ranking history fixed:
+
+```bash
+stock-analysis-backtest --mode rescore --score-report /tmp/original-score.json \
+  --cost-bps 10 --output /tmp/corrected-score
+```
+
+When allocator scoring succeeds, new score artifacts include
+`allocator_price_histories`, capped at the last decision date. `rescore` uses
+that frozen panel and does not reread the mutable
+price store. Older score artifacts without it still recalculate the primary
+scorer and portfolio, but explicitly mark the sealed allocator and AI ablation
+unavailable; they cannot reproduce those diagnostics. This is a development
+comparison, not a fresh out-of-sample test. A second `session-score` call can
+fetch revised historical prices and is therefore a different price snapshot.
+Set `STORAGE_BACKEND=local` when the scored JSON must be written to `--output`;
+the configured cloud backend stores the artifact remotely instead.
+
+To attribute the return on idle portfolio cash, pass an official FRED DFF CSV
+or a JSON/JSONL replay containing `FRED:DFF` observations:
+
+```bash
+stock-analysis-backtest --mode rescore --score-report /tmp/original-score.json \
+  --cash-rate-replay /tmp/fred-dff.csv --cost-bps 10 \
+  --output /tmp/cash-yield-score
+```
+
+The report compounds end-of-day uninvested cash at the latest DFF observation
+available by that calendar date, using ACT/365 and at most four calendar days
+of carry. It identifies DFF as a reference proxy rather than a brokerage sweep
+or deposit yield. Cash attribution is diagnostic: it does not alter primary
+strategy returns or the promotion gate. The source observations and hash are
+embedded in the scored artifact so later fixed-input rescores need no network
+refresh.
+
+Portfolio comparisons also include `overall_fundamentals_confirmed`, a
+research-only alternative that takes an overall directional signal only when
+the fundamentals analyst agrees. It is included in the DSR strategy-search
+denominator but does not replace the `overall` promotion candidate. This
+post-hoc diagnostic is exploratory on previously inspected trials.
+
 ### Run deterministic factor research
 
 This mode uses the local `data/<TICKER>/price_history.csv` only — no API key or
@@ -186,6 +235,37 @@ max drawdown, net p-value, and a buy-and-hold comparison. It does not fit a
 model inside the test folds, so its result is evidence about one fixed rule on
 one dataset rather than a claim of durable alpha.
 
+Completed factor and cross-sectional runs append their candidate and strict-hold
+benchmark to `backtest_experiments.jsonl` (override with `--experiment-ledger`).
+Local runs also write `<output>.quality.json`; every Markdown report ends with
+deterministic quality findings and next checks. The analysis flags benchmark
+losses, uncertain intervals, small samples, and unverified return inputs. It
+never changes a rule or promotes a historical winner. Ledger counts begin when
+recording starts and do not reconstruct earlier manual searches; repeated
+evaluations are identified separately. If identical frozen inputs and settings
+produce different recorded metrics, the next quality report flags the change
+for accounting review.
+
+### Run cross-sectional allocation research
+
+The cross-sectional mode tests a separate portfolio layer: at each month-end it
+ranks a fixed universe by the previous 12 months' return, holds the equal-weight
+top three for the next month, and charges entry, rebalance, and exit costs. The
+strict equal-weight buy-and-hold benchmark uses the same first and last month-end:
+
+```bash
+stock-analysis-backtest --mode cross-sectional \
+  --tickers AAPL,AMZN,AVGO,GOOGL,META,MSFT,NVDA,TSLA,TSM,UNH,V \
+  --start 2019-01-01 --end 2026-09-17 \
+  --cross-sectional-lookback-months 12 \
+  --cross-sectional-top-n 3 \
+  --cost-bps 10 --output cross-sectional-11
+```
+
+This is deterministic portfolio construction, not evidence that the AI analyst
+layer forecasts returns. Freeze the universe and parameters before using a final
+holdout; a result selected after inspecting that holdout is a research failure.
+
 Every headline metric ships with an interval, because a point estimate over a
 few dozen trials reads as an edge whether or not it is one:
 
@@ -196,9 +276,9 @@ few dozen trials reads as an edge whether or not it is one:
   independent ones, and every t-statistic uses the discounted count.
 - **Sharpe is reported probabilistically** (PSR), correcting for the negative
   skew and fat tails that flatter a raw Sharpe.
-- **The strategy comparison is deflated.** Scoring six strategies and reporting
-  the best is a search; the winner gets a Deflated Sharpe against the expected
-  best-of-six under the null.
+- **The strategy comparison is deflated.** Scoring several strategies and
+  reporting the best is a search; the winner gets a Deflated Sharpe against the
+  expected best-of-N under the null.
 
 If `--interval` is shorter than `--horizon`, the report will tell you how much
 of the sample is redundant.
@@ -222,18 +302,154 @@ stock-analysis-backtest --mode session-score \
   --output /tmp/aapl-msft-backtest
 ```
 
+If sealed 30-day windows overlap, the allocator/AI ablation now uses the
+earliest feasible non-overlapping date subset, chosen from execution dates
+without consulting returns. The primary pipeline and long-hold score still use
+every trial. Markdown, JSON, and the experiment ledger label the subset
+`research_only`; its result cannot satisfy the primary promotion gate. The
+subset is a diagnostic of AI's incremental value, not a replacement for a
+prospectively frozen non-overlapping schedule.
+
 Session predictions must contain `ticker`, `as_of_date`, `overall_signal`,
 `conviction_score`, `signal_convergence`, and optional `agent_signals` (whose
 values are exact `strong_buy`, `buy`, `neutral`, `sell`, or `strong_sell`
-signals). During scoring, convergence is recomputed from the analyst signals;
+signals). The declared ticker/date grid must be complete, extra predictions are rejected,
+and every packet's identity, path, and price dates are checked before forward
+prices are fetched. Historical packet metadata uses the requested ticker as
+the name and market-default currency; present-day provider names are not
+point-in-time evidence. During scoring, convergence is recomputed from the
+analyst signals;
 the conviction score is recalibrated to the net analyst consensus, and
 directional predictions that disagree with that consensus or do not clear the
 deterministic conviction/convergence execution gate are scored as `neutral`.
+The recalibrated conviction remains an attribution score even when the final
+signal is `neutral`; it does not create a portfolio trade unless the execution
+gate is cleared.
 Optional `agent_confidences` can provide `high`, `medium`, or `low` weights.
-Session packets also declare point-in-time evidence availability; when dated
-news/recommendations or macro data are unavailable, scoring forces those
-analysts to `neutral` with `low` confidence instead of trusting unsupported
-directional output.
+Session packets also declare point-in-time evidence availability. Without a
+replay directory, historical fundamentals use the yfinance filing-date adapter
+and latest-only yfinance news is excluded. For a stricter replay, the builder
+below supplies SEC CompanyFacts fundamentals, SEC filing events, and FRED DFF;
+current company-name, sector, and industry metadata is omitted unless a
+versioned source is provided. Legacy packets containing current names under
+an omitted-metadata marker fail the external metadata gate. When fundamentals,
+dated news/recommendations, or macro data are
+unavailable, scoring forces those analysts to `neutral` with `low` confidence
+instead of trusting unsupported directional output. When availability is
+declared, unavailable analysts are excluded from the consensus denominator
+rather than being counted as neutral evidence.
+
+Scored trial JSON preserves the signal path for later attribution:
+raw_agent_signals are the original analyst labels; agent_signals are the labels
+used by strategies after evidence guards and name normalization;
+synthesized_signal is the overall choice before deterministic gates;
+overall_signal is the final executable signal; and
+signal_gate_reasons contains stable reason codes. The Markdown report adds
+descriptive buy-overlap and gate counts. Older artifacts remain readable, but
+missing trace fields mean provenance was not recorded.
+
+To add historical evidence without opening a look-ahead path, pass a replay
+directory to `session-prepare`:
+
+```text
+replay/
+├── fundamentals/AAPL.jsonl # SEC facts + fiscal_period_end + available_as_of
+├── news/AAPL.jsonl         # published_at + available_as_of per record
+└── macro.jsonl             # as_of_date + available_as_of per snapshot
+```
+
+```bash
+stock-analysis-backtest --mode session-prepare \
+  --tickers AAPL,MSFT --start 2025-08-01 --end 2026-07-01 \
+  --session-dir /tmp/aapl-msft-session --replay-dir /path/to/replay
+```
+
+The loader keeps a record only when both clocks are on or before the trial
+date. Missing or malformed replay timestamps are excluded or fail closed; the
+pipeline never infers availability from a fiscal/event date alone. No replay
+directory means sentiment and macro remain explicitly unavailable, preserving
+the current behaviour.
+
+The reproducible public-source builder is:
+
+```bash
+python -m stock_analysis.backtest.replay_builder \
+  --tickers AAPL,MSFT \
+  --start 2019-01-01 --end 2026-07-31 \
+  --output /tmp/stock-replay \
+  --user-agent 'your-project/1.0 contact: you@example.com'
+```
+
+SEC filing events are a dated primary event layer, not a complete historical
+provider news feed. FRED DFF is a dated Fed-funds series, not a complete macro
+dataset. These limitations are recorded in `manifest.json` and are enforced by
+the external validation gate. A custom news replay must explicitly declare
+`manifest.news.source.kind: provider_versioned` to satisfy that gate; an
+ambiguous or SEC-only replay remains blocked.
+
+Before treating a provider-backed score as externally validated, run:
+
+```bash
+stock-analysis-backtest --mode external-validate \
+  --session-dir /tmp/stock-session \
+  --score-report /tmp/stock-session/score.json
+```
+
+The gate checks packet pairing, complete scored coverage of the frozen panel,
+a survivorship-safe universe artifact, externally calibrated costs, effective
+sample size, and a strict long-hold win.
+Provider metadata is currently self-declared: even a well-formed
+`provider_run.json` remains `BLOCKED` until a real invocation is bound to the
+exact predictions and scored result. Missing artifacts return `BLOCKED`;
+observed mismatches return `FAIL`.
+
+`universe.json` uses schema version 1. It must record the source URL and
+extract hash, a frozen selection policy, the exact session tickers, and one
+`membership_records` row per `(ticker, as_of_date)` trial with a stable
+`security_id` and `member: true`. `membership_records_sha256` is the SHA-256 of
+the compact, key-sorted JSON encoding of that array. Its `return_treatment`
+object must identify a hashed total-return source, include distributions,
+delisting returns, and merger consideration, and set
+`missing_return_policy: "fail_closed"`. The scored JSON must carry the exact
+same object at `result.settings.terminal_return_provenance`; otherwise the
+terminal-return provenance gate fails. The current yfinance-backed scorer does
+not yet emit this provenance, so a universe metadata file alone cannot make a
+run pass.
+
+The portfolio table reports each strategy's excess return versus the strict
+equal-weight `buy_and_hold` benchmark: one position per ticker from its first
+available entry to its last available exit. `rolling_long` is retained as a
+diagnostic baseline for the older rolling-entry semantics. A strategy is not
+promotion-ready merely because it ranks first on Sharpe: the benchmark gate
+requires an observed benchmark win, portfolio effective sample size of at
+least 30, and a deflated Sharpe of at least 95%. The effective-sample contract
+is `portfolio_overlap_clustered_v1`: same-date securities share one dependence
+cluster and overlapping holding windows are discounted. The external validator
+requires this marker on the `overall` portfolio row; legacy scores without it
+are blocked, even if their ticker-level `effective_n` is large.
+
+`session-score` also appends a separate sealed-trial cross-sectional allocation
+section and `cross_sectional_trial_allocation` JSON field. It ranks the fixed
+universe by trailing price return using only data available at each as-of date,
+then applies the selected tickers' sealed forward outcomes. This deterministic
+layer is reported for comparison, but it does not alter the AI signal rows or
+the promotion gate; a missing price history fails that section closed.
+
+When synchronized AI predictions are available, the same output adds an
+`AI Signal Ablation` section and `signal_ablation` JSON field. It reports an
+AI-only long sleeve and an AI-positive filter over the fixed momentum basket,
+both against exposure-matched references. A conditional permutation test
+reassigns positive AI labels within each momentum basket while preserving the
+period, basket, and positive-label count. These are attribution diagnostics;
+they do not change the pipeline signal or promotion gate. Scored `api` and
+`session-score` arms are recorded prospectively in an append-only
+`backtest_experiments.jsonl` ledger in the current directory (override with
+`--experiment-ledger`) with config/input fingerprints, headline and per-arm
+metrics, and cumulative unique-config and scored-evaluation counts. Those
+counts are audit metadata only; no cross-run DSR correction is applied.
+Pre-ledger or manually explored candidates are not reconstructed.
+The ablation's drawdown uses sealed-window endpoints only; it does not capture
+losses inside a holding window.
 
 ### Web dashboard
 

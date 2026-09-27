@@ -29,9 +29,20 @@ from stock_analysis.models.agent_reports import Confidence, Signal
 from stock_analysis.synthesis.risk_checker import is_actionable
 
 from .fetcher import BacktestFetcher
+from .replay import (
+    historical_news_source,
+    load_fundamentals_replay,
+    load_macro_replay,
+    load_news_replay,
+)
 from .runner import Backtester, BacktestResult, BacktestTrial
 
-SESSION_MODE = "in-session-claude-code"
+# Provider-neutral label: the current session may be Claude Code, Codex, or
+# another host capable of writing the compact SessionPrediction records.
+SESSION_MODE = "in-session"
+# v3 records the evidence-aware consensus denominator. Older manifests remain
+# readable and are rescored with the current deterministic contract.
+SESSION_MANIFEST_VERSION = 3
 
 _CONFIDENCE_WEIGHT = {
     Confidence.HIGH: 1.0,
@@ -53,20 +64,35 @@ class SessionPrediction(BaseModel):
     agent_confidences: dict[str, Confidence] = Field(default_factory=dict)
 
 
+class CalibratedSessionPrediction(SessionPrediction):
+    """A scored session prediction with its pre-gate inputs preserved."""
+
+    synthesized_signal: Signal
+    raw_agent_signals: dict[str, Signal] = Field(default_factory=dict)
+    signal_gate_reasons: list[str] = Field(default_factory=list)
+
+
 def compute_session_convergence(
     agent_signals: dict[str, Signal],
     agent_confidences: dict[str, Confidence] | None = None,
+    available_agents: Iterable[str] | None = None,
 ) -> float:
     """Compute a point-in-time convergence score from session attribution.
 
     Session predictions may omit confidence fields, so missing confidence
     defaults to medium. Missing analyst outputs count as neutral evidence in
-    the denominator rather than disappearing from the score.
+    the denominator rather than disappearing from the score. When
+    ``available_agents`` is supplied, analysts whose point-in-time evidence is
+    unavailable are excluded from the denominator; unavailable evidence is
+    not the same thing as a neutral view.
     """
     confidences = agent_confidences or {}
+    names = _normalise_available_agents(available_agents)
     directional_weights = {1: 0.0, -1: 0.0}
     total_weight = 0.0
     for name in _EXPECTED_AGENTS:
+        if name not in names:
+            continue
         signal = agent_signals.get(name)
         if signal is None and name == "macro":
             signal = agent_signals.get("macro_fx")
@@ -86,12 +112,21 @@ def compute_session_convergence(
 def compute_session_consensus_score(
     agent_signals: dict[str, Signal],
     agent_confidences: dict[str, Confidence] | None = None,
+    available_agents: Iterable[str] | None = None,
 ) -> float:
-    """Return net confidence-weighted direction in ``[-1, 1]``."""
+    """Return net confidence-weighted direction in ``[-1, 1]``.
+
+    If ``available_agents`` is supplied, only evidence-backed analysts enter
+    the denominator. This prevents an unavailable source from being treated
+    as contradictory neutral evidence.
+    """
     confidences = agent_confidences or {}
+    names = _normalise_available_agents(available_agents)
     net_weight = 0.0
     total_weight = 0.0
     for name in _EXPECTED_AGENTS:
+        if name not in names:
+            continue
         signal = agent_signals.get(name)
         if signal is None and name == "macro":
             signal = agent_signals.get("macro_fx")
@@ -108,23 +143,50 @@ def compute_session_consensus_score(
     return round(net_weight / total_weight, 4)
 
 
+def _normalise_available_agents(available_agents: Iterable[str] | None) -> set[str]:
+    """Return the expected analyst names included in a consensus denominator."""
+    if available_agents is None:
+        return set(_EXPECTED_AGENTS)
+    names = {
+        "macro" if name == "macro_fx" else name
+        for name in available_agents
+    }
+    return names.intersection(_EXPECTED_AGENTS)
+
+
 def calibrate_session_prediction(
     prediction: SessionPrediction,
     *,
+    fundamentals_available: bool = True,
     sentiment_available: bool = True,
     macro_available: bool = True,
-) -> SessionPrediction:
-    """Apply evidence guards, then replace self-reported scores."""
-    agent_signals = dict(prediction.agent_signals)
+) -> CalibratedSessionPrediction:
+    """Apply evidence guards, then replace self-reported scores.
+
+    ``conviction_score`` records the confidence-weighted analyst consensus,
+    not an executable position. A prediction can therefore remain ``neutral``
+    after failing the actionability gate while retaining a non-zero consensus
+    score for attribution; portfolio simulation still takes no trade. Missing
+    point-in-time evidence forces the corresponding analyst to neutral/low.
+    """
+    raw_agent_signals = dict(prediction.agent_signals)
+    agent_signals = dict(raw_agent_signals)
     agent_confidences = dict(prediction.agent_confidences)
+    signal_gate_reasons: list[str] = []
+    if not fundamentals_available:
+        agent_signals["fundamentals"] = Signal.NEUTRAL
+        agent_confidences["fundamentals"] = Confidence.LOW
+        signal_gate_reasons.append("evidence_unavailable:fundamentals")
     if not sentiment_available:
         agent_signals["sentiment"] = Signal.NEUTRAL
         agent_confidences["sentiment"] = Confidence.LOW
+        signal_gate_reasons.append("evidence_unavailable:sentiment")
     if not macro_available:
         agent_signals["macro"] = Signal.NEUTRAL
         agent_signals["macro_fx"] = Signal.NEUTRAL
         agent_confidences["macro"] = Confidence.LOW
         agent_confidences["macro_fx"] = Confidence.LOW
+        signal_gate_reasons.append("evidence_unavailable:macro")
 
     prediction = prediction.model_copy(
         update={
@@ -132,15 +194,29 @@ def calibrate_session_prediction(
             "agent_confidences": agent_confidences,
         }
     )
+    available_agents = {"technical"}
+    if fundamentals_available:
+        available_agents.add("fundamentals")
+    if sentiment_available:
+        available_agents.add("sentiment")
+    if macro_available:
+        available_agents.add("macro")
     convergence = compute_session_convergence(
         agent_signals,
         agent_confidences,
+        available_agents=available_agents,
     )
     consensus_score = compute_session_consensus_score(
         agent_signals,
         agent_confidences,
+        available_agents=available_agents,
     )
-    calibrated = prediction.model_copy(
+    calibrated = CalibratedSessionPrediction(
+        **prediction.model_dump(),
+        synthesized_signal=prediction.overall_signal,
+        raw_agent_signals=raw_agent_signals,
+        signal_gate_reasons=signal_gate_reasons,
+    ).model_copy(
         update={
             "conviction_score": consensus_score,
             "signal_convergence": convergence,
@@ -148,12 +224,21 @@ def calibrate_session_prediction(
     )
     final_direction = _signal_direction(calibrated.overall_signal)
     consensus_direction = _signal_direction_from_score(consensus_score)
-    if (
-        final_direction == 0
-        or final_direction != consensus_direction
-        or not is_actionable(consensus_score, convergence)
-    ):
-        calibrated = calibrated.model_copy(update={"overall_signal": Signal.NEUTRAL})
+    directional_gate_reasons = []
+    if final_direction != 0 and final_direction != consensus_direction:
+        directional_gate_reasons.append("consensus_direction_mismatch")
+    if final_direction != 0 and not is_actionable(consensus_score, convergence):
+        directional_gate_reasons.append("session_actionability_gate_failed")
+    if directional_gate_reasons:
+        calibrated = calibrated.model_copy(
+            update={
+                "overall_signal": Signal.NEUTRAL,
+                "signal_gate_reasons": [
+                    *calibrated.signal_gate_reasons,
+                    *directional_gate_reasons,
+                ],
+            }
+        )
     return calibrated
 
 
@@ -176,7 +261,7 @@ def _signal_direction_from_score(score: float) -> int:
 class SessionManifest(BaseModel):
     """Metadata for a prepared session bundle."""
 
-    version: int = 1
+    version: int = SESSION_MANIFEST_VERSION
     pipeline_mode: str = SESSION_MODE
     market: str
     tickers: list[str]
@@ -188,6 +273,28 @@ class SessionManifest(BaseModel):
     trials: list[dict[str, str]]
 
 
+def validate_manifest_panel(manifest: SessionManifest) -> set[tuple[str, date]]:
+    """Require the sealed trial list to equal the declared ticker/date grid."""
+
+    tickers = [ticker.strip().upper() for ticker in manifest.tickers]
+    if not tickers or any(not ticker for ticker in tickers) or len(set(tickers)) != len(tickers):
+        raise ValueError("Invalid or duplicate tickers in session manifest")
+    dates = manifest.as_of_dates
+    if not dates or len(set(dates)) != len(dates):
+        raise ValueError("Invalid or duplicate dates in session manifest")
+    expected = {(ticker, day) for ticker in tickers for day in dates}
+    try:
+        observed = [
+            (item["ticker"].strip().upper(), date.fromisoformat(item["as_of_date"]))
+            for item in manifest.trials
+        ]
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ValueError("Invalid session manifest trial key") from exc
+    if len(observed) != len(expected) or set(observed) != expected:
+        raise ValueError("Incomplete or duplicate session manifest trial grid")
+    return expected
+
+
 def prepare_session_bundle(
     *,
     tickers: Iterable[str],
@@ -196,6 +303,7 @@ def prepare_session_bundle(
     market: str = "US",
     horizon_days: int = 30,
     lookback_days: int = 365,
+    replay_dir: Path | None = None,
 ) -> SessionManifest:
     """Prepare point-in-time packets for the current session to analyze.
 
@@ -208,6 +316,8 @@ def prepare_session_bundle(
     dates = sorted(set(as_of_dates))
     if not ticker_list:
         raise ValueError("tickers must not be empty")
+    if len(set(ticker_list)) != len(ticker_list):
+        raise ValueError("Duplicate ticker in session universe")
     if not dates:
         raise ValueError("as_of_dates must not be empty")
     if horizon_days <= 0:
@@ -217,6 +327,7 @@ def prepare_session_bundle(
     (output_dir / "packets").mkdir(parents=True, exist_ok=True)
 
     manifest_trials: list[dict[str, str]] = []
+    sentiment_source = historical_news_source(replay_dir)
 
     for ticker in ticker_list:
         for as_of in dates:
@@ -226,6 +337,24 @@ def prepare_session_bundle(
                 lookback_days=lookback_days,
             )
             ticker_data = fetcher.fetch(ticker)
+            replay_news_dir = replay_dir / "news" if replay_dir else None
+            macro_replay_path = replay_dir / "macro.jsonl" if replay_dir else None
+            if replay_dir and not macro_replay_path.exists():
+                macro_replay_path = replay_dir / "macro.json"
+            replay_news = load_news_replay(replay_news_dir, ticker, as_of)
+            replay_macro = load_macro_replay(macro_replay_path, as_of)
+            replay_fundamentals = load_fundamentals_replay(replay_dir, ticker, as_of)
+            ticker_data = ticker_data.model_copy(
+                update={
+                    "financials": (
+                        replay_fundamentals
+                        if replay_dir is not None
+                        else ticker_data.financials
+                    ),
+                    "news_headlines": replay_news,
+                    "macro_snapshot": replay_macro,
+                }
+            )
 
             packet_rel = Path("packets") / ticker / f"{as_of.isoformat()}.json"
             packet_path = output_dir / packet_rel
@@ -239,11 +368,31 @@ def prepare_session_bundle(
                 "do_not_use_future_prices": True,
                 "ticker_data": ticker_data.model_dump(mode="json"),
                 "evidence_availability": {
-                    "sentiment": bool(
-                        ticker_data.news_headlines
-                        or ticker_data.analyst_recommendations
+                    "technical": bool(ticker_data.price_history),
+                    "technical_source": "historical_price_replay",
+                    "metadata_source": "fail_closed_current_provider_metadata_omitted",
+                    "fundamentals": bool(
+                        ticker_data.financials
+                        and ticker_data.financials.available_as_of
+                        and ticker_data.financials.available_as_of <= as_of
                     ),
-                    "macro": False,
+                    "fundamentals_as_of": (
+                        ticker_data.financials.available_as_of.isoformat()
+                        if ticker_data.financials
+                        and ticker_data.financials.available_as_of
+                        else None
+                    ),
+                    "fundamentals_source": (
+                        ticker_data.financials.availability_source
+                        if ticker_data.financials
+                        else "unavailable"
+                    ),
+                    "sentiment": bool(ticker_data.news_headlines),
+                    "sentiment_source": sentiment_source,
+                    "macro": replay_macro is not None,
+                    "macro_source": (
+                        replay_macro.source if replay_macro else "not_configured"
+                    ),
                 },
                 "prediction_schema": SessionPrediction.model_json_schema(),
             }
@@ -303,13 +452,62 @@ def load_session_predictions(session_dir: Path) -> dict[tuple[str, date], Sessio
     return result
 
 
+def _load_sealed_packets(
+    session_dir: Path, manifest: SessionManifest
+) -> dict[tuple[str, date], dict]:
+    """Preflight packet identity and clocks before fetching forward prices."""
+
+    packets: dict[tuple[str, date], dict] = {}
+    session_root = session_dir.resolve()
+    for item in manifest.trials:
+        ticker = item["ticker"].upper()
+        as_of = date.fromisoformat(item["as_of_date"])
+        relative = Path(item["packet"])
+        packet_path = (session_dir / relative).resolve()
+        if (
+            relative.is_absolute()
+            or not relative.parts
+            or relative.parts[0] != "packets"
+            or not packet_path.is_relative_to(session_root)
+        ):
+            raise ValueError(f"Invalid session packet path: {relative}")
+        packet = json.loads(packet_path.read_text())
+        if not isinstance(packet, dict) or (
+            str(packet.get("ticker", "")).upper() != ticker
+            or packet.get("as_of_date") != as_of.isoformat()
+            or str(packet.get("market", "")).upper() != manifest.market.upper()
+            or packet.get("horizon_days") != manifest.horizon_days
+        ):
+            raise ValueError(f"Session packet identity mismatch: {ticker} @ {as_of}")
+        bars = packet.get("ticker_data", {}).get("price_history")
+        if (
+            packet.get("do_not_use_future_prices") is not True
+            or not isinstance(bars, list)
+            or not bars
+        ):
+            raise ValueError(f"Invalid point-in-time packet: {ticker} @ {as_of}")
+        try:
+            if any(date.fromisoformat(bar["date"]) > as_of for bar in bars):
+                raise ValueError(f"Future price bar in session packet: {ticker} @ {as_of}")
+        except (KeyError, TypeError) as exc:
+            raise ValueError(f"Invalid price bar date: {ticker} @ {as_of}") from exc
+        packets[(ticker, as_of)] = packet
+    return packets
+
+
 def score_session_bundle(session_dir: Path) -> BacktestResult:
     """Join validated session predictions with prices fetched after scoring."""
 
     manifest = SessionManifest.model_validate_json(
         (session_dir / "manifest.json").read_text()
     )
+    expected_keys = validate_manifest_panel(manifest)
     predictions = load_session_predictions(session_dir)
+    unexpected = sorted(set(predictions) - expected_keys)
+    if unexpected:
+        preview = ", ".join(f"{ticker} @ {day}" for ticker, day in unexpected[:8])
+        raise ValueError(f"Unexpected session predictions outside manifest: {preview}")
+    packets = _load_sealed_packets(session_dir, manifest)
 
     backtester = Backtester(
         settings=Settings(),
@@ -329,6 +527,15 @@ def score_session_bundle(session_dir: Path) -> BacktestResult:
 
     trials: list[BacktestTrial] = []
     missing: list[str] = []
+    evidence_counts = {
+        "technical": 0,
+        "fundamentals": 0,
+        "sentiment": 0,
+        "macro": 0,
+    }
+    evidence_sources: dict[str, dict[str, int]] = {
+        name: {} for name in evidence_counts
+    }
     for item in manifest.trials:
         key = (item["ticker"].upper(), date.fromisoformat(item["as_of_date"]))
         prediction = predictions.get(key)
@@ -336,11 +543,19 @@ def score_session_bundle(session_dir: Path) -> BacktestResult:
             missing.append(f"{key[0]} @ {key[1]}")
             continue
 
-        packet = json.loads(
-            (session_dir / item["packet"]).read_text()
-        )
+        packet = packets[key]
         ticker_data = packet.get("ticker_data", {})
         evidence = packet.get("evidence_availability", {})
+        for name in evidence_counts:
+            available = (
+                bool(ticker_data.get("price_history"))
+                if name == "technical"
+                else bool(evidence.get(name, False))
+            )
+            if available:
+                evidence_counts[name] += 1
+                source = str(evidence.get(f"{name}_source") or "unspecified")
+                evidence_sources[name][source] = evidence_sources[name].get(source, 0) + 1
         sentiment_available = evidence.get(
             "sentiment",
             bool(
@@ -349,14 +564,18 @@ def score_session_bundle(session_dir: Path) -> BacktestResult:
             ),
         )
         macro_available = evidence.get("macro", False)
+        fundamentals_available = evidence.get("fundamentals", False)
         prediction = calibrate_session_prediction(
             prediction,
+            fundamentals_available=fundamentals_available,
             sentiment_available=sentiment_available,
             macro_available=macro_available,
         )
 
-        entry_price, _entry_date = backtester._price_on_or_after(
-            forward_series[key[0]], key[1]
+        entry_price, entry_date = backtester._price_on_or_after(
+            forward_series[key[0]],
+            key[1] + timedelta(days=1),
+            price_column="Open",
         )
         exit_price, exit_date = backtester._price_on_or_after(
             forward_series[key[0]],
@@ -385,7 +604,14 @@ def score_session_bundle(session_dir: Path) -> BacktestResult:
                 conviction_score=prediction.conviction_score,
                 signal_convergence=prediction.signal_convergence,
                 agent_signals=prediction.agent_signals,
+                raw_agent_signals={
+                    name: signal.value
+                    for name, signal in prediction.raw_agent_signals.items()
+                },
+                synthesized_signal=prediction.synthesized_signal,
+                signal_gate_reasons=prediction.signal_gate_reasons,
                 error=error,
+                entry_date=entry_date,
             )
         )
 
@@ -402,6 +628,8 @@ def score_session_bundle(session_dir: Path) -> BacktestResult:
             "market": manifest.market,
             "horizon_days": manifest.horizon_days,
             "lookback_days": manifest.lookback_days,
+            "entry_execution": "next_session_open",
+            "price_path_source": "yfinance_auto_adjusted_ohlc",
             "quick_think_model": "session",
             "deep_think_model": "session",
             "synthesis_model": "session",
@@ -410,7 +638,20 @@ def score_session_bundle(session_dir: Path) -> BacktestResult:
             "deterministic_convergence": True,
             "trade_gate": "conviction > 0.3 and convergence >= 0.4",
             "evidence_guard": True,
+            "fundamentals_filing_date_gate": True,
+            "consensus_denominator": "available_evidence_only",
+            "signal_trace_schema": 1,
+            "evidence_coverage": {
+                "total_trials": len(manifest.trials),
+                "available": evidence_counts,
+                "sources": evidence_sources,
+            },
         },
         started_at=manifest.created_at,
         finished_at=date.today(),
+        price_paths={
+            ticker.upper(): backtester._price_bars(forward_series[ticker])
+            for ticker in manifest.tickers
+            if not forward_series[ticker].empty
+        },
     )

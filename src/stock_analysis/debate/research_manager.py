@@ -37,6 +37,10 @@ from stock_analysis.config import Settings
 from stock_analysis.models.agent_reports import AnalystReports, Confidence, Signal
 from stock_analysis.models.debate import DebateResult, ResearchVerdict
 from stock_analysis.models.market_data import TickerData
+from stock_analysis.prompt_context import (
+    build_analyst_reports_context,
+    build_evidence_envelope,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -56,7 +60,9 @@ RESEARCH_MANAGER_SYSTEM = (
     "- Separate evidence GAPS (data nobody has) from evidence DISPUTES (data "
     "both sides read differently); only the former belong in evidence_gaps\n"
     "- If the debate rests on macro facts the analysts flagged as unavailable, "
-    "say so in evidence_gaps and lower your confidence accordingly"
+    "say so in evidence_gaps and lower your confidence accordingly\n"
+    "- Use only facts present in the evidence envelope or typed reports; do not "
+    "promote a debate inference into a new observed fact"
 )
 
 VERDICT_OUTPUT_SCHEMA = {
@@ -180,18 +186,12 @@ class ResearchManager:
             f"# Debate to adjudicate: {info.symbol} — {info.name}",
             f"Sector: {info.sector} | Industry: {info.industry} | Beta: {info.beta}",
             "",
-            "## Analyst signals (independent of the debate)",
+            "## Point-in-time evidence envelope",
+            build_evidence_envelope(ticker_data),
+            "",
+            "## Complete typed analyst reports (independent of the debate)",
         ]
-        for label, report in (
-            ("Fundamentals", analyst_reports.fundamentals),
-            ("Sentiment", analyst_reports.sentiment),
-            ("Technical", analyst_reports.technical),
-            ("Macro / FX", analyst_reports.macro),
-        ):
-            sections.append(
-                f"- {label}: **{report.signal.value}** "
-                f"(confidence {report.confidence.value}) — {report.summary}"
-            )
+        sections.append(build_analyst_reports_context(analyst_reports))
 
         sections.extend(["", "## Debate rounds"])
         for round_ in debate_result.rounds:

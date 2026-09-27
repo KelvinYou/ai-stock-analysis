@@ -11,6 +11,11 @@ from stock_analysis.models.agent_reports import AnalystReports, Confidence, Sign
 from stock_analysis.models.debate import DebateResult, ResearchVerdict
 from stock_analysis.models.market_data import TickerData
 from stock_analysis.models.synthesis import Briefing, ConvictionScore
+from stock_analysis.prompt_context import (
+    build_analyst_reports_context,
+    build_evidence_envelope,
+)
+from stock_analysis.synthesis.risk_checker import is_actionable
 
 logger = logging.getLogger(__name__)
 
@@ -79,6 +84,35 @@ def compute_signal_convergence(analyst_reports: AnalystReports) -> float:
     if total_weight == 0:
         return 0.0
     return round(max(buy_weight, sell_weight) / total_weight, 4)
+
+
+def deterministic_agent_signal_breakdown(
+    analyst_reports: AnalystReports,
+) -> dict[str, str]:
+    """Return the canonical analyst signals without trusting synthesis prose."""
+
+    return {
+        "fundamentals": analyst_reports.fundamentals.signal.value,
+        "sentiment": analyst_reports.sentiment.signal.value,
+        "technical": analyst_reports.technical.signal.value,
+        "macro": analyst_reports.macro.signal.value,
+    }
+
+
+def canonicalize_agent_signal_breakdown(
+    briefing: Briefing,
+    analyst_reports: AnalystReports,
+) -> Briefing:
+    """Repair the derived attribution field on a cached briefing, if needed.
+
+    This is intentionally limited to attribution. It must not reinterpret the
+    model's thesis, conviction, or risk assessment while migrating a durable
+    result produced before attribution became deterministic.
+    """
+    expected = deterministic_agent_signal_breakdown(analyst_reports)
+    if briefing.agent_signal_breakdown == expected:
+        return briefing
+    return briefing.model_copy(update={"agent_signal_breakdown": expected})
 
 
 def calibrate_conviction_score(
@@ -153,10 +187,6 @@ BRIEFING_OUTPUT_SCHEMA = {
             "type": "array",
             "items": {"type": "string"},
         },
-        "agent_signal_breakdown": {
-            "type": "object",
-            "description": "Map of agent name to signal value",
-        },
     },
     "required": [
         "overall_signal",
@@ -166,7 +196,6 @@ BRIEFING_OUTPUT_SCHEMA = {
         "bear_case",
         "key_uncertainties",
         "catalysts_upcoming",
-        "agent_signal_breakdown",
     ],
 }
 
@@ -217,6 +246,12 @@ class SynthesizerAgent:
                 "plus a bull/bear adversarial debate. Synthesize everything into an actionable, "
                 "balanced briefing. Be direct and specific. Neutral is acceptable when "
                 "the evidence does not support a directional view.\n\n"
+                "Use only the point-in-time evidence envelope and typed reports as facts. "
+                "Separate observed evidence from inference. If evidence is missing, say "
+                "unavailable instead of filling the gap from general market knowledge. "
+                "Do not let repeated debate claims become stronger merely because they are "
+                "repeated. Surface the strongest disconfirming evidence and make catalysts "
+                "conditional on an observable trigger.\n\n"
                 "Scope: focus on the thesis — signal, conviction, bull/bear cases, catalysts, "
                 "uncertainties. Do NOT invent specific entry/stop/target prices in prose; a "
                 "deterministic post-step attaches concrete levels to the briefing."
@@ -252,6 +287,21 @@ class SynthesizerAgent:
             explanation=raw_conviction["explanation"],
         )
         conviction = _reconcile_conviction(signal, conviction)
+        synthesized_signal = signal
+        signal_gate_reasons: list[str] = []
+        if _SIGNAL_SIGN[signal] and not is_actionable(
+            conviction.score, conviction.signal_convergence
+        ):
+            signal_gate_reasons.append("synthesis_actionability_gate_failed")
+            logger.info(
+                "Synthesizer actionability gate: %s downgraded to neutral "
+                "(conviction=%+.2f, convergence=%.2f)",
+                signal.value,
+                conviction.score,
+                conviction.signal_convergence,
+            )
+            signal = Signal.NEUTRAL
+            conviction = conviction.model_copy(update={"score": 0.0})
 
         bars = ticker_data.price_history
         return Briefing(
@@ -273,7 +323,12 @@ class SynthesizerAgent:
                 correlation_notes=[],
                 max_drawdown_scenario="pending",
             ),
-            agent_signal_breakdown=result["agent_signal_breakdown"],
+            # This is an attribution field, not a synthesis opinion. Derive it
+            # from the typed analyst reports so a malformed or incomplete LLM
+            # response cannot rewrite what each desk actually said.
+            agent_signal_breakdown=deterministic_agent_signal_breakdown(analyst_reports),
+            synthesized_signal=synthesized_signal,
+            signal_gate_reasons=signal_gate_reasons,
         )
 
     def _build_full_context(
@@ -290,32 +345,11 @@ class SynthesizerAgent:
             f"Sector: {info.sector} | Industry: {info.industry}",
             f"Market Cap: {info.market_cap} | P/E: {info.pe_ratio} | Beta: {info.beta}",
             "",
-            "---",
+            "## Point-in-time evidence envelope",
+            build_evidence_envelope(ticker_data),
             "",
-            "## Fundamentals Report",
-            f"Signal: **{analyst_reports.fundamentals.signal.value}** (Confidence: {analyst_reports.fundamentals.confidence.value})",
-            f"P/E: {analyst_reports.fundamentals.pe_assessment}",
-            f"Margins: {analyst_reports.fundamentals.margin_analysis}",
-            f"Debt: {analyst_reports.fundamentals.debt_analysis}",
-            f"Growth: {analyst_reports.fundamentals.growth_outlook}",
-            f"Summary: {analyst_reports.fundamentals.summary}",
-            "",
-            "## Sentiment Report",
-            f"Signal: **{analyst_reports.sentiment.signal.value}** (Confidence: {analyst_reports.sentiment.confidence.value})",
-            f"News tone: {analyst_reports.sentiment.news_tone}",
-            f"Themes: {', '.join(analyst_reports.sentiment.key_themes)}",
-            f"Summary: {analyst_reports.sentiment.summary}",
-            "",
-            "## Technical Report",
-            f"Signal: **{analyst_reports.technical.signal.value}** (Confidence: {analyst_reports.technical.confidence.value})",
-            f"Trend: {analyst_reports.technical.trend}",
-            f"RSI-14: {analyst_reports.technical.rsi_14}",
-            f"Summary: {analyst_reports.technical.summary}",
-            "",
-            "## Macro / FX Report",
-            f"Signal: **{analyst_reports.macro.signal.value}** (Confidence: {analyst_reports.macro.confidence.value})",
-            f"Fed impact: {analyst_reports.macro.fed_impact}",
-            f"Summary: {analyst_reports.macro.summary}",
+            "## Complete typed analyst reports",
+            build_analyst_reports_context(analyst_reports),
             "",
             "---",
             "",

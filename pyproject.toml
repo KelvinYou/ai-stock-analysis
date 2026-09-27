@@ -35,6 +35,7 @@ dev = [
 stock-analysis = "stock_analysis.main:cli"
 stock-fetch = "stock_analysis.fetch:cli"
 stock-analysis-backtest = "stock_analysis.backtest.main:cli"
+stock-analysis-replay-build = "stock_analysis.backtest.replay_builder:cli"
 stock-analysis-worker = "stock_analysis.worker:cli"
 
 [build-system]

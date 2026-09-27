@@ -9,6 +9,10 @@ from stock_analysis.config import Settings
 from stock_analysis.models.agent_reports import AnalystReports
 from stock_analysis.models.debate import DebateArgument, DebateResult, DebateRound
 from stock_analysis.models.market_data import TickerData
+from stock_analysis.prompt_context import (
+    build_analyst_reports_context,
+    build_evidence_envelope,
+)
 
 
 def _extract_result(message: ResultMessage) -> dict | None:
@@ -32,6 +36,8 @@ BULL_SYSTEM = (
     "- When rebutting the bear case, be specific — cite data from the analyst reports\n"
     "- Do not be blindly bullish — your credibility comes from acknowledging reality while "
     "making a compelling case\n"
+    "- Use only facts present in the evidence envelope or typed analyst reports; label missing "
+    "data as unknown and never turn an inference into a reported fact\n"
     "- Structure your response as a clear argument with key points"
 )
 
@@ -43,6 +49,8 @@ BEAR_SYSTEM = (
     "- Acknowledge strengths only to explain why they are already priced in or unsustainable\n"
     "- When rebutting the bull case, be specific — cite data from the analyst reports\n"
     "- Do not be blindly bearish — your credibility comes from rigorous risk analysis\n"
+    "- Use only facts present in the evidence envelope or typed analyst reports; label missing "
+    "data as unknown and never turn an inference into a reported fact\n"
     "- Structure your response as a clear argument with key points"
 )
 
@@ -252,16 +260,10 @@ class DebateEngine:
             f"Sector: {info.sector} | Industry: {info.industry} | Market Cap: {info.market_cap}",
             f"Current P/E: {info.pe_ratio} | Forward P/E: {info.forward_pe} | Beta: {info.beta}",
             "",
-            f"## Fundamentals Analysis\n{analyst_reports.fundamentals.summary}",
-            f"Signal: {analyst_reports.fundamentals.signal.value} | Confidence: {analyst_reports.fundamentals.confidence.value}",
+            "## Point-in-time evidence envelope",
+            build_evidence_envelope(ticker_data),
             "",
-            f"## Sentiment Analysis\n{analyst_reports.sentiment.summary}",
-            f"Signal: {analyst_reports.sentiment.signal.value} | Confidence: {analyst_reports.sentiment.confidence.value}",
-            "",
-            f"## Technical Analysis\n{analyst_reports.technical.summary}",
-            f"Signal: {analyst_reports.technical.signal.value} | Confidence: {analyst_reports.technical.confidence.value}",
-            "",
-            f"## Macro / FX Analysis\n{analyst_reports.macro.summary}",
-            f"Signal: {analyst_reports.macro.signal.value} | Confidence: {analyst_reports.macro.confidence.value}",
+            "## Complete typed analyst reports",
+            build_analyst_reports_context(analyst_reports),
         ]
         return "\n".join(sections)

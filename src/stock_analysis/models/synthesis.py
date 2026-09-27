@@ -59,6 +59,10 @@ class Briefing(BaseModel):
     action_plan: ActionPlan | None = None
     research_verdict: ResearchVerdict | None = None
     agent_signal_breakdown: dict[str, str]
+    # Original synthesizer choice before deterministic actionability gates.
+    # None is retained for older persisted briefings that predate signal tracing.
+    synthesized_signal: Signal | None = None
+    signal_gate_reasons: list[str] = Field(default_factory=list)
 
     @field_validator("agent_signal_breakdown", mode="before")
     @classmethod
