@@ -1,0 +1,84 @@
+{
+  "ticker": "4197",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-14",
+  "overall_signal": "buy",
+  "conviction": {
+    "score": 0.35,
+    "signal_convergence": 0.5455,
+    "explanation": "Consensus-capped research conviction for the buy thesis, not a probability or backtested expected return. I retain the research-manager ruling: Core profit growth of 32.6%, positive FCF and a single-digit quoted multiple give the bull concrete support beyond a dividend narrative. Thin margins temper conviction but do not erase the normalized core improvement already reported. Positive operating evidence and the longer trend support modest directional conviction, tempered by near-term momentum and data limitations. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "BUY: Sime has one of the more credible Malaysian value-and-income cases because core earnings growth accompanies positive cash generation. The intact longer trend supports selective interest, while cooling momentum and thin automotive margins argue for modest conviction.\n\nConditional buy thesis for a swing watchlist; use completed-session confirmation and the downstream risk gate before treating it as executable. Technical observations as of 2026-09-14 include a potentially intraday Malaysian bar; price and volume confirmation remain provisional. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Core profit growth, cash generation and dividends support a value-income case. A full normalization bridge remains needed, but core growth and cash generation support the value case rather than relying solely on the indicated yield. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Core profit growth is stronger evidence than headline reported profit, and the value thesis is credible enough to investigate. Nevertheless the thin operating margin and higher forward multiple require normalized automotive earnings and payout coverage; a profitable franchise is not automatically a discounted entry.",
+  "key_uncertainties": [
+    "Full core-to-reported earnings reconciliation and current dividend coverage.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if core annual profit falls year on year at the next full-year release.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if operating margin below 3% for two consecutive quarters.",
+    "Technical observations as of 2026-09-14 include a potentially intraday Malaysian bar; price and volume confirmation remain provisional.",
+    "Recent source CSV contains zero-volume rows; supplied indicators include them, which may distort rolling averages. All last-25 OHLC rows were present and positive."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Recurring automotive earnings and cash conversion, plus renewed completed-session momentum; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Low beta (0.13) \u2014 historically less sensitive to broad-market moves.",
+      "Sector: Consumer Cyclical \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 48.6% over available price history. Projected worst case (2-sigma): ~56.0% from current MYR 2.55.",
+    "risk_reward_ratio": "0.95:1"
+  },
+  "action_plan": {
+    "entry_limit": 2.5,
+    "entry_rationale": "Buy-the-dip to SMA-20 support near MYR 2.50",
+    "stop_loss": 2.31,
+    "stop_rationale": "2x ATR-14 (MYR 0.10) below entry \u2014 invalidates the setup",
+    "take_profit_1": 2.68,
+    "take_profit_2": 2.93,
+    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "horizon": "swing (2-8 weeks)",
+    "note": "September14 input may be intraday; confirm completed-session data before acting."
+  },
+  "research_verdict": {
+    "ticker": "4197",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "Core profit growth of 32.6%, positive FCF and a single-digit quoted multiple give the bull concrete support beyond a dividend narrative. Thin margins temper conviction but do not erase the normalized core improvement already reported.",
+    "winning_side": "bull",
+    "strongest_counterexample": "The operating margin is only 3.26%, and a higher forward multiple warns that current earnings or disposal effects may overstate valuation support.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if core annual profit falls year on year at the next full-year release.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if operating margin below 3% for two consecutive quarters."
+    ],
+    "evidence_gaps": [
+      "Full core-to-reported earnings reconciliation and current dividend coverage.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 9.81x; forward P/E 10.67x",
+      "Core profit growth, cash generation and dividends support a value-income case",
+      "Core profit growth is stronger evidence than headline reported profit, and the value thesis is credible enough to investigate"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound.",
+    "September14 observations may be intraday; zero-volume rows can distort technical indicators."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "44a72d796b9bfbe504377e294d9d07aa78cb017ec9c0f64c0be72d1cac7206e8",
+    "technicals.json": "2350dab736c2a4839a48369c7c2f9a40b4718cec2eff8212976abd03263bf941",
+    "price_history.csv": "6f062dbf91b46e4fc7c430571fe809353fb4a08574d4089eacae4c50ae7e8824"
+  }
+}

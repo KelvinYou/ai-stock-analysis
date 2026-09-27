@@ -2,26 +2,19 @@
   "ticker": "SOFI",
   "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "Neither side carried the debate decisively. SoFi has unusually strong reported growth and a credible profitability trajectory, but valuation, negative free cash flow, weak price momentum, and missing credit-quality evidence prevent a reliable directional conclusion from the completed-close snapshot.",
+  "thesis": "The partnership is a dated product development but has no quantified economic impact; reported FCF is negative and technicals remain weak below all moving averages.",
   "winning_side": "neither",
-  "strongest_counterexample": "If the Q2 growth rate and raised FY2026 guide are accompanied by stable credit losses, improving cash conversion, and a technical reclaim of EMA-20, the current selloff could be a valuation reset rather than a broken thesis.",
+  "strongest_counterexample": "The strongest counterexample is rapid adoption/monetization of SoFiUSD settlement plus stabilization near the 52-week low; no supplied evidence shows either yet.",
   "invalidation_conditions": [
-    "Next reported quarter shows adjusted net-revenue growth below 25% or management withdraws the FY2026 $4.75B-$4.85B adjusted net-revenue guide",
-    "Credit-loss or delinquency metrics materially worsen while price remains below the recent $17.37 support area",
-    "A sustained close above EMA-20 near $18.08 with volume materially above the stored average would invalidate the immediate downside-momentum case"
+    "A close below the observed 60-bar low would weaken the stabilization case."
   ],
   "evidence_gaps": [
-    "No usable dated Layer 1 news headlines",
-    "No credit-loss, delinquency, deposit, funding-cost, or loan-growth trend in Layer 1",
-    "Gross and operating margins are null",
-    "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
-    "No dated forward Fed path"
+    "Partnership uptake/revenue and credit-quality data are absent.",
+    "Financial period underlying negative FCF is unknown."
   ],
   "decisive_factors": [
-    "Official Q2 reported record revenue, member/product growth, and raised guidance",
-    "36.4082x trailing P/E and negative $3.994B free cash flow",
-    "Price below EMA-20 with negative MACD histogram and 0.1788x volume ratio",
-    "Mixed recommendation distribution and missing credit-quality evidence"
+    "Price is below SMA-20/50/200 and down 44.48% over 252 bars.",
+    "News includes a live partnership but no adoption measure."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

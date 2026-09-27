@@ -1,78 +1,69 @@
 {
   "ticker": "0128",
-  "date": "2026-09-03",
-  "overall_signal": "buy",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-24",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": 0.36,
-    "signal_convergence": 0.6,
-    "explanation": "The positive fundamental and sentiment evidence outweighs the neutral technical and macro layers, but convergence is capped because technical confidence is low and macro/company exposure data is incomplete. The score is positive but deliberately moderate: FRONTKN looks like a quality growth business at a demanding multiple, and the technical snapshot does not confirm a bottom."
+    "score": 0.0,
+    "signal_convergence": 0.25,
+    "explanation": "Evidence is mixed or insufficient for a directional conclusion; deterministic finalization will recompute convergence and apply the actionability gate."
   },
-  "executive_summary": "FRONTKN\u2019s supplied financial snapshot is strong: RM607.76m revenue, RM154.23m net income, RM160.17m free cash flow, robust 49.6%/36.9%/25.4% gross/operating/net margins, and only about 2.8% debt to equity. The latest Q2/1H filing and dated coverage provide a plausible AI/semiconductor-demand catalyst, while recommendations remain buy-heavy.\n\nThe risk is price paid and timing. At 45.0x trailing and 36.461403x forward earnings, the stock needs continued growth; its RM4.95 close is below SMA-20/SMA-50, RSI-14 is 19.1299, MACD histogram is -0.0344, and the latest volume is reported as zero. With the Fed at 3.50%-3.75%, BNM OPR at 2.75%, and USD/MYR at 4.0420, the result is a moderate buy/accumulate-on-confirmation view, not a high-confidence chase; the technical and macro data limitations reduce confidence.",
-  "bull_case": "FRONTKN has the strongest kind of growth support: recent revenue and attributable-profit acceleration alongside high margins, positive free cash flow, and minimal leverage. AI/semiconductor demand and a forward P/E below trailing P/E can support the premium if earnings continue to compound; the close remains above SMA-200 and near the lower Bollinger Band, giving a defined area to monitor for stabilization.",
-  "bear_case": "A 36.461403x forward P/E can contract even if the business remains profitable. The stock is below SMA-20 and SMA-50, MACD momentum is negative, RSI oversold does not prove a reversal, and zero volume prevents confirmation; a semiconductor-cycle slowdown, margin normalization, or negative cash flow could expose the valuation premium.",
+  "executive_summary": "Frontken\u2019s current snapshot shows strong margins, RM160.17M FCF, and very low debt, and price remains above SMA-200. However, P/E 45/forward P/E 36.46, a May earnings-quality headline, and price below SMA-50 with weak medium-term returns offset the positive quality picture; remain neutral.",
+  "bull_case": "Strong cash generation and low debt could support continued growth if later statements confirm current margins and earnings quality.",
+  "bear_case": "Valuation is elevated, the May headline raises a profit-quality question, and short-term price remains below SMA-20/50; no growth series resolves the risk.",
   "key_uncertainties": [
-    "The latest reported volume is 0 versus a 20-day average of 3,965,680, so technical confirmation is unavailable.",
-    "The supplied 52-week-low field is 0.0 and its derived percentage is null; no low-based technical conclusion is made.",
-    "Customer concentration, geographic revenue mix, USD exposure, hedging, and current guidance are not in Layer 1.",
-    "The thesis depends on semiconductor/AI demand remaining strong enough to sustain the premium multiple.",
-    "Macro policy is dated to the supplied official statements; the company-specific transmission path is uncertain."
+    "Multi-period margin/FCF data and current earnings-quality evidence are missing.",
+    "Growth trajectory needed to support the multiple is unknown.",
+    "The technical trend may either stabilize above SMA-200 or weaken."
   ],
   "catalysts_upcoming": [
-    "Next reported quarterly result and order commentary, with attention to operating margin and free cash flow.",
-    "Continued AI and semiconductor capital-spending/order momentum.",
-    "2.0 sen dividend payment scheduled for 17 Sep 2026.",
-    "A reclaim of SMA-50 (RM5.0040) with usable volume would improve technical confirmation."
+    "A future dated filing that confirms margin/FCF persistence and resolves the quality concern."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "Low beta (0.58) \u2014 historically less sensitive to broad-market moves.",
+      "Low beta (0.57) \u2014 historically less sensitive to broad-market moves.",
       "Sector: Industrials \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 57.3% over available price history. Projected worst case (2-sigma): ~58.6% from current $4.95.",
+    "max_drawdown_scenario": "Historical max drawdown: 57.3% over available price history. Projected worst case (2-sigma): ~57.5% from current $4.95.",
     "risk_reward_ratio": null
   },
   "action_plan": {
-    "entry_limit": 4.95,
-    "entry_rationale": "Midway between current ($4.95) and Bollinger lower band ($4.95)",
-    "stop_loss": 3.38,
-    "stop_rationale": "2x ATR-14 ($0.78) below entry \u2014 invalidates the setup",
-    "take_profit_1": 5.35,
-    "take_profit_2": 5.69,
-    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": null
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.25). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "0128",
-    "judged_view": "buy",
-    "confidence": "medium",
-    "thesis": "The bull carried the debate on the evidence because FRONTKN pairs unusually strong supplied margins and free-cash-flow generation with very low leverage and fresh Q2/1H growth. The ruling is a measured buy rather than a high-conviction chase: the 45.0x trailing/36.461403x forward valuation and unconfirmed short-term chart require a stabilization or valuation-discipline trigger.",
-    "winning_side": "bull",
-    "strongest_counterexample": "The company may be a good business bought at the wrong price: if semiconductor demand normalizes or margins regress, a 36.461403x forward P/E can compress sharply while the current negative MACD and zero-volume snapshot provide no evidence that the pullback has ended.",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Current profitability, FCF, and low debt are strong, but P/E 45/forward P/E 36.46, the May quality concern, and weak medium-term technicals create a balanced case.",
+    "winning_side": "neither",
+    "strongest_counterexample": "The strongest counterexample is sustained high margins and cash generation that validate the valuation, with price stabilizing above SMA-200; the packet does not establish persistence.",
     "invalidation_conditions": [
-      "Operating margin falls below 30% for two consecutive reported quarters, versus 36.9% in the supplied snapshot.",
-      "Free cash flow turns negative for a reported quarter without a clearly disclosed one-off investment explanation.",
-      "Price closes below the supplied SMA-200 level of RM4.4181 for two consecutive weekly closes and fails to reclaim it.",
-      "Forward earnings expectations are materially cut while the forward P/E remains above 30x."
+      "A close below the observed 60-bar low would weaken the long-term stabilization case."
     ],
     "evidence_gaps": [
-      "No usable dated Layer 1 headlines or publisher metadata; sentiment required external supplementation.",
-      "Customer concentration, geographic revenue mix, USD exposure, and hedging are not supplied.",
-      "Latest guidance and the next-quarter order/run-rate detail are not in the Layer 1 financial snapshot.",
-      "Latest volume is zero and the 52-week-low-derived technical fields are null."
+      "Multi-period financial trend and details behind the earnings-quality concern are absent.",
+      "No dated growth trajectory is supplied to support valuation."
     ],
     "decisive_factors": [
-      "49.6% gross, 36.9% operating, and 25.4% net margins in the supplied financial snapshot.",
-      "RM160.17m free cash flow against RM154.23m net income and approximately 2.8% debt-to-equity.",
-      "Q2/1H 2026 filing evidence of strong revenue and attributable-profit growth.",
-      "The premium multiple and bearish/low-confirmation short-term chart preventing a stronger ruling."
+      "Strong margins/FCF and low debt versus elevated P/E.",
+      "Price below SMA-50 but above SMA-200, with neutral RSI."
     ]
   },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
-    "sentiment": "buy",
+    "sentiment": "neutral",
     "technical": "neutral",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
 }

@@ -1,0 +1,84 @@
+{
+  "ticker": "AMZN",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.0,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: Dated negative FCF and the enlarged investment plan defeat an immediate cash-return argument. Demand remains strong, so the ruling is restraint rather than business impairment. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: Amazon's growth validates demand, but dated negative free cash flow and the enlarged investment programme constrain the immediate cash-return thesis. An incomplete chart recovery does not resolve that funding and valuation uncertainty.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "AWS and retail growth establish operating demand. The affirmative scenario requires funded investment generating incremental cash; until that bridge improves, the credible position is conditional rather than aggressive accumulation. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "A mature platform can finance reinvestment without delivering attractive near-term shareholder cash returns. The revised thesis correctly prioritizes dated negative FCF; its future-monetization case needs a capital-return and funding bridge for the enlarged USD220bn programme.",
+  "key_uncertainties": [
+    "Investment funding commitments and segment returns on incremental capital.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if trailing twelve-month FCF turns positive in two consecutive quarterly releases.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if a disclosed investment funding shortfall requires unplanned equity issuance.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote.",
+    "Quoted trailing P/E 20.66x; forward P/E 24.68x. Market cap/snapshot net income is 35.66x, materially different; periods, EPS basis and share counts need reconciliation.",
+    "Dated negative trailing FCF coverage supersedes the older positive snapshot in the cash-return interpretation."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Funded investment translating into incremental cash returns; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (1.44) \u2014 price may amplify broad-market moves.",
+      "Sector: Consumer Cyclical \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 56.1% over available price history. Projected worst case (2-sigma): ~88.0% from current $256.78.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "AMZN",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Dated negative FCF and the enlarged investment plan defeat an immediate cash-return argument. Demand remains strong, so the ruling is restraint rather than business impairment.",
+    "winning_side": "bear",
+    "strongest_counterexample": "AWS and retail growth demonstrate real demand for investment on a large existing profitable platform.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if trailing twelve-month FCF turns positive in two consecutive quarterly releases.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if a disclosed investment funding shortfall requires unplanned equity issuance."
+    ],
+    "evidence_gaps": [
+      "Investment funding commitments and segment returns on incremental capital.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 20.66x; forward P/E 24.68x",
+      "AWS and retail growth establish operating demand",
+      "A mature platform can finance reinvestment without delivering attractive near-term shareholder cash returns"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "8ecf3aac34638ecf64c9ad25aac073f72ea1be5fbf6ad8f32cbcac31f177513c",
+    "technicals.json": "3ddb533781e21377f79c93bc38c31fdcd64bc2e856ae5b369fa9bcae520e4795",
+    "price_history.csv": "a26875a8ba4f77fefd5b48e7cc1bc3de91d844b3496c6deb312a105108701383"
+  }
+}

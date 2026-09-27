@@ -1,0 +1,69 @@
+{
+  "ticker": "ETN",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-23",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.3333,
+    "explanation": "The raw synthesis reflects the supplied analyst evidence; the deterministic finalizer recomputes convergence and applies the actionability gate."
+  },
+  "executive_summary": "ETN has the strongest technical alignment in this group: price is above SMA-20/50/200 and returns are positive across all listed windows. However, dated company financials and order evidence are absent, while price is near recent highs on below-average volume; keep the overall signal neutral.",
+  "bull_case": "The broad power-demand theme could support Eaton if subsequent company results validate bookings and margins; current technical momentum is positive.",
+  "bear_case": "The financial snapshot is undated and AI/data-center headlines do not prove Eaton orders; elevated RSI and upper-band proximity raise pullback risk.",
+  "key_uncertainties": [
+    "Eaton-specific bookings and revenue from data-center demand are not supplied.",
+    "Financial statement period is unknown.",
+    "Recent momentum lacks above-average volume confirmation."
+  ],
+  "catalysts_upcoming": [
+    "Dated results confirming order and margin growth would test the demand thesis."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Industrials \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 44.6% over available price history. Projected worst case (2-sigma): ~93.1% from current $438.76.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.33). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "ETN",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "The technical trend is positive, but sentiment and fundamentals remain unconfirmed: headlines do not verify orders and financial values lack period dates.",
+    "winning_side": "neither",
+    "strongest_counterexample": "The strongest contrary case is continued trend strength above SMA-20/50/200 with later results validating the power-demand theme.",
+    "invalidation_conditions": [
+      "A close below SMA-50 would challenge the current trend.",
+      "A dated filing showing contraction in revenue or operating margin would weaken fundamental support."
+    ],
+    "evidence_gaps": [
+      "Eaton-specific AI/data-center order contribution is unavailable.",
+      "Financial fiscal period and availability date are missing."
+    ],
+    "decisive_factors": [
+      "Price is above SMA-20/50/200 and returns are positive.",
+      "RSI is 67 and volume is below its 20-bar average."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "buy",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

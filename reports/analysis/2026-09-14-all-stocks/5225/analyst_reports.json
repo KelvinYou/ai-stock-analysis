@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 31.08x; forward P/E 26.42x. Indicated yield 1.44% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 71.70%; operating 15.19%; net 8.16%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 51.28%. Snapshot FCF 1897.00m MYR. FCF/net income 0.90x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Hospital profitability and positive free cash flow support business quality, but 31.08x earnings needs growth evidence beyond this single-period snapshot. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Hospital expansion, labour costs and overseas currency exposure may constrain returns.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "A 15.19% operating margin and positive free cash flow support financial resilience."
+    ],
+    "summary": "Hospital profitability and positive free cash flow support business quality, but 31.08x earnings needs growth evidence beyond this single-period snapshot. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "August 27: IHH Q2 revenue increased 12% and net profit 29%, with demand, pricing, patient mix and acquired operations contributing. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=5, buy=16, hold=2, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Healthcare growth",
+      "Acquisition contribution"
+    ],
+    "notable_headlines": [
+      "2026-08-27 https://www.bernama.com/en/region/news.php?id=2599856"
+    ],
+    "social_sentiment": null,
+    "summary": "Reported results support positive operating sentiment. Growth should not be labeled wholly organic or used alone to infer attractive entry valuation. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 7.77: below SMA20 8.07, below SMA50 8.25, below SMA200 8.60. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 33.3333,
+    "rsi_assessment": "RSI14 33.3: weak but not oversold.",
+    "macd_assessment": "MACD line -0.1441, signal -0.1107, histogram -0.0334: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 1,644,900; ratio 0.45x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      7.54
+    ],
+    "resistance_levels": [
+      7.89,
+      7.96
+    ],
+    "summary": "A tentative rebound from the September 11 selloff has not repaired the broad downtrend; wait for completed-session stabilization before reading it as accumulation. As of 2026-09-14, ATR14 is 0.166 (2.1% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 25.4%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Healthcare demand is relatively defensive but wage and medical-input inflation affect margins.",
+      "Multi-country operations expose reported earnings to FX translation."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "IHH: Healthcare demand is relatively defensive but wage and medical-input inflation affect margins. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

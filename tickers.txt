@@ -16,8 +16,6 @@ MY:5398
 #theme: MY conglomerate
 # 4197 Sime Darby.
 MY:4197
-# 5151 Hextar Global Berhad.
-MY:5151
 
 #theme: MY diversified
 # 0215 Solarvest / 5225 IHH / 5296 MR D.I.Y.
@@ -26,19 +24,21 @@ MY:5225
 MY:5296
 
 #theme: MY semiconductor / OSAT
-# Watch-only at add time: P/E 37-49x, sector at a 21-month high, earnings not
-# yet caught up to the re-rating. Same pattern as GAMUDA — wait for a pullback.
-# 0166 Inari Amertron / 0128 Frontken / 0097 ViTrox / 5005 Unisem
+# Watch-only: sector re-rating has moved ahead of earnings; wait for a
+# pullback and evidence of earnings catch-up.
+# 0128 Frontken / 0097 ViTrox
 MY:0097
 MY:0128
-MY:0166
-MY:5005
 
 #theme: MY sector-gap
 # 6947 CelcomDigi (telco — zero coverage)
 # 5249 IOI Properties (real estate; IOIPG REIT listing due end-2026, RM7.58B)
 MY:5249
 MY:6947
+
+#theme: MY utilities / data-center power
+# 5347 Tenaga Nasional.
+MY:5347
 
 #theme: MY plantation
 # 5126 Sarawak Oil Palms Berhad — CPO/palm oil plantation.
@@ -54,20 +54,26 @@ NVDA
 AAPL
 AMZN
 META
-TSLA
 
 #theme: US diversified
 AVGO
 UNH
 V
 
+#theme: US electrification / data-center power
+ETN
+
+#theme: US financials
+JPM
+
 #theme: US AI supply-chain upstream
 # TSM is upstream of the MY OSAT thesis — its capex guidance is the cross-check
 # on Frontken's "earnings visibility" claim.
 TSM
 
-#theme: US space / aerospace
-# RKLB Rocket Lab — space launch and systems.
+#theme: US event-driven / high-risk
+# TSLA Tesla / RKLB Rocket Lab.
+TSLA
 RKLB
 
 # Added 2026-08-17. These symbols already have a full briefing/debate from that
@@ -78,17 +84,14 @@ RKLB
 APP
 ORCL
 
+#theme: US enterprise technology & storage
+# IBM International Business Machines / SNDK Sandisk.
+IBM
+SNDK
+
 #theme: US media / streaming
 NFLX
 
 #theme: US fintech
 # SOFI SoFi Technologies
 SOFI
-
-#theme: US nuclear / datacenter power
-# SMR NuScale Power — small modular reactors.
-SMR
-
-#theme: US drone / defence autonomy
-# ONDS Ondas Holdings
-ONDS

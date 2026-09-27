@@ -1,0 +1,83 @@
+{
+  "ticker": "NFLX",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.2,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: Business growth and cash generation are real, but guidance disappointment and earnings-basis mismatch leave entry value unresolved. Both sides still depend on content-return normalization. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: Netflix continues to grow and generate cash, but weaker near-term expectations and inconsistent valuation bases reduce swing conviction. The bounce has not fully repaired its broader trend.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "The business continues to grow with positive cash conversion. Reconcile normalized earnings and content returns before committing; the quality-growth case survives without claiming the drawdown proves a discount. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Current revenue and profit growth keep the business case intact, while weaker next-quarter expectations remain directly relevant to entry value. Content investment returns and reconciled earnings are still needed to distinguish a quality company from a discounted purchase.",
+  "key_uncertainties": [
+    "Matched EPS denominator and content cash-return bridge.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative operating-profit growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters meet or exceed revenue guidance and generate positive FCF.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote.",
+    "Quoted trailing P/E 24.34x; forward P/E 20.26x. Market cap/snapshot net income is 29.35x, materially different; periods, EPS basis and share counts need reconciliation."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Guidance delivery and content-investment returns; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (1.53) \u2014 price may amplify broad-market moves.",
+      "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 75.9% over available price history. Projected worst case (2-sigma): ~74.8% from current $77.40.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.20). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "NFLX",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Business growth and cash generation are real, but guidance disappointment and earnings-basis mismatch leave entry value unresolved. Both sides still depend on content-return normalization.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Revenue grew 13%, profit around 9% and cash conversion is positive, supporting a quality-growth allocation.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative operating-profit growth.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters meet or exceed revenue guidance and generate positive FCF."
+    ],
+    "evidence_gaps": [
+      "Matched EPS denominator and content cash-return bridge.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 24.34x; forward P/E 20.26x",
+      "The business continues to grow with positive cash conversion",
+      "Current revenue and profit growth keep the business case intact, while weaker next-quarter expectations remain directly relevant to entry value"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "2efd9ec4b6b626716cc3bcc8bbc67b2602a2b26969feca0904c9904d847c46aa",
+    "technicals.json": "e051a19b6f3f2da2f7f0f42343f2e50ed664451feee238ce3cc080d3639135bd",
+    "price_history.csv": "9f83ad066ccc707ba8210c224149c6709b2927ae4e894ef5fa5c9fad0bd11bc4"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "ticker": "NVDA",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.3,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: Demand growth is exceptionally strong, but incompatible earnings bases block a fair-value ruling. Neither side establishes whether the forward multiple properly prices the growth. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: Nvidia's recent demand and margins are compelling, but incompatible earnings bases prevent relying on the apparently cheap forward multiple. Short-term deterioration within a longer uptrend favors waiting for price and valuation evidence to align.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Recent revenue growth and strong margins demonstrate AI demand. A normalized valuation bridge remains necessary; the buy thesis can rest on verified growth without claiming the 14.02x forward quote proves conservative expectations. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "The revenue growth is compelling and establishes demand, but does not validate a 14.02x forward valuation derived from undated estimates. Resolving earnings bases and testing customer spending sustainability remain necessary before inferring the market underprices that growth.",
+  "key_uncertainties": [
+    "Matched valuation basis and dated normalized forward estimates.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative year-on-year revenue growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive normalized EPS and FCF growth following matched-period P/E reconciliation.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote.",
+    "Quoted trailing P/E 27.63x; forward P/E 14.02x. Indicated yield 0.46% is not a guaranteed forward payout. Market cap/snapshot net income is 43.90x, materially different; periods, EPS basis and share counts need reconciliation."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Normalized earnings estimates and customer capex delivery; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (2.22) \u2014 price may amplify broad-market moves.",
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 66.3% over available price history. Projected worst case (2-sigma): ~79.9% from current $218.29.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.30). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "NVDA",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Demand growth is exceptionally strong, but incompatible earnings bases block a fair-value ruling. Neither side establishes whether the forward multiple properly prices the growth.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Q2 revenue rose 106% with exceptional margins and low leverage, which could support substantial earnings upside.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative year-on-year revenue growth.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive normalized EPS and FCF growth following matched-period P/E reconciliation."
+    ],
+    "evidence_gaps": [
+      "Matched valuation basis and dated normalized forward estimates.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 27.63x; forward P/E 14.02x",
+      "Recent revenue growth and strong margins demonstrate AI demand",
+      "The revenue growth is compelling and establishes demand, but does not validate a 14.02x forward valuation derived from undated estimates"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "6f759f838a9d13b3e117de8b852cafef5612c98b4a11564210d7274228f1f15e",
+    "technicals.json": "02322c629e5f0909049fa9ff925c1627cea58e2631eab95499693303fe2a973c",
+    "price_history.csv": "067ade9417fea5551a27d91a39590acf934462a1e5639a98aa795cee17ab5fd1"
+  }
+}

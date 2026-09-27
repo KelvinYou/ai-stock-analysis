@@ -1,80 +1,65 @@
 {
   "fundamentals": {
-    "signal": "buy",
-    "confidence": "medium",
-    "pe_assessment": "The Layer 1 snapshot reports a 26.00x trailing P/E versus 19.51x forward P/E. The multiple is not cheap on current earnings, and no peer or historical benchmark is supplied, but expected earnings growth and the order-book profile can support a premium if execution converts into cash.",
-    "margin_analysis": "Operating margin is 6.23% and net margin 6.28%, consistent with a project business where execution and mix matter. The margin data is point-in-time and does not establish a trend; higher-margin data-centre work could help, but delivery costs remain a risk.",
-    "debt_analysis": "Reported total debt is RM10.13bn versus RM12.00bn equity (about 0.84x by simple arithmetic). Free cash flow is negative RM883.6m, so working-capital absorption and project funding are more important than the debt ratio alone.",
-    "growth_outlook": "The snapshot contains RM15.97bn revenue and RM1.003bn net income. Recent dated coverage reports a record construction order book and RM3.57bn of hyperscale data-centre contracts, providing multi-year revenue visibility, but the earnings-to-cash conversion and timing of recognition remain uncertain.",
-    "key_risks": [
-      "Trailing P/E of 26.0x leaves less room for execution misses.",
-      "Negative free cash flow and high project working-capital requirements can increase funding needs.",
-      "Construction, data-centre, and overseas project delivery carry cost-overrun and schedule risk.",
-      "Order-book value is not the same as profit or cash flow and may be concentrated in a cyclical investment theme."
-    ],
-    "key_strengths": [
-      "Large and replenishing order book improves medium-term earnings visibility.",
-      "Data-centre and infrastructure credentials align with a strong investment theme in Malaysia and the region.",
-      "Forward P/E is materially below trailing P/E, consistent with an earnings-growth expectation.",
-      "Analyst snapshot is strongly positive at 2 strong buys, 14 buys, and 3 holds."
-    ],
-    "summary": "Fundamentals lean buy because the order-book and data-centre pipeline can support sustained earnings growth, and forward valuation is below trailing valuation. The premium multiple, negative free cash flow, and project-financing dependence keep confidence at medium rather than high."
-  },
-  "sentiment": {
-    "signal": "buy",
-    "confidence": "medium",
-    "news_tone": "positive",
-    "news_summary": "The dated news supplement is decisively constructive: reports describe RM3.57bn of new hyperscale data-centre contracts, a record construction order book, and positive earnings revisions. The narrative is nevertheless concentrated around one investment cycle, so the signal is buy with medium confidence rather than an assumption that every order-book ringgit becomes profit.",
-    "key_themes": [
-      "hyperscale data-centre contract wins",
-      "record construction order book",
-      "positive earnings revisions",
-      "overseas infrastructure and renewable-energy pipeline"
-    ],
-    "notable_headlines": [
-      "2026-09-01 \u2014 TA/I3investor: Gamuda secured RM3.57bn of hyperscale data-centre contracts and was reported with a record RM59.6bn construction order book. https://klse.i3investor.com/web/pricetarget/research/79433",
-      "2026-06-25 \u2014 Gamuda's official news page listed 3Q26 profit up 5% and a record RM52bn order book. https://gamuda.com/news-and-insights/",
-      "2026-08-22 \u2014 Gamuda's official news page highlighted overseas engineering expertise and project execution. https://gamuda.com/news-and-insights/",
-      "2026-09-02 \u2014 I3investor/TA results review described the first upward earnings revision after two quarters of downgrades and retained Gamuda as a top construction pick."
-    ],
-    "social_sentiment": null,
-    "summary": "Sentiment is positive on fresh data-centre wins, order-book visibility, and improved earnings-revision momentum. The key risk is thematic crowding: the same data-centre narrative that supports the stock can magnify disappointment if awards are delayed or margins fail to convert."
-  },
-  "technical": {
     "signal": "neutral",
     "confidence": "low",
-    "trend": "Mixed: the RM4.42 close is below SMA-20 (4.4395) but above SMA-50 (4.2809) and SMA-200 (4.3940).",
-    "rsi_14": 44.5946,
-    "rsi_assessment": "RSI-14 is 44.5946, below the neutral midpoint and far from overbought; momentum is soft but not capitulation-level.",
-    "macd_assessment": "MACD line is 0.0477 versus signal line 0.0544, with a -0.0067 histogram: the short-term momentum impulse has weakened despite the price remaining above SMA-50 and SMA-200.",
-    "volume_assessment": "Latest stored volume is 0 against a 20-period average of 11,559,060, giving a 0.0 ratio. Volume confirmation is unavailable because the latest stored bars carry zero volume.",
+    "pe_assessment": "P/E 28.47, forward P/E 21.17 and indicated yield 2.09%; no sector benchmark is supplied.",
+    "margin_analysis": "Reported operating margin 6.23% and net margin 6.28%; the statement period is undated, so no trend is inferred.",
+    "debt_analysis": "Debt RM10.13b versus equity RM12.00b; FCF is negative RM883.6m. The packet does not establish project-timing effects.",
+    "growth_outlook": "No dated multi-period results are supplied; growth cannot be assessed.",
+    "key_risks": [
+      "Negative FCF of RM883.6m.",
+      "Debt is RM10.13b against RM12.00b equity.",
+      "No dated multi-period margin or cash-flow history."
+    ],
+    "key_strengths": [
+      "Reported revenue RM15.97b and net income RM1.00b.",
+      "Forward P/E is below trailing P/E.",
+      "Positive 20/60-bar technical momentum."
+    ],
+    "summary": "Reported business scale and forward P/E provide positives, but negative FCF, debt near equity and no dated financial history argue against a directional fundamental call."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "neutral",
+    "news_summary": "Dated headlines available by 2026-09-24 are mostly about ownership and a January 2026 MYR0.05 dividend; they do not establish current earnings momentum.",
+    "key_themes": [
+      "dividend",
+      "ownership"
+    ],
+    "notable_headlines": [
+      "Gamuda Berhad (KLSE:GAMUDA) Will Pay A Dividend Of MYR0.05",
+      "Gamuda Berhad (KLSE:GAMUDA) is a favorite amongst institutional investors who own 61%"
+    ],
+    "social_sentiment": null,
+    "summary": "Sentiment is neutral and low confidence because the dated headlines are old and do not establish current operating momentum."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "Price is 8.0% above SMA-50 and 11.1% above SMA-200; 20/60-bar returns are +9.3%/+13.9%, while the 252-bar return is -12.9%.",
+    "rsi_14": 60.4938,
+    "rsi_assessment": "RSI-14 is 60.5, positive but not overbought.",
+    "macd_assessment": "MACD histogram is slightly negative at -0.0033, so momentum has not fully confirmed.",
+    "volume_assessment": "Current volume is near its 20-bar mean at 0.97x.",
     "support_levels": [
-      4.2967,
-      4.33
+      3.983,
+      4.37
     ],
     "resistance_levels": [
-      4.53,
-      4.5823,
-      5.6241
+      5.0
     ],
-    "summary": "Price structure is mixed rather than decisively bullish: the close is just below SMA-20 but remains above SMA-50 and SMA-200, while MACD momentum is negative. Technical confidence is low because latest volume is unavailable and the stored 52-week low is a zero placeholder, leaving pct_from_52w_low null; no missing value is estimated."
+    "summary": "Price is above SMA-50/200 with positive 20/60-bar returns, but remains below its 252-bar trend context and MACD has not confirmed the rise."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The Federal Reserve FOMC statement dated 2026-07-29 maintained the federal-funds target range at 3.50%-3.75%. Still-firm global financial conditions can affect infrastructure funding costs and risk appetite, while the statement's uncertainty around the Middle East conflict is relevant to supply chains. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
-    "interest_rate_outlook": "Bank Negara Malaysia maintained the OPR at 2.75% on 2026-07-09. Stable domestic rates are broadly supportive of construction demand and financing visibility, but they do not remove refinancing and working-capital risk for a leveraged project company. Source: https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026",
-    "fx_impact": "BNM FMIP lists KL USD/MYR at 4.0420 as of 2026-09-02. This point observation does not establish direction; Gamuda's overseas projects and imported equipment may create both translation and cost exposures, but the Layer 1 snapshot does not quantify the net effect. Source: https://financialmarkets.bnm.gov.my/about-myor-myor-i",
-    "sector_macro_factors": [
-      "Malaysia's resilient domestic growth outlook and public/private investment support construction activity.",
-      "Data-centre investment depends on sustained technology capex, power availability, and global financing conditions.",
-      "Stable OPR helps domestic project financing but does not guarantee positive project cash conversion."
-    ],
-    "geopolitical_risks": [
-      "The Fed statement cites uncertainty related in part to the Middle East conflict; prolonged disruption can raise materials, logistics, and financing costs.",
-      "Overseas project and supply-chain exposure may introduce jurisdictional and currency risk not quantified in Layer 1."
-    ],
-    "summary": "Macro/FX evidence is neutral and low confidence. The stable OPR and resilient Malaysian growth backdrop support the construction cycle, while the Fed range, geopolitical uncertainty, and an unquantified USD/MYR exposure argue against assigning a macro tailwind to the base case."
+    "fed_impact": "No company-specific Fed transmission evidence is supplied for this Malaysian ticker.",
+    "interest_rate_outlook": "BNM held the OPR at 2.75% on 2026-09-03 (official macro context); this is one observation, so no rate trajectory is inferred.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "Macro/FX is neutral and low confidence: only the dated BNM OPR hold is available; no USD/MYR observation or company-specific exposure is supplied."
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

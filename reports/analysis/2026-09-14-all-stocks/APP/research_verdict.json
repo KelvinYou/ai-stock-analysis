@@ -1,0 +1,23 @@
+{
+  "ticker": "APP",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Strong growth and cash generation coexist with leverage and inconsistent earnings bases. Neither resolves whether the current price already compensates for expectations.",
+  "winning_side": "neither",
+  "strongest_counterexample": "Revenue rose 53% and continuing profit 64%, providing strong operating evidence beyond the stock rebound.",
+  "invalidation_conditions": [
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative continuing-operations EPS growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive continuing EPS growth with gross debt/equity below 100%."
+  ],
+  "evidence_gaps": [
+    "Continuing-versus-total EPS bridge and debt maturity schedule.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
+  ],
+  "decisive_factors": [
+    "Quoted trailing P/E 24.88x; forward P/E 15.44x",
+    "Strong revenue and continuing-profit growth coexist with cash generation",
+    "Actual revenue and continuing-profit growth support more than a drawdown trade"
+  ],
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

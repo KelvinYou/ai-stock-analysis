@@ -1,0 +1,71 @@
+{
+  "ticker": "5347",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-24",
+  "overall_signal": "sell",
+  "conviction": {
+    "score": -0.48,
+    "signal_convergence": 0.6,
+    "explanation": "Sell, low confidence: negative snapshot FCF and elevated debt/equity align with price below both averages and negative 20/60-bar momentum. Positive income and oversold RSI are counterweights."
+  },
+  "executive_summary": "Tenaga Nasional combines snapshot negative FCF of MYR 439.7M and debt/equity around 1.76 with price below both averages and negative 20/60-bar returns. Positive net income, a 3.81% yield, and oversold RSI are counterpoints; no period comparison or recent operating news is supplied.",
+  "bull_case": "Positive net income, a 3.81% reported yield, and RSI below 30 may support stabilization if later cash-flow and price evidence improve.",
+  "bear_case": "Negative FCF, debt/equity near 1.76, negative MACD, and price below SMA-50/SMA-200 support caution. Oversold RSI alone does not confirm a bottom.",
+  "key_uncertainties": [
+    "No statement-period label, cash balance, or debt maturity details.",
+    "Newest company headline is from May 2026; Reuters electricity-theft story is from 2025-11.",
+    "No current regulatory, tariff, or fuel-cost evidence is supplied."
+  ],
+  "catalysts_upcoming": [
+    "Check the next period-labelled results for FCF, debt, and regulated investment funding; no date is supplied."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Low beta (0.32) \u2014 historically less sensitive to broad-market moves.",
+      "Sector: Utilities \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 37.9% over available price history. Projected worst case (2-sigma): ~27.9% from current $13.06.",
+    "risk_reward_ratio": "N/A (bearish signal)"
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 13.59,
+    "stop_rationale": "Thesis invalidated if price breaks above $13.59.",
+    "take_profit_1": 13.06,
+    "take_profit_2": 12.82,
+    "target_rationale": "Primary: reduce/exit at/near current $13.06. Next downside watch: $12.82 (nearest support).",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "5347",
+    "judged_view": "sell",
+    "confidence": "low",
+    "thesis": "Snapshot reports negative FCF of MYR 439.7M and debt/equity about 1.76, while price is below SMA-50/SMA-200 with negative 20/60-bar returns and MACD. Positive net income and oversold RSI are counterexamples; this is a low-confidence sell pending period-labelled results.",
+    "winning_side": "bear",
+    "strongest_counterexample": "A later period-labelled filing showing positive FCF and lower leverage, combined with price reclaiming SMA-50, would invalidate this bearish view.",
+    "invalidation_conditions": [
+      "A later period-labelled filing showing positive FCF and lower leverage, combined with price reclaiming SMA-50, would invalidate this bearish view."
+    ],
+    "evidence_gaps": [
+      "No statement-period label or comparative periods; negative FCF persistence is unknown.",
+      "No current fuel-cost, tariff, capex, or regulatory evidence.",
+      "No dated recommendations or issuer-specific macro/FX snapshot."
+    ],
+    "decisive_factors": [
+      "Snapshot reports negative FCF of MYR 439.7M and debt/equity around 1.76.",
+      "Price is below SMA-50/SMA-200 with negative 20/60-bar returns and MACD.",
+      "Positive net income/yield and RSI 28.77 temper confidence."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "sell",
+    "sentiment": "neutral",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "sell",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

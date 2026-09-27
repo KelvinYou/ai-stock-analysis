@@ -1,71 +1,65 @@
 {
   "fundamentals": {
-    "signal": "buy",
-    "confidence": "medium",
-    "pe_assessment": "Trailing P/E is 25.668594x and forward P/E is 17.813837x. The forward discount is attractive if the earnings recovery holds, but it is not sufficient by itself to remove operating uncertainty.",
-    "margin_analysis": "Gross margin is 18.53%, operating margin 4.24%, and net margin 2.69%; the low net margin means modest medical-cost or reimbursement pressure can materially affect earnings.",
-    "debt_analysis": "Debt is $78.389B against $94.110B of equity, approximately 0.83x debt-to-equity, while free cash flow is $16.075B. Cash generation is meaningful but leverage remains a material risk factor.",
-    "growth_outlook": "The forward valuation and cash flow allow for a recovery case, but current Layer 1 data does not establish that margin improvement is durable.",
-    "key_risks": [
-      "Low net margin and sensitivity to medical-cost trends",
-      "Debt-to-equity of approximately 0.83x",
-      "Reimbursement and policy dependence"
-    ],
-    "key_strengths": [
-      "$16.075B free cash flow",
-      "17.813837x forward P/E below trailing P/E",
-      "Defensive healthcare demand profile"
-    ],
-    "summary": "UnitedHealth's forward valuation and $16.075B free cash flow support a buy bias, but the 2.69% net margin and approximately 0.83x debt-to-equity ratio make the recovery case dependent on sustained operating improvement."
-  },
-  "sentiment": {
-    "signal": "buy",
-    "confidence": "low",
-    "news_tone": "unavailable",
-    "news_summary": "Layer 1 contains no non-empty dated news headlines. The recommendation snapshot is positive, with 23 strong-buy/buy ratings, 4 holds, and no sells.",
-    "key_themes": [
-      "Positive recommendation distribution",
-      "No usable dated headline evidence"
-    ],
-    "notable_headlines": [],
-    "social_sentiment": null,
-    "summary": "Available recommendations lean bullish, but the absence of dated headlines makes the sentiment buy signal low confidence and unsuitable as a standalone catalyst."
-  },
-  "technical": {
     "signal": "neutral",
     "confidence": "low",
-    "trend": "Short-term direction is indeterminate: the latest close is just below EMA-20, while MACD histogram is positive; current SMA trend is unavailable.",
-    "rsi_14": null,
-    "rsi_assessment": "Unavailable: latest RSI-14 is null because the upstream OHLC series contains nonfinite data on 2026-08-28.",
-    "macd_assessment": "Latest stored MACD line is -4.4934 versus signal -5.1758 with histogram 0.6824, suggesting improving momentum, but the nonfinite row contaminates the chain and prevents a confident directional call.",
-    "volume_assessment": "Latest volume is 273,424 versus the stored 20-day average of 3,438,652.9 (ratio 0.0795); very low volume weakens confirmation.",
+    "pe_assessment": "The provider-current snapshot fetched 2026-09-25 reports P/E 23.86 and forward P/E 16.42. With no peer set or dated growth history, these multiples do not establish relative value.",
+    "margin_analysis": "The snapshot reports operating margin 4.24% and net margin 2.69%, indicating thin current profitability; no fiscal-period date is supplied, so no trend is inferred.",
+    "debt_analysis": "Snapshot debt is $78.39B versus equity of $94.11B, alongside $16.08B FCF. Those values are mixed: meaningful debt is partly offset by positive FCF, but maturity/liability details are absent.",
+    "growth_outlook": "Revenue of $447.57B and net income of $12.06B are present in the fetched snapshot. Without dated multi-period statements, growth and recent cost/claims trends cannot be assessed.",
+    "key_risks": [
+      "Thin reported operating/net margins leave earnings sensitive to cost changes.",
+      "Debt and cash-flow figures lack statement-period and maturity detail.",
+      "No dated multi-period data establishes recovery or deterioration."
+    ],
+    "key_strengths": [
+      "Provider snapshot shows positive $16.08B free cash flow and $12.06B net income."
+    ],
+    "summary": "The fetched snapshot shows positive earnings and FCF, offset by low margins and material debt. Keep the fundamental view neutral/low confidence because statement-period and multi-period trend evidence are missing."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "mixed",
+    "news_summary": "Sep 24 headlines cover UnitedHealth\u2019s first chief administrative officer and a possible efficiency shift, alongside a reported industry problem squeezing margins. The operational response and issuer-level effect are not quantified, so sentiment remains mixed and low-confidence.",
+    "key_themes": [
+      "Efficiency strategy and first chief administrative officer",
+      "Industry margin pressure noted in dated coverage"
+    ],
+    "notable_headlines": [
+      "2026-09-24 \u2014 Simply Wall St.: Does UnitedHealth\u2019s New CAO Hire Reveal a Deeper Shift in Efficiency Strategy for UNH?",
+      "2026-09-24 \u2014 TIKR: UnitedHealth: Inside the $942 Million Industry Problem Squeezing Its Margins",
+      "2026-09-24 \u2014 Healthcare Dive: UnitedHealth names first chief administrative officer",
+      "2026-09-23 \u2014 Trefis: Did UnitedHealth Name The Fix Before Its Stock Ran?"
+    ],
+    "social_sentiment": null,
+    "summary": "Sep 24 headlines cover UnitedHealth\u2019s first chief administrative officer and a possible efficiency shift, alongside a reported industry problem squeezing margins. The operational response and issuer-level effect are not quantified, so sentiment remains mixed and low-confidence."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "Below SMA-20 and SMA-50, but above SMA-200; 20- and 60-bar returns are negative while the 252-bar return remains positive.",
+    "rsi_14": 29.141,
+    "rsi_assessment": "RSI 29.14 is oversold; that can precede a rebound and does not confirm a reversal.",
+    "macd_assessment": "MACD histogram -1.1883 and MACD below its signal line indicate weak momentum.",
+    "volume_assessment": "Volume is 0.78x its 20-bar average, not a high-volume confirmation.",
     "support_levels": [
-      384.85,
-      388.61,
-      391.05
+      366.0
     ],
     "resistance_levels": [
-      399.26,
-      400.8,
-      401.01
+      406.53,
+      461.62
     ],
-    "summary": "Recent observed closes range from $384.85 to $401.01, with the latest at $398.23. RSI, SMAs, ATR, and Bollinger outputs are null after the 2026-08-28 nonfinite row, so no precise technical setup is assigned."
+    "summary": "Short-term trend is weak below SMA-20/50 but remains above SMA-200; near-term RSI is oversold. The short-term decline has technical confirmation, but oversold RSI and support near the observed low make further downside uncertain."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The Federal Reserve held the target range at 3.50%-3.75% on 2026-07-29. Higher rates modestly increase financing costs for a leveraged insurer, but healthcare demand is less cyclical than most sectors. Official source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
-    "interest_rate_outlook": "The supplied higher-for-longer context is a mild headwind to debt servicing and valuation. BNM's OPR is 2.75%, but UNH is primarily a US-dollar domestic healthcare operator. Official source: https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026",
-    "fx_impact": "USD/MYR around 4.0420 on 2026-09-02 is mainly relevant to a Malaysian investor's translated return; no material company-specific FX exposure is quantified in Layer 1. Official source: https://financialmarkets.bnm.gov.my/about-myor-myor-i",
-    "sector_macro_factors": [
-      "Defensive healthcare demand limits broad economic sensitivity",
-      "Higher rates modestly pressure debt service and discount rates",
-      "Reimbursement policy is more important than FX for the operating thesis"
-    ],
-    "geopolitical_risks": [
-      "No new ticker-specific geopolitical evidence is present in Layer 1; domestic healthcare policy remains the principal structural uncertainty"
-    ],
-    "summary": "Macro is neutral with a mild financing headwind. UNH's low beta and defensive demand profile offset some rate sensitivity, but no dated company-specific macro catalyst is available."
+    "fed_impact": "Federal Reserve context (effective 2026-09-17): target range 3.75%-4.00%; FOMC raised the target range by 25 basis points on 2026-09-16. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm Generic rate sensitivity does not establish this issuer's impact.",
+    "interest_rate_outlook": "One dated policy action does not establish the future rate path or issuer-specific pass-through.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "Macro context is dated, but no company-specific impact or forward path is established; neutral/low confidence."
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

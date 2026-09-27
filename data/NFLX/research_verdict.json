@@ -1,26 +1,20 @@
 {
   "ticker": "NFLX",
-  "judged_view": "buy",
-  "confidence": "low",
-  "thesis": "The bull carried the debate narrowly because Netflix's current margins, free cash flow, and moderate leverage are directly evidenced in Layer 1, while the bearish case depends on forward growth and advertising uncertainty that cannot yet be resolved from the available snapshot. This is a conditional, low-confidence buy rather than an actionable price-level call because the technical data is incomplete.",
-  "winning_side": "bull",
-  "strongest_counterexample": "A slower advertising ramp or revenue-growth deceleration could expose the 26.0157x trailing P/E to multiple compression, and the positive MACD/EMA reading may fail because volume is only 0.1133x the stored average.",
+  "judged_view": "sell",
+  "confidence": "medium",
+  "thesis": "The technical evidence is consistently weak below SMA-20/50/200 with negative returns across all windows, and dated headlines raise competition concerns; the reported financial snapshot is undated.",
+  "winning_side": "bear",
+  "strongest_counterexample": "The strongest counterexample is that the packet\u2019s positive margins/FCF could remain durable and the RSI of 25.42 may precede a mean-reversion bounce; no dated operating data confirms it.",
   "invalidation_conditions": [
-    "Next reported revenue growth falls below 10% or operating margin falls below 28% for two consecutive reported quarters",
-    "The close breaks below the recent finite-bar support near $79.28 for three sessions without recovery",
-    "The next usable technical snapshot remains below EMA-20 with a negative MACD histogram"
+    "A close above SMA-50 would challenge the current downtrend thesis."
   ],
   "evidence_gaps": [
-    "No usable dated Layer 1 news headlines",
-    "No dated revenue, subscriber, or advertising-growth trend in the Layer 1 files",
-    "No finite RSI-14, SMA-20/50/200, Bollinger Bands, or ATR-14 because of the 2026-08-28 non-finite OHLC bar",
-    "No dated forward Fed path"
+    "No dated subscriber, engagement, or retention series is supplied.",
+    "Financial statement period and first-available date are absent."
   ],
   "decisive_factors": [
-    "29.4947% operating margin and 24.3038% net margin",
-    "$9.461B free cash flow against approximately 0.54x debt/equity",
-    "35 buy/strong-buy recommendations and no sell recommendations in Layer 1",
-    "Price above EMA-20 and positive MACD, albeit with low volume and incomplete rolling indicators"
+    "Price is below SMA-20/50/200 and down 41.86% over 252 bars.",
+    "RSI is 25.42 and near the observed low, creating reversal risk."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

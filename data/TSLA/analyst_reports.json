@@ -1,71 +1,68 @@
 {
   "fundamentals": {
     "signal": "sell",
-    "confidence": "medium",
-    "pe_assessment": "Trailing P/E is 333.6542x and forward P/E is 165.39114x. That valuation requires substantial future autonomy or robotics earnings that are not visible in the current reported financials.",
-    "margin_analysis": "Gross margin is 18.03%, operating margin 5.11%, and net margin 4.00%; the thin current margin profile leaves limited protection if automotive pricing or demand weakens.",
-    "debt_analysis": "Debt is $14.719B against $82.137B of equity, approximately 0.18x debt-to-equity, and free cash flow is $6.220B. Balance-sheet leverage is a strength rather than the main risk.",
-    "growth_outlook": "Autonomy and robotics remain meaningful optionality, but current Layer 1 data does not show enough earnings conversion to underwrite the multiple.",
+    "confidence": "low",
+    "pe_assessment": "The provider-current snapshot fetched 2026-09-25 reports P/E 345.56 and forward P/E 173.00, very high against the current earnings base. These multiples require exceptional future growth that is not established by the supplied financial series.",
+    "margin_analysis": "Snapshot operating/net margins are 5.11%/4.00%, modest relative to the reported valuation; period is not dated and no trend is inferred.",
+    "debt_analysis": "Snapshot debt is $14.72B versus equity of $82.14B; FCF is positive at $6.22B. Current balance-sheet figures provide some support but do not resolve valuation sensitivity.",
+    "growth_outlook": "Revenue and net income are listed as $94.83B and $3.79B. The snapshot confirms current profitability but provides no dated multi-period growth trajectory to support the high multiples.",
     "key_risks": [
-      "Extreme valuation relative to current margins and earnings",
-      "Automotive demand, pricing, and execution risk",
-      "The thesis depends on future autonomy/robotics monetization not yet reflected in reported earnings"
+      "Very high P/E and forward P/E require growth not demonstrated in the packet.",
+      "Current operating/net margins are 5.11%/4.00%.",
+      "Financial periods and multi-period trajectory are not supplied."
     ],
     "key_strengths": [
-      "$6.220B free cash flow",
-      "Low debt-to-equity ratio of approximately 0.18x",
-      "Large cash-generating platform with additional product optionality"
+      "Snapshot reports positive $6.22B FCF and $3.79B net income.",
+      "Debt is below reported equity."
     ],
-    "summary": "Tesla has a strong balance sheet and positive free cash flow, but 333.6542x trailing P/E, 165.39114x forward P/E, and a 4.00% net margin make the current risk/reward unfavorable until future optionality converts into durable earnings."
+    "summary": "The current snapshot is profitable, but high multiples of 345.56/173.00 are difficult to support with 5.11% operating margin and no dated growth trajectory. This supports a cautious low-confidence fundamental sell."
   },
   "sentiment": {
     "signal": "neutral",
     "confidence": "low",
-    "news_tone": "unavailable",
-    "news_summary": "Layer 1 contains no non-empty dated news headlines. The latest recommendation snapshot is mixed: 22 strong-buy/buy ratings versus 24 hold/sell/strong-sell ratings.",
+    "news_tone": "mixed",
+    "news_summary": "Sep 24 Reuters coverage says Tesla is set to formally roll out Semi trucks at a Nevada event; other headlines discuss the Oct 1 Roadster reveal, Optimus, and sales-growth expectations. Product catalysts are countered by valuation/execution questions, with no sales economics supplied; sentiment is mixed and low-confidence.",
     "key_themes": [
-      "No usable dated headline evidence",
-      "Mixed recommendation distribution"
+      "Semi product rollout",
+      "Roadster/Optimus product coverage",
+      "Sales-growth expectations"
     ],
-    "notable_headlines": [],
+    "notable_headlines": [
+      "2026-09-25 \u2014 Investor's Business Daily: Dow Jones Futures: Market Rally Resilient As Yields, Oil Prices Keep Rising; Tesla Touts Semi",
+      "2026-09-24 \u2014 Reuters: Tesla set to formally roll out Semi electric trucks at Nevada event",
+      "2026-09-24 \u2014 Motley Fool: Tesla's Roadster Reveal Is Oct. 1. The Real Story Is Optimus.",
+      "2026-09-24 \u2014 Simply Wall St.: Is Tesla (TSLA) Priced For Too Much Sales Growth After Recent Expansion Bets?"
+    ],
     "social_sentiment": null,
-    "summary": "Sentiment is neutral with low confidence because the Layer 1 headline feed is empty and the available recommendation mix is not decisively directional."
+    "summary": "Sep 24 Reuters coverage says Tesla is set to formally roll out Semi trucks at a Nevada event; other headlines discuss the Oct 1 Roadster reveal, Optimus, and sales-growth expectations. Product catalysts are countered by valuation/execution questions, with no sales economics supplied; sentiment is mixed and low-confidence."
   },
   "technical": {
     "signal": "neutral",
-    "confidence": "low",
-    "trend": "Indeterminate after the upstream nonfinite OHLC row; the latest close is above the computed EMA-20 but no current SMA trend can be established.",
-    "rsi_14": null,
-    "rsi_assessment": "Unavailable: latest RSI-14 is null because the upstream OHLC series contains nonfinite data on 2026-08-28.",
-    "macd_assessment": "The latest stored MACD line is 2.1426 versus signal -0.9948 with histogram 3.1374, but the nonfinite bar contaminates the indicator chain; it is not used as a standalone directional call.",
-    "volume_assessment": "Latest volume is 6,585,376 versus the stored 20-day average of 32,195,509.3 (ratio 0.2045); this context is also affected by the upstream data issue.",
+    "confidence": "medium",
+    "trend": "Price is above SMA-20/50 but 4.09% below SMA-200; 5/20-bar returns are positive while 60/252-bar returns remain negative.",
+    "rsi_14": 61.7345,
+    "rsi_assessment": "RSI 61.73 is constructive but below overbought territory.",
+    "macd_assessment": "MACD histogram +1.6970 with MACD above signal indicates improving short-term momentum.",
+    "volume_assessment": "Volume is 0.86x its 20-bar average, so the recent rise lacks strong volume confirmation.",
     "support_levels": [
-      345.13,
-      345.82,
-      348.95
+      297.38,
+      342.53
     ],
     "resistance_levels": [
-      354.81,
-      357.935,
-      367.95
+      386.7,
+      432.86
     ],
-    "summary": "The latest price action can be described only with observed recent closes ($345.13-$367.95); RSI, SMAs, ATR, and Bollinger outputs are null after the 2026-08-28 nonfinite row, so no precise technical setup is assigned."
+    "summary": "Short-term recovery is above SMA-20/50 with positive momentum, but price remains below SMA-200 and longer returns are negative. The short-term rebound is real in the supplied bars, but the longer trend and low volume confirmation keep the signal mixed."
   },
   "macro": {
-    "signal": "sell",
+    "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The Federal Reserve held the target range at 3.50%-3.75% on 2026-07-29. A restrictive rate level is a headwind for a high-multiple, long-duration growth narrative and for vehicle financing. Official source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
-    "interest_rate_outlook": "The supplied current context is higher-for-longer relative to an easing scenario; this raises the discount rate applied to distant autonomy/robotics cash flows. BNM's OPR is 2.75%, but that is not a primary operating driver for this US issuer. Official source: https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026",
-    "fx_impact": "USD/MYR around 4.0420 on 2026-09-02 is relevant mainly to a Malaysian investor's translated return, not to Tesla's core US operating signal. Official source: https://financialmarkets.bnm.gov.my/about-myor-myor-i",
-    "sector_macro_factors": [
-      "Higher rates can pressure auto financing and high-duration valuation multiples",
-      "Consumer-cyclical demand is more exposed to financing conditions than defensive sectors",
-      "The current macro read does not offset Tesla's valuation risk"
-    ],
-    "geopolitical_risks": [
-      "No new ticker-specific geopolitical evidence is present in Layer 1; supply-chain and policy exposure remain unresolved structural risks"
-    ],
-    "summary": "The supplied rate environment is a modest-to-material headwind for Tesla's high-multiple, long-duration optionality, but confidence is low because the current Layer 1 dataset does not contain a dated company-specific macro catalyst."
+    "fed_impact": "Federal Reserve context (effective 2026-09-17): target range 3.75%-4.00%; FOMC raised the target range by 25 basis points on 2026-09-16. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm Generic rate sensitivity does not establish this issuer's impact.",
+    "interest_rate_outlook": "One dated policy action does not establish the future rate path or issuer-specific pass-through.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "Macro context is dated, but no company-specific effect or future policy path is established; neutral/low confidence."
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

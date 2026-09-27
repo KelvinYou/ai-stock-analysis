@@ -1,26 +1,21 @@
 {
   "ticker": "AAPL",
-  "judged_view": "buy",
+  "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "The bull has the better long-term business case: strong margins, cash flow, and ecosystem scale outweigh the balance-sheet concern. The ruling is low confidence because valuation, leadership/AI execution, and incomplete technical coverage leave little margin for error.",
-  "winning_side": "bull",
-  "strongest_counterexample": "A premium multiple can compress materially if the new leadership team fails to show AI/product progress or earnings growth does not outrun the 34.06x forward P/E.",
+  "thesis": "Neutral: positive technical momentum conflicts with valuation/cost concerns and debt relative to equity; single-period data cannot resolve the balance. The financial snapshot contains measured levels, but a single period cannot establish trends.",
+  "winning_side": "neither",
+  "strongest_counterexample": "Neutral: positive technical momentum conflicts with valuation/cost concerns and debt relative to equity; single-period data cannot resolve the balance. A later dated comparative filing or sustained price confirmation could change the ruling.",
   "invalidation_conditions": [
-    "Net margin falls below 25% for two consecutive reported quarters.",
-    "Trailing free cash flow falls below $80B for two consecutive Layer 1 refreshes.",
-    "The recommendation panel reaches at least 10 sell-or-worse ratings or broad estimates turn down.",
-    "CEO-transition execution produces a sustained reduction in earnings expectations."
+    "If dated filings confirm sustained cash generation and price holds above SMA-50, the neutral ruling may understate the strength of the observed uptrend."
   ],
   "evidence_gaps": [
-    "SMA/RSI/Bollinger/ATR/support/resistance are unavailable after the non-finite 2026-08-28 bar.",
-    "Layer 1 has no detailed forward earnings bridge for the AI/product roadmap.",
-    "No debt-maturity or buyback-allocation breakdown is present."
+    "Financial statement period/availability dates are absent.",
+    "The AI-cost/valuation headline's supporting estimates are not in the packet.",
+    "Dated analyst recommendations are not supplied."
   ],
   "decisive_factors": [
-    "26.9% net margin and $98.8B free cash flow.",
-    "37.31x trailing P/E with only a modest forward discount.",
-    "CEO transition and AI execution are unresolved.",
-    "Available EMA/MACD is positive but insufficient for precise levels."
+    "The snapshot reports operating margin 32.0% and FCF $98.77B (23.7% of revenue), offset by debt/equity of 1.34 and P/E 38.60 without peer context. The high-level data support a balanced rather than directional fundamental view.",
+    "Price is above SMA-50 and SMA-200, momentum returns are positive, RSI is firm but below 70, and MACD is positive. The latest volume is below average and price is close to the observed 52-week high, so the technical case is positive but not low-risk."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

@@ -1,0 +1,83 @@
+{
+  "ticker": "APP",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.0,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: Strong growth and cash generation coexist with leverage and inconsistent earnings bases. Neither resolves whether the current price already compensates for expectations. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: AppLovin's operating growth and cash flow support a real business case, yet leverage and earnings-basis conflicts constrain valuation confidence. The rebound remains a recovery attempt inside a damaged longer trend.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Strong revenue and continuing-profit growth coexist with cash generation. Reconcile those measures and cash sustainability before scaling; the positive thesis does not depend on treating the 15.44x forward estimate as proven value. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Actual revenue and continuing-profit growth support more than a drawdown trade. Yet high gross debt and inconsistent earnings bases prevent determining whether the forward multiple is conservative; growth relative to already-high expectations matters for returns.",
+  "key_uncertainties": [
+    "Continuing-versus-total EPS bridge and debt maturity schedule.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative continuing-operations EPS growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive continuing EPS growth with gross debt/equity below 100%.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote.",
+    "Quoted trailing P/E 24.88x; forward P/E 15.44x. Market cap/snapshot net income is 32.65x, materially different; periods, EPS basis and share counts need reconciliation."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Normalized continuing earnings and sustainable cash conversion; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (2.49) \u2014 price may amplify broad-market moves.",
+      "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 91.9% over available price history. Projected worst case (2-sigma): ~137.3% from current $323.96.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "APP",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Strong growth and cash generation coexist with leverage and inconsistent earnings bases. Neither resolves whether the current price already compensates for expectations.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Revenue rose 53% and continuing profit 64%, providing strong operating evidence beyond the stock rebound.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative continuing-operations EPS growth.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive continuing EPS growth with gross debt/equity below 100%."
+    ],
+    "evidence_gaps": [
+      "Continuing-versus-total EPS bridge and debt maturity schedule.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 24.88x; forward P/E 15.44x",
+      "Strong revenue and continuing-profit growth coexist with cash generation",
+      "Actual revenue and continuing-profit growth support more than a drawdown trade"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "e018d3ce17a10c24fe971feddfe9adafff64b6cc0057146d5ff28c1ee013e770",
+    "technicals.json": "387fb9eefbfc214e24c94944a5c5f244edf5e88387778e7580aae4c46c4983dc",
+    "price_history.csv": "e5b2bee35fc5670e2e65cdcb2766833634e68065e8e5800d200eddd3765f5b25"
+  }
+}

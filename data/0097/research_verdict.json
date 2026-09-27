@@ -1,25 +1,20 @@
 {
   "ticker": "0097",
   "judged_view": "neutral",
-  "confidence": "medium",
-  "thesis": "ViTrox is fundamentally strong but priced for substantial execution. The near-term technical pullback and impaired volume/OHLC data prevent a reliable directional entry, so the evidence supports monitoring rather than a high-conviction buy or sell.",
+  "confidence": "low",
+  "thesis": "ViTrox has strong current margins and a powerful uptrend, but the valuation is high, FCF is modest versus net income, and price is overbought near its high on weak volume.",
   "winning_side": "neither",
-  "strongest_counterexample": "A sustained semiconductor-capex and advanced-packaging cycle could produce earnings growth strong enough to validate the premium multiple and make the current pullback temporary.",
+  "strongest_counterexample": "The strongest counterexample is that the current margin profile and low debt support continued earnings growth that could validate the valuation; the packet lacks dated growth evidence.",
   "invalidation_conditions": [
-    "A confirmed acceleration in orders, revenue, and free-cash-flow conversion would weaken the valuation bear case.",
-    "A verified data repair showing strong volume-backed price recovery above SMA20 would weaken the technical bear case.",
-    "A material earnings or order miss would invalidate the constructive growth case."
+    "A close below the observed 20-bar low would challenge the current trend."
   ],
   "evidence_gaps": [
-    "No usable current-news headlines",
-    "No reliable volume confirmation because the latest volume is zero",
-    "No detailed order-book, customer-concentration, or forward-cash-flow evidence"
+    "Current earnings/order trajectory and multi-period FCF are missing.",
+    "Dated news is stale, with the newest supplied item from Feb 2026."
   ],
   "decisive_factors": [
-    "82.0x trailing and 45.1x forward valuation",
-    "61.36% gross margin and low leverage",
-    "Price below SMA20 with negative MACD but above SMA50/SMA200",
-    "Zero-filled OHLC/volume fields and invalid 52-week-low data"
+    "P/E 89.82 and forward P/E 49.35.",
+    "Price is above all moving averages but RSI is 70.75 and volume is 0.49x average."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

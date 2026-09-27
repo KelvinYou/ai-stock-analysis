@@ -1,0 +1,83 @@
+{
+  "ticker": "AVGO",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.3,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: AI growth and cash generation are strong but earnings-basis discrepancies prevent adjudicating the valuation. Neither establishes a reliable forward-return denominator. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: Broadcom's AI growth and cash generation are substantive, but acquisition accounting and inconsistent earnings bases complicate apparent forward value. Early momentum stabilization needs confirmation before the operating case becomes a stronger swing setup.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "AI revenue growth and strong cash generation substantiate demand. Reconcile acquisition accounting and estimates before scaling; the strongest bullish case is growth with cash generation, not presumed conservative expectations. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Strong AI sales and free cash flow make the operating case credible. The bridge from 46.05x trailing to 18.67x forward remains essential, however, because acquisition accounting, debt and incompatible profit bases can make apparent cheapness illusory even during rapid growth.",
+  "key_uncertainties": [
+    "Acquisition accounting and comparable dated EPS estimates.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative AI semiconductor revenue growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive normalized EPS and FCF growth after valuation-basis reconciliation.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote.",
+    "Quoted trailing P/E 46.05x; forward P/E 18.67x. Indicated yield 0.72% is not a guaranteed forward payout. Market cap/snapshot net income is 74.72x, materially different; periods, EPS basis and share counts need reconciliation."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Comparable earnings reconciliation and sustained AI cash conversion; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (1.46) \u2014 price may amplify broad-market moves.",
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 48.3% over available price history. Projected worst case (2-sigma): ~83.8% from current $361.99.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.30). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "AVGO",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "AI growth and cash generation are strong but earnings-basis discrepancies prevent adjudicating the valuation. Neither establishes a reliable forward-return denominator.",
+    "winning_side": "neither",
+    "strongest_counterexample": "AI semiconductor revenue rose 221% and FCF exceeds profit, offering unusually tangible growth evidence.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative AI semiconductor revenue growth.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive normalized EPS and FCF growth after valuation-basis reconciliation."
+    ],
+    "evidence_gaps": [
+      "Acquisition accounting and comparable dated EPS estimates.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 46.05x; forward P/E 18.67x",
+      "AI revenue growth and strong cash generation substantiate demand",
+      "Strong AI sales and free cash flow make the operating case credible"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "18e399b37a8ebc49ef4521f46e510fd9f88b4675d0a8276ad20120cb76bf64de",
+    "technicals.json": "e453c8fbee581180b89d0e96c797522704252c7e077f7faff6685bc2e3cee8f3",
+    "price_history.csv": "748d347f749dbc7e92b0f9c7c7737ceb12d383939ea889d6c9b4bd471d92d324"
+  }
+}

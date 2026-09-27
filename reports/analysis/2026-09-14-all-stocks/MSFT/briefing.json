@@ -1,0 +1,81 @@
+{
+  "ticker": "MSFT",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "buy",
+  "conviction": {
+    "score": 0.4,
+    "signal_convergence": 0.5455,
+    "explanation": "Consensus-capped research conviction for the buy thesis, not a probability or backtested expected return. I retain the research-manager ruling: Adjusted EPS growth of 23% excluding investment effects gives the bull actual earnings evidence alongside high margins and low leverage. The bear identifies unresolved incremental capex returns but does not overturn the established quality-growth case. Positive operating evidence and the longer trend support modest directional conviction, tempered by near-term momentum and data limitations. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "BUY: Microsoft combines documented adjusted earnings progress with an intact longer trend, making the constructive case credible. Cooling momentum and incomplete infrastructure-return evidence keep the swing thesis conditional rather than aggressive.\n\nConditional buy thesis for a swing watchlist; use completed-session confirmation and the downstream risk gate before treating it as executable. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Cloud growth and operating profitability support a quality-growth case. Normalize discrete items and track cash conversion before scaling; established profitability supports conditional buying while new-capital returns are tested. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Adjusted EPS growth strengthens the business thesis and cannot be dismissed because capex is high. The open question is incremental cash return on AI investment after normalization, with FCF near half snapshot profit; a quality premium still needs an adequate forward return.",
+  "key_uncertainties": [
+    "Discrete-item normalization and incremental infrastructure cash returns.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of non-positive year-on-year adjusted EPS growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative FCF.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Cash conversion and renewed momentum supported by operating delivery; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 37.1% over available price history. Projected worst case (2-sigma): ~86.7% from current $495.63.",
+    "risk_reward_ratio": "0.99:1"
+  },
+  "action_plan": {
+    "entry_limit": 494.25,
+    "entry_rationale": "Buy-the-dip to SMA-20 support near $494.25",
+    "stop_loss": 474.13,
+    "stop_rationale": "2x ATR-14 ($10.06) below entry \u2014 invalidates the setup",
+    "take_profit_1": 514.13,
+    "take_profit_2": 569.97,
+    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "MSFT",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "Adjusted EPS growth of 23% excluding investment effects gives the bull actual earnings evidence alongside high margins and low leverage. The bear identifies unresolved incremental capex returns but does not overturn the established quality-growth case.",
+    "winning_side": "bull",
+    "strongest_counterexample": "FCF is about half snapshot profit, so large AI investments may deliver accounting growth without commensurate distributable returns.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of non-positive year-on-year adjusted EPS growth.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of negative FCF."
+    ],
+    "evidence_gaps": [
+      "Discrete-item normalization and incremental infrastructure cash returns.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 27.63x; forward P/E 21.03x",
+      "Cloud growth and operating profitability support a quality-growth case",
+      "Adjusted EPS growth strengthens the business thesis and cannot be dismissed because capex is high"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "99e5b3bbdfc644d1e05e7efba6a45cd3d213df744abf4d43e9d44bf8b8a96936",
+    "technicals.json": "7781b78520a0088b4f231d87922b0de2fd78b11a43481b0139ba029468efb460",
+    "price_history.csv": "1891f0ad0d1eb03161f776f34da9f81c3f9f2446a4ddd0aa0379be27fe318bb7"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "ticker": "TSLA",
+  "judged_view": "sell",
+  "confidence": "medium",
+  "thesis": "The gap between 332.22x earnings and current operating economics is not filled by quantified future cash flows. The bull concedes its remaining case is speculative optionality.",
+  "winning_side": "bear",
+  "strongest_counterexample": "Revenue grew 26% and positive cash generation provides resources to develop potentially valuable new businesses.",
+  "invalidation_conditions": [
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of operating margin above 10% with positive FCF.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if a new disclosed business segment records positive operating profit for two consecutive quarters."
+  ],
+  "evidence_gaps": [
+    "Probability-weighted new-business cash flows and capital requirements.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
+  ],
+  "decisive_factors": [
+    "Quoted trailing P/E 332.22x; forward P/E 169.30x.",
+    "The business has revenue and cash-generation capacity",
+    "Positive cash generation and revenue growth allow a speculative development thesis, but the central gap remains between current earnings and a 332.22x multiple"
+  ],
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

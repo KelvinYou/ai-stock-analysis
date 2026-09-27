@@ -1,0 +1,68 @@
+{
+  "ticker": "JPM",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-23",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.3333,
+    "explanation": "The raw synthesis reflects the supplied analyst evidence; the deterministic finalizer recomputes convergence and applies the actionability gate."
+  },
+  "executive_summary": "JPM\u2019s price is below SMA-20/50 with negative MACD and a negative 20-bar return, but remains above SMA-200. Sep 23 headlines describe expansion efforts without quantified economics, and the bank financial snapshot is undated; keep the view neutral.",
+  "bull_case": "The price remains above its 200-day average, and mandate, India, and payment initiatives could provide support if dated results show contribution.",
+  "bear_case": "Short-term momentum is weak; the packet\u2019s P/E and financial values lack dated earnings and bank balance-sheet context.",
+  "key_uncertainties": [
+    "Current earnings basis and statement period are unknown.",
+    "Mandate/payment initiatives have no quantified economics in the supplied headlines.",
+    "Credit-quality metrics are not available."
+  ],
+  "catalysts_upcoming": [
+    "Dated results quantifying mandate/payment contribution and credit performance."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Financial Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 43.6% over available price history. Projected worst case (2-sigma): ~37.8% from current $337.53.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.33). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "JPM",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Short-term momentum is negative below SMA-20/50, while price remains above SMA-200; expansion headlines are not quantified and financials lack period dates.",
+    "winning_side": "neither",
+    "strongest_counterexample": "The strongest counterexample is stabilization above SMA-200 with expansion/payment initiatives contributing to earnings, which is not yet measured.",
+    "invalidation_conditions": [
+      "A close below the observed 60-bar low would weaken the longer-term stabilization case."
+    ],
+    "evidence_gaps": [
+      "Financial statements and P/E earnings basis lack period dates.",
+      "Mandate and payments revenue/credit effects are not supplied."
+    ],
+    "decisive_factors": [
+      "MACD and 20-bar return are negative.",
+      "Price remains above SMA-200."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "neutral",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

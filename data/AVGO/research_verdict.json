@@ -2,23 +2,20 @@
   "ticker": "AVGO",
   "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "Broadcom's exceptional margins, free cash flow, forward valuation, and recommendation support are offset by negative near-term momentum, meaningful leverage, and incomplete technical evidence. The correct current view is neutral while the forward earnings case and clean price trend are verified.",
+  "thesis": "Neutral: strong snapshot profitability is offset by elevated reported trailing P/E and a weak intermediate price structure; the custom-chip headline is not company-specific evidence. The financial snapshot contains measured levels, but a single period cannot establish trends.",
   "winning_side": "neither",
-  "strongest_counterexample": "If forward earnings estimates are delivered, 18.762774x forward P/E is inexpensive for a 40.81% operating-margin platform and the current weakness could be a temporary reset.",
+  "strongest_counterexample": "Neutral: strong snapshot profitability is offset by elevated reported trailing P/E and a weak intermediate price structure; the custom-chip headline is not company-specific evidence. A later dated comparative filing or sustained price confirmation could change the ruling.",
   "invalidation_conditions": [
-    "Sustained deterioration in margin or free cash flow",
-    "Material downward revision to forward earnings",
-    "A clean technical breakdown after the data-quality issue is corrected"
+    "A close above the observed 20-bar high of $376.59 with sustained positive momentum would weaken the bearish technical reading."
   ],
   "evidence_gaps": [
-    "No non-empty dated news headlines",
-    "No detailed bridge from trailing to forward earnings",
-    "Nonfinite OHLC data on 2026-08-28 makes latest RSI, SMA, ATR, and Bollinger outputs null"
+    "Financial statement period/availability dates are absent.",
+    "Company-specific exposure to the Google/Nvidia chip story is unknown.",
+    "Dated analyst recommendations are not supplied."
   ],
   "decisive_factors": [
-    "67.77% gross margin and 40.81% operating margin",
-    "$26.914B free cash flow",
-    "60.902153x trailing P/E, 18.762774x forward P/E, and approximately 0.80x debt-to-equity"
+    "The snapshot reports operating margin 40.8%, FCF $26.91B (42.1% of revenue), and debt/equity 0.80. The trailing P/E is 45.34 with no peer context, leaving a balanced valuation/profitability view.",
+    "Price remains below SMA-50/SMA-200, and the 20/60-bar returns are negative, but the latest five-bar return and MACD histogram improved. The weak trend is not confirmed by volume and supports only a low-confidence bearish technical reading."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 38.15x; forward P/E 34.70x. Indicated yield 0.33% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 46.91%; operating 31.97%; net 26.92%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 133.80%. Snapshot FCF 98767.00m USD. FCF/net income 0.88x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Strong cash generation supports franchise quality, but 38.15x trailing and 34.70x forward earnings leave limited valuation support without a verified growth bridge. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Premium valuation and gross debt above equity require context on buybacks, cash and future growth.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "31.97% operating margin and substantial positive free cash flow demonstrate earnings capacity."
+    ],
+    "summary": "Strong cash generation supports franchise quality, but 38.15x trailing and 34.70x forward earnings leave limited valuation support without a verified growth bridge. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "July 30: Apple reported its strongest June quarter, with double-digit revenue growth in iPhone, Mac, Services and every geographic segment. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=6, buy=19, hold=14, sell=3, strongSell=2. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Product demand",
+      "Services growth"
+    ],
+    "notable_headlines": [
+      "2026-07-30 https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/"
+    ],
+    "social_sentiment": null,
+    "summary": "The quarterly release supports positive operating sentiment. This is evidence about recent demand, not verification of future product-cycle sales or a current sentiment extreme. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 332.27: above SMA20 316.63, above SMA50 317.83, above SMA200 284.54. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 70.6189,
+    "rsi_assessment": "RSI14 70.6: overbought, increasing extension risk without automatically reversing the trend.",
+    "macd_assessment": "MACD line 3.2654, signal 1.9506, histogram 1.3147: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 50,659,000; ratio 1.19x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      326.3,
+      316.51
+    ],
+    "resistance_levels": [
+      336.22
+    ],
+    "summary": "A forceful two-session rally reclaimed major averages with supportive volume, but RSI above 70 and a close above the upper band increase near-term pullback risk. As of 2026-09-11, ATR14 is 7.84 (2.4% of price), price is above the upper band, and the adjusted 52-week-high drawdown is 3.5%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Device replacement demand depends on discretionary spending and consumer financing.",
+      "International revenue and manufacturing supply chains expose earnings to FX and trade policy."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Apple Inc.: Device replacement demand depends on discretionary spending and consumer financing. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

@@ -1,32 +1,28 @@
 {
   "ticker": "AVGO",
-  "date": "2026-09-03",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-23",
   "overall_signal": "neutral",
   "conviction": {
     "score": 0.0,
-    "signal_convergence": 0.2727,
-    "explanation": "Fundamentals and recommendation-based sentiment are bullish, technicals are bearish, and macro is neutral. This is a high-divergence/low-confidence neutral result; the strong business quality does not provide a clean entry while latest RSI, SMA, ATR, and Bollinger outputs are null."
+    "signal_convergence": 0.2222,
+    "explanation": "Neutral: strong snapshot profitability is offset by elevated reported trailing P/E and a weak intermediate price structure; the custom-chip headline is not company-specific evidence."
   },
-  "executive_summary": "Broadcom's 67.77% gross margin, 40.81% operating margin, $26.914B free cash flow, and 18.762774x forward P/E are compelling, but price momentum is negative and debt is approximately 0.80x equity. The In-Session Pipeline returns neutral pending clean technical data and confirmation that forward earnings support the valuation.",
-  "bull_case": "Strong profitability and free cash flow can support AI infrastructure growth, and the forward multiple is attractive if estimates are delivered.",
-  "bear_case": "The current decline, negative MACD, leverage, and execution-sensitive forward multiple create downside risk; the technical data gap prevents precise timing.",
+  "executive_summary": "Broadcom's intermediate technical structure is weak: price is below both moving averages and 20/60-bar returns are negative, despite a five-bar bounce and positive MACD histogram. The Google custom-chip headline does not identify Broadcom exposure; missing dated statements keep a bearish tape from becoming a full fundamental call. The snapshot reports operating margin 40.8%, FCF $26.91B (42.1% of revenue), and debt/equity 0.80. The trailing P/E is 45.34 with no peer context, leaving a balanced valuation/profitability view.",
+  "bull_case": "The latest five-bar return is positive and MACD histogram has turned positive, offering early stabilization evidence. The packet does not prove the custom-chip headline is a direct Broadcom risk.",
+  "bear_case": "Price remains below SMA-50 and SMA-200, is down over 60 bars, and sits 28.17% below the 52-week high. The modest rebound has below-average volume and no dated fundamentals to confirm a recovery.",
   "key_uncertainties": [
-    "No dated earnings bridge supports the forward P/E",
-    "Layer 1 contains no non-empty current news headlines",
-    "Nonfinite OHLC data on 2026-08-28 leaves latest RSI, SMA, ATR, and Bollinger outputs null",
-    "RiskChecker's volatility estimate may be NaN because the upstream return series includes the nonfinite bar"
+    "Whether positive MACD and five-bar momentum develop into a sustained reversal.",
+    "Whether custom AI-chip competition has measurable impact on Broadcom; no company exposure is supplied.",
+    "Point-in-time financial and dated analyst recommendations are not supplied."
   ],
-  "catalysts_upcoming": [
-    "Clean replacement or correction of the nonfinite OHLC row",
-    "Confirmation of forward earnings and free-cash-flow delivery",
-    "Price reclaiming a clean set of moving-average levels"
-  ],
+  "catalysts_upcoming": [],
   "risk_assessment": {
     "correlation_notes": [
-      "High beta (1.47) \u2014 price may amplify broad-market moves.",
+      "High beta (1.46) \u2014 price may amplify broad-market moves.",
       "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 48.3% over available price history. Projected worst case (2-sigma): ~nan% from current $367.29.",
+    "max_drawdown_scenario": "Historical max drawdown: 48.3% over available price history. Projected worst case (2-sigma): ~79.6% from current $354.99.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -38,36 +34,35 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.27). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.22). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "AVGO",
     "judged_view": "neutral",
     "confidence": "low",
-    "thesis": "Broadcom's exceptional margins, free cash flow, forward valuation, and recommendation support are offset by negative near-term momentum, meaningful leverage, and incomplete technical evidence. The correct current view is neutral while the forward earnings case and clean price trend are verified.",
+    "thesis": "Neutral: strong snapshot profitability is offset by elevated reported trailing P/E and a weak intermediate price structure; the custom-chip headline is not company-specific evidence. The financial snapshot contains measured levels, but a single period cannot establish trends.",
     "winning_side": "neither",
-    "strongest_counterexample": "If forward earnings estimates are delivered, 18.762774x forward P/E is inexpensive for a 40.81% operating-margin platform and the current weakness could be a temporary reset.",
+    "strongest_counterexample": "Neutral: strong snapshot profitability is offset by elevated reported trailing P/E and a weak intermediate price structure; the custom-chip headline is not company-specific evidence. A later dated comparative filing or sustained price confirmation could change the ruling.",
     "invalidation_conditions": [
-      "Sustained deterioration in margin or free cash flow",
-      "Material downward revision to forward earnings",
-      "A clean technical breakdown after the data-quality issue is corrected"
+      "A close above the observed 20-bar high of $376.59 with sustained positive momentum would weaken the bearish technical reading."
     ],
     "evidence_gaps": [
-      "No non-empty dated news headlines",
-      "No detailed bridge from trailing to forward earnings",
-      "Nonfinite OHLC data on 2026-08-28 makes latest RSI, SMA, ATR, and Bollinger outputs null"
+      "Financial statement period/availability dates are absent.",
+      "Company-specific exposure to the Google/Nvidia chip story is unknown.",
+      "Dated analyst recommendations are not supplied."
     ],
     "decisive_factors": [
-      "67.77% gross margin and 40.81% operating margin",
-      "$26.914B free cash flow",
-      "60.902153x trailing P/E, 18.762774x forward P/E, and approximately 0.80x debt-to-equity"
+      "The snapshot reports operating margin 40.8%, FCF $26.91B (42.1% of revenue), and debt/equity 0.80. The trailing P/E is 45.34 with no peer context, leaving a balanced valuation/profitability view.",
+      "Price remains below SMA-50/SMA-200, and the 20/60-bar returns are negative, but the latest five-bar return and MACD histogram improved. The weak trend is not confirmed by volume and supports only a low-confidence bearish technical reading."
     ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "buy",
-    "sentiment": "buy",
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
     "technical": "sell",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
 }

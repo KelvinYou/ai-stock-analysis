@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 9.81x; forward P/E 10.67x. Indicated yield 5.49% is not a guaranteed forward payout.",
+    "margin_analysis": "gross unavailable; operating 3.26%; net 2.54%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 40.71%. Snapshot FCF 2426.00m MYR. FCF/net income 1.38x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Single-digit trailing P/E and positive free cash flow support a conditional value-and-income case, tempered by thin operating margins and a higher forward multiple. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "A 3.26% operating margin leaves limited protection against automotive-cycle pressure.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Free cash flow exceeds snapshot net income and the indicated yield is 5.49%."
+    ],
+    "summary": "Single-digit trailing P/E and positive free cash flow support a conditional value-and-income case, tempered by thin operating margins and a higher forward multiple. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "August 27: Sime reported FY26 core profit up 32.6% to RM1.55bn and a 14-sen full-year dividend, although reported profit fell because prior disposal gains were higher. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=2, buy=8, hold=6, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Motors recovery",
+      "Core-versus-reported earnings"
+    ],
+    "notable_headlines": [
+      "2026-08-27 https://www.sime.com/media/news-release/2026/08/sime-reports-higher-core-net-profit-of-rm1-55-billion-for-fy2026/"
+    ],
+    "social_sentiment": null,
+    "summary": "Core earnings support a more constructive narrative than the reported-profit decline suggests. Disposal gains should not be extrapolated into recurring earnings. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 2.55: above SMA20 2.50, above SMA50 2.30, above SMA200 2.19. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 57.1429,
+    "rsi_assessment": "RSI14 57.1: neutral-to-firm.",
+    "macd_assessment": "MACD line 0.0841, signal 0.0943, histogram -0.0102: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 4,408,600; ratio 0.26x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-25, 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      2.53,
+      2.49
+    ],
+    "resistance_levels": [
+      2.6,
+      2.65
+    ],
+    "summary": "The longer uptrend remains intact while negative MACD histogram signals cooling momentum; consolidation above recent 2.53 support would be more constructive than another failed test of 2.65. As of 2026-09-14, ATR14 is 0.095 (3.7% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 4.9%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Vehicle demand is cyclical and sensitive to household credit and financing costs.",
+      "Imported vehicle costs and overseas distribution earnings create opposing FX channels."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "SIME: Vehicle demand is cyclical and sensitive to household credit and financing costs. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

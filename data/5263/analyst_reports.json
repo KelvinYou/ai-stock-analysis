@@ -1,0 +1,70 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 22.34x; forward P/E 18.18x. Indicated yield 2.15% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 15.42%; operating 8.66%; net 6.78%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 40.52%. Snapshot FCF 1574.96m MYR. FCF/net income 4.35x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "A 22.34x trailing multiple still requires sustained construction earnings; exceptionally large free cash flow needs reconciliation rather than extrapolation. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Project margin competition and working-capital reversals can undermine the earnings case.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Positive operating profits and moderate gross debt/equity support resilience."
+    ],
+    "summary": "A 22.34x trailing multiple still requires sustained construction earnings; exceptionally large free cash flow needs reconciliation rather than extrapolation. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "September 11 coverage of CGS's September 10 downgrade flags peak ROE and margin competition; August 24 results nevertheless showed profit growth and a RM10.5bn backlog. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=2, buy=10, hold=5, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Margin normalization",
+      "Order visibility",
+      "Downgrade"
+    ],
+    "notable_headlines": [
+      "2026-09-11 https://www.minichart.com.sg/2026/09/11/suncon-downgraded-to-hold-with-rm8-30-target-price-as-cgs-flags-roe-peak/",
+      "2026-08-24 https://www.thestar.com.my/business/business-news/2026/08/24/suncon-2q-net-profit-rises-24-order-book-hits-record-rm105bil"
+    ],
+    "social_sentiment": null,
+    "summary": "The evidence points to future-margin and valuation concern rather than an established current earnings collapse. Neither a downgrade nor a sharp decline establishes the correct entry price. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 7.15: below SMA20 7.91, below SMA50 7.80, above SMA200 6.68. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 25.9285,
+    "rsi_assessment": "RSI14 25.9: oversold, which is a condition rather than a reversal signal.",
+    "macd_assessment": "MACD line -0.0894, signal 0.0041, histogram -0.0935: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 3,069,800; ratio 0.96x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      7.14
+    ],
+    "resistance_levels": [
+      7.37,
+      7.4,
+      7.8
+    ],
+    "summary": "The heavy-volume September 11 breakdown extends into a provisional new-session low; oversold RSI and remaining above SMA200 do not establish a bottom. As of 2026-09-14, ATR14 is 0.195 (2.7% of price), price is below the lower band, and the adjusted 52-week-high drawdown is 14.4%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Data-centre investment supports addressable demand but tender competition determines margins.",
+      "Materials inflation and project-financing conditions may affect contract economics."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "SUNCON: Data-centre investment supports addressable demand but tender competition determines margins. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

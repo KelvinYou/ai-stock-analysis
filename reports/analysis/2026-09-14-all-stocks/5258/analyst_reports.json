@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 8.36x; forward P/E 8.68x. Indicated yield 8.89% is not a guaranteed forward payout.",
+    "margin_analysis": "gross unavailable; operating unavailable; net 21.99%. No historical series is supplied, so margin trends cannot be established. NIM, cost/income, credit costs and capital metrics are required for banking analysis.",
+    "debt_analysis": "Gross debt/equity 52.86%. Snapshot FCF 1778.42m MYR. FCF/net income 3.19x; periods unverified. Cash, net debt, interest cover and maturities are unavailable. Lending/bank cash flow and gross debt/equity are not stand-alone solvency tests; CET1, liquidity and credit-quality data are missing.",
+    "growth_outlook": "Low trailing P/E and high indicated yield warrant attention, but forward P/E is higher and an 8.89% yield cannot substitute for capital and payout evidence. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "A high indicated yield may reflect anticipated payout reduction or risk; neither explanation is verified.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "8.36x trailing earnings offers a lower headline valuation than the other screened bank."
+    ],
+    "summary": "Low trailing P/E and high indicated yield warrant attention, but forward P/E is higher and an 8.89% yield cannot substitute for capital and payout evidence. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "August 26: Bank Islam H1 after-zakat-and-tax profit rose 0.5%; higher income was partly offset by impairment allowances, up 17%. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=0, buy=1, hold=7, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Modest earnings",
+      "Credit provisioning"
+    ],
+    "notable_headlines": [
+      "2026-08-26 https://www.businesstoday.com.my/2026/08/26/bank-islam-2q-profit-up-11-to-rm139-million-delivers-annualised-roe-of-6-3/"
+    ],
+    "social_sentiment": null,
+    "summary": "Improving quarterly results coexist with weak half-year growth and higher provisioning. A strategy reset is not yet evidence of a durable earnings re-rating. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 2.09: below SMA20 2.11, below SMA50 2.13, below SMA200 2.26. Latest supplied MY daily bar is September 11; no September 14 completed-session observation supplied.",
+    "rsi_14": 42.8571,
+    "rsi_assessment": "RSI14 42.9: weak but not oversold.",
+    "macd_assessment": "MACD line -0.0089, signal -0.0076, histogram -0.0014: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 566,200; ratio 0.46x the 20-bar average. Recent zero-volume rows: 2026-08-25, 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      2.08,
+      2.057
+    ],
+    "resistance_levels": [
+      2.1,
+      2.12
+    ],
+    "summary": "Tight consolidation near the yearly low, but weak momentum and the downward moving-average structure make a confirmed base preferable to assuming support will hold. As of 2026-09-11, ATR14 is 0.0229 (1.1% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 16.5%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Islamic financing spreads depend on funding competition and asset repricing.",
+      "Domestic credit and household repayment capacity matter more than a generic rate-cut thesis."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "BIMB: Islamic financing spreads depend on funding competition and asset repricing. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

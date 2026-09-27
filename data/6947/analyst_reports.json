@@ -2,73 +2,63 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Trailing P/E is 21.3846x versus forward P/E of 17.8951x. The lower forward multiple is supportive of a moderate earnings-improvement expectation, but the Layer 1 snapshot has no growth time series, so it is not evidence of realized growth and does not establish that the stock is cheap versus its own history.",
-    "margin_analysis": "Revenue is RM12.9577B and net income is RM1.5135B. Gross margin of 72.74% and operating margin of 29.69% are strong for a telecom operator, while the 11.68% net margin reflects the burden of depreciation, financing and other below-operating costs. Free cash flow of RM2.2649B is positive and exceeds reported net income, supporting cash generation but not proving dividend sustainability without payout and capex detail.",
-    "debt_analysis": "Total debt of RM13.8541B against RM15.8550B of equity implies debt/equity of approximately 0.87x. That leverage is material for a capital-intensive telecom company and creates refinancing and interest-rate sensitivity, although positive RM2.2649B free cash flow provides a meaningful buffer. Debt maturities, interest expense and capex are not present in the snapshot, so balance-sheet risk remains a monitor rather than a resolved strength.",
-    "growth_outlook": "The forward P/E discount and positive free cash flow support a moderate-growth or earnings-stabilization case, but no period-over-period revenue, EPS, subscriber or ARPU data is available. The evidence therefore supports a defensive income-oriented profile more strongly than a high-growth thesis; regulation, pricing and network investment could limit operating leverage.",
+    "pe_assessment": "As fetched 2026-09-24, P/E is 20.00 and forward P/E is 16.74; no peer benchmark is supplied.",
+    "margin_analysis": "Snapshot reports gross margin 72.7%, operating margin 29.7%, and net margin 11.7%; no trend is inferred.",
+    "debt_analysis": "Reported debt/equity is about 0.87. Cash and debt maturities are not supplied.",
+    "growth_outlook": "No growth rate is inferred from one snapshot. It reports revenue MYR 12.96B, net income MYR 1.51B, and FCF MYR 2.26B (17.5% of revenue).",
     "key_risks": [
-      "Debt/equity of approximately 0.87x leaves earnings and cash flow sensitive to refinancing costs",
-      "Telecom network investment and regulatory or pricing pressure can reduce free-cash-flow conversion",
-      "The 21.3846x trailing P/E is not low on the supplied data, and the forward discount has no supporting forecast series",
-      "No usable dated company news or detailed operating-growth data is available in Layer 1"
+      "Price is near its 52-week low; supplied headlines include a February 2026 earnings-miss story.",
+      "Debt/equity is about 0.87, with no cash or maturity detail.",
+      "No comparative financial periods are supplied."
     ],
     "key_strengths": [
-      "RM2.2649B positive free cash flow versus RM1.5135B net income",
-      "72.74% gross margin and 29.69% operating margin",
-      "4.91% supplied dividend yield and low reported beta of 0.232",
-      "Forward P/E of 17.8951x is below trailing P/E of 21.3846x"
+      "Positive FCF equal to about 17.5% of revenue.",
+      "Provider snapshot reports a 5.17% dividend yield; no future payout is assumed."
     ],
-    "summary": "CDB has a supportive defensive-fundamental profile: strong gross and operating margins, RM2.2649B free cash flow, a 4.91% supplied yield and low beta. The buy case is moderated by approximately 0.87x debt/equity, a non-cheap trailing multiple and the absence of operating-growth and capex detail, so confidence is medium rather than high."
+    "summary": "Snapshot reports MYR 2.26B FCF (17.5% of revenue), 11.7% net margin, and debt/equity near 0.87. These support a positive level-based view, offset by a weak price near its 52-week low and stale earnings coverage."
   },
   "sentiment": {
     "signal": "neutral",
     "confidence": "low",
-    "news_tone": "neutral",
-    "news_summary": "The Layer 1 news_headlines array contains only blank title, link and publisher fields, so no dated company-news signal is usable. The current recommendation snapshot is modestly positive at 2 strong-buy, 10 buy, 6 hold, 1 sell and 1 strong-sell, but the recommendation history is broadly unchanged and cannot compensate for missing news confirmation.",
+    "news_tone": "mixed and stale",
+    "news_summary": "Latest supplied story is dated 2026-06-07 and cautions against buying CelcomDigi solely for an upcoming dividend. February 2026 headlines mention an earnings miss and MYR0.036 dividend; these are several months old.",
     "key_themes": [
-      "No usable dated news",
-      "Modest positive analyst tilt",
-      "Static recommendation mix"
+      "Dividend yield/payout caution; prior earnings-miss story; no recent operating update"
     ],
-    "notable_headlines": [],
+    "notable_headlines": [
+      "2026-06-07 Simply Wall St.: Dividend investors should not be too quick to buy CelcomDigi for its upcoming dividend.",
+      "2026-02-15 Simply Wall St.: CelcomDigi missed earnings and analysts updated their models.",
+      "2026-02-13 Simply Wall St.: CelcomDigi announced a MYR0.036 dividend."
+    ],
     "social_sentiment": null,
-    "summary": "Sentiment is neutral at low confidence: analyst recommendations lean positive, but the feed provides no usable dated headlines or social evidence and the ratings show no clear recent change. The data supports monitoring rather than a directional sentiment upgrade."
+    "summary": "Dated coverage is mixed but several months old. Without newer company-specific reporting or current analyst recommendations, no directional sentiment call is assigned."
   },
   "technical": {
     "signal": "sell",
     "confidence": "medium",
-    "trend": "Bearish structure on the supplied snapshot: the 2.78 close is below SMA-20 2.8860, SMA-50 2.8740, EMA-20 2.8678 and SMA-200 3.0435. Price is near the lower Bollinger Band at 2.7752 and is 24.05% below the reported 52-week high of 3.6603.",
-    "rsi_14": 37.2093,
-    "rsi_assessment": "RSI-14 is 37.2093, weak but not oversold. It shows downside momentum without a confirmed capitulation or reversal condition.",
-    "macd_assessment": "MACD line is -0.0241 versus signal line -0.0091, with a -0.0150 histogram. The negative histogram confirms bearish short-term momentum.",
-    "volume_assessment": "The latest volume is 0 against a 20-day average of 2,535,415, so there is no valid participation confirmation on the final bar. The zero-volume/zero-OHLC fields in the recent Malaysian history make this a data-quality limitation and reduce confidence in the technical signal.",
+    "trend": "Close MYR 2.60 on 2026-09-24 was 7.22% below SMA-50 and 12.06% below SMA-200; it is 0.78% above the 52-week low.",
+    "rsi_14": 38.8451,
+    "rsi_assessment": "RSI-14 at 38.85 is weak but above the 30 oversold threshold.",
+    "macd_assessment": "MACD histogram was -0.0065, slightly negative.",
+    "volume_assessment": "Latest volume was 1.17x its 20-bar average; this modest rise does not confirm a reversal.",
     "support_levels": [
-      2.7752
+      2.58
     ],
     "resistance_levels": [
-      2.874,
-      2.886,
-      2.9968,
-      3.0435
+      2.8543,
+      3.0222
     ],
-    "summary": "CDB is below all supplied moving-average levels with a negative MACD and weak RSI, favoring a sell/avoid-new-entry technical view. The close is near the lower Bollinger Band, but zero-volume recent bars prevent reliable confirmation; the signal is therefore medium confidence and must not be read as a precise breakdown forecast."
+    "summary": "Price is below both moving averages, near its 52-week low, and supplied return horizons are negative. RSI is weak and MACD slightly negative, supporting a medium-confidence bearish technical reading."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The Federal Reserve maintained a 3.50%-3.75% federal-funds target range in its 2026-07-29 statement (https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm). Higher global rates can tighten risk appetite and raise financing costs, but CDB's direct exposure is not quantified in Layer 1, so no directional effect is assigned.",
-    "interest_rate_outlook": "Bank Negara Malaysia maintained OPR at 2.75% on 2026-07-09 (https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026). The dated hold is mildly supportive for a leveraged domestic telecom relative to a hike, but no forward policy path or interest-expense series is available; the outlook remains neutral.",
-    "fx_impact": "BNM FMIP's KL USD/MYR reference was 4.0420 on 2026-09-02 (https://financialmarkets.bnm.gov.my/about-myor-myor-i). The snapshot has no FX-change series or currency split for CDB debt, capex or revenue, so the level is recorded without inferring a currency direction.",
-    "sector_macro_factors": [
-      "Telecom networks are capital-intensive and sensitive to financing costs",
-      "Domestic demand is generally more defensive than cyclical sectors, but pricing and regulatory settings matter",
-      "USD/MYR can affect imported network equipment and any foreign-currency liabilities"
-    ],
-    "geopolitical_risks": [
-      "Supply-chain or trade disruption could increase the cost or timing risk of network equipment",
-      "Regulatory or spectrum-policy changes could alter required capital spending"
-    ],
-    "summary": "The dated Fed, BNM and USD/MYR observations provide context but no clear directional macro impulse for CDB. OPR at 2.75% is not an immediate rate shock, while debt, capex and imported equipment exposure are insufficiently itemized; macro remains neutral at low confidence."
+    "fed_impact": "Official macro context says Bank Negara Malaysia held OPR at 2.75% on 2026-09-03. Source: https://www.bnm.gov.my/-/monetary-policy-statement-03092026. The ticker packet has no issuer-specific rate-sensitivity data, so no company impact is assigned.",
+    "interest_rate_outlook": "The supplied context reports the OPR decision only; no forward rate path is provided.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "BNM held OPR at 2.75% as of 2026-09-03. Without issuer-specific sensitivity evidence, the macro signal stays neutral/low; USD/MYR is absent and no FX direction is inferred."
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

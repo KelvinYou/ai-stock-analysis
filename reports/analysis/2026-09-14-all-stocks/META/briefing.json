@@ -1,0 +1,81 @@
+{
+  "ticker": "META",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.2727,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: Current costs and earnings conversion weigh more heavily than older cash-flow quality for entry. The bull offers future productivity but not evidence that it has arrived. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: Meta's sales remain strong, but expenses are outpacing revenue and weakening profit conversion. Highly extended technical momentum makes an immediate swing entry less attractive despite a credible longer-run monetization scenario.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Strong sales support demand while expense growth weakens current conversion. The bull case depends on expense discipline and monetization rather than denying near-term weakness; overbought momentum and missing incremental returns argue for patient sizing. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Revenue growth demonstrates demand but the 55% cost increase, 8% operating-income decline and 13% EPS decline identify an actual conversion problem. Future spending productivity remains a hypothesis, and overbought momentum does not supply evidence that earnings conversion will recover.",
+  "key_uncertainties": [
+    "Current capex commitments and incremental monetization returns.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating-income and EPS growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters where expense growth exceeds revenue growth and operating income declines.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Expense discipline and monetization improving profit conversion; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 76.7% over available price history. Projected worst case (2-sigma): ~93.3% from current $648.03.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.27). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "META",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Current costs and earnings conversion weigh more heavily than older cash-flow quality for entry. The bull offers future productivity but not evidence that it has arrived.",
+    "winning_side": "bear",
+    "strongest_counterexample": "Revenue growth of 28% and substantial existing cash generation offer a strong base for recovering conversion if spending productivity improves.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive operating-income and EPS growth.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters where expense growth exceeds revenue growth and operating income declines."
+    ],
+    "evidence_gaps": [
+      "Current capex commitments and incremental monetization returns.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 24.39x; forward P/E 18.54x",
+      "Strong sales support demand while expense growth weakens current conversion",
+      "Revenue growth demonstrates demand but the 55% cost increase, 8% operating-income decline and 13% EPS decline identify an actual conversion problem"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "41cd82afd356a530d8df5157a76b2f5fa98d949f75654f616e642ac9f79b90fe",
+    "technicals.json": "25e6c507a8e9a596b294f6718fb17a8c1771e11d518954f45eb725e80a2a86aa",
+    "price_history.csv": "4b497307f0f470706d45811cbf8a948ac98cbf6c1c968f2c0e1582e22af4e5fd"
+  }
+}

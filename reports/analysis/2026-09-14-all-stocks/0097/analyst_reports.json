@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 83.82x; forward P/E 46.05x. Indicated yield 0.20% is not a guaranteed forward payout. Market cap/snapshot net income is 131.06x, materially different; periods, EPS basis and share counts need reconciliation.",
+    "margin_analysis": "gross 61.36%; operating 37.47%; net 15.80%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 8.23%. Snapshot FCF 39.55m MYR. FCF/net income 0.30x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Low gross leverage does not offset an 83.82x trailing valuation and weak cash conversion; even the 46.05x forward estimate demands substantial delivery. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Semiconductor equipment cyclicality and estimate disappointment can compress the premium multiple.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Quoted P/E and market-cap/snapshot-profit differ materially; valuation confidence is reduced."
+    ],
+    "key_strengths": [
+      "Debt is small relative to equity and operations are profitable."
+    ],
+    "summary": "Low gross leverage does not offset an 83.82x trailing valuation and weak cash conversion; even the 46.05x forward estimate demands substantial delivery. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "July 30 issuer report: ViTrox H1 revenue increased 98% and attributable profit 160.5%, with favorable product mix and manufacturing scale supporting results. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=2, buy=8, hold=2, sell=1, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Inspection demand",
+      "Operating scale"
+    ],
+    "notable_headlines": [
+      "2026-07-30 https://www.marketscreener.com/news/vitrox-quarterly-report-for-the-financial-period-ended-30-june-2026-ce7f50dad889fe22"
+    ],
+    "social_sentiment": null,
+    "summary": "The dated operating release supports positive sentiment. Exceptional growth and tax benefits should be tested for durability before extrapolating expectations. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 9.22: above SMA20 9.20, above SMA50 8.65, above SMA200 6.00. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 55.2381,
+    "rsi_assessment": "RSI14 55.2: neutral-to-firm.",
+    "macd_assessment": "MACD line 0.1393, signal 0.1751, histogram -0.0357: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 1,333,600; ratio 0.48x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-25, 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      9.0,
+      9.07
+    ],
+    "resistance_levels": [
+      9.49,
+      9.62
+    ],
+    "summary": "Price is consolidating near SMA20 within a strong longer uptrend, but negative histogram shows momentum loss near the yearly high. As of 2026-09-14, ATR14 is 0.286 (3.1% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 4.5%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Semiconductor equipment spending is cyclical and linked to customers capital budgets.",
+      "Export restrictions and currency exposure are scenario risks, not asserted new events."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "VITROX: Semiconductor equipment spending is cyclical and linked to customers capital budgets. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

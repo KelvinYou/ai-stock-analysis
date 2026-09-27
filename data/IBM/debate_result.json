@@ -1,0 +1,67 @@
+{
+  "ticker": "IBM",
+  "rounds": [
+    {
+      "round_number": 1,
+      "bull_argument": {
+        "position": "bull",
+        "round_number": 1,
+        "argument": "The constructive case rests on observed evidence: The 20-bar return is slightly positive and price is 1.50% above SMA-50. Dated AI/quantum headlines show active narrative interest, though no product revenue or productivity measure is supplied. The evidence supports a conditional thesis, not an extrapolation beyond the supplied dates.",
+        "key_points": [
+          "Price slightly above SMA-50 but below SMA-200; 60/252-bar returns negative.",
+          "Separate dated headline evidence from unverified business impact."
+        ],
+        "rebuttal_to_previous": null
+      },
+      "bear_argument": {
+        "position": "bear",
+        "round_number": 1,
+        "argument": "The risk case is that Price remains 9.05% below SMA-200, with negative 60/252-bar returns, negative MACD, and below-average volume. The AI/quantum headlines do not quantify commercial adoption, while financial trend evidence is unavailable because no comparison period is supplied. The packet cannot resolve the key business question with dated statements, so the bull case should not be treated as established.",
+        "key_points": [
+          "AI/quantum headlines lack quantified adoption or revenue data.",
+          "Undated financial statement fields do not support point-in-time trend claims."
+        ],
+        "rebuttal_to_previous": null
+      }
+    },
+    {
+      "round_number": 2,
+      "bull_argument": {
+        "position": "bull",
+        "round_number": 2,
+        "argument": "The bear correctly notes that narrative coverage does not equal monetization and the longer-term chart remains weak. Still, the small positive 20-bar return and price above SMA-50 show stabilization is possible if later evidence confirms the AI productivity thesis.",
+        "key_points": [
+          "Price slightly above SMA-50 but below SMA-200; 60/252-bar returns negative.",
+          "Keep the conclusion conditional on new, dated evidence."
+        ],
+        "rebuttal_to_previous": "Direct response to the bear's first-round point: The bear correctly notes that narrative coverage does not equal monetization and the longer-term chart remains weak. Still, the small positive 20-bar return and price above SMA-50 show stabilization is possible if later evidence confirms the AI productivity thesis."
+      },
+      "bear_argument": {
+        "position": "bear",
+        "round_number": 2,
+        "argument": "The bull's stabilization case rests on a 0.74% 20-bar gain, while price remains below SMA-200 and the 60-bar return is -13.70%. Without dated evidence of AI revenue or cash-flow improvement, the headlines cannot bridge the gap.",
+        "key_points": [
+          "Financial periods and recommendation observation dates are absent.",
+          "The main uncertainty remains unresolved by the supplied packet."
+        ],
+        "rebuttal_to_previous": "Direct response to the bull's second-round case: The bull's stabilization case rests on a 0.74% 20-bar gain, while price remains below SMA-200 and the 60-bar return is -13.70%. Without dated evidence of AI revenue or cash-flow improvement, the headlines cannot bridge the gap."
+      }
+    }
+  ],
+  "bull_case_summary": "A small positive 20-bar return and price above SMA-50 are early stabilization signals. Later reported AI or quantum adoption could support the thesis if it translates into measurable revenue or productivity.",
+  "bear_case_summary": "Price remains below SMA-200 with negative 60/252-bar returns, negative MACD, and light volume. The narrative headlines do not establish a commercial payoff, and the financial snapshot is has no reported statement-period label, so no trend can be inferred.",
+  "key_points_of_agreement": [
+    "The reported price indicators are descriptive, not forecasts.",
+    "Financial statement period labels and dated analyst recommendations are not supplied."
+  ],
+  "key_points_of_disagreement": [
+    "Price slightly above SMA-50 but below SMA-200; 60/252-bar returns negative.",
+    "AI/quantum headlines lack quantified adoption or revenue data."
+  ],
+  "unresolved_uncertainties": [
+    "Whether price stabilization persists beyond 20 bars.",
+    "Whether AI and quantum initiatives produce measurable commercial results.",
+    "Dated financials and exact recommendation periods are unavailable."
+  ],
+  "pipeline_mode": "in-session"
+}

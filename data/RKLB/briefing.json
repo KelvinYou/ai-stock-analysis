@@ -1,34 +1,30 @@
 {
   "ticker": "RKLB",
-  "date": "2026-09-03",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-23",
   "overall_signal": "neutral",
   "conviction": {
     "score": 0.0,
-    "signal_convergence": 0.2,
-    "explanation": "The four analyst signals are fundamentals=neutral, sentiment=buy, technical=sell, macro=neutral. Deterministic confidence-weighted directional consensus is 0.0000 and signal convergence is 0.2000; the score is bounded by the incomplete technical snapshot and explicitly does not use invented levels."
+    "signal_convergence": 0.2222,
+    "explanation": "Raw synthesis reflects the evidence in the analyst reports; deterministic finalization recomputes convergence and applies the actionability gate."
   },
-  "executive_summary": "Neither side carried a sufficient evidence edge: recommendation optimism is offset by losses, negative cash flow, extreme forward valuation, and bearish but incomplete technicals. The two-round debate and research-manager ruling were carried into synthesis without manufacturing certainty. Layer 1 is as of 2026-09-02; the technical series contains a non-finite 2026-08-28 OHLC row, so RSI/SMA/Bollinger/ATR-dependent conclusions remain unavailable.",
-  "bull_case": "Neutral moderator summary \u2014 constructive evidence: The bull case is limited but real: the supplied snapshot shows positive gross margin, debt below equity, and a net-positive recommendation snapshot. A high-beta aerospace name can have substantial optionality, but the available data does not quantify that optionality or establish profitability.",
-  "bear_case": "Neutral moderator summary \u2014 cautionary evidence: The bear case is directly visible in the numbers: no trailing earnings, a very high forward P/E, negative operating and net margins, negative free cash flow, and bearish MACD. The high beta and missing technical risk measures make downside sizing especially uncertain; recommendation optimism is not proof of cash-flow conversion.",
+  "executive_summary": "Rocket Lab\u2019s packet reports negative operating/net margins and FCF, while Sep 23 headlines describe a mission being readied and Neutron as a prospective opportunity. Short-term momentum has improved, but price remains well below SMA-200; weak financial provenance and unconfirmed execution keep the signal neutral.",
+  "bull_case": "Mission and Neutron progress could improve the outlook if launches succeed and translate into repeatable revenue; short-term momentum is recovering.",
+  "bear_case": "Losses, negative FCF, very high reported forward P/E, high beta, and a 28.26% 60-bar decline make execution and valuation risks material.",
   "key_uncertainties": [
-    "No populated dated news headlines are available in Layer 1.",
-    "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
-    "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory.",
-    "Path and timing to positive earnings and free cash flow",
-    "Whether recommendation optimism converts into operating results",
-    "Valid ATR/SMA/RSI readings after data repair"
+    "Mission outcome and Neutron timing are unconfirmed.",
+    "Financial period and cash-runway trend are unknown.",
+    "Recent rebound may fail below SMA-200."
   ],
   "catalysts_upcoming": [
-    "Next company-reported earnings and cash-flow update; date is not present in Layer 1.",
-    "Next official central-bank or FX observation affecting the applicable funding/valuation backdrop.",
-    "A repaired Layer 1 price series producing valid moving-average and ATR readings."
+    "The mission referenced in Sep 23 coverage, if completed, and dated evidence of Neutron progress/revenue."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "High beta (2.63) \u2014 price may amplify broad-market moves.",
+      "High beta (2.61) \u2014 price may amplify broad-market moves.",
       "Sector: Industrials \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 83.0% over available price history. Projected worst case (2-sigma): ~nan% from current $62.46.",
+    "max_drawdown_scenario": "Historical max drawdown: 83.0% over available price history. Projected worst case (2-sigma): ~141.8% from current $70.31.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -40,36 +36,34 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.20). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.22). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "RKLB",
     "judged_view": "neutral",
     "confidence": "low",
-    "thesis": "Neither side carried a sufficient evidence edge: recommendation optimism is offset by losses, negative cash flow, extreme forward valuation, and bearish but incomplete technicals.",
+    "thesis": "The reported financial snapshot is concerning, while launch/Neutron headlines and the 5/20-bar rebound are only prospective; price remains below SMA-200 and period dates are unavailable.",
     "winning_side": "neither",
-    "strongest_counterexample": "A demonstrated path to positive earnings and free cash flow could turn the current neutral view constructive.",
+    "strongest_counterexample": "The strongest counterexample is successful mission execution and Neutron progress converting into higher-margin recurring revenue while short-term momentum continues to repair.",
     "invalidation_conditions": [
-      "The company demonstrates sustained positive earnings and free cash flow",
-      "A repaired technical series establishes a durable uptrend",
-      "Forward valuation falls through operating improvement rather than price-only compression"
+      "A close below the observed 60-bar low would weaken the rebound case."
     ],
     "evidence_gaps": [
-      "No populated dated news headlines are available in Layer 1.",
-      "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
-      "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory."
+      "Launch outcomes and Neutron timing are not confirmed in the packet.",
+      "Financial statement period and cash-runway trajectory are missing."
     ],
     "decisive_factors": [
-      "Analyst signals: fundamentals=neutral, sentiment=buy, technical=sell, macro=neutral.",
-      "The company is not profitable in the supplied snapshot",
-      "Whether the recommendation snapshot reflects future execution that Layer 1 cannot yet measure"
+      "Reported net income and FCF are negative.",
+      "5/20-bar returns are positive, but 60-bar return is -28.26% and price is below SMA-200."
     ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "neutral",
-    "sentiment": "buy",
-    "technical": "sell",
+    "fundamentals": "sell",
+    "sentiment": "neutral",
+    "technical": "neutral",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
 }

@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 332.22x; forward P/E 169.30x.",
+    "margin_analysis": "gross 18.03%; operating 5.11%; net 4.00%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 17.92%. Snapshot FCF 6220.00m USD. FCF/net income 1.64x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "A 332.22x trailing multiple is difficult to support with a 5.11% operating margin; even 169.30x forward earnings requires growth beyond the supplied financial evidence. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Valuation depends on future businesses or earnings expansion not quantified in the snapshot.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Positive free cash flow and moderate gross debt/equity reduce immediate funding pressure."
+    ],
+    "summary": "A 332.22x trailing multiple is difficult to support with a 5.11% operating margin; even 169.30x forward earnings requires growth beyond the supplied financial evidence. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "sell",
+    "confidence": "medium",
+    "news_tone": "negative",
+    "news_summary": "July 22 coverage: Tesla revenue rose 26%, but adjusted EPS missed expectations as R&D spending rose sharply. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=4, buy=15, hold=20, sell=3, strongSell=2. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Sales rebound",
+      "R&D burden",
+      "Earnings miss"
+    ],
+    "notable_headlines": [
+      "2026-07-22 https://apnews.com/article/976cc9e895bbdcbd3728e7ba178ffe40"
+    ],
+    "social_sentiment": null,
+    "summary": "The earnings reaction is grounded in weak profit conversion despite sales improvement. Robotaxi and robotics expectations remain separate from demonstrated current earnings. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 365.44: above SMA20 355.13, above SMA50 354.50, below SMA200 398.93. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 51.0009,
+    "rsi_assessment": "RSI14 51.0: neutral-to-firm.",
+    "macd_assessment": "MACD line 5.0491, signal 3.1864, histogram 1.8627: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 30,091,300; ratio 0.76x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      357.68,
+      361.6
+    ],
+    "resistance_levels": [
+      370.0,
+      375.44
+    ],
+    "summary": "Short-term recovery above SMA50 has positive momentum, but the distant SMA200 remains overhead and below-average latest volume does not establish a durable reversal. As of 2026-09-11, ATR14 is 14.3 (3.9% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 26.7%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Auto affordability, consumer financing and EV price competition drive cyclicality.",
+      "Trade policy and cross-border manufacturing costs can change unit economics."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Tesla, Inc.: Auto affordability, consumer financing and EV price competition drive cyclicality. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

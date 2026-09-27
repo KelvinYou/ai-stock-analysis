@@ -1,76 +1,72 @@
 {
   "ticker": "5398",
-  "date": "2026-09-03",
-  "overall_signal": "buy",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-24",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": 0.55,
-    "signal_convergence": 0.6,
-    "explanation": "Fundamentals and sentiment are buy, technicals are neutral, and macro is neutral. The positive order-book and data-centre evidence supports a measured buy, but premium valuation, negative free cash flow, project execution risk, and incomplete volume data cap conviction."
+    "score": 0.0,
+    "signal_convergence": 0.3333,
+    "explanation": "The chart is constructive over 20/60 bars, but negative FCF and debt near equity leave the fundamental improvement unconfirmed."
   },
-  "executive_summary": "Gamuda's research case is supported by fresh hyperscale data-centre awards, a record construction order book, positive earnings-revision momentum, and a forward P/E of 19.51x below the 26.0x trailing P/E. The opportunity is attractive because it offers multi-year visibility, but contract value is not profit: Layer 1 also shows RM883.6m of negative free cash flow, RM10.13bn debt, and net margin of only 6.28%.\n\nAt RM4.42, price is below SMA-20 but above SMA-50 and SMA-200; RSI is 44.5946 and MACD histogram is negative, making the technical read mixed. Latest volume is zero and the stored 52-week-low field is an invalid zero placeholder, so the technical confirmation is limited. The Research Manager rules for a medium-confidence buy, conditional on margin delivery and cash conversion rather than headline order-book size alone.",
-  "bull_case": "Data-centre and infrastructure awards can replenish earnings for several years, while scale, international credentials, and positive revisions improve the probability of sustained growth. A pullback toward observed support could offer better entry discipline if SMA-50/200 holds on usable volume.",
-  "bear_case": "The 26x trailing multiple may already price in the data-centre cycle. Negative free cash flow, debt, modest margins, project delays, cost overruns, and financing needs could turn large contract wins into weak shareholder returns.",
+  "executive_summary": "As of the 2026-09-24 bar, Gamuda is neutral. Price is above SMA-50/200 and 20/60-bar returns are positive, but reported FCF is negative RM883.6m and debt is close to equity. The short-term chart is constructive; fundamental improvement is not established by dated statements.",
+  "bull_case": "Price above SMA-50/200 and positive 20/60-bar returns.",
+  "bear_case": "Negative FCF, debt near equity, and a negative 252-bar return keep the recovery unconfirmed.",
   "key_uncertainties": [
-    "Contract-level margins, milestone timing, backlog ageing, and cash-collection schedule are not in Layer 1.",
-    "Negative free cash flow may be temporary mobilisation or persistent weak cash economics; the input does not resolve this.",
-    "Latest stored volume is zero, so support/resistance is not volume-confirmed.",
-    "The 52-week-low value is a zero placeholder and pct_from_52w_low is null; no replacement value is inferred.",
-    "Net USD/MYR sensitivity and the forward financing-cost path are not quantified."
+    "Whether FCF turns positive in subsequent dated reports.",
+    "No confirmed current contract pipeline or earnings trend is supplied.",
+    "Financial snapshot lacks fiscal-period and availability dates."
   ],
   "catalysts_upcoming": [
-    "Recognition and margin disclosure for the newly reported hyperscale data-centre awards.",
-    "Order-book replenishment and tender wins that preserve multi-year visibility.",
-    "A recovery in free cash flow through milestone collections.",
-    "Price reclaiming SMA-20 and confirming support above SMA-50/200 with usable volume."
+    "Next dated results: compare FCF, margins and debt with this supplied snapshot; no release date was provided."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "Low beta (0.03) \u2014 historically less sensitive to broad-market moves.",
+      "Low beta (0.04) \u2014 historically less sensitive to broad-market moves.",
       "Sector: Industrials \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 60.7% over available price history. Projected worst case (2-sigma): ~45.9% from current $4.42.",
+    "max_drawdown_scenario": "Historical max drawdown: 60.7% over available price history. Projected worst case (2-sigma): ~50.6% from current $4.84.",
     "risk_reward_ratio": null
   },
   "action_plan": {
-    "entry_limit": 4.36,
-    "entry_rationale": "Midway between current ($4.42) and Bollinger lower band ($4.30)",
-    "stop_loss": 2.93,
-    "stop_rationale": "2x ATR-14 ($0.71) below entry \u2014 invalidates the setup",
-    "take_profit_1": 4.58,
-    "take_profit_2": 5.62,
-    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": null
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.33). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "5398",
-    "judged_view": "buy",
-    "confidence": "medium",
-    "thesis": "The bull case carried the debate because Gamuda combines fresh data-centre awards, a large replenished order book, and positive earnings-revision momentum with a still-constructive medium-term price structure. The buy view is conditional on execution and cash conversion; the premium multiple and negative free cash flow prevent a high-confidence ruling.",
-    "winning_side": "bull",
-    "strongest_counterexample": "A large order book can destroy value if project costs, financing, delays, or working-capital requirements consume the expected margin; RM883.6m of negative free cash flow and only 6.28% net margin show that this is not a theoretical risk.",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Positive 20/60-bar momentum supports the bull case, but negative FCF and missing multi-period evidence prevent a confident direction.",
+    "winning_side": "neither",
+    "strongest_counterexample": "A bull counterexample is price above SMA-50/200 with positive 20/60-bar returns and forward P/E below trailing P/E.",
     "invalidation_conditions": [
-      "Two consecutive reporting periods show negative free cash flow without a credible milestone-collection explanation, alongside declining operating margin.",
-      "Material delays, cancellations, or margin deterioration affect the newly reported data-centre or major infrastructure awards.",
-      "Price breaks below the observed RM4.30 support area and SMA-200 on usable volume after the data-quality limitation is resolved."
+      "A future dated report showing sustained positive FCF would weaken the bear case.",
+      "A decline below the observed 60-bar low would weaken the technical bull case."
     ],
     "evidence_gaps": [
-      "Contract-level margin, milestone timing, backlog ageing, and cash-collection data.",
-      "A clean dated volume series and a valid 52-week low from the completed-close input.",
-      "Net USD/MYR sensitivity of overseas projects, imported materials, and financing.",
-      "Peer-relative valuation and return-on-capital comparison."
+      "No dated multi-period cash-flow or margin series.",
+      "Current contract backlog and project-level cash conversion are not supplied.",
+      "No USD/MYR snapshot; undated recommendation buckets were excluded."
     ],
     "decisive_factors": [
-      "Fresh data-centre awards and record order-book evidence provide more than a purely aspirational growth narrative.",
-      "The stock remains above SMA-50 and SMA-200 despite short-term momentum softening.",
-      "The negative FCF and premium valuation were treated as conditions to monitor, not proof that the growth thesis is broken."
+      "Positive 20/60-bar returns and above-average trend position.",
+      "Negative reported FCF and high debt relative to equity.",
+      "No dated operating news confirms a structural turnaround."
     ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "buy",
-    "sentiment": "buy",
-    "technical": "neutral",
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "buy",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
 }

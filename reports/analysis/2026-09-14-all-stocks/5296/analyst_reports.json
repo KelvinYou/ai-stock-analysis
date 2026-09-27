@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 18.43x; forward P/E 16.84x. Indicated yield 4.03% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 47.52%; operating 18.71%; net 12.77%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 76.66%. Snapshot FCF 853.99m MYR. FCF/net income 1.35x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "An 18.43x earnings multiple, positive cash conversion and an indicated 4.03% yield support conditional accumulation in the retail business. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Store economics, consumer demand and the composition of debt including leases need checking.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Snapshot free cash flow exceeds net income and operating margin is 18.71%."
+    ],
+    "summary": "An 18.43x earnings multiple, positive cash conversion and an indicated 4.03% yield support conditional accumulation in the retail business. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "sell",
+    "confidence": "medium",
+    "news_tone": "negative",
+    "news_summary": "August 11 results coverage shows MR DIY Q2 profit down 15.2% despite revenue growth of 3.6%, reflecting operating-cost and spending pressure. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=2, buy=11, hold=3, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Cost inflation",
+      "Weak earnings conversion"
+    ],
+    "notable_headlines": [
+      "2026-08-12 https://business.bacakoran.co/mr-diys-q2-profit-drops-to-rm134-million-amid-rising-costs/",
+      "2026-08-11 https://www.klsescreener.com/v2/announcements/view/11646053"
+    ],
+    "social_sentiment": null,
+    "summary": "The deterioration in profit conversion tempers the store-expansion narrative. This negative news signal does not prove the decline is unpriced or justify an outright trade independently. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 1.29: below SMA20 1.39, below SMA50 1.51, below SMA200 1.57. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 20.0,
+    "rsi_assessment": "RSI14 20.0: oversold, which is a condition rather than a reversal signal.",
+    "macd_assessment": "MACD line -0.0609, signal -0.0552, histogram -0.0057: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 4,528,300; ratio 0.32x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      1.27
+    ],
+    "resistance_levels": [
+      1.3,
+      1.34
+    ],
+    "summary": "Oversold conditions coincide with a repeated yearly-low test at 1.27; the sharp decline and negative momentum outweigh an unconfirmed two-session pause. As of 2026-09-14, ATR14 is 0.0414 (3.2% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 29.9%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Household purchasing power and consumer spending influence retail sales and mix.",
+      "Imported merchandise costs may respond to MYR changes; hedge and pass-through data absent."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "MRDIY: Household purchasing power and consumer spending influence retail sales and mix. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

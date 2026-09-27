@@ -1,0 +1,70 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 23.52x; forward P/E 13.67x. Indicated yield 1.33% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 65.82%; operating 33.32%; net 25.37%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 367.43%. Snapshot FCF -23686.00m USD. FCF/net income -1.39x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "A lower forward P/E does not offset negative free cash flow and debt far above equity without evidence that investment returns can fund obligations. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Capex funding, debt maturities and interest coverage are major unresolved risks.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Positive operating margin and net income demonstrate an established earnings base."
+    ],
+    "summary": "A lower forward P/E does not offset negative free cash flow and debt far above equity without evidence that investment returns can fund obligations. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "September 10: Oracle announced Q1FY27 cloud-infrastructure growth in triple digits; earnings coverage also highlighted persistent negative free cash flow. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=8, buy=27, hold=7, sell=1, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Cloud backlog",
+      "AI infrastructure",
+      "Cash burn"
+    ],
+    "notable_headlines": [
+      "2026-09-10 https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+      "2026-09-11 https://www.axios.com/2026/09/11/oracle-ai-sales-cash"
+    ],
+    "social_sentiment": null,
+    "summary": "Cloud growth supports demand while cash burn keeps financing and execution central. Improving results should not be confused with completed monetization of the investment cycle. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 150.28: above SMA20 149.38, above SMA50 140.63, below SMA200 166.82. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 53.309,
+    "rsi_assessment": "RSI14 53.3: neutral-to-firm.",
+    "macd_assessment": "MACD line 3.2260, signal 2.7641, histogram 0.4619: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 79,522,900; ratio 2.98x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      149.84
+    ],
+    "resistance_levels": [
+      159.24,
+      166.0,
+      170.7
+    ],
+    "summary": "Nearly three times average volume accompanied a wide-range rejection ending near the daily low; this adverse price action outweighs a still-positive lagging histogram. As of 2026-09-11, ATR14 is 7.49 (5.0% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 54.1%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Cloud and AI infrastructure expansion raises capital funding and execution requirements.",
+      "Enterprise budgets and global currency translation can affect returns on invested capital."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Oracle Corporation: Cloud and AI infrastructure expansion raises capital funding and execution requirements. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

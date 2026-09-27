@@ -1,0 +1,72 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 20.66x; forward P/E 24.68x. Market cap/snapshot net income is 35.66x, materially different; periods, EPS basis and share counts need reconciliation.",
+    "margin_analysis": "gross 50.29%; operating 11.16%; net 10.83%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 37.22%. Snapshot FCF 7695.00m USD. FCF/net income 0.10x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Operating profitability is positive, but free cash flow is only a small fraction of net income and forward P/E exceeds trailing P/E; reconcile earnings and reinvestment before buying. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Capital spending and non-operating earnings effects may make headline P/E misleading.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Quoted P/E and market-cap/snapshot-profit differ materially; valuation confidence is reduced."
+    ],
+    "key_strengths": [
+      "Positive operating income and a large equity base support ongoing investment capacity."
+    ],
+    "summary": "Operating profitability is positive, but free cash flow is only a small fraction of net income and forward P/E exceeds trailing P/E; reconcile earnings and reinvestment before buying. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "July 30: strong AWS and retail growth accompanied a raised $220bn investment plan; trailing free cash flow turned negative in earnings coverage. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=15, buy=45, hold=2, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "AWS acceleration",
+      "Infrastructure spending",
+      "Cash-flow pressure"
+    ],
+    "notable_headlines": [
+      "2026-07-30 https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report",
+      "2026-07-30 https://www.axios.com/2026/07/30/amazon-earnings-revenue-ai",
+      "2026-07-30 https://apnews.com/article/b4ce02b4666a35b8975823c5c22072ee"
+    ],
+    "social_sentiment": null,
+    "summary": "Growth supports the AI monetization narrative while spending constrains cash returns. Mixed sentiment reflects that both observations can be true. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 256.78: below SMA20 258.96, above SMA50 255.25, above SMA200 239.80. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 48.0239,
+    "rsi_assessment": "RSI14 48.0: weak but not oversold.",
+    "macd_assessment": "MACD line -0.8379, signal 0.2721, histogram -1.1100: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 26,682,800; ratio 0.84x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      249.58,
+      253.14
+    ],
+    "resistance_levels": [
+      257.99,
+      261.12
+    ],
+    "summary": "The rebound reclaimed SMA50 after a support test near 250, but negative MACD and SMA20 overhead leave the recovery incomplete. As of 2026-09-11, ATR14 is 5.63 (2.2% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 10.6%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Consumer demand and enterprise cloud spending create different cycle exposures.",
+      "Logistics cost inflation, AI capex and overseas currency translation affect cash generation."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Amazon.com, Inc.: Consumer demand and enterprise cloud spending create different cycle exposures. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

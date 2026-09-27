@@ -1,0 +1,83 @@
+{
+  "ticker": "SOFI",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.3,
+    "explanation": "Raw model conviction for the neutral thesis, not a probability or backtested expected return. I retain the research-manager ruling: Platform growth is established while credit-adjusted per-share returns are not. Neither side supplies the banking evidence required for a directional valuation judgment. Mixed evidence and unresolved valuation or operating bridges do not support a directional score. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "NEUTRAL: SoFi's platform expansion is meaningful, but credit quality, capital and dilution must establish per-share returns. The weak chart offers little independent swing support while these banking-specific questions remain open.\n\nNeutral for a fresh swing allocation: preserve optionality while the specific operating and technical conditions are verified. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Revenue and member growth provide evidence of platform expansion. Capital, loan performance and dilution must validate the economics; the bull case remains conditional and does not misclassify negative lending FCF as insolvency. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Scaling into positive profits is meaningful, but adjusted revenue and user growth must translate into credit-quality-adjusted per-share returns. Loan losses, funding and dilution cannot be replaced by platform-growth metrics; bank cash flow should not be misclassified as industrial distress.",
+  "key_uncertainties": [
+    "Capital ratios, loan vintages, net charge-offs and diluted EPS bridge.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of rising net charge-off rate and falling diluted EPS.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of diluted EPS growth with non-increasing net charge-off rate.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote.",
+    "Quoted trailing P/E 35.35x; forward P/E 20.93x. Market cap/snapshot net income is 46.48x, materially different; periods, EPS basis and share counts need reconciliation."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Loan quality, regulatory capital and dilution-adjusted profit delivery; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (2.21) \u2014 price may amplify broad-market moves.",
+      "Sector: Financial Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 83.3% over available price history. Projected worst case (2-sigma): ~107.9% from current $17.32.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.30). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "SOFI",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Platform growth is established while credit-adjusted per-share returns are not. Neither side supplies the banking evidence required for a directional valuation judgment.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Adjusted revenue rose 40%, guidance increased and net income is positive, marking meaningful scaling progress.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of rising net charge-off rate and falling diluted EPS.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of diluted EPS growth with non-increasing net charge-off rate."
+    ],
+    "evidence_gaps": [
+      "Capital ratios, loan vintages, net charge-offs and diluted EPS bridge.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 35.35x; forward P/E 20.93x",
+      "Revenue and member growth provide evidence of platform expansion",
+      "Scaling into positive profits is meaningful, but adjusted revenue and user growth must translate into credit-quality-adjusted per-share returns"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "buy",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "f642d735ae3ed78a19469421dfd71fce2f4d1b5edd896e35aea0741f0b9522cb",
+    "technicals.json": "57a6dcbf60fee2caf6f8e3401283661f93e871794dca1d310fd18d09119e4076",
+    "price_history.csv": "828b9d097c75992ae7f7d34a670d4e2a13f5e93806ef906eee5fc4f819ea742d"
+  }
+}

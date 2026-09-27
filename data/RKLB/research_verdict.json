@@ -2,23 +2,19 @@
   "ticker": "RKLB",
   "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "Neither side carried a sufficient evidence edge: recommendation optimism is offset by losses, negative cash flow, extreme forward valuation, and bearish but incomplete technicals.",
+  "thesis": "The reported financial snapshot is concerning, while launch/Neutron headlines and the 5/20-bar rebound are only prospective; price remains below SMA-200 and period dates are unavailable.",
   "winning_side": "neither",
-  "strongest_counterexample": "A demonstrated path to positive earnings and free cash flow could turn the current neutral view constructive.",
+  "strongest_counterexample": "The strongest counterexample is successful mission execution and Neutron progress converting into higher-margin recurring revenue while short-term momentum continues to repair.",
   "invalidation_conditions": [
-    "The company demonstrates sustained positive earnings and free cash flow",
-    "A repaired technical series establishes a durable uptrend",
-    "Forward valuation falls through operating improvement rather than price-only compression"
+    "A close below the observed 60-bar low would weaken the rebound case."
   ],
   "evidence_gaps": [
-    "No populated dated news headlines are available in Layer 1.",
-    "The 2026-08-28 non-finite OHLC bar leaves RSI, SMA, Bollinger, and ATR outputs null.",
-    "Layer 1 does not provide a dated growth-rate or forward cash-flow trajectory."
+    "Launch outcomes and Neutron timing are not confirmed in the packet.",
+    "Financial statement period and cash-runway trajectory are missing."
   ],
   "decisive_factors": [
-    "Analyst signals: fundamentals=neutral, sentiment=buy, technical=sell, macro=neutral.",
-    "The company is not profitable in the supplied snapshot",
-    "Whether the recommendation snapshot reflects future execution that Layer 1 cannot yet measure"
+    "Reported net income and FCF are negative.",
+    "5/20-bar returns are positive, but 60-bar return is -28.26% and price is below SMA-200."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

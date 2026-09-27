@@ -1,0 +1,70 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 27.63x; forward P/E 21.03x. Indicated yield 0.73% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 67.94%; operating 46.78%; net 40.31%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 12.85%. Snapshot FCF 66987.00m USD. FCF/net income 0.50x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "High operating profitability and low gross leverage support a conditional quality buy at 27.63x trailing earnings, while cash conversion and estimate assumptions merit scrutiny. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Large reinvestment demands may limit conversion of accounting earnings to distributable cash.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "46.78% operating margin, positive cash flow and modest gross leverage support resilience."
+    ],
+    "summary": "High operating profitability and low gross leverage support a conditional quality buy at 27.63x trailing earnings, while cash conversion and estimate assumptions merit scrutiny. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "July 29 release and call describe cloud and AI strength; adjusted EPS grew 23% excluding investment effects, with discrete items also benefiting the quarter. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=14, buy=38, hold=3, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Cloud growth",
+      "AI monetization",
+      "Adjusted earnings"
+    ],
+    "notable_headlines": [
+      "2026-07-29 https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+      "2026-07-29 https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"
+    ],
+    "social_sentiment": null,
+    "summary": "Results support positive business momentum, but discrete benefits and investment marks require normalization. Positive news does not establish that infrastructure spending earns an adequate return at the stock's valuation. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 495.63: above SMA20 494.25, above SMA50 453.12, above SMA200 429.65. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 57.4864,
+    "rsi_assessment": "RSI14 57.5: neutral-to-firm.",
+    "macd_assessment": "MACD line 10.3606, signal 14.2057, histogram -3.8450: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 14,510,500; ratio 0.70x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      486.0,
+      489.8
+    ],
+    "resistance_levels": [
+      498.97,
+      511.0
+    ],
+    "summary": "The major uptrend is intact and price has recovered SMA20, but a strongly negative histogram and below-average rebound volume warrant waiting for momentum repair. As of 2026-09-11, ATR14 is 10.1 (2.0% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 9.8%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Enterprise spending and AI infrastructure funding determine growth and cash conversion.",
+      "Global currency translation and technology regulation need company-specific exposure analysis."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Microsoft Corporation: Enterprise spending and AI infrastructure funding determine growth and cash conversion. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

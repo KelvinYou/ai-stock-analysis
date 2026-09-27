@@ -1,0 +1,70 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 17.51x; forward P/E 15.38x. Indicated yield 3.68% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 23.96%; operating 11.70%; net 7.04%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 176.35%. Snapshot FCF -439.70m MYR. FCF/net income -0.09x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "A 17.51x trailing multiple is balanced against regulated utility exposure, but high gross debt and negative cash flow require a funding and recovery assessment. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Capex financing, regulated recovery and interest costs may constrain shareholder cash generation.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Positive operating earnings and an indicated 3.68% yield support further income-oriented diligence."
+    ],
+    "summary": "A 17.51x trailing multiple is balanced against regulated utility exposure, but high gross debt and negative cash flow require a funding and recovery assessment. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "August 27: Tenaga quarterly attributable profit fell 23.3%, with unfavorable FX cited in coverage, while revenue grew and the dividend stayed at 25 sen. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=4, buy=15, hold=2, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "FX effects",
+      "Electricity demand",
+      "Stable dividend"
+    ],
+    "notable_headlines": [
+      "2026-08-27 https://www.klsescreener.com/v2/announcements/view/11656213",
+      "2026-08-27 https://www.minichart.com.sg/2026/08/27/tnb-2q-profit-falls-23-3-on-fx-losses-declares-25-sen-dividend/"
+    ],
+    "social_sentiment": null,
+    "summary": "Headline weakness and operating-demand resilience create mixed news tone. A verified operating-versus-FX bridge is needed before extrapolating or dismissing the profit decline. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 13.6: below SMA20 14.06, below SMA50 14.28, below SMA200 13.99. Latest supplied MY daily bar is September 11; no September 14 completed-session observation supplied.",
+    "rsi_14": 23.8806,
+    "rsi_assessment": "RSI14 23.9: oversold, which is a condition rather than a reversal signal.",
+    "macd_assessment": "MACD line -0.1964, signal -0.1595, histogram -0.0369: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 4,054,400; ratio 0.62x the 20-bar average. Recent zero-volume rows: 2026-08-25, 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      13.56,
+      13.58
+    ],
+    "resistance_levels": [
+      13.82,
+      13.94
+    ],
+    "summary": "Oversold price is testing recent lows without breaking beneath its lower band, but bearish MACD and major averages overhead require stabilization before a positive entry signal. As of 2026-09-11, ATR14 is 0.211 (1.6% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 8.7%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Regulated returns, grid investment and funding costs drive utility cash generation.",
+      "Fuel pass-through and foreign-currency liabilities can separate reported profit from demand growth."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "TENAGA: Regulated returns, grid investment and funding costs drive utility cash generation. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

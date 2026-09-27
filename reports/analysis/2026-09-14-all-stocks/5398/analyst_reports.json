@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 28.47x; forward P/E 21.26x. Indicated yield 2.07% is not a guaranteed forward payout.",
+    "margin_analysis": "gross unavailable; operating 6.23%; net 6.28%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 84.42%. Snapshot FCF -883.65m MYR. FCF/net income -0.88x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Construction execution must justify 28.47x earnings while free cash flow is negative; the snapshot is insufficient for a bargain conclusion. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Project working capital and financing requirements may compete with growth spending.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Positive operating income and a substantial equity base support continuing operations."
+    ],
+    "summary": "Construction execution must justify 28.47x earnings while free cash flow is negative; the snapshot is insufficient for a bargain conclusion. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "September 7 research reports place Gamuda's order book at RM61.6bn after a Sydney Metro award; Maybank maintained BUY in a September 8 secondary report. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=2, buy=14, hold=3, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Australian contracts",
+      "Record backlog"
+    ],
+    "notable_headlines": [
+      "2026-09-07 https://www.midf.com.my/ms/node/50?page=1",
+      "2026-09-08 https://www.minichart.com.sg/2026/09/08/gamudas-orderbook-hits-record-myr61-6b-after-sydney-win-maybank-keeps-buy/"
+    ],
+    "social_sentiment": null,
+    "summary": "Contract news improves earnings visibility and supports positive news tone. Backlog must convert into profitable cash flow; broker enthusiasm alone does not establish cheapness. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 4.84: above SMA20 4.57, above SMA50 4.38, above SMA200 4.37. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 73.0769,
+    "rsi_assessment": "RSI14 73.1: overbought, increasing extension risk without automatically reversing the trend.",
+    "macd_assessment": "MACD line 0.1307, signal 0.0995, histogram 0.0311: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 4,383,200; ratio 0.31x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-25, 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      4.77,
+      4.58
+    ],
+    "resistance_levels": [
+      4.93,
+      5.0
+    ],
+    "summary": "Bullish moving-average structure and positive momentum survive the pullback from 5.00, but overbought RSI makes chasing unattractive. As of 2026-09-14, ATR14 is 0.124 (2.6% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 13.9%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Infrastructure funding and project financing costs affect award timing and execution.",
+      "Overseas construction creates FX and jurisdiction exposures not quantified here."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "GAMUDA: Infrastructure funding and project financing costs affect award timing and execution. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

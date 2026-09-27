@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "low",
+    "pe_assessment": "Trailing P/E unavailable because the snapshot is loss-making; forward P/E 1381.69x. Market cap/snapshot revenue 66.9x is period-dependent, not a verified TTM multiple.",
+    "margin_analysis": "gross 34.43%; operating -38.03%; net -32.94%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 14.75%. Snapshot FCF -321.81m USD. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Losses and negative free cash flow combined with roughly 67x snapshot sales leave the investment case dependent on substantial future execution. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Launch and systems execution, cash runway and dilution cannot be underwritten from equity alone.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Positive gross margin and moderate gross debt provide a starting operational base."
+    ],
+    "summary": "Losses and negative free cash flow combined with roughly 67x snapshot sales leave the investment case dependent on substantial future execution. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "August 10: Rocket Lab reported record $234m Q2 revenue, up 62%, and record $2.36bn backlog. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=4, buy=12, hold=4, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Launch and space systems",
+      "Contract backlog"
+    ],
+    "notable_headlines": [
+      "2026-08-10 https://www.sec.gov/Archives/edgar/data/1819994/000181999426000061/rklb-08102026ex991.htm"
+    ],
+    "social_sentiment": null,
+    "summary": "The dated release supports commercial momentum. Orders and sales remain distinct from profitable execution, so the sentiment signal should not override funding or valuation concerns. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 62.95: below SMA20 68.38, below SMA50 72.31, below SMA200 79.91. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 27.0515,
+    "rsi_assessment": "RSI14 27.1: oversold, which is a condition rather than a reversal signal.",
+    "macd_assessment": "MACD line -3.6017, signal -3.4688, histogram -0.1329: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 15,335,700; ratio 0.93x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      61.53,
+      62.06
+    ],
+    "resistance_levels": [
+      64.9,
+      67.7
+    ],
+    "summary": "Oversold RSI follows a deep drawdown and a bearish moving-average stack; a single bounce from 61.53 does not establish a base. As of 2026-09-11, ATR14 is 2.88 (4.6% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 58.3%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Launch demand and development funding depend on commercial and government budgets.",
+      "Long-duration development cash flows are sensitive to discount rates and financing access."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "Rocket Lab Corporation: Launch demand and development funding depend on commercial and government budgets. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

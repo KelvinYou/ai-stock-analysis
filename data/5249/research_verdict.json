@@ -2,27 +2,21 @@
   "ticker": "5249",
   "judged_view": "neutral",
   "confidence": "low",
-  "thesis": "The bull case establishes a credible value-and-quality floor through a 9.9743595x trailing P/E, positive RM606.341m free cash flow, strong reported margins, and price above SMA-200. The bear case correctly identifies the materially higher 20.846731x forward P/E, leverage, short-term weakness, and missing durability evidence. Neither side carried the debate decisively, so the evidence supports neutral/watch until earnings, debt, and trading-data quality are confirmed.",
+  "thesis": "Positive reported FCF and the 252-bar return conflict with a weak 5/20/60-bar decline; the single snapshot has no comparison period. Neither side establishes whether the pullback is temporary or reflects deterioration.",
   "winning_side": "neither",
-  "strongest_counterexample": "If the latest earnings and cash flow remain durable despite the higher forward-multiple warning, IOI Properties could rerate from a 9.9743595x trailing P/E while the 2.75% BNM OPR supports property demand and financing. A neutral ruling would then miss upside in a profitable, cash-generative developer whose price remains above SMA-200.",
+  "strongest_counterexample": "A sustained close above SMA-50 with positive 20/60-bar returns would weaken the bear case; a new low below the observed MYR 3.32 20/60-bar low would strengthen it.",
   "invalidation_conditions": [
-    "If two consecutive reported periods show negative free cash flow or net margin below 30%, the reported value-and-quality floor is invalidated.",
-    "If forward P/E remains at or above 20.846731x while reported earnings estimates continue to fall, the trailing-P/E value case is invalidated.",
-    "If the close breaks below SMA-200 at 3.4879 and does not recover within five trading sessions, the long-term technical-support premise is invalidated.",
-    "If debt-to-equity exceeds 100% for two reporting periods while free cash flow is not positive, leverage becomes thesis-breaking."
+    "A sustained close above SMA-50 with positive 20/60-bar returns would weaken the bear case; a new low below the observed MYR 3.32 20/60-bar low would strengthen it."
   ],
   "evidence_gaps": [
-    "Only a latest-period financial snapshot is available; no multi-period earnings, margin, revenue, presales, backlog, or segment trend is provided.",
-    "No debt-maturity schedule, refinancing exposure, interest coverage, or rate-sensitivity disclosure is present.",
-    "The news records contain blank title, link, and publisher fields, and no social-sentiment evidence is available.",
-    "The latest volume is zero and the 52-week-low field is 0.0 with a null pct_from_52w_low, leaving clean volume and low-based technical confirmation unavailable.",
-    "No company-specific USD revenue, cost, or funding exposure is provided."
+    "No statement-period label or comparative financial periods.",
+    "No recent company-specific news; supplied headline is dated 2025-11-28.",
+    "No dated recommendations or company-specific macro/FX snapshot."
   ],
   "decisive_factors": [
-    "Positive free cash flow and strong reported margins support the bull case but are not trend-validated.",
-    "The 20.846731x forward P/E versus 9.9743595x trailing P/E and material leverage support the bear's durability concern.",
-    "Technical evidence is mixed: price is above SMA-200 but below SMA-20/EMA-20 with a negative MACD histogram.",
-    "Blank news and zero-volume/zero-low fields make the available evidence too incomplete for a directional ruling."
+    "Price is below SMA-50/SMA-200 with negative 5/20/60-bar returns and negative MACD.",
+    "The current snapshot reports positive FCF and 48.5% net margin but no comparison period.",
+    "RSI 25.84 and volume 3.74x average raise near-term uncertainty."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

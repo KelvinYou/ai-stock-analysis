@@ -1,0 +1,23 @@
+{
+  "ticker": "GOOGL",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "The operating franchise is strong, but the large investment gain and incompatible earnings bases prevent judging apparent cheapness. Both sides lack a normalized valuation bridge.",
+  "winning_side": "neither",
+  "strongest_counterexample": "High operating profitability, strong revenue growth and cash generation remain after separating investment gains.",
+  "invalidation_conditions": [
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of declining operating profit excluding investment effects.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive quarters of positive recurring EPS growth and positive FCF growth after a matched-period valuation reconciliation."
+  ],
+  "evidence_gaps": [
+    "Comparable recurring EPS excluding investment marks and capex-return bridge.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied."
+  ],
+  "decisive_factors": [
+    "Quoted trailing P/E 16.98x; forward P/E 22.76x",
+    "Operating margins and cash flow support an established growth business",
+    "The operating case survives removal of investment marks, but the valuation case must then use an explicitly normalized earnings denominator"
+  ],
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

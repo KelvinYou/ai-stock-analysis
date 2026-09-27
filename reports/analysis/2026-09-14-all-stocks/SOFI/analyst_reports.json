@@ -1,0 +1,70 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Quoted trailing P/E 35.35x; forward P/E 20.93x. Market cap/snapshot net income is 46.48x, materially different; periods, EPS basis and share counts need reconciliation.",
+    "margin_analysis": "gross unavailable; operating unavailable; net 13.32%. No historical series is supplied, so margin trends cannot be established. NIM, cost/income, credit costs and capital metrics are required for banking analysis.",
+    "debt_analysis": "Gross debt/equity 18.44%. Snapshot FCF -3993.57m USD. FCF/net income -8.30x; periods unverified. Cash, net debt, interest cover and maturities are unavailable. Lending/bank cash flow and gross debt/equity are not stand-alone solvency tests; CET1, liquidity and credit-quality data are missing.",
+    "growth_outlook": "Positive net income supports an emerging profitable lending platform, but 35.35x trailing earnings requires a bank-specific growth and credit-quality case. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Loan performance, funding, regulatory capital and revenue composition are missing.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied.",
+      "Quoted P/E and market-cap/snapshot-profit differ materially; valuation confidence is reduced."
+    ],
+    "key_strengths": [
+      "Positive snapshot net income and a substantial equity base support further diligence."
+    ],
+    "summary": "Positive net income supports an emerging profitable lending platform, but 35.35x trailing earnings requires a bank-specific growth and credit-quality case. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "July 29: SoFi reported adjusted revenue growth of 40%, record member and product counts, and increased annual revenue guidance. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=4, buy=5, hold=13, sell=2, strongSell=2. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Member growth",
+      "Cross-sell",
+      "Guidance increase"
+    ],
+    "notable_headlines": [
+      "2026-07-29 https://www.sec.gov/Archives/edgar/data/1818874/000181887426000050/a2026q2earningsrelease.htm"
+    ],
+    "social_sentiment": null,
+    "summary": "Results support a constructive expansion narrative. Loan growth and adjusted measures still need credit-quality and dilution checks before sentiment becomes an investment decision. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 17.32: below SMA20 18.11, below SMA50 17.83, below SMA200 19.80. Completed US September 11 session; checked at September 14 04:36 UTC before the Monday US session.",
+    "rsi_14": 38.5281,
+    "rsi_assessment": "RSI14 38.5: weak but not oversold.",
+    "macd_assessment": "MACD line -0.0942, signal 0.0532, histogram -0.1474: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 24,422,500; ratio 0.61x the 20-bar average. No zero-volume rows in the last 25 supplied bars. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      16.93,
+      17.12
+    ],
+    "resistance_levels": [
+      17.51,
+      18.01
+    ],
+    "summary": "A small bounce remains below all major averages with negative MACD; RSI below 40 and light volume offer no convincing reversal evidence. As of 2026-09-11, ATR14 is 0.745 (4.3% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 47.1%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "A Malaysian investor also bears USD/MYR translation risk. No current exchange-rate forecast or MYR return calculation is assigned.",
+    "sector_macro_factors": [
+      "Loan growth, deposit funding costs and credit losses interact with rate policy.",
+      "Consumer credit deterioration can offset funding benefits; no NIM forecast assigned."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "SoFi Technologies, Inc.: Loan growth, deposit funding costs and credit losses interact with rate policy. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 20.69x; forward P/E 17.32x. Indicated yield 5.00% is not a guaranteed forward payout.",
+    "margin_analysis": "gross 72.74%; operating 29.69%; net 11.68%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 87.38%. Snapshot FCF 2264.94m MYR. FCF/net income 1.50x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "Positive cash generation and a 5.00% indicated yield support income appeal, but 20.69x trailing earnings and material gross debt leave a balanced valuation case. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Network investment, financing and integration spending may compete with distributions.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Free cash flow exceeds snapshot profit and operating margin is 29.69%."
+    ],
+    "summary": "Positive cash generation and a 5.00% indicated yield support income appeal, but 20.69x trailing earnings and material gross debt leave a balanced valuation case. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "August 14: CelcomDigi reported service-revenue growth and operational efficiencies but Q2 PAT declined 7.7%; H1 PAT was maintained and a 3.4-sen dividend declared. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=2, buy=10, hold=6, sell=1, strongSell=1. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Efficiency program",
+      "Financing costs",
+      "Stable half-year earnings"
+    ],
+    "notable_headlines": [
+      "2026-08-14 https://corporate.celcomdigi.com/news/celcomdigi-delivers-resilient-q2-fy2026-performance-with-service-revenue-growth-and-strong-operational-efficiencies"
+    ],
+    "social_sentiment": null,
+    "summary": "Operational progress offsets, but does not erase, quarterly earnings pressure. The issuer's constructive narrative should be assessed against cash generation and delivery. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-09-11, price 2.72: below SMA20 2.78, below SMA50 2.85, below SMA200 2.98. Latest supplied MY daily bar is September 11; no September 14 completed-session observation supplied.",
+    "rsi_14": 36.5897,
+    "rsi_assessment": "RSI14 36.6: weak but not oversold.",
+    "macd_assessment": "MACD line -0.0387, signal -0.0345, histogram -0.0042: bearish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 3,308,200; ratio 1.04x the 20-bar average. Recent zero-volume rows: 2026-08-25, 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      2.68
+    ],
+    "resistance_levels": [
+      2.75,
+      2.77
+    ],
+    "summary": "A narrow recent trading range sits within a broader downtrend; ordinary volume and RSI below 40 provide no evidence of a durable reversal. As of 2026-09-11, ATR14 is 0.053 (1.9% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 24.8%. Support/resistance are observed price references, not guaranteed turning points."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Recurring telecom demand can be resilient while network investment requires funding.",
+      "Imported network equipment may be FX-sensitive; pricing competition remains issuer-specific."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "CDB: Recurring telecom demand can be resilient while network investment requires funding. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

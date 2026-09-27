@@ -1,0 +1,21 @@
+{
+  "ticker": "ETN",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "The technical trend is positive, but sentiment and fundamentals remain unconfirmed: headlines do not verify orders and financial values lack period dates.",
+  "winning_side": "neither",
+  "strongest_counterexample": "The strongest contrary case is continued trend strength above SMA-20/50/200 with later results validating the power-demand theme.",
+  "invalidation_conditions": [
+    "A close below SMA-50 would challenge the current trend.",
+    "A dated filing showing contraction in revenue or operating margin would weaken fundamental support."
+  ],
+  "evidence_gaps": [
+    "Eaton-specific AI/data-center order contribution is unavailable.",
+    "Financial fiscal period and availability date are missing."
+  ],
+  "decisive_factors": [
+    "Price is above SMA-20/50/200 and returns are positive.",
+    "RSI is 67 and volume is below its 20-bar average."
+  ],
+  "pipeline_mode": "in-session"
+}

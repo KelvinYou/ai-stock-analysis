@@ -1,25 +1,23 @@
 {
   "ticker": "4197",
-  "judged_view": "buy",
-  "confidence": "medium",
-  "thesis": "The bull case carried the debate because current evidence shows broad operating improvement, positive free cash flow, dividend support, and multiple business contributors rather than a single speculative catalyst. The buy view is medium confidence because the price is extended and the group remains a thin-margin cyclical conglomerate with incomplete volume and segment-level data.",
-  "winning_side": "bull",
-  "strongest_counterexample": "A strong business can still be a poor near-term entry after a sharp re-rating: RSI above 70, price near the 52-week high, slight revenue contraction, and sub-3% margins leave little room for a competitive or resource-sector miss.",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Neutral reflects a low P/E, indicated yield and positive FCF alongside low reported margins, mixed earnings headlines and a pullback below SMA-20. The dated evidence does not establish durable earnings improvement.",
+  "winning_side": "neither",
+  "strongest_counterexample": "A bull counterexample is P/E 9.46, positive RM2.43b FCF, a 5.58% indicated yield and price still above SMA-50/200.",
   "invalidation_conditions": [
-    "Two consecutive reporting periods show deterioration in Motors/Industrial earnings or group core profit while margins compress further.",
-    "Free cash flow turns persistently negative or the dividend is cut without a clear reinvestment payoff.",
-    "Price loses SMA-50 and SMA-200 after the current overbought condition, particularly if confirmed by usable volume once available."
+    "A future dated report showing sustained operating-margin improvement would strengthen the bull case.",
+    "A close below the observed 60-bar low would weaken the longer-term technical case."
   ],
   "evidence_gaps": [
-    "Segment-level earnings, margin, cash-flow, and order/volume data for Motors, Industrial, and UMW.",
-    "A clean dated volume series and a valid 52-week low from the completed-close input.",
-    "Net USD/MYR sensitivity across international Motors and Industrial operations.",
-    "Forward earnings bridge explaining why forward P/E exceeds trailing P/E."
+    "No fiscal-period/availability dates for supplied financial statements.",
+    "No segment-level margins or cash-flow details.",
+    "No USD/MYR snapshot; undated recommendation buckets were excluded."
   ],
   "decisive_factors": [
-    "FY2026 core profit increased 32.6% and Q4 core profit increased 55% in the dated company release.",
-    "Positive free cash flow and dividend support add evidence of shareholder-return capacity.",
-    "The overbought technical state changes entry discipline but does not outweigh the current fundamental improvement."
+    "Positive reported FCF and moderate P/E/yield.",
+    "Low margins and mixed dated earnings-quality headlines.",
+    "Price below SMA-20 with negative MACD, despite remaining above SMA-50/200."
   ],
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

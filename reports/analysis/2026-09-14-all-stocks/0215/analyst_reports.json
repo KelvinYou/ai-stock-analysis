@@ -1,0 +1,71 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Quoted trailing P/E 36.67x; forward P/E 20.15x.",
+    "margin_analysis": "gross 28.43%; operating 15.08%; net 10.52%. No historical series is supplied, so margin trends cannot be established.",
+    "debt_analysis": "Gross debt/equity 52.62%. Snapshot FCF 30.25m MYR. FCF/net income 0.38x; periods unverified. Cash, net debt, interest cover and maturities are unavailable.",
+    "growth_outlook": "The lower forward multiple embeds substantial improvement; current positive profits do not yet translate into equally strong cash generation. No dated growth history or guidance is supplied; forward estimates are undated and cannot establish realized growth.",
+    "key_risks": [
+      "Project execution and cash collection must deliver the growth implied by estimates.",
+      "Underlying statement periods and estimate dates are absent despite the 2026-09-14 refresh; no sector valuation benchmark is supplied."
+    ],
+    "key_strengths": [
+      "Profitable solar operations with positive free cash flow offer a viable growth base."
+    ],
+    "summary": "The lower forward multiple embeds substantial improvement; current positive profits do not yet translate into equally strong cash generation. The conclusion is conditional because statement periods, valuation bases and growth estimates are not fully verified."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "August 19: Solarvest reported stronger Q1FY27 revenue and net profit; the unbilled order book was RM2.37bn. Attributable profit grew 19.8%, while total PAT grew 13.3%, so the measures should not be conflated. Provider news extraction is unavailable: all fetched headline objects are blank. Web evidence above supplies dated news; coverage is selective rather than exhaustive. Snapshot analyst distribution (relative 0m bucket, individual report dates unavailable): strongBuy=1, buy=7, hold=3, sell=0, strongSell=0. It is not a dated upgrade event or independent valuation proof.",
+    "key_themes": [
+      "Solar execution",
+      "Order visibility",
+      "Share dilution"
+    ],
+    "notable_headlines": [
+      "2026-08-19 https://solarvest.com/investor-relations/",
+      "2026-08-19 https://www.minichart.com.sg/2026/08/19/solarvest-q1-revenue-up-13-2-order-book-hits-rm2-37-billion/"
+    ],
+    "social_sentiment": null,
+    "summary": "Operating news is constructive, but the enlarged share base means total profit growth does not guarantee EPS growth. Positive sector expectations still require project delivery. Representative social sentiment is unavailable."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-09-14, price 3.3: above SMA20 3.18, above SMA50 3.11, above SMA200 2.81. Potentially intraday MY bar; price, RSI and volume remain provisional.",
+    "rsi_14": 63.0,
+    "rsi_assessment": "RSI14 63.0: neutral-to-firm.",
+    "macd_assessment": "MACD line 0.0888, signal 0.0644, histogram 0.0243: bullish momentum; interpreted alongside recent price action.",
+    "volume_assessment": "Latest volume 711,900; ratio 0.27x the 20-bar average. Intraday volume is not comparable with a full session and cannot confirm demand or capitulation. Recent zero-volume rows: 2026-08-31; included in supplied indicators and can distort averages. No missing/nonpositive OHLC in the last 25 supplied bars.",
+    "support_levels": [
+      3.26,
+      3.28
+    ],
+    "resistance_levels": [
+      3.48,
+      3.57,
+      3.72
+    ],
+    "summary": "Positive trend and momentum coexist with a sharp retracement from 3.72; the current 3.26 low is provisional, so the pullback has no confirmed floor. As of 2026-09-14, ATR14 is 0.119 (3.6% of price), price is inside the bands, and the adjusted 52-week-high drawdown is 11.3%. September 14 readings and latest swing references remain provisional."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Official Fed statement dated 2026-07-29 held target range at 3.50\u20133.75%. This baseline alone does not establish a stock-specific directional advantage.",
+    "interest_rate_outlook": "Official BNM statement dated 2026-09-03 held OPR at 2.75%. No assumption about the next central-bank decision; issuer financing sensitivity is incomplete.",
+    "fx_impact": "MYR/USD direction and company hedge ratios not verified; do not assume appreciation or depreciation benefits.",
+    "sector_macro_factors": [
+      "Solar project financing is sensitive to discount rates and funding availability.",
+      "Equipment import costs and policy-linked project timing remain unquantified."
+    ],
+    "geopolitical_risks": [
+      "Country, trade and regulatory sensitivities are scenarios; no unverified current shock is asserted."
+    ],
+    "summary": "SLVEST: Solar project financing is sensitive to discount rates and funding availability. Dated policy rates are verified, but current FX and issuer-specific sensitivities are insufficient for a directional macro call."
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks"
+}

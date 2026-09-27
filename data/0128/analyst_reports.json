@@ -1,78 +1,66 @@
 {
   "fundamentals": {
     "signal": "buy",
-    "confidence": "medium",
-    "pe_assessment": "Trailing P/E is 45.0x and forward P/E is 36.461403x. The forward discount is consistent with expected earnings growth, but the absolute multiple leaves limited margin of safety if semiconductor demand or margins disappoint.",
-    "margin_analysis": "Revenue is RM607,759,744, net income is RM154,227,874, and reported gross, operating, and net margins are 49.6%, 36.9%, and 25.4%. These are strong profitability metrics for the supplied financial snapshot; the 5 Aug 2026 Q2 filing also reported 1H revenue of RM376.719m versus RM288.991m a year earlier and attributable profit of RM90.077m versus RM64.556m.",
-    "debt_analysis": "Total debt is RM28,905,484 against RM1,036,080,401 of equity, approximately 2.8% debt-to-equity. The balance sheet therefore appears lightly levered, with relatively low financial-risk sensitivity in this snapshot.",
-    "growth_outlook": "The latest available Q2 2026 filing reported quarterly revenue growth of about 19.5% year over year and 1H revenue growth of about 30.4%; attributable profit grew about 42.5% in the quarter and 39.6% year to date. Search evidence also points to improving semiconductor orders and AI-related demand, but the cycle remains a key dependency.",
+    "confidence": "low",
+    "pe_assessment": "Provider-current snapshot fetched 2026-09-24 reports P/E 45.00 and forward P/E 36.46; elevated valuation limits upside unless strong earnings continue. No growth horizon or peer comparison is supplied.",
+    "margin_analysis": "Snapshot gross/operating/net margins are 49.57%/36.93%/25.38%, indicating strong current profitability; period dates are missing, so no trend is inferred.",
+    "debt_analysis": "Debt is only RM28.91M versus RM1.04B equity and FCF is RM160.17M, supportive current balance-sheet/cash-flow evidence; maturities are not material in the supplied snapshot.",
+    "growth_outlook": "Revenue/net income are RM607.76M/RM154.23M in one current snapshot. This supports current quality, but there is no multi-period growth evidence.",
     "key_risks": [
-      "45.0x trailing P/E and 36.461403x forward P/E embed substantial growth expectations.",
-      "Semiconductor and advanced-equipment demand can be cyclical; reported market commentary also notes weaker oil-and-gas activity as an offset.",
-      "The supplied financial snapshot does not include customer concentration, geographic revenue mix, or forward guidance detail."
+      "P/E 45.00 and forward P/E 36.46 leave valuation sensitive to execution.",
+      "Latest May headline questioned whether profits reveal underlying issues.",
+      "No dated multi-period growth or customer concentration detail is included."
     ],
     "key_strengths": [
-      "Strong supplied margins: 49.6% gross, 36.9% operating, and 25.4% net.",
-      "Free cash flow of RM160,174,898 is slightly above supplied net income of RM154,227,874.",
-      "Very low debt relative to equity and positive earnings/cash generation.",
-      "Latest Q2/1H filing showed accelerating revenue and attributable-profit growth."
+      "Strong reported margins, RM160.17M positive FCF, and very low debt versus equity."
     ],
-    "summary": "FRONTKN combines strong reported profitability\u2014RM607.76m revenue, RM154.23m net income, RM160.17m free cash flow, and 49.6%/36.9%/25.4% gross/operating/net margins\u2014with very light leverage of approximately 2.8% debt to equity. The 45.0x trailing P/E and 36.461403x forward P/E price in a meaningful growth runway, although the latest Q2 filing\u2019s strong 1H growth provides evidence behind that premium. The fundamental signal is buy at medium confidence, constrained by valuation and semiconductor-cycle sensitivity."
+    "summary": "Current snapshot quality is strong, with high margins, positive FCF, and very low debt; this supports a low-confidence buy, capped by elevated valuation and no growth trend."
   },
   "sentiment": {
-    "signal": "buy",
-    "confidence": "medium",
-    "news_tone": "positive",
-    "news_summary": "The stored Layer 1 headline titles are blank, so dated search evidence was used as a supplement. Current analyst recommendations are strongly positive (3 strong-buy, 7 buy, 1 hold, and no sell/strong-sell ratings), while dated coverage around the 5 Aug 2026 results emphasized AI/semiconductor demand and improving orders; the 11 Aug dividend notice adds a near-term cash-distribution event.",
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "mixed",
+    "news_summary": "May coverage questioned whether Frontken\u2019s profits mask underlying issues, while April and February headlines were more positive about its fundamentals and watchlist appeal. These older titles provide no current earnings detail, so sentiment is mixed and low-confidence.",
     "key_themes": [
-      "AI and semiconductor demand",
-      "Improving 2026 earnings/order outlook",
-      "Positive analyst recommendation mix",
-      "2.0 sen dividend payable 17 Sep 2026"
+      "Profit-quality concern",
+      "Earlier positive fundamentals coverage",
+      "No newer company headline in the packet"
     ],
     "notable_headlines": [
-      "05 Aug 2026 \u2014 Q2 2026 financial results: https://www.klsescreener.com/v2/stock/financial-report/0128/2026-06-30",
-      "07 Aug 2026 \u2014 The Star, 'Frontken\u2019s Prospects Brighten On AI Demand' (listed by the company IR site): https://www.insage.com.my/ir/FRONTKN/default.aspx",
-      "11 Aug 2026 \u2014 Dividend notice: 2.0 sen per share, ex-dividend 21 Aug and payable 17 Sep 2026: https://www.insage.com.my/ir/cmn/Announcement.aspx?NewsID=202608115200001&Symbol=0128"
+      "2026-05-13 \u2014 Simply Wall St.: Frontken Corporation Berhad's (KLSE:FRONTKN) Profits May Not Reveal Underlying Issues",
+      "2026-04-25 \u2014 Simply Wall St.: Should You Be Adding Frontken Corporation Berhad (KLSE:FRONTKN) To Your Watchlist Today?",
+      "2026-02-02 \u2014 Simply Wall St.: Frontken Corporation Berhad's (KLSE:FRONTKN) Fundamentals Look Pretty Strong: Could The Market Be Wrong About The Stock?"
     ],
     "social_sentiment": null,
-    "summary": "Sentiment is positive but not euphoric: the recommendation distribution is buy-heavy and dated coverage links the latest results to AI/semiconductor demand, with a dividend payment due in September. Confidence is medium because the Layer 1 headline payload itself contains no usable titles or publisher metadata, and search evidence is not a substitute for a full point-in-time news feed."
+    "summary": "May coverage questioned whether Frontken\u2019s profits mask underlying issues, while April and February headlines were more positive about its fundamentals and watchlist appeal. These older titles provide no current earnings detail, so sentiment is mixed and low-confidence."
   },
   "technical": {
     "signal": "neutral",
     "confidence": "low",
-    "trend": "Short-term bearish and oversold; medium-term constructive while the close remains above SMA-200.",
-    "rsi_14": 19.1299,
-    "rsi_assessment": "RSI-14 is 19.1299, below the 30 oversold threshold. That identifies stretched downside momentum, not a confirmed reversal.",
-    "macd_assessment": "MACD line is -0.0010 versus signal line 0.0334, with histogram -0.0344; momentum remains bearish on this snapshot.",
-    "volume_assessment": "Latest volume is 0 against a 20-day volume SMA of 3,965,680 and a reported ratio of 0.0. No volume confirmation can be drawn; this is an explicit data limitation rather than evidence of either accumulation or distribution.",
+    "trend": "Price is just below SMA-20/50 but remains 10.76% above SMA-200; 5-bar return is positive while 20/60-bar returns are mildly negative and 252-bar return positive.",
+    "rsi_14": 50.0,
+    "rsi_assessment": "RSI 50.00 is neutral.",
+    "macd_assessment": "MACD histogram is slightly positive (+0.0106), with MACD still below zero; momentum is tentative.",
+    "volume_assessment": "Volume is 1.15x its 20-bar average, modestly above average.",
     "support_levels": [
-      4.9483,
-      4.4181
+      4.6318,
+      4.78
     ],
     "resistance_levels": [
-      5.004,
-      5.1478,
+      5.18,
       5.3789
     ],
-    "summary": "At RM4.95, price is below SMA-20 (RM5.1478) and SMA-50 (RM5.0040) but above SMA-200 (RM4.4181); it is also essentially at the lower Bollinger Band (RM4.9483). RSI-14 of 19.1299 is oversold, while the negative MACD histogram confirms weak momentum. The signal is neutral/low-confidence because the snapshot offers no usable volume confirmation and its 52-week-low-derived field is null (the supplied low is 0.0)."
+    "summary": "The long trend remains above SMA-200, but price is near/below SMA-20/50 and medium-term returns are slightly negative. Mixed averages and returns with neutral RSI support a wait-and-see technical view."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The Federal Reserve maintained the federal-funds target range at 3.50%-3.75% on 29 Jul 2026. A stable but still-high US rate range can restrain high-multiple growth valuations and global risk appetite; source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
-    "interest_rate_outlook": "Bank Negara Malaysia maintained the OPR at 2.75% on 9 Jul 2026, leaving a stable domestic policy-rate backdrop rather than a fresh easing catalyst. Source: https://www.bnm.gov.my/-/pernyataan-dasar-monetari-09072026",
-    "fx_impact": "BNM FMIP listed the KL USD/MYR reference rate at 4.0420 as of 2 Sep 2026. The Layer 1 package does not provide FRONTKN\u2019s USD revenue, import, or hedge exposure, so the FX direction is not assigned; source: https://financialmarkets.bnm.gov.my/about-myor-myor-i",
-    "sector_macro_factors": [
-      "AI and semiconductor capital-spending intensity is a key demand driver for the company\u2019s industrial/technology exposure.",
-      "Global supply-chain conditions, commodity costs, and the cost of capital can affect semiconductor equipment activity and valuation multiples.",
-      "Stable BNM policy and the supplied 4.0420 USD/MYR reference are context only; company-specific currency sensitivity is unavailable."
-    ],
-    "geopolitical_risks": [
-      "The Fed and BNM statements identify Middle East conflict and related supply/energy-price uncertainty as macro risks; the company-specific exposure is not present in Layer 1.",
-      "A deterioration in global trade or semiconductor supply chains could delay customer expansion plans."
-    ],
-    "summary": "Macro conditions are mixed: stable Fed and BNM policy reduce immediate policy uncertainty, but the still-elevated US rate range can pressure a premium multiple and global semiconductor spending remains cyclical. At USD/MYR 4.0420, FX effects cannot be directional without FRONTKN\u2019s currency exposure. The macro view is therefore neutral at low confidence."
+    "fed_impact": "Official BNM context dated 2026-09-03: OPR 2.75%; BNM held the OPR unchanged at 2.75%. Source: https://www.bnm.gov.my/-/monetary-policy-statement-03092026 No issuer-specific rate effect is established.",
+    "interest_rate_outlook": "A hold at the stated OPR does not establish a future policy path or the company\u2019s sensitivity; keep neutral/low confidence.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "BNM context is dated, but no issuer-specific impact or forward rate path is evidenced. USD/MYR was not supplied and no FX direction is inferred."
   },
-  "pipeline_mode": "in-session-claude-code"
+  "pipeline_mode": "in-session"
 }

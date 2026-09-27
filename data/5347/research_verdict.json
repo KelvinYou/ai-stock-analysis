@@ -1,0 +1,22 @@
+{
+  "ticker": "5347",
+  "judged_view": "sell",
+  "confidence": "low",
+  "thesis": "Snapshot reports negative FCF of MYR 439.7M and debt/equity about 1.76, while price is below SMA-50/SMA-200 with negative 20/60-bar returns and MACD. Positive net income and oversold RSI are counterexamples; this is a low-confidence sell pending period-labelled results.",
+  "winning_side": "bear",
+  "strongest_counterexample": "A later period-labelled filing showing positive FCF and lower leverage, combined with price reclaiming SMA-50, would invalidate this bearish view.",
+  "invalidation_conditions": [
+    "A later period-labelled filing showing positive FCF and lower leverage, combined with price reclaiming SMA-50, would invalidate this bearish view."
+  ],
+  "evidence_gaps": [
+    "No statement-period label or comparative periods; negative FCF persistence is unknown.",
+    "No current fuel-cost, tariff, capex, or regulatory evidence.",
+    "No dated recommendations or issuer-specific macro/FX snapshot."
+  ],
+  "decisive_factors": [
+    "Snapshot reports negative FCF of MYR 439.7M and debt/equity around 1.76.",
+    "Price is below SMA-50/SMA-200 with negative 20/60-bar returns and MACD.",
+    "Positive net income/yield and RSI 28.77 temper confidence."
+  ],
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,62 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Reported P/E is 20.65 and forward P/E is 17.70; no peer benchmark is provided.",
+    "margin_analysis": "The snapshot reports gross margin 58.2%, operating margin 18.5%, and net margin 15.7%; no trend is inferred.",
+    "debt_analysis": "Reported debt/equity is 1.98; cash and maturities are not included.",
+    "growth_outlook": "One snapshot reports revenue $67.54B, net income $10.59B, and FCF $11.46B (17.0% of revenue). No growth rate is inferred.",
+    "key_risks": [
+      "Debt/equity is about 1.98 and the packet omits cash and maturity detail.",
+      "No comparative periods or measured AI/quantum commercial contribution are supplied."
+    ],
+    "key_strengths": [
+      "Positive reported net income and FCF with an operating margin of 18.5%."
+    ],
+    "summary": "The snapshot reports FCF $11.46B (17.0% of revenue), operating margin 18.5%, and debt/equity 1.98. This is a mixed level-based picture; AI/quantum coverage does not provide commercial metrics."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "mixed",
+    "news_summary": "Dated 2026-09-24 Simply Wall St. coverage presents IBM's AI/quantum case alongside valuation questions; 2026-09-23 Yahoo Finance interviews discuss AI productivity. These are narrative/commentary headlines without operating figures, so they do not establish a directional sentiment signal. Relative recommendation periods are not used.",
+    "key_themes": [
+      "Enterprise AI productivity; quantum narrative; valuation concerns"
+    ],
+    "notable_headlines": [
+      "2026-09-24 Simply Wall St.: IBM builds its AI and quantum case as valuation questions grow.",
+      "2026-09-23 Yahoo Finance Video: IBM vice chair discusses AI productivity."
+    ],
+    "social_sentiment": null,
+    "summary": "Dated 2026-09-24 Simply Wall St. coverage presents IBM's AI/quantum case alongside valuation questions; 2026-09-23 Yahoo Finance interviews discuss AI productivity. These are narrative/commentary headlines without operating figures, so they do not establish a directional sentiment signal. Relative recommendation periods are not used."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "low",
+    "trend": "Mixed to weak: close $232.76 was 1.50% above SMA-50 but 9.05% below SMA-200; 20-bar return was +0.74%, while 60/252-bar returns were -13.70%/-10.36%.",
+    "rsi_14": null,
+    "rsi_assessment": "RSI-14 was 51.16, neutral.",
+    "macd_assessment": "MACD histogram was -0.6373, indicating soft momentum.",
+    "volume_assessment": "Latest volume was 0.82x the 20-bar average, with no strong participation confirmation.",
+    "support_levels": [
+      228.35,
+      197.7713
+    ],
+    "resistance_levels": [
+      251.82,
+      309.5792
+    ],
+    "summary": "Price is slightly above SMA-50 but below SMA-200; the 20-bar return is nearly flat while 60/252-bar returns are negative. Neutral RSI and weak MACD/volume leave no confirmed reversal or acceleration."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "The supplied macro context says the Fed target range was 3.75%-4.00%, effective 2026-09-17, after a 25 bp increase announced 2026-09-16. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm. The ticker packet has no dated issuer-specific macro snapshot, so net company impact is undetermined.",
+    "interest_rate_outlook": "No forward rate path is supplied; no forecast is assigned.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "Macro evidence is limited to the supplied Fed snapshot; no company-specific effect, FX direction, or forward policy view is inferred. Signal remains neutral with low confidence."
+  },
+  "pipeline_mode": "in-session"
+}

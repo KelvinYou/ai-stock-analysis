@@ -1,0 +1,82 @@
+{
+  "ticker": "TSM",
+  "date": "2026-09-14",
+  "data_as_of": "2026-09-11",
+  "overall_signal": "buy",
+  "conviction": {
+    "score": 0.45,
+    "signal_convergence": 0.6,
+    "explanation": "Consensus-capped research conviction for the buy thesis, not a probability or backtested expected return. I retain the research-manager ruling: Recent revenue growth of 53.3% and constructive price/momentum evidence give the bull the clearest combined demand-and-trend support. This is a conditional directional ruling, not a cross-currency fair-value claim. Positive operating evidence and the longer trend support modest directional conviction, tempered by near-term momentum and data limitations. Conviction has been capped by deterministic analyst consensus; convergence has been computed from the four reports."
+  },
+  "executive_summary": "BUY: TSMC has the clearest alignment of recent demand growth and constructive technical momentum in this screen. That supports a conditional swing thesis, while reporting-currency and ADR validation prevent a precise valuation claim and geopolitical risk remains material.\n\nConditional buy thesis for a swing watchlist; use completed-session confirmation and the downstream risk gate before treating it as executable. Technical observations use the completed 2026-09-11 session; this is not a live execution quote. Underlying financial periods and forward-estimate dates are incompletely verified; no resolved local memory observations are available.",
+  "bull_case": "Monthly sales and constructive technicals provide real demand and execution evidence. Verify ADR/reporting currency before precise valuation and retain geopolitical risk in sizing; the strongest bullish case combines observed demand with confirmed trend, not a guaranteed forward multiple. Statement periods and estimates remain incompletely verified.",
+  "bear_case": "Strong monthly demand and a constructive technical setup are the strongest counterarguments to waiting. They still do not permit cross-currency valuation arithmetic without verified statement and ADR units, or show that the current multiple compensates for reinvestment and geopolitical uncertainty.",
+  "key_uncertainties": [
+    "Verified ADR conversion, statement currency and incremental foundry returns.",
+    "Underlying statement periods and forward-estimate dates are not fully supplied.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive monthly reports of negative year-on-year revenue growth.",
+    "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive completed-session weekly closes below the contemporaneous 200-day moving average.",
+    "Technical observations use the completed 2026-09-11 session; this is not a live execution quote.",
+    "ADR price is USD but reporting currency and ADR unit basis are unverified; no cross-currency financial amount or precise fair value is inferred."
+  ],
+  "catalysts_upcoming": [
+    "Observation trigger, not a dated scheduled event: Continued monthly demand and sustained trend confirmation; no event date verified."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 56.5% over available price history. Projected worst case (2-sigma): ~87.8% from current $433.24.",
+    "risk_reward_ratio": "0.87:1"
+  },
+  "action_plan": {
+    "entry_limit": 421.71,
+    "entry_rationale": "Buy-the-dip to SMA-20 support near $421.71",
+    "stop_loss": 401.94,
+    "stop_rationale": "2x ATR-14 ($9.88) below entry \u2014 invalidates the setup",
+    "take_profit_1": 438.86,
+    "take_profit_2": 498.23,
+    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "TSM",
+    "judged_view": "buy",
+    "confidence": "low",
+    "thesis": "Recent revenue growth of 53.3% and constructive price/momentum evidence give the bull the clearest combined demand-and-trend support. This is a conditional directional ruling, not a cross-currency fair-value claim.",
+    "winning_side": "bull",
+    "strongest_counterexample": "Reporting-currency and ADR ambiguity prevent reliable financial valuation, and reinvestment and geopolitical risks may overwhelm strong sales.",
+    "invalidation_conditions": [
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive monthly reports of negative year-on-year revenue growth.",
+      "Analyst-selected review rule, not a sourced forecast: reassess this ruling if two consecutive completed-session weekly closes below the contemporaneous 200-day moving average."
+    ],
+    "evidence_gaps": [
+      "Verified ADR conversion, statement currency and incremental foundry returns.",
+      "Underlying statement periods and forward-estimate dates are not fully supplied."
+    ],
+    "decisive_factors": [
+      "Quoted trailing P/E 31.95x; forward P/E 19.76x",
+      "Monthly sales and constructive technicals provide real demand and execution evidence",
+      "Strong monthly demand and a constructive technical setup are the strongest counterarguments to waiting"
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "buy",
+    "technical": "buy",
+    "macro": "neutral"
+  },
+  "pipeline_mode": "in-session-codex",
+  "run_id": "2026-09-14-all-stocks",
+  "data_quality_notes": [
+    "Financial statement periods and forward-estimate timestamps may be incomplete.",
+    "Conviction is research confidence, not a calibrated win probability.",
+    "RiskChecker 2-sigma projection is a model heuristic, not a maximum-loss bound."
+  ],
+  "snapshot_sha256": {
+    "fundamentals.json": "4ea9c1d316e787bb2afdc543b4209a23c16c1c857b90387c6b97c4e418ab0cbd",
+    "technicals.json": "bfaba7dbc9d72b937b2986c2b099b97916ac20035be2aa0f510b92df87d64dc2",
+    "price_history.csv": "ef6ac3cc66e2a7d82fb864cd0dd63be867c44d1da3e3858e02995f3374065b23"
+  }
+}

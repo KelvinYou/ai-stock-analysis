@@ -1,33 +1,30 @@
 {
   "ticker": "6947",
-  "date": "2026-09-03",
+  "date": "2026-09-25",
+  "data_as_of": "2026-09-24",
   "overall_signal": "neutral",
   "conviction": {
     "score": 0.0,
     "signal_convergence": 0.3,
-    "explanation": "The confidence-weighted analyst consensus is exactly balanced between buy and sell direction: fundamentals are buy at medium confidence, technicals are sell at medium confidence, and sentiment and macro are neutral at low confidence. The low 0.3000 convergence reflects a genuine high-divergence, low-confidence signal; positive cash flow and yield do not resolve leverage, missing growth/capex detail, bearish trend structure and unreliable final-bar volume."
+    "explanation": "Neutral: positive reported FCF/yield conflict with a price near its 52-week low and weak momentum; stale headlines do not settle current direction."
   },
-  "executive_summary": "CDB's fresh Layer 1 snapshot through 2026-09-02 shows a financially supportive but not fully de-risked defensive telecom profile: RM12.9577B revenue, RM1.5135B net income, RM2.2649B free cash flow, 29.69% operating margin and a supplied 4.91% dividend yield. The main constraints are approximately 0.87x debt/equity and missing operating-growth, capex, maturity and payout detail.\n\nThe price at 2.78 is below SMA-20, SMA-50, EMA-20 and SMA-200, with negative MACD and RSI 37.2093. Recent Malaysian zero-volume/zero-OHLC fields reduce technical reliability, so the result is neutral rather than a confident sell; wait for operating confirmation and a reliable reclaim of trend levels before treating the weakness as a buy-the-dip setup.",
-  "bull_case": "Positive free cash flow exceeding net income, strong gross and operating margins, a 4.91% supplied yield and beta of 0.232 create a credible defensive-income case. The forward P/E of 17.8951x below trailing P/E of 21.3846x and a close near the lower Bollinger Band could support a recovery if cash flow and leverage remain stable.",
-  "bear_case": "The stock is below every supplied moving-average level and MACD is negative, while the final volume is zero and cannot confirm a reversal. The valuation discount is not backed by a growth series, debt/equity is approximately 0.87x, and missing capex, debt-maturity and payout data leave the margin of safety unresolved.",
+  "executive_summary": "CelcomDigi's snapshot reports MYR 2.26B FCF and a 5.17% dividend yield, while price is near its 52-week low, below both moving averages, and down 27.31% over 252 bars. News is several months old; neutral is appropriate because current operating direction is not established.",
+  "bull_case": "Positive FCF equal to about 17.5% of revenue and the reported 5.17% yield offer support. The earlier earnings-miss headline is stale and cannot alone characterize current operations.",
+  "bear_case": "Price is near its 52-week low and below both moving averages, with negative MACD and weak returns. The snapshot does not establish whether cash flow or payout coverage is improving.",
   "key_uncertainties": [
-    "Whether the forward P/E reflects real earnings growth rather than an unverified expectation",
-    "Whether free cash flow remains sufficient after capex and dividend payments",
-    "Whether debt and refinancing risk are stable at approximately 0.87x debt/equity",
-    "Whether the below-SMA-200 weakness is fundamental or flow-driven",
-    "Whether the zero-volume recent bars can be replaced by reliable participation data"
+    "No statement-period label or comparative financial periods.",
+    "Latest company-specific headlines are several months old.",
+    "Price is 0.78% above the 52-week low; no reversal is confirmed."
   ],
   "catalysts_upcoming": [
-    "Next company financial update with revenue, earnings, free cash flow, capex, debt and payout detail",
-    "A reliable-volume reclaim of SMA-20 at 2.8860 and then SMA-200 at 3.0435",
-    "Analyst recommendation changes that corroborate an operating improvement"
+    "Review the next dated company results for FCF and dividend coverage; no event date is supplied."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "Low beta (0.23) \u2014 historically less sensitive to broad-market moves.",
+      "Low beta (0.22) \u2014 historically less sensitive to broad-market moves.",
       "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 34.3% over available price history. Projected worst case (2-sigma): ~52.7% from current $2.78.",
+    "max_drawdown_scenario": "Historical max drawdown: 34.7% over available price history. Projected worst case (2-sigma): ~49.4% from current $2.60.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -45,25 +42,21 @@
     "ticker": "6947",
     "judged_view": "neutral",
     "confidence": "low",
-    "thesis": "CDB's profitability, free cash flow and yield support the business case, but the current snapshot does not confirm that the price weakness is temporary. The combination of approximately 0.87x debt/equity, missing operating-growth and payout detail, a below-SMA-200 chart and unreliable final-bar volume makes waiting for evidence preferable to a directional call.",
+    "thesis": "Positive FCF, net income, and reported yield contrast with price near its 52-week low and below both moving averages. The single snapshot has no period comparison and recent company news is stale, so neither side dominates.",
     "winning_side": "neither",
-    "strongest_counterexample": "If the next financial update confirms stable or improving free cash flow and leverage while price reclaims SMA-200 at 3.0435, the current weakness could be an attractive income entry rather than deterioration.",
+    "strongest_counterexample": "A sustained close above SMA-50 alongside a later filing that maintains positive FCF would weaken the bear case; a new low under MYR 2.58 would weaken the bull case.",
     "invalidation_conditions": [
-      "Two consecutive closes above SMA-200 at 3.0435 with non-zero volume confirmation would invalidate the current technical caution",
-      "A reported period showing sustained free-cash-flow coverage of dividends and stable or lower debt/equity would weaken the balance-sheet objection",
-      "A close below the available 2.7752 lower-Bollinger area followed by a new closing low would invalidate the mean-reversion case"
+      "A sustained close above SMA-50 alongside a later filing that maintains positive FCF would weaken the bear case; a new low under MYR 2.58 would weaken the bull case."
     ],
     "evidence_gaps": [
-      "No usable dated company-news headlines",
-      "No revenue, EPS, subscriber, ARPU or multi-period growth series",
-      "No capex, debt-maturity, interest-cost or dividend-payout detail",
-      "Recent zero-valued OHLCV fields prevent reliable final-bar participation analysis"
+      "No statement-period label or comparative periods.",
+      "No recent company-specific news or dated recommendations.",
+      "No company-specific macro snapshot and no USD/MYR data."
     ],
     "decisive_factors": [
-      "RM2.2649B free cash flow and 29.69% operating margin support the business case",
-      "Approximately 0.87x debt/equity and missing cash-allocation detail limit balance-sheet confidence",
-      "Price below SMA-20, SMA-50, EMA-20 and SMA-200 with negative MACD favors caution",
-      "The four analyst layers do not converge: buy, neutral, sell and neutral"
+      "Snapshot reports MYR 2.26B FCF and 5.17% dividend yield.",
+      "Price is below SMA-50/SMA-200, near its 52-week low, with negative MACD.",
+      "Company headlines are from February-June 2026, not a current results update."
     ]
   },
   "agent_signal_breakdown": {
@@ -72,5 +65,7 @@
     "technical": "sell",
     "macro": "neutral"
   },
-  "pipeline_mode": "in-session-claude-code"
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
 }
