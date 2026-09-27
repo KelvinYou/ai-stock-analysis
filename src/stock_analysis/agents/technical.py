@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import json
+import math
+import statistics
+from itertools import pairwise
 
 from claude_agent_sdk import SdkMcpTool, tool
 from mcp.types import ToolAnnotations
@@ -14,6 +17,37 @@ from stock_analysis.models.market_data import TickerData
 from .base import BaseAnalystAgent
 
 
+def _bar_return(closes: list[float], lookback: int) -> float | None:
+    if len(closes) <= lookback:
+        return None
+    base = closes[-1 - lookback]
+    if not math.isfinite(base) or base == 0:
+        return None
+    return round(closes[-1] / base - 1, 4)
+
+
+def _bar_high(closes: list[float], lookback: int) -> float | None:
+    window = closes[-lookback:] if len(closes) >= lookback else closes
+    return round(max(window), 4) if window else None
+
+
+def _bar_low(closes: list[float], lookback: int) -> float | None:
+    window = closes[-lookback:] if len(closes) >= lookback else closes
+    return round(min(window), 4) if window else None
+
+
+def _daily_volatility(closes: list[float], lookback: int) -> float | None:
+    window = closes[-lookback - 1 :]
+    returns = [
+        current / previous - 1
+        for previous, current in pairwise(window)
+        if previous and math.isfinite(previous) and math.isfinite(current)
+    ]
+    if len(returns) < 2:
+        return None
+    return round(statistics.pstdev(returns), 4)
+
+
 def build_indicator_payload(ticker_data: TickerData) -> dict:
     """Return the exact deterministic indicator snapshot used downstream.
 
@@ -25,6 +59,9 @@ def build_indicator_payload(ticker_data: TickerData) -> dict:
         ticker_data.info.symbol,
         ticker_data.price_history,
     )
+    closes = [bar.close for bar in ticker_data.price_history]
+    highs = [bar.high for bar in ticker_data.price_history]
+    lows = [bar.low for bar in ticker_data.price_history]
     return {
         "as_of_date": snapshot.as_of_date.isoformat(),
         "rsi_14": snapshot.rsi_14,
@@ -68,7 +105,69 @@ def build_indicator_payload(ticker_data: TickerData) -> dict:
             "pct_from_high": snapshot.pct_from_52w_high,
             "pct_from_low": snapshot.pct_from_52w_low,
         },
+        "price_momentum": {
+            "return_5_bars": _bar_return(closes, 5),
+            "return_20_bars": _bar_return(closes, 20),
+            "return_60_bars": _bar_return(closes, 60),
+            "return_252_bars": _bar_return(closes, 252),
+        },
+        "observed_levels": {
+            "20_bar_high": _bar_high(highs, 20),
+            "20_bar_low": _bar_low(lows, 20),
+            "60_bar_high": _bar_high(highs, 60),
+            "60_bar_low": _bar_low(lows, 60),
+        },
+        "risk_context": {
+            "daily_volatility_20_bars": _daily_volatility(closes, 20),
+        },
     }
+
+
+def _normalise_levels(
+    levels: list[float],
+    *,
+    lower_bound: float,
+    upper_bound: float,
+) -> list[float]:
+    """Keep model-proposed levels inside the observed OHLC range."""
+
+    clean = {
+        round(level, 4)
+        for level in levels
+        if math.isfinite(level) and lower_bound <= level <= upper_bound
+    }
+    return sorted(clean)
+
+
+def canonicalize_technical_report(
+    report: TechnicalReport,
+    ticker_data: TickerData,
+) -> TechnicalReport:
+    """Make factual technical fields deterministic after the LLM explains them.
+
+    RSI is a canonical indicator, not a writing choice. Support/resistance are
+    still model-selected, but values outside every observed bar are discarded
+    rather than exposed as precise-looking invented levels.
+    """
+
+    snapshot = compute_technicals(ticker_data.info.symbol, ticker_data.price_history)
+    lower_bound = min(bar.low for bar in ticker_data.price_history)
+    upper_bound = max(bar.high for bar in ticker_data.price_history)
+    return report.model_copy(
+        update={
+            "rsi_14": snapshot.rsi_14,
+            "support_levels": _normalise_levels(
+                report.support_levels,
+                lower_bound=lower_bound,
+                upper_bound=min(upper_bound, snapshot.close),
+            ),
+            "resistance_levels": _normalise_levels(
+                report.resistance_levels,
+                lower_bound=snapshot.close,
+                upper_bound=upper_bound,
+            ),
+        }
+    )
 
 
 class TechnicalAgent(BaseAnalystAgent):
@@ -78,6 +177,10 @@ class TechnicalAgent(BaseAnalystAgent):
     def __init__(self, settings: Settings | None = None):
         s = settings or Settings()
         self.model = s.quick_think_model
+
+    async def analyze(self, ticker_data: TickerData) -> TechnicalReport:
+        report = await super().analyze(ticker_data)
+        return canonicalize_technical_report(report, ticker_data)
 
     def system_prompt(self) -> str:
         return (
@@ -90,7 +193,9 @@ class TechnicalAgent(BaseAnalystAgent):
             "- Compare current price to SMA-50 and SMA-200 for trend direction\n"
             "- Use ATR-14 and Bollinger Bands to distinguish volatility from trend\n"
             "- Check volume ratio and 52-week distance for confirmation, not as standalone signals\n"
-            "- Identify key support/resistance from recent highs/lows\n"
+            "- Use the provided trading-bar returns and observed highs/lows as descriptive context, not as guaranteed forecasts\n"
+            "- Identify key support/resistance from recent highs/lows; do not invent levels outside the observed range without saying so\n"
+            "- If the history is too short for an indicator, treat it as unavailable rather than estimating it\n"
             "- Provide a clear signal with confidence level\n"
             "- Keep your summary concise (2-3 sentences)"
         )

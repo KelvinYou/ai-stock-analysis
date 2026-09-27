@@ -122,10 +122,18 @@ def clean_price_history(frame: pd.DataFrame) -> pd.DataFrame:
 
     cleaned = frame.copy()
     cleaned["date"] = pd.to_datetime(cleaned["date"], errors="coerce")
+    if isinstance(cleaned["date"].dtype, pd.DatetimeTZDtype):
+        # Preserve the exchange's session date while removing timezone-aware
+        # indexing that would not match serialized ``date``-only fills.
+        cleaned["date"] = cleaned["date"].dt.tz_localize(None)
     for column in ("open", "close"):
         cleaned[column] = pd.to_numeric(cleaned[column], errors="coerce")
 
     cleaned = cleaned.dropna(subset=["date", "open", "close"])
+    finite_prices = cleaned["open"].map(math.isfinite) & cleaned["close"].map(
+        math.isfinite
+    )
+    cleaned = cleaned[finite_prices]
     cleaned = cleaned[(cleaned["open"] > 0) & (cleaned["close"] > 0)]
     cleaned = (
         cleaned.sort_values("date")

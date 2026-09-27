@@ -31,6 +31,7 @@ References: López de Prado, *Advances in Financial Machine Learning*, ch. 4
 from __future__ import annotations
 
 import math
+import random
 from datetime import date
 from statistics import NormalDist
 
@@ -38,13 +39,16 @@ from statistics import NormalDist
 _EULER_GAMMA = 0.5772156649015329
 
 _NORM = NormalDist()
+PORTFOLIO_EFFECTIVE_N_BASIS = "portfolio_overlap_clustered_v1"
 
 __all__ = [
+    "PORTFOLIO_EFFECTIVE_N_BASIS",
     "deflated_sharpe_ratio",
     "effective_sample_size",
     "expected_max_sharpe",
     "fisher_ci",
     "kurtosis",
+    "moving_block_bootstrap_ci",
     "probabilistic_sharpe_ratio",
     "skewness",
     "t_test_vs_zero",
@@ -124,8 +128,9 @@ def fisher_ci(r: float, n: int, z: float = 1.96) -> tuple[float, float] | None:
 def effective_sample_size(windows: list[tuple[str, date, date]]) -> float:
     """Discount overlapping holding periods to an independent-trial count.
 
-    `windows` is a list of `(group_key, start, end)` — group_key being whatever
-    makes two positions share a price path, normally the ticker.
+    `windows` is a list of `(group_key, start, end)`. The group key is the
+    dependence cluster: use a ticker for per-security estimates, or one shared
+    key such as `portfolio` to cluster same-date holdings across securities.
 
     A trial concurrent with `c` trials (itself included) contributes `1/c`
     rather than 1. Weekly trials on one ticker at a 30-day horizon collapse
@@ -137,9 +142,9 @@ def effective_sample_size(windows: list[tuple[str, date, date]]) -> float:
     simplified form is coarser but moves the number in the same direction and
     needs no bar-level data.
 
-    Cross-sectional dependence is **not** captured: three tech tickers analysed
-    on the same date are close to one bet on one sector, but this function will
-    count them as three. Treat the result as an upper bound on independence.
+    Cross-sectional dependence is captured only when callers provide a shared
+    group key across securities. Ticker-specific groups do not cluster separate
+    names; promotion metrics should use a portfolio-level key.
     """
     if not windows:
         return 0.0
@@ -154,6 +159,61 @@ def effective_sample_size(windows: list[tuple[str, date, date]]) -> float:
             concurrency = sum(1 for s, e in spans if start <= e and s <= end)
             total += 1.0 / concurrency if concurrency else 0.0
     return total
+
+
+def moving_block_bootstrap_ci(
+    values: list[float],
+    *,
+    block_length: int,
+    n_resamples: int = 2_000,
+    confidence_level: float = 0.95,
+    seed: int = 0,
+) -> tuple[float, float] | None:
+    """Return a moving-block bootstrap interval for the mean of a time series.
+
+    The input must contain one already-paired portfolio observation per date.
+    Resampling contiguous blocks preserves short-range serial dependence and
+    keeps same-date cross-sectional returns clustered into one observation.
+    A sample shorter than the registered block is insufficient and returns
+    ``None`` rather than silently shortening the block.
+    """
+    if block_length <= 0:
+        raise ValueError("block_length must be positive")
+    if n_resamples <= 0:
+        raise ValueError("n_resamples must be positive")
+    if not 0.0 < confidence_level < 1.0:
+        raise ValueError("confidence_level must be between 0 and 1")
+    if any(not math.isfinite(float(value)) for value in values):
+        raise ValueError("bootstrap values must all be finite")
+    if len(values) < max(2, block_length):
+        return None
+
+    sample_size = len(values)
+    rng = random.Random(seed)
+    estimates: list[float] = []
+    last_start = sample_size - block_length
+    for _ in range(n_resamples):
+        sample: list[float] = []
+        while len(sample) < sample_size:
+            start = rng.randint(0, last_start)
+            sample.extend(values[start : start + block_length])
+        estimates.append(sum(sample[:sample_size]) / sample_size)
+
+    estimates.sort()
+    tail = (1.0 - confidence_level) / 2.0
+    return (
+        _linear_quantile(estimates, tail),
+        _linear_quantile(estimates, 1.0 - tail),
+    )
+
+
+def _linear_quantile(sorted_values: list[float], probability: float) -> float:
+    """Interpolate an empirical quantile from an already sorted sample."""
+    position = probability * (len(sorted_values) - 1)
+    lower = int(position)
+    upper = min(lower + 1, len(sorted_values) - 1)
+    fraction = position - lower
+    return sorted_values[lower] + fraction * (sorted_values[upper] - sorted_values[lower])
 
 
 # ----------------------------------------------------------------------

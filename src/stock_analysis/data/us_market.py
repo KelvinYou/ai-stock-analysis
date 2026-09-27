@@ -12,6 +12,7 @@ from stock_analysis.models.market_data import (
     TickerInfo,
 )
 
+from .evidence import normalize_news_item
 from .fetcher_base import BaseFetcher, has_splits_since, reject_unusable_bars
 
 
@@ -123,14 +124,12 @@ class USMarketFetcher(BaseFetcher):
 
     def _extract_news(self, stock: yf.Ticker) -> list[dict]:
         try:
-            return [
-                {
-                    "title": item.get("title", ""),
-                    "link": item.get("link", ""),
-                    "publisher": item.get("publisher", ""),
-                }
-                for item in (stock.news or [])[:10]
-            ]
+            news = []
+            for item in (stock.news or [])[:10]:
+                normalized = normalize_news_item(item)
+                if normalized is not None:
+                    news.append(normalized)
+            return news
         except Exception:
             return []
 

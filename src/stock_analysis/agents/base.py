@@ -63,7 +63,11 @@ class BaseAnalystAgent(ABC):
             f"Analyze the stock {ticker_data.info.symbol} ({ticker_data.info.name}). "
             f"Use the available tools to retrieve the data you need, then produce your analysis. "
             f"Sector: {ticker_data.info.sector or 'Unknown'}. "
-            f"Industry: {ticker_data.info.industry or 'Unknown'}."
+            f"Industry: {ticker_data.info.industry or 'Unknown'}. "
+            f"Analysis cutoff: {ticker_data.fetched_at.date().isoformat()}. "
+            f"Latest price bar: "
+            f"{ticker_data.price_history[-1].date.isoformat() if ticker_data.price_history else 'unavailable'}. "
+            "Use only evidence returned by the tools and do not fill missing fields from memory."
         )
 
         result_json: dict[str, Any] | None = None

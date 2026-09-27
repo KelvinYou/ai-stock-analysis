@@ -7,6 +7,7 @@ from mcp.types import ToolAnnotations
 from pydantic import BaseModel
 
 from stock_analysis.config import Settings
+from stock_analysis.data.evidence import macro_snapshot_is_usable
 from stock_analysis.models.agent_reports import Confidence, MacroFXReport, Signal
 from stock_analysis.models.market_data import TickerData
 
@@ -16,12 +17,31 @@ from .base import BaseAnalystAgent
 def build_macro_snapshot(ticker_data: TickerData) -> dict:
     """Build a point-in-time macro envelope without inventing unavailable facts.
 
-    The project does not currently ingest dated Fed/BNM/FX observations. An
-    explicit unavailable snapshot is safer than feeding every historical trial
-    a stale present-day paragraph, which would create both leakage and false
-    confidence.
+    A replay snapshot is usable only when both its observation date and its
+    first-available date are on or before the analysis date. An explicit
+    unavailable snapshot is safer than feeding a stale present-day paragraph,
+    which would create both leakage and false confidence.
     """
-    as_of = ticker_data.fetched_at.date().isoformat()
+    as_of_date = ticker_data.fetched_at.date()
+    snapshot = ticker_data.macro_snapshot
+    if macro_snapshot_is_usable(snapshot, as_of_date):
+        return {
+            "status": "available",
+            "as_of": snapshot.as_of_date.isoformat(),
+            "available_as_of": snapshot.available_as_of.isoformat(),
+            "source": snapshot.source,
+            "fed": {
+                "fed_funds_rate": snapshot.fed_funds_rate,
+                "inflation": snapshot.inflation,
+            },
+            "bnm": {"opr": snapshot.bnm_opr},
+            "fx": {"usd_myr": snapshot.usd_myr},
+            "sector": ticker_data.info.sector,
+            "sector_factors": snapshot.sector_factors,
+            "geopolitical_risks": snapshot.geopolitical_risks,
+        }
+
+    as_of = as_of_date.isoformat()
     return {
         "status": "unavailable",
         "as_of": as_of,
@@ -39,7 +59,6 @@ def build_macro_snapshot(ticker_data: TickerData) -> dict:
             "historical rates, FX, inflation, or geopolitical facts from memory."
         ),
     }
-
 
 class MacroFXAgent(BaseAnalystAgent):
     name = "macro"
@@ -63,7 +82,43 @@ class MacroFXAgent(BaseAnalystAgent):
                 geopolitical_risks=[],
                 summary="Macro/FX data is unavailable; no directional view is assigned.",
             )
-        return await super().analyze(ticker_data)
+        return self.canonicalize_report(await super().analyze(ticker_data), ticker_data)
+
+    @staticmethod
+    def canonicalize_report(
+        report: MacroFXReport,
+        ticker_data: TickerData,
+    ) -> MacroFXReport:
+        """Remove model claims whose corresponding macro source is absent."""
+
+        snapshot = ticker_data.macro_snapshot
+        if not macro_snapshot_is_usable(snapshot, ticker_data.fetched_at.date()):
+            return report.model_copy(
+                update={
+                    "signal": Signal.NEUTRAL,
+                    "confidence": Confidence.LOW,
+                    "sector_macro_factors": [],
+                    "geopolitical_risks": [],
+                    "fx_impact": None,
+                }
+            )
+
+        assert snapshot is not None
+        updates = {
+            "fx_impact": report.fx_impact if snapshot.usd_myr is not None else None,
+            "sector_macro_factors": (
+                report.sector_macro_factors if snapshot.sector_factors else []
+            ),
+            "geopolitical_risks": (
+                report.geopolitical_risks if snapshot.geopolitical_risks else []
+            ),
+        }
+        if snapshot.fed_funds_rate is None and snapshot.bnm_opr is None:
+            updates["fed_impact"] = "Unavailable: no dated central-bank rate value in snapshot."
+            updates["interest_rate_outlook"] = (
+                "Unavailable: no dated central-bank rate value in snapshot."
+            )
+        return report.model_copy(update=updates)
 
     def system_prompt(self) -> str:
         return (
@@ -72,11 +127,12 @@ class MacroFXAgent(BaseAnalystAgent):
             "factors affect the stock under analysis.\n\n"
             "Guidelines:\n"
             "- Consider the stock's sector sensitivity to macro factors\n"
-            "- Assess how current rate environment affects the company's cost of capital\n"
-            "- Identify geopolitical risks relevant to the company's operations/supply chain\n"
+            "- Assess how the dated rate environment affects the company's cost of capital only when the macro snapshot supplies the relevant value\n"
+            "- Identify geopolitical risks relevant to the company's operations/supply chain only when they appear in the dated macro snapshot\n"
             "- For Malaysian stocks, specifically consider MYR/USD impact and BNM policy\n"
             "- If the macro tool reports an unavailable snapshot, do not invent facts; "
             "use neutral/low confidence unless dated macro evidence is present\n"
+            "- Do not turn a generic sector sensitivity into a directional signal without an observed macro factor\n"
             "- Provide a clear signal with confidence level\n"
             "- Keep your summary concise (2-3 sentences)"
         )

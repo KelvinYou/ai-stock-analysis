@@ -1,18 +1,19 @@
 from __future__ import annotations
 
 import logging
+import math
 from collections.abc import Iterable
 from datetime import date, timedelta
-from pathlib import Path
 
 import pandas as pd
 import yfinance as yf
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from stock_analysis.config import Settings
 from stock_analysis.data.cloud import build_store
 from stock_analysis.data.my_market import BURSA_ALIASES
 from stock_analysis.models.agent_reports import Signal
+from stock_analysis.models.market_data import MacroSnapshot, PriceBar
 from stock_analysis.models.synthesis import Briefing
 from stock_analysis.orchestrator import AnalysisPipeline
 
@@ -42,6 +43,14 @@ def execution_signal(briefing: Briefing) -> Signal:
     return briefing.overall_signal
 
 
+def execution_signal_gate_reasons(briefing: Briefing) -> list[str]:
+    """Return stable reason codes for gates applied before execution."""
+    reasons = list(briefing.signal_gate_reasons)
+    if briefing.action_plan is not None and briefing.action_plan.note:
+        reasons.append("execution_action_plan_note_present")
+    return list(dict.fromkeys(reasons))
+
+
 class BacktestTrial(BaseModel):
     """Result of a single (ticker, as_of_date) trial."""
 
@@ -56,7 +65,21 @@ class BacktestTrial(BaseModel):
     conviction_score: float
     signal_convergence: float
     agent_signals: dict[str, str]
+    # Input analyst calls before strategy-name normalization or evidence guards.
+    # Session scoring may neutralize unavailable evidence in agent_signals while
+    # preserving the source labels here.
+    raw_agent_signals: dict[str, str] = Field(default_factory=dict)
+    # Synthesizer choice before deterministic gates; None means the source
+    # briefing predates signal tracing.
+    synthesized_signal: Signal | None = None
+    # Stable gate reason codes; overall_signal remains the final executable
+    # direction consumed by scoring and portfolio simulation.
+    signal_gate_reasons: list[str] = Field(default_factory=list)
     error: str | None = None
+    # Actual fill date. Older sealed bundles omit this and fall back to
+    # ``as_of_date`` for compatibility; newly generated runs use next-session
+    # open fills.
+    entry_date: date | None = None
 
 
 class BacktestResult(BaseModel):
@@ -66,6 +89,12 @@ class BacktestResult(BaseModel):
     settings: dict
     started_at: date
     finished_at: date
+    # Shared daily marks from the same provider response used to compute trial
+    # outcomes. Optional so previously written artifacts remain readable.
+    price_paths: dict[str, list[PriceBar]] = Field(default_factory=dict)
+    # Optional dated FRED DFF observations. Kept in the scored artifact so a
+    # later rescore reproduces the cash-yield diagnostic without refetching.
+    cash_rate_path: list[MacroSnapshot] = Field(default_factory=list)
 
 
 class Backtester:
@@ -94,13 +123,18 @@ class Backtester:
         self,
         tickers: Iterable[str],
         as_of_dates: Iterable[date],
-        resume: bool = True,
+        resume: bool = False,
     ) -> BacktestResult:
         """Run the pipeline for every (ticker × as_of_date) pair.
 
-        If `resume` is True, trials whose briefing.json already exists on disk
-        are reloaded instead of re-run — useful for expensive LLM calls.
+        Unversioned cached briefings cannot prove which model, prompt, or
+        evidence produced them, so confirmatory API runs always regenerate.
         """
+        if resume:
+            raise ValueError(
+                "API backtest resume is unsafe without cache provenance; "
+                "rerun with resume=False."
+            )
         tickers = list(tickers)
         as_of_dates = sorted(set(as_of_dates))
         started_at = date.today()
@@ -115,7 +149,7 @@ class Backtester:
         for ticker in tickers:
             for as_of in as_of_dates:
                 try:
-                    trial = await self._run_one(ticker, as_of, forward_series[ticker], resume)
+                    trial = await self._run_one(ticker, as_of, forward_series[ticker])
                 except Exception as exc:
                     logger.exception("Trial failed: %s @ %s", ticker, as_of)
                     trial = BacktestTrial(
@@ -140,6 +174,9 @@ class Backtester:
                 "market": self.market,
                 "horizon_days": self.horizon_days,
                 "lookback_days": self.lookback_days,
+                "entry_execution": "next_session_open",
+                "price_path_source": "yfinance_auto_adjusted_ohlc",
+                "signal_trace_schema": 1,
                 "quick_think_model": self.settings.quick_think_model,
                 "deep_think_model": self.settings.deep_think_model,
                 "synthesis_model": self.settings.synthesis_model,
@@ -147,6 +184,11 @@ class Backtester:
             },
             started_at=started_at,
             finished_at=date.today(),
+            price_paths={
+                ticker.upper(): self._price_bars(forward_series[ticker])
+                for ticker in tickers
+                if not forward_series[ticker].empty
+            },
         )
 
     # ------------------------------------------------------------------
@@ -155,44 +197,31 @@ class Backtester:
         ticker: str,
         as_of: date,
         forward_series: pd.DataFrame,
-        resume: bool,
     ) -> BacktestTrial:
-        # Check cache first
-        briefing: Briefing | None = None
-        if resume:
-            if self.settings.storage_backend == "supabase":
-                briefing = self.store.load_briefing(ticker, for_date=as_of)
-            else:
-                store_path = (
-                    Path(self.settings.data_dir)
-                    / ticker.upper()
-                    / as_of.isoformat()
-                    / "briefing.json"
-                )
-                if store_path.exists():
-                    briefing = Briefing.model_validate_json(store_path.read_text())
-            if briefing is not None:
-                logger.info("[%s @ %s] Resuming from cached briefing", ticker, as_of)
+        fetcher = BacktestFetcher(
+            as_of_date=as_of,
+            market=self.market,
+            lookback_days=self.lookback_days,
+        )
+        pipeline = AnalysisPipeline(
+            settings=self.settings,
+            market=self.market,
+            fetcher=fetcher,
+            as_of_date=as_of,
+        )
+        logger.info("[%s @ %s] Running pipeline", ticker, as_of)
+        try:
+            briefing = await pipeline.run(ticker)
+        finally:
+            pipeline.close()
 
-        if briefing is None:
-            fetcher = BacktestFetcher(
-                as_of_date=as_of,
-                market=self.market,
-                lookback_days=self.lookback_days,
-            )
-            pipeline = AnalysisPipeline(
-                settings=self.settings,
-                market=self.market,
-                fetcher=fetcher,
-                as_of_date=as_of,
-            )
-            logger.info("[%s @ %s] Running pipeline", ticker, as_of)
-            try:
-                briefing = await pipeline.run(ticker)
-            finally:
-                pipeline.close()
-
-        entry_price, _entry_date = self._price_on_or_after(forward_series, as_of)
+        raw_agent_signals = dict(briefing.agent_signal_breakdown)
+        agent_signals = _normalise_agent_signals(raw_agent_signals)
+        entry_price, entry_date = self._price_on_or_after(
+            forward_series,
+            as_of + timedelta(days=1),
+            price_column="Open",
+        )
         exit_price, exit_date = self._price_on_or_after(
             forward_series, as_of + timedelta(days=self.horizon_days)
         )
@@ -213,16 +242,18 @@ class Backtester:
             overall_signal=execution_signal(briefing),
             conviction_score=briefing.conviction.score,
             signal_convergence=briefing.conviction.signal_convergence,
-            agent_signals=_normalise_agent_signals(
-                dict(briefing.agent_signal_breakdown)
-            ),
+            agent_signals=agent_signals,
+            raw_agent_signals=raw_agent_signals,
+            synthesized_signal=briefing.synthesized_signal,
+            signal_gate_reasons=execution_signal_gate_reasons(briefing),
+            entry_date=entry_date,
         )
 
     # ------------------------------------------------------------------
     def _fetch_price_series(self, ticker: str, start: date, end: date) -> pd.DataFrame:
         yf_ticker = self._resolve_yf(ticker)
         hist = yf.Ticker(yf_ticker).history(
-            start=start.isoformat(), end=end.isoformat()
+            start=start.isoformat(), end=end.isoformat(), auto_adjust=True
         )
         if hist.empty:
             logger.warning("No forward price data for %s", ticker)
@@ -239,7 +270,12 @@ class Backtester:
         return f"{t}.KL"
 
     @staticmethod
-    def _price_on_or_after(hist: pd.DataFrame, target: date):
+    def _price_on_or_after(
+        hist: pd.DataFrame,
+        target: date,
+        *,
+        price_column: str = "Close",
+    ):
         if hist.empty:
             return None, None
         dates = hist.index.date
@@ -248,4 +284,42 @@ class Backtester:
             return None, None
         idx = mask.argmax()
         row = hist.iloc[idx]
-        return float(row["Close"]), hist.index[idx].date()
+        if price_column not in row or pd.isna(row[price_column]):
+            return None, None
+        price = float(row[price_column])
+        if not math.isfinite(price) or price <= 0:
+            return None, None
+        return price, hist.index[idx].date()
+
+    @staticmethod
+    def _price_bars(hist: pd.DataFrame) -> list[PriceBar]:
+        bars: list[PriceBar] = []
+        required = ("Open", "High", "Low", "Close", "Volume")
+        for column in required:
+            if column not in hist.columns:
+                return []
+        for timestamp, row in hist.iterrows():
+            values = [row[column] for column in required]
+            if any(pd.isna(value) for value in values):
+                continue
+            open_, high, low, close = (float(value) for value in values[:4])
+            raw_volume = float(row["Volume"])
+            if (
+                not all(math.isfinite(value) for value in (open_, high, low, close))
+                or not math.isfinite(raw_volume)
+                or min(open_, high, low, close) <= 0
+                or raw_volume < 0
+            ):
+                continue
+            volume = int(raw_volume)
+            bars.append(
+                PriceBar(
+                    date=timestamp.date(),
+                    open=open_,
+                    high=high,
+                    low=low,
+                    close=close,
+                    volume=volume,
+                )
+            )
+        return bars

@@ -55,6 +55,10 @@ class PartitionReport(BaseModel):
     overall_hit_rate: float | None
     directional_mean_return: float | None
     conviction_weighted_return: float | None
+    # Historical field name retained for output compatibility. This is the
+    # arithmetic mean of every completed trial's realized return, not a
+    # portfolio-level buy-and-hold simulation. Use backtest.portfolio for the
+    # strict long-hold benchmark.
     buy_and_hold_mean_return: float | None
     directional_sharpe: float | None
     info_coefficient: float | None
@@ -68,9 +72,11 @@ class PartitionReport(BaseModel):
     active_mean_return: float | None = None  # same denominator as the hit rate
 
     # --- Uncertainty --------------------------------------------------
-    # `effective_n` discounts overlapping holding windows. Every t-statistic
-    # below uses it in place of the nominal trial count.
+    # Same-date securities are clustered as one portfolio observation, then
+    # overlapping holding windows are discounted. Every t-statistic below uses
+    # this portfolio-level denominator instead of the nominal trial count.
     effective_n: float | None = None
+    effective_n_basis: str = stats.PORTFOLIO_EFFECTIVE_N_BASIS
     hit_rate_ci_95: tuple[float, float] | None = None
     directional_mean_t_stat: float | None = None
     directional_mean_p_value: float | None = None
@@ -145,9 +151,10 @@ class Scorer:
             f"({report.completed_trials} completed, {report.errored_trials} errored)"),
             f"- Pipeline mode: {result.settings.get('pipeline_mode', 'api')}",
             (f"- Models: quick={result.settings.get('quick_think_model')} "
-            f"deep={result.settings.get('deep_think_model')} "
-            f"rounds={result.settings.get('debate_rounds')}"),
+                f"deep={result.settings.get('deep_think_model')} "
+                f"rounds={result.settings.get('debate_rounds')}"),
         ]
+        lines += _evidence_coverage_lines(result)
         if report.effective_cutoff is not None:
             lines.append(
                 f"- Training cutoff: {report.effective_cutoff.isoformat()} "
@@ -160,6 +167,7 @@ class Scorer:
         ]
         lines += _metric_lines(report)
         lines += ["", "## By signal (all trials)", "", *_bucket_table(report.buckets)]
+        lines += _signal_trace_lines(result)
 
         if report.pre_cutoff is not None and report.post_cutoff is not None:
             lines += [
@@ -234,14 +242,10 @@ def _compute_partition(
     ]
     conviction_weighted = [t.conviction_score * t.realized_return for t in completed]
 
-    # Independence: overlapping holding windows are not separate observations.
-    # Only directional trials commit capital, so only they carry a window.
+    # A rebalance date is one cross-sectional cluster for inference. A shared
+    # key discounts both same-date securities and overlapping holding windows.
     n_eff = stats.effective_sample_size(
-        [
-            (t.ticker, t.as_of_date, t.exit_date)
-            for t in directional
-            if t.exit_date is not None
-        ]
+        [("portfolio", t.as_of_date, t.exit_date) for t in directional if t.exit_date is not None]
     )
     n_eff = n_eff or None
 
@@ -338,7 +342,10 @@ def _metric_lines(r: PartitionReport | ScoreReport) -> list[str]:
             f"{_significance_note(r.directional_mean_p_value)}"
         ),
         f"- Conviction-weighted mean return: {_fmt_pct(r.conviction_weighted_return)}",
-        f"- Buy-and-hold baseline mean return: {_fmt_pct(r.buy_and_hold_mean_return)}",
+        (
+            "- Mean realized return across all trials "
+            f"(not a portfolio hold): {_fmt_pct(r.buy_and_hold_mean_return)}"
+        ),
         f"- Per-trial Sharpe (directional, gross): {_fmt_float(r.directional_sharpe)}",
         ic,
     ]
@@ -351,7 +358,9 @@ def _metric_lines(r: PartitionReport | ScoreReport) -> list[str]:
                 f" — overlapping holding windows collapse {r.directional_trials} nominal "
                 f"trials to {r.effective_n:.1f} independent ones ({ratio * 100:.0f}%)"
             )
-        lines.append(f"- Effective sample size: {r.effective_n:.1f}{overlap}")
+        lines.append(
+            f"- Effective sample size (portfolio date-clustered): {r.effective_n:.1f}{overlap}"
+        )
 
     if r.directional_mean_t_stat is not None:
         lines.append(
@@ -391,6 +400,108 @@ def _metric_lines(r: PartitionReport | ScoreReport) -> list[str]:
     return lines
 
 
+def _evidence_coverage_lines(result: BacktestResult) -> list[str]:
+    """Render point-in-time evidence coverage when the session mode records it."""
+
+    coverage = result.settings.get("evidence_coverage")
+    if not isinstance(coverage, dict):
+        return []
+    total = coverage.get("total_trials")
+    available = coverage.get("available")
+    sources = coverage.get("sources")
+    if not isinstance(total, int) or total <= 0 or not isinstance(available, dict):
+        return []
+
+    lines = [
+        "",
+        "## Point-in-time evidence coverage",
+        "",
+        "Availability is reported separately from signal direction; unavailable evidence is not treated as a bearish view.",
+    ]
+    for name in ("technical", "fundamentals", "sentiment", "macro"):
+        count = available.get(name, 0)
+        if not isinstance(count, int):
+            continue
+        lines.append(f"- {name}: {count}/{total} trials ({count / total:.1%})")
+        source_counts = sources.get(name) if isinstance(sources, dict) else None
+        if isinstance(source_counts, dict) and source_counts:
+            detail = ", ".join(
+                f"{source} {source_count}/{total}"
+                for source, source_count in sorted(source_counts.items())
+                if isinstance(source_count, int)
+            )
+            if detail:
+                lines.append(f"  - Sources: {detail}")
+    lines.append(
+        "- Availability counts input presence, not feed completeness or independent corroboration."
+    )
+    return lines
+
+
+def _signal_trace_lines(result: BacktestResult) -> list[str]:
+    """Summarize signal flow without treating label overlap as forecast skill."""
+
+    traced = [
+        trial for trial in result.trials if trial.synthesized_signal is not None
+    ]
+    if not traced:
+        return []
+
+    def key(trial: BacktestTrial) -> tuple[str, date]:
+        return (trial.ticker.upper(), trial.as_of_date)
+
+    def is_buy(signal: Signal | str | None) -> bool:
+        value = signal.value if isinstance(signal, Signal) else str(signal)
+        return value in {Signal.BUY.value, Signal.STRONG_BUY.value}
+
+    synthesized_buys = {
+        key(trial) for trial in traced if is_buy(trial.synthesized_signal)
+    }
+    executable_buys = {
+        key(trial) for trial in traced if is_buy(trial.overall_signal)
+    }
+    technical_rows = [
+        trial for trial in traced if "technical" in trial.raw_agent_signals
+    ]
+    technical_buys = {
+        key(trial)
+        for trial in technical_rows
+        if is_buy(trial.raw_agent_signals.get("technical"))
+    }
+    gate_counts: dict[str, int] = {}
+    for trial in traced:
+        for reason in trial.signal_gate_reasons:
+            gate_counts[reason] = gate_counts.get(reason, 0) + 1
+
+    lines = [
+        "",
+        "## Signal trace (descriptive)",
+        "",
+        (
+            f"- Pre-gate synthesized BUY: {len(synthesized_buys)}/{len(traced)}; "
+            f"final executable BUY: {len(executable_buys)}/{len(traced)}; "
+            f"pre-gate buys blocked: {len(synthesized_buys - executable_buys)}."
+        ),
+    ]
+    if technical_rows:
+        overlap = synthesized_buys & technical_buys
+        lines.append(
+            f"- Raw technical BUY: {len(technical_buys)}/{len(technical_rows)}; "
+            f"same-trial overlap with pre-gate synthesized BUY: {len(overlap)}."
+        )
+    if gate_counts:
+        lines.append(
+            "- Gate reasons: "
+            + ", ".join(
+                f"{reason} {count}" for reason, count in sorted(gate_counts.items())
+            )
+        )
+    lines.append(
+        "- These are label-flow counts only; they do not measure forecast performance."
+    )
+    return lines
+
+
 def _small_sample_warning(r: PartitionReport) -> list[str]:
     """Escalating warnings, keyed on effective rather than nominal sample size.
 
@@ -407,9 +518,9 @@ def _small_sample_warning(r: PartitionReport) -> list[str]:
             f"> ⚠ Effective sample size is {n_eff:.1f} "
             f"({r.directional_trials} nominal directional trials). Below ~30 the "
             "interval estimates above are wide enough that almost any point "
-            "estimate is consistent with zero edge. Extend the date range, add "
-            "tickers, or widen the interval between as-of dates so windows stop "
-            "overlapping."
+            "estimate is consistent with zero edge. Extend the pre-registered "
+            "date range or widen the interval between as-of dates; adding names "
+            "on an already-scored date does not create another portfolio period."
         )
     if r.directional_trials and n_eff < r.directional_trials * 0.5:
         notes.append(

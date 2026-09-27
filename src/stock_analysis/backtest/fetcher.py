@@ -1,11 +1,12 @@
 from __future__ import annotations
 
+from collections.abc import Iterable
 from datetime import date, datetime, time, timedelta
 
 import pandas as pd
 import yfinance as yf
 
-from stock_analysis.data.fetcher_base import BaseFetcher
+from stock_analysis.data.fetcher_base import BaseFetcher, reject_unusable_bars
 from stock_analysis.data.my_market import BURSA_ALIASES
 from stock_analysis.models.market_data import (
     FinancialStatements,
@@ -20,10 +21,10 @@ class BacktestFetcher(BaseFetcher):
     """Point-in-time fetcher that produces TickerData *as if* on a past date.
 
     Truncates price history strictly to `as_of_date`, filters financial
-    statements to those whose fiscal period ended at least `financial_lag_days`
-    before `as_of_date` (a coarse proxy for filing availability), and drops
-    news and analyst recommendations — yfinance returns current ones, which
-    leaks the future.
+    statements using the SEC filing date exposed by yfinance, and drops news
+    and analyst recommendations — yfinance returns current ones, which leaks
+    the future. If a statement period cannot be matched to a filing date, it
+    is not used as point-in-time evidence.
     """
 
     def __init__(
@@ -31,18 +32,16 @@ class BacktestFetcher(BaseFetcher):
         as_of_date: date,
         market: str = "US",
         lookback_days: int = 365,
-        financial_lag_days: int = 45,
     ):
         self.as_of_date = as_of_date
         self.market = market.upper()
         self.lookback_days = lookback_days
-        self.financial_lag_days = financial_lag_days
 
     def fetch(self, ticker: str) -> TickerData:
         yf_ticker = self._resolve_ticker(ticker)
         stock = yf.Ticker(yf_ticker)
 
-        price_history = self._fetch_price_history(stock)
+        price_history = self._fetch_price_history(stock, ticker)
         if not price_history:
             raise RuntimeError(
                 f"No price history for {ticker} on or before {self.as_of_date}"
@@ -63,10 +62,14 @@ class BacktestFetcher(BaseFetcher):
     # ------------------------------------------------------------------
     # price history
     # ------------------------------------------------------------------
-    def _fetch_price_history(self, stock: yf.Ticker) -> list[PriceBar]:
+    def _fetch_price_history(
+        self, stock: yf.Ticker, ticker: str | None = None
+    ) -> list[PriceBar]:
         start = self.as_of_date - timedelta(days=self.lookback_days + 30)
         end = self.as_of_date + timedelta(days=1)
-        hist = stock.history(start=start.isoformat(), end=end.isoformat())
+        hist = stock.history(
+            start=start.isoformat(), end=end.isoformat(), auto_adjust=True
+        )
         if hist.empty:
             return []
 
@@ -74,7 +77,7 @@ class BacktestFetcher(BaseFetcher):
         # yfinance history is inclusive on start, exclusive on end.
         hist = hist[hist.index.date <= self.as_of_date]
 
-        return [
+        bars = [
             PriceBar(
                 date=idx.date(),
                 open=round(row["Open"], 4),
@@ -85,10 +88,11 @@ class BacktestFetcher(BaseFetcher):
             )
             for idx, row in hist.iterrows()
         ]
+        return reject_unusable_bars(ticker or "backtest", bars)
 
     # ------------------------------------------------------------------
-    # financials — pick the latest statement whose fiscal period end
-    # is at least `financial_lag_days` before as_of_date
+    # financials — pick the latest statement whose mapped SEC filing date is
+    # on or before as_of_date
     # ------------------------------------------------------------------
     def _extract_financials(self, stock: yf.Ticker) -> FinancialStatements | None:
         try:
@@ -109,9 +113,10 @@ class BacktestFetcher(BaseFetcher):
         if inc is None or inc.empty:
             return None
 
-        col = self._pick_statement_column(inc)
-        if col is None:
+        selected = self._pick_statement_column(stock, inc)
+        if selected is None:
             return None
+        col, fiscal_period_end, available_as_of = selected
 
         latest_inc = inc[col] if col in inc.columns else None
         latest_bal = (
@@ -127,6 +132,11 @@ class BacktestFetcher(BaseFetcher):
         net_income = self._safe_get(latest_inc, "Net Income")
         gross_profit = self._safe_get(latest_inc, "Gross Profit")
         operating_income = self._safe_get(latest_inc, "Operating Income")
+        if all(
+            value is None
+            for value in (revenue, net_income, gross_profit, operating_income)
+        ):
+            return None
 
         return FinancialStatements(
             revenue=revenue,
@@ -139,14 +149,70 @@ class BacktestFetcher(BaseFetcher):
                 operating_income / revenue if revenue and operating_income else None
             ),
             net_margin=(net_income / revenue) if revenue and net_income else None,
+            fiscal_period_end=fiscal_period_end,
+            available_as_of=available_as_of,
+            availability_source="yahoo_sec_filing",
         )
 
-    def _pick_statement_column(self, df: pd.DataFrame):
-        cutoff = self.as_of_date - timedelta(days=self.financial_lag_days)
-        eligible = [c for c in df.columns if self._to_date(c) and self._to_date(c) <= cutoff]
+    def _pick_statement_column(
+        self, stock: yf.Ticker, df: pd.DataFrame
+    ) -> tuple[object, date, date] | None:
+        filing_dates = self._filing_dates_by_period(stock, df.columns)
+        eligible: list[tuple[object, date, date]] = []
+        for column in df.columns:
+            period_end = self._to_date(column)
+            if period_end is None:
+                continue
+            available_dates = [
+                filing_date
+                for filing_date in filing_dates.get(period_end, [])
+                if filing_date <= self.as_of_date
+            ]
+            if available_dates:
+                eligible.append((column, period_end, max(available_dates)))
         if not eligible:
             return None
-        return max(eligible, key=lambda c: self._to_date(c))
+        return max(eligible, key=lambda item: item[1])
+
+    def _filing_dates_by_period(
+        self, stock: yf.Ticker, statement_columns: Iterable[object]
+    ) -> dict[date, list[date]]:
+        """Map statement periods to filing dates from yfinance SEC metadata.
+
+        yfinance exposes the filing date and exhibit URLs, but not a stable
+        report-period field. Restrict URL matching to periods that actually
+        exist in the statement frame so accession-number dates cannot be
+        mistaken for a fiscal period.
+        """
+        period_tokens = {
+            period.strftime("%Y%m%d"): period
+            for column in statement_columns
+            if (period := self._to_date(column)) is not None
+        }
+        if not period_tokens:
+            return {}
+
+        try:
+            filings = stock.sec_filings
+        except Exception:
+            return {}
+        if isinstance(filings, dict):
+            filings = filings.get("filings", [])
+
+        result: dict[date, list[date]] = {}
+        for filing in filings or []:
+            if filing.get("type") not in {"10-Q", "10-K"}:
+                continue
+            filing_date = self._to_date(filing.get("date"))
+            if filing_date is None:
+                continue
+            exhibits = filing.get("exhibits") or {}
+            urls = [filing.get("edgarUrl", ""), *exhibits.values()]
+            filing_text = " ".join(str(url) for url in urls)
+            for token, period in period_tokens.items():
+                if token in filing_text:
+                    result.setdefault(period, []).append(filing_date)
+        return result
 
     @staticmethod
     def _to_date(c) -> date | None:
@@ -165,16 +231,13 @@ class BacktestFetcher(BaseFetcher):
     def _build_info(
         self,
         display_symbol: str,
-        stock: yf.Ticker,
+        _stock: yf.Ticker,
         price_history: list[PriceBar],
         financials: FinancialStatements | None,
     ) -> TickerInfo:
-        # Static metadata we allow to leak (sector/industry/name/currency)
-        # — these are stable and don't encode future information.
-        try:
-            raw_info = stock.info
-        except Exception:
-            raw_info = {}
+        # Current provider metadata is not point-in-time, including a name
+        # changed by a future rebrand or a currency changed by relisting.
+        # Use only deterministic identifiers until dated metadata is supplied.
 
         # Truncated 52-week high/low from price history
         last_year = [
@@ -196,13 +259,13 @@ class BacktestFetcher(BaseFetcher):
             sym = sym[:-3]
 
         market_enum = Market.MY if self.market == "MY" else Market.US
-        currency = raw_info.get("currency", "MYR" if market_enum == Market.MY else "USD")
+        currency = "MYR" if market_enum == Market.MY else "USD"
 
         return TickerInfo(
             symbol=sym,
-            name=raw_info.get("shortName", raw_info.get("longName", sym)),
-            sector=raw_info.get("sector"),
-            industry=raw_info.get("industry"),
+            name=sym,
+            sector=None,
+            industry=None,
             market=market_enum,
             currency=currency,
             market_cap=market_cap,

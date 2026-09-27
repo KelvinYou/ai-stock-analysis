@@ -23,7 +23,10 @@ from stock_analysis.models.debate import DebateResult, ResearchVerdict
 from stock_analysis.models.market_data import TickerData
 from stock_analysis.models.synthesis import Briefing
 from stock_analysis.synthesis.risk_checker import RiskChecker
-from stock_analysis.synthesis.synthesizer import SynthesizerAgent
+from stock_analysis.synthesis.synthesizer import (
+    SynthesizerAgent,
+    canonicalize_agent_signal_breakdown,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -193,7 +196,14 @@ class AnalysisPipeline:
         # synthesis again — and skip the outcome-memory read it no longer needs.
         finished = self._resume("briefing", Briefing)
         if finished is not None:
-            return finished
+            canonical = canonicalize_agent_signal_breakdown(finished, analyst_reports)
+            if canonical is not finished:
+                # Cached briefings may predate deterministic attribution. This
+                # migration is deliberately narrow: do not spend model tokens
+                # or rewrite the thesis; only repair the derived field.
+                self.store.save_briefing(ticker, canonical, self.as_of_date)
+                logger.info("[Resume] Repaired cached analyst signal attribution")
+            return canonical
 
         # === Outcome memory read ===
         # Read before synthesis because it is an input to it. Gated on
