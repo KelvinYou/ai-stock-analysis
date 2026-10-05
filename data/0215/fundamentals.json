@@ -6,11 +6,11 @@
     "industry": "Solar",
     "market": "MY",
     "currency": "MYR",
-    "market_cap": 4079752960.0,
-    "pe_ratio": 46.333332,
-    "forward_pe": 25.234493,
-    "dividend_yield": null,
-    "beta": 0.6,
+    "market_cap": 4099320064.0,
+    "pe_ratio": 46.555553,
+    "forward_pe": 24.480019,
+    "dividend_yield": 0.0,
+    "beta": 0.55,
     "fifty_two_week_high": 4.57,
     "fifty_two_week_low": 1.82
   },
@@ -42,14 +42,23 @@
       "index": 1,
       "period": "-1m",
       "strongBuy": 1,
-      "buy": 7,
-      "hold": 3,
+      "buy": 8,
+      "hold": 2,
       "sell": 0,
       "strongSell": 0
     },
     {
       "index": 2,
       "period": "-2m",
+      "strongBuy": 1,
+      "buy": 7,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "index": 3,
+      "period": "-3m",
       "strongBuy": 1,
       "buy": 9,
       "hold": 1,
@@ -58,5 +67,5 @@
     }
   ],
   "news_headlines": [],
-  "fetched_at": "2026-10-03T07:15:45.904830"
+  "fetched_at": "2026-10-05T18:54:28.532587"
 }

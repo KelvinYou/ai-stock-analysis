@@ -6,11 +6,11 @@
     "industry": "Credit Services",
     "market": "US",
     "currency": "USD",
-    "market_cap": 20368064512.0,
-    "pe_ratio": 32.183674,
-    "forward_pe": 19.138582,
-    "dividend_yield": null,
-    "beta": 2.208,
+    "market_cap": 20696510464.0,
+    "pe_ratio": 32.702652,
+    "forward_pe": 19.447203,
+    "dividend_yield": 0.0,
+    "beta": 2.332,
     "fifty_two_week_high": 32.73,
     "fifty_two_week_low": 14.88
   },
@@ -41,7 +41,7 @@
     {
       "index": 1,
       "period": "-1m",
-      "strongBuy": 3,
+      "strongBuy": 4,
       "buy": 5,
       "hold": 12,
       "sell": 2,
@@ -50,6 +50,15 @@
     {
       "index": 2,
       "period": "-2m",
+      "strongBuy": 3,
+      "buy": 5,
+      "hold": 12,
+      "sell": 2,
+      "strongSell": 2
+    },
+    {
+      "index": 3,
+      "period": "-3m",
       "strongBuy": 2,
       "buy": 5,
       "hold": 12,
@@ -58,5 +67,5 @@
     }
   ],
   "news_headlines": [],
-  "fetched_at": "2026-10-03T07:16:04.238638"
+  "fetched_at": "2026-10-05T18:54:42.779181"
 }
