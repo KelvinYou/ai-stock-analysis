@@ -6,10 +6,10 @@
     "industry": "Computer Hardware",
     "market": "US",
     "currency": "USD",
-    "market_cap": 251839234048.0,
-    "pe_ratio": 24.21157,
-    "forward_pe": 6.5278344,
-    "dividend_yield": null,
+    "market_cap": 247601872896.0,
+    "pe_ratio": 22.926382,
+    "forward_pe": 6.4179997,
+    "dividend_yield": 0.0,
     "beta": null,
     "fifty_two_week_high": 2354.39,
     "fifty_two_week_low": 115.68
@@ -42,7 +42,7 @@
       "index": 1,
       "period": "-1m",
       "strongBuy": 4,
-      "buy": 16,
+      "buy": 17,
       "hold": 3,
       "sell": 0,
       "strongSell": 1
@@ -50,6 +50,15 @@
     {
       "index": 2,
       "period": "-2m",
+      "strongBuy": 4,
+      "buy": 16,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "index": 3,
+      "period": "-3m",
       "strongBuy": 3,
       "buy": 15,
       "hold": 4,
@@ -58,5 +67,5 @@
     }
   ],
   "news_headlines": [],
-  "fetched_at": "2026-10-03T07:16:01.885379"
+  "fetched_at": "2026-10-05T18:54:41.785305"
 }
