@@ -37,6 +37,7 @@ def build_evidence_envelope(ticker_data: TickerData) -> str:
     dated_news = filter_point_in_time_news(
         ticker_data.news_headlines,
         as_of=analysis_as_of,
+        max_age_days=ticker_data.news_max_age_days,
     )
     snapshot = ticker_data.macro_snapshot
 
@@ -76,6 +77,7 @@ def build_evidence_envelope(ticker_data: TickerData) -> str:
                 if current_recommendations_are_usable(
                     ticker_data.analyst_recommendations,
                     analysis_as_of,
+                    provider_capture=ticker_data.provider_capture,
                 )
                 else 0
             ),

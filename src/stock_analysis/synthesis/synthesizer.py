@@ -39,29 +39,31 @@ _SIGNAL_SIGN: dict[Signal, int] = {
     Signal.STRONG_SELL: -1,
 }
 
-_CONFIDENCE_WEIGHT: dict[Confidence, float] = {
-    Confidence.HIGH: 1.0,
-    Confidence.MEDIUM: 0.75,
-    Confidence.LOW: 0.5,
-}
+def weighted_directional_totals(
+    agent_signals: dict[str, Signal],
+    agent_confidences: dict[str, Confidence],
+) -> tuple[float, float, float]:
+    """Canonical four-role denominator, including neutral/missing reports."""
+    weights = {Confidence.HIGH: 1.0, Confidence.MEDIUM: 0.75, Confidence.LOW: 0.5}
+    directional = {1: 0.0, -1: 0.0}
+    total = 0.0
+    for name in ("fundamentals", "sentiment", "technical", "macro"):
+        signal = agent_signals.get(name, agent_signals.get("macro_fx") if name == "macro" else None)
+        confidence = agent_confidences.get(name, agent_confidences.get("macro_fx", Confidence.MEDIUM) if name == "macro" else Confidence.MEDIUM)
+        weight = weights[confidence]
+        total += weight
+        direction = _SIGNAL_SIGN.get(signal, 0)
+        if direction:
+            directional[direction] += weight
+    return directional[1], directional[-1], total
 
 
 def _weighted_directional_totals(analyst_reports: AnalystReports) -> tuple[float, float, float]:
-    reports = (
-        analyst_reports.fundamentals,
-        analyst_reports.sentiment,
-        analyst_reports.technical,
-        analyst_reports.macro,
+    names = ("fundamentals", "sentiment", "technical", "macro")
+    return weighted_directional_totals(
+        {name: getattr(analyst_reports, name).signal for name in names},
+        {name: getattr(analyst_reports, name).confidence for name in names},
     )
-    directional_weights = {1: 0.0, -1: 0.0}
-    total_weight = 0.0
-    for report in reports:
-        weight = _CONFIDENCE_WEIGHT[report.confidence]
-        total_weight += weight
-        direction = _SIGNAL_SIGN[report.signal]
-        if direction:
-            directional_weights[direction] += weight
-    return directional_weights[1], directional_weights[-1], total_weight
 
 
 def compute_directional_consensus(analyst_reports: AnalystReports) -> float:

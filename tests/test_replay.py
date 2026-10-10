@@ -310,7 +310,7 @@ def test_fundamentals_replay_rejects_future_period_or_filing(tmp_path):
     assert load_fundamentals_replay(tmp_path, "TEST", date(2025, 10, 31)) is None
 
 
-def test_session_prepare_wires_only_point_in_time_replay_evidence(tmp_path):
+def _prepare_replay_session_and_check_evidence(tmp_path):
     replay_dir = tmp_path / "replay"
     news_dir = replay_dir / "news"
     news_dir.mkdir(parents=True)
@@ -391,3 +391,42 @@ def test_session_prepare_wires_only_point_in_time_replay_evidence(tmp_path):
     assert packet["ticker_data"]["macro_snapshot"]["fed_funds_rate"] == 4.5
     assert packet["ticker_data"]["financials"]["revenue"] == 120.0
     assert packet["ticker_data"]["news_headlines"][0]["title"] == "Replay-safe headline"
+    assert len(packet["ticker_data"]["financial_history"]) == 1
+    assert packet["evidence_availability"]["fundamentals_readiness"]["statement"] is True
+    assert packet["fundamental_context"]["valuation"]["pe_ratio"] is None
+    # A second preparation must not rewrite evidence or predictions in place.
+    with pytest.raises(FileExistsError, match="overwrite session evidence"):
+        prepare_session_bundle(tickers=["TEST"], as_of_dates=[date(2025, 7, 30)],
+                               output_dir=tmp_path / "session", replay_dir=replay_dir)
+
+
+def test_session_prepare_wires_only_point_in_time_replay_evidence(tmp_path):
+    _prepare_replay_session_and_check_evidence(tmp_path)
+
+
+@pytest.mark.parametrize("corruption", ["future_filing", "invalid_duration", "context", "missing_prediction"])
+def test_enriched_session_rejects_corruption_before_outcome_fetch(tmp_path, corruption):
+    # Reuse the real preparation path, including typed replay observations.
+    _prepare_replay_session_and_check_evidence(tmp_path)
+    session = tmp_path / "session"
+    path = session / "packets/TEST/2025-07-30.json"
+    packet = json.loads(path.read_text())
+    predictions = [{"ticker": "TEST", "as_of_date": "2025-07-30",
+                    "overall_signal": "neutral", "conviction_score": 0,
+                    "signal_convergence": 0}]
+    if corruption == "future_filing":
+        packet["ticker_data"]["financial_history"][0]["available_as_of"] = "2025-08-01"
+    elif corruption == "invalid_duration":
+        packet["ticker_data"]["financial_history"][0]["fiscal_period_start"] = "2025-07-01"
+    elif corruption == "context":
+        packet["fundamental_context"]["valuation"]["pe_ratio"] = 1
+    else:
+        predictions = []
+    path.write_text(json.dumps(packet))
+    (session / "predictions.json").write_text(json.dumps(predictions))
+    with (
+        patch("stock_analysis.backtest.session.Backtester") as backtester,
+        pytest.raises(ValueError),
+    ):
+        score_session_bundle(session)
+    backtester.assert_not_called()

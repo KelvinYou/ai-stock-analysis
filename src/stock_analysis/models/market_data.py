@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import date, datetime
 from enum import Enum
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -36,6 +37,28 @@ class FinancialStatements(BaseModel):
     fiscal_period_end: date | None = None
     available_as_of: date | None = None
     availability_source: str | None = None
+    fiscal_period_start: date | None = None
+    period_kind: Literal["quarter", "annual", "other"] | None = None
+    currency: str | None = None
+    debt_scope: Literal["reported_total", "matched_long_term_subtotal", "unavailable"] | None = None
+    diluted_eps: float | None = Field(default=None, allow_inf_nan=False)
+    diluted_eps_currency: str | None = None
+    shares_outstanding: float | None = Field(default=None, gt=0, allow_inf_nan=False)
+    # Provider-declared common corporate-action basis, never inferred from
+    # adjusted technical bars or a current share count.
+    share_basis: str | None = None
+    fact_provenance: dict[str, dict] = Field(default_factory=dict)
+
+
+class HistoricalValuationPrice(BaseModel):
+    """A dated, independently sourced price on an explicit per-share basis."""
+
+    price: float = Field(gt=0, allow_inf_nan=False)
+    price_date: date
+    available_as_of: date
+    currency: str = Field(min_length=1)
+    share_basis: str = Field(min_length=1)
+    source: str = Field(min_length=1)
 
 
 class MacroSnapshot(BaseModel):
@@ -140,7 +163,11 @@ class TickerData(BaseModel):
     info: TickerInfo
     price_history: list[PriceBar]
     financials: FinancialStatements | None = None
+    financial_history: list[FinancialStatements] = Field(default_factory=list)
+    valuation_price: HistoricalValuationPrice | None = None
     macro_snapshot: MacroSnapshot | None = None
     analyst_recommendations: list[dict] | None = None
     news_headlines: list[dict] | None = None
+    provider_capture: Literal["current", "historical"] | None = None
+    news_max_age_days: int | None = Field(default=None, ge=1)
     fetched_at: datetime

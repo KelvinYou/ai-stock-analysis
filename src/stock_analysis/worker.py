@@ -92,6 +92,7 @@ def _settings_from_run(run_settings: dict) -> Settings:
             "research_manager_model",
             "debate_rounds",
             "price_history_period",
+            "news_max_age_days",
             "enable_research_manager",
             "enable_outcome_memory",
         }

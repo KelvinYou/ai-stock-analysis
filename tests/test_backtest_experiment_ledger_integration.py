@@ -234,7 +234,7 @@ def test_scored_pipeline_runs_append_ledger_even_when_report_prefix_is_reused(
     }
     portfolio = _ModelDump(portfolio_payload)
     portfolio.config = _ModelDump(portfolio_payload["config"])
-    portfolio.strategies = portfolio_payload["strategies"]
+    portfolio.strategies = [SimpleNamespace(**row) for row in portfolio_payload["strategies"]]
     monkeypatch.setattr(
         backtest_main.Scorer,
         "score",

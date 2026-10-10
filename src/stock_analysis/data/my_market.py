@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import date, datetime
+from datetime import UTC, date, datetime
 
 import yfinance as yf
 
@@ -14,6 +14,7 @@ from stock_analysis.models.market_data import (
 
 from .evidence import normalize_news_item
 from .fetcher_base import BaseFetcher, has_splits_since, reject_unusable_bars
+from .live_evidence import financial_history, plain_close, stamp_current_capture
 
 # Common Bursa Malaysia ticker aliases — map friendly names to stock codes
 BURSA_ALIASES: dict[str, str] = {
@@ -114,56 +115,30 @@ class MYMarketFetcher(BaseFetcher):
             ],
         )
 
-        financials = self._extract_financials(stock)
+        captured_at = datetime.now(UTC)
+        history = financial_history(stock, info, captured_at)
         news = self._extract_news(stock)
         recommendations = self._extract_recommendations(stock)
+        valuation_price = plain_close(stock, yf_ticker, ticker_info.currency, price_history, captured_at)
+        captured_at = datetime.now(UTC)
+        history, valuation_price = stamp_current_capture(history, valuation_price, captured_at)
+        financials = history[-1] if history else None
 
         return TickerData(
             info=ticker_info,
             price_history=price_history,
             financials=financials,
+            financial_history=history,
+            valuation_price=valuation_price,
             analyst_recommendations=recommendations,
             news_headlines=news,
-            fetched_at=datetime.now(),
+            fetched_at=captured_at,
+            provider_capture="current",
         )
 
     def _extract_financials(self, stock: yf.Ticker) -> FinancialStatements | None:
-        try:
-            inc = stock.income_stmt
-            bal = stock.balance_sheet
-            cf = stock.cashflow
-            if inc.empty:
-                return None
-
-            latest_inc = inc.iloc[:, 0]
-            latest_bal = bal.iloc[:, 0] if not bal.empty else {}
-            latest_cf = cf.iloc[:, 0] if not cf.empty else {}
-
-            revenue = self._safe_get(latest_inc, "Total Revenue")
-            net_income = self._safe_get(latest_inc, "Net Income")
-
-            return FinancialStatements(
-                revenue=revenue,
-                net_income=net_income,
-                total_debt=self._safe_get(latest_bal, "Total Debt"),
-                total_equity=self._safe_get(latest_bal, "Stockholders Equity"),
-                free_cash_flow=self._safe_get(latest_cf, "Free Cash Flow"),
-                gross_margin=(
-                    self._safe_get(latest_inc, "Gross Profit") / revenue
-                    if revenue and self._safe_get(latest_inc, "Gross Profit")
-                    else None
-                ),
-                operating_margin=(
-                    self._safe_get(latest_inc, "Operating Income") / revenue
-                    if revenue and self._safe_get(latest_inc, "Operating Income")
-                    else None
-                ),
-                net_margin=(
-                    net_income / revenue if revenue and net_income else None
-                ),
-            )
-        except Exception:
-            return None
+        history = financial_history(stock, stock.info, datetime.now())
+        return history[-1] if history else None
 
     def _extract_news(self, stock: yf.Ticker) -> list[dict]:
         try:

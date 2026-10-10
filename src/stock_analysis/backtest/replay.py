@@ -12,7 +12,12 @@ from pathlib import Path
 from pydantic import ValidationError
 
 from stock_analysis.data.evidence import filter_point_in_time_news, financials_are_usable
-from stock_analysis.models.market_data import FinancialStatements, MacroSnapshot
+from stock_analysis.data.fundamentals import select_financial_history
+from stock_analysis.models.market_data import (
+    FinancialStatements,
+    HistoricalValuationPrice,
+    MacroSnapshot,
+)
 
 
 def _read_records(path: Path | None) -> list[dict]:
@@ -181,6 +186,14 @@ def load_fundamentals_replay(
 ) -> FinancialStatements | None:
     """Return the latest SEC point-in-time financial snapshot knowable at as-of."""
 
+    history = load_fundamentals_history_replay(replay_dir, ticker, as_of)
+    return history[-1] if history else None
+
+
+def load_fundamentals_history_replay(
+    replay_dir: Path | None, ticker: str, as_of: date,
+) -> list[FinancialStatements]:
+    """Return each fiscal duration's latest vintage knowable at the cutoff."""
     path = _find_file(replay_dir / "fundamentals" if replay_dir else None, ticker.upper())
     candidates: list[FinancialStatements] = []
     for index, record in enumerate(_read_records(path), start=1):
@@ -193,12 +206,26 @@ def load_fundamentals_replay(
             raise ValueError(f"Invalid fundamentals replay record {source}:{index}") from exc
         if financials_are_usable(financials, as_of):
             candidates.append(financials)
-    if not candidates:
-        return None
-    return max(
-        candidates,
-        key=lambda item: (
-            item.available_as_of or date.min,
-            item.fiscal_period_end or date.min,
-        ),
-    )
+    return select_financial_history(candidates, as_of)
+
+
+def load_valuation_price_replay(
+    replay_dir: Path | None, ticker: str, as_of: date,
+) -> HistoricalValuationPrice | None:
+    """Load a separate dated price with a declared corporate-action basis."""
+    path = _find_file(replay_dir / "valuation" if replay_dir else None, ticker.upper())
+    candidates: dict[tuple[date, date], HistoricalValuationPrice] = {}
+    for index, record in enumerate(_read_records(path), start=1):
+        if record.get("ticker") and str(record["ticker"]).upper() != ticker.upper():
+            continue
+        try:
+            price = HistoricalValuationPrice.model_validate(record)
+        except ValidationError as exc:
+            raise ValueError(f"Invalid valuation price replay record {path}:{index}") from exc
+        if price.price_date > price.available_as_of or price.available_as_of > as_of:
+            continue
+        key = (price.price_date, price.available_as_of)
+        if key in candidates and candidates[key] != price:
+            raise ValueError(f"Conflicting valuation price vintages at {path}:{index}")
+        candidates[key] = price
+    return max(candidates.values(), key=lambda p: (p.price_date, p.available_as_of), default=None)

@@ -175,3 +175,81 @@ def test_manifest_is_json_serialisable(tmp_path, monkeypatch):
     assert loaded["fundamentals"]["records"] == 0
     assert loaded["macro"]["records"] == 1
     assert manifest["tickers"] == ["AAPL"]
+
+
+def _fact(value, *, start="2025-04-01", end="2025-06-30", filed="2025-08-01"):
+    row = {"val": value, "end": end, "filed": filed, "form": "10-Q", "accn": "fixture"}
+    if start is not None:
+        row["start"] = start
+    return row
+
+
+def test_snapshot_never_divides_quarter_income_by_ytd_revenue_or_cashflow():
+    payload = {"facts": {"us-gaap": {
+        "Revenues": {"units": {"USD": [_fact(100), _fact(200, start="2025-01-01")]}},
+        "NetIncomeLoss": {"units": {"USD": [_fact(20)]}},
+        "NetCashProvidedByUsedInOperatingActivities": {"units": {"USD": [_fact(50, start="2025-01-01")]}},
+        "PaymentsToAcquirePropertyPlantAndEquipment": {"units": {"USD": [_fact(10, start="2025-01-01")]}},
+    }}}
+    snapshot = replay_builder._fundamental_snapshot(payload, available_as_of=date(2025, 8, 2))
+    assert snapshot["period_kind"] == "quarter"
+    assert snapshot["net_margin"] == 0.2
+    assert snapshot["free_cash_flow"] is None
+
+
+def test_snapshot_does_not_mix_monetary_currencies():
+    payload = {"facts": {"us-gaap": {
+        "Revenues": {"units": {"USD": [_fact(100)]}},
+        "NetIncomeLoss": {"units": {"EUR": [_fact(20)]}},
+    }}}
+    snapshot = replay_builder._fundamental_snapshot(payload, available_as_of=date(2025, 8, 2))
+    assert snapshot["currency"] == "USD"
+    assert snapshot["net_income"] is None
+    assert snapshot["net_margin"] is None
+
+
+def test_eps_shares_and_debt_components_preserve_units_and_partial_scope():
+    payload = {"facts": {"us-gaap": {
+        "Revenues": {"units": {"USD": [_fact(100)]}},
+        "EarningsPerShareDiluted": {"units": {"USD/shares": [_fact(2)]}},
+        "CommonStockSharesOutstanding": {"units": {"shares": [_fact(50, start=None)]}},
+        "LongTermDebtCurrent": {"units": {"USD": [_fact(10, start=None)]}},
+        "LongTermDebtNoncurrent": {"units": {"USD": [_fact(90, start=None)]}},
+    }}}
+    snapshot = replay_builder._fundamental_snapshot(payload, available_as_of=date(2025, 8, 2))
+    assert snapshot["diluted_eps"] == 2
+    assert snapshot["shares_outstanding"] == 50
+    assert snapshot["total_debt"] == 100
+    assert snapshot["debt_scope"] == "matched_long_term_subtotal"
+    assert snapshot["share_basis"] is None
+    assert snapshot["fact_provenance"]["diluted_eps"]["unit"] == "USD/shares"
+
+
+def test_companyfacts_date_only_clock_does_not_use_same_day_filings():
+    payload = {"facts": {"us-gaap": {"Revenues": {"units": {"USD": [_fact(100)]}}}}}
+    assert replay_builder._fundamental_snapshot(payload, available_as_of=date(2025, 8, 1)) is None
+    assert replay_builder._fundamental_snapshot(payload, available_as_of=date(2025, 8, 2)) is not None
+
+
+def test_builder_retains_old_comparative_periods_and_distinct_durations(monkeypatch):
+    payload = {"facts": {"us-gaap": {
+        "Revenues": {"units": {"USD": [
+            _fact(80, start="2024-04-01", end="2024-06-30", filed="2024-08-01"),
+            _fact(100), _fact(200, start="2025-01-01"),
+        ]}},
+    }}}
+    monkeypatch.setattr(replay_builder, "_ticker_ciks", lambda *a, **kw: {"TEST": (1, "TEST")})
+    monkeypatch.setattr(replay_builder, "_fetch_json", lambda *a, **kw: payload)
+    records, _ = replay_builder.build_sec_fundamentals(
+        ["TEST"], start=date(2025, 8, 1), end=date(2025, 8, 2), user_agent="fixture",
+    )
+    identities = {(r["fiscal_period_start"], r["fiscal_period_end"]) for r in records["TEST"]}
+    assert ("2024-04-01", "2024-06-30") in identities
+    assert ("2025-04-01", "2025-06-30") in identities
+    assert ("2025-01-01", "2025-06-30") in identities
+
+
+def test_same_clock_conflicting_facts_fail_closed():
+    payload = {"facts": {"us-gaap": {"Revenues": {"units": {"USD": [_fact(100), _fact(999)]}}}}}
+    with pytest.raises(ValueError, match="Conflicting SEC facts"):
+        replay_builder._fundamental_snapshot(payload, available_as_of=date(2025, 8, 2))

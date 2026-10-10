@@ -92,8 +92,11 @@ def kurtosis(values: list[float]) -> float | None:
 # ----------------------------------------------------------------------
 # Interval estimation
 # ----------------------------------------------------------------------
-def wilson_interval(hits: int, n: int, z: float = 1.96) -> tuple[float, float] | None:
-    """Wilson score interval for a binomial proportion.
+def wilson_interval(hits: int, n: int, z: float = 1.96, *, effective_n: float | None = None) -> tuple[float, float] | None:
+    """Wilson interval; effective_n applies a design-effect approximation.
+
+    Preserve the observed hit fraction, but use the clustered effective count
+    for uncertainty. This is approximate, not an exact correlated-binomial CI.
 
     Preferred over the normal approximation `p ± z·√(p(1-p)/n)`, which at the
     sample sizes a backtest produces can hand back intervals extending below 0
@@ -103,13 +106,17 @@ def wilson_interval(hits: int, n: int, z: float = 1.96) -> tuple[float, float] |
     if n <= 0:
         return None
     p = hits / n
+    if effective_n is not None:
+        if not math.isfinite(effective_n) or effective_n <= 0:
+            return None
+        n = min(float(n), effective_n)
     denom = 1.0 + z**2 / n
     centre = (p + z**2 / (2 * n)) / denom
     half = z / denom * math.sqrt(p * (1 - p) / n + z**2 / (4 * n**2))
     return (max(0.0, centre - half), min(1.0, centre + half))
 
 
-def fisher_ci(r: float, n: int, z: float = 1.96) -> tuple[float, float] | None:
+def fisher_ci(r: float, n: float, z: float = 1.96) -> tuple[float, float] | None:
     """Confidence interval for a Pearson correlation via Fisher z-transform.
 
     Used for the information coefficient, whose sampling distribution is badly
