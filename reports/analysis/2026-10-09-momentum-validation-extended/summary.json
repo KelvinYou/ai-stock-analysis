@@ -1,0 +1,777 @@
+{
+  "scenarios": [
+    {
+      "snapshot": "original",
+      "cost_bps": 20,
+      "bootstrap_block_months": 3,
+      "periods": 103,
+      "effective_n": 103.0,
+      "net_compound_return": 12.673872836372304,
+      "buy_and_hold_return": 9.802873999461088,
+      "excess_return": 2.870998836911216,
+      "max_drawdown": -0.35601327943372996,
+      "buy_and_hold_max_drawdown": -0.347263734245133,
+      "strict_hold_log_excess_ci_95": [
+        -0.002720716957406569,
+        0.008957684062480237
+      ],
+      "matched_passive_log_excess_ci_95": [
+        -0.002419669395119383,
+        0.011968741404401014
+      ]
+    },
+    {
+      "snapshot": "original",
+      "cost_bps": 40,
+      "bootstrap_block_months": 3,
+      "periods": 103,
+      "effective_n": 103.0,
+      "net_compound_return": 12.186244709898075,
+      "buy_and_hold_return": 9.759619292140782,
+      "excess_return": 2.4266254177572932,
+      "max_drawdown": -0.35737073933506025,
+      "buy_and_hold_max_drawdown": -0.347263734245132,
+      "strict_hold_log_excess_ci_95": [
+        -0.0030572484256110263,
+        0.008672370672017314
+      ],
+      "matched_passive_log_excess_ci_95": [
+        -0.002691806205301045,
+        0.011745228527663666
+      ]
+    },
+    {
+      "snapshot": "original",
+      "cost_bps": 80,
+      "bootstrap_block_months": 3,
+      "periods": 103,
+      "effective_n": 103.0,
+      "net_compound_return": 11.261419910941274,
+      "buy_and_hold_return": 9.673370186671619,
+      "excess_return": 1.5880497242696556,
+      "max_drawdown": -0.3600815422493854,
+      "buy_and_hold_max_drawdown": -0.3472637342451328,
+      "strict_hold_log_excess_ci_95": [
+        -0.003735891582615045,
+        0.008133130571781187
+      ],
+      "matched_passive_log_excess_ci_95": [
+        -0.003224086509993701,
+        0.011321505174641932
+      ]
+    },
+    {
+      "snapshot": "current_adjusted",
+      "cost_bps": 20,
+      "bootstrap_block_months": 3,
+      "periods": 103,
+      "effective_n": 103.0,
+      "net_compound_return": 12.673841718389866,
+      "buy_and_hold_return": 9.80289798406192,
+      "excess_return": 2.8709437343279465,
+      "max_drawdown": -0.3560131546794473,
+      "buy_and_hold_max_drawdown": -0.3472635322477152,
+      "strict_hold_log_excess_ci_95": [
+        -0.0027208466909202536,
+        0.008957539211574043
+      ],
+      "matched_passive_log_excess_ci_95": [
+        -0.0024196297144583796,
+        0.011968687785272457
+      ]
+    },
+    {
+      "snapshot": "current_adjusted",
+      "cost_bps": 40,
+      "bootstrap_block_months": 3,
+      "periods": 103,
+      "effective_n": 103.0,
+      "net_compound_return": 12.186214729528103,
+      "buy_and_hold_return": 9.75964318070728,
+      "excess_return": 2.4265715488208226,
+      "max_drawdown": -0.3573706146749034,
+      "buy_and_hold_max_drawdown": -0.34726353224771467,
+      "strict_hold_log_excess_ci_95": [
+        -0.0030573300520186377,
+        0.00867231610427876
+      ],
+      "matched_passive_log_excess_ci_95": [
+        -0.002691766540930109,
+        0.011745220760858856
+      ]
+    },
+    {
+      "snapshot": "current_adjusted",
+      "cost_bps": 80,
+      "bootstrap_block_months": 3,
+      "periods": 103,
+      "effective_n": 103.0,
+      "net_compound_return": 11.261392085333569,
+      "buy_and_hold_return": 9.673393883747368,
+      "excess_return": 1.5879982015862009,
+      "max_drawdown": -0.3600814177774302,
+      "buy_and_hold_max_drawdown": -0.3472635322477172,
+      "strict_hold_log_excess_ci_95": [
+        -0.0037360227856346735,
+        0.008133077298457742
+      ],
+      "matched_passive_log_excess_ci_95": [
+        -0.003224081096871348,
+        0.011321486735539205
+      ]
+    },
+    {
+      "snapshot": "current_adjusted",
+      "cost_bps": 20,
+      "bootstrap_block_months": 6,
+      "periods": 103,
+      "effective_n": 103.0,
+      "net_compound_return": 12.673841718389866,
+      "buy_and_hold_return": 9.80289798406192,
+      "excess_return": 2.8709437343279465,
+      "max_drawdown": -0.3560131546794473,
+      "buy_and_hold_max_drawdown": -0.3472635322477152,
+      "strict_hold_log_excess_ci_95": [
+        -0.0022468828478569964,
+        0.008768124467919443
+      ],
+      "matched_passive_log_excess_ci_95": [
+        -0.0014722288656544185,
+        0.012025163540472781
+      ]
+    },
+    {
+      "snapshot": "current_adjusted",
+      "cost_bps": 20,
+      "bootstrap_block_months": 12,
+      "periods": 103,
+      "effective_n": 103.0,
+      "net_compound_return": 12.673841718389866,
+      "buy_and_hold_return": 9.80289798406192,
+      "excess_return": 2.8709437343279465,
+      "max_drawdown": -0.3560131546794473,
+      "buy_and_hold_max_drawdown": -0.3472635322477152,
+      "strict_hold_log_excess_ci_95": [
+        -0.0020121448717173953,
+        0.008802949305946165
+      ],
+      "matched_passive_log_excess_ci_95": [
+        -0.0013195146961756427,
+        0.012242767521675928
+      ]
+    }
+  ],
+  "changed_selection_months": [],
+  "rolling_24m": {
+    "windows": 80,
+    "winning_windows": 63,
+    "minimum_relative_advantage": -0.15364510020545488,
+    "maximum_relative_advantage": 0.3658689808911772,
+    "rows": [
+      {
+        "first_signal": "2018-01-31",
+        "last_signal": "2019-12-31",
+        "periods": 24,
+        "log_excess": -0.06877712145713079,
+        "relative_wealth_advantage": -0.06646527824816992
+      },
+      {
+        "first_signal": "2018-02-28",
+        "last_signal": "2020-01-31",
+        "periods": 24,
+        "log_excess": 0.011203864597807213,
+        "relative_wealth_advantage": 0.011266862943920453
+      },
+      {
+        "first_signal": "2018-03-29",
+        "last_signal": "2020-02-28",
+        "periods": 24,
+        "log_excess": 0.006500690011562135,
+        "relative_wealth_advantage": 0.00652186535679276
+      },
+      {
+        "first_signal": "2018-04-30",
+        "last_signal": "2020-03-31",
+        "periods": 24,
+        "log_excess": 0.04757321618726246,
+        "relative_wealth_advantage": 0.04872298180867886
+      },
+      {
+        "first_signal": "2018-05-31",
+        "last_signal": "2020-04-30",
+        "periods": 24,
+        "log_excess": 0.0388013750649078,
+        "relative_wealth_advantage": 0.03956397981441643
+      },
+      {
+        "first_signal": "2018-06-29",
+        "last_signal": "2020-05-29",
+        "periods": 24,
+        "log_excess": 0.09887942777781314,
+        "relative_wealth_advantage": 0.1039331878566506
+      },
+      {
+        "first_signal": "2018-07-31",
+        "last_signal": "2020-06-30",
+        "periods": 24,
+        "log_excess": 0.17945357565550316,
+        "relative_wealth_advantage": 0.19656335310871528
+      },
+      {
+        "first_signal": "2018-08-31",
+        "last_signal": "2020-07-31",
+        "periods": 24,
+        "log_excess": 0.17618517100467976,
+        "relative_wealth_advantage": 0.19265888404860762
+      },
+      {
+        "first_signal": "2018-09-28",
+        "last_signal": "2020-08-31",
+        "periods": 24,
+        "log_excess": 0.18249619101890702,
+        "relative_wealth_advantage": 0.2002095793692756
+      },
+      {
+        "first_signal": "2018-10-31",
+        "last_signal": "2020-09-30",
+        "periods": 24,
+        "log_excess": 0.21613618376180224,
+        "relative_wealth_advantage": 0.2412714085007011
+      },
+      {
+        "first_signal": "2018-11-30",
+        "last_signal": "2020-10-30",
+        "periods": 24,
+        "log_excess": 0.19203312221640198,
+        "relative_wealth_advantage": 0.2117106508426292
+      },
+      {
+        "first_signal": "2018-12-31",
+        "last_signal": "2020-11-30",
+        "periods": 24,
+        "log_excess": 0.20616561555924545,
+        "relative_wealth_advantage": 0.22895672149673355
+      },
+      {
+        "first_signal": "2019-01-31",
+        "last_signal": "2020-12-31",
+        "periods": 24,
+        "log_excess": 0.2670548154535898,
+        "relative_wealth_advantage": 0.30611203949231447
+      },
+      {
+        "first_signal": "2019-02-28",
+        "last_signal": "2021-01-29",
+        "periods": 24,
+        "log_excess": 0.31179084212038743,
+        "relative_wealth_advantage": 0.3658689808911772
+      },
+      {
+        "first_signal": "2019-03-29",
+        "last_signal": "2021-02-26",
+        "periods": 24,
+        "log_excess": 0.27533193627991187,
+        "relative_wealth_advantage": 0.3169677516990426
+      },
+      {
+        "first_signal": "2019-04-30",
+        "last_signal": "2021-03-31",
+        "periods": 24,
+        "log_excess": 0.21305603671236348,
+        "relative_wealth_advantage": 0.2374539921541856
+      },
+      {
+        "first_signal": "2019-05-31",
+        "last_signal": "2021-04-30",
+        "periods": 24,
+        "log_excess": 0.2405432837048988,
+        "relative_wealth_advantage": 0.27193998691278004
+      },
+      {
+        "first_signal": "2019-06-28",
+        "last_signal": "2021-05-28",
+        "periods": 24,
+        "log_excess": 0.28965654000706587,
+        "relative_wealth_advantage": 0.33596855746653265
+      },
+      {
+        "first_signal": "2019-07-31",
+        "last_signal": "2021-06-30",
+        "periods": 24,
+        "log_excess": 0.2503291819708001,
+        "relative_wealth_advantage": 0.2844481642815898
+      },
+      {
+        "first_signal": "2019-08-30",
+        "last_signal": "2021-07-30",
+        "periods": 24,
+        "log_excess": 0.2604434128684379,
+        "relative_wealth_advantage": 0.2975052896724468
+      },
+      {
+        "first_signal": "2019-09-30",
+        "last_signal": "2021-08-31",
+        "periods": 24,
+        "log_excess": 0.26356825399554923,
+        "relative_wealth_advantage": 0.3015661289987455
+      },
+      {
+        "first_signal": "2019-10-31",
+        "last_signal": "2021-09-30",
+        "periods": 24,
+        "log_excess": 0.28474730560056966,
+        "relative_wealth_advantage": 0.32942604715643425
+      },
+      {
+        "first_signal": "2019-11-29",
+        "last_signal": "2021-10-29",
+        "periods": 24,
+        "log_excess": 0.2897095928753023,
+        "relative_wealth_advantage": 0.33603943631052624
+      },
+      {
+        "first_signal": "2019-12-31",
+        "last_signal": "2021-11-30",
+        "periods": 24,
+        "log_excess": 0.1910090979430148,
+        "relative_wealth_advantage": 0.21047046482251286
+      },
+      {
+        "first_signal": "2020-01-31",
+        "last_signal": "2021-12-31",
+        "periods": 24,
+        "log_excess": 0.1602673070159592,
+        "relative_wealth_advantage": 0.1738246006101267
+      },
+      {
+        "first_signal": "2020-02-28",
+        "last_signal": "2022-01-31",
+        "periods": 24,
+        "log_excess": 0.11307984430457683,
+        "relative_wealth_advantage": 0.1197213327506393
+      },
+      {
+        "first_signal": "2020-03-31",
+        "last_signal": "2022-02-28",
+        "periods": 24,
+        "log_excess": 0.14250035042811776,
+        "relative_wealth_advantage": 0.15315348505470402
+      },
+      {
+        "first_signal": "2020-04-30",
+        "last_signal": "2022-03-31",
+        "periods": 24,
+        "log_excess": 0.10038713379535219,
+        "relative_wealth_advantage": 0.10559884991576922
+      },
+      {
+        "first_signal": "2020-05-29",
+        "last_signal": "2022-04-29",
+        "periods": 24,
+        "log_excess": 0.06251749633123732,
+        "relative_wealth_advantage": 0.06451308382844628
+      },
+      {
+        "first_signal": "2020-06-30",
+        "last_signal": "2022-05-31",
+        "periods": 24,
+        "log_excess": 0.0675068692086776,
+        "relative_wealth_advantage": 0.06983760851044542
+      },
+      {
+        "first_signal": "2020-07-31",
+        "last_signal": "2022-06-30",
+        "periods": 24,
+        "log_excess": -0.028822705764878817,
+        "relative_wealth_advantage": -0.028411293726054877
+      },
+      {
+        "first_signal": "2020-08-31",
+        "last_signal": "2022-07-29",
+        "periods": 24,
+        "log_excess": -0.029218539070376942,
+        "relative_wealth_advantage": -0.02879580478908084
+      },
+      {
+        "first_signal": "2020-09-30",
+        "last_signal": "2022-08-31",
+        "periods": 24,
+        "log_excess": 0.02241674602607195,
+        "relative_wealth_advantage": 0.02266988928787066
+      },
+      {
+        "first_signal": "2020-10-30",
+        "last_signal": "2022-09-30",
+        "periods": 24,
+        "log_excess": 0.01667356082504557,
+        "relative_wealth_advantage": 0.016813340434307496
+      },
+      {
+        "first_signal": "2020-11-30",
+        "last_signal": "2022-10-31",
+        "periods": 24,
+        "log_excess": -0.05854461864457398,
+        "relative_wealth_advantage": -0.05686384199617496
+      },
+      {
+        "first_signal": "2020-12-31",
+        "last_signal": "2022-11-30",
+        "periods": 24,
+        "log_excess": -0.018236056831454503,
+        "relative_wealth_advantage": -0.018070786100733944
+      },
+      {
+        "first_signal": "2021-01-29",
+        "last_signal": "2022-12-30",
+        "periods": 24,
+        "log_excess": -0.12139328689168313,
+        "relative_wealth_advantage": -0.11431443743453572
+      },
+      {
+        "first_signal": "2021-02-26",
+        "last_signal": "2023-01-31",
+        "periods": 24,
+        "log_excess": -0.16681650403957893,
+        "relative_wealth_advantage": -0.15364510020545488
+      },
+      {
+        "first_signal": "2021-03-31",
+        "last_signal": "2023-02-28",
+        "periods": 24,
+        "log_excess": -0.15895920390551177,
+        "relative_wealth_advantage": -0.1469688414009702
+      },
+      {
+        "first_signal": "2021-04-30",
+        "last_signal": "2023-03-31",
+        "periods": 24,
+        "log_excess": -0.12217039189018199,
+        "relative_wealth_advantage": -0.11500244075227169
+      },
+      {
+        "first_signal": "2021-05-28",
+        "last_signal": "2023-04-28",
+        "periods": 24,
+        "log_excess": -0.05568248809676087,
+        "relative_wealth_advantage": -0.054160596512234524
+      },
+      {
+        "first_signal": "2021-06-30",
+        "last_signal": "2023-05-31",
+        "periods": 24,
+        "log_excess": -0.053035434083155114,
+        "relative_wealth_advantage": -0.051653591898553036
+      },
+      {
+        "first_signal": "2021-07-30",
+        "last_signal": "2023-06-30",
+        "periods": 24,
+        "log_excess": -0.00679360637498193,
+        "relative_wealth_advantage": -0.0067705820002104755
+      },
+      {
+        "first_signal": "2021-08-31",
+        "last_signal": "2023-07-31",
+        "periods": 24,
+        "log_excess": -0.001414299748545995,
+        "relative_wealth_advantage": -0.0014133000979806786
+      },
+      {
+        "first_signal": "2021-09-30",
+        "last_signal": "2023-08-31",
+        "periods": 24,
+        "log_excess": -0.03675966522310508,
+        "relative_wealth_advantage": -0.03609223192837407
+      },
+      {
+        "first_signal": "2021-10-29",
+        "last_signal": "2023-09-29",
+        "periods": 24,
+        "log_excess": -0.05534209749901115,
+        "relative_wealth_advantage": -0.05383858687088809
+      },
+      {
+        "first_signal": "2021-11-30",
+        "last_signal": "2023-10-31",
+        "periods": 24,
+        "log_excess": -0.05896728253318343,
+        "relative_wealth_advantage": -0.05726238736090505
+      },
+      {
+        "first_signal": "2021-12-31",
+        "last_signal": "2023-11-30",
+        "periods": 24,
+        "log_excess": 0.03961432803265752,
+        "relative_wealth_advantage": 0.04040944005011294
+      },
+      {
+        "first_signal": "2022-01-31",
+        "last_signal": "2023-12-29",
+        "periods": 24,
+        "log_excess": 0.09949431031319601,
+        "relative_wealth_advantage": 0.10461218582469625
+      },
+      {
+        "first_signal": "2022-02-28",
+        "last_signal": "2024-01-31",
+        "periods": 24,
+        "log_excess": 0.082455646527187,
+        "relative_wealth_advantage": 0.08595050669460831
+      },
+      {
+        "first_signal": "2022-03-31",
+        "last_signal": "2024-02-29",
+        "periods": 24,
+        "log_excess": 0.04404625493464821,
+        "relative_wealth_advantage": 0.04503069159687471
+      },
+      {
+        "first_signal": "2022-04-29",
+        "last_signal": "2024-03-28",
+        "periods": 24,
+        "log_excess": 0.10117694666086455,
+        "relative_wealth_advantage": 0.1064724110410252
+      },
+      {
+        "first_signal": "2022-05-31",
+        "last_signal": "2024-04-30",
+        "periods": 24,
+        "log_excess": 0.12878374629800834,
+        "relative_wealth_advantage": 0.1374441210651607
+      },
+      {
+        "first_signal": "2022-06-30",
+        "last_signal": "2024-05-31",
+        "periods": 24,
+        "log_excess": 0.08145443751946023,
+        "relative_wealth_advantage": 0.08486378737272623
+      },
+      {
+        "first_signal": "2022-07-29",
+        "last_signal": "2024-06-28",
+        "periods": 24,
+        "log_excess": 0.07912897278813123,
+        "relative_wealth_advantage": 0.08234390598012932
+      },
+      {
+        "first_signal": "2022-08-31",
+        "last_signal": "2024-07-31",
+        "periods": 24,
+        "log_excess": 0.050585165969295035,
+        "relative_wealth_advantage": 0.05188644446894948
+      },
+      {
+        "first_signal": "2022-09-30",
+        "last_signal": "2024-08-30",
+        "periods": 24,
+        "log_excess": 0.01665945917219311,
+        "relative_wealth_advantage": 0.01679900178666449
+      },
+      {
+        "first_signal": "2022-10-31",
+        "last_signal": "2024-09-30",
+        "periods": 24,
+        "log_excess": 0.04134828210507286,
+        "relative_wealth_advantage": 0.04221502718586142
+      },
+      {
+        "first_signal": "2022-11-30",
+        "last_signal": "2024-10-31",
+        "periods": 24,
+        "log_excess": 0.080080338881005,
+        "relative_wealth_advantage": 0.08337410124182563
+      },
+      {
+        "first_signal": "2022-12-30",
+        "last_signal": "2024-11-29",
+        "periods": 24,
+        "log_excess": 0.1446500369169218,
+        "relative_wealth_advantage": 0.15563506988008008
+      },
+      {
+        "first_signal": "2023-01-31",
+        "last_signal": "2024-12-31",
+        "periods": 24,
+        "log_excess": 0.19477547729246283,
+        "relative_wealth_advantage": 0.21503815220643657
+      },
+      {
+        "first_signal": "2023-02-28",
+        "last_signal": "2025-01-31",
+        "periods": 24,
+        "log_excess": 0.186970978945369,
+        "relative_wealth_advantage": 0.20559229698231843
+      },
+      {
+        "first_signal": "2023-03-31",
+        "last_signal": "2025-02-28",
+        "periods": 24,
+        "log_excess": 0.16397420396131676,
+        "relative_wealth_advantage": 0.1781839222226824
+      },
+      {
+        "first_signal": "2023-04-28",
+        "last_signal": "2025-03-31",
+        "periods": 24,
+        "log_excess": 0.16862513563770912,
+        "relative_wealth_advantage": 0.1836763376710497
+      },
+      {
+        "first_signal": "2023-05-31",
+        "last_signal": "2025-04-30",
+        "periods": 24,
+        "log_excess": 0.05762613574761791,
+        "relative_wealth_advantage": 0.05931888020700537
+      },
+      {
+        "first_signal": "2023-06-30",
+        "last_signal": "2025-05-30",
+        "periods": 24,
+        "log_excess": 0.043059486328466234,
+        "relative_wealth_advantage": 0.04399999673021211
+      },
+      {
+        "first_signal": "2023-07-31",
+        "last_signal": "2025-06-30",
+        "periods": 24,
+        "log_excess": 0.023773815908354486,
+        "relative_wealth_advantage": 0.024058665914471644
+      },
+      {
+        "first_signal": "2023-08-31",
+        "last_signal": "2025-07-31",
+        "periods": 24,
+        "log_excess": -0.017977419547755554,
+        "relative_wealth_advantage": -0.017816789751019302
+      },
+      {
+        "first_signal": "2023-09-29",
+        "last_signal": "2025-08-29",
+        "periods": 24,
+        "log_excess": 0.07317791534045931,
+        "relative_wealth_advantage": 0.07592194290594728
+      },
+      {
+        "first_signal": "2023-10-31",
+        "last_signal": "2025-09-30",
+        "periods": 24,
+        "log_excess": 0.06663804152657021,
+        "relative_wealth_advantage": 0.06890850765352917
+      },
+      {
+        "first_signal": "2023-11-30",
+        "last_signal": "2025-10-31",
+        "periods": 24,
+        "log_excess": 0.06050176664845311,
+        "relative_wealth_advantage": 0.06236947440205571
+      },
+      {
+        "first_signal": "2023-12-29",
+        "last_signal": "2025-11-28",
+        "periods": 24,
+        "log_excess": 0.046340745359273086,
+        "relative_wealth_advantage": 0.047431257496732854
+      },
+      {
+        "first_signal": "2024-01-31",
+        "last_signal": "2025-12-31",
+        "periods": 24,
+        "log_excess": 0.048810248953857605,
+        "relative_wealth_advantage": 0.050021089235432546
+      },
+      {
+        "first_signal": "2024-02-29",
+        "last_signal": "2026-01-30",
+        "periods": 24,
+        "log_excess": 0.0687739523083983,
+        "relative_wealth_advantage": 0.07119404083839466
+      },
+      {
+        "first_signal": "2024-03-28",
+        "last_signal": "2026-02-27",
+        "periods": 24,
+        "log_excess": 0.06790485685044195,
+        "relative_wealth_advantage": 0.07026347539658492
+      },
+      {
+        "first_signal": "2024-04-30",
+        "last_signal": "2026-03-31",
+        "periods": 24,
+        "log_excess": 0.08248599209494627,
+        "relative_wealth_advantage": 0.08598346097929813
+      },
+      {
+        "first_signal": "2024-05-31",
+        "last_signal": "2026-04-30",
+        "periods": 24,
+        "log_excess": 0.07540639128970682,
+        "relative_wealth_advantage": 0.07832228263529775
+      },
+      {
+        "first_signal": "2024-06-28",
+        "last_signal": "2026-05-29",
+        "periods": 24,
+        "log_excess": 0.11159770803525988,
+        "relative_wealth_advantage": 0.11806298240601686
+      },
+      {
+        "first_signal": "2024-07-31",
+        "last_signal": "2026-06-30",
+        "periods": 24,
+        "log_excess": 0.08258865715833849,
+        "relative_wealth_advantage": 0.08609495926355376
+      },
+      {
+        "first_signal": "2024-08-30",
+        "last_signal": "2026-07-31",
+        "periods": 24,
+        "log_excess": 0.023899423880453866,
+        "relative_wealth_advantage": 0.024187303925618686
+      }
+    ]
+  },
+  "dividend_convention": {
+    "AVGO": {
+      "events": 41,
+      "maximum_absolute_daily_return_convention_difference": 0.00043213331381664055,
+      "explanation": "Declared synthetic reinvest-at-close arithmetic differs from provider adjusted-return convention; not a broker cash ledger or proof of provider error. Yahoo unadjusted OHLC is already split-adjusted, so no second split adjustment."
+    },
+    "COST": {
+      "events": 45,
+      "maximum_absolute_daily_return_convention_difference": 0.0003868493906984405,
+      "explanation": "Declared synthetic reinvest-at-close arithmetic differs from provider adjusted-return convention; not a broker cash ledger or proof of provider error. Yahoo unadjusted OHLC is already split-adjusted, so no second split adjustment."
+    },
+    "MSFT": {
+      "events": 42,
+      "maximum_absolute_daily_return_convention_difference": 0.00013247059422649698,
+      "explanation": "Declared synthetic reinvest-at-close arithmetic differs from provider adjusted-return convention; not a broker cash ledger or proof of provider error. Yahoo unadjusted OHLC is already split-adjusted, so no second split adjustment."
+    },
+    "NVDA": {
+      "events": 42,
+      "maximum_absolute_daily_return_convention_difference": 6.247275839044164e-05,
+      "explanation": "Declared synthetic reinvest-at-close arithmetic differs from provider adjusted-return convention; not a broker cash ledger or proof of provider error. Yahoo unadjusted OHLC is already split-adjusted, so no second split adjustment."
+    },
+    "ORCL": {
+      "events": 41,
+      "maximum_absolute_daily_return_convention_difference": 0.0001508023511673784,
+      "explanation": "Declared synthetic reinvest-at-close arithmetic differs from provider adjusted-return convention; not a broker cash ledger or proof of provider error. Yahoo unadjusted OHLC is already split-adjusted, so no second split adjustment."
+    },
+    "TSM": {
+      "events": 33,
+      "maximum_absolute_daily_return_convention_difference": 0.0005905813038900032,
+      "explanation": "Declared synthetic reinvest-at-close arithmetic differs from provider adjusted-return convention; not a broker cash ledger or proof of provider error. Yahoo unadjusted OHLC is already split-adjusted, so no second split adjustment."
+    },
+    "UNH": {
+      "events": 42,
+      "maximum_absolute_daily_return_convention_difference": 0.00039283330702599706,
+      "explanation": "Declared synthetic reinvest-at-close arithmetic differs from provider adjusted-return convention; not a broker cash ledger or proof of provider error. Yahoo unadjusted OHLC is already split-adjusted, so no second split adjustment."
+    },
+    "V": {
+      "events": 42,
+      "maximum_absolute_daily_return_convention_difference": 8.193156918478994e-05,
+      "explanation": "Declared synthetic reinvest-at-close arithmetic differs from provider adjusted-return convention; not a broker cash ledger or proof of provider error. Yahoo unadjusted OHLC is already split-adjusted, so no second split adjustment."
+    }
+  },
+  "original_inputs_unchanged": true,
+  "promotion_ready": false
+}

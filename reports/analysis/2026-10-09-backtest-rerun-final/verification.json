@@ -1,0 +1,14 @@
+{
+  "status": "PASS_OFFLINE_FIXED_FORECAST_REPLAY",
+  "pytest": 342,
+  "subtests": 4,
+  "trade_cost_and_pnl_checks": 444,
+  "experiment_ledger_rows": 3,
+  "original_pilot_files": 107,
+  "backfill_artifacts": 135,
+  "forward_frozen_files": 249,
+  "input_and_implementation_hashes": "PASS",
+  "database_execution": "BLOCKED_DOCKER_DAEMON_UNAVAILABLE",
+  "new_forecasts": 0,
+  "scope": "Current guards and portfolio rules replayed on old frozen predictions and outcomes"
+}

@@ -1,0 +1,658 @@
+{
+  "partitions": {
+    "raw_neutral": 61,
+    "raw_buy_declined": 10,
+    "raw_sell_declined": 22,
+    "sell_passed_guards_long_only_skip": 3
+  },
+  "overlapping_reasons": {
+    "evidence_unavailable:fundamentals": 41,
+    "evidence_unavailable:sentiment": 96,
+    "session_actionability_gate_failed": 32,
+    "execution_risk_plan_declined": 32
+  },
+  "costs": {
+    "0": {
+      "full_panel": [
+        {
+          "strategy": "overall",
+          "net_return": 0.0,
+          "n_trades": 0,
+          "effective_n": null,
+          "deflated_sharpe": null,
+          "hold_paired_log_ci_95": [
+            -0.002120246568946985,
+            0.0011617572901753159
+          ],
+          "mean_committed_principal": 0.0,
+          "total_excess_vs_hold": -0.2086464587396449,
+          "selection_vs_matched": null,
+          "deployment_and_timing_vs_hold": null,
+          "unattributed_no_exposure": true
+        },
+        {
+          "strategy": "ft_weighted",
+          "net_return": -0.018294515398324256,
+          "n_trades": 20,
+          "effective_n": 7.0,
+          "deflated_sharpe": 0.055206779973343265,
+          "hold_paired_log_ci_95": [
+            -0.0021541256202006,
+            0.0010276552735089528
+          ],
+          "mean_committed_principal": 0.15983717590353774,
+          "total_excess_vs_hold": -0.22694097413796915,
+          "selection_vs_matched": 0.007924632722020031,
+          "deployment_and_timing_vs_hold": -0.2348656068599892,
+          "unattributed_no_exposure": false
+        },
+        {
+          "strategy": "ft_agreement",
+          "net_return": 0.0,
+          "n_trades": 0,
+          "effective_n": null,
+          "deflated_sharpe": null,
+          "hold_paired_log_ci_95": [
+            -0.002120246568946985,
+            0.0011617572901753159
+          ],
+          "mean_committed_principal": 0.0,
+          "total_excess_vs_hold": -0.2086464587396449,
+          "selection_vs_matched": null,
+          "deployment_and_timing_vs_hold": null,
+          "unattributed_no_exposure": true
+        },
+        {
+          "strategy": "raw_buy_without_guards_counterfactual",
+          "net_return": 0.03576304238440098,
+          "n_trades": 10,
+          "effective_n": 7.0,
+          "deflated_sharpe": 0.46585054449475716,
+          "hold_paired_log_ci_95": [
+            -0.0019898016117408522,
+            0.001330804763531749
+          ],
+          "mean_committed_principal": 0.08413398755317142,
+          "total_excess_vs_hold": -0.17288341635524393,
+          "selection_vs_matched": 0.04566426454237353,
+          "deployment_and_timing_vs_hold": -0.21854768089761745,
+          "unattributed_no_exposure": false
+        }
+      ],
+      "episodes": [
+        {
+          "strategy": "allocator_only",
+          "net_return": 0.3852715089721388,
+          "effective_n": 9.0,
+          "excess_vs_allocator": 0.0,
+          "excess_vs_scheduled_passive": 0.06996745463909959,
+          "allocator_paired_log_ci_95": [
+            0.0,
+            0.0
+          ],
+          "passive_paired_log_ci_95": [
+            -0.020030381145673994,
+            0.0338010267470824
+          ],
+          "deflated_sharpe": 0.5280357828559405,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": 0.17662505023249392
+        },
+        {
+          "strategy": "scheduled_passive",
+          "net_return": 0.3153040543330392,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.06996745463909959,
+          "excess_vs_scheduled_passive": 0.0,
+          "allocator_paired_log_ci_95": [
+            -0.0338010267470824,
+            0.020030381145673994
+          ],
+          "passive_paired_log_ci_95": [
+            0.0,
+            0.0
+          ],
+          "deflated_sharpe": 0.522533848881329,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": 0.10665759559339433
+        },
+        {
+          "strategy": "ai_only",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.3852715089721388,
+          "excess_vs_scheduled_passive": -0.3153040543330392,
+          "allocator_paired_log_ci_95": [
+            -0.08944998515102184,
+            0.018142969364331615
+          ],
+          "passive_paired_log_ci_95": [
+            -0.0684527891067001,
+            0.02108477034190124
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20864645873964488
+        },
+        {
+          "strategy": "allocator_plus_ai",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.3852715089721388,
+          "excess_vs_scheduled_passive": -0.3153040543330392,
+          "allocator_paired_log_ci_95": [
+            -0.08944998515102184,
+            0.018142969364331615
+          ],
+          "passive_paired_log_ci_95": [
+            -0.0684527891067001,
+            0.02108477034190124
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20864645873964488
+        },
+        {
+          "strategy": "ft_weighted_only",
+          "net_return": -0.04836410336277408,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.4336356123349129,
+          "excess_vs_scheduled_passive": -0.3636681576958133,
+          "allocator_paired_log_ci_95": [
+            -0.09265529844967846,
+            0.014788757775660232
+          ],
+          "passive_paired_log_ci_95": [
+            -0.0781489801881432,
+            0.026673816639859134
+          ],
+          "deflated_sharpe": 0.08508699355053599,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.25701056210241896
+        },
+        {
+          "strategy": "allocator_plus_ft_weighted",
+          "net_return": 0.06630360921767897,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.3189678997544598,
+          "excess_vs_scheduled_passive": -0.24900044511536024,
+          "allocator_paired_log_ci_95": [
+            -0.08031769412119939,
+            0.030340870665907762
+          ],
+          "passive_paired_log_ci_95": [
+            -0.056986238418687364,
+            0.039373420631394256
+          ],
+          "deflated_sharpe": 0.5148627473434535,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.1423428495219659
+        },
+        {
+          "strategy": "ft_agreement_only",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.3852715089721388,
+          "excess_vs_scheduled_passive": -0.3153040543330392,
+          "allocator_paired_log_ci_95": [
+            -0.08944998515102184,
+            0.018142969364331615
+          ],
+          "passive_paired_log_ci_95": [
+            -0.0684527891067001,
+            0.02108477034190124
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20864645873964488
+        },
+        {
+          "strategy": "allocator_plus_ft_agreement",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.3852715089721388,
+          "excess_vs_scheduled_passive": -0.3153040543330392,
+          "allocator_paired_log_ci_95": [
+            -0.08944998515102184,
+            0.018142969364331615
+          ],
+          "passive_paired_log_ci_95": [
+            -0.0684527891067001,
+            0.02108477034190124
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20864645873964488
+        }
+      ]
+    },
+    "10": {
+      "full_panel": [
+        {
+          "strategy": "overall",
+          "net_return": 0.0,
+          "n_trades": 0,
+          "effective_n": null,
+          "deflated_sharpe": null,
+          "hold_paired_log_ci_95": [
+            -0.0021220450835618197,
+            0.0011629174816506589
+          ],
+          "mean_committed_principal": 0.0,
+          "total_excess_vs_hold": -0.2066464587396449,
+          "selection_vs_matched": null,
+          "deployment_and_timing_vs_hold": null,
+          "unattributed_no_exposure": true
+        },
+        {
+          "strategy": "ft_weighted",
+          "net_return": -0.022037030870798845,
+          "n_trades": 20,
+          "effective_n": 7.0,
+          "deflated_sharpe": 0.04704140579154052,
+          "hold_paired_log_ci_95": [
+            -0.0021671433658258334,
+            0.001011882568158495
+          ],
+          "mean_committed_principal": 0.15958511576607862,
+          "total_excess_vs_hold": -0.22868348961044374,
+          "selection_vs_matched": 0.007975052592452264,
+          "deployment_and_timing_vs_hold": -0.236658542202896,
+          "unattributed_no_exposure": false
+        },
+        {
+          "strategy": "ft_agreement",
+          "net_return": 0.0,
+          "n_trades": 0,
+          "effective_n": null,
+          "deflated_sharpe": null,
+          "hold_paired_log_ci_95": [
+            -0.0021220450835618197,
+            0.0011629174816506589
+          ],
+          "mean_committed_principal": 0.0,
+          "total_excess_vs_hold": -0.2066464587396449,
+          "selection_vs_matched": null,
+          "deployment_and_timing_vs_hold": null,
+          "unattributed_no_exposure": true
+        },
+        {
+          "strategy": "raw_buy_without_guards_counterfactual",
+          "net_return": 0.033723238465475876,
+          "n_trades": 10,
+          "effective_n": 7.0,
+          "deflated_sharpe": 0.44315166598638883,
+          "hold_paired_log_ci_95": [
+            -0.002000399179435904,
+            0.0013228516251081112
+          ],
+          "mean_committed_principal": 0.08406380623813174,
+          "total_excess_vs_hold": -0.17292322027416904,
+          "selection_vs_matched": 0.045631153919277495,
+          "deployment_and_timing_vs_hold": -0.21855437419344653,
+          "unattributed_no_exposure": false
+        }
+      ],
+      "episodes": [
+        {
+          "strategy": "allocator_only",
+          "net_return": 0.3605474421970494,
+          "effective_n": 9.0,
+          "excess_vs_allocator": 0.0,
+          "excess_vs_scheduled_passive": 0.06871868859621433,
+          "allocator_paired_log_ci_95": [
+            0.0,
+            0.0
+          ],
+          "passive_paired_log_ci_95": [
+            -0.020030381145673966,
+            0.03380102674708241
+          ],
+          "deflated_sharpe": 0.5007331140857699,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": 0.15431706772842502
+        },
+        {
+          "strategy": "scheduled_passive",
+          "net_return": 0.29182875360083504,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.06871868859621433,
+          "excess_vs_scheduled_passive": 0.0,
+          "allocator_paired_log_ci_95": [
+            -0.03380102674708241,
+            0.020030381145673966
+          ],
+          "passive_paired_log_ci_95": [
+            0.0,
+            0.0
+          ],
+          "deflated_sharpe": 0.4935199634100294,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": 0.08559837913221069
+        },
+        {
+          "strategy": "ai_only",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.3605474421970494,
+          "excess_vs_scheduled_passive": -0.29182875360083504,
+          "allocator_paired_log_ci_95": [
+            -0.08744898448385481,
+            0.02014397003149866
+          ],
+          "passive_paired_log_ci_95": [
+            -0.066451788439533,
+            0.02308577100906826
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20623037446862436
+        },
+        {
+          "strategy": "allocator_plus_ai",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.3605474421970494,
+          "excess_vs_scheduled_passive": -0.29182875360083504,
+          "allocator_paired_log_ci_95": [
+            -0.08744898448385481,
+            0.02014397003149866
+          ],
+          "passive_paired_log_ci_95": [
+            -0.066451788439533,
+            0.02308577100906826
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20623037446862436
+        },
+        {
+          "strategy": "ft_weighted_only",
+          "net_return": -0.058466408407582215,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.4190138506046316,
+          "excess_vs_scheduled_passive": -0.35029516200841726,
+          "allocator_paired_log_ci_95": [
+            -0.09184263618643453,
+            0.015383094256104337
+          ],
+          "passive_paired_log_ci_95": [
+            -0.0773363179248992,
+            0.027413815161158137
+          ],
+          "deflated_sharpe": 0.06746892243710213,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.26469678287620657
+        },
+        {
+          "strategy": "allocator_plus_ft_weighted",
+          "net_return": 0.05916194822373777,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.3013854939733116,
+          "excess_vs_scheduled_passive": -0.23266680537709727,
+          "allocator_paired_log_ci_95": [
+            -0.07921564932301885,
+            0.03129318409935603
+          ],
+          "passive_paired_log_ci_95": [
+            -0.05587863530583825,
+            0.04047036769294046
+          ],
+          "deflated_sharpe": 0.47650975559533915,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.14706842624488659
+        },
+        {
+          "strategy": "ft_agreement_only",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.3605474421970494,
+          "excess_vs_scheduled_passive": -0.29182875360083504,
+          "allocator_paired_log_ci_95": [
+            -0.08744898448385481,
+            0.02014397003149866
+          ],
+          "passive_paired_log_ci_95": [
+            -0.066451788439533,
+            0.02308577100906826
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20623037446862436
+        },
+        {
+          "strategy": "allocator_plus_ft_agreement",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.3605474421970494,
+          "excess_vs_scheduled_passive": -0.29182875360083504,
+          "allocator_paired_log_ci_95": [
+            -0.08744898448385481,
+            0.02014397003149866
+          ],
+          "passive_paired_log_ci_95": [
+            -0.066451788439533,
+            0.02308577100906826
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20623037446862436
+        }
+      ]
+    },
+    "20": {
+      "full_panel": [
+        {
+          "strategy": "overall",
+          "net_return": 0.0,
+          "n_trades": 0,
+          "effective_n": null,
+          "deflated_sharpe": null,
+          "hold_paired_log_ci_95": [
+            -0.002123846458983721,
+            0.001164079984269952
+          ],
+          "mean_committed_principal": 0.0,
+          "total_excess_vs_hold": -0.2046464587396449,
+          "selection_vs_matched": null,
+          "deployment_and_timing_vs_hold": null,
+          "unattributed_no_exposure": true
+        },
+        {
+          "strategy": "ft_weighted",
+          "net_return": -0.0257676287580789,
+          "n_trades": 20,
+          "effective_n": 7.0,
+          "deflated_sharpe": 0.03973593429535759,
+          "hold_paired_log_ci_95": [
+            -0.002182133133359599,
+            0.0009960833918786925
+          ],
+          "mean_committed_principal": 0.1593334896147018,
+          "total_excess_vs_hold": -0.2304140874977238,
+          "selection_vs_matched": 0.008025300134795542,
+          "deployment_and_timing_vs_hold": -0.23843938763251935,
+          "unattributed_no_exposure": false
+        },
+        {
+          "strategy": "ft_agreement",
+          "net_return": 0.0,
+          "n_trades": 0,
+          "effective_n": null,
+          "deflated_sharpe": null,
+          "hold_paired_log_ci_95": [
+            -0.002123846458983721,
+            0.001164079984269952
+          ],
+          "mean_committed_principal": 0.0,
+          "total_excess_vs_hold": -0.2046464587396449,
+          "selection_vs_matched": null,
+          "deployment_and_timing_vs_hold": null,
+          "unattributed_no_exposure": true
+        },
+        {
+          "strategy": "raw_buy_without_guards_counterfactual",
+          "net_return": 0.031686812269154686,
+          "n_trades": 10,
+          "effective_n": 7.0,
+          "deflated_sharpe": 0.4198072242946741,
+          "hold_paired_log_ci_95": [
+            -0.0020109852975340203,
+            0.0013148232384441031
+          ],
+          "mean_committed_principal": 0.08399368935985231,
+          "total_excess_vs_hold": -0.17295964647049022,
+          "selection_vs_matched": 0.04559805627293899,
+          "deployment_and_timing_vs_hold": -0.2185577027434292,
+          "unattributed_no_exposure": false
+        }
+      ],
+      "episodes": [
+        {
+          "strategy": "allocator_only",
+          "net_return": 0.33624054520494684,
+          "effective_n": 9.0,
+          "excess_vs_allocator": 0.0,
+          "excess_vs_scheduled_passive": 0.06749099301329253,
+          "allocator_paired_log_ci_95": [
+            0.0,
+            0.0
+          ],
+          "passive_paired_log_ci_95": [
+            -0.02003038114567406,
+            0.03380102674708237
+          ],
+          "deflated_sharpe": 0.47382190939290797,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": 0.13242383771442562
+        },
+        {
+          "strategy": "scheduled_passive",
+          "net_return": 0.2687495521916543,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.06749099301329253,
+          "excess_vs_scheduled_passive": 0.0,
+          "allocator_paired_log_ci_95": [
+            -0.03380102674708237,
+            0.02003038114567406
+          ],
+          "passive_paired_log_ci_95": [
+            0.0,
+            0.0
+          ],
+          "deflated_sharpe": 0.46470426131855724,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": 0.06493284470113309
+        },
+        {
+          "strategy": "ai_only",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.33624054520494684,
+          "excess_vs_scheduled_passive": -0.2687495521916543,
+          "allocator_paired_log_ci_95": [
+            -0.08544597980967567,
+            0.02214697470567776
+          ],
+          "passive_paired_log_ci_95": [
+            -0.06444878376535397,
+            0.02508877568324737
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20381670749052122
+        },
+        {
+          "strategy": "allocator_plus_ai",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.33624054520494684,
+          "excess_vs_scheduled_passive": -0.2687495521916543,
+          "allocator_paired_log_ci_95": [
+            -0.08544597980967567,
+            0.02214697470567776
+          ],
+          "passive_paired_log_ci_95": [
+            -0.06444878376535397,
+            0.02508877568324737
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20381670749052122
+        },
+        {
+          "strategy": "ft_weighted_only",
+          "net_return": -0.06846812763555232,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.40470867284049916,
+          "excess_vs_scheduled_passive": -0.33721767982720663,
+          "allocator_paired_log_ci_95": [
+            -0.09102896368632295,
+            0.015978521814908914
+          ],
+          "passive_paired_log_ci_95": [
+            -0.07652264542478776,
+            0.028155246995347914
+          ],
+          "deflated_sharpe": 0.05219711528974622,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.27228483512607354
+        },
+        {
+          "strategy": "allocator_plus_ft_weighted",
+          "net_return": 0.052066657349863155,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.2841738878550837,
+          "excess_vs_scheduled_passive": -0.21668289484179115,
+          "allocator_paired_log_ci_95": [
+            -0.07811191313336902,
+            0.03224724055018486
+          ],
+          "passive_paired_log_ci_95": [
+            -0.05476933149960086,
+            0.04156920333888076
+          ],
+          "deflated_sharpe": 0.4377116572913147,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.15175005014065807
+        },
+        {
+          "strategy": "ft_agreement_only",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.33624054520494684,
+          "excess_vs_scheduled_passive": -0.2687495521916543,
+          "allocator_paired_log_ci_95": [
+            -0.08544597980967567,
+            0.02214697470567776
+          ],
+          "passive_paired_log_ci_95": [
+            -0.06444878376535397,
+            0.02508877568324737
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20381670749052122
+        },
+        {
+          "strategy": "allocator_plus_ft_agreement",
+          "net_return": 0.0,
+          "effective_n": 9.0,
+          "excess_vs_allocator": -0.33624054520494684,
+          "excess_vs_scheduled_passive": -0.2687495521916543,
+          "allocator_paired_log_ci_95": [
+            -0.08544597980967567,
+            0.02214697470567776
+          ],
+          "passive_paired_log_ci_95": [
+            -0.06444878376535397,
+            0.02508877568324737
+          ],
+          "deflated_sharpe": null,
+          "n_strategies_tested": 8,
+          "excess_vs_continuous_strict_hold": -0.20381670749052122
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "plan_id": "275eab0700ee4093d3005457fff106080b563e5cdeb32c507cc7fe59c4564352",
+  "implementation_sha256": "7daeb93f8765406d2a141607c31b93c2047fca638ac9dcbcc789b51048143898",
+  "as_of_date": "2026-10-09",
+  "data_as_of": "2026-10-09",
+  "market": "US",
+  "currency": "USD",
+  "status": "ready",
+  "research_only": true,
+  "promotion_ready": false,
+  "lookback_months": 12,
+  "top_n": 3,
+  "momentum_ranking": [
+    "AAA",
+    "BBB",
+    "CCC",
+    "DDD"
+  ],
+  "momentum_scores": {
+    "AAA": 0.14398422090729768,
+    "BBB": 0.10836219693221172,
+    "CCC": 0.07249255213505457,
+    "DDD": 0.03637269556552081
+  },
+  "arms": [
+    {
+      "strategy": "continuous_strict_hold",
+      "weights": {
+        "AAA": 0.25,
+        "BBB": 0.25,
+        "CCC": 0.25,
+        "DDD": 0.25
+      },
+      "cash_weight": 0.0
+    },
+    {
+      "strategy": "scheduled_passive",
+      "weights": {
+        "AAA": 0.25,
+        "BBB": 0.25,
+        "CCC": 0.25,
+        "DDD": 0.25
+      },
+      "cash_weight": 0.0
+    },
+    {
+      "strategy": "allocator_only",
+      "weights": {
+        "AAA": 0.3333333333333333,
+        "BBB": 0.3333333333333333,
+        "CCC": 0.3333333333333333
+      },
+      "cash_weight": 0.0
+    },
+    {
+      "strategy": "ft_weighted_only",
+      "weights": {
+        "AAA": 0.3333333333333333,
+        "BBB": 0.3333333333333333,
+        "CCC": 0.3333333333333333
+      },
+      "cash_weight": 0.0
+    },
+    {
+      "strategy": "ft_agreement_only",
+      "weights": {},
+      "cash_weight": 1.0
+    },
+    {
+      "strategy": "ai_only",
+      "weights": {},
+      "cash_weight": 1.0
+    },
+    {
+      "strategy": "allocator_plus_ft_weighted",
+      "weights": {
+        "AAA": 0.3333333333333333,
+        "BBB": 0.3333333333333333,
+        "CCC": 0.3333333333333333
+      },
+      "cash_weight": 0.0
+    },
+    {
+      "strategy": "allocator_plus_ft_agreement",
+      "weights": {},
+      "cash_weight": 1.0
+    },
+    {
+      "strategy": "allocator_plus_ai",
+      "weights": {},
+      "cash_weight": 1.0
+    }
+  ],
+  "input_hashes": {
+    "AAA": "c6847e129890f8604f86c5226c7fc9f4324042b660a181ecc8e8fcfcd1d5fcdd",
+    "BBB": "c4c33994e018ef4e0a5ed28db11e81c85bb87e7c7f442e50c89b2faeca9ccabe",
+    "CCC": "eaa1eb00ceac89bf3fc6c1c59bc815eb6d500f94f6427b8aeca24eecf8438591",
+    "DDD": "8509163a325dddf74e13b97c6493b55a2e8ba02a2411d9983c8d8235076e694b"
+  },
+  "run_ids": {
+    "AAA": "8f558864-0e0e-5526-b45e-c84804ba0daa",
+    "BBB": "11353e0d-2db3-5edb-8366-567a39c25866",
+    "CCC": "50d69ffd-7e9d-5bc0-a1d2-d6ee23c42b14",
+    "DDD": "bce9cf05-d2b9-5e9a-8a18-ba89e9491c7d"
+  },
+  "signal_trace": [
+    {
+      "ticker": "AAA",
+      "raw_signal": "neutral",
+      "source_synthesized_signal": null,
+      "source_gate_reasons": [],
+      "ai_signal": "neutral",
+      "conviction": 0.0,
+      "gate_reasons": [
+        "evidence_unavailable:fundamentals",
+        "evidence_unavailable:sentiment",
+        "evidence_unavailable:macro"
+      ],
+      "ft_weighted": "buy",
+      "ft_agreement": "neutral"
+    },
+    {
+      "ticker": "BBB",
+      "raw_signal": "neutral",
+      "source_synthesized_signal": null,
+      "source_gate_reasons": [],
+      "ai_signal": "neutral",
+      "conviction": 0.0,
+      "gate_reasons": [
+        "evidence_unavailable:fundamentals",
+        "evidence_unavailable:sentiment",
+        "evidence_unavailable:macro"
+      ],
+      "ft_weighted": "buy",
+      "ft_agreement": "neutral"
+    },
+    {
+      "ticker": "CCC",
+      "raw_signal": "neutral",
+      "source_synthesized_signal": null,
+      "source_gate_reasons": [],
+      "ai_signal": "neutral",
+      "conviction": 0.0,
+      "gate_reasons": [
+        "evidence_unavailable:fundamentals",
+        "evidence_unavailable:sentiment",
+        "evidence_unavailable:macro"
+      ],
+      "ft_weighted": "buy",
+      "ft_agreement": "neutral"
+    },
+    {
+      "ticker": "DDD",
+      "raw_signal": "neutral",
+      "source_synthesized_signal": null,
+      "source_gate_reasons": [],
+      "ai_signal": "neutral",
+      "conviction": 0.0,
+      "gate_reasons": [
+        "evidence_unavailable:fundamentals",
+        "evidence_unavailable:sentiment",
+        "evidence_unavailable:macro"
+      ],
+      "ft_weighted": "buy",
+      "ft_agreement": "neutral"
+    }
+  ],
+  "unavailable_reasons": []
+}

@@ -1,0 +1,56 @@
+{
+  "status": "CONDITIONAL_GO",
+  "checks": {
+    "pytest": 341,
+    "pytest_subtests": 4,
+    "ruff": "PASS",
+    "web_typecheck": "PASS",
+    "pipeline_layout": "PASS",
+    "openapi": "PASS",
+    "postman": "PASS",
+    "architecture": "PASS"
+  },
+  "frozen_artifacts": {
+    "2026-10-07-pipeline-backtest": 107,
+    "2026-10-08-evidence-backfill": 135,
+    "ft_input_artifacts": 4,
+    "forward_cohort_files": 249
+  },
+  "old_panels_accepted": 2,
+  "source_files_changed_since_previous_validation": [
+    "src/stock_analysis/backtest/session.py",
+    "tests/test_pipeline_repairs.py"
+  ],
+  "source_hashes": {
+    "src/stock_analysis/config.py": "961cb19f21a68832ef901a4588331d56271df1a5eff7c6de310cf82dea618465",
+    "src/stock_analysis/worker.py": "189a68e58f3ef41de236525c9763f8afa66da7c77286dc4ab441e6fc21aac60d",
+    "src/stock_analysis/orchestrator.py": "30850ce30c3c3a3dc40f568fda42127ef860aded8d96a93695e495a68c328f37",
+    "src/stock_analysis/prompt_context.py": "e51a33005027926be071c03d01db50fd915de3a946fdd62aba5418e7abf88640",
+    "src/stock_analysis/models/market_data.py": "44444a8dd2347124f66807462ca2d67322bcd0b1dac94efc646e0dc797beae1c",
+    "src/stock_analysis/data/run_input.py": "48f067b558fc206c54b12ad0f7175c2de386d65126b0e6c8a615461b643df439",
+    "src/stock_analysis/data/live_evidence.py": "ed93430a387431ad2cb9cb90b1a38a02747f610cee736e7b7a663975869e9e12",
+    "src/stock_analysis/data/evidence.py": "851ae3d6d7353d73835f4dfb352132d162d68e4612295ec4bf41b6c2b2e57d6b",
+    "src/stock_analysis/data/fundamentals.py": "0797f47b6c5eb5d0edcce6b41adf917fc549dfbf83c5438b04b2cbf137246e79",
+    "src/stock_analysis/data/us_market.py": "6aa09f783f7f7addc5d56a5c2456ab1d031db54277793e54ee61f2d14e67cb7a",
+    "src/stock_analysis/data/my_market.py": "c20b92df0fff8cf4888db1fd625697b0f50d5b1154ac8634993d56bb6d12794b",
+    "src/stock_analysis/data/cloud.py": "ca7b025439ae0f4097c244326434172f6bf2ce44d254d6c8cb2c2f2eba16bb7c",
+    "src/stock_analysis/agents/sentiment.py": "6077431b5d221cb90b65acb611cbe9552e72b308778e57c7fb03a572af6e3280",
+    "src/stock_analysis/agents/fundamentals.py": "b33681019d2e7c1c028137c1295ae506a436cddc5953ec9c96ccbe0992ddb3e8",
+    "src/stock_analysis/backtest/session.py": "b4d510c9d16aaf2e381a8a8a1dcf8bffad2a31215739ba72e5e21de2955c1a98",
+    "src/stock_analysis/backtest/runner.py": "f1958d94ccfc57c514fea48d1aad60d0b3a73344c6f418754180f08be2d76f23",
+    "src/stock_analysis/backtest/fetcher.py": "8899332ca1a7bcc4cb1a0fc96110ad470387a03dc09446e013a806b70811f558",
+    "src/stock_analysis/synthesis/risk_checker.py": "20ab000a0ebf235f266df6f7e368a3d1ee1083bbb70efa1b6aee9643e1faab47",
+    "pipeline.json": "0d5cf982c3c760dd2157f36246ba7f1e4695925ddc66fbcc5885c58dd26a97c3",
+    "supabase/migrations/20261008000000_immutable_run_inputs.sql": "31814be15582f8c623eb2a6b96303ef293582872c5841ec91dc1a5d857b4ffac",
+    "tests/test_pipeline_repairs.py": "13103deca17c3edceb724f9ff02892d6ca4e1232d592700c2bcc969b2079924f",
+    "tests/sql/run_input_contract.sql": "68e4ad0a018b9697220c2003d492cb6357c2cf436a192c7aafe2970e11b4ff37",
+    ".github/workflows/ci.yml": "2e1cac145d2eed622a108f9e58d6e35a7a9427c9bcf355be54d251203d9dfa8b"
+  },
+  "repaired_findings": [
+    "session internal capture after manifest cutoff accepted future news",
+    "declared positive evidence flags bypassed actual source guards and inflated coverage"
+  ],
+  "database_migration_verification": "BLOCKED_DOCKER_DAEMON_UNAVAILABLE",
+  "profitability_against_long_hold": "NOT_RETESTED",
+  "old_reports_or_forecasts_rewritten": false
+}

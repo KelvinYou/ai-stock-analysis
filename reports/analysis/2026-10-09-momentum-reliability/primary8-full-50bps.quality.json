@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "mode": "cross-sectional",
+  "verdict": "research_only",
+  "findings": [
+    {
+      "status": "Warning",
+      "code": "historical_win_only",
+      "detail": "The observed net return beat strict hold on this inspected window; this is not independent validation."
+    },
+    {
+      "status": "Warning",
+      "code": "excess_uncertain",
+      "detail": "The paired 95% excess-return interval is unavailable or includes zero."
+    },
+    {
+      "status": "Warning",
+      "code": "return_basis_unverified",
+      "detail": "Dividend and terminal-return treatment is not verified for the price input."
+    },
+    {
+      "status": "Warning",
+      "code": "search_count",
+      "detail": "Ledger has 6 unique recorded candidate arms; earlier/manual searches are not reconstructed."
+    }
+  ],
+  "next_checks": [
+    "Freeze the rule and data snapshot; use an untouched forward period for confirmation."
+  ],
+  "auto_tuning_performed": false
+}

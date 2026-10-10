@@ -1,0 +1,53 @@
+{
+  "captured_at_utc": "2026-10-09T08:22:41.561066+00:00",
+  "scope": "current-provider supplementary vintage; not replacement for original sealed prices",
+  "requested_range": [
+    "2016-04-22",
+    "2026-09-18"
+  ],
+  "source": "Yahoo Finance via yfinance",
+  "auto_adjust": false,
+  "actions": true,
+  "tickers": {
+    "AVGO": {
+      "status": "UNAVAILABLE",
+      "error_type": "DNSError",
+      "error": "Failed to perform, curl: (6) Could not resolve host: guce.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+    },
+    "COST": {
+      "status": "UNAVAILABLE",
+      "error_type": "DNSError",
+      "error": "Failed to perform, curl: (6) Could not resolve host: guce.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
+    },
+    "MSFT": {
+      "status": "UNAVAILABLE",
+      "error_type": "YFTzMissingError",
+      "error": "$MSFT: possibly delisted; no timezone found"
+    },
+    "NVDA": {
+      "status": "UNAVAILABLE",
+      "error_type": "YFTzMissingError",
+      "error": "$NVDA: possibly delisted; no timezone found"
+    },
+    "ORCL": {
+      "status": "UNAVAILABLE",
+      "error_type": "YFTzMissingError",
+      "error": "$ORCL: possibly delisted; no timezone found"
+    },
+    "TSM": {
+      "status": "UNAVAILABLE",
+      "error_type": "YFTzMissingError",
+      "error": "$TSM: possibly delisted; no timezone found"
+    },
+    "UNH": {
+      "status": "UNAVAILABLE",
+      "error_type": "YFTzMissingError",
+      "error": "$UNH: possibly delisted; no timezone found"
+    },
+    "V": {
+      "status": "UNAVAILABLE",
+      "error_type": "YFTzMissingError",
+      "error": "$V: possibly delisted; no timezone found"
+    }
+  }
+}

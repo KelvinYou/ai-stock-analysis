@@ -1,0 +1,36 @@
+{
+  "scope": "local_implementation_acceptance_not_performance_evidence",
+  "python_tests_passed": 359,
+  "python_subtests_passed": 4,
+  "portfolio_tests_added": 13,
+  "ruff": "pass",
+  "openapi": "pass",
+  "postman": "pass",
+  "architecture": "pass",
+  "web_typecheck": "pass",
+  "native_svg_layout": {
+    "status": "pass",
+    "nodes": 24,
+    "edges": 27
+  },
+  "mermaid_portability": "pass",
+  "cli_plan_smoke": "synthetic fixture only",
+  "implementation_sha256": "6ab7b9ac8b50bb95c6b3b36c5ae2d09bd83332633f73d0330898769364b7fbd7",
+  "runtime_versions": {
+    "python": "3.14.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "pydantic": "2.13.4"
+  },
+  "frozen_v2_protocol_and_specification_unchanged": true,
+  "promotion_ready": false,
+  "forward_collection_active": false,
+  "remote_deployed": false,
+  "global_diff_check": "existing CSV CRLF warnings; non-data diff passes",
+  "hashes": {
+    "synthetic-plan.json": "cf9de63171a8c112fc3f3ef9a4902c8d3a24da094d1756684bad0013c0373151",
+    "synthetic-bundle.json": "0bcb23e8738f47d84157540f77ab26dae06f5c50a0806cfedace7647ce793863",
+    "synthetic-plan-final.json": "f8569fc17e686e276d5ae929ba8552727bc4c9ba61db8f23a441953d935cdd41",
+    "pipeline.svg": "6631fce49d3827d1bfb494cb0f5bb80e8e38e88d8f3844e95b5cb8854fc2eec6"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "mode": "read-only provider fetch; no LLM calls",
+  "observations": [
+    {
+      "ticker": "AAPL",
+      "captured_at": "2026-10-09T10:21:03.197339",
+      "price_as_of": "2026-10-08",
+      "bars": 251,
+      "financial_periods": 5,
+      "statement_currency": "USD",
+      "plain_close_available": true,
+      "news_before_policy": 0,
+      "news_after_policy": 0,
+      "news_max_age_days": 30,
+      "provider_capture": "current"
+    },
+    {
+      "ticker": "1155",
+      "captured_at": "2026-10-09T10:21:04.564524",
+      "price_as_of": "2026-10-09",
+      "bars": 246,
+      "financial_periods": 5,
+      "statement_currency": "MYR",
+      "plain_close_available": true,
+      "news_before_policy": 0,
+      "news_after_policy": 0,
+      "news_max_age_days": 30,
+      "provider_capture": "current"
+    }
+  ]
+}
