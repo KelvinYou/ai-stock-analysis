@@ -42,12 +42,38 @@ def esc(text: str) -> str:
 
 
 def node_label(node: dict) -> str:
-    parts = [f"<b>{esc(node['label'])}</b>"]
+    parts = [esc(node['label'])]
     parts += [esc(line) for line in node.get("lines", [])]
     return "<br/>".join(parts)
 
 
+def validate(pipeline: dict) -> None:
+    """Validate canonical references before either renderer can imply a flow."""
+    stages = pipeline.get("stages", [])
+    nodes = [n for stage in stages for row in stage["rows"] for n in row]
+    nodes += [stage["sink"] for stage in stages if stage.get("sink")]
+    nodes += [pipeline["output"], *pipeline.get("consumers", [])]
+    ids = [s["id"] for s in stages] + [n["id"] for n in nodes]
+    if len(ids) != len(set(ids)):
+        raise ValueError("Duplicate pipeline ID")
+    if any(not stage["rows"] or any(not row for row in stage["rows"]) for stage in stages):
+        raise ValueError("Empty pipeline stage or row")
+    for node in nodes:
+        for label in [node["label"], *node.get("lines", [])]:
+            if "\\n" in label or "\n" in label:
+                raise ValueError(f"Use separate display lines in node {node['id']}")
+    for edge in pipeline.get("edges", []):
+        if edge["from"] not in ids or edge["to"] not in ids:
+            raise ValueError(f"Unknown pipeline edge endpoint: {edge}")
+        if edge.get("kind", "flow") not in {"flow", "conditional", "bidirectional"}:
+            raise ValueError(f"Unknown pipeline edge kind: {edge}")
+        if edge["from"] == edge["to"]:
+            raise ValueError("Pipeline self-edge")
+
+
 def emit(pipeline: dict) -> str:
+    validate(pipeline)
+    explicit = "edges" in pipeline
     out: list[str] = [FENCE, "flowchart TD"]
     styles: list[str] = []
     # Every stage exits from its last row (or sink) into the next stage's first row.
@@ -77,14 +103,14 @@ def emit(pipeline: dict) -> str:
                 out.append(f'        {node["id"]}["{node_label(node)}"]')
                 collect_styles(node)
         # Bull vs bear argue inside the subgraph; keep that edge local to it.
-        if stage.get("pairLabel") and len(rows[-1]) == 2:
+        if not explicit and stage.get("pairLabel") and len(rows[-1]) == 2:
             a, b = rows[-1][0]["id"], rows[-1][1]["id"]
             out.append(f'        {a} <-->|"{esc(stage["pairLabel"])}"| {b}')
         out.append("    end")
 
         # Rows inside a stage chain together, then the sink converges them.
         out.append("")
-        for upper, lower in pairwise(rows):
+        for upper, lower in ([] if explicit else pairwise(rows)):
             for src in upper:
                 arrow = "-.->" if src.get("dashed") else "-->"
                 label = f'|"{esc(src["edgeLabel"])}"|' if src.get("edgeLabel") else ""
@@ -96,13 +122,13 @@ def emit(pipeline: dict) -> str:
             sink = stage["sink"]
             out.append(f'    {sink["id"]}["{node_label(sink)}"]')
             collect_styles(sink)
-            for src_id in exit_ids:
+            for src_id in ([] if explicit else exit_ids):
                 out.append(f'    {src_id} --> {sink["id"]}')
             exit_ids = [sink["id"]]
 
         # Cross-stage links go subgraph-to-subgraph when either side is a whole
         # row, so a 4-agent fan-out stays one edge instead of eight.
-        if prev_exit:
+        if prev_exit and not explicit:
             entry = [n["id"] for n in rows[0]]
             dsts = [stage["id"]] if len(entry) > 1 else entry
             for src_id in prev_exit:
@@ -114,7 +140,7 @@ def emit(pipeline: dict) -> str:
     out.append("")
     out.append(f'    {output["id"]}["{node_label(output)}"]')
     collect_styles(output)
-    for src_id in prev_exit:
+    for src_id in ([] if explicit else prev_exit):
         out.append(f'    {src_id} --> {output["id"]}')
 
     if pipeline.get("consumers"):
@@ -125,7 +151,15 @@ def emit(pipeline: dict) -> str:
             out.append(f'        {node["id"]}["{node_label(node)}"]')
             collect_styles(node)
         out.append("    end")
-        out.append(f'    {output["id"]} --> CONSUMERS')
+        if not explicit:
+            out.append(f'    {output["id"]} --> CONSUMERS')
+
+    if explicit:
+        out.append("")
+        for edge in pipeline["edges"]:
+            arrow = {"flow": "-->", "conditional": "-.->", "bidirectional": "<-->"}[edge.get("kind", "flow")]
+            label = f'|"{esc(edge["label"])}"|' if edge.get("label") else ""
+            out.append(f'    {edge["from"]} {arrow}{label} {edge["to"]}')
 
     if styles:
         out.append("")

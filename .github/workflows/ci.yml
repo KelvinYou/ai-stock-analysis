@@ -52,6 +52,10 @@ jobs:
         working-directory: web
         run: npm run typecheck
 
+      - name: Verify pipeline layout and rendered graph
+        working-directory: web
+        run: npm run check:pipeline
+
       - name: Build web in offline filesystem mode
         working-directory: web
         env:
@@ -63,3 +67,33 @@ jobs:
 
       - name: Build deployment image
         run: docker build -t ai-stock-analysis:ci .
+
+  database-contract:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: stock_contract_test
+          POSTGRES_PASSWORD: contract-test-only
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      PGHOST: localhost
+      PGUSER: postgres
+      PGDATABASE: stock_contract_test
+      PGPASSWORD: contract-test-only
+    steps:
+      - uses: actions/checkout@v4
+      - name: Initialize disposable Supabase roles and apply migrations
+        run: |
+          psql -v ON_ERROR_STOP=1 -c "create role anon; create role authenticated; create role service_role bypassrls;"
+          for migration in supabase/migrations/*.sql; do
+            psql -v ON_ERROR_STOP=1 -f "$migration"
+          done
+      - name: Verify immutable inputs, privileges and stage binding
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/run_input_contract.sql
