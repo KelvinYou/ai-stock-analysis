@@ -283,6 +283,23 @@
           "risk_assessment": {
             "$ref": "#/components/schemas/RiskAssessment"
           },
+          "signal_gate_reasons": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Signal Gate Reasons",
+            "type": "array"
+          },
+          "synthesized_signal": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Signal"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "ticker": {
             "title": "Ticker",
             "type": "string"
@@ -460,6 +477,110 @@
       },
       "FinancialStatements": {
         "properties": {
+          "availability_source": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Availability Source"
+          },
+          "available_as_of": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Available As Of"
+          },
+          "currency": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Currency"
+          },
+          "debt_scope": {
+            "anyOf": [
+              {
+                "enum": [
+                  "reported_total",
+                  "matched_long_term_subtotal",
+                  "unavailable"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Debt Scope"
+          },
+          "diluted_eps": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Diluted Eps"
+          },
+          "diluted_eps_currency": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Diluted Eps Currency"
+          },
+          "fact_provenance": {
+            "additionalProperties": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Fact Provenance",
+            "type": "object"
+          },
+          "fiscal_period_end": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fiscal Period End"
+          },
+          "fiscal_period_start": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fiscal Period Start"
+          },
           "free_cash_flow": {
             "anyOf": [
               {
@@ -515,6 +636,22 @@
             ],
             "title": "Operating Margin"
           },
+          "period_kind": {
+            "anyOf": [
+              {
+                "enum": [
+                  "quarter",
+                  "annual",
+                  "other"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Period Kind"
+          },
           "revenue": {
             "anyOf": [
               {
@@ -525,6 +662,29 @@
               }
             ],
             "title": "Revenue"
+          },
+          "share_basis": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Share Basis"
+          },
+          "shares_outstanding": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shares Outstanding"
           },
           "total_debt": {
             "anyOf": [
@@ -732,6 +892,164 @@
         ],
         "title": "Market",
         "type": "string"
+      },
+      "PortfolioPlan": {
+        "properties": {
+          "arms": {
+            "items": {
+              "$ref": "#/components/schemas/TargetWeightView"
+            },
+            "title": "Arms",
+            "type": "array"
+          },
+          "as_of_date": {
+            "format": "date",
+            "title": "As Of Date",
+            "type": "string"
+          },
+          "currency": {
+            "const": "USD",
+            "default": "USD",
+            "title": "Currency",
+            "type": "string"
+          },
+          "data_as_of": {
+            "format": "date",
+            "title": "Data As Of",
+            "type": "string"
+          },
+          "implementation_sha256": {
+            "title": "Implementation Sha256",
+            "type": "string"
+          },
+          "input_hashes": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Input Hashes",
+            "type": "object"
+          },
+          "lookback_months": {
+            "const": 12,
+            "default": 12,
+            "title": "Lookback Months",
+            "type": "integer"
+          },
+          "market": {
+            "const": "US",
+            "default": "US",
+            "title": "Market",
+            "type": "string"
+          },
+          "momentum_ranking": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Momentum Ranking",
+            "type": "array"
+          },
+          "momentum_scores": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "title": "Momentum Scores",
+            "type": "object"
+          },
+          "plan_id": {
+            "title": "Plan Id",
+            "type": "string"
+          },
+          "promotion_ready": {
+            "const": false,
+            "default": false,
+            "title": "Promotion Ready",
+            "type": "boolean"
+          },
+          "research_only": {
+            "const": true,
+            "default": true,
+            "title": "Research Only",
+            "type": "boolean"
+          },
+          "run_ids": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Run Ids",
+            "type": "object"
+          },
+          "signal_trace": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Signal Trace",
+            "type": "array"
+          },
+          "status": {
+            "enum": [
+              "ready",
+              "unavailable"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "top_n": {
+            "const": 3,
+            "default": 3,
+            "title": "Top N",
+            "type": "integer"
+          },
+          "unavailable_reasons": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Unavailable Reasons",
+            "type": "array"
+          },
+          "version": {
+            "const": 1,
+            "default": 1,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "plan_id",
+          "implementation_sha256",
+          "as_of_date",
+          "data_as_of",
+          "status",
+          "momentum_ranking",
+          "momentum_scores",
+          "arms",
+          "input_hashes",
+          "run_ids",
+          "signal_trace",
+          "unavailable_reasons"
+        ],
+        "title": "PortfolioPlan",
+        "type": "object"
+      },
+      "PortfolioPlanRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "run_ids": {
+            "items": {
+              "format": "uuid",
+              "type": "string"
+            },
+            "maxItems": 50,
+            "minItems": 3,
+            "title": "Run Ids",
+            "type": "array"
+          }
+        },
+        "required": [
+          "run_ids"
+        ],
+        "title": "PortfolioPlanRequest",
+        "type": "object"
       },
       "PriceBar": {
         "properties": {
@@ -982,6 +1300,34 @@
         ],
         "title": "Signal",
         "type": "string"
+      },
+      "TargetWeightView": {
+        "properties": {
+          "cash_weight": {
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Cash Weight",
+            "type": "number"
+          },
+          "strategy": {
+            "title": "Strategy",
+            "type": "string"
+          },
+          "weights": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "title": "Weights",
+            "type": "object"
+          }
+        },
+        "required": [
+          "strategy",
+          "weights",
+          "cash_weight"
+        ],
+        "title": "TargetWeightView",
+        "type": "object"
       },
       "TechnicalReport": {
         "properties": {
@@ -2216,6 +2562,50 @@
           }
         ],
         "summary": "Start Analysis"
+      }
+    },
+    "/api/v1/portfolio-plans": {
+      "post": {
+        "description": "Derive research target weights from completed run IDs; no new model calls.",
+        "operationId": "create_portfolio_plan_api_v1_portfolio_plans_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PortfolioPlanRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortfolioPlan"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "summary": "Create Portfolio Plan"
       }
     },
     "/api/v1/tickers": {

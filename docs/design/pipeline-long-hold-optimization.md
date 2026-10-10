@@ -1,8 +1,15 @@
 # Pipeline vs. Long-Hold Optimization — Technical Design
 
-**Author:** Codex  **Status:** Prospective protocol v1 superseded before collection; v2 not yet frozen; confirmatory run blocked on licensed return data, a production provider, and calibrated costs  **Created:** 2026-09-23  **Reviewers:** User
+**Author:** Codex  **Status:** Portfolio stage and nine-arm collector implemented locally; v2 collection inactive pending calendar/model/provider provenance; confirmation also requires verified return data and calibrated costs  **Created:** 2026-09-23  **Reviewers:** User
 
 ## 1. Context and objective
+
+The 2026-10-09 implementation upgrade is recorded in
+[`portfolio-pipeline-upgrade.md`](portfolio-pipeline-upgrade.md). Completed runs
+now feed a deterministic nine-view portfolio API and immutable cohort CLI; the
+canonical graph and About page include that optional stage. The earlier v2
+specification remains a frozen pre-implementation record. Its collection and
+promotion have not been activated by this code change.
 
 The original 2026-09-22 report showed −0.96% versus +9.06% for the 88-trial AI run, but its same-day cash allocation was order-dependent. The same-input correction on 2026-09-23 superseded those portfolio figures: `overall` returned −1.40% versus +8.04% for strict long hold and −0.47 percentage points versus the same-stake, same-window passive basket, with portfolio effective n of 6; the promotion gate failed. This is a historical in-session rescore, not independent forecast evidence, and no authenticated production-model run has validated the AI output. A separate 12-month momentum allocator returned +15.94% versus +9.06% on sealed trials, but its effective sample size was 3 and its net-return p-value was 0.743. That historical advantage is not promotion evidence: the rule was inspected on those slices, the final 2026 slice contains seven monthly periods, and the universe is fixed rather than point-in-time. See the corrected results and their limits in [`stock-pipeline-backtest-2026-09.md`](../analysis/stock-pipeline-backtest-2026-09.md).
 
@@ -240,3 +247,38 @@ Exit: AI's incremental value is identifiable without cash-utilization or evidenc
 3. Evaluate paired net excess against strict hold and matched passive, daily marked-to-market drawdown, block confidence intervals, effective sample size, DSR using all tried candidates, and 2× calibrated-cost sensitivity. Preserve a never-inspected forward holdout and run a shadow portfolio on a fixed calendar; do not add more dates after seeing a failure.
 
 Exit: every promotion gate in §4 passes on genuinely unseen, source-complete results. Otherwise keep long hold as the incumbent and report the measured reason for failure.
+
+## 10. October 9 diagnostic experiments and forward v2
+
+The [diagnostic implementation plan](pipeline-diagnostic-experiments.md) is complete
+for offline research. The [new report](../../reports/analysis/2026-10-09-pipeline-gap-diagnostics-final/README.md)
+preserves the original forecasts and prices and counts all 12 full-panel / eight
+episode comparison rows. It supersedes no historical observations or production rules.
+
+At 10bps/side, accepting all ten declined raw buys would yield +3.37%, still below
+the full-panel strict hold +20.66%. FT's -22.87pp gap decomposes into +0.80pp versus
+same-stake/date passive and -23.67pp for that passive versus continuous hold; this
+is an accounting identity combining deployment/timing differences, not causal proof.
+
+The existing date-only selector chooses nine non-overlapping windows / 72 trials.
+The fixed 12-month/top-three allocator yields +36.05%, scheduled passive +29.18%,
+and strict continuous hold +20.62% under multiplicative episode fees. Adding FT
+filtering reduces return to +5.92% and AI filtering to zero. FT filtering has a
+weak conditional selection signal at 37.04% exposure: +9.07pp versus an equal-
+exposure momentum sleeve, but permutation p=0.0835 on six informative periods.
+Allocator effective N=9, DSR~0.501, and its paired passive interval crosses zero.
+These inspected outcomes are not promotion evidence; they motivate a fixed new
+forward comparison without changing abstention thresholds.
+
+[Forward validation v2](pipeline-forward-validation-v2.md) specifies nine arms,
+36 predetermined 35-day anchors beginning October 12, 30-day non-overlapping
+episodes, and the existing statistical/data/cost gates. Rules and their digest
+are recorded in the report's `forward-protocol-v2.json`. Collection has not
+activated: exact provider/model/prompt provenance and a conforming nine-arm
+collector must be sealed before the first entry. Missing that cutoff requires a
+new future version. No historical forecast may be relabeled prospective.
+
+The October 7 forward cohort remains immutable, separate from v2, and cannot be
+scored before November 7 UTC. This research flow is separate from the production
+`pipeline.json`; no unimplemented allocator or collection stage is added to the
+production diagram.

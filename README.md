@@ -145,9 +145,73 @@ stock-analysis AAPL --market US --rounds 3 --model haiku --debate-model opus -v
 
 ### Portfolio decisions
 
-This repository intentionally stops at stock research. If you need portfolio
-valuation, concentration checks, or position sizing, consume the saved briefing
-from your private application and apply those rules there.
+Completed single-ticker runs can now feed a deterministic portfolio research
+stage through `POST /api/v1/portfolio-plans`. Supply 3–50 distinct completed run
+UUIDs from one US/USD decision session. The response contains nine target-weight
+views: continuous hold, scheduled passive, allocator, FT weighted/agreement,
+AI, and three allocator hybrids. The allocator ranks trailing twelve-month
+returns and selects three equal sleeves; filtered sleeves remain cash.
+An unavailable panel returns reasons and cash-only views.
+
+These research weights use no personal holdings and place no orders. Portfolio
+valuation, concentration checks and account-specific sizing remain consumers'
+responsibility. See the [upgrade contract](docs/design/portfolio-pipeline-upgrade.md)
+for run binding, collection requirements and limitations.
+
+### Freeze and score portfolio research
+
+Use the module directly in an existing checkout; a fresh installation also
+provides `stock-analysis-portfolio`.
+
+```bash
+# Export completed cloud runs; the server credentials stay in the environment.
+.venv/bin/python -m stock_analysis.portfolio_cohort export \
+  --run-ids '<uuid1>,<uuid2>,<uuid3>' --output /tmp/portfolio-bundle.json
+.venv/bin/python -m stock_analysis.portfolio_cohort plan \
+  --bundle /tmp/portfolio-bundle.json --output /tmp/portfolio-plan.json
+
+# Freeze after the registered decision session closes, before its next open.
+# Use an activated protocol with pinned calendar/model/prompt provenance.
+.venv/bin/python -m stock_analysis.portfolio_cohort freeze \
+  --bundle /tmp/portfolio-bundle.json --protocol /path/to/activated-protocol.json \
+  --cohort /path/to/new-cohort
+.venv/bin/python -m stock_analysis.portfolio_cohort verify --cohort /path/to/new-cohort
+.venv/bin/python -m stock_analysis.portfolio_cohort score --cohort /path/to/mature-cohort
+.venv/bin/python -m stock_analysis.portfolio_cohort compare \
+  --cohorts /path/to/mature-cohort-1 /path/to/mature-cohort-2 \
+  --output /tmp/portfolio-comparison.json
+```
+
+Freeze rejects legacy naive timestamps, unavailable history and missing activation
+identity. Scoring rejects immature samples before fetching outcomes and never
+overwrites an existing score. Comparison retains continuous hold through episode
+gaps, reconciles daily equity with episode returns, and reports drawdown,
+21-session paired intervals versus hold and allocator, and nine-arm DSR.
+Provider-adjusted prices and assumed fees remain research inputs; all outputs
+keep `promotion_ready=false`. The prepared v2 protocol has not been activated.
+
+### Long-term holding use
+
+The current pipeline has not demonstrated an after-cost return advantage over
+strict buy-and-hold. The [September 2026 comparison](reports/analysis/backtest-2026-09-24.md)
+is development research, not a validated reason to trade on its conviction
+scores, entry levels, or stop levels. Its price fetch and dated research evidence
+can still support a long-term review.
+
+For that use, the consumer should answer a smaller set of questions:
+
+- What is held, what is each position worth, and are its price and FX inputs fresh?
+- How concentrated is the portfolio by company, sector, market, and currency?
+- For an individual company, what was the original holding thesis, which dated
+  filings or events have changed it, and what evidence would invalidate it?
+- What was the investor's actual return after dated cash flows, dividends,
+  fees, and currency conversion? A current holding's shares and average cost
+  cannot reconstruct that history.
+
+Broad-market funds mainly need allocation and contribution reviews. Individual
+stocks also need thesis reviews after material filings or events. This repository
+does not yet provide a transaction ledger or a validated long-hold thesis-change
+alert, so neither should be inferred from a briefing or a price-only P&L figure.
 
 ### Run backtests
 
@@ -319,12 +383,10 @@ prices are fetched. Historical packet metadata uses the requested ticker as
 the name and market-default currency; present-day provider names are not
 point-in-time evidence. During scoring, convergence is recomputed from the
 analyst signals;
-the conviction score is recalibrated to the net analyst consensus, and
+the conviction score uses the production cap `min(abs(raw model score), abs(net analyst consensus))`, with the signal sign, and
 directional predictions that disagree with that consensus or do not clear the
 deterministic conviction/convergence execution gate are scored as `neutral`.
-The recalibrated conviction remains an attribution score even when the final
-signal is `neutral`; it does not create a portfolio trade unless the execution
-gate is cleared.
+Raw model conviction is retained as `raw_conviction_score`; neutral synthesis has zero calibrated conviction. A gated directional thesis can retain its capped score for attribution without creating a trade.
 Optional `agent_confidences` can provide `high`, `medium`, or `low` weights.
 Session packets also declare point-in-time evidence availability. Without a
 replay directory, historical fundamentals use the yfinance filing-date adapter
@@ -335,9 +397,7 @@ versioned source is provided. Legacy packets containing current names under
 an omitted-metadata marker fail the external metadata gate. When fundamentals,
 dated news/recommendations, or macro data are
 unavailable, scoring forces those analysts to `neutral` with `low` confidence
-instead of trusting unsupported directional output. When availability is
-declared, unavailable analysts are excluded from the consensus denominator
-rather than being counted as neutral evidence.
+instead of trusting unsupported directional output. Unavailable analysts remain neutral/low in the canonical four-role denominator, matching production. Manifest v4 records this contract. Legacy manifests still load, but old scored JSON is not silently rewritten. Use `rescore --recalibrate-session --session-dir ...` to apply the new calibration to frozen predictions and existing outcomes without fetching prices.
 
 Scored trial JSON preserves the signal path for later attribution:
 raw_agent_signals are the original analyst labels; agent_signals are the labels
@@ -354,6 +414,7 @@ directory to `session-prepare`:
 ```text
 replay/
 ├── fundamentals/AAPL.jsonl # SEC facts + fiscal_period_end + available_as_of
+├── valuation/AAPL.jsonl    # optional dated price + currency + declared share_basis
 ├── news/AAPL.jsonl         # published_at + available_as_of per record
 └── macro.jsonl             # as_of_date + available_as_of per snapshot
 ```
@@ -369,6 +430,22 @@ date. Missing or malformed replay timestamps are excluded or fail closed; the
 pipeline never infers availability from a fiscal/event date alone. No replay
 directory means sentiment and macro remain explicitly unavailable, preserving
 the current behaviour.
+
+Both API backtests and session preparation accept `--replay-dir`. Financial
+history retains each known fiscal duration and its latest available revision.
+New packets and fundamental tools expose `fundamental_context`: observations,
+comparable year-ago growth, valuation and separate readiness/gap diagnostics.
+Quarterly and YTD cash flows are never combined. SEC date-only filing facts
+become available the following day.
+
+Valuation replay records require `price`, `price_date`, `available_as_of`,
+`currency`, `share_basis` and `source`. P/E requires four contiguous fiscal
+quarters or a current annual EPS period, with the same currency and declared
+share basis as that price. SEC output leaves the basis unknown; auto-adjusted
+technical prices do not establish it. Missing inputs keep valuation unavailable.
+Old sealed packets remain readable; enriched packets are checked against their
+source observations before outcome prices are fetched. Session preparation
+refuses to overwrite an existing manifest or packet set.
 
 The reproducible public-source builder is:
 
@@ -695,3 +772,40 @@ MIT — see [LICENSE](LICENSE).
 ## Disclaimer
 
 This tool is for informational and educational purposes only. It is not financial advice. Always do your own research before making investment decisions.
+
+### Prospective watchlist validation
+
+The 2026-10-07 cohort is frozen under `reports/analysis/2026-10-07-forward-cohort/`: all31 current forecasts, next eligible open on/after2026-10-08, exit close on/after2026-11-06. Scoring is blocked before2026-11-07UTC so the US exit session has closed. US and MY use separate local-currency portfolios; costs and2× stress are frozen assumptions. No orders or outcome-memory writes occur. One cohort is one date cluster, not proof of statistical edge.
+
+```bash
+python -m stock_analysis.backtest.prospective verify --cohort reports/analysis/2026-10-07-forward-cohort
+# On/after2026-11-07UTC:
+python -m stock_analysis.backtest.prospective score --cohort reports/analysis/2026-10-07-forward-cohort
+```
+
+Hit-rate and IC intervals now use their respective portfolio-clustered effective counts. Wilson intervals preserve the observed hit fraction and apply an effective-n design-effect approximation; Fisher intervals use all completed dated windows, including neutral forecasts, and are unavailable below effective n4. These are approximate intervals, not exact coverage guarantees for correlated observations. Legacy report fields load with uncertainty method unspecified; rescore to obtain the new method metadata.
+
+### Input isolation and evidence policy
+
+Cloud workers seal the complete typed input and cutoff before analyst work.
+Retries load that input and require matching stage SHA-256 hashes. Partial legacy
+runs without an input seal fail closed; completed legacy outputs remain readable.
+Apply `supabase/migrations/20261008000000_immutable_run_inputs.sql` before deploying
+these worker changes. Raw seals are service-only and immutable while the run exists.
+
+Live US/MY fetches retain quarterly history (annual fallback), statement currency,
+and a separately requested plain Close. Balance and cash-flow columns must match
+the income fiscal end and frequency. Provider observations are dated at capture;
+they do not establish original filing vintages or a common EPS/ADR share basis.
+Those unknowns stay unavailable. `STOCK_EVIDENCE_REPLAY_DIR` optionally overlays
+dated statement, valuation, news and macro evidence before the seal is written.
+Macro is unavailable when no dated source is configured.
+
+`ANALYSIS_NEWS_MAX_AGE_DAYS` defaults to 30 days, measured relative to the analysis
+cutoff. Archived facts are retained; stale headlines do not enter sentiment.
+Explicit issuer financial-result releases do not provide independent sentiment
+confirmation. Income and its derived margins count as one confidence dimension.
+Session manifest version 5 records the execution-contract change: session and API
+backtests require the same valid risk plan, and gated neutral execution carries
+zero conviction. Raw model scores remain available for attribution. Existing sealed
+packets, scored reports and forward forecasts are never rewritten by these fixes.

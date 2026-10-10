@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_OUTPUT = ROOT / "postman" / "ai-stock-analysis.postman_collection.json"
 COLLECTION_SCHEMA = "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 REQUIRED_PATHS = {
+    "/api/v1/portfolio-plans",
     "/health/live",
     "/health/ready",
     "/api/v1/tickers",
@@ -140,6 +141,8 @@ def _build_collection() -> dict[str, Any]:
             "bearer": [{"key": "token", "value": "{{api_token}}", "type": "string"}],
         },
         "variable": [
+            *[{"key": f"portfolio_run_id_{i}", "value": "replace-with-completed-same-session-uuid", "type": "string"}
+              for i in range(1, 4)],
             {"key": "base_url", "value": "http://localhost:8000", "type": "string"},
             {"key": "api_token", "value": "replace-with-api-bearer-token", "type": "string"},
             {"key": "ticker", "value": "AAPL", "type": "string"},
@@ -147,6 +150,20 @@ def _build_collection() -> dict[str, Any]:
             {"key": "idempotency_key", "value": "postman-canary", "type": "string"},
         ],
         "item": [
+            _folder(
+                "Portfolio research",
+                _request(
+                    "Nine views from completed same-session runs", "POST",
+                    "{{base_url}}/api/v1/portfolio-plans", headers=json_headers,
+                    body={"run_ids": [f"{{{{portfolio_run_id_{i}}}}}" for i in range(1, 4)]},
+                    description="Read-only research planning. Requires three distinct completed US/USD runs from one session; does not start analyses.",
+                    tests=[*_status_test((200, 409)),
+                           'if (pm.response.code === 200) {',
+                           '  pm.expect(pm.response.json().arms).to.have.lengthOf(9);',
+                           '  pm.expect(pm.response.json().promotion_ready).to.eql(false);',
+                           '}'],
+                ),
+            ),
             _folder(
                 "Health",
                 _request(
