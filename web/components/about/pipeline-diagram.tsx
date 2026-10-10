@@ -173,7 +173,7 @@ function NodeBox({
 }) {
   const tone = node.tone ?? "data";
   return (
-    <g>
+    <g data-node-id={node.id}>
       <rect
         x={x}
         y={y}
@@ -247,6 +247,8 @@ function EdgePath({ edge }: { edge: Edge }) {
   const arrow = edge.arrow || edge.bidirectional ? "url(#arrow)" : undefined;
   return (
     <path
+      data-edge-from={edge.sourceId}
+      data-edge-to={edge.targetId}
       d={d}
       fill="none"
       strokeWidth={1.5}
@@ -260,12 +262,12 @@ function EdgePath({ edge }: { edge: Edge }) {
 
 function EdgeLabel({ edge }: { edge: Edge }) {
   const isBus = edge.points.length === 2 && edge.points[0][1] === edge.points[1][1];
-  const [mx, my] = midpoint(edge.points);
+  const [mx, my] = edge.labelPoint ?? midpoint(edge.points);
   return (
     <text
       x={mx}
       y={isBus ? my - 5 : my}
-      textAnchor="middle"
+      textAnchor={edge.labelAnchor ?? "middle"}
       fontSize={FS.caption}
       className="fill-graphite italic"
     >

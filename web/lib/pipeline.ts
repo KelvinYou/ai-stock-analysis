@@ -42,6 +42,15 @@ export interface Pipeline {
   stages: PipelineStage[];
   output: PipelineNode;
   consumers: PipelineNode[];
+  /** Explicit dependencies take precedence over legacy row chaining. */
+  edges?: PipelineConnection[];
+}
+
+export interface PipelineConnection {
+  from: string;
+  to: string;
+  kind: "flow" | "conditional" | "bidirectional";
+  label?: string;
 }
 
 const PIPELINE_FILE = process.env.STOCK_PIPELINE_FILE
@@ -52,11 +61,33 @@ export const loadPipeline = cache(async (): Promise<Pipeline | null> => {
   try {
     const raw = await fs.readFile(PIPELINE_FILE, "utf8");
     const parsed = JSON.parse(raw) as Pipeline;
-    return parsed.stages?.length ? parsed : null;
+    validatePipeline(parsed);
+    return parsed;
   } catch {
     return null;
   }
 });
+
+export function validatePipeline(pipeline: Pipeline): void {
+  if (!pipeline.stages?.length || !pipeline.output || !Array.isArray(pipeline.consumers)) {
+    throw new Error("Invalid pipeline structure");
+  }
+  const nodes = pipeline.stages.flatMap((s) => {
+    if (!s.rows?.length || s.rows.some((row) => !row.length)) throw new Error("Empty pipeline row");
+    return [...s.rows.flat(), ...(s.sink ? [s.sink] : [])];
+  });
+  nodes.push(pipeline.output, ...pipeline.consumers);
+  const ids = [...pipeline.stages.map((s) => s.id), ...nodes.map((n) => n.id)];
+  if (new Set(ids).size !== ids.length) throw new Error("Duplicate pipeline ID");
+  for (const edge of pipeline.edges ?? []) {
+    if (!ids.includes(edge.from) || !ids.includes(edge.to) || edge.from === edge.to) {
+      throw new Error("Invalid pipeline edge endpoint");
+    }
+    if (!["flow", "conditional", "bidirectional"].includes(edge.kind)) {
+      throw new Error("Invalid pipeline edge kind");
+    }
+  }
+}
 
 // ---------------------------------------------------------------- layout
 
@@ -100,6 +131,10 @@ export interface Band {
 export interface Edge {
   /** Polyline points, already elbowed. */
   points: [number, number][];
+  sourceId?: string;
+  targetId?: string;
+  labelPoint?: [number, number];
+  labelAnchor?: "start" | "middle";
   dashed?: boolean;
   label?: string;
   /** Arrowhead at the end. Only the segment that lands on a box gets one. */
@@ -214,6 +249,8 @@ function busEdges(from: Box[], to: Box[]): Edge[] {
 }
 
 export function layoutPipeline(pipeline: Pipeline): Layout {
+  validatePipeline(pipeline);
+  const explicit = pipeline.edges !== undefined;
   const innerX = L.padX + L.bandPadX;
   const innerW = L.width - 2 * (L.padX + L.bandPadX);
   const bands: Band[] = [];
@@ -235,10 +272,10 @@ export function layoutPipeline(pipeline: Pipeline): Layout {
       const placed = placeRow(row, innerX, innerW, rowY, isPair ? L.pairGapX : L.gapX);
       boxes.push(...placed);
       if (rowIdx === 0) stageEntry = placed;
-      else edges.push(...busEdges(lastRow, placed));
+      else if (!explicit) edges.push(...busEdges(lastRow, placed));
 
       // The bull/bear exchange: a double-headed arrow between the two boxes.
-      if (placed.length === 2 && stage.pairLabel) {
+      if (!explicit && placed.length === 2 && stage.pairLabel) {
         const [a, b] = placed;
         const yMid = rowY + a.h / 2;
         edges.push({
@@ -258,7 +295,7 @@ export function layoutPipeline(pipeline: Pipeline): Layout {
     if (stage.sink) {
       const placed = placeRow([stage.sink], innerX, innerW, rowY);
       boxes.push(...placed);
-      edges.push(...busEdges(lastRow, placed));
+      if (!explicit) edges.push(...busEdges(lastRow, placed));
       lastRow = placed;
       rowY += placed[0].h + L.gapY;
     }
@@ -272,24 +309,71 @@ export function layoutPipeline(pipeline: Pipeline): Layout {
       h: bandBottom - bandTop,
     });
 
-    if (prevExit.length) edges.push(...busEdges(prevExit, stageEntry));
+    if (!explicit && prevExit.length) edges.push(...busEdges(prevExit, stageEntry));
     prevExit = lastRow;
     y = bandBottom + L.stageGapY;
   }
 
   const outputBoxes = placeRow([pipeline.output], innerX, innerW, y);
   boxes.push(...outputBoxes);
-  if (prevExit.length) edges.push(...busEdges(prevExit, outputBoxes));
+  if (!explicit && prevExit.length) edges.push(...busEdges(prevExit, outputBoxes));
   y += outputBoxes[0].h + L.stageGapY;
 
   if (pipeline.consumers.length) {
     const consumerBoxes = placeRow(pipeline.consumers, innerX, innerW, y);
     boxes.push(...consumerBoxes);
-    edges.push(...busEdges(outputBoxes, consumerBoxes));
+    if (!explicit) edges.push(...busEdges(outputBoxes, consumerBoxes));
     y += consumerBoxes[0].h;
   }
 
-  return { width: L.width, height: y + L.padX, bands, boxes, edges };
+  let width: number = L.width;
+  if (explicit) {
+    const anchors = new Map(boxes.map((b) => [b.node.id, b]));
+    for (const band of bands) {
+      anchors.set(band.stage.id, {
+        ...band, node: { id: band.stage.id, label: band.stage.title },
+      });
+    }
+    let bypass = 0;
+    for (const connection of pipeline.edges ?? []) {
+      const source = anchors.get(connection.from)!;
+      const target = anchors.get(connection.to)!;
+      const edge: Edge = {
+        points: [], sourceId: connection.from, targetId: connection.to,
+        dashed: connection.kind === "conditional",
+        bidirectional: connection.kind === "bidirectional", arrow: true,
+        label: connection.label,
+      };
+      if (Math.abs(source.y - target.y) < 1) {
+        edge.points = [[source.x + source.w, source.y + source.h / 2],
+          [target.x, target.y + target.h / 2]];
+      } else {
+        const a = bottomCenter(source);
+        const b = topCenter(target);
+        const obstruction = boxes.some((box) =>
+          box.y > a[1] && box.y + box.h < b[1] &&
+          box.x < Math.max(a[0], b[0]) + 1 &&
+          box.x + box.w > Math.min(a[0], b[0]) - 1,
+        );
+        if (obstruction) {
+          const lane = L.width + L.gapX * (1 + bypass++);
+          const start: [number, number] = [source.x + source.w, source.y + source.h / 2];
+          const end: [number, number] = [target.x + target.w, target.y + target.h / 2];
+          edge.points = [start, [lane, start[1]], [lane, end[1]], end];
+          edge.labelPoint = [lane + 8, (start[1] + end[1]) / 2];
+          edge.labelAnchor = "start";
+          width = Math.max(width, lane + 24 + (connection.label?.length ?? 0) * 6);
+        } else if (Math.abs(a[0] - b[0]) < 1) {
+          edge.points = [a, b];
+        } else {
+          const bus = (a[1] + b[1]) / 2;
+          edge.points = [a, [a[0], bus], [b[0], bus], b];
+        }
+      }
+      edges.push(edge);
+    }
+  }
+  return { width, height: y + L.padX, bands, boxes, edges };
 }
 
 export const LAYOUT_CONSTANTS = L;

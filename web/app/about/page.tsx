@@ -23,7 +23,8 @@ export default async function AboutPage() {
     <div className="space-y-16">
       <section className="fade-up pt-6 md:pt-10">
         <div className="max-w-3xl">
-          <p className="eyebrow">Four layers, one briefing</p>
+          <Link href="/allocation" className="mb-4 inline-flex items-center gap-2 text-sm text-action hover:underline">Explore allocation research <ArrowRight className="size-4" aria-hidden /></Link>
+          <p className="eyebrow">Ticker research and portfolio comparisons</p>
           <h1 className="mt-3 text-4xl font-semibold leading-[0.98] tracking-[-0.03em] text-ink [font-stretch:125%] md:text-6xl lg:text-7xl">
             AI reads the tape.
             <br />
@@ -32,6 +33,7 @@ export default async function AboutPage() {
           <p className="prose-claim mt-6 max-w-xl">
             Four specialist agents debate every ticker. One synthesizer turns the noise
             into a briefing with conviction scores, entry levels, and stop-losses.
+            Completed runs can also feed nine portfolio comparisons with explicit cash weights.
           </p>
           <div className="mt-8">
             {/* The page's one call to action, so it takes the one interactive
@@ -51,10 +53,10 @@ export default async function AboutPage() {
           How it works
         </h2>
         <Separator className="mb-6" />
-        <ol className="mb-8 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="mb-8 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
           <Layer n="Layer 1" name="Ingestion">
-            Prices, financials, filings and news are fetched deterministically. No
-            model has spoken yet, so nothing here can be argued with.
+            Prices, financials, filings and news are fetched deterministically.
+            Historical runs use dated evidence and expose missing growth or valuation.
           </Layer>
           <Layer n="Layer 2" name="Four desks">
             Fundamentals, Technical, Sentiment and Macro·FX read the same data
@@ -62,11 +64,17 @@ export default async function AboutPage() {
           </Layer>
           <Layer n="Layer 3" name="Debate">
             A bull and a bear argue the four reports over several rounds; a research
-            manager then rules on the argument and records what would falsify it.
+            manager can then assess the argument and record what would falsify it.
           </Layer>
           <Layer n="Layer 4" name="Synthesis">
-            The briefing is assembled, and a deterministic risk check attaches entry,
-            stop and target — but only when the desks converged enough to justify them.
+            Synthesis can use the manager verdict and resolved historical outcomes.
+            Consensus and actionability checks precede the deterministic risk check.
+          </Layer>
+          <Layer n="Layer 5 · Optional" name="Portfolio research">
+            Completed runs from the same session feed a twelve-month momentum allocator.
+            Nine views compare hold, allocation, fundamental plus technical signals and AI.
+            Rejected signals keep cash. Frozen forward samples score only after maturity;
+            target weights are research outputs and do not place orders.
           </Layer>
         </ol>
         {pipeline ? (
@@ -86,12 +94,12 @@ export default async function AboutPage() {
         <Separator className="mb-6" />
         <dl className="grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2">
           <Term name="Conv">
-            Conviction, −1.00 to +1.00. Magnitude is how hard the synthesizer is
-            leaning, sign is the direction.
+            Conviction, −1.00 to +1.00. Sign indicates direction; consensus checks
+            can cap the synthesizer’s conviction before publication.
           </Term>
           <Term name="Cvg">
-            Signal convergence. Below 0.50 the four analysts disagreed — the briefing
-            is an arbitration, not a consensus, so read the debate.
+            Confidence-weighted agreement among the four desks. Neutral and missing
+            evidence reduce agreement; read the debate when convergence is low.
           </Term>
           <Term name="→Entry">
             Distance from last close to the suggested entry limit. Negative means the

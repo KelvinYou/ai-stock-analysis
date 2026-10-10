@@ -7,7 +7,9 @@
     "build": "NODE_EXTRA_CA_CERTS=${NODE_EXTRA_CA_CERTS:-../.corp-ca.pem} next build",
     "start": "NODE_EXTRA_CA_CERTS=${NODE_EXTRA_CA_CERTS:-../.corp-ca.pem} next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:pipeline": "node scripts/check-pipeline.cjs",
+    "check:allocation": "node scripts/check-allocation.cjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.23",
