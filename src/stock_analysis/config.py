@@ -48,6 +48,8 @@ class Settings(BaseModel):
     debate_rounds: int = 3
     data_dir: str = "data"
     price_history_period: str = "10y"
+    news_max_age_days: int = Field(default=30, ge=1)
+    evidence_replay_dir: str | None = None
 
     # Persistence is deliberately explicit. ``local`` keeps the historical
     # filesystem workflow available for tests and offline research; production
@@ -100,6 +102,8 @@ class Settings(BaseModel):
             "environment": "APP_ENV",
             "storage_backend": "STORAGE_BACKEND",
             "data_dir": "STOCK_DATA_DIR",
+            "evidence_replay_dir": "STOCK_EVIDENCE_REPLAY_DIR",
+            "news_max_age_days": "ANALYSIS_NEWS_MAX_AGE_DAYS",
             "supabase_url": "SUPABASE_URL",
             "supabase_service_key": "SUPABASE_SERVICE_ROLE_KEY",
             "supabase_schema": "SUPABASE_SCHEMA",
@@ -182,6 +186,7 @@ class Settings(BaseModel):
                 "supabase_url",
                 "supabase_service_key",
                 "data_dir",
+                "evidence_replay_dir",
                 "storage_backend",
                 "supabase_schema",
                 "worker_poll_seconds",

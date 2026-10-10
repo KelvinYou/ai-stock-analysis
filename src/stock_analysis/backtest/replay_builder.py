@@ -5,8 +5,9 @@ module owns one reproducible public-source adapter:
 
 * SEC EDGAR filings provide dated company events.  A filing's acceptance time
   is used for both publication and first-available time.
-* SEC XBRL CompanyFacts provides point-in-time financial snapshots keyed by
-  each fact's filed date; later restatements are not visible before filing.
+* SEC XBRL CompanyFacts preserves fiscal durations, units and filing vintages.
+  Date-only filing availability is delayed by one day; later restatements are
+  not visible before their own availability clock.
 * FRED's daily effective federal funds rate (DFF) provides a dated macro
   observation.  Availability is conservatively delayed by one calendar day;
   the builder never treats the observation date as proof of same-day access.
@@ -21,6 +22,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import math
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -69,6 +71,8 @@ _FACT_TAGS = {
         "PaymentsToAcquireProductiveAssets",
         "PaymentsToAcquirePropertyPlantAndEquipmentAndIntangibleAssets",
     ),
+    "diluted_eps": ("EarningsPerShareDiluted", "DilutedEarningsLossPerShare"),
+    "shares_outstanding": ("CommonStockSharesOutstanding", "EntityCommonStockSharesOutstanding"),
 }
 
 
@@ -181,20 +185,19 @@ def _fact_entries(payload: dict[str, Any], tags: tuple[str, ...]) -> list[dict[s
 
     facts = payload.get("facts", {})
     entries: list[dict[str, Any]] = []
-    for namespace in ("us-gaap", "ifrs-full"):
+    for namespace in ("us-gaap", "ifrs-full", "dei"):
         namespace_facts = facts.get(namespace, {})
         if not isinstance(namespace_facts, dict):
             continue
-        for tag in tags:
+        for priority, tag in enumerate(tags):
             fact = namespace_facts.get(tag)
             if not isinstance(fact, dict):
                 continue
             units = fact.get("units", {})
             if not isinstance(units, dict):
                 continue
-            # Monetary values are normally USD for the selected US issuers;
-            # accepting the first unit also keeps IFRS issuers replayable. The
-            # source/unit remain visible in the generated manifest and packet.
+            # Preserve every unit; snapshots choose one reporting currency
+            # and require matching units/durations for all derived values.
             for unit, rows in units.items():
                 if not isinstance(rows, list):
                     continue
@@ -207,7 +210,7 @@ def _fact_entries(payload: dict[str, Any], tags: tuple[str, ...]) -> list[dict[s
                         filed = date.fromisoformat(str(row["filed"]))
                     except (KeyError, TypeError, ValueError):
                         continue
-                    if not end or not filed:
+                    if not math.isfinite(value) or filed < end:
                         continue
                     start = None
                     if row.get("start"):
@@ -216,7 +219,7 @@ def _fact_entries(payload: dict[str, Any], tags: tuple[str, ...]) -> list[dict[s
                         except ValueError:
                             continue
                     form = str(row.get("form") or "")
-                    if form and form not in FUNDAMENTAL_FORMS:
+                    if form and form.removesuffix("/A") not in FUNDAMENTAL_FORMS:
                         continue
                     entries.append(
                         {
@@ -227,6 +230,9 @@ def _fact_entries(payload: dict[str, Any], tags: tuple[str, ...]) -> list[dict[s
                             "form": form,
                             "unit": str(unit),
                             "tag": tag,
+                            "tag_priority": priority,
+                            "accession": str(row.get("accn") or ""),
+                            "namespace": namespace,
                         }
                     )
     return entries
@@ -252,50 +258,62 @@ def _fact_for_period(
     *,
     period_end: date,
     available_as_of: date,
+    period_start: date | None = None,
+    exact_duration: bool = False,
+    unit: str | None = None,
 ) -> dict[str, Any] | None:
     candidates = [
         entry
         for entry in entries
-        if entry["end"] == period_end and entry["filed"] <= available_as_of
+        if entry["end"] == period_end
+        and entry["filed"] + timedelta(days=1) <= available_as_of
+        and (not exact_duration or entry["start"] == period_start)
+        and (unit is None or entry["unit"] == unit)
     ]
     if not candidates:
         return None
-    return max(
-        candidates,
-        key=lambda entry: (
-            entry["filed"],
-            -_fact_duration_rank(entry),
-            entry["tag"],
-        ),
-    )
+    def rank(entry):
+        return (entry["filed"], -_fact_duration_rank(entry), -entry.get("tag_priority", 0))
+    selected = max(candidates, key=rank)
+    tied = [entry for entry in candidates if rank(entry) == rank(selected)]
+    if len({entry["value"] for entry in tied}) > 1:
+        raise ValueError(f"Conflicting SEC facts for {period_end} at {selected['filed']}")
+    return selected
 
 
 def _fundamental_snapshot(
     payload: dict[str, Any],
     *,
     available_as_of: date,
+    period_end: date | None = None,
+    period_start: date | None = None,
+    currency: str | None = None,
+    grouped: dict[str, list[dict[str, Any]]] | None = None,
 ) -> dict[str, Any] | None:
-    grouped = {
-        name: _fact_entries(payload, tags)
-        for name, tags in _FACT_TAGS.items()
-    }
-    anchor_entries = grouped["revenue"] + grouped["net_income"]
-    period_ends = {
-        entry["end"]
-        for entry in anchor_entries
-        if entry["filed"] <= available_as_of and entry["end"] <= available_as_of
-    }
-    if not period_ends:
+    grouped = grouped or {name: _fact_entries(payload, tags) for name, tags in _FACT_TAGS.items()}
+    anchors = [e for e in grouped["revenue"] + grouped["net_income"]
+               if e["filed"] + timedelta(days=1) <= available_as_of
+               and e["end"] <= available_as_of and e["start"] is not None
+               and e["start"] <= e["end"]
+               and "/" not in e["unit"] and e["unit"] != "shares"]
+    if period_end is not None:
+        anchors = [e for e in anchors if e["end"] == period_end
+                   and e["start"] == period_start and e["unit"] == currency]
+    if not anchors:
         return None
-    period_end = max(period_ends)
-
+    # Preserve one issuer currency; never blend two unit systems in a ratio.
+    anchor = max(anchors, key=lambda e: (e["end"], -_fact_duration_rank(e),
+                                        e["unit"] == "USD", e["filed"]))
+    period_end, period_start, currency = anchor["end"], anchor["start"], anchor["unit"]
+    balance_fields = {"total_debt", "total_equity", "shares_outstanding"}
     selected: dict[str, dict[str, Any]] = {}
     for name, entries in grouped.items():
-        fact = _fact_for_period(
-            entries,
-            period_end=period_end,
-            available_as_of=available_as_of,
+        unit = "shares" if name == "shares_outstanding" else (
+            f"{currency}/shares" if name == "diluted_eps" else currency
         )
+        fact = _fact_for_period(entries, period_end=period_end, available_as_of=available_as_of,
+                                period_start=None if name in balance_fields else period_start,
+                                exact_duration=True, unit=unit)
         if fact is not None:
             selected[name] = fact
 
@@ -303,56 +321,68 @@ def _fundamental_snapshot(
         fact = selected.get(name)
         return fact["value"] if fact else None
 
-    revenue = value("revenue")
-    net_income = value("net_income")
-    gross_profit = value("gross_profit")
-    operating_income = value("operating_income")
-
-    # CompanyFacts frequently exposes debt as current/non-current components
-    # rather than a total. Prefer a direct total; otherwise sum the components
-    # that share the selected period and filing cutoff.
-    debt_fact = selected.get("total_debt")
-    total_debt = debt_fact["value"] if debt_fact else None
-
-    operating_cash_flow = value("operating_cash_flow")
-    capital_expenditure = value("capital_expenditure")
-    free_cash_flow = None
-    if operating_cash_flow is not None and capital_expenditure is not None:
-        # SEC cash outflows are usually negative; tolerate positive encodings.
-        free_cash_flow = (
-            operating_cash_flow + capital_expenditure
-            if capital_expenditure < 0
-            else operating_cash_flow - capital_expenditure
-        )
-
-    numeric_values = (
-        revenue,
-        net_income,
-        total_debt,
-        value("total_equity"),
-        free_cash_flow,
-        gross_profit,
-        operating_income,
+    revenue, net_income = value("revenue"), value("net_income")
+    debt_entries = grouped["total_debt"]
+    direct = _fact_for_period(
+        [e for e in debt_entries if e["tag"] in {"LongTermDebtAndFinanceLeaseObligations", "Borrowings"}],
+        period_end=period_end, available_as_of=available_as_of,
+        period_start=None, exact_duration=True, unit=currency,
     )
-    if not any(item is not None for item in numeric_values):
-        return None
-
-    return {
+    total_debt = direct["value"] if direct else None
+    debt_parts = []
+    if direct is None:
+        for current, noncurrent in (
+            ("LongTermDebtAndFinanceLeaseObligationsCurrent", "LongTermDebtAndFinanceLeaseObligationsNoncurrent"),
+            ("LongTermDebtCurrent", "LongTermDebtNoncurrent"),
+        ):
+            pair = [_fact_for_period([e for e in debt_entries if e["tag"] == tag],
+                                    period_end=period_end, available_as_of=available_as_of,
+                                    period_start=None, exact_duration=True, unit=currency)
+                    for tag in (current, noncurrent)]
+            if all(p is not None for p in pair):
+                # This is a matched long-term debt subtotal, not evidence that
+                # every short-term borrowing category has also been reported.
+                total_debt = sum(p["value"] for p in pair)
+                debt_parts = pair
+                break
+    selected.pop("total_debt", None)
+    if direct is not None:
+        selected["total_debt"] = direct
+    for index, part in enumerate(debt_parts):
+        selected[f"debt_component_{index}"] = part
+    ocf, capex = value("operating_cash_flow"), value("capital_expenditure")
+    free_cash_flow = None
+    if ocf is not None and capex is not None:
+        free_cash_flow = ocf + capex if capex < 0 else ocf - capex
+    days = (period_end - period_start).days + 1
+    kind = "quarter" if 60 <= days <= 121 else "annual" if 300 <= days <= 400 else "other"
+    provenance = {name: {"tag": e["tag"], "namespace": e["namespace"],
+                         "unit": e["unit"], "start": str(e["start"]) if e["start"] else None,
+                         "end": e["end"].isoformat(), "filed": e["filed"].isoformat(),
+                         "accession": e["accession"]} for name, e in selected.items()}
+    snapshot = {
+        "fiscal_period_start": period_start.isoformat(),
         "fiscal_period_end": period_end.isoformat(),
-        "available_as_of": available_as_of.isoformat(),
-        "availability_source": "sec_companyfacts",
-        "revenue": revenue,
-        "net_income": net_income,
-        "total_debt": total_debt,
-        "total_equity": value("total_equity"),
-        "free_cash_flow": free_cash_flow,
-        "gross_margin": gross_profit / revenue if gross_profit is not None and revenue else None,
-        "operating_margin": (
-            operating_income / revenue if operating_income is not None and revenue else None
-        ),
+        "available_as_of": max(e["filed"] + timedelta(days=1) for e in selected.values()).isoformat(),
+        "availability_source": "sec_companyfacts", "currency": currency, "period_kind": kind,
+        "revenue": revenue, "net_income": net_income, "total_debt": total_debt,
+        "total_equity": value("total_equity"), "free_cash_flow": free_cash_flow,
+        "gross_margin": value("gross_profit") / revenue if value("gross_profit") is not None and revenue else None,
+        "operating_margin": value("operating_income") / revenue if value("operating_income") is not None and revenue else None,
         "net_margin": net_income / revenue if net_income is not None and revenue else None,
-        "units": sorted({fact["unit"] for fact in selected.values()}),
+        "diluted_eps": value("diluted_eps"), "shares_outstanding": value("shares_outstanding"),
+        "share_basis": None, "fact_provenance": provenance,
+        "units": sorted({e["unit"] for e in selected.values()}),
+        "debt_scope": "reported_total" if direct and direct["tag"] == "Borrowings" else "matched_long_term_subtotal" if direct or debt_parts else "unavailable",
     }
+    # Finite source observations can still overflow during derived arithmetic.
+    # Preserve their provenance, but do not emit unusable derived values.
+    for key, value in snapshot.items():
+        if isinstance(value, float) and not math.isfinite(value):
+            snapshot[key] = None
+    if snapshot["shares_outstanding"] is not None and snapshot["shares_outstanding"] <= 0:
+        snapshot["shares_outstanding"] = None
+    return snapshot
 
 
 def build_sec_fundamentals(
@@ -373,20 +403,29 @@ def build_sec_fundamentals(
             SEC_COMPANY_FACTS_URL.format(cik=cik),
             user_agent=user_agent,
         )
-        all_filed_dates = {
-            entry["filed"]
-            for tags in _FACT_TAGS.values()
-            for entry in _fact_entries(payload, tags)
-            if lower <= entry["filed"] <= end
-        }
-        for filed_date in sorted(all_filed_dates):
-            snapshot = _fundamental_snapshot(
-                payload,
-                available_as_of=filed_date,
-            )
-            if snapshot is not None:
-                snapshot["ticker"] = ticker
-                grouped[ticker].append(snapshot)
+        facts = {name: _fact_entries(payload, tags) for name, tags in _FACT_TAGS.items()}
+        available_dates = {entry["filed"] + timedelta(days=1)
+                           for entries in facts.values() for entry in entries
+                           if lower <= entry["filed"] + timedelta(days=1) <= end}
+        # A new filing can carry comparative facts for older periods. Preserve
+        # those periods and vintages instead of only the newest fiscal end.
+        seen: set[str] = set()
+        for available_date in sorted(available_dates):
+            anchors = facts["revenue"] + facts["net_income"]
+            periods = {(e["start"], e["end"], e["unit"]) for e in anchors
+                       if e["start"] is not None and e["start"] <= e["end"]
+                       and e["filed"] + timedelta(days=1) <= available_date}
+            for period_start, period_end, currency in sorted(periods):
+                snapshot = _fundamental_snapshot(
+                    payload, available_as_of=available_date, period_start=period_start,
+                    period_end=period_end, currency=currency, grouped=facts,
+                )
+                if snapshot is not None:
+                    snapshot["ticker"] = ticker
+                    identity = json.dumps(snapshot, sort_keys=True)
+                    if identity not in seen:
+                        seen.add(identity)
+                        grouped[ticker].append(snapshot)
         grouped[ticker].sort(
             key=lambda item: (item["available_as_of"], item["fiscal_period_end"])
         )
@@ -394,10 +433,12 @@ def build_sec_fundamentals(
     return grouped, {
         "name": "SEC XBRL CompanyFacts",
         "url": SEC_COMPANY_FACTS_URL,
-        "availability_rule": "fact filed date",
+        "availability_rule": "fact filed date + one calendar day (date-only clock)",
         "coverage_note": (
             "Point-in-time financial facts from SEC filings; later restatements "
-            "are excluded until their filed date."
+            "are excluded until the day after their filed date. All fiscal "
+            "durations and known revisions are retained; share basis remains "
+            "unverified and valuation requires a separate dated price replay."
         ),
     }
 

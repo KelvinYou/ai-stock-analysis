@@ -11,7 +11,9 @@ from stock_analysis.agents.technical import TechnicalAgent
 from stock_analysis.config import Settings
 from stock_analysis.data.cloud import build_store
 from stock_analysis.data.fetcher_base import BaseFetcher
+from stock_analysis.data.live_evidence import prepare_live_evidence
 from stock_analysis.data.my_market import MYMarketFetcher
+from stock_analysis.data.run_input import validate_input
 from stock_analysis.data.technicals import compute_technicals
 from stock_analysis.data.us_market import USMarketFetcher
 from stock_analysis.debate.engine import DebateEngine
@@ -54,7 +56,10 @@ class AnalysisPipeline:
         self.outcome_store = outcome_store or build_outcome_store(self.settings)
         self.run_id = run_id
         self.as_of_date = as_of_date
+        self._requested_as_of = as_of_date
         self.market = market.upper()
+        self.last_ticker_data: TickerData | None = None
+        self.last_analyst_reports: AnalystReports | None = None
         if fetcher is not None:
             self.fetcher = fetcher
         elif self.market == "MY":
@@ -76,18 +81,23 @@ class AnalysisPipeline:
     async def run(self, ticker: str) -> Briefing:
         # === Layer 1: Data Ingestion (deterministic) ===
         logger.info(f"[Layer 1] Fetching market data for {ticker}...")
-        ticker_data = self.fetcher.fetch(ticker)
+        load_input = getattr(self.store, "load_run_input", None)
+        ticker_data = load_input() if load_input else None
+        if ticker_data is None:
+            ticker_data = prepare_live_evidence(self.fetcher.fetch(ticker), self.settings)
+        if not isinstance(ticker_data, TickerData):
+            raise ValueError("Invalid sealed pipeline input")
+        if ticker_data.info.symbol.upper() != self.fetcher.resolve_symbol(ticker).upper():
+            raise ValueError("Run input ticker mismatch")
         logger.info(
             f"[Layer 1] Got {len(ticker_data.price_history)} price bars, "
             f"financials={'yes' if ticker_data.financials else 'no'}"
         )
 
-        effective_as_of = self.as_of_date or (
-            ticker_data.price_history[-1].date
-            if ticker_data.price_history
-            else ticker_data.fetched_at.date()
-        )
+        effective_as_of = self._requested_as_of or ticker_data.fetched_at.date()
+        validate_input(ticker_data, effective_as_of)
         self.as_of_date = effective_as_of
+        self.last_ticker_data = ticker_data
         self.run_id = self.store.begin_run(
             ticker,
             effective_as_of,
@@ -96,6 +106,9 @@ class AnalysisPipeline:
         )
 
         try:
+            seal_input = getattr(self.store, "save_run_input", None)
+            if seal_input:
+                seal_input(ticker, ticker_data, effective_as_of)
             # API/worker runs have no separate ``stock-fetch`` prerequisite.
             # Persist the fetched market input in cloud mode so the dashboard
             # can render price/technical context next to the briefing. Local
@@ -167,6 +180,7 @@ class AnalysisPipeline:
             f"Technical: {analyst_reports.technical.signal.value}, "
             f"Macro: {analyst_reports.macro.signal.value}"
         )
+        self.last_analyst_reports = analyst_reports
 
         # === Layer 3: Adversarial Debate (sequential rounds) ===
         debate_result = self._resume("debate_result", DebateResult)

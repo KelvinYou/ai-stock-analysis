@@ -58,6 +58,8 @@ def financials_have_evidence(financials: FinancialStatements | None) -> bool:
             financials.gross_margin,
             financials.operating_margin,
             financials.net_margin,
+            financials.diluted_eps,
+            financials.shares_outstanding,
         )
     )
 
@@ -84,19 +86,27 @@ def financials_are_usable(
     )
 
 
+def current_metadata_are_usable(data) -> bool:
+    """An explicitly captured provider snapshot remains valid at its original cutoff."""
+    return data.provider_capture == "current" or (
+        data.provider_capture is None and data.fetched_at.date() >= date.today()
+    )
+
+
 def current_recommendations_are_usable(
     recommendations: Iterable[Mapping[str, Any]] | None,
     as_of: date,
+    *,
+    provider_capture: str | None = None,
 ) -> bool:
-    """Allow undated provider recommendations only for a current snapshot.
+    """Current capture is evidence at its cutoff, even when a retry crosses midnight.
 
-    Historical replay has no safe way to infer when a provider-current table
-    first became visible. Backtest fetchers should therefore omit it; this
-    guard protects custom fetchers and hand-built packets from reintroducing
-    that leakage.
+    Historical fetchers must omit provider-current tables. Legacy undated source
+    packets retain the conservative current-day-only behavior.
     """
-
-    return bool(recommendations) and as_of >= date.today()
+    return bool(recommendations) and (
+        provider_capture == "current" or (provider_capture is None and as_of >= date.today())
+    )
 
 
 def _parse_datetime(value: Any) -> datetime | None:
@@ -194,9 +204,12 @@ def filter_point_in_time_news(
     *,
     as_of: date,
     require_embargo: bool = False,
+    max_age_days: int | None = None,
 ) -> list[dict[str, Any]]:
     """Keep only news knowable on ``as_of``.
 
+    ``max_age_days`` bounds age at the analysis cutoff; None preserves raw archive
+    compatibility. Signal consumers supply the configured recent window.
     ``require_embargo`` is for historical replay files. Live provider feeds
     can use publication time as their minimum provenance, while a replay must
     carry an explicit first-available/embargo date so publication time cannot
@@ -209,6 +222,8 @@ def filter_point_in_time_news(
         if normalized is None:
             continue
         published_date = datetime.fromisoformat(normalized["published_at"]).date()
+        if max_age_days is not None and (as_of - published_date).days > max_age_days:
+            continue
         if published_date > as_of:
             continue
 
@@ -227,3 +242,12 @@ def filter_point_in_time_news(
         seen.add(identity)
         kept.append(normalized)
     return kept
+
+
+def independent_sentiment_news(headlines, *, as_of, max_age_days):
+    """Issuer earnings releases duplicate statement evidence, not independent sentiment."""
+    news = filter_point_in_time_news(headlines, as_of=as_of, max_age_days=max_age_days)
+    return [item for item in news if not (
+        item["publisher"].casefold().endswith(" issuer") and
+        any(term in item["title"].casefold() for term in ("financial results", "earnings results"))
+    )]

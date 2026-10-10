@@ -44,7 +44,7 @@ from .quality_analysis import analyze_backtest, quality_to_markdown
 from .replay import load_cash_rate_replay
 from .runner import Backtester, BacktestResult, BacktestTrial
 from .scorer import Scorer
-from .session import prepare_session_bundle, score_session_bundle
+from .session import prepare_session_bundle, recalibrate_session_result, score_session_bundle
 from .signal_ablation import (
     SignalAblationConfig,
     run_signal_ablation,
@@ -185,6 +185,7 @@ def cli():
         default=Path("backtest_session"),
         help="Directory for session packets, predictions, and outcomes.",
     )
+    parser.add_argument("--recalibrate-session", action="store_true", help="Rescore sealed predictions with current production calibration; requires rescore and --session-dir.")
     parser.add_argument(
         "--score-report",
         type=Path,
@@ -200,8 +201,8 @@ def cli():
         "--replay-dir",
         type=Path,
         help=(
-            "Optional point-in-time evidence directory for session-prepare: "
-            "news/<TICKER>.jsonl and macro.jsonl. Every record must carry "
+            "Optional point-in-time evidence directory for api or session-prepare: "
+            "fundamentals/, valuation/, news/ and macro.jsonl. Every record must carry "
             "an explicit first-available/embargo date."
         ),
     )
@@ -275,6 +276,9 @@ def cli():
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     )
 
+    if args.recalibrate_session and args.mode != "rescore":
+        parser.error("--recalibrate-session requires --mode rescore")
+
     if args.mode == "session-score":
         result = score_session_bundle(args.session_dir)
         _score_and_write(result, args)
@@ -292,6 +296,8 @@ def cli():
         raw = input_path.read_bytes()
         payload = json.loads(raw)
         result = BacktestResult.model_validate(payload["result"])
+        if args.recalibrate_session:
+            result = recalibrate_session_result(result, args.session_dir)
         args._rescore_source_sha256 = hashlib.sha256(raw).hexdigest()
         args._rescore_allocator_histories = payload.get("allocator_price_histories")
         _score_and_write(result, args)
@@ -372,6 +378,7 @@ def cli():
         market=args.market,
         horizon_days=args.horizon,
         lookback_days=args.lookback,
+        replay_dir=args.replay_dir,
     )
     args._settings = settings
 

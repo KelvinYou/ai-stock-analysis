@@ -4,6 +4,7 @@ import logging
 import math
 from collections.abc import Iterable
 from datetime import date, timedelta
+from pathlib import Path
 
 import pandas as pd
 import yfinance as yf
@@ -63,6 +64,7 @@ class BacktestTrial(BaseModel):
     realized_return: float | None  # (exit - entry) / entry
     overall_signal: Signal
     conviction_score: float
+    raw_conviction_score: float | None = None
     signal_convergence: float
     agent_signals: dict[str, str]
     # Input analyst calls before strategy-name normalization or evidence guards.
@@ -107,12 +109,14 @@ class Backtester:
         market: str = "US",
         horizon_days: int = 30,
         lookback_days: int = 365,
+        replay_dir: Path | None = None,
     ):
         self.settings = settings or Settings.from_env()
         self.store = build_store(self.settings)
         self.market = market.upper()
         self.horizon_days = horizon_days
         self.lookback_days = lookback_days
+        self.replay_dir = replay_dir
 
     def close(self) -> None:
         close = getattr(self.store, "close", None)
@@ -175,6 +179,7 @@ class Backtester:
                 "horizon_days": self.horizon_days,
                 "lookback_days": self.lookback_days,
                 "entry_execution": "next_session_open",
+                "execution_eligibility": "validated_risk_plan_v2",
                 "price_path_source": "yfinance_auto_adjusted_ohlc",
                 "signal_trace_schema": 1,
                 "quick_think_model": self.settings.quick_think_model,
@@ -202,6 +207,8 @@ class Backtester:
             as_of_date=as_of,
             market=self.market,
             lookback_days=self.lookback_days,
+            replay_dir=self.replay_dir,
+            news_max_age_days=self.settings.news_max_age_days,
         )
         pipeline = AnalysisPipeline(
             settings=self.settings,
@@ -240,7 +247,9 @@ class Backtester:
             exit_price=exit_price,
             realized_return=realized,
             overall_signal=execution_signal(briefing),
-            conviction_score=briefing.conviction.score,
+            conviction_score=(briefing.conviction.score
+                              if execution_signal(briefing) != Signal.NEUTRAL else 0.0),
+            raw_conviction_score=briefing.conviction.score,
             signal_convergence=briefing.conviction.signal_convergence,
             agent_signals=agent_signals,
             raw_agent_signals=raw_agent_signals,

@@ -536,7 +536,7 @@ class SignalQualityTests(unittest.TestCase):
         self.assertEqual(calibrated.signal_convergence, 0.25)
         self.assertEqual(calibrated.overall_signal, Signal.NEUTRAL)
 
-    def test_unavailable_agents_are_excluded_from_consensus_denominator(self):
+    def test_availability_does_not_remove_production_consensus_roles(self):
         signals = {
             "fundamentals": Signal.BUY,
             "technical": Signal.BUY,
@@ -547,11 +547,11 @@ class SignalQualityTests(unittest.TestCase):
 
         self.assertEqual(
             compute_session_convergence(signals, available_agents=available),
-            1.0,
+            0.5,
         )
         self.assertEqual(
             compute_session_consensus_score(signals, available_agents=available),
-            1.0,
+            0.5,
         )
 
     def test_session_mode_is_provider_neutral(self):
@@ -568,7 +568,7 @@ class SignalQualityTests(unittest.TestCase):
             trials=[],
         )
         self.assertEqual(manifest.version, SESSION_MANIFEST_VERSION)
-        self.assertEqual(manifest.version, 3)
+        self.assertEqual(manifest.version, 5)
         legacy = manifest.model_copy(update={"version": 2})
         self.assertEqual(
             SessionManifest.model_validate_json(legacy.model_dump_json()).version,
@@ -576,7 +576,7 @@ class SignalQualityTests(unittest.TestCase):
         )
 
 
-    def test_session_conviction_uses_net_analyst_consensus(self):
+    def test_session_conviction_is_capped_by_model_and_consensus(self):
         signals = {
             "fundamentals": Signal.BUY,
             "sentiment": Signal.NEUTRAL,
@@ -594,8 +594,8 @@ class SignalQualityTests(unittest.TestCase):
             agent_signals=signals,
         )
         calibrated = calibrate_session_prediction(prediction)
-        self.assertEqual(calibrated.conviction_score, 0.5)
-        self.assertEqual(calibrated.overall_signal, Signal.BUY)
+        self.assertEqual(calibrated.conviction_score, 0.0)
+        self.assertEqual(calibrated.overall_signal, Signal.NEUTRAL)
 
 
     def test_session_calibration_ignores_agents_without_point_in_time_evidence(self):
@@ -616,7 +616,7 @@ class SignalQualityTests(unittest.TestCase):
         calibrated = calibrate_session_prediction(prediction, macro_available=False)
 
         self.assertEqual(calibrated.agent_signals["macro"], Signal.NEUTRAL)
-        self.assertEqual(calibrated.conviction_score, 0.3333)
+        self.assertEqual(calibrated.conviction_score, 0.0)
         self.assertEqual(calibrated.overall_signal, Signal.NEUTRAL)
 
     def test_session_calibration_ignores_fundamentals_without_point_in_time_evidence(self):

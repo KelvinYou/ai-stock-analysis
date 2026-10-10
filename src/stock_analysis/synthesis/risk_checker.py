@@ -16,7 +16,9 @@ _MIN_CONVERGENCE_FOR_LEVELS = 0.4
 def is_actionable(conviction_score: float, signal_convergence: float) -> bool:
     """Return whether a directional signal clears the execution gate."""
     return (
-        abs(conviction_score) > _MIN_CONVICTION_FOR_LEVELS
+        math.isfinite(conviction_score)
+        and math.isfinite(signal_convergence)
+        and abs(conviction_score) > _MIN_CONVICTION_FOR_LEVELS
         and signal_convergence >= _MIN_CONVERGENCE_FOR_LEVELS
     )
 
@@ -24,15 +26,17 @@ def is_actionable(conviction_score: float, signal_convergence: float) -> bool:
 def missing_level_inputs(snap: TechnicalSnapshot) -> list[str]:
     """Return the indicators a level plan needs but does not have.
 
-    Both level planners degrade silently when indicators are null: ATR falls
-    back to a flat 2% of price and the entry to "2% below current", so an
-    incomplete snapshot yields numbers that look derived but are arbitrary.
-    Naming the gap lets the caller decline instead.
+    A level plan needs observed volatility and at least one usable technical
+    anchor. Missing, zero or non-finite ATR must never trigger a synthetic
+    volatility fallback.
     """
     missing = []
-    if snap.atr_14 is None:
+    if snap.atr_14 is None or not math.isfinite(snap.atr_14) or snap.atr_14 <= 0:
         missing.append("ATR-14 (stop distance)")
-    if snap.sma_20 is None and snap.bb_lower is None and snap.sma_200 is None:
+    if not math.isfinite(snap.close) or snap.close <= 0:
+        missing.append("positive finite close")
+    if not any(v is not None and math.isfinite(v) and v > 0
+               for v in (snap.sma_20, snap.bb_lower, snap.sma_200)):
         missing.append("SMA-20/SMA-200/Bollinger (entry and target anchors)")
     return missing
 
@@ -134,6 +138,10 @@ class RiskChecker:
         """
         score = briefing.conviction.score
         convergence = briefing.conviction.signal_convergence
+        return self.plan_levels(ticker_data, score, convergence)
+
+    def plan_levels(self, ticker_data: TickerData, score: float, convergence: float) -> ActionPlan:
+        """Shared production/session eligibility and validated order levels."""
 
         if not is_actionable(score, convergence):
             return ActionPlan(
@@ -158,11 +166,23 @@ class RiskChecker:
             )
 
         close = snap.close
-        atr = snap.atr_14 or (close * 0.02)  # fallback: 2% of price if ATR unavailable
+        atr = snap.atr_14
 
         if score > 0:
-            return self._plan_bullish(snap, close, atr)
-        return self._plan_bearish(snap, close, atr)
+            plan = self._plan_bullish(snap, close, atr)
+        else:
+            plan = self._plan_bearish(snap, close, atr)
+        prices = (plan.entry_limit, plan.stop_loss, plan.take_profit_1, plan.take_profit_2)
+        invalid = any(v is not None and (not math.isfinite(v) or v <= 0) for v in prices)
+        if score > 0:
+            invalid = invalid or not (plan.stop_loss < plan.entry_limit < plan.take_profit_1)
+            invalid = invalid or (plan.take_profit_2 is not None and plan.take_profit_2 <= plan.take_profit_1)
+        else:
+            invalid = invalid or not (plan.stop_loss > plan.take_profit_1)
+            invalid = invalid or (plan.take_profit_2 is not None and plan.take_profit_2 >= plan.take_profit_1)
+        if invalid:
+            return ActionPlan(note="Invalid finite positive price ordering after rounding — no levels quoted.")
+        return plan
 
     def _plan_bullish(self, snap: TechnicalSnapshot, close: float, atr: float) -> ActionPlan:
         # Entry: wait for a pullback to known support, otherwise slightly below current

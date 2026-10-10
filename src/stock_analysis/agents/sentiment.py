@@ -9,7 +9,7 @@ from pydantic import BaseModel
 from stock_analysis.config import Settings
 from stock_analysis.data.evidence import (
     current_recommendations_are_usable,
-    filter_point_in_time_news,
+    independent_sentiment_news,
 )
 from stock_analysis.models.agent_reports import Confidence, SentimentReport, Signal
 from stock_analysis.models.market_data import TickerData
@@ -24,34 +24,39 @@ class SentimentAgent(BaseAnalystAgent):
     def __init__(self, settings: Settings | None = None):
         s = settings or Settings()
         self.model = s.quick_think_model
+        self.news_max_age_days = s.news_max_age_days
 
     @staticmethod
     def canonicalize_report(
         report: SentimentReport,
         ticker_data: TickerData | None = None,
+        news_max_age_days: int | None = None,
     ) -> SentimentReport:
         """Keep source-shaped fields deterministic after the LLM explains them."""
 
         updates = {"social_sentiment": None}
         if ticker_data is not None:
-            dated_news = filter_point_in_time_news(
+            dated_news = independent_sentiment_news(
                 ticker_data.news_headlines,
                 as_of=ticker_data.fetched_at.date(),
+                max_age_days=ticker_data.news_max_age_days or news_max_age_days or Settings().news_max_age_days,
             )
             updates["notable_headlines"] = [item["title"] for item in dated_news]
         return report.model_copy(update=updates)
 
     async def analyze(self, ticker_data: TickerData) -> SentimentReport:
         """Do not ask an LLM to invent sentiment when no dated evidence exists."""
-        dated_news = filter_point_in_time_news(
+        dated_news = independent_sentiment_news(
             ticker_data.news_headlines,
             as_of=ticker_data.fetched_at.date(),
+            max_age_days=ticker_data.news_max_age_days or self.news_max_age_days,
         )
         recommendations = (
             ticker_data.analyst_recommendations
             if current_recommendations_are_usable(
                 ticker_data.analyst_recommendations,
                 ticker_data.fetched_at.date(),
+                provider_capture=ticker_data.provider_capture,
             )
             else []
         )
@@ -77,7 +82,7 @@ class SentimentAgent(BaseAnalystAgent):
                 social_sentiment=None,
                 summary="Sentiment is unavailable; no directional view is assigned.",
             )
-        return self.canonicalize_report(await super().analyze(ticker_data), ticker_data)
+        return self.canonicalize_report(await super().analyze(ticker_data), ticker_data, self.news_max_age_days)
 
     def system_prompt(self) -> str:
         return (
@@ -107,7 +112,9 @@ class SentimentAgent(BaseAnalystAgent):
             annotations=ToolAnnotations(readOnlyHint=True),
         )
         async def get_news_headlines(args: dict) -> dict:
-            news = ticker_data.news_headlines or []
+            news = independent_sentiment_news(ticker_data.news_headlines,
+                as_of=ticker_data.fetched_at.date(),
+                max_age_days=ticker_data.news_max_age_days or self.news_max_age_days)
             if not news:
                 text = "No recent news headlines available."
             else:

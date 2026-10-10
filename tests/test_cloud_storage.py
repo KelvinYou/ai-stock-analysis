@@ -377,6 +377,11 @@ def test_resume_artifact_reads_the_in_flight_run():
     assert store.resume_artifact("briefing", Briefing) is None
 
     reclaimed = SupabaseAnalysisStore(_settings(), run_id=run_id, client=client)
+    # Resume now requires the exact original input, not just a durable output.
+    reclaimed.save_run_input("AAPL", TickerData(
+        info=TickerInfo(symbol="AAPL", name="Apple", market=Market.US, currency="USD"),
+        fetched_at=datetime(2026, 8, 14), price_history=[],
+    ), date(2026, 8, 14))
     reclaimed.save_analyst_reports("AAPL", _analyst_reports(), date(2026, 8, 14))
 
     resumed = reclaimed.resume_artifact("analyst_reports", AnalystReports)

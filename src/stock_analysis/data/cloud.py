@@ -21,6 +21,7 @@ from pydantic import BaseModel, Field
 
 from stock_analysis.config import Settings
 from stock_analysis.data.bars import drop_invalid_bars, sanitize_bars
+from stock_analysis.data.run_input import input_digest, validate_input
 from stock_analysis.models.agent_reports import AnalystReports
 from stock_analysis.models.debate import DebateResult, ResearchVerdict
 from stock_analysis.models.market_data import PriceBar, TechnicalSnapshot, TickerData
@@ -218,6 +219,39 @@ class SupabaseAnalysisStore:
         )
         self._run_id = run_id
         self._run_as_of: date | None = None
+        self._input_hash: str | None = None
+
+    def load_run_input(self) -> TickerData | None:
+        if not self._run_id:
+            return None
+        rows = self.client.select("analysis_run_inputs", {"run_id": f"eq.{self._run_id}", "limit": "1"})
+        if not rows:
+            stages = self.client.select("analysis_artifacts", {"run_id": f"eq.{self._run_id}", "limit": "1"})
+            if stages:
+                raise ValueError("Unsealed legacy stages cannot resume; start a new run")
+            return None
+        row = rows[0]
+        cutoff = date.fromisoformat(row["as_of_date"])
+        data = TickerData.model_validate(row["payload"])
+        if input_digest(row["payload"], cutoff) != row["input_hash"]:
+            raise ValueError("Run input hash mismatch")
+        validate_input(data, cutoff)
+        self._run_as_of, self._input_hash = cutoff, row["input_hash"]
+        return data
+
+    def save_run_input(self, ticker: str, data: TickerData, as_of: date) -> None:
+        run_id = self._ensure_run(ticker, as_of)
+        payload = data.model_dump(mode="json")
+        digest = input_digest(payload, as_of)
+        existing = self.load_run_input()
+        if existing is not None:
+            if existing != data or self._run_as_of != as_of:
+                raise ValueError("Run input is immutable")
+            return
+        validate_input(data, as_of)
+        self.client.insert("analysis_run_inputs", {"run_id":run_id, "symbol":ticker.upper(),
+                           "as_of_date":as_of.isoformat(), "payload":payload, "input_hash":digest})
+        self._input_hash = digest
 
     def close(self) -> None:
         close = getattr(self.client, "close", None)
@@ -582,7 +616,8 @@ class SupabaseAnalysisStore:
                 "symbol": ticker.upper(),
                 "stage": stage,
                 "as_of_date": as_of.isoformat(),
-                "schema_version": 1,
+                "schema_version": 2 if self._input_hash else 1,
+                "input_hash": self._input_hash,
                 "payload": model.model_dump(mode="json"),
                 "is_public": True,
             },
@@ -628,12 +663,16 @@ class SupabaseAnalysisStore:
             {
                 "run_id": f"eq.{self._run_id}",
                 "stage": f"eq.{stage}",
-                "select": "payload",
+                "select": "payload,input_hash",
                 "limit": "1",
             },
         )
         if not rows:
             return None
+        if self._input_hash is None:
+            self.load_run_input()
+        if self._input_hash is None or rows[0].get("input_hash") != self._input_hash:
+            raise ValueError("Stage input hash mismatch; refusing unsafe resume")
         return model_type.model_validate(rows[0]["payload"])
 
     def _find_run(self, ticker: str, for_date: date | None) -> dict[str, Any] | None:

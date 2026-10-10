@@ -2,11 +2,15 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from datetime import date, datetime, time, timedelta
+from pathlib import Path
 
 import pandas as pd
 import yfinance as yf
 
+from stock_analysis.config import Settings
+from stock_analysis.data.evidence import filter_point_in_time_news
 from stock_analysis.data.fetcher_base import BaseFetcher, reject_unusable_bars
+from stock_analysis.data.fundamentals import build_fundamental_context, select_financial_history
 from stock_analysis.data.my_market import BURSA_ALIASES
 from stock_analysis.models.market_data import (
     FinancialStatements,
@@ -14,6 +18,13 @@ from stock_analysis.models.market_data import (
     PriceBar,
     TickerData,
     TickerInfo,
+)
+
+from .replay import (
+    load_fundamentals_history_replay,
+    load_macro_replay,
+    load_news_replay,
+    load_valuation_price_replay,
 )
 
 
@@ -32,10 +43,14 @@ class BacktestFetcher(BaseFetcher):
         as_of_date: date,
         market: str = "US",
         lookback_days: int = 365,
+        replay_dir: Path | None = None,
+        news_max_age_days: int | None = None,
     ):
         self.as_of_date = as_of_date
         self.market = market.upper()
         self.lookback_days = lookback_days
+        self.replay_dir = replay_dir
+        self.news_max_age_days = news_max_age_days or Settings().news_max_age_days
 
     def fetch(self, ticker: str) -> TickerData:
         yf_ticker = self._resolve_ticker(ticker)
@@ -47,17 +62,35 @@ class BacktestFetcher(BaseFetcher):
                 f"No price history for {ticker} on or before {self.as_of_date}"
             )
 
-        financials = self._extract_financials(stock)
+        history = (load_fundamentals_history_replay(self.replay_dir, ticker, self.as_of_date)
+                   if self.replay_dir is not None else self._extract_financial_history(stock))
+        financials = history[-1] if history else None
         ticker_info = self._build_info(ticker, stock, price_history, financials)
 
-        return TickerData(
+        data = TickerData(
             info=ticker_info,
             price_history=price_history,
             financials=financials,
+            financial_history=history,
             analyst_recommendations=[],
             news_headlines=[],
             fetched_at=datetime.combine(self.as_of_date, time()),
+            provider_capture="historical",
         )
+        if self.replay_dir is not None:
+            macro_path = self.replay_dir / "macro.jsonl"
+            if not macro_path.exists():
+                macro_path = self.replay_dir / "macro.json"
+            data.valuation_price = load_valuation_price_replay(self.replay_dir, ticker, self.as_of_date)
+            data.macro_snapshot = load_macro_replay(macro_path, self.as_of_date)
+            data.news_headlines = load_news_replay(self.replay_dir / "news", ticker, self.as_of_date)
+            context = build_fundamental_context(data, self.as_of_date)
+            data.info = data.info.model_copy(update={k: context["valuation"][k]
+                                                   for k in ("pe_ratio", "market_cap")})
+        data.news_max_age_days = self.news_max_age_days
+        data.news_headlines = filter_point_in_time_news(data.news_headlines, as_of=self.as_of_date,
+                                                       max_age_days=data.news_max_age_days)
+        return data
 
     # ------------------------------------------------------------------
     # price history
@@ -95,64 +128,53 @@ class BacktestFetcher(BaseFetcher):
     # on or before as_of_date
     # ------------------------------------------------------------------
     def _extract_financials(self, stock: yf.Ticker) -> FinancialStatements | None:
+        history = self._extract_financial_history(stock)
+        return history[-1] if history else None
+
+    def _extract_financial_history(self, stock: yf.Ticker) -> list[FinancialStatements]:
         try:
-            inc = stock.quarterly_income_stmt
-            bal = stock.quarterly_balance_sheet
-            cf = stock.quarterly_cashflow
+            inc, bal, cf = stock.quarterly_income_stmt, stock.quarterly_balance_sheet, stock.quarterly_cashflow
+            kind = "quarter"
+            if inc is None or inc.empty:
+                inc, bal, cf = stock.income_stmt, stock.balance_sheet, stock.cashflow
+                kind = "annual"
         except Exception:
-            return None
-
+            return []
         if inc is None or inc.empty:
-            # Fall back to annual if quarterly missing
-            try:
-                inc = stock.income_stmt
-                bal = stock.balance_sheet
-                cf = stock.cashflow
-            except Exception:
-                return None
-        if inc is None or inc.empty:
-            return None
-
-        selected = self._pick_statement_column(stock, inc)
-        if selected is None:
-            return None
-        col, fiscal_period_end, available_as_of = selected
-
-        latest_inc = inc[col] if col in inc.columns else None
-        latest_bal = (
-            bal[col] if bal is not None and not bal.empty and col in bal.columns else {}
-        )
-        latest_cf = (
-            cf[col] if cf is not None and not cf.empty and col in cf.columns else {}
-        )
-        if latest_inc is None:
-            return None
-
-        revenue = self._safe_get(latest_inc, "Total Revenue")
-        net_income = self._safe_get(latest_inc, "Net Income")
-        gross_profit = self._safe_get(latest_inc, "Gross Profit")
-        operating_income = self._safe_get(latest_inc, "Operating Income")
-        if all(
-            value is None
-            for value in (revenue, net_income, gross_profit, operating_income)
-        ):
-            return None
-
-        return FinancialStatements(
-            revenue=revenue,
-            net_income=net_income,
-            total_debt=self._safe_get(latest_bal, "Total Debt"),
-            total_equity=self._safe_get(latest_bal, "Stockholders Equity"),
-            free_cash_flow=self._safe_get(latest_cf, "Free Cash Flow"),
-            gross_margin=(gross_profit / revenue) if revenue and gross_profit else None,
-            operating_margin=(
-                operating_income / revenue if revenue and operating_income else None
-            ),
-            net_margin=(net_income / revenue) if revenue and net_income else None,
-            fiscal_period_end=fiscal_period_end,
-            available_as_of=available_as_of,
-            availability_source="yahoo_sec_filing",
-        )
+            return []
+        filing_dates = self._filing_dates_by_period(stock, inc.columns)
+        history = []
+        for col in inc.columns:
+            end = self._to_date(col)
+            dates = [d for d in filing_dates.get(end, []) if d <= self.as_of_date]
+            if end is None or end > self.as_of_date or not dates:
+                continue
+            income = inc[col]
+            balance = bal[col] if bal is not None and not bal.empty and col in bal.columns else {}
+            cashflow = cf[col] if cf is not None and not cf.empty and col in cf.columns else {}
+            revenue = self._safe_get(income, "Total Revenue")
+            net_income = self._safe_get(income, "Net Income")
+            gross = self._safe_get(income, "Gross Profit")
+            operating = self._safe_get(income, "Operating Income")
+            if all(v is None for v in (revenue, net_income, gross, operating)):
+                continue
+            shares = self._safe_get(balance, "Ordinary Shares Number")
+            history.append(FinancialStatements(
+                revenue=revenue, net_income=net_income,
+                total_debt=self._safe_get(balance, "Total Debt"),
+                total_equity=self._safe_get(balance, "Stockholders Equity"),
+                free_cash_flow=self._safe_get(cashflow, "Free Cash Flow"),
+                gross_margin=gross / revenue if gross is not None and revenue else None,
+                operating_margin=operating / revenue if operating is not None and revenue else None,
+                net_margin=net_income / revenue if net_income is not None and revenue else None,
+                diluted_eps=self._safe_get(income, "Diluted EPS"),
+                shares_outstanding=shares if shares and shares > 0 else None,
+                fiscal_period_end=end, available_as_of=max(dates), period_kind=kind,
+                availability_source="yahoo_sec_filing",
+                # Current-provider frames do not establish original vintages,
+                # exact duration starts, historical currency or share basis.
+            ))
+        return select_financial_history(history, self.as_of_date)
 
     def _pick_statement_column(
         self, stock: yf.Ticker, df: pd.DataFrame
@@ -201,7 +223,7 @@ class BacktestFetcher(BaseFetcher):
 
         result: dict[date, list[date]] = {}
         for filing in filings or []:
-            if filing.get("type") not in {"10-Q", "10-K"}:
+            if str(filing.get("type", "")).removesuffix("/A") not in {"10-Q", "10-K", "20-F", "40-F", "6-K"}:
                 continue
             filing_date = self._to_date(filing.get("date"))
             if filing_date is None:

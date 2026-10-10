@@ -744,3 +744,16 @@ class PortfolioCostAndSelectionTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def test_rolling_long_shares_same_day_cash_and_ignores_input_order():
+    day = date(2025, 3, 1)
+    trials = [_trial("AAA", day, Signal.NEUTRAL, 0.20),
+              _trial("BBB", day, Signal.SELL, -0.20)]
+    config = PortfolioConfig(position_size_pct=0.10, cost_bps_per_side=0)
+    forward = portfolio_mod.simulate(_result(trials), config, strategies=["rolling_long"])
+    reverse = portfolio_mod.simulate(_result(list(reversed(trials))), config,
+                                     strategies=["rolling_long"])
+    assert forward.model_dump() == reverse.model_dump()
+    assert {t.ticker:t.stake for t in forward.strategies[0].trades} == {"AAA":1000,"BBB":1000}
+    assert forward.strategies[0].total_return_pct == 0

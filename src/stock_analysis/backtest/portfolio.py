@@ -25,6 +25,7 @@ from datetime import date, timedelta
 
 from pydantic import BaseModel, Field
 
+from stock_analysis.models.agent_reports import Signal
 from stock_analysis.models.market_data import MacroSnapshot, PriceBar
 
 from . import stats
@@ -460,8 +461,10 @@ def _attach_cash_yield_diagnostics(
     if missing_day is not None:
         return (
             None,
-            f"FRED:DFF has no timely available observation for {missing_day}; "
-            "no zero-rate or stale-rate fallback was used.",
+            (
+                f"FRED:DFF has no timely available observation for {missing_day}; "
+                "no zero-rate or stale-rate fallback was used."
+            ),
         )
 
     cash_proxy_return = _cash_balance_return(
@@ -987,81 +990,17 @@ def _rolling_long(
     This is retained as a diagnostic baseline for compatibility with prior
     reports. It is not the strict long-hold benchmark used for promotion.
     """
-    cash = config.starting_balance
-    equity_curve: list[EquityPoint] = []
-    trades: list[TradeLog] = []
-    pending_exits: dict[date, list[_OpenPosition]] = defaultdict(list)
-
-    round_trip = _round_trip_cost(config)
-
-    def flush(d: date, *, inclusive: bool) -> None:
-        nonlocal cash
-        due_dates = (
-            sorted(k for k in pending_exits if k <= d)
-            if inclusive
-            else sorted(k for k in pending_exits if k < d)
-        )
-        for ed in due_dates:
-            for pos in pending_exits.pop(ed):
-                net_return = pos.realized_return - round_trip
-                pnl = pos.stake * net_return
-                cash += pos.stake + pnl
-                trades.append(
-                    TradeLog(
-                        ticker=pos.ticker,
-                        entry_date=pos.entry_date,
-                        exit_date=ed,
-                        direction=1,
-                        stake=pos.stake,
-                        pnl=pnl,
-                        return_pct=net_return,
-                        entry_price=pos.entry_price,
-                        exit_price=pos.exit_price,
-                    )
-                )
-                equity_curve.append(EquityPoint(date=ed, equity=_equity(cash, pending_exits)))
-
-    def flush_before(d: date) -> None:
-        flush(d, inclusive=False)
-
-    def flush_up_to(d: date) -> None:
-        flush(d, inclusive=True)
-
-    for trial in sorted(trials, key=lambda t: (t.entry_date or t.as_of_date)):
-        entry_date = trial.entry_date or trial.as_of_date
-        flush_before(entry_date)
-        stake = cash * config.position_size_pct
-        if stake <= 0:
-            continue
-        cash -= stake
-        pending_exits[trial.exit_date].append(
-            _OpenPosition(
-                ticker=trial.ticker,
-                entry_date=trial.entry_date or trial.as_of_date,
-                direction=1,
-                stake=stake,
-                realized_return=trial.realized_return,
-                entry_price=trial.entry_price,
-                exit_price=trial.exit_price,
-            )
-        )
-        equity_curve.append(EquityPoint(date=entry_date, equity=_equity(cash, pending_exits)))
-
-    if pending_exits:
-        flush_up_to(max(pending_exits.keys()))
-
-    marked_curve, complete = _daily_mark_for_trades(
-        trades, trials, price_paths, config
+    # Route the all-trials diagnostic through the same session cash snapshot,
+    # equal capped sizing and Open-before-Close event queue as strategy trades.
+    # The strict one-position-per-ticker buy-and-hold path remains separate.
+    result = BacktestResult(
+        trials=[trial.model_copy(update={"overall_signal": Signal.BUY}) for trial in trials],
+        settings={},
+        started_at=min((trial.as_of_date for trial in trials), default=date.min),
+        finished_at=max((trial.exit_date or trial.as_of_date for trial in trials), default=date.min),
+        price_paths=dict(price_paths),
     )
-    return _build_report(
-        "rolling_long",
-        config,
-        cash,
-        marked_curve if complete else equity_curve,
-        trades,
-        drawdown_basis=("daily_close_mark_to_market" if complete else "event_only_incomplete"),
-        drawdown_complete=complete,
-    )
+    return _simulate_one(result, config, "overall").model_copy(update={"strategy": "rolling_long"})
 
 
 def _direction_for(trial: BacktestTrial, strategy: str, allow_short: bool) -> int:

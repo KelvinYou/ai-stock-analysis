@@ -5,9 +5,10 @@ import logging
 import secrets
 import uuid
 from contextlib import asynccontextmanager
-from datetime import date, datetime
+from datetime import UTC, date, datetime
 from enum import Enum
 from typing import Annotated, Any, Literal
+from uuid import UUID
 from zoneinfo import ZoneInfo
 
 from fastapi import FastAPI, Header, HTTPException, Request
@@ -17,6 +18,7 @@ from fastapi.openapi.utils import get_openapi
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field
 
+from stock_analysis.api.portfolio_data import load_portfolio_bundle, snapshot_from_run
 from stock_analysis.api.public_data import (
     TICKER_RE,
     PublicReadService,
@@ -29,6 +31,7 @@ from stock_analysis.config import Settings
 from stock_analysis.data.cloud import SupabaseAnalysisStore, SupabaseError
 from stock_analysis.models.synthesis import Briefing
 from stock_analysis.orchestrator import AnalysisPipeline
+from stock_analysis.portfolio import PortfolioPlan, PortfolioSnapshot, build_portfolio_plan
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger(__name__)
@@ -57,6 +60,11 @@ class AnalysisRunResponse(BaseModel):
     ticker: str
     status: JobStatus
     error: str | None = None
+
+
+class PortfolioPlanRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    run_ids: list[UUID] = Field(min_length=3, max_length=50)
 
 
 class ErrorDetail(BaseModel):
@@ -221,6 +229,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 # safety mechanism.
 jobs: dict[str, AnalysisRunResponse] = {}
 _local_results: dict[str, Briefing] = {}
+_local_portfolio_snapshots: dict[str, PortfolioSnapshot] = {}
 _background_tasks: set[asyncio.Task] = set()
 _local_quota_lock = asyncio.Lock()
 _local_quota_day: date | None = None
@@ -375,6 +384,23 @@ async def get_ticker(ticker: TickerPath):
     return bundle
 
 
+@app.post("/api/v1/portfolio-plans", response_model=PortfolioPlan)
+async def create_portfolio_plan(req: PortfolioPlanRequest):
+    """Derive research target weights from completed run IDs; no new model calls."""
+    try:
+        bundle = load_portfolio_bundle(
+            Settings.from_env(), [str(run_id) for run_id in req.run_ids],
+            _local_portfolio_snapshots,
+        )
+        return build_portfolio_plan(bundle)
+    except SupabaseError as exc:
+        raise _storage_exception(exc) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=409, detail={
+            "code": "portfolio_inputs_unavailable", "message": str(exc),
+        }) from exc
+
+
 @app.post(
     "/api/v1/analyze/{ticker}",
     response_model=AnalysisRunResponse,
@@ -401,6 +427,9 @@ async def start_analysis(
             run_id = store.enqueue_run(
                 symbol,
                 market=req.market,
+                # Input captures use UTC; quota timezone must not relabel US
+                # after-close research as the next Malaysian calendar day.
+                as_of_date=datetime.now(UTC).date(),
                 settings=settings,
                 idempotency_key=x_idempotency_key,
             )
@@ -442,6 +471,12 @@ async def _run_local_analysis(
             pipeline.run(ticker), timeout=settings.max_run_seconds
         )
         _local_results[run_id] = briefing
+        data = getattr(pipeline, "last_ticker_data", None)
+        reports = getattr(pipeline, "last_analyst_reports", None)
+        if data is not None and reports is not None:
+            _local_portfolio_snapshots[run_id] = snapshot_from_run(
+                run_id, data, reports, briefing,
+            )
         job.status = JobStatus.COMPLETED
     except TimeoutError:
         job.status = JobStatus.FAILED

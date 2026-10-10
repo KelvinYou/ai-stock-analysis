@@ -78,6 +78,8 @@ class PartitionReport(BaseModel):
     effective_n: float | None = None
     effective_n_basis: str = stats.PORTFOLIO_EFFECTIVE_N_BASIS
     hit_rate_ci_95: tuple[float, float] | None = None
+    ic_effective_n: float | None = None
+    uncertainty_method: str | None = None
     directional_mean_t_stat: float | None = None
     directional_mean_p_value: float | None = None
     info_coefficient_ci_95: tuple[float, float] | None = None
@@ -168,6 +170,7 @@ class Scorer:
         lines += _metric_lines(report)
         lines += ["", "## By signal (all trials)", "", *_bucket_table(report.buckets)]
         lines += _signal_trace_lines(result)
+        lines += _small_sample_warning(report)
 
         if report.pre_cutoff is not None and report.post_cutoff is not None:
             lines += [
@@ -261,6 +264,9 @@ def _compute_partition(
     all_returns = [t.realized_return for t in completed]
     convictions = [t.conviction_score for t in completed]
     ic = _correlation(convictions, all_returns)
+    ic_n_eff = stats.effective_sample_size(
+        [("portfolio", t.as_of_date, t.exit_date) for t in completed if t.exit_date is not None]
+    ) or None
 
     t_stat, gross_p = stats.t_test_vs_zero(directional_returns, n_eff)
     _, net_p = stats.t_test_vs_zero(net_directional_returns, n_eff)
@@ -288,11 +294,16 @@ def _compute_partition(
         directional_trials=len(directional),
         active_mean_return=_safe_mean(active_returns),
         effective_n=n_eff,
-        hit_rate_ci_95=stats.wilson_interval(hits, len(directional)) if directional else None,
+        hit_rate_ci_95=(
+            stats.wilson_interval(hits, len(directional), effective_n=n_eff)
+            if directional and n_eff is not None else None
+        ),
+        ic_effective_n=ic_n_eff,
+        uncertainty_method="effective_n_wilson_fisher_approx_v1",
         directional_mean_t_stat=t_stat,
         directional_mean_p_value=gross_p,
         info_coefficient_ci_95=(
-            stats.fisher_ci(ic, len(completed)) if ic is not None else None
+            stats.fisher_ci(ic, ic_n_eff) if ic is not None and ic_n_eff is not None else None
         ),
         return_skew=skew,
         return_kurtosis=kurt,
@@ -330,6 +341,11 @@ def _metric_lines(r: PartitionReport | ScoreReport) -> list[str]:
     if r.info_coefficient_ci_95:
         lo, hi = r.info_coefficient_ci_95
         ic += f" (95% CI {_fmt_float(lo)} – {_fmt_float(hi)}{_zero_note(lo, hi)})"
+
+    if r.uncertainty_method:
+        hit += " (approximate effective-n Wilson interval)" if r.hit_rate_ci_95 else " (CI unavailable: insufficient dated effective sample)"
+        ic += f" — IC effective n={r.ic_effective_n:.2f}" if r.ic_effective_n is not None else " — IC effective n unavailable"
+        ic += " (approximate effective-n Fisher interval)" if r.info_coefficient_ci_95 else " (CI unavailable: effective n < 4 or degenerate correlation)"
 
     lines = [
         hit,
@@ -435,6 +451,19 @@ def _evidence_coverage_lines(result: BacktestResult) -> list[str]:
     lines.append(
         "- Availability counts input presence, not feed completeness or independent corroboration."
     )
+    readiness = coverage.get("fundamentals_readiness")
+    if isinstance(readiness, dict):
+        recorded = readiness.get("recorded", 0)
+        if isinstance(recorded, int) and 0 < recorded <= total:
+            lines += ["", "### Fundamental readiness", "",
+                      f"- Readiness recorded for {recorded}/{total} packets; unrecorded legacy packets remain unknown."]
+            for key, label in (("multi_period", "Multiple dated fiscal periods"),
+                               ("growth", "Comparable year-over-year growth"),
+                               ("valuation", "Dated same-basis P/E")):
+                count = readiness.get(key)
+                if isinstance(count, int) and 0 <= count <= recorded:
+                    lines.append(f"- {label}: {count}/{recorded} recorded packets")
+            lines.append("- Readiness is data sufficiency, not a buy signal or independent-sample count; price/share basis remains provider-declared.")
     return lines
 
 
