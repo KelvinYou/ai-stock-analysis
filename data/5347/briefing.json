@@ -1,71 +1,68 @@
 {
   "ticker": "5347",
-  "date": "2026-09-25",
-  "data_as_of": "2026-09-24",
-  "overall_signal": "sell",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "overall_signal": "neutral",
   "conviction": {
-    "score": -0.48,
-    "signal_convergence": 0.6,
-    "explanation": "Sell, low confidence: negative snapshot FCF and elevated debt/equity align with price below both averages and negative 20/60-bar momentum. Positive income and oversold RSI are counterweights."
+    "score": 0.0,
+    "signal_convergence": 0.5,
+    "explanation": "Verified cost-inclusive dividend coverage and modest H1 operating-profit growth support utility ownership, but a RM169.6m buffer is narrow against large borrowings/leases and heavy grid investment.16.83x earnings, declining reported profit and weak technicals leave the direction balanced."
   },
-  "executive_summary": "Tenaga Nasional combines snapshot negative FCF of MYR 439.7M and debt/equity around 1.76 with price below both averages and negative 20/60-bar returns. Positive net income, a 3.81% yield, and oversold RSI are counterpoints; no period comparison or recent operating news is supplied.",
-  "bull_case": "Positive net income, a 3.81% reported yield, and RSI below 30 may support stabilization if later cash-flow and price evidence improve.",
-  "bear_case": "Negative FCF, debt/equity near 1.76, negative MACD, and price below SMA-50/SMA-200 support caution. Oversold RSI alone does not confirm a bottom.",
+  "executive_summary": "Tenaga\u2019s H1 CFO of RM11.9525bn funded specified asset investment and left RM1.8018bn after finance and lease payments, covering RM1.6322bn dividends. Modestly higher H1 operating profit provides a resilient utility starting point at 16.83x trailing earnings.\n\nCoverage leaves only RM169.6m against RM60.936bn borrowings and RM31.198bn leases. Cash/deposits include restricted or longer-tenor balances, while Q2 margins and owners earnings declined. Neutral balances verified funding with thin flexibility and a weak price trend; investment demand does not prove regulated returns on every project.",
+  "bull_case": "Continued operating resilience and disciplined grid investment could sustain the covered income proposition through regulatory cost recovery.",
+  "bear_case": "Collection timing, investment demands or margin pressure could consume the thin buffer and weaken distributions without requiring insolvency.",
   "key_uncertainties": [
-    "No statement-period label, cash balance, or debt maturity details.",
-    "Newest company headline is from May 2026; Reuters electricity-theft story is from 2025-11.",
-    "No current regulatory, tariff, or fuel-cost evidence is supplied."
+    "Tariff/fuel reconciliation and returns on new grid investment.",
+    "Liquidity availability beyond broad cash/deposit balances.",
+    "Persistence of coverage after all specified financing and lease costs."
   ],
   "catalysts_upcoming": [
-    "Check the next period-labelled results for FCF, debt, and regulated investment funding; no date is supplied."
+    "Comparable H1 cost-inclusive cash increasing beyond dividends with lower borrowings would strengthen ownership compensation.",
+    "Verified regulatory and margin disclosures showing improved cost recovery would reduce operating uncertainty."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "Low beta (0.32) \u2014 historically less sensitive to broad-market moves.",
+      "Low beta (0.31) \u2014 historically less sensitive to broad-market moves.",
       "Sector: Utilities \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 37.9% over available price history. Projected worst case (2-sigma): ~27.9% from current $13.06.",
-    "risk_reward_ratio": "N/A (bearish signal)"
+    "max_drawdown_scenario": "Historical max drawdown: 37.9% over available price history. Projected worst case (2-sigma): ~31.4% from current $12.90.",
+    "risk_reward_ratio": null
   },
   "action_plan": {
     "entry_limit": null,
-    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
-    "stop_loss": 13.59,
-    "stop_rationale": "Thesis invalidated if price breaks above $13.59.",
-    "take_profit_1": 13.06,
-    "take_profit_2": 12.82,
-    "target_rationale": "Primary: reduce/exit at/near current $13.06. Next downside watch: $12.82 (nearest support).",
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": null
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.50). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "5347",
-    "judged_view": "sell",
-    "confidence": "low",
-    "thesis": "Snapshot reports negative FCF of MYR 439.7M and debt/equity about 1.76, while price is below SMA-50/SMA-200 with negative 20/60-bar returns and MACD. Positive net income and oversold RSI are counterexamples; this is a low-confidence sell pending period-labelled results.",
-    "winning_side": "bear",
-    "strongest_counterexample": "A later period-labelled filing showing positive FCF and lower leverage, combined with price reclaiming SMA-50, would invalidate this bearish view.",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Tenaga has a verified cost-inclusive income bridge: RM1.8018bn cash after the specified asset, finance and lease payments covers RM1.6322bn dividends. Neither side decisively resolves whether that narrow RM169.6m buffer adequately compensates RM60.936bn borrowings and RM31.198bn leases at 16.83x trailing earnings. Modestly rising H1 operating profit supports ownership while weaker reported earnings and heavy investment prevent a clear increase call.",
+    "winning_side": "neither",
+    "strongest_counterexample": "The conservative cash bridge already includes interest, lease principal and lease interest; the payout is observed to be covered, and H1 operating profit increased to RM4.539bn despite adverse FX comparison.",
     "invalidation_conditions": [
-      "A later period-labelled filing showing positive FCF and lower leverage, combined with price reclaiming SMA-50, would invalidate this bearish view."
+      "A comparable H1 post-finance/lease cash surplus below dividends would invalidate the current funded-income counterweight.",
+      "Comparable H1 post-finance/lease cash above RM1.8018bn with borrowings below RM60.936bn and Q2 operating margin above 11.44% would strengthen the ownership case enough to reopen neutral."
     ],
-    "evidence_gaps": [
-      "No statement-period label or comparative periods; negative FCF persistence is unknown.",
-      "No current fuel-cost, tariff, capex, or regulatory evidence.",
-      "No dated recommendations or issuer-specific macro/FX snapshot."
-    ],
+    "evidence_gaps": [],
     "decisive_factors": [
-      "Snapshot reports negative FCF of MYR 439.7M and debt/equity around 1.76.",
-      "Price is below SMA-50/SMA-200 with negative 20/60-bar returns and MACD.",
-      "Positive net income/yield and RSI 28.77 temper confidence."
+      "Cash capacity is verified rather than an extraction gap.",
+      "Thin payout coverage and large obligations offset operating resilience; broad deposits include restrictions and longer tenors."
     ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "sell",
-    "sentiment": "neutral",
+    "fundamentals": "neutral",
+    "sentiment": "sell",
     "technical": "sell",
     "macro": "neutral"
   },
-  "synthesized_signal": "sell",
+  "synthesized_signal": "neutral",
   "signal_gate_reasons": [],
   "pipeline_mode": "in-session"
 }

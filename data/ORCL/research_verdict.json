@@ -1,22 +1,18 @@
 {
   "ticker": "ORCL",
   "judged_view": "sell",
-  "confidence": "low",
-  "thesis": "The snapshot reports negative FCF equal to 35.2% of revenue and debt/equity of about 3.67, alongside positive net income and a 33.3% operating margin. The weak long-term price trend aligns with the cash-flow/leverage concern, but no statement period is specified and persistence cannot be established.",
+  "confidence": "medium",
+  "thesis": "Oracle has real cloud growth and improved debt servicing, but the bear carries the stronger shareholder-return case. Negative $5.396bn FCF, $88.260bn net debt excluding leases, financing prepayments and $19.909bn equity proceeds make the estimated 13.16x forward multiple an inadequate stand-alone value argument. The sell ruling concerns observed funding dependence and dilution, with future lease commitments identified separately from present debt.",
   "winning_side": "bear",
-  "strongest_counterexample": "A sustained close above the observed 20-bar high of $170.70 with later dated filings showing improved cash generation would weaken the bearish technical concern.",
+  "strongest_counterexample": "Stated debt already fell to $125.337bn while GAAP operating income rose to $6.728bn and interest coverage reached 4.71x; successful conversion of 121% IaaS growth could improve cash sooner than the bearish funding thesis anticipates.",
   "invalidation_conditions": [
-    "A sustained close above the observed 20-bar high of $170.70 with later dated filings showing improved cash generation would weaken the bearish technical concern."
+    "Reported FCF above zero, with CFO excluding customer-financing prepayments also covering gross capex, would materially defeat the funding-gap ruling; compare definitions without double-counting prepayments.",
+    "Stated debt below $125.337bn and year-on-year diluted share count no higher than the present 3.000bn, alongside positive FCF, would weaken the leverage/dilution objection."
   ],
-  "evidence_gaps": [
-    "Financial statement period/availability dates are absent; negative FCF cannot be tied to a reporting period.",
-    "Layoff/debt headlines lack company confirmation and underlying figures in the packet.",
-    "Dated analyst recommendations are not supplied."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "The snapshot reports negative FCF of $23.69B (-35.2% of revenue) and debt/equity of 3.67, despite positive net income and a 33.3% operating margin. The financial snapshot supports caution, but no period comparison establishes persistence.",
-    "The close has recovered just above SMA-50 but remains below SMA-200 after a -55.44% 252-bar return; MACD is negative and volume is below average. The longer-term trend is weak, but the near-term tape is not a clean breakdown.",
-    "Statement period is not specified; no multi-period trend is inferred."
+    "Current operating progress does not make financing prepayments unencumbered owner cash.",
+    "Nominal $288bn uncommenced leases increase the future delivery burden but are not mechanically added to current net debt."
   ],
   "pipeline_mode": "in-session"
 }

@@ -1,23 +1,18 @@
 {
   "ticker": "1155",
-  "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Neutral is appropriate: a supplied 6.11% yield and moderate P/E do not outweigh the price below SMA-50/200 and the dated earnings-miss headline. The financial snapshot has no period date and bank credit/capital evidence is missing.",
-  "winning_side": "neither",
-  "strongest_counterexample": "The bull case is supported by the 6.11% indicated yield and lower forward P/E, together with RSI 24.8 near the observed 20/60-bar low.",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Maybank offers a defensible income return at 11.51x trailing earnings and a vendor-reported 6.2% yield, supported by nearly stable H1 profit and 15.657% CET1. The bull establishes measured distribution capacity without requiring earnings acceleration; declining income and rising gross impairment limit conviction but do not yet outweigh that compensation.",
+  "winning_side": "bull",
+  "strongest_counterexample": "Net operating income fell to RM14.611bn from RM15.397bn, gross impaired loans rose to RM9.362bn, and both capital ratios declined before the proposed dividend deduction; cost restraint may not indefinitely protect payout capacity.",
   "invalidation_conditions": [
-    "A future dated report showing sustained revenue and earnings recovery would weaken the neutral view.",
-    "A persistent close below the observed 20/60-bar low would strengthen the technical bear case."
+    "Reassess if the next comparable H1 attributable profit falls below RM5.171bn while net impaired loans exceed the observed 0.80% ratio.",
+    "Reassess if the next declared first interim dividend is below the observed 31 sen and post-distribution CET1 falls below 15.657%; compare capital on a consistent dividend basis."
   ],
-  "evidence_gaps": [
-    "Financial snapshot lacks fiscal-period and availability dates.",
-    "No bank asset-quality, capital-adequacy or dividend-coverage measures.",
-    "No USD/MYR snapshot; the current recommendation feed has no dated ratings and was excluded."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "Price is below SMA-50 and SMA-200 with negative 20/60-bar returns.",
-    "The 2026-05-31 dated headline reports an earnings miss and weaker revenue.",
-    "The yield and valuation do not resolve missing credit-quality evidence."
+    "Stable H1 earnings and an increased declared interim payout support income ownership.",
+    "Capital is quantified and qualified for the dividend deduction; weak technicals affect entry timing rather than erase the income case."
   ],
   "pipeline_mode": "in-session"
 }

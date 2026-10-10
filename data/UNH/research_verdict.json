@@ -1,20 +1,18 @@
 {
   "ticker": "UNH",
-  "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Evidence is split: price remains above SMA-200, but short-term momentum is weak and no dated financial period confirms recovery.",
-  "winning_side": "neither",
-  "strongest_counterexample": "The strongest counterexample is a rebound from oversold conditions supported by the reported positive FCF; neither currentness nor a turnaround is verified.",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "UnitedHealth has a supported recovery purchase from multi-period underwriting improvement and actual debt reduction, rather than raised guidance alone. H1 medical care ratio improved to 85.3% from 87.1%, while debt fell to $73.328bn and net repayments totaled $4.813bn. Those delivered outcomes give the bull credible support at an estimated 16.64x forward reference, with medical-cost recurrence and regulated cash constraints limiting conviction.",
+  "winning_side": "bull",
+  "strongest_counterexample": "Optum Rx scripts fell to 387m from 414m and debt still materially exceeds cash/short investments; medical costs can recur, and consolidated insurer cash is not freely transferable to the holding company.",
   "invalidation_conditions": [
-    "A close below the observed 20-bar low would weaken the stabilization case."
+    "Next comparable Q2 medical care ratio at or above the prior 89.4% would invalidate the current underwriting-repair thesis.",
+    "Debt above $73.328bn with comparable H1 CFO below $19.964bn would weaken observed balance-sheet repair; evaluate regulated cash separately."
   ],
-  "evidence_gaps": [
-    "Financial fiscal-period and availability dates are missing.",
-    "Headlines do not contain a verified management outlook."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "Price is below SMA-50 but above SMA-200.",
-    "RSI is 29.14 and MACD histogram is negative."
+    "Repayment is already completed despite regulated-cash restrictions, avoiding a hypothetical free-transfer assumption.",
+    "The $50m Q2 reserve release is insufficient to explain the whole recovery; October 13 results are a test, not promised upside."
   ],
   "pipeline_mode": "in-session"
 }

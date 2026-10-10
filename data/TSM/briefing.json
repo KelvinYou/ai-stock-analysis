@@ -1,36 +1,39 @@
 {
   "ticker": "TSM",
-  "date": "2026-09-25",
-  "data_as_of": "2026-09-23",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
   "overall_signal": "buy",
   "conviction": {
-    "score": 0.43,
-    "signal_convergence": 0.6,
-    "explanation": "Buy, with moderate conviction: strong snapshot margins/FCF and price above both moving averages support the direction; a negative 60-bar return and missing statement currency/period details temper confidence."
+    "score": 0.5,
+    "signal_convergence": 0.5455,
+    "explanation": "36% revenue growth, margin expansion and increasing Q2 FCF support profitable foundry participation with internally funded capex and large liquid surplus.22x forecast earnings has operating support, but inventory, overseas returns, Taiwan exposure and RSI near 88 constrain conviction."
   },
-  "executive_summary": "The snapshot reports 50.8% operating margin, 44.6% net margin, and FCF equal to about 26.1% of revenue; price remains above both moving averages with a strong 252-bar return. The 60-bar return is slightly negative and financial currency/period labels are absent, so the buy view is moderate-confidence.",
-  "bull_case": "The long-term return is strong, price holds above SMA-50/SMA-200, and MACD is positive. These observations support continued monitoring of the constructive trend.",
-  "bear_case": "The negative 60-bar return and firm RSI show the advance is not uniform, while the long-dated-call headline is a positioning signal rather than proof of operating demand. Company-specific macro/geopolitical evidence is absent.",
+  "executive_summary": "TSMC supports a positive foundry-growth thesis independent of investment gains. Revenue grew 36%, operating margin reached 60.3%, and Q2 FCF increased to NT$287.36bn from NT$199.85bn. H1 CFO exceeded capex by NT$635.576bn, with liquid assets exceeding interest-bearing debt by NT$2,486.33bn.\n\nInventory days rose to 87 and prospective operating-margin guidance of 56\u201358% is below the peak. Taiwan exposure and overseas execution remain economically material regardless of liquidity. At 22x estimated forward earnings, continued profitable demand can compensate those risks, but 35.31x trailing earnings and RSI near 88 argue against treating current entry as effortless or peak margins as permanent.",
+  "bull_case": "Sustained profitable foundry demand and cash-funded capacity could support growth even with margins below the Q2 peak.",
+  "bear_case": "Inventory normalization, weaker fab returns or geopolitical loss could impair earnings and shareholder value despite financial resilience.",
   "key_uncertainties": [
-    "Whether the negative 60-bar return reverses or broadens into longer horizons.",
-    "Whether favorable positioning/commentary reflects durable foundry demand.",
-    "Financial and company-specific macro snapshots are missing."
+    "Taiwan geopolitical concentration.",
+    "Incremental overseas-capacity returns and inventory conversion.",
+    "Guidance is prospective; investment gains are excluded from recurring growth."
   ],
-  "catalysts_upcoming": [],
+  "catalysts_upcoming": [
+    "Actual delivery against Q3 revenue$44.6\u201345.8bn guidance with profitable cash conversion would support continued demand.",
+    "Comparable cash exceeding capex with moderating inventory days would strengthen internally funded growth."
+  ],
   "risk_assessment": {
     "correlation_notes": [
       "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 56.5% over available price history. Projected worst case (2-sigma): ~78.4% from current $446.57.",
+    "max_drawdown_scenario": "Historical max drawdown: 56.5% over available price history. Projected worst case (2-sigma): ~66.1% from current $482.30.",
     "risk_reward_ratio": null
   },
   "action_plan": {
-    "entry_limit": 427.18,
-    "entry_rationale": "Buy-the-dip to SMA-20 support near $427.18",
-    "stop_loss": 406.15,
-    "stop_rationale": "2x ATR-14 ($10.52) below entry \u2014 invalidates the setup",
-    "take_profit_1": 451.28,
-    "take_profit_2": 513.56,
+    "entry_limit": 445.85,
+    "entry_rationale": "Buy-the-dip to SMA-20 support near $445.85",
+    "stop_loss": 425.6,
+    "stop_rationale": "2x ATR-14 ($10.12) below entry \u2014 invalidates the setup",
+    "take_profit_1": 486.84,
+    "take_profit_2": 554.64,
     "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
     "horizon": "swing (2-8 weeks)",
     "note": null
@@ -38,29 +41,25 @@
   "research_verdict": {
     "ticker": "TSM",
     "judged_view": "buy",
-    "confidence": "low",
-    "thesis": "The snapshot reports 50.8% operating margin, 44.6% net margin, and FCF equal to about 26.1% of revenue; price remains above both moving averages with a strong 252-bar return. The 60-bar return is slightly negative and financial currency/period labels are absent, so the buy view is moderate-confidence.",
+    "confidence": "medium",
+    "thesis": "TSMC supports a profitable foundry-growth purchase through 36% revenue growth, 60.3% operating margin and internally funded investment. The bull adds actual Q2 FCF growth to NT$287.36bn, independently supporting owner-cash participation beyond investment gains. Estimated 22x forward earnings has substantive operating support, while margin normalization, inventory and Taiwan exposure keep conviction bounded rather than serving as automatic vetoes.",
     "winning_side": "bull",
-    "strongest_counterexample": "A close above the observed 60-bar high of $479.00 with later dated results confirming demand would make the neutral stance too cautious.",
+    "strongest_counterexample": "Inventory days rose to 87, guided operating margin falls to 56-58%, and Taiwan concentration cannot be diversified away by NT$2,486.33bn liquid surplus; overseas fab returns may disappoint even with financially funded expansion.",
     "invalidation_conditions": [
-      "A close above the observed 60-bar high of $479.00 with later dated results confirming demand would make the neutral stance too cautious."
+      "Reported operating margin below the prior comparable 49.6% with year-on-year revenue decline would invalidate the operating-improvement basis.",
+      "Comparable H1 CFO no longer exceeding capex, from NT$635.576bn positive cash after capex, would undermine the internally funded capacity thesis."
     ],
-    "evidence_gaps": [
-      "Financial statement period/availability dates are absent.",
-      "No issuer-specific macro or geopolitical snapshot is supplied.",
-      "Dated analyst recommendations are not supplied."
-    ],
+    "evidence_gaps": [],
     "decisive_factors": [
-      "The snapshot reports 50.8% operating margin, 44.6% net margin, FCF/revenue of about 26.1%, and debt/equity of about 0.20. Absolute statement amounts have no currency label, and no trend or peer-relative valuation claim is made.",
-      "Price is above both moving averages and the 5/20/252-bar returns are positive, but the 60-bar return is slightly negative and RSI is firm. MACD is positive with ordinary volume, supporting a constructive but not uniform trend.",
-      "Statement period is not specified; no multi-period trend is inferred."
+      "Q2 FCF increased from NT$199.85bn; cash funding is observed and not reliant on Vanguard gains.",
+      "Prospective margin normalization need not return profitability to the prior-year level, but guidance is not achieved performance."
     ]
   },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
     "sentiment": "neutral",
-    "technical": "buy",
-    "macro": "neutral"
+    "technical": "neutral",
+    "macro": "buy"
   },
   "synthesized_signal": "buy",
   "signal_gate_reasons": [],

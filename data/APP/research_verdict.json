@@ -1,21 +1,18 @@
 {
   "ticker": "APP",
-  "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Neutral: the single financial snapshot is strongly profitable, but elevated debt/equity conflicts with growth-warning headlines and a deeply negative 60/252-bar price trend. The financial snapshot contains measured levels, but a single period cannot establish trends.",
-  "winning_side": "neither",
-  "strongest_counterexample": "Neutral: the single financial snapshot is strongly profitable, but elevated debt/equity conflicts with growth-warning headlines and a deeply negative 60/252-bar price trend. A later dated comparative filing or sustained price confirmation could change the ruling.",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "AppLovin has an evidence-supported operating-value purchase at 21.68x trailing earnings: revenue grew 53%, continuing profit 64%, and quarterly FCF reached $863.3m. The bull decisively answers cash and financing fragility with only $461.766m net debt; imperfect cash conversion does not erase substantial absolute cash. Platform concentration, exceptional margins and the severe chart decline restrict conviction and entry aggressiveness.",
+  "winning_side": "bull",
+  "strongest_counterexample": "At 77.68% operating margin, platform economics are unusually consequential; $2.171bn receivables and only 68.16% FCF-to-continuing-income conversion leave earnings vulnerable to weaker collection or margin durability.",
   "invalidation_conditions": [
-    "A sustained close above the observed 20-bar high of $338.34, accompanied by dated company results confirming client and revenue growth, would invalidate the near-term bearish thesis."
+    "In a comparable quarter, FCF-to-continuing-income conversion below the observed 68.16% while receivables exceed $2.171bn would undermine the cash-supported purchase.",
+    "Year-on-year continuing operating-income decline in two consecutive reported quarters would invalidate the current growth-led thesis."
   ],
-  "evidence_gaps": [
-    "Financial statement period/availability dates are absent.",
-    "No client, advertiser, revenue, or guidance data is supplied to adjudicate the attributed research claims.",
-    "Dated analyst recommendations are not supplied."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "The snapshot reports 75.8% operating margin, 60.8% net margin, and FCF $3.94B (71.9% of revenue), offset by debt/equity of 1.66. This is strong but single-period profitability evidence, not a growth trend.",
-    "Price remains well below SMA-50 and SMA-200 and the 60/252-bar returns are deeply negative, while the 20-bar return and MACD histogram improved. This can be an early bounce within a downtrend; evidence supports a bearish technical signal with medium confidence."
+    "Actual FCF is substantial relative to net debt; 21.68x trailing valuation supplies a basis independent of 13.29x forecast earnings.",
+    "No verified impairment in this envelope converts the selloff into proof of business failure."
   ],
   "pipeline_mode": "in-session"
 }

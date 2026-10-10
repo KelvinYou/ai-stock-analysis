@@ -1,63 +1,68 @@
 {
   "fundamentals": {
-    "signal": "sell",
+    "signal": "neutral",
     "confidence": "medium",
-    "pe_assessment": "As fetched 2026-09-24, P/E is 16.74 and forward P/E is 14.73; no peer benchmark is supplied.",
-    "margin_analysis": "Snapshot reports gross margin 24.0%, operating margin 11.7%, and net margin 7.0%; no trend is inferred.",
-    "debt_analysis": "Reported debt/equity is about 1.76. The snapshot does not include cash balances or debt maturities.",
-    "growth_outlook": "No growth rate is inferred from one snapshot. It reports revenue MYR 67.72B and net income MYR 4.77B.",
+    "pe_assessment": "Frozen October 6 snapshot: trailing P/E 16.83 x, forward P/E 14.59 x (vendor estimate), dividend yield 3.85% (vendor reported). Inference:earnings/debt/cash balance produces neutral; no unverified utility fair value.",
+    "margin_analysis": "Q2revenue RM18.236 bn vs 16.835 bn but owners profit 888.8 m vs 1158.1 m; H1owners profit 1.986 bn vs 2.216 bn. Q2operating margin 11.44% vs 12.58%, with FX translation 2.1mloss vs 318.4mgain. H1operating profit 4.539 bn vs 4.439 bn indicates underlying operating resilience despite bottom line pressure.",
+    "debt_analysis": "Borrowings RM60.936 bn excluding leases 31.198 bn; cash/deposits 15.280 bn. H1CFO11.9525 bn minusPP&E7.2199 bn/investment property 21 m yields 4.7116 bn pre-financing FCF. Subtract finance cost 1.4172 bn, lease principal 789.2 m/lease interest 703.4 m gives 1.8018 bn, covering dividend 1.6322 bn narrowly. Deposits include restricted/longer tenor balances; cashflowC&E13.1731 bn.",
+    "growth_outlook": "Inference: disclosed cash generation supports large grid investment anddividends, but 16.83 x trailing earnings/3.85% reported yield must be weighed against profit decline, debt/leases and regulated returns. Strong CFO is not alone proof all capex earns its cost of capital.",
     "key_risks": [
-      "Negative reported FCF of MYR 439.7M (about -0.65% of revenue).",
-      "Debt/equity is about 1.76, without cash or maturity detail.",
-      "Price is below both SMA-50 and SMA-200 and near the bottom of its 52-week range."
+      "Large borrowings plus leases and heavy capital spend.",
+      "Bottom line earnings decline, FXvolatility and tariff/fuel adjustment timing; post financing dividend coverage narrow."
     ],
     "key_strengths": [
-      "Positive net income and a reported 3.81% dividend yield; no future payout is assumed.",
-      "Reported P/E is 16.74, without a peer comparison."
+      "CFO11.9525 bn coverscashPP&E and modest investment property spend.",
+      "H1operating profitgrew andliquidity/net current liabilities improved."
     ],
-    "summary": "Snapshot reports negative FCF of MYR 439.7M and debt/equity near 1.76, despite positive net income and 7.0% net margin. This aligns with weak technicals, but the single snapshot cannot establish persistence."
+    "summary": "Tenaga\u2019s full cash flow statement verifies funding capacity for investment anddividends, correcting the earlier extraction gap. Neutral/medium balances that cash strength against high lease-inclusive debt, profit decline and regulated return uncertainty at the frozen valuation."
   },
   "sentiment": {
-    "signal": "neutral",
-    "confidence": "low",
-    "news_tone": "stale and mixed",
-    "news_summary": "The newest supplied company headline is a 2026-05-30 fair-value story. A 2025-11-19 Reuters headline reported electricity-theft losses over a multi-year period, but the packet gives no current exposure or financial-period linkage.",
+    "signal": "sell",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "TNB August 27 Q2 report shows revenue rising to RM18.236 billion from RM16.835 billion but attributable earnings falling to RM888.8 million from RM1,158.1 million; H1 earnings also fell. Operating margin declined and FX translation shifted from a gain to a small loss; strong analyst buy counts contrast with earnings pressure, while tariff reconciliation is incomplete.",
     "key_themes": [
-      "Older valuation commentary; electricity-theft report from 2025; no recent operating headline"
+      "Revenue growth",
+      "Earnings decline",
+      "Currency effects"
     ],
     "notable_headlines": [
-      "2026-05-30 Simply Wall St.: How the Tenaga Nasional Berhad story is shifting with a higher fair value.",
-      "2025-11-19 Reuters: Malaysia\u2019s Tenaga Nasional incurs losses of more than $1 billion from crypto power theft."
+      "2026-08-27 | direct_issuer_document | TNB August 27 Q2 report shows revenue rising to RM18.236 billion from RM16.835 billion but attributable earnings falling to RM888.8 million from RM1,158.1 million; H1 earnings also fell. | https://www.tnb.com.my/assets/quarterly_results/Financial_Unaudited_Results_-_2QFY2026.pdf"
     ],
     "social_sentiment": null,
-    "summary": "The headline set is stale, and the 2025 Reuters item is not linked to a current reporting period. Sentiment remains neutral/low."
+    "summary": "TNB August 27 Q2 report shows revenue rising to RM18.236 billion from RM16.835 billion but attributable earnings falling to RM888.8 million from RM1,158.1 million; H1 earnings also fell. Operating margin declined and FX translation shifted from a gain to a small loss; strong analyst buy counts contrast with earnings pressure, while tariff reconciliation is incomplete."
   },
   "technical": {
     "signal": "sell",
     "confidence": "medium",
-    "trend": "Close MYR 13.06 on 2026-09-24 was 7.40% below SMA-50 and 6.77% below SMA-200; 20/60-bar returns were -8.67%/-8.03%, and 252-bar return +1.15%.",
-    "rsi_14": 28.7671,
-    "rsi_assessment": "RSI-14 at 28.77 is below 30, an oversold reading but not a confirmed reversal.",
-    "macd_assessment": "MACD histogram was -0.0447, still negative.",
-    "volume_assessment": "Latest volume was 0.78x its 20-bar average, so the decline had no above-average turnover confirmation on the latest bar.",
+    "trend": "As of 2026-10-06 close 12.9000, price is below by 6.95% versus SMA-50 13.8630 and below by 7.99% versus SMA-200 14.0195. Observed 5/20/60-bar returns are 1.42%/-6.79%/-9.79%. ATR-14 is 0.2643; Bollinger lower/middle/upper are 12.4716/13.1806/13.8896, with band position 0.3021. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 35.9644,
+    "rsi_assessment": "RSI-14 is 35.9644, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -0.2820, signal line -0.3047, histogram 0.0227: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
+    "volume_assessment": "Last completed-session volume 6,601,000 versus 20-bar average 8,574,930, ratio 0.7698. Below-average turnover supplies no strong participation confirmation. Price is 13.42% below the observed 52-week high; proximity is context, not a standalone signal.",
     "support_levels": [
-      12.8
+      12.72
     ],
     "resistance_levels": [
-      14.44,
+      13.94,
       14.8
     ],
-    "summary": "Price is below both moving averages with negative 20/60-bar returns, RSI below 30, and negative MACD. The nearly flat 252-bar return and below-average latest volume temper but do not reverse the bearish trend."
+    "summary": "Price is below both major averages after negative 20- and 60-bar returns, while RSI remains weak. Positive MACD histogram and a modest five-bar rebound soften the bearish view but lack volume confirmation and have not repaired the trend."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "low",
-    "fed_impact": "Official macro context says Bank Negara Malaysia held OPR at 2.75% on 2026-09-03. Source: https://www.bnm.gov.my/-/monetary-policy-statement-03092026. The ticker packet has no issuer-specific rate-sensitivity data, so no company impact is assigned.",
-    "interest_rate_outlook": "The supplied context reports the OPR decision only; no forward rate path is provided.",
-    "fx_impact": null,
-    "sector_macro_factors": [],
-    "geopolitical_risks": [],
-    "summary": "BNM held OPR at 2.75% as of 2026-09-03. Without issuer-specific sensitivity evidence, the macro signal stays neutral/low; USD/MYR is absent and no FX direction is inferred."
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "sector_macro_factors": [
+      "Observed: BNM cites ongoing investment and strong technology-related spending. Inference: these can support electricity demand, but no data-center load forecast is supplied.",
+      "Inference: regulated tariffs and fuel-cost pass-through determine whether commodity pressure affects profits; power capex also creates financing sensitivity."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Tenaga has a plausible investment-driven electricity demand tailwind, with fuel and regulated-return mechanisms limiting a direct macro profit conclusion. No unverified tariff or data-center catalyst is incorporated."
   },
   "pipeline_mode": "in-session"
 }

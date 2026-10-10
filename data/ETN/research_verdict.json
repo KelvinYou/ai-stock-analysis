@@ -1,21 +1,18 @@
 {
   "ticker": "ETN",
   "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "The technical trend is positive, but sentiment and fundamentals remain unconfirmed: headlines do not verify orders and financial values lack period dates.",
-  "winning_side": "neither",
-  "strongest_counterexample": "The strongest contrary case is continued trend strength above SMA-20/50/200 with later results validating the power-demand theme.",
+  "confidence": "medium",
+  "thesis": "Eaton has genuine organic demand and improving FCF, but the bear carries the acquisition-return hurdle at an estimated 27.40x forward multiple. Debt more than doubled to $20.611bn against $0.695bn cash/investments, while segment margin fell 80bp and adjusted EPS excludes material costs. Profitable 14% organic growth and backlog expansion retain upside, so the observed tradeoff supports waiting rather than declaring acquisition failure.",
+  "winning_side": "bear",
+  "strongest_counterexample": "H1 FCF increased from $0.807bn to $1.188bn despite higher capex, and 23.1% segment margin remains profitable; the existing engine supplies a real base for successful integration.",
   "invalidation_conditions": [
-    "A close below SMA-50 would challenge the current trend.",
-    "A dated filing showing contraction in revenue or operating margin would weaken fundamental support."
+    "Comparable H1 FCF above $1.188bn with total debt below $20.611bn and segment margin at least 23.1% would weaken the acquisition-financing objection.",
+    "Comparable H1 FCF at or below zero or segment margin below the observed 23.1% with debt still rising would invalidate the retained funded-growth counterweight."
   ],
-  "evidence_gaps": [
-    "Eaton-specific AI/data-center order contribution is unavailable.",
-    "Financial fiscal period and availability date are missing."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "Price is above SMA-20/50/200 and returns are positive.",
-    "RSI is 67 and volume is below its 20-bar average."
+    "$11.079bn acquisition payments are separate investing spend, not recurring capex.",
+    "Organic growth is accepted, but a larger funding burden and nearly flat prospective GAAP EPS balance it; an undrawn revolver is not cash."
   ],
   "pipeline_mode": "in-session"
 }

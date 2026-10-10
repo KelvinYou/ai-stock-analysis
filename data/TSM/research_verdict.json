@@ -1,22 +1,18 @@
 {
   "ticker": "TSM",
   "judged_view": "buy",
-  "confidence": "low",
-  "thesis": "The snapshot reports 50.8% operating margin, 44.6% net margin, and FCF equal to about 26.1% of revenue; price remains above both moving averages with a strong 252-bar return. The 60-bar return is slightly negative and financial currency/period labels are absent, so the buy view is moderate-confidence.",
+  "confidence": "medium",
+  "thesis": "TSMC supports a profitable foundry-growth purchase through 36% revenue growth, 60.3% operating margin and internally funded investment. The bull adds actual Q2 FCF growth to NT$287.36bn, independently supporting owner-cash participation beyond investment gains. Estimated 22x forward earnings has substantive operating support, while margin normalization, inventory and Taiwan exposure keep conviction bounded rather than serving as automatic vetoes.",
   "winning_side": "bull",
-  "strongest_counterexample": "A close above the observed 60-bar high of $479.00 with later dated results confirming demand would make the neutral stance too cautious.",
+  "strongest_counterexample": "Inventory days rose to 87, guided operating margin falls to 56-58%, and Taiwan concentration cannot be diversified away by NT$2,486.33bn liquid surplus; overseas fab returns may disappoint even with financially funded expansion.",
   "invalidation_conditions": [
-    "A close above the observed 60-bar high of $479.00 with later dated results confirming demand would make the neutral stance too cautious."
+    "Reported operating margin below the prior comparable 49.6% with year-on-year revenue decline would invalidate the operating-improvement basis.",
+    "Comparable H1 CFO no longer exceeding capex, from NT$635.576bn positive cash after capex, would undermine the internally funded capacity thesis."
   ],
-  "evidence_gaps": [
-    "Financial statement period/availability dates are absent.",
-    "No issuer-specific macro or geopolitical snapshot is supplied.",
-    "Dated analyst recommendations are not supplied."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "The snapshot reports 50.8% operating margin, 44.6% net margin, FCF/revenue of about 26.1%, and debt/equity of about 0.20. Absolute statement amounts have no currency label, and no trend or peer-relative valuation claim is made.",
-    "Price is above both moving averages and the 5/20/252-bar returns are positive, but the 60-bar return is slightly negative and RSI is firm. MACD is positive with ordinary volume, supporting a constructive but not uniform trend.",
-    "Statement period is not specified; no multi-period trend is inferred."
+    "Q2 FCF increased from NT$199.85bn; cash funding is observed and not reliant on Vanguard gains.",
+    "Prospective margin normalization need not return profitability to the prior-year level, but guidance is not achieved performance."
   ],
   "pipeline_mode": "in-session"
 }

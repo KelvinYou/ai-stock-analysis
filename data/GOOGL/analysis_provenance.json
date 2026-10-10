@@ -1,0 +1,171 @@
+{
+  "symbol": "GOOGL",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "6ccf1137d80f085a1261e26a37de67b6140fdd73057b95c8b8d3e8c801a0f5bb",
+    "price_history.csv": "0a97a929f534e2629b443bbdafde886c6db5869766ca4bb3151e825e50543061",
+    "indicators.json": "8b9271c21d3bb1dd3200a61d7839658a7bd139b275225ff71d0f990175f0f7ed",
+    "fundamentals.json": "45288ed10cbb1384e5cc628b53128e9dbaf750767392e199e5e1f57688dba9c1"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "GOOGL",
+      "analysis_date": "2026-10-07",
+      "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "sources": [
+        {
+          "title": "Alphabet Inc. latest observed issuer financial/fund disclosure",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+          "publication_date": "2026-07-22",
+          "reporting_period": "Q2 ended 2026-06-30",
+          "sections_reviewed": [
+            "Income statement",
+            "Balance sheet",
+            "Cash-flow statement",
+            "GAAP/non-GAAP reconciliation where present"
+          ]
+        }
+      ],
+      "observed_facts": {
+        "Q2_USD_bn": {
+          "revenue": 119.796,
+          "operating_income": 40.77,
+          "other_income": 97.983,
+          "CFO": 39.069,
+          "PPandE": 44.924,
+          "FCF": -5.855,
+          "Cloud_revenue": 24.768,
+          "Cloud_operating_income": 8.814
+        },
+        "H1_USD_bn": {
+          "CFO": 84.859,
+          "PPandE": 80.598
+        },
+        "TTM_USD_bn": {
+          "CFO": 185.675,
+          "PPandE": 132.402,
+          "FCF": 53.273
+        },
+        "June30_USD_bn": {
+          "cash": 55.911,
+          "marketable_securities": 186.563,
+          "long_debt": 98.165,
+          "operating_lease_liabilities": 14.591
+        },
+        "Q2_equity_capital_raise_USD_bn": 49.6
+      },
+      "derived_calculations": [
+        "Q2FCF=39.069-44.924=-5.855; H1=84.859-80.598=4.261; TTM=185.675-132.402=53.273 ($bn), periods not interchangeable.",
+        "Operating margin=40.770/119.796=34.03%; liquid assets less disclosed long-term debt=144.309 ($bn), not an all-in net-debt calculation."
+      ],
+      "frozen_valuation_inputs": {
+        "price_date": "2026-10-06",
+        "close": 347.68,
+        "vendor_pe": 17.383999,
+        "vendor_forward_pe": 23.068644,
+        "market_cap": 4252103868416.0,
+        "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/GOOGL/fundamentals.json"
+      },
+      "remaining_gaps": [
+        "Recurring TTM EPS after every investment/tax item is not supplied by the release; no fabricated normalised EPS.",
+        "Current debt embedded in other current liabilities is not separately disaggregated in release; long-term-debt comparison explicitly partial."
+      ],
+      "materiality_and_revision_reason": "Buy retained with stronger measured financial evidence, while previous trailing-P/E cheapness is explicitly rejected. Substantive growth/profitability offset capex pressure and dilution; future return remains conditional.",
+      "previous_role_signal": "buy",
+      "judgement": {
+        "signal": "buy",
+        "confidence": "medium"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "GOOGL",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/GOOGL/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 13,
+        "buy": 43,
+        "hold": 5,
+        "sell": 0,
+        "strongSell": 0
+      },
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+          "date": "2026-07-22",
+          "observed_facts": "Alphabet issuer earnings exhibit reports second-quarter revenue growth of 24%, Google Cloud growth of 82% and operating margin expansion to 34%.",
+          "negative_evidence_or_limitations": "Other income includes a $98 billion net gain predominantly from unrealized equity gains; headline net earnings are not recurring operating momentum."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "be77ee2726eb622bc9d40d6740612acb3f360e9c59210468d968c837709df997",
+    "sentiment": "e3446c00a702f9936ddba46c520af036c46565b881a2da397e2a82add2f61b5a",
+    "technical": "726ee186e3761e50e1bacc1936ee40645a412108cc558db9e4a27394c99ded55",
+    "macro": "479d61e56a9cf970c466855fd913d1cb6f81aa2f346818e2737af7d2094f9bca"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

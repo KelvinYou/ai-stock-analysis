@@ -2,60 +2,68 @@
   "fundamentals": {
     "signal": "neutral",
     "confidence": "medium",
-    "pe_assessment": "Reported P/E is 20.53 and forward P/E is 23.99; no peer benchmark or forecast assumptions are supplied.",
-    "margin_analysis": "The snapshot reports gross margin 50.3%, operating margin 11.2%, and net margin 10.8%; no trend is inferred.",
-    "debt_analysis": "Reported debt/equity is 0.37; cash and maturity information is absent.",
-    "growth_outlook": "One snapshot reports revenue $716.92B, net income $77.67B, and FCF $7.70B (1.1% of revenue). No growth rate is inferred; the low FCF-to-revenue level is a caution.",
+    "pe_assessment": "Vendor trailing20.23x / forward24.47x; Q2$53.4bn pretax nonoperating income largely Anthropic materially inflates GAAP EPS. Issuer TTM EPS$12.44 implies20.60x at$256.29 but is not recurring earning power; no invented tax-adjusted normalised EPS.",
+    "margin_analysis": "Operating margin27.461/200.606=13.69%; operating income+43%. AWS operating income$16.6bn versus$10.2bn supports real growth independently of investment marks.",
+    "debt_analysis": "Cash/securities$122.988bn versus long-term debt$128.894bn, up from$65.648bn; long-term leases$94.338bn separately. Q2CFO45.387 less netcapex53.076=-7.689bn FCF; TTM161.403-169.007=-7.604bn.",
+    "growth_outlook": "Revenue+20%, AWS+37%, operating income+43%. Operating demand is strong, but rising infrastructure cash demands and debt indicate that earnings growth has not yet translated to cash available to owners.",
     "key_risks": [
-      "FCF is modest relative to reported revenue in this snapshot.",
-      "No comparative periods or cash/debt maturity details are supplied."
+      "Negative TTMFCF and$63.246bn increase in long-term debt are material financing/reinvestment issues, despite ample liquidity.",
+      "Anthropic investment gain understates apparent P/E; multiyear AI utilisation/returns determine cash recovery."
     ],
     "key_strengths": [
-      "Positive net income and a debt/equity ratio below 0.4 in the snapshot."
+      "AWS/retail operating income growth is measurable and independent of nonoperating gains.",
+      "TTMCFO+33% and substantial liquidity support ability to invest through the cycle."
     ],
-    "summary": "The snapshot reports $716.92B revenue and $77.67B net income, but FCF is $7.70B (1.1% of revenue) and operating margin is 11.2%. With no comparative periods, this supports a mixed fundamental view."
+    "summary": "Amazon has a strong operating-growth thesis but a weaker demonstrated shareholder-cash thesis. Neutral reflects negative cash FCF, rising debt and distorted headline valuation rather than general uncertainty."
   },
   "sentiment": {
     "signal": "neutral",
-    "confidence": "low",
+    "confidence": "medium",
     "news_tone": "mixed",
-    "news_summary": "A 2026-09-24 Motley Fool headline says Amazon blocked Meta's AI shopping agent while Shopify welcomed it; the packet does not quantify commercial impact. Other data-center and AI headlines are sector-level rather than Amazon-specific. No dated analyst-recommendation evidence is included in the current packet.",
+    "news_summary": "Amazon reports second-quarter sales growth of 20%, AWS growth of 37% and operating income growth of 43%. Trailing free cash flow became a $7.6 billion outflow; net income includes $53.4 billion pre-tax other income mainly from Anthropic investments. Yahoo recommendations fetched 2026-10-07T11:50:29.607149, period 0m: strong buy 15, buy 42, hold 2, sell 0, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
     "key_themes": [
-      "AI shopping agents and platform control; data-center cost backdrop"
+      "AWS acceleration",
+      "Investment marks",
+      "Capital expenditure"
     ],
     "notable_headlines": [
-      "2026-09-24 Motley Fool: Amazon blocked Meta's AI shopping agent; Shopify welcomed it."
+      "2026-07-30 | issuer/issuer-hosted evidence | Amazon reports second-quarter sales growth of 20%, AWS growth of 37% and operating income growth of 43%. | https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx?mode=light"
     ],
     "social_sentiment": null,
-    "summary": "A 2026-09-24 Motley Fool headline says Amazon blocked Meta's AI shopping agent while Shopify welcomed it; the packet does not quantify commercial impact. Other data-center and AI headlines are sector-level rather than Amazon-specific. No dated analyst-recommendation evidence is included in the current packet."
+    "summary": "Amazon reports second-quarter sales growth of 20%, AWS growth of 37% and operating income growth of 43%. Trailing free cash flow became a $7.6 billion outflow; net income includes $53.4 billion pre-tax other income mainly from Anthropic investments."
   },
   "technical": {
     "signal": "neutral",
-    "confidence": "low",
-    "trend": "Mixed to weak near term: close $249.27 was 2.74% below SMA-50 but 3.59% above SMA-200; 20-bar return was -4.52%, while 60/252-bar returns were +3.80%/+9.51%.",
-    "rsi_14": null,
-    "rsi_assessment": "RSI-14 was 44.09, below midpoint but not oversold.",
-    "macd_assessment": "MACD histogram was -0.2884, consistent with weak recent momentum.",
-    "volume_assessment": "Latest volume was 1.26x the 20-bar average during a mixed short-term move; one session does not establish direction.",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 256.2900, price is below by 0.44% versus SMA-50 257.4276 and above by 6.04% versus SMA-200 241.6822. Observed 5/20/60-bar returns are 3.90%/-0.26%/3.63%. ATR-14 is 5.2757; Bollinger lower/middle/upper are 244.1253/251.2525/258.3797, with band position 0.8534. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 63.6604,
+    "rsi_assessment": "RSI-14 is 63.6604, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -1.3431, signal line -1.9446, histogram 0.6016: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
+    "volume_assessment": "Last completed-session volume 34,013,300 versus 20-bar average 35,838,725, ratio 0.9491. Below-average turnover supplies no strong participation confirmation. Price is 10.76% below the observed 52-week high; proximity is context, not a standalone signal.",
     "support_levels": [
-      244.3,
-      226.16
+      226.16,
+      244.3
     ],
     "resistance_levels": [
-      267.56,
+      259.49,
       287.2
     ],
-    "summary": "Price is below SMA-50 but remains above SMA-200; the 20-bar return and MACD are negative while longer supplied returns are positive. The evidence is mixed, with no clean directional confirmation."
+    "summary": "The recent rebound has positive MACD histogram and constructive RSI, but price is still marginally below SMA-50 while above SMA-200. Near-average volume and almost flat 20-bar returns leave the recovery incomplete rather than confirming a sustained breakout."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "low",
-    "fed_impact": "The supplied macro context says the Fed target range was 3.75%-4.00%, effective 2026-09-17, after a 25 bp increase announced 2026-09-16. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm. The ticker packet has no dated issuer-specific macro snapshot, so net company impact is undetermined.",
-    "interest_rate_outlook": "No forward rate path is supplied; no forecast is assigned.",
-    "fx_impact": null,
-    "sector_macro_factors": [],
-    "geopolitical_risks": [],
-    "summary": "Macro evidence is limited to the supplied Fed snapshot; no company-specific effect, FX direction, or forward policy view is inferred. Signal remains neutral with low confidence."
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: resilient US spending and robust capital investment coexist with higher Fed rates. Inference: retail activity and cloud demand may benefit, but capex funding and valuation face a higher hurdle.",
+      "Inference: energy and logistics costs can affect retail margins; broad tech spending does not establish AWS growth or a specific backlog conversion."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Amazon has supportive consumption and technology demand indications, balanced by financing, discount-rate and logistics pressures. Macro evidence does not establish a one-sided operating or valuation catalyst."
   },
   "pipeline_mode": "in-session"
 }

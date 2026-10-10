@@ -1,20 +1,20 @@
 {
   "ticker": "NFLX",
-  "judged_view": "sell",
+  "judged_view": "buy",
   "confidence": "medium",
-  "thesis": "The technical evidence is consistently weak below SMA-20/50/200 with negative returns across all windows, and dated headlines raise competition concerns; the reported financial snapshot is undated.",
-  "winning_side": "bear",
-  "strongest_counterexample": "The strongest counterexample is that the packet\u2019s positive margins/FCF could remain durable and the RSI of 25.42 may precede a mean-reversion bounce; no dated operating data confirms it.",
+  "thesis": "Netflix has an operating-and-cash ownership case at an estimated 18.04x forward reference, with 13% revenue growth, 33.4% operating margin and $1.525bn Q2 FCF. The bull establishes that positive cash already follows $5.109bn content spending, preventing future commitments from being charged again to the current cash measure. Manageable stated net debt supports the case, while lower cash conversion and fee-enhanced headline valuation limit conviction.",
+  "winning_side": "bull",
+  "strongest_counterexample": "Q2 FCF fell from $2.267bn and margin from 34.1%; $25.107bn future content commitments and repurchases above quarterly FCF increase return sensitivity, while the $2.8bn fee prevents treating annual cash or trailing earnings as wholly recurring.",
   "invalidation_conditions": [
-    "A close above SMA-50 would challenge the current downtrend thesis."
+    "Comparable Q2 FCF at or below zero after actual content spend and capex would invalidate demonstrated owner-cash generation.",
+    "Two consecutive quarters of year-on-year revenue decline with operating margin below 33.4% would falsify the profitable-growth thesis."
   ],
   "evidence_gaps": [
-    "No dated subscriber, engagement, or retention series is supplied.",
-    "Financial statement period and first-available date are absent."
+    "Exact cash-tax allocation associated with the termination fee is unavailable in the envelope, preventing an exact after-tax recurring H1 cash normalization."
   ],
   "decisive_factors": [
-    "Price is below SMA-20/50/200 and down 41.86% over 252 bars.",
-    "RSI is 25.42 and near the observed low, creating reversal risk."
+    "The termination fee is outside operating income and does not carry the recurring operating thesis.",
+    "Content costs already enter current cash; future commitments remain economically material without becoming all current debt."
   ],
   "pipeline_mode": "in-session"
 }

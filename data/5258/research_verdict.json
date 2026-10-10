@@ -1,23 +1,21 @@
 {
   "ticker": "5258",
-  "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Neutral balances attractive snapshot valuation and yield against a weak price trend and missing bank-specific risk evidence. The only dated headline concerns ownership, not current operating performance.",
-  "winning_side": "neither",
-  "strongest_counterexample": "A bull counterexample is P/E 8.28, positive reported FCF and an indicated 8.97% yield.",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Bank Islam has a supported income/value proposition at 8.20x trailing earnings and a reported 7.01% yield, backed by stable H1 profit and issuer-disclosed 17.8% total capital with 0.98% gross impaired financing. The bull correctly avoids requiring rapid earnings acceleration for income ownership. Missing detailed bank measures limit conviction and require follow-up, but do not erase the verified capital/asset-quality starting position.",
+  "winning_side": "bull",
+  "strongest_counterexample": "Financing grew 7.5% while H1 profit rose only 0.5%; absent CET1, liquidity and net financing margin detail leaves payout resilience incompletely assessed, and total capital is not CET1.",
   "invalidation_conditions": [
-    "A future dated filing confirming stable capital, asset quality and dividend coverage would strengthen the bull case.",
-    "A close below the observed 20/60-bar low would strengthen the technical bear case."
+    "Gross impaired financing above the observed 0.98% together with total capital below 17.8% in the next disclosure would undermine the resilience-led thesis.",
+    "Comparable H1 attributable profit below RM254.154m while funding grows slower than financing would weaken the maintained-income basis."
   ],
   "evidence_gaps": [
-    "No dated capital-adequacy, asset-quality or dividend-coverage data.",
-    "Financial snapshot lacks fiscal-period and availability dates.",
-    "No USD/MYR snapshot; undated recommendation buckets were excluded."
+    "Detailed CET1, liquidity and net financing margin supplement remains inaccessible.",
+    "Exact posting date of the official corporate-account disclosure was not retrieved; the June 30 reporting period is explicit."
   ],
   "decisive_factors": [
-    "Price is below SMA-50/200 and 20/252-bar returns are negative.",
-    "The dated news feed contains no recent operating update.",
-    "High indicated yield does not establish dividend safety."
+    "Stable earnings and bank-appropriate capital/credit metrics substantiate value beyond a low multiple.",
+    "The income proposition is conditional; vendor yield is not a promised payout and industrial FCF metrics do not apply."
   ],
   "pipeline_mode": "in-session"
 }

@@ -1,20 +1,20 @@
 {
   "ticker": "0215",
   "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Momentum and volume are strong, but price is overbought near its 52-week high and the current snapshot\u2019s high multiple/modest FCF is offset by conflicting earnings-quality headlines.",
-  "winning_side": "neither",
-  "strongest_counterexample": "The strongest counterexample is continued high-volume momentum backed by positive margins and a later confirmation that earnings convert to cash; the latter is not available in the packet.",
+  "confidence": "medium",
+  "thesis": "Solarvest shows improving project profitability but has not delivered per-share growth: Q1 EPS fell to 1.99 sen from 2.11 despite higher profit. The bear carries that distinction at 48x trailing earnings, with expansion outlays exceeding the dated simple FCF bridge. A verified RM2.371bn backlog and margin improvement preserve future conversion upside, while March funding data cannot stand in for June liquidity.",
+  "winning_side": "bear",
+  "strongest_counterexample": "Q1 revenue grew 13.2%, margin improved to 12.2% from 11.5%, and FY26 CFO turned positive; profitable project delivery could eventually outgrow dilution.",
   "invalidation_conditions": [
-    "A close below the observed 20-bar low would materially weaken the trend thesis."
+    "A comparable Q1 basic EPS above the prior 2.11 sen with margin at least the observed 12.2% would weaken the current per-share-growth objection.",
+    "Verified current statements showing positive cash after PP&E, intangibles, investment-property and associate/JV outlays would weaken the external-expansion-funding objection."
   ],
   "evidence_gaps": [
-    "Dated multi-period financial statements and cash-conversion history are missing.",
-    "The supplied earnings-quality headlines do not contain the underlying company evidence."
+    "Latest June 30 full balance-sheet/cash-flow attachment was inaccessible; available March figures are explicitly older."
   ],
   "decisive_factors": [
-    "All return windows are positive and price is above SMA-20/50/200.",
-    "RSI is 72.97, P/E is 43.33, and FCF is RM30.25M."
+    "Current profit growth and falling EPS are disclosed facts read differently, not a valuation-model gap.",
+    "FY26 RM386.821m equity-related funding and capital-intensive growth offset the positive orderbook."
   ],
   "pipeline_mode": "in-session"
 }

@@ -1,30 +1,31 @@
 {
   "ticker": "APP",
-  "date": "2026-09-25",
-  "data_as_of": "2026-09-23",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
   "overall_signal": "neutral",
   "conviction": {
     "score": 0.0,
     "signal_convergence": 0.5,
-    "explanation": "Neutral: the single financial snapshot is strongly profitable, but elevated debt/equity conflicts with growth-warning headlines and a deeply negative 60/252-bar price trend."
+    "explanation": "53% revenue growth, substantial actual FCF and modest net debt support value participation at 21.68x trailing earnings. The severe downtrend, extraordinary margin durability and receivables risk materially reduce aggressiveness, but do not negate realized cash."
   },
-  "executive_summary": "AppLovin has the weakest longer-horizon tape among this group: price is 33.21% below SMA-200, with 60/252-bar returns of -33.92%/-51.47%. Dated headlines attribute growth-ceiling concerns to Edgewater but also cite a Citi client-expansion view; the 20-bar bounce and positive MACD are not yet supported by operating figures, so the bearish signal remains low-to-medium confidence. The snapshot reports 75.8% operating margin, 60.8% net margin, and FCF $3.94B (71.9% of revenue), offset by debt/equity of 1.66. This is strong but single-period profitability evidence, not a growth trend.",
-  "bull_case": "The 20-bar return has turned positive, RSI is neutral, and MACD histogram is positive. A dated headline cites Citi's rapid-client-expansion view, which could challenge the slowdown narrative if later results verify it.",
-  "bear_case": "Price remains deeply below SMA-50/SMA-200 and long-horizon returns are sharply negative. Repeated dated headlines describe an Edgewater growth-ceiling concern, while the packet lacks operating data that could rebut it.",
+  "executive_summary": "AppLovin offers a conditional business-value purchase at the frozen trailing multiple of 21.68x. Revenue grew 53%, continuing profit 64%, and quarterly FCF of $863.3m exceeded the $461.8m net-debt balance; that flow/balance comparison demonstrates capacity rather than a repayment timetable.\n\nA 77.68% operating margin and $2.171bn receivables make platform economics and collections consequential. FCF conversion of about 68% is incomplete but substantial. The severe multi-horizon decline supplies no bottom confirmation, so the thesis fits patient operating ownership rather than a rebound bet.",
+  "bull_case": "Growth, cash-producing margins and low net leverage can provide attractive earnings participation without requiring the 13.29x forward estimate to be guaranteed.",
+  "bear_case": "Platform concentration or margin normalization could impair apparent value; receivables growth can weaken conversion, and falling prices may continue.",
   "key_uncertainties": [
-    "Whether the recent 20-bar bounce develops into a trend reversal.",
-    "Whether Edgewater's reported growth-ceiling view or Citi's client-expansion counterview is borne out by company data.",
-    "Dated financial statements and dated analyst recommendations are not supplied."
+    "Durability of advertising-platform economics and exceptional margins.",
+    "Receivable collections and continuing-income cash conversion.",
+    "Whether price weakness stabilizes; no verified impairment or bottom is inferred."
   ],
   "catalysts_upcoming": [
-    "Subsequent company reporting on client expansion, revenue growth, and cash generation that can verify or disprove the attributed research views; no event date is supplied."
+    "Next comparable earnings: continuing growth accompanied by stable collections and FCF conversion would validate the purchase.",
+    "Delivery against prospective Q3 revenue guidance of $2.055\u20132.085bn would support demand only if cash also converts."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "High beta (2.49) \u2014 price may amplify broad-market moves.",
+      "High beta (2.56) \u2014 price may amplify broad-market moves.",
       "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 91.9% over available price history. Projected worst case (2-sigma): ~136.8% from current $315.25.",
+    "max_drawdown_scenario": "Historical max drawdown: 91.9% over available price history. Projected worst case (2-sigma): ~118.5% from current $278.78.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -40,31 +41,30 @@
   },
   "research_verdict": {
     "ticker": "APP",
-    "judged_view": "neutral",
-    "confidence": "low",
-    "thesis": "Neutral: the single financial snapshot is strongly profitable, but elevated debt/equity conflicts with growth-warning headlines and a deeply negative 60/252-bar price trend. The financial snapshot contains measured levels, but a single period cannot establish trends.",
-    "winning_side": "neither",
-    "strongest_counterexample": "Neutral: the single financial snapshot is strongly profitable, but elevated debt/equity conflicts with growth-warning headlines and a deeply negative 60/252-bar price trend. A later dated comparative filing or sustained price confirmation could change the ruling.",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "AppLovin has an evidence-supported operating-value purchase at 21.68x trailing earnings: revenue grew 53%, continuing profit 64%, and quarterly FCF reached $863.3m. The bull decisively answers cash and financing fragility with only $461.766m net debt; imperfect cash conversion does not erase substantial absolute cash. Platform concentration, exceptional margins and the severe chart decline restrict conviction and entry aggressiveness.",
+    "winning_side": "bull",
+    "strongest_counterexample": "At 77.68% operating margin, platform economics are unusually consequential; $2.171bn receivables and only 68.16% FCF-to-continuing-income conversion leave earnings vulnerable to weaker collection or margin durability.",
     "invalidation_conditions": [
-      "A sustained close above the observed 20-bar high of $338.34, accompanied by dated company results confirming client and revenue growth, would invalidate the near-term bearish thesis."
+      "In a comparable quarter, FCF-to-continuing-income conversion below the observed 68.16% while receivables exceed $2.171bn would undermine the cash-supported purchase.",
+      "Year-on-year continuing operating-income decline in two consecutive reported quarters would invalidate the current growth-led thesis."
     ],
-    "evidence_gaps": [
-      "Financial statement period/availability dates are absent.",
-      "No client, advertiser, revenue, or guidance data is supplied to adjudicate the attributed research claims.",
-      "Dated analyst recommendations are not supplied."
-    ],
+    "evidence_gaps": [],
     "decisive_factors": [
-      "The snapshot reports 75.8% operating margin, 60.8% net margin, and FCF $3.94B (71.9% of revenue), offset by debt/equity of 1.66. This is strong but single-period profitability evidence, not a growth trend.",
-      "Price remains well below SMA-50 and SMA-200 and the 60/252-bar returns are deeply negative, while the 20-bar return and MACD histogram improved. This can be an early bounce within a downtrend; evidence supports a bearish technical signal with medium confidence."
+      "Actual FCF is substantial relative to net debt; 21.68x trailing valuation supplies a basis independent of 13.29x forecast earnings.",
+      "No verified impairment in this envelope converts the selloff into proof of business failure."
     ]
   },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
-    "sentiment": "sell",
+    "sentiment": "buy",
     "technical": "sell",
     "macro": "neutral"
   },
-  "synthesized_signal": "neutral",
-  "signal_gate_reasons": [],
+  "synthesized_signal": "buy",
+  "signal_gate_reasons": [
+    "synthesis_actionability_gate_failed"
+  ],
   "pipeline_mode": "in-session"
 }

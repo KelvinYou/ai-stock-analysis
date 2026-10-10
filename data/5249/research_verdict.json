@@ -1,22 +1,18 @@
 {
   "ticker": "5249",
-  "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Positive reported FCF and the 252-bar return conflict with a weak 5/20/60-bar decline; the single snapshot has no comparison period. Neither side establishes whether the pullback is temporary or reflects deterioration.",
-  "winning_side": "neither",
-  "strongest_counterexample": "A sustained close above SMA-50 with positive 20/60-bar returns would weaken the bear case; a new low below the observed MYR 3.32 20/60-bar low would strengthen it.",
+  "judged_view": "sell",
+  "confidence": "medium",
+  "thesis": "IOI Properties has improving operating cash, but the bear outweighs it with distorted headline valuation and financed expansion. Fair-value/remeasurement gains account for 51.31% of PBT, while borrowings rose approximately 29.4% and net debt reached RM21.818bn before leases. The 8.54x trailing multiple therefore supplies weak downside protection; speculative future asset conversion does not yet outweigh current financing exposure.",
+  "winning_side": "bear",
+  "strongest_counterexample": "CFO rose to RM2.391bn from RM1.060bn and left RM1.780bn after the specified property/land/equipment spend before acquisitions and interest, so the asset base has a real cash-producing engine.",
   "invalidation_conditions": [
-    "A sustained close above SMA-50 with positive 20/60-bar returns would weaken the bear case; a new low below the observed MYR 3.32 20/60-bar low would strengthen it."
+    "Comparable annual operating cash after specified asset spend, acquisition/deposit outlays and interest positive without net borrowing drawdowns would weaken the financing-dependence ruling.",
+    "Net debt below RM21.818bn alongside year-on-year profit growth excluding fair-value/JV remeasurement gains would undermine the leveraged-headline-value objection."
   ],
-  "evidence_gaps": [
-    "No statement-period label or comparative financial periods.",
-    "No recent company-specific news; supplied headline is dated 2025-11-28.",
-    "No dated recommendations or company-specific macro/FX snapshot."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "Price is below SMA-50/SMA-200 with negative 5/20/60-bar returns and negative MACD.",
-    "The current snapshot reports positive FCF and 48.5% net margin but no comparison period.",
-    "RSI 25.84 and volume 3.74x average raise near-term uncertainty."
+    "Improved CFO is accepted but expansion required RM3.258bn net borrowing drawdowns.",
+    "Estimated 17.71x forward earnings is materially less forgiving than gain-supported trailing cheapness."
   ],
   "pipeline_mode": "in-session"
 }

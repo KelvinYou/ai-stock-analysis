@@ -1,29 +1,30 @@
 {
   "ticker": "META",
-  "date": "2026-09-25",
-  "data_as_of": "2026-09-23",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
   "overall_signal": "neutral",
   "conviction": {
     "score": 0.0,
-    "signal_convergence": 0.5556,
-    "explanation": "Neutral: the financial snapshot is strong, but RSI 84.56 and an unusually extended short-term move make trend continuation risk/reward uncertain; product adoption is unquantified."
+    "signal_convergence": 0.0,
+    "explanation": "28% revenue growth and positive H1 FCF preserve recovery upside, but margin compression survives charge addbacks and H1 FCF fell 30.3%. Substantial future capex and lease demands make 21.17x forward earnings insufficient by itself to favor adding."
   },
-  "executive_summary": "Meta's short-term momentum is unusually strong, but the setup is extended: RSI is 84.56 and the price is over 21% above SMA-50, while its 252-bar return remains negative. Product headlines describe launches and trust questions, not sales evidence; the pipeline therefore avoids treating a momentum burst as a fundamental buy signal. The snapshot reports 41.4% operating margin, 30.1% net margin, FCF $46.11B (22.9% of revenue), and debt/equity 0.39. These support positive fundamentals at the observed level, but do not validate recent product adoption or trends.",
-  "bull_case": "Positive 5/20/60-bar returns, positive MACD, above-average volume, and price above SMA-50/SMA-200 show an active uptrend. The product headlines provide possible follow-through if later disclosures confirm adoption.",
-  "bear_case": "The RSI is overbought, price is far above SMA-50, and long-horizon return remains negative. No dated adoption, monetization, or statement evidence confirms that the product narrative supports this rapid repricing.",
+  "executive_summary": "Meta\u2019s advertising franchise is growing: impressions rose 14%, ad pricing 12% and revenue 28%; H1 CFO was$64.088bn. H1 FCF remained positive at$13.170bn, supporting an internally generated recovery resource.\n\nQ2 FCF was only$0.784bn and H1 FCF declined 30.3%. Illustrative legal/severance addbacks still leave margin below the prior 43%, while$130\u2013145bn capex guidance raises the productivity hurdle. Neutral reflects measured conversion pressure and slowing momentum; legal costs are not assumed to vanish.",
+  "bull_case": "Monetization growth and productive infrastructure could restore margins and cash available to owners at a more moderate forward multiple.",
+  "bear_case": "Investment, leases and continuing legal costs could absorb advertising gains and depress owner cash despite strong sales.",
   "key_uncertainties": [
-    "Whether the recent surge holds after an RSI reading of 84.56.",
-    "Whether Muse and smart glasses gain measurable adoption or revenue.",
-    "Financial statement periods and dated analyst recommendations are not supplied."
+    "Incremental capex productivity and cash recovery.",
+    "Recurring legal spending and comparable margins.",
+    "Lease demands beyond the partial liquid-assets/debt comparison."
   ],
   "catalysts_upcoming": [
-    "Any company-reported adoption or monetization for Muse or smart glasses; no quantified measure is in the packet."
+    "Next results: cash conversion recovering alongside impression/pricing growth would strengthen the recovery thesis.",
+    "Capital-spending and expense disclosures showing costs stabilize relative to monetization would improve owner economics."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 76.7% over available price history. Projected worst case (2-sigma): ~100.3% from current $744.10.",
+    "max_drawdown_scenario": "Historical max drawdown: 76.7% over available price history. Projected worst case (2-sigma): ~91.8% from current $738.88.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -35,32 +36,29 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.56). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "META",
     "judged_view": "neutral",
-    "confidence": "low",
-    "thesis": "Neutral: the financial snapshot is strong, but RSI 84.56 and an unusually extended short-term move make trend continuation risk/reward uncertain; product adoption is unquantified. The financial snapshot contains measured levels, but a single period cannot establish trends.",
-    "winning_side": "neither",
-    "strongest_counterexample": "Neutral: the financial snapshot is strong, but RSI 84.56 and an unusually extended short-term move make trend continuation risk/reward uncertain; product adoption is unquantified. A later dated comparative filing or sustained price confirmation could change the ruling.",
+    "confidence": "medium",
+    "thesis": "Meta has growing monetization but measured deterioration in post-investment cash and operating margins. The bear carries the return-conversion objection: H1 FCF fell 30.3%, Q2 FCF was only $0.784bn, and even illustrative charge-adjusted operating margin trails the prior 43%. Positive H1 cash and 28% revenue growth preserve a recovery possibility, so neutral reflects current offsets rather than a forecast of business failure.",
+    "winning_side": "bear",
+    "strongest_counterexample": "H1 CFO of $64.088bn and positive $13.170bn FCF demonstrate an internally cash-producing franchise; productive infrastructure could restore owner cash at the estimated 21.17x forward valuation.",
     "invalidation_conditions": [
-      "A sustained hold above the observed 20-bar high of $763.90 followed by dated adoption or monetization evidence would weaken the overextension concern."
+      "A subsequent comparable H1 FCF at least the prior-year $18.883bn, with operating margin recovering to the prior 43% on a consistently disclosed basis, would defeat the current conversion-restraint ruling.",
+      "Comparable H1 FCF at or below zero would invalidate the retained internally funded recovery counterweight."
     ],
-    "evidence_gaps": [
-      "Dated financial statement periods are absent.",
-      "No company-specific Muse/smart-glasses adoption or monetization data.",
-      "Dated analyst recommendations are not supplied."
-    ],
+    "evidence_gaps": [],
     "decisive_factors": [
-      "The snapshot reports 41.4% operating margin, 30.1% net margin, FCF $46.11B (22.9% of revenue), and debt/equity 0.39. These support positive fundamentals at the observed level, but do not validate recent product adoption or trends.",
-      "The last 5/20/60 bars show a sharp advance above both moving averages with positive MACD and above-average volume, but RSI is 84.56 and the 252-bar return remains slightly negative. Trend is positive while entry timing risk is high."
+      "Margin compression survives the illustrative legal/severance addback.",
+      "Prospective $130-145bn capex and separately identified leases raise the cash-return hurdle; legal costs are not assumed to disappear."
     ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "buy",
+    "fundamentals": "neutral",
     "sentiment": "neutral",
-    "technical": "buy",
+    "technical": "neutral",
     "macro": "neutral"
   },
   "synthesized_signal": "neutral",
