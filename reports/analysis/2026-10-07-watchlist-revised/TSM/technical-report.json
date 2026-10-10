@@ -1,0 +1,17 @@
+{
+  "signal": "neutral",
+  "confidence": "medium",
+  "trend": "As of 2026-10-06 close 482.3000, price is above by 12.84% versus SMA-50 427.4255 and above by 24.48% versus SMA-200 387.4561. Observed 5/20/60-bar returns are 5.55%/10.16%/14.71%. ATR-14 is 10.1243; Bollinger lower/middle/upper are 404.8505/445.8453/486.8400, with band position 0.9446. These describe current trend and range, not entry, stop or target recommendations.",
+  "rsi_14": 87.9793,
+  "rsi_assessment": "RSI-14 is 87.9793, overbought. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+  "macd_assessment": "MACD line 14.2112, signal line 10.3073, histogram 3.9039: positive short-term momentum. Interpret alongside the moving-average trend.",
+  "volume_assessment": "Last completed-session volume 8,326,000 versus 20-bar average 9,856,045, ratio 0.8448. Below-average turnover supplies no strong participation confirmation. Price is 1.06% below the observed 52-week high; proximity is context, not a standalone signal.",
+  "support_levels": [
+    371.7228,
+    411.4462
+  ],
+  "resistance_levels": [
+    487.47
+  ],
+  "summary": "Both major averages, positive MACD and positive multiweek returns support a strong uptrend. RSI near 88 and a close near the observed high show substantial extension, while below-average turnover leaves a fresh breakout unconfirmed."
+}

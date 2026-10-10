@@ -1,0 +1,154 @@
+{
+  "symbol": "6947",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "b1c24025d9db0a941d5015ef9f9ab171f37a638c7d958749b81f27fcf26c649f",
+    "price_history.csv": "62635896cb274b4b228efc7f8a3c2a20168e896856229136cdc4f53b8d92ed82",
+    "indicators.json": "6079a747f9a538ca4ea608eff1986c1b97640bc41d3500aaaff6a1297a200027",
+    "fundamentals.json": "1f989db2f2f8a2bad422c556176692429aac81cdebaadf21536ba9a69e5c6032"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "6947",
+      "name": "CDB",
+      "analysis_date": "2026-10-07",
+      "market_snapshot_date": "2026-10-06",
+      "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/6947/fundamentals.json",
+      "snapshot_valuation": {
+        "market_cap": 29446084608.0,
+        "pe_ratio": 19.307693,
+        "forward_pe": 16.276506,
+        "dividend_yield": 5.42
+      },
+      "sources": [
+        {
+          "title": "CDB latest observed issuer financial/fund disclosure",
+          "url": "https://corporate.celcomdigi.com/news/celcomdigi-delivers-resilient-q2-fy2026-performance-with-service-revenue-growth-and-strong-operational-efficiencies",
+          "publication_date": "2026-08-14",
+          "reporting_period": "Q2/H1 ended 2026-06-30",
+          "observed_facts": [
+            "Q2 service revenue RM2.730bn +1.4%; H1 RM5.427bn +1.5%.",
+            "H1 EBIT RM1.441bn +0.6%; Q2 PAT -7.7% due to lower EBIT and higher finance costs."
+          ],
+          "limitations": []
+        },
+        {
+          "url": "https://celcomdigi.listedcompany.com/newsroom/CelcomDigi_Bursa_Q2_2026.pdf",
+          "reporting_period": "Q2/H1 ended2026-06-30",
+          "publication_date": "2026-08-14",
+          "source_type": "issuer_primary",
+          "observed_facts": [
+            "Loans10288m+4173m;deposits/cash834m;statutoryCFO1222mvs1516m;capex341m;lease436m;dividend821m.",
+            "Interest288m andtax538m deductedinstatutoryCFO;additionalassociateinvestment530m."
+          ],
+          "limitations": []
+        }
+      ],
+      "observed_additional_facts": [
+        "Issuerpresentation https://celcomdigi.listedcompany.com/misc/InvestorPresentation/2Q2026_Investor_Pres.pdf normalizedQ2PAT437m+0.9%;normalisedEBIT754m+3.7%. Itsoperationscashflow2439m isnotstatutoryCFO1222m."
+      ],
+      "derived_math": [
+        "FCF1222-341=881m;afterlease881-436=445m;loans10288+4173=14461m."
+      ],
+      "gaps": [
+        "Totalborrowingsincludelease-related classification; useissuerborrowingslabel ratherthan inventing exclusivedebtbridge."
+      ],
+      "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+      "judgement": {
+        "signal": "neutral",
+        "confidence": "medium"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "6947",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/6947/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 2,
+        "buy": 11,
+        "hold": 5,
+        "sell": 1,
+        "strongSell": 1
+      },
+      "sources": [
+        {
+          "url": "https://corporate.celcomdigi.com/news/celcomdigi-delivers-resilient-q2-fy2026-performance-with-service-revenue-growth-and-strong-operational-efficiencies",
+          "date": "2026-08-14",
+          "observed_facts": "CelcomDigi reports second-quarter service revenue growth of 1.4% and year-to-date operating savings of RM141 million.",
+          "negative_evidence_or_limitations": "Quarterly profit after tax fell 7.7%, with lower EBIT and higher net finance costs; prepaid subscribers and revenue declined."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "2a481945f8777a175445212829753e1518395d56f5562f988c13024dace7869e",
+    "sentiment": "f1c2dde23f6fa10c7fcc03f81a07521c6558732a814456bda15f0cea3fc35f50",
+    "technical": "8213a32fc815ec477b547195fc1f28150c0e681c7f0aac4c6cdf3644ff087606",
+    "macro": "da40f6e3212aca2007cc28d0a54933fd623375b43415b3b8bb12fec899a8259d"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

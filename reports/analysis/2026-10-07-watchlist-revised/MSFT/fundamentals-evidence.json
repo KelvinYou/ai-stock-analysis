@@ -1,0 +1,70 @@
+{
+  "symbol": "MSFT",
+  "analysis_date": "2026-10-07",
+  "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "sources": [
+    {
+      "title": "Microsoft Corporation latest observed issuer financial/fund disclosure",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+      "publication_date": "2026-07-29",
+      "reporting_period": "Q4 FY2026 ended 2026-06-30",
+      "sections_reviewed": [
+        "Income statement",
+        "Balance sheet",
+        "Cash-flow statement",
+        "GAAP/non-GAAP reconciliation where present"
+      ]
+    }
+  ],
+  "observed_facts": {
+    "FY26_USD_bn": {
+      "revenue": 331.839,
+      "operating_income": 155.237,
+      "net_income": 133.749,
+      "OpenAI_adjusted_net_income": 128.786,
+      "CFO": 182.935,
+      "cash_PPandE": 115.948
+    },
+    "FY25_USD_bn": {
+      "CFO": 136.162,
+      "cash_PPandE": 64.551
+    },
+    "June30_USD_bn": {
+      "cash": 20.935,
+      "short_investments": 55.908,
+      "current_debt": 9.227,
+      "long_debt": 31.067,
+      "noncurrent_operating_leases": 16.532
+    },
+    "EPS": {
+      "FY_GAAP": 17.95,
+      "FY_OpenAI_adjusted": 17.28,
+      "Q4_GAAP": 4.81,
+      "Q4_OpenAI_adjusted": 4.74,
+      "Q4_separate_net_discrete_benefit": 0.27
+    }
+  },
+  "derived_calculations": [
+    "FY cash FCF=182.935-115.948=66.987; prior136.162-64.551=71.611 ($bn); growth-6.46%.",
+    "Net liquid-assets surplus=76.843-40.294=36.549 ($bn), leases excluded.",
+    "Price/FY adjusted EPS=529.30/17.28=30.63x; Q4 operating margin45.11%."
+  ],
+  "frozen_valuation_inputs": {
+    "price_date": "2026-10-06",
+    "close": 529.3,
+    "vendor_pe": 29.259258,
+    "vendor_forward_pe": 22.354725,
+    "market_cap": 3930341244928.0,
+    "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/MSFT/fundamentals.json"
+  },
+  "remaining_gaps": [
+    "Future lease/noncash equipment commitments require more detailed10-K schedule for an all-in owner-cash forecast; measured cash FCF explicitly narrower."
+  ],
+  "materiality_and_revision_reason": "Buy retained with actual debt/FCF reconciliation. Lower cash conversion is material but robust profits and liquidity outweigh it at the observed growth-supported valuation.",
+  "previous_role_signal": "buy",
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

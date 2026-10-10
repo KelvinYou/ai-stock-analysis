@@ -1,0 +1,50 @@
+{
+  "session-10bps": {
+    "total_return_pct": 0.03751140031396353,
+    "excess_return_pct": -0.16913505842568138,
+    "matched_exposure_excess_pct": 0.05897953708351124,
+    "max_drawdown_pct": -0.02970934634117847,
+    "n_trades": 9,
+    "effective_n": 6.0,
+    "deflated_sharpe": 0.5255541338437872,
+    "strict_hold_log_excess_ci_95": [
+      -0.0019849123906249076,
+      0.001322571986564254
+    ],
+    "mean_committed_principal_pct": 0.07489703884579953,
+    "promotion_ready": false,
+    "benchmark_return_pct": 0.2066464587396449
+  },
+  "session-20bps": {
+    "total_return_pct": 0.03567540561452261,
+    "excess_return_pct": -0.16897105312512228,
+    "matched_exposure_excess_pct": 0.058922817951444086,
+    "max_drawdown_pct": -0.03010211204643922,
+    "n_trades": 9,
+    "effective_n": 6.0,
+    "deflated_sharpe": 0.5091135748712206,
+    "strict_hold_log_excess_ci_95": [
+      -0.0019938101661150917,
+      0.001314931881569142
+    ],
+    "mean_committed_principal_pct": 0.07484314360743485,
+    "promotion_ready": false,
+    "benchmark_return_pct": 0.2046464587396449
+  },
+  "production-parity-10bps": {
+    "total_return_pct": 0.0,
+    "excess_return_pct": -0.2066464587396449,
+    "matched_exposure_excess_pct": null,
+    "max_drawdown_pct": 0.0,
+    "n_trades": 0,
+    "effective_n": null,
+    "deflated_sharpe": null,
+    "strict_hold_log_excess_ci_95": [
+      -0.0021220450835618197,
+      0.0011629174816506589
+    ],
+    "mean_committed_principal_pct": 0.0,
+    "promotion_ready": false,
+    "benchmark_return_pct": 0.2066464587396449
+  }
+}

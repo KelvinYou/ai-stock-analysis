@@ -1,0 +1,17 @@
+{
+  "signal": "buy",
+  "confidence": "medium",
+  "trend": "As of 2026-10-06 close 5.0000, price is above by 8.43% versus SMA-50 4.6112 and above by 14.6% versus SMA-200 4.3631. Observed 5/20/60-bar returns are 0.40%/8.93%/21.90%. ATR-14 is 0.1271; Bollinger lower/middle/upper are 4.6450/4.8990/5.1530, with band position 0.6988. These describe current trend and range, not entry, stop or target recommendations.",
+  "rsi_14": 66.2338,
+  "rsi_assessment": "RSI-14 is 66.2338, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+  "macd_assessment": "MACD line 0.1302, signal line 0.1271, histogram 0.0031: positive short-term momentum. Interpret alongside the moving-average trend.",
+  "volume_assessment": "Last completed-session volume 17,113,400 versus 20-bar average 25,857,455, ratio 0.6618. Below-average turnover supplies no strong participation confirmation. Price is 7.40% below the observed 52-week high; proximity is context, not a standalone signal.",
+  "support_levels": [
+    4.0621,
+    4.58
+  ],
+  "resistance_levels": [
+    5.28
+  ],
+  "summary": "Price is above both major averages and 20- and 60-bar returns support an uptrend, with positive MACD and RSI below the overbought threshold. The small histogram and below-average volume temper confidence in a new breakout near recent resistance."
+}

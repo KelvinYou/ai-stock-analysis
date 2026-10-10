@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "5225",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/5225/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 5,
+    "buy": 17,
+    "hold": 1,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://ihhmy.listedcompany.com/media_releases.html",
+      "date": "2026-09-28",
+      "observed_facts": "IHH issuer media archive records August 27 double-digit second-quarter growth, September 24 NTK Japan High Court appeal statement and September 28 Fortis forensic-audit statement.",
+      "negative_evidence_or_limitations": "Legal and governance updates counter an exclusively bullish healthcare-growth narrative; linked statements were inaccessible, so no legal conclusions are inferred."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

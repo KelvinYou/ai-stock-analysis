@@ -1,0 +1,54 @@
+{
+  "symbol": "5398",
+  "name": "GAMUDA",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/5398/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 30188564480.0,
+    "pe_ratio": 29.35294,
+    "forward_pe": 16.570364,
+    "dividend_yield": 2.0
+  },
+  "sources": [
+    {
+      "title": "GAMUDA latest observed issuer financial/fund disclosure",
+      "url": "https://gamuda.listedcompany.com/home.html/year/2026",
+      "publication_date": null,
+      "reporting_period": "Q4 FY2026 ended 2026-07-31",
+      "observed_facts": [
+        "Q4 revenue including JV share RM5.827bn; attributable profit RM349.701m. No YoY trend inferred from this page.",
+        "PBT RM497.033m; a consolidated margin cannot be matched to revenue including JV share."
+      ],
+      "limitations": []
+    },
+    {
+      "url": "https://gamuda.listedcompany.com/misc/qr/Q426briefing.pdf",
+      "reporting_period": "FY2026 ended2026-07-31",
+      "publication_date": "2026-09-29",
+      "source_type": "issuer_primary",
+      "observed_facts": [
+        "Issuer presentation revenue includingJV share18607.8m vs16366.3m; ownersprofit1052.3m vs1003.2m.",
+        "Borrowings14125.2m; cash/marketable securities4711.6m; netgearing72%; shortterm6340.5m.",
+        "CFO807.6m; investing-3400.7m; financing3389.0m; unbilledorderbook61.2bn."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "Full issuer briefing balance sheet/cashflow/segment/orderbook pages2-14 read; net gearing reduction and launch sales are management forecasts."
+  ],
+  "derived_math": [
+    "Netdebt14125.2-4711.6=9413.6m; netdebt/totalequity12995.4m=72.438% approximates issuer72%."
+  ],
+  "gaps": [
+    "Separate cash PP&E capex not isolated from investing summary; investing outflows are not called FCF."
+  ],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

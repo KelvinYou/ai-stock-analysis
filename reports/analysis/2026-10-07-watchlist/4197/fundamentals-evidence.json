@@ -1,0 +1,31 @@
+{
+  "symbol": "4197",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/4197/fundamentals.json",
+  "sources": [
+    {
+      "title": "SIME latest observed issuer financial/fund disclosure",
+      "url": "https://www.sime.com/investor-relations/financial-result/12893/",
+      "publication_date": "2026-08-27",
+      "reporting_period": "FY2026 ended 2026-06-30",
+      "observed_facts": [
+        "FY26 revenue RM69.5bn; net profit RM1.76bn. No prior-year comparison observed here.",
+        "Net-profit/revenue ratio approximately 2.53%, derived from rounded issuer headline figures.",
+        "FY26 debt and cash flow not extracted; leverage adequacy remains unresolved."
+      ],
+      "limitations": [
+        "Dated issuer release; fair-value model and independently matched current balance-sheet detail are incomplete."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

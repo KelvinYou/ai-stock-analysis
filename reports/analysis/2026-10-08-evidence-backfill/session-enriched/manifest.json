@@ -1,0 +1,611 @@
+{
+  "version": 4,
+  "pipeline_mode": "in-session",
+  "market": "US",
+  "tickers": [
+    "AVGO",
+    "NVDA",
+    "MSFT",
+    "TSM",
+    "V",
+    "UNH",
+    "ORCL",
+    "COST"
+  ],
+  "as_of_dates": [
+    "2025-09-01",
+    "2025-10-01",
+    "2025-10-31",
+    "2025-11-30",
+    "2025-12-30",
+    "2026-01-29",
+    "2026-02-28",
+    "2026-03-30",
+    "2026-04-29",
+    "2026-05-29",
+    "2026-06-28",
+    "2026-07-28"
+  ],
+  "horizon_days": 30,
+  "lookback_days": 365,
+  "created_at": "2026-10-08",
+  "predictions_file": "predictions.json",
+  "trials": [
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2025-09-01",
+      "packet": "packets/AVGO/2025-09-01.json",
+      "prediction": "predictions/AVGO/2025-09-01.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2025-10-01",
+      "packet": "packets/AVGO/2025-10-01.json",
+      "prediction": "predictions/AVGO/2025-10-01.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2025-10-31",
+      "packet": "packets/AVGO/2025-10-31.json",
+      "prediction": "predictions/AVGO/2025-10-31.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2025-11-30",
+      "packet": "packets/AVGO/2025-11-30.json",
+      "prediction": "predictions/AVGO/2025-11-30.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2025-12-30",
+      "packet": "packets/AVGO/2025-12-30.json",
+      "prediction": "predictions/AVGO/2025-12-30.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2026-01-29",
+      "packet": "packets/AVGO/2026-01-29.json",
+      "prediction": "predictions/AVGO/2026-01-29.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2026-02-28",
+      "packet": "packets/AVGO/2026-02-28.json",
+      "prediction": "predictions/AVGO/2026-02-28.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2026-03-30",
+      "packet": "packets/AVGO/2026-03-30.json",
+      "prediction": "predictions/AVGO/2026-03-30.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2026-04-29",
+      "packet": "packets/AVGO/2026-04-29.json",
+      "prediction": "predictions/AVGO/2026-04-29.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2026-05-29",
+      "packet": "packets/AVGO/2026-05-29.json",
+      "prediction": "predictions/AVGO/2026-05-29.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2026-06-28",
+      "packet": "packets/AVGO/2026-06-28.json",
+      "prediction": "predictions/AVGO/2026-06-28.json"
+    },
+    {
+      "ticker": "AVGO",
+      "as_of_date": "2026-07-28",
+      "packet": "packets/AVGO/2026-07-28.json",
+      "prediction": "predictions/AVGO/2026-07-28.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2025-09-01",
+      "packet": "packets/NVDA/2025-09-01.json",
+      "prediction": "predictions/NVDA/2025-09-01.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2025-10-01",
+      "packet": "packets/NVDA/2025-10-01.json",
+      "prediction": "predictions/NVDA/2025-10-01.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2025-10-31",
+      "packet": "packets/NVDA/2025-10-31.json",
+      "prediction": "predictions/NVDA/2025-10-31.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2025-11-30",
+      "packet": "packets/NVDA/2025-11-30.json",
+      "prediction": "predictions/NVDA/2025-11-30.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2025-12-30",
+      "packet": "packets/NVDA/2025-12-30.json",
+      "prediction": "predictions/NVDA/2025-12-30.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2026-01-29",
+      "packet": "packets/NVDA/2026-01-29.json",
+      "prediction": "predictions/NVDA/2026-01-29.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2026-02-28",
+      "packet": "packets/NVDA/2026-02-28.json",
+      "prediction": "predictions/NVDA/2026-02-28.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2026-03-30",
+      "packet": "packets/NVDA/2026-03-30.json",
+      "prediction": "predictions/NVDA/2026-03-30.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2026-04-29",
+      "packet": "packets/NVDA/2026-04-29.json",
+      "prediction": "predictions/NVDA/2026-04-29.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2026-05-29",
+      "packet": "packets/NVDA/2026-05-29.json",
+      "prediction": "predictions/NVDA/2026-05-29.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2026-06-28",
+      "packet": "packets/NVDA/2026-06-28.json",
+      "prediction": "predictions/NVDA/2026-06-28.json"
+    },
+    {
+      "ticker": "NVDA",
+      "as_of_date": "2026-07-28",
+      "packet": "packets/NVDA/2026-07-28.json",
+      "prediction": "predictions/NVDA/2026-07-28.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2025-09-01",
+      "packet": "packets/MSFT/2025-09-01.json",
+      "prediction": "predictions/MSFT/2025-09-01.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2025-10-01",
+      "packet": "packets/MSFT/2025-10-01.json",
+      "prediction": "predictions/MSFT/2025-10-01.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2025-10-31",
+      "packet": "packets/MSFT/2025-10-31.json",
+      "prediction": "predictions/MSFT/2025-10-31.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2025-11-30",
+      "packet": "packets/MSFT/2025-11-30.json",
+      "prediction": "predictions/MSFT/2025-11-30.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2025-12-30",
+      "packet": "packets/MSFT/2025-12-30.json",
+      "prediction": "predictions/MSFT/2025-12-30.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2026-01-29",
+      "packet": "packets/MSFT/2026-01-29.json",
+      "prediction": "predictions/MSFT/2026-01-29.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2026-02-28",
+      "packet": "packets/MSFT/2026-02-28.json",
+      "prediction": "predictions/MSFT/2026-02-28.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2026-03-30",
+      "packet": "packets/MSFT/2026-03-30.json",
+      "prediction": "predictions/MSFT/2026-03-30.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2026-04-29",
+      "packet": "packets/MSFT/2026-04-29.json",
+      "prediction": "predictions/MSFT/2026-04-29.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2026-05-29",
+      "packet": "packets/MSFT/2026-05-29.json",
+      "prediction": "predictions/MSFT/2026-05-29.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2026-06-28",
+      "packet": "packets/MSFT/2026-06-28.json",
+      "prediction": "predictions/MSFT/2026-06-28.json"
+    },
+    {
+      "ticker": "MSFT",
+      "as_of_date": "2026-07-28",
+      "packet": "packets/MSFT/2026-07-28.json",
+      "prediction": "predictions/MSFT/2026-07-28.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2025-09-01",
+      "packet": "packets/TSM/2025-09-01.json",
+      "prediction": "predictions/TSM/2025-09-01.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2025-10-01",
+      "packet": "packets/TSM/2025-10-01.json",
+      "prediction": "predictions/TSM/2025-10-01.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2025-10-31",
+      "packet": "packets/TSM/2025-10-31.json",
+      "prediction": "predictions/TSM/2025-10-31.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2025-11-30",
+      "packet": "packets/TSM/2025-11-30.json",
+      "prediction": "predictions/TSM/2025-11-30.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2025-12-30",
+      "packet": "packets/TSM/2025-12-30.json",
+      "prediction": "predictions/TSM/2025-12-30.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2026-01-29",
+      "packet": "packets/TSM/2026-01-29.json",
+      "prediction": "predictions/TSM/2026-01-29.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2026-02-28",
+      "packet": "packets/TSM/2026-02-28.json",
+      "prediction": "predictions/TSM/2026-02-28.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2026-03-30",
+      "packet": "packets/TSM/2026-03-30.json",
+      "prediction": "predictions/TSM/2026-03-30.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2026-04-29",
+      "packet": "packets/TSM/2026-04-29.json",
+      "prediction": "predictions/TSM/2026-04-29.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2026-05-29",
+      "packet": "packets/TSM/2026-05-29.json",
+      "prediction": "predictions/TSM/2026-05-29.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2026-06-28",
+      "packet": "packets/TSM/2026-06-28.json",
+      "prediction": "predictions/TSM/2026-06-28.json"
+    },
+    {
+      "ticker": "TSM",
+      "as_of_date": "2026-07-28",
+      "packet": "packets/TSM/2026-07-28.json",
+      "prediction": "predictions/TSM/2026-07-28.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2025-09-01",
+      "packet": "packets/V/2025-09-01.json",
+      "prediction": "predictions/V/2025-09-01.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2025-10-01",
+      "packet": "packets/V/2025-10-01.json",
+      "prediction": "predictions/V/2025-10-01.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2025-10-31",
+      "packet": "packets/V/2025-10-31.json",
+      "prediction": "predictions/V/2025-10-31.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2025-11-30",
+      "packet": "packets/V/2025-11-30.json",
+      "prediction": "predictions/V/2025-11-30.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2025-12-30",
+      "packet": "packets/V/2025-12-30.json",
+      "prediction": "predictions/V/2025-12-30.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2026-01-29",
+      "packet": "packets/V/2026-01-29.json",
+      "prediction": "predictions/V/2026-01-29.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2026-02-28",
+      "packet": "packets/V/2026-02-28.json",
+      "prediction": "predictions/V/2026-02-28.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2026-03-30",
+      "packet": "packets/V/2026-03-30.json",
+      "prediction": "predictions/V/2026-03-30.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2026-04-29",
+      "packet": "packets/V/2026-04-29.json",
+      "prediction": "predictions/V/2026-04-29.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2026-05-29",
+      "packet": "packets/V/2026-05-29.json",
+      "prediction": "predictions/V/2026-05-29.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2026-06-28",
+      "packet": "packets/V/2026-06-28.json",
+      "prediction": "predictions/V/2026-06-28.json"
+    },
+    {
+      "ticker": "V",
+      "as_of_date": "2026-07-28",
+      "packet": "packets/V/2026-07-28.json",
+      "prediction": "predictions/V/2026-07-28.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2025-09-01",
+      "packet": "packets/UNH/2025-09-01.json",
+      "prediction": "predictions/UNH/2025-09-01.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2025-10-01",
+      "packet": "packets/UNH/2025-10-01.json",
+      "prediction": "predictions/UNH/2025-10-01.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2025-10-31",
+      "packet": "packets/UNH/2025-10-31.json",
+      "prediction": "predictions/UNH/2025-10-31.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2025-11-30",
+      "packet": "packets/UNH/2025-11-30.json",
+      "prediction": "predictions/UNH/2025-11-30.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2025-12-30",
+      "packet": "packets/UNH/2025-12-30.json",
+      "prediction": "predictions/UNH/2025-12-30.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2026-01-29",
+      "packet": "packets/UNH/2026-01-29.json",
+      "prediction": "predictions/UNH/2026-01-29.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2026-02-28",
+      "packet": "packets/UNH/2026-02-28.json",
+      "prediction": "predictions/UNH/2026-02-28.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2026-03-30",
+      "packet": "packets/UNH/2026-03-30.json",
+      "prediction": "predictions/UNH/2026-03-30.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2026-04-29",
+      "packet": "packets/UNH/2026-04-29.json",
+      "prediction": "predictions/UNH/2026-04-29.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2026-05-29",
+      "packet": "packets/UNH/2026-05-29.json",
+      "prediction": "predictions/UNH/2026-05-29.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2026-06-28",
+      "packet": "packets/UNH/2026-06-28.json",
+      "prediction": "predictions/UNH/2026-06-28.json"
+    },
+    {
+      "ticker": "UNH",
+      "as_of_date": "2026-07-28",
+      "packet": "packets/UNH/2026-07-28.json",
+      "prediction": "predictions/UNH/2026-07-28.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2025-09-01",
+      "packet": "packets/ORCL/2025-09-01.json",
+      "prediction": "predictions/ORCL/2025-09-01.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2025-10-01",
+      "packet": "packets/ORCL/2025-10-01.json",
+      "prediction": "predictions/ORCL/2025-10-01.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2025-10-31",
+      "packet": "packets/ORCL/2025-10-31.json",
+      "prediction": "predictions/ORCL/2025-10-31.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2025-11-30",
+      "packet": "packets/ORCL/2025-11-30.json",
+      "prediction": "predictions/ORCL/2025-11-30.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2025-12-30",
+      "packet": "packets/ORCL/2025-12-30.json",
+      "prediction": "predictions/ORCL/2025-12-30.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2026-01-29",
+      "packet": "packets/ORCL/2026-01-29.json",
+      "prediction": "predictions/ORCL/2026-01-29.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2026-02-28",
+      "packet": "packets/ORCL/2026-02-28.json",
+      "prediction": "predictions/ORCL/2026-02-28.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2026-03-30",
+      "packet": "packets/ORCL/2026-03-30.json",
+      "prediction": "predictions/ORCL/2026-03-30.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2026-04-29",
+      "packet": "packets/ORCL/2026-04-29.json",
+      "prediction": "predictions/ORCL/2026-04-29.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2026-05-29",
+      "packet": "packets/ORCL/2026-05-29.json",
+      "prediction": "predictions/ORCL/2026-05-29.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2026-06-28",
+      "packet": "packets/ORCL/2026-06-28.json",
+      "prediction": "predictions/ORCL/2026-06-28.json"
+    },
+    {
+      "ticker": "ORCL",
+      "as_of_date": "2026-07-28",
+      "packet": "packets/ORCL/2026-07-28.json",
+      "prediction": "predictions/ORCL/2026-07-28.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2025-09-01",
+      "packet": "packets/COST/2025-09-01.json",
+      "prediction": "predictions/COST/2025-09-01.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2025-10-01",
+      "packet": "packets/COST/2025-10-01.json",
+      "prediction": "predictions/COST/2025-10-01.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2025-10-31",
+      "packet": "packets/COST/2025-10-31.json",
+      "prediction": "predictions/COST/2025-10-31.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2025-11-30",
+      "packet": "packets/COST/2025-11-30.json",
+      "prediction": "predictions/COST/2025-11-30.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2025-12-30",
+      "packet": "packets/COST/2025-12-30.json",
+      "prediction": "predictions/COST/2025-12-30.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2026-01-29",
+      "packet": "packets/COST/2026-01-29.json",
+      "prediction": "predictions/COST/2026-01-29.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2026-02-28",
+      "packet": "packets/COST/2026-02-28.json",
+      "prediction": "predictions/COST/2026-02-28.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2026-03-30",
+      "packet": "packets/COST/2026-03-30.json",
+      "prediction": "predictions/COST/2026-03-30.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2026-04-29",
+      "packet": "packets/COST/2026-04-29.json",
+      "prediction": "predictions/COST/2026-04-29.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2026-05-29",
+      "packet": "packets/COST/2026-05-29.json",
+      "prediction": "predictions/COST/2026-05-29.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2026-06-28",
+      "packet": "packets/COST/2026-06-28.json",
+      "prediction": "predictions/COST/2026-06-28.json"
+    },
+    {
+      "ticker": "COST",
+      "as_of_date": "2026-07-28",
+      "packet": "packets/COST/2026-07-28.json",
+      "prediction": "predictions/COST/2026-07-28.json"
+    }
+  ]
+}

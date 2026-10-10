@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "GOOGL",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/GOOGL/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 13,
+    "buy": 43,
+    "hold": 5,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+      "date": "2026-07-22",
+      "observed_facts": "Alphabet issuer earnings exhibit reports second-quarter revenue growth of 24%, Google Cloud growth of 82% and operating margin expansion to 34%.",
+      "negative_evidence_or_limitations": "Other income includes a $98 billion net gain predominantly from unrealized equity gains; headline net earnings are not recurring operating momentum."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

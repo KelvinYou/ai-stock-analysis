@@ -1,0 +1,68 @@
+{
+  "ticker": "NVDA",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "overall_signal": "buy",
+  "conviction": {
+    "score": 0.54,
+    "signal_convergence": 0.7273,
+    "explanation": "106% revenue and 124% operating-income growth with FCF remaining positive after heavy working-capital absorption support a cash-backed growth purchase. Large liquid surplus excludes equity marks. Concentrated collections, export exposure and RSI above 84 materially constrain chasing and prevent a stronger score."
+  },
+  "executive_summary": "NVIDIA supports a positive operating-and-cash thesis: operating income grew 124% at 66.24% margin, separate from investment gains. Q2 FCF of $21.341bn remained after receivable and inventory absorption; H1 FCF was $69.895bn and the liquid surplus over stated debt was $23.220bn excluding equities and leases.\n\nReceivables absorbed $22.346bn and inventory $5.784bn in Q2, making customer spending and collections material. The 15.14x forward multiple is a scenario rather than assured cheapness. The uptrend remains intact, but RSI above 84 near the high restricts confidence in immediate additions.",
+  "bull_case": "Sustained profitable compute demand can deliver growth with positive cash despite working-capital needs; liquidity provides measured resilience.",
+  "bear_case": "Customer concentration, collections or export restrictions can weaken cash and future earnings; extended prices leave little tactical comfort.",
+  "key_uncertainties": [
+    "Customer collection timing and durability of concentrated AI spending.",
+    "Product-specific export exposure and guarantees/commitments for downside scenarios.",
+    "Whether working-capital demands moderate as demand grows."
+  ],
+  "catalysts_upcoming": [
+    "Next comparable cash-flow statement: healthy FCF with less receivable absorption would improve conversion confidence.",
+    "Delivery against prospective $108bn Q3 revenue guidance excluding China DataCenter compute, accompanied by operating profitability, would support sustained demand."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (2.22) \u2014 price may amplify broad-market moves.",
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 66.3% over available price history. Projected worst case (2-sigma): ~74.1% from current $239.24.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": 224.88,
+    "entry_rationale": "Buy-the-dip to SMA-20 support near $224.88",
+    "stop_loss": 214.14,
+    "stop_rationale": "2x ATR-14 ($5.37) below entry \u2014 invalidates the setup",
+    "take_profit_1": 240.63,
+    "take_profit_2": 275.13,
+    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "NVDA",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "NVIDIA earns a growth purchase from 124% operating-income growth, 66.24% operating margin and $21.341bn quarterly FCF after substantial working-capital absorption. The bull answers accounting-only and funding-fragility objections with positive H1 cash and a $23.220bn liquid surplus excluding equity marks. Concentrated collections and the extended chart constrain conviction, while the 15.14x forward estimate is a scenario rather than guaranteed cheapness.",
+    "winning_side": "bull",
+    "strongest_counterexample": "Receivables absorbed $22.346bn and inventory $5.784bn in Q2; concentrated customer spending or impaired collection could reduce both realized cash and the earnings underpinning the forecast multiple.",
+    "invalidation_conditions": [
+      "A comparable quarter with FCF at or below zero while receivable cash absorption exceeds $22.346bn would invalidate demonstrated conversion resilience.",
+      "Year-on-year operating-income decline in two consecutive reported quarters would falsify the sustained profitable-demand thesis."
+    ],
+    "evidence_gaps": [],
+    "decisive_factors": [
+      "Cash remains positive after the specified receivable and inventory burden.",
+      "Operating growth excludes equity gains; liquid capacity does not count risky equity investments or erase export/customer concentration."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "buy"
+  },
+  "synthesized_signal": "buy",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

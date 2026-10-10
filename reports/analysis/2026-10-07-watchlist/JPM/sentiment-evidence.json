@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "JPM",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/JPM/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 4,
+    "buy": 9,
+    "hold": 11,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/6cded9fd-a164-4e6c-8cff-377357cf105c.pdf",
+      "date": "2026-07-14",
+      "observed_facts": "JPMorgan reports $21.2 billion net income, or $16.9 billion excluding significant items, with average loans up 10% and deposits up 7%.",
+      "negative_evidence_or_limitations": "Visa/equity gains materially boost headline EPS; credit costs were $2.5 billion. Current analyst ratings are relatively divided."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

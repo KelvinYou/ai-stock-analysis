@@ -1,0 +1,70 @@
+{
+  "ticker": "AMZN",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.0,
+    "explanation": "Growing AWS profitability and 33% TTM CFO growth are meaningful, but negative quarterly/TTM FCF and a$63.246bn long-term debt increase create an observed owner-cash deficit. Investment-gain-distorted trailing P/E and an incomplete rebound do not supply offsetting cheapness."
+  },
+  "executive_summary": "Amazon has strong operating demand: operating income increased 43%, AWS grew 37%, and AWS operating profit rose to$16.6bn from$10.2bn. TTM CFO of$161.403bn and$122.988bn liquidity support investment capacity.\n\nNet capex exceeded CFO, leaving negative$7.604bn TTM FCF while long-term debt rose to$128.894bn, with$94.338bn separate long-term leases. Anthropic-related gains distort trailing earnings, and 24.47x forward earnings is conditional. Neutral recognizes profitable demand while awaiting better cash conversion; liquidity alone does not establish attractive owner returns.",
+  "bull_case": "An expanding operating cash engine could eventually exceed capacity spending and restore owner cash without losing AWS growth.",
+  "bear_case": "Persistent investment absorption, debt and lease demands could keep cash returns weak despite earnings growth; headline trailing cheapness is misleading.",
+  "key_uncertainties": [
+    "Utilization and incremental returns on infrastructure.",
+    "Timing of cash recovery and further debt/lease needs.",
+    "Recurring earnings excluding investment gains without invented tax adjustments."
+  ],
+  "catalysts_upcoming": [
+    "Reported positive TTM FCF with stable or lower debt would reduce the financing objection.",
+    "Continued AWS operating-profit growth accompanied by slowing capex relative to CFO would support productive capacity."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (1.46) \u2014 price may amplify broad-market moves.",
+      "Sector: Consumer Cyclical \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 56.1% over available price history. Projected worst case (2-sigma): ~83.5% from current $256.29.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "AMZN",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Amazon has a strong operating business but a presently weaker owner-cash return proposition. The bear carries the financing objection: negative $7.604bn TTM FCF and a $63.246bn increase in long-term debt coexist with material leases, while investment gains distort trailing cheapness. Rising AWS profitability and $161.403bn TTM CFO make successful reinvestment plausible, so restraint is warranted without asserting investment failure.",
+    "winning_side": "bear",
+    "strongest_counterexample": "AWS operating income rose from $10.2bn to $16.6bn and TTM CFO grew 33%; this expanding internal funding engine and $122.988bn liquidity can support cash recovery before a clear backward-looking signal appears.",
+    "invalidation_conditions": [
+      "A reported TTM FCF above zero using the same net-PP&E definition, with long-term debt no higher than $128.894bn, would substantially defeat the present funding-gap objection.",
+      "AWS operating income below the observed $16.6bn in a comparable quarter alongside persistently negative TTM FCF would weaken the retained upside case."
+    ],
+    "evidence_gaps": [],
+    "decisive_factors": [
+      "Capex already exceeds operating cash and debt has increased materially.",
+      "Operating growth is genuine, but 20.23x trailing earnings includes exceptional investment gains; estimated 24.47x forward is conditional."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}
+
+synced to Supabase: analysis_runs/ff8bc24d-ac0d-48c7-88ab-620b5411e072

@@ -1,0 +1,66 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Refreshed vendor snapshot trailing P/E 24.34x, forward P/E 16.64x. Vendor earnings basis is not independently matched; no sector average or fair value inferred.",
+    "margin_analysis": "Operations earnings$8.0bn; reported net margin4.9%.",
+    "debt_analysis": "CFO$11.1bn,1.9x net income; debt/capital41.2%.",
+    "growth_outlook": "Revenue$112.0bn; adjusted FY26 EPS outlook raised to$19.50-$20.00.",
+    "key_risks": [
+      "Guidance remains conditional on medical utilisation, policy and cost trends (inference).",
+      "Snapshot financial statements lack fiscal_period_end/available_as_of and are not dated trend evidence."
+    ],
+    "key_strengths": [
+      "Raised outlook and positive cash conversion support recovery thesis."
+    ],
+    "summary": "UnitedHealth Group Incorporated: Raised outlook and positive cash conversion support recovery thesis. Fundamental view is buy with medium confidence; Guidance remains conditional on medical utilisation, policy and cost trends (inference)."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "UnitedHealth reports second-quarter revenue of $112 billion and raises full-year adjusted EPS outlook to $19.50-$20.00. Outlook is management guidance, not confirmed recovery for subsequent quarters; third-quarter results are scheduled October 13. Yahoo recommendations fetched 2026-10-07T11:50:31.350263, period 0m: strong buy 7, buy 15, hold 4, sell 0, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Raised outlook",
+      "Managed-care recovery"
+    ],
+    "notable_headlines": [
+      "2026-07-16 | issuer/issuer-hosted evidence | UnitedHealth reports second-quarter revenue of $112 billion and raises full-year adjusted EPS outlook to $19.50-$20.00. | https://www.unitedhealthgroup.com/newsroom/2026/2026-07-16-uhg-reports-second-quarter-2026-results.html"
+    ],
+    "social_sentiment": null,
+    "summary": "UnitedHealth reports second-quarter revenue of $112 billion and raises full-year adjusted EPS outlook to $19.50-$20.00. Outlook is management guidance, not confirmed recovery for subsequent quarters; third-quarter results are scheduled October 13."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 376.3200, price is below by 3.62% versus SMA-50 390.4515 and above by 6.59% versus SMA-200 353.0659. Observed 5/20/60-bar returns are 0.37%/-5.54%/-11.76%. ATR-14 is 7.5443; Bollinger lower/middle/upper are 364.7508/376.2714/387.7920, with band position 0.5021. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 51.219,
+    "rsi_assessment": "RSI-14 is 51.2190, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -5.0043, signal line -5.9216, histogram 0.9173: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
+    "volume_assessment": "Last completed-session volume 5,037,500 versus 20-bar average 4,996,365, ratio 1.0082. Above-average turnover provides some participation confirmation, not proof of institutional buying or selling. Price is 17.98% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      362.6
+    ],
+    "resistance_levels": [
+      404.0421,
+      458.7949
+    ],
+    "summary": "Price remains above SMA-200 but below SMA-50 after negative 20- and 60-bar returns. A positive MACD histogram, neutral RSI and roughly average turnover suggest stabilization, but the negative MACD line and unreclaimed SMA-50 leave recovery unconfirmed."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: policy rates increased and broad cost pressures persist. Inference: investment income and medical/labor expense may move in opposite directions; generic inflation is not a medical-cost trend measure.",
+      "No current reimbursement rule, medical utilization release or company-specific policy decision is verified in the macro snapshot."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "UnitedHealth cannot be classified as a macro defensive buy from generic growth and inflation data. Medical utilization and reimbursement evidence are missing, so the macro assessment is neutral with low confidence."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,72 @@
+{
+  "symbol": "AMZN",
+  "analysis_date": "2026-10-07",
+  "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "sources": [
+    {
+      "title": "Amazon.com, Inc. latest observed issuer financial/fund disclosure",
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx?mode=light",
+      "publication_date": "2026-07-30",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "sections_reviewed": [
+        "Income statement",
+        "Balance sheet",
+        "Cash-flow statement",
+        "GAAP/non-GAAP reconciliation where present"
+      ]
+    }
+  ],
+  "observed_facts": {
+    "Q2_USD_bn": {
+      "revenue": 200.606,
+      "operating_income": 27.461,
+      "net_income": 62.6,
+      "nonoperating_pretax_other_income": 53.4,
+      "CFO": 45.387,
+      "gross_PPandE": 54.208,
+      "sales_incentives": 1.132
+    },
+    "H1_USD_bn": {
+      "CFO": 71.419,
+      "gross_PPandE": 98.411,
+      "sales_incentives": 2.101
+    },
+    "TTM_USD_bn": {
+      "CFO": 161.403,
+      "net_PPandE": 169.007,
+      "FCF": -7.604
+    },
+    "June30_USD_bn": {
+      "cash": 78.213,
+      "marketable_securities": 44.775,
+      "long_debt": 128.894,
+      "long_lease_liabilities": 94.338
+    },
+    "December31_long_debt_USD_bn": 65.648,
+    "TTM_GAAP_EPS": 12.44
+  },
+  "derived_calculations": [
+    "Q2netcapex=54.208-1.132=53.076; FCF=45.387-53.076=-7.689 ($bn).",
+    "H1FCF=71.419-(98.411-2.101)=-24.891 ($bn).",
+    "TTMFCF=161.403-169.007=-7.604 ($bn); issuer formula excludes further lease-financing adjustment.",
+    "Liquid assets=78.213+44.775=122.988; long-debt increase=128.894-65.648=63.246 ($bn)."
+  ],
+  "frozen_valuation_inputs": {
+    "price_date": "2026-10-06",
+    "close": 256.29,
+    "vendor_pe": 20.228098,
+    "vendor_forward_pe": 24.465168,
+    "market_cap": 2764424347648.0,
+    "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/AMZN/fundamentals.json"
+  },
+  "remaining_gaps": [
+    "Future utilisation/cash return on ongoing AI capex cannot be resolved by a current earnings release; no fabricated recurring EPS or intrinsic price target."
+  ],
+  "materiality_and_revision_reason": "Neutral retained with substantive cash/financing reasons. Accessible CFO, capex and debt are now quantified; quarterly and TTM cash weakness is weighed against genuinely improving operating profitability.",
+  "previous_role_signal": "neutral",
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

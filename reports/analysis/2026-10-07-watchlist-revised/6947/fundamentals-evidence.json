@@ -1,0 +1,53 @@
+{
+  "symbol": "6947",
+  "name": "CDB",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/6947/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 29446084608.0,
+    "pe_ratio": 19.307693,
+    "forward_pe": 16.276506,
+    "dividend_yield": 5.42
+  },
+  "sources": [
+    {
+      "title": "CDB latest observed issuer financial/fund disclosure",
+      "url": "https://corporate.celcomdigi.com/news/celcomdigi-delivers-resilient-q2-fy2026-performance-with-service-revenue-growth-and-strong-operational-efficiencies",
+      "publication_date": "2026-08-14",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 service revenue RM2.730bn +1.4%; H1 RM5.427bn +1.5%.",
+        "H1 EBIT RM1.441bn +0.6%; Q2 PAT -7.7% due to lower EBIT and higher finance costs."
+      ],
+      "limitations": []
+    },
+    {
+      "url": "https://celcomdigi.listedcompany.com/newsroom/CelcomDigi_Bursa_Q2_2026.pdf",
+      "reporting_period": "Q2/H1 ended2026-06-30",
+      "publication_date": "2026-08-14",
+      "source_type": "issuer_primary",
+      "observed_facts": [
+        "Loans10288m+4173m;deposits/cash834m;statutoryCFO1222mvs1516m;capex341m;lease436m;dividend821m.",
+        "Interest288m andtax538m deductedinstatutoryCFO;additionalassociateinvestment530m."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "Issuerpresentation https://celcomdigi.listedcompany.com/misc/InvestorPresentation/2Q2026_Investor_Pres.pdf normalizedQ2PAT437m+0.9%;normalisedEBIT754m+3.7%. Itsoperationscashflow2439m isnotstatutoryCFO1222m."
+  ],
+  "derived_math": [
+    "FCF1222-341=881m;afterlease881-436=445m;loans10288+4173=14461m."
+  ],
+  "gaps": [
+    "Totalborrowingsincludelease-related classification; useissuerborrowingslabel ratherthan inventing exclusivedebtbridge."
+  ],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Frozen October 6 snapshot: trailing P/E 8.20 x, forward P/E 8.52 x (vendor estimate), dividend yield 7.01% (vendor reported). Inference: stable earnings, issuer bank metrics and modest multiple supportbuy; no fabricated peer sector benchmark.",
+    "margin_analysis": "Q2 owners profit RM139.122 m vs RM126.685 m (+9.8% derived); H1 RM254.154 m vs RM252.950 m (+0.5%). Issuer official corporate account reports H1 net income RM1.43 bn. Net financing margin is not independently extracted, so net income or a corporate profit/revenue ratio is not mislabeled as NFM.",
+    "debt_analysis": "Issuer account reports June 30 gross impaired financing ratio 0.98% and total capital ratio 17.8%, with total assets RM106.7 bn, gross financing RM77.9 bn +7.5% YoY and funding RM86.9 bn +5.1%. These verified issuer-published metrics support asset-quality/funding assessment; CET1 and liquidity coverage/NFM were not retrieved from the blocked full attachment.",
+    "growth_outlook": "Inference:8.20 x trailing earnings and 7.01% reported yield offer an income/value thesis supported by stable H1 earnings, low disclosed gross impaired ratio and positive financing/funding growth. Distribution level is not guaranteed, and capital/credit costs must remain stable.",
+    "key_risks": [
+      "H1 earnings growth modest despite financing growth; NFM and CET1 full supplement remain inaccessible.",
+      "Vendor yield does not guarantee future payout; corporate-account post is issuer-authored but less detailed than audited/full statements."
+    ],
+    "key_strengths": [
+      "Issuer disclosed gross impaired financing 0.98% and total capital 17.8%.",
+      "Positive financing/funding growth and stable earnings at 8.20 x trailing earnings."
+    ],
+    "summary": "Bank Islam/BIMB has a constructive income/value thesis at the frozen valuation, supported by stable earnings and issuer-confirmed asset quality and total capital. Buy/medium retains the genuine NFM/CET1 extraction gap and does not substitute industrial FCF metrics for bank analysis."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "mixed",
+    "news_summary": "Bank Islam August 26 issuer-authored Bursa summary shows Q2 attributable profit increasing to RM139.122 million from RM126.685 million, while H1 profit increased only 0.5%. The summary is accessed through a third-party mirror; original attachments and detailed supplement remain blocked, so the modest quarterly recovery does not establish broad improving sentiment.",
+    "key_themes": [
+      "Quarterly recovery",
+      "Flat half-year earnings",
+      "Hold-heavy analyst consensus"
+    ],
+    "notable_headlines": [
+      "2026-08-26 | issuer_authored_exchange_disclosure_mirror | Bank Islam August 26 issuer-authored Bursa summary shows Q2 attributable profit increasing to RM139.122 million from RM126.685 million, while H1 profit increased only 0.5%. | https://www.klsescreener.com/v2/announcements/view/11654065"
+    ],
+    "social_sentiment": null,
+    "summary": "Bank Islam August 26 issuer-authored Bursa summary shows Q2 attributable profit increasing to RM139.122 million from RM126.685 million, while H1 profit increased only 0.5%. The summary is accessed through a third-party mirror; original attachments and detailed supplement remain blocked, so the modest quarterly recovery does not establish broad improving sentiment."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "low",
+    "trend": "As of 2026-10-06 close 2.0600, price is below by 1.97% versus SMA-50 2.1014 and below by 8.5% versus SMA-200 2.2513. Observed 5/20/60-bar returns are 0.00%/-2.37%/-4.19%. ATR-14 is 0.0321; Bollinger lower/middle/upper are 2.0300/2.0710/2.1120, with band position 0.3658. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 41.1765,
+    "rsi_assessment": "RSI-14 is 41.1765, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -0.0129, signal line -0.0138, histogram 0.0009: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
+    "volume_assessment": "Last completed-session volume 202,400 versus 20-bar average 939,435, ratio 0.2154. Below-average turnover supplies no strong participation confirmation. Price is 17.71% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      2.0
+    ],
+    "resistance_levels": [
+      2.12,
+      2.22
+    ],
+    "summary": "The longer-term trend is weak below both major averages, but flat five-bar returns and a barely positive MACD histogram point to a pause rather than a fresh confirmed sell impulse. Exceptionally low volume leaves this range-bound setup without reliable directional confirmation."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "sector_macro_factors": [
+      "Observed: BNM maintained OPR at 2.75% amid resilient Malaysian activity. Inference: a stable domestic funding benchmark supports planning and potential loan demand.",
+      "Inference: financing-yield and funding-cost repricing can offset each other; margin direction and credit losses cannot be inferred from OPR alone. This is a generic transmission mechanism, not evidence of BIMB-specific repricing."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "BIMB (Bank Islam) has a stable policy backdrop and supportive domestic demand. The macro assessment remains neutral because financing yields and funding-cost repricing, rather than unchanged OPR alone, determine margin direction; no bank-specific exposure is assumed."
+  },
+  "pipeline_mode": "in-session"
+}

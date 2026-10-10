@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "MSFT",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/MSFT/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 14,
+    "buy": 41,
+    "hold": 1,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+      "date": "2026-07-29",
+      "observed_facts": "Microsoft reports fourth-quarter revenue growth of 18%, Azure growth of 43% and cloud revenue growth of 27%.",
+      "negative_evidence_or_limitations": "Related earnings-call disclosure says cloud gross margin declined year on year from AI infrastructure and mix; investment gains and discrete items benefited EPS."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

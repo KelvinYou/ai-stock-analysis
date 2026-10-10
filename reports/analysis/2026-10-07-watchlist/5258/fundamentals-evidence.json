@@ -1,0 +1,32 @@
+{
+  "symbol": "5258",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/5258/fundamentals.json",
+  "sources": [
+    {
+      "title": "BIMB latest observed issuer financial/fund disclosure",
+      "url": "https://www.klsescreener.com/v2/announcements/view/11654065",
+      "publication_date": "2026-08-26",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 attributable profit RM139.122m versus RM126.685m; H1 RM254.154m versus RM252.950m (+0.5%).",
+        "Corporate profit margins and FCF are unsuitable bank operating comparators; latest net financing margin not verified from primary supplement.",
+        "NAV/share RM3.59 versus RM3.56; latest CET1, liquidity and impaired-financing ratios not independently verified from accessible primary supplement."
+      ],
+      "limitations": [
+        "Issuer-authored Bursa summary accessible through a third-party mirror; original Bursa attachment and issuer detailed supplement blocked. Media/broker capital metrics were not promoted to verified primary facts."
+      ],
+      "source_type": "issuer_authored_exchange_disclosure_mirror"
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "low"
+  }
+}

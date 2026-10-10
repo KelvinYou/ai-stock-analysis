@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "properties": {
+    "overall_signal": {
+      "type": "string",
+      "enum": [
+        "strong_buy",
+        "buy",
+        "neutral",
+        "sell",
+        "strong_sell"
+      ]
+    },
+    "conviction": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "-1.0 (strong sell) to +1.0 (strong buy)"
+        },
+        "signal_convergence": {
+          "type": "number",
+          "description": "Optional legacy field; ignored and recomputed from analyst reports"
+        },
+        "explanation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "score",
+        "explanation"
+      ]
+    },
+    "executive_summary": {
+      "type": "string",
+      "description": "2-3 paragraph synthesis of the full analysis"
+    },
+    "bull_case": {
+      "type": "string"
+    },
+    "bear_case": {
+      "type": "string"
+    },
+    "key_uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "catalysts_upcoming": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "overall_signal",
+    "conviction",
+    "executive_summary",
+    "bull_case",
+    "bear_case",
+    "key_uncertainties",
+    "catalysts_upcoming"
+  ]
+}

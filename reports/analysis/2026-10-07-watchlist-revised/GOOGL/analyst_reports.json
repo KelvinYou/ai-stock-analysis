@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Vendor trailing17.38x is inflated-denominator cheapness: Q2 other income$97.983bn largely unrealised gains. Forward23.07x is a forecast, not verified recurring TTM. A buy rests on observed operating growth and cash capacity, not reported EPS$9.11.",
+    "margin_analysis": "Q2 operating margin40.770/119.796=34.03%, versus32%; operating income+30%. Investment gains are below operating income and are excluded from the operating thesis.",
+    "debt_analysis": "June cash/securities$242.474bn versus disclosed long-term debt$98.165bn (not all debt/lease obligations). Q2 CFO39.069 less capex44.924=-5.855bn FCF; H1FCF4.261bn, TTMFCF53.273bn. Equity capital raise49.6bn provides liquidity with dilution.",
+    "growth_outlook": "Q2 revenue+24%, Cloud+82%, operating income+30%; this independent operating growth supports upside even after discarding exceptional net-income growth.",
+    "key_risks": [
+      "AI capex and equity dilution are measurable costs; Q2 negative FCF cannot be dismissed as missing data.",
+      "Trailing P/E is distorted; preferred/common capital issuance and prospective ATM sales can dilute per-share return."
+    ],
+    "key_strengths": [
+      "Operating margin expansion and Cloud profitability support the recurring business.",
+      "Large liquidity and positive TTM FCF reduce near-term funding stress despite quarterly cash deficit."
+    ],
+    "summary": "Alphabet earns buy from rising operating profitability and balance-sheet capacity. Medium confidence reflects heavy reinvestment and dilution; unrealised gains are excluded from the return thesis."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Alphabet issuer earnings exhibit reports second-quarter revenue growth of 24%, Google Cloud growth of 82% and operating margin expansion to 34%. Other income includes a $98 billion net gain predominantly from unrealized equity gains; headline net earnings are not recurring operating momentum. Yahoo recommendations fetched 2026-10-07T11:50:29.518112, period 0m: strong buy 13, buy 43, hold 5, sell 0, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "AI cloud growth",
+      "Nonoperating investment gains"
+    ],
+    "notable_headlines": [
+      "2026-07-22 | issuer/issuer-hosted evidence | Alphabet issuer earnings exhibit reports second-quarter revenue growth of 24%, Google Cloud growth of 82% and operating margin expansion to 34%. | https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm"
+    ],
+    "social_sentiment": null,
+    "summary": "Alphabet issuer earnings exhibit reports second-quarter revenue growth of 24%, Google Cloud growth of 82% and operating margin expansion to 34%. Other income includes a $98 billion net gain predominantly from unrealized equity gains; headline net earnings are not recurring operating momentum."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 347.6800, price is above by 0.72% versus SMA-50 345.1985 and above by 2.56% versus SMA-200 339.0042. Observed 5/20/60-bar returns are 1.98%/2.75%/-1.31%. ATR-14 is 8.8643; Bollinger lower/middle/upper are 331.4981/343.4870/355.4759, with band position 0.6749. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 54.2364,
+    "rsi_assessment": "RSI-14 is 54.2364, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line 0.1643, signal line -0.2206, histogram 0.3849: positive short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 18,394,700 versus 20-bar average 27,267,720, ratio 0.6746. Below-average turnover supplies no strong participation confirmation. Price is 14.81% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      314.6977,
+      327.74
+    ],
+    "resistance_levels": [
+      364.17,
+      384.233
+    ],
+    "summary": "Price sits modestly above both major averages with a small positive MACD histogram and balanced RSI. Weak volume and a negative 60-bar return leave the recent rebound without convincing breakout confirmation."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: resilient US spending and strong tech-related activity. Inference: these can support advertising and cloud demand, while higher policy rates raise the return hurdle for capital expenditure.",
+      "Inference: advertising budgets remain cyclical, and global cost pressure can affect customers; no current antitrust ruling or other firm-specific policy event is inferred."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Alphabet has supportive broad demand evidence, but advertising cyclicality and the higher discount-rate hurdle provide offsets. Current macro data does not resolve company-specific returns on AI investment."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,78 @@
+{
+  "status": "FAIL",
+  "session_dir": "reports/analysis/2026-10-07-pipeline-backtest/session",
+  "gates": [
+    {
+      "name": "point-in-time packet integrity",
+      "status": "FAIL",
+      "observed": "fundamentals 55/96, sentiment 0/96",
+      "requirement": "technical, fundamentals, historical sentiment, and macro must be 100% covered"
+    },
+    {
+      "name": "point-in-time metadata",
+      "status": "PASS",
+      "observed": "96 packet(s) fail-closed; 0 versioned packet(s)",
+      "requirement": "use versioned historical metadata or omit unversioned company attributes"
+    },
+    {
+      "name": "historical news source",
+      "status": "BLOCKED",
+      "observed": "not_configured; SEC filing events are not a complete provider news feed",
+      "requirement": "provider-versioned historical news coverage, with publication and first-available clocks"
+    },
+    {
+      "name": "historical macro source",
+      "status": "PASS",
+      "observed": "dated replay source(s): FRED:DFF; single-rate observation only",
+      "requirement": "macro observations must carry observation and first-available dates"
+    },
+    {
+      "name": "production provider run",
+      "status": "BLOCKED",
+      "observed": "provider_run.json missing; current manifest is in-session",
+      "requirement": "authenticated provider invocation bound to exact predictions and score"
+    },
+    {
+      "name": "survivorship-safe universe",
+      "status": "BLOCKED",
+      "observed": "universe.json missing; current fixed ticker list is not enough",
+      "requirement": "hashed source extract and point-in-time membership for every trial"
+    },
+    {
+      "name": "scored terminal-return provenance",
+      "status": "BLOCKED",
+      "observed": "universe.json missing",
+      "requirement": "scored returns must be tied to the declared total-return data hash"
+    },
+    {
+      "name": "execution cost calibration",
+      "status": "BLOCKED",
+      "observed": "cost_model.json missing; bps is only an assumption",
+      "requirement": "externally calibrated spread, slippage, commission, and benchmark parity"
+    },
+    {
+      "name": "scored panel completeness",
+      "status": "PASS",
+      "observed": "96/96 complete",
+      "requirement": "one complete scored outcome per frozen (ticker, as-of) trial"
+    },
+    {
+      "name": "effective sample",
+      "status": "FAIL",
+      "observed": "invalid or missing overall portfolio effective_n=None",
+      "requirement": "effective_n_basis=portfolio_overlap_clustered_v1 and portfolio effective n >= 30"
+    },
+    {
+      "name": "strict long-hold benchmark",
+      "status": "FAIL",
+      "observed": "benchmark_beaten=False, promotion_ready=False",
+      "requirement": "same window, universe, timing, and costs; pipeline must beat strict hold"
+    },
+    {
+      "name": "paired strict-hold alpha interval",
+      "status": "FAIL",
+      "observed": "95% paired log-excess interval=[-0.0021, 0.0012]",
+      "requirement": "lower 95% time-block-bootstrap bound of paired log excess must be > 0"
+    }
+  ]
+}

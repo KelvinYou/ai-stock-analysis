@@ -1,0 +1,31 @@
+{
+  "symbol": "NFLX",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/NFLX/fundamentals.json",
+  "sources": [
+    {
+      "title": "Netflix, Inc. latest observed issuer financial/fund disclosure",
+      "url": "https://s22.q4cdn.com/959853165/files/doc_financials/2026/q2/FINAL-Q2-26-Shareholder-Letter.pdf",
+      "publication_date": "2026-07-16",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "observed_facts": [
+        "Revenue approximately$12.6bn +13%, FX-neutral+12%.",
+        "Operating margin33%; FY26 margin forecast31.5% remains forward-looking.",
+        "Latest debt and FCF not extracted; content obligations require separate analysis."
+      ],
+      "limitations": [
+        "Dated issuer release; fair-value model and independently matched current balance-sheet detail are incomplete."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

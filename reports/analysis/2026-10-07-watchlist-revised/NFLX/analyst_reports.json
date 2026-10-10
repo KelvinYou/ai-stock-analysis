@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Snapshot trailing/forward P/E 21.20/18.04; trailing earnings include a $2.8bn termination fee. Prospective $12.5bn FCF is also fee-enhanced, so neither is wholly recurring.",
+    "margin_analysis": "Q2 revenue $12.560bn grew 13%; operating margin 33.4% versus 34.1%. Q1 termination fee was below operating income, leaving the operating-margin thesis intact.",
+    "debt_analysis": "Gross debt approximately $14.4bn against cash $9.1bn; issuer net debt $5.244bn. Q2 FCF $1.525bn; H1 $6.619bn included the fee and associated cash-tax timing.",
+    "growth_outlook": "FY revenue guidance $51\u201351.4bn and operating margin 31.5% are prospective; advertising adds growth while content costs remain material.",
+    "key_risks": [
+      "Content commitments and competition",
+      "Fee-enhanced earnings/cash outlook",
+      "Repurchases above current-quarter FCF"
+    ],
+    "key_strengths": [
+      "Strong operating profitability",
+      "Manageable leverage and recurring positive cash flow"
+    ],
+    "summary": "Operating profitability and manageable leverage support buy at the frozen forward multiple. The termination fee is excluded from a recurring-growth claim, and content spending limits confidence."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "Netflix shareholder letter reports second-quarter revenue growth of 13% to $12.6 billion, operating margin of 33% and results in line with guidance. Full-year operating margin forecast remains 31.5%; performance in line with existing guidance is not a new upside surprise. Yahoo recommendations fetched 2026-10-07T11:50:31.682011, period 0m: strong buy 7, buy 28, hold 15, sell 1, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Streaming growth",
+      "Guidance delivery"
+    ],
+    "notable_headlines": [
+      "2026-07-16 | issuer/issuer-hosted evidence | Netflix shareholder letter reports second-quarter revenue growth of 13% to $12.6 billion, operating margin of 33% and results in line with guidance. | https://s22.q4cdn.com/959853165/files/doc_financials/2026/q2/FINAL-Q2-26-Shareholder-Letter.pdf"
+    ],
+    "social_sentiment": null,
+    "summary": "Netflix shareholder letter reports second-quarter revenue growth of 13% to $12.6 billion, operating margin of 33% and results in line with guidance. Full-year operating margin forecast remains 31.5%; performance in line with existing guidance is not a new upside surprise."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 68.6900, price is below by 8.99% versus SMA-50 75.4786 and below by 18.04% versus SMA-200 83.8046. Observed 5/20/60-bar returns are -2.29%/-10.52%/-6.96%. ATR-14 is 1.8014; Bollinger lower/middle/upper are 64.8500/72.5565/80.2630, with band position 0.2491. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 27.2674,
+    "rsi_assessment": "RSI-14 is 27.2674, oversold. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -2.5381, signal line -2.0492, histogram -0.4889: negative short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 35,052,500 versus 20-bar average 35,700,725, ratio 0.9818. Below-average turnover supplies no strong participation confirmation. Price is 44.99% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      65.08,
+      66.54
+    ],
+    "resistance_levels": [
+      81.02,
+      83.6
+    ],
+    "summary": "Price is below both major averages with negative MACD and falling 5-, 20- and 60-bar returns. Oversold RSI and proximity to the observed lows make rebounds possible, but almost-average volume and absent momentum reversal do not establish a bottom."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: Fed describes resilient spending alongside elevated inflation. Inference: subscriptions may retain demand support, while household budgets and content costs face pressure.",
+      "Inference: international currency translation and local subscription pricing may move differently; no directional USD trend is established."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Netflix faces a balanced spending, household budget and content-cost backdrop. The macro snapshot does not establish subscriber growth or international FX gains."
+  },
+  "pipeline_mode": "in-session"
+}

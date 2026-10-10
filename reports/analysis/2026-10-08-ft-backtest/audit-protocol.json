@@ -1,0 +1,16 @@
+{
+  "scope": "post_hoc_concentration_diagnostic_not_strategy_selection",
+  "source_hashes": {
+    "2026-10-07-pipeline-backtest/fundamentals-reports.json": "05a081c1cd192a91a9fcc9c8c4ef8a5c031ebafb3732d3ffa69180638555b66f",
+    "2026-10-07-pipeline-backtest/inputs-compact.json": "172135349ec7d8ca4907ab3aac9e61c42c16c8c6606ab19b4e8df7f70899e721",
+    "2026-10-08-ft-backtest/pipeline-10bps.json": "5aef7e3065421d4892303fce6508508d8969ed091c80698d9314fbae703852cd",
+    "2026-10-08-ft-backtest/signal-trace.json": "e28838e261f4dd3131920ae7552690fa9a040b1193decb17e49def1cb49a9555"
+  },
+  "script_sha256": "346d246d7ed88f1e23f041c0e0fa8602fe049f334ca462b5cfbbe2ad49c9b7cc",
+  "diagnostics": [
+    "technical with the sole differing ORCL buy removed; keep full universe",
+    "exclude ORCL issuer from all candidates and strict hold; retain other seven names and all dates"
+  ],
+  "cost_bps_per_side": 10,
+  "forbidden": "Do not replace primary results with sensitivity results or rescore immature forward outcomes."
+}

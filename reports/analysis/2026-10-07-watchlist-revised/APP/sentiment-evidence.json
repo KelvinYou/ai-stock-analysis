@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "APP",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/APP/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 7,
+    "buy": 20,
+    "hold": 6,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://investors.applovin.com/news/news-details/2026/AppLovin-Announces-Second-Quarter-2026-Financial-Results/",
+      "date": "2026-08-05",
+      "observed_facts": "AppLovin reports second-quarter revenue growth of 53%, continuing-operation profit growth of 64% and free cash flow of $863.3 million.",
+      "negative_evidence_or_limitations": "No independent dated negative catalyst was verified in this evidence set; positive operations do not resolve regulatory, platform or valuation risks."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

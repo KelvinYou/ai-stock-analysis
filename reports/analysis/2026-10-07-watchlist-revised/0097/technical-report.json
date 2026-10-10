@@ -1,0 +1,17 @@
+{
+  "signal": "neutral",
+  "confidence": "medium",
+  "trend": "As of 2026-10-06 close 11.1000, price is above by 18.59% versus SMA-50 9.3600 and above by 72.41% versus SMA-200 6.4382. Observed 5/20/60-bar returns are 11.00%/22.79%/50.61%. ATR-14 is 0.3143; Bollinger lower/middle/upper are 8.7867/9.8245/10.8623, with band position 1.1145. These describe current trend and range, not entry, stop or target recommendations.",
+  "rsi_14": 89.3701,
+  "rsi_assessment": "RSI-14 is 89.3701, overbought. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+  "macd_assessment": "MACD line 0.3967, signal line 0.2923, histogram 0.1044: positive short-term momentum. Interpret alongside the moving-average trend.",
+  "volume_assessment": "Last completed-session volume 3,828,100 versus 20-bar average 3,274,975, ratio 1.1689. Above-average turnover provides some participation confirmation, not proof of institutional buying or selling. Price is 0.00% below the observed 52-week high; proximity is context, not a standalone signal.",
+  "support_levels": [
+    7.18,
+    9.0
+  ],
+  "resistance_levels": [
+    11.1
+  ],
+  "summary": "The uptrend is strong and volume modestly confirms the move, but RSI near 89 and a close beyond the upper band leave little evidence of an orderly entry. At the observed 52-week high, continuation is possible; overbought readings alone do not establish a reversal."
+}

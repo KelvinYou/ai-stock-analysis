@@ -1,0 +1,61 @@
+{
+  "symbol": "VT",
+  "analysis_date": "2026-10-07",
+  "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "sources": [
+    {
+      "title": "Vanguard VT issuer fact sheet",
+      "url": "https://fund-docs.vanguard.com/F3141.pdf",
+      "publication_date": null,
+      "reporting_period": "2026-06-30",
+      "sections_reviewed": [
+        "ETF attributes",
+        "Market/sector allocations",
+        "Fee and holdings tables"
+      ]
+    },
+    {
+      "title": "Vanguard VT product disclosure",
+      "url": "https://advisors.vanguard.com/investments/products/new/vt/vanguard-total-world-stock-etf",
+      "publication_date": null,
+      "reporting_period": "2026-07-31 holdings; 2026-02-27 fee",
+      "sections_reviewed": [
+        "Issuer indexed product disclosures; direct page has dynamic rendering limitation"
+      ]
+    }
+  ],
+  "observed_facts": {
+    "June30_fact_sheet": {
+      "holdings": 10048,
+      "portfolio_pe": 22.8,
+      "roe_pct": 18.2,
+      "top10_weight_pct": 21.7,
+      "US_weight_pct": 61.9,
+      "technology_pct": 33.3,
+      "expense_pct": 0.06
+    },
+    "July31_issuer_product_page": {
+      "holdings": 10068,
+      "portfolio_pe": 20.8
+    }
+  },
+  "derived_calculations": [],
+  "frozen_valuation_inputs": {
+    "price_date": "2026-10-06",
+    "close": 160.7,
+    "vendor_pe": 20.766272,
+    "vendor_forward_pe": null,
+    "market_cap": null,
+    "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/VT/fundamentals.json"
+  },
+  "remaining_gaps": [
+    "Oct6 fund NAV premium/discount not independently verified; long-term expected return is scenario-dependent."
+  ],
+  "materiality_and_revision_reason": "ETF applicability is expected, not missing corporate evidence. Neutral unchanged because low costs/diversification justify core ownership but do not establish tactical alpha.",
+  "previous_role_signal": "neutral",
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "signal": "neutral",
+  "confidence": "medium",
+  "trend": "As of 2026-10-06 close 160.7000, price is above by 0.87% versus SMA-50 159.3210 and above by 6.65% versus SMA-200 150.6789. Observed 5/20/60-bar returns are 1.42%/0.12%/3.40%. ATR-14 is 1.4962; Bollinger lower/middle/upper are 156.7568/159.0421/161.3273, with band position 0.8627. These describe current trend and range, not entry, stop or target recommendations.",
+  "rsi_14": 64.1427,
+  "rsi_assessment": "RSI-14 is 64.1427, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+  "macd_assessment": "MACD line 0.0601, signal line -0.0341, histogram 0.0942: positive short-term momentum. Interpret alongside the moving-average trend.",
+  "volume_assessment": "Last completed-session volume 1,505,900 versus 20-bar average 2,742,635, ratio 0.5491. Below-average turnover supplies no strong participation confirmation. Price is 0.98% below the observed 52-week high; proximity is context, not a standalone signal.",
+  "support_levels": [
+    151.7402,
+    156.079
+  ],
+  "resistance_levels": [
+    161.55,
+    162.2931
+  ],
+  "summary": "The ETF remains above both major averages with a small positive MACD histogram and constructive RSI. Almost-flat 20-bar returns, proximity to the 52-week high and volume at only 0.55 times average leave a fresh momentum breakout unconfirmed."
+}

@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "6947",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/6947/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 2,
+    "buy": 11,
+    "hold": 5,
+    "sell": 1,
+    "strongSell": 1
+  },
+  "sources": [
+    {
+      "url": "https://corporate.celcomdigi.com/news/celcomdigi-delivers-resilient-q2-fy2026-performance-with-service-revenue-growth-and-strong-operational-efficiencies",
+      "date": "2026-08-14",
+      "observed_facts": "CelcomDigi reports second-quarter service revenue growth of 1.4% and year-to-date operating savings of RM141 million.",
+      "negative_evidence_or_limitations": "Quarterly profit after tax fell 7.7%, with lower EBIT and higher net finance costs; prepaid subscribers and revenue declined."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

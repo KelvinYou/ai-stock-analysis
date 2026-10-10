@@ -1,0 +1,31 @@
+{
+  "symbol": "0128",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/0128/fundamentals.json",
+  "sources": [
+    {
+      "title": "FRONTKN latest observed issuer financial/fund disclosure",
+      "url": "https://insage.com.my/ir/cmn/downloading.aspx?sFileName=26217000068817&sReportType=QR",
+      "publication_date": null,
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 revenue RM186.906m versus RM156.432m; owners profit RM47.723m versus RM33.489m. H1 revenue +30%, owners profit +40%.",
+        "Derived Q2 attributable-profit/revenue ratio 25.53%; other operating income RM11.217m versus RM3.573m means the profit increase is not all core revenue growth.",
+        "Current debt and FCF not independently extracted from rendered pages; vendor statements have no verified fiscal date."
+      ],
+      "limitations": [
+        "Issuer PDF has broken-font text encoding; financial statement page1 and performance commentary page12 visually inspected using PDFKit renders. Publication date not retrieved; fiscal comparison dates verified."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

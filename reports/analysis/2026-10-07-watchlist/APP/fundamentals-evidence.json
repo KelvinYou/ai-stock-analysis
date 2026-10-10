@@ -1,0 +1,31 @@
+{
+  "symbol": "APP",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/APP/fundamentals.json",
+  "sources": [
+    {
+      "title": "Applovin Corporation latest observed issuer financial/fund disclosure",
+      "url": "https://investors.applovin.com/news/news-details/2026/AppLovin-Announces-Second-Quarter-2026-Financial-Results/",
+      "publication_date": "2026-08-05",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "observed_facts": [
+        "Revenue$1.924bn +53%; continuing net income$1.267bn +64%.",
+        "Derived continuing net margin65.85%; adjusted EBITDA$1.614bn is a separate non-GAAP measure.",
+        "CFO$869.0m and FCF$863.3m; current leverage not independently extracted."
+      ],
+      "limitations": [
+        "Dated issuer release; fair-value model and independently matched current balance-sheet detail are incomplete."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Refreshed vendor snapshot trailing P/E 8.54x, forward P/E 17.71x. Vendor earnings basis is not independently matched; no sector average or fair value inferred.",
+    "margin_analysis": "FY PBT includes RM855.177m property fair-value gains and RM502.789m joint-venture remeasurement; reported EPS is not recurring earning power.",
+    "debt_analysis": "Borrowings RM25.353bn versus RM19.590bn; cash/deposits RM3.535bn. CFO RM2.391bn is positive, but acquisition outlays require separate cash-flow treatment.",
+    "growth_outlook": "FY revenue RM4.444bn versus RM3.062bn; owners profit RM2.154bn versus RM1.064bn. Q4 owners profit fell to RM523.111m from RM823.930m.",
+    "key_risks": [
+      "Growing debt and material noncash gains complicate apparent low P/E; latest FY expansion is acquisition-influenced.",
+      "Snapshot financial statements lack fiscal_period_end/available_as_of and are not dated trend evidence."
+    ],
+    "key_strengths": [
+      "Operating cash flow increased from RM1.060bn, accompanying revenue growth."
+    ],
+    "summary": "IOIPG: Operating cash flow increased from RM1.060bn, accompanying revenue growth. Fundamental view is neutral with medium confidence; Growing debt and material noncash gains complicate apparent low P/E; latest FY expansion is acquisition-influenced."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "IOIPG direct issuer FY2026 report released August 27 confirms annual revenue of RM4.444 billion and attributable earnings of RM2.154 billion, alongside a Q4 earnings decline. Full-year profits include RM855.177 million fair-value and RM502.789 million remeasurement gains, and borrowings increased; recurring operating sentiment is weaker than headline annual growth.",
+    "key_themes": [
+      "Property investment growth",
+      "Revaluation gains",
+      "Debt and quarterly comparability"
+    ],
+    "notable_headlines": [
+      "2026-08-27 | direct_issuer_document | IOIPG direct issuer FY2026 report released August 27 confirms annual revenue of RM4.444 billion and attributable earnings of RM2.154 billion, alongside a Q4 earnings decline. | https://files.ioiproperties.com.my/dsites/s3fs-public/financial-results/files/IOIPGB%204Q%20FY2026.pdf"
+    ],
+    "social_sentiment": null,
+    "summary": "IOIPG direct issuer FY2026 report released August 27 confirms annual revenue of RM4.444 billion and attributable earnings of RM2.154 billion, alongside a Q4 earnings decline. Full-year profits include RM855.177 million fair-value and RM502.789 million remeasurement gains, and borrowings increased; recurring operating sentiment is weaker than headline annual growth."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 3.3200, price is below by 9.65% versus SMA-50 3.6744 and below by 5.01% versus SMA-200 3.4951. Observed 5/20/60-bar returns are -2.64%/-11.13%/-7.82%. ATR-14 is 0.1314; Bollinger lower/middle/upper are 3.2700/3.5345/3.7990, with band position 0.0945. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 26.087,
+    "rsi_assessment": "RSI-14 is 26.0870, oversold. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -0.0976, signal line -0.0808, histogram -0.0168: negative short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 3,865,000 versus 20-bar average 6,143,170, ratio 0.6292. Below-average turnover supplies no strong participation confirmation. Price is 24.98% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      3.32
+    ],
+    "resistance_levels": [
+      3.8,
+      3.9369
+    ],
+    "summary": "Price is below both major averages and at the observed 20- and 60-bar low, with negative MACD momentum and falling multiweek returns. Oversold RSI raises rebound risk but cannot outweigh the unbroken downtrend; below-average volume limits conviction about the latest decline."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "sector_macro_factors": [
+      "Observed: OPR remains 2.75% and Malaysian investment activity is ongoing. Inference: stable financing conditions are helpful for development planning, without constituting fresh monetary easing.",
+      "Inference: property debt service, buyer affordability and global construction-cost pressure are opposing considerations; no current REIT completion or transaction proceeds are assumed."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "IOI Properties benefits from stable domestic policy, while development funding and input-cost sensitivities persist. This evidence supports a neutral assessment rather than assuming a rate-cut or asset-monetization catalyst."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,53 @@
+{
+  "symbol": "5258",
+  "name": "BIMB",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/5258/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 4646269952.0,
+    "pe_ratio": 8.2,
+    "forward_pe": 8.516472,
+    "dividend_yield": 7.01
+  },
+  "sources": [
+    {
+      "title": "BIMB latest observed issuer financial/fund disclosure",
+      "url": "https://www.klsescreener.com/v2/announcements/view/11654065",
+      "publication_date": "2026-08-26",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 attributable profit RM139.122m versus RM126.685m; H1 RM254.154m versus RM252.950m (+0.5%)."
+      ],
+      "limitations": [],
+      "source_type": "issuer_authored_exchange_disclosure_mirror"
+    },
+    {
+      "url": "https://www.linkedin.com/posts/bank-islam-malaysia-berhad_bimb-1h2026-financial-performance-activity-7498551375945965569-AUpt",
+      "reporting_period": "H1/asat2026-06-30",
+      "publication_date": null,
+      "source_type": "issuer_authored_official_corporate_account",
+      "observed_facts": [
+        "OfficialBankIslamMalaysiaBerhadcorporateaccount: netprofit254.2m; netincome1.43bn;totalassets106.7bn+7.2%;grossfinancing77.9bn+7.5%;funding86.9bn+5.1%.",
+        "Grossimpairedfinancing0.98%;totalcapital17.8%."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "OriginalBursa and mirrorfullattachment attempts blocked/returnedHTML; summaryearnings remain sourced to identifiedissuer-authoredexchange mirror https://www.klsescreener.com/v2/announcements/view/11654065 . No mediaCET1metric promoted to verifiedfact."
+  ],
+  "derived_math": [
+    "Q2profitgrowth139.122/126.685-1=9.817%;H1profitgrowth254.154/252.950-1=0.476%."
+  ],
+  "gaps": [
+    "FullNFM,CET1,liquiditysupplement blocked; issueraccountpublishdate onlyrelative1mo, reportingperiod2026-06-30explicit."
+  ],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

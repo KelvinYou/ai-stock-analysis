@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Vendor trailing46.28x versus forward19.38x; GAAP trailing includes acquisition amortisation and forward is an estimate. Rapid observed earnings/FCF growth makes forward valuation plausible, not guaranteed. No single-quarter EPS annualisation is treated as TTM.",
+    "margin_analysis": "Q3 operating margin=15.955/29.591=53.92% GAAP; adjusted20.095/29.591=67.91%. Non-GAAP excludes SBC, acquired amortisation and other costs; adjusted earnings are not cash.",
+    "debt_analysis": "Stated debt$2.252bn+$57.167bn=$59.419bn versus cash$23.975bn, net debt$35.444bn excluding leases. Q3 CFO$14.197bn less PP&E$0.532bn=FCF$13.665bn; operating income/interest$0.778bn=20.51x.",
+    "growth_outlook": "Q3 revenue+86%, GAAP operating income+171%, FCF+95%; AI revenue$16.7bn +221%. Q4$34.8bn guidance is prospective.",
+    "key_risks": [
+      "Customer concentration and possible AI-capex slowdown can impair the growth-supported valuation.",
+      "Debt remains material; GAAP/non-GAAP gap includes recurring SBC, and Q3 FCF should not be multiplied by4 as a forecast."
+    ],
+    "key_strengths": [
+      "Cash generation validates a large part of reported profitability.",
+      "Net debt is material but interest coverage and declining stated debt provide capacity."
+    ],
+    "summary": "Broadcom earns a buy view from accelerating revenue, strong cash conversion and manageable observed financing burden. Medium confidence reflects concentrated AI demand and reliance on continued growth for valuation upside."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "Broadcom reports third-quarter revenue growth of 86%, free cash flow of $13.7 billion and fourth-quarter revenue guidance of $34.8 billion. Guidance is prospective; issuer identifies significant customer-demand, trade-restriction and debt risks. Yahoo recommendations fetched 2026-10-07T11:50:30.081538, period 0m: strong buy 7, buy 40, hold 3, sell 0, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "AI semiconductors",
+      "Cash generation",
+      "Customer concentration"
+    ],
+    "notable_headlines": [
+      "2026-09-02 | issuer/issuer-hosted evidence | Broadcom reports third-quarter revenue growth of 86%, free cash flow of $13.7 billion and fourth-quarter revenue guidance of $34.8 billion. | https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial"
+    ],
+    "social_sentiment": null,
+    "summary": "Broadcom reports third-quarter revenue growth of 86%, free cash flow of $13.7 billion and fourth-quarter revenue guidance of $34.8 billion. Guidance is prospective; issuer identifies significant customer-demand, trade-restriction and debt risks."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 375.8100, price is above by 0.98% versus SMA-50 372.1643 and above by 2.5% versus SMA-200 366.6390. Observed 5/20/60-bar returns are 5.83%/2.15%/-1.97%. ATR-14 is 10.6207; Bollinger lower/middle/upper are 335.5558/354.4406/373.3254, with band position 1.0658. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 69.4963,
+    "rsi_assessment": "RSI-14 is 69.4963, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -2.1409, signal line -5.1201, histogram 2.9793: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
+    "volume_assessment": "Last completed-session volume 30,791,100 versus 20-bar average 24,485,320, ratio 1.2575. Above-average turnover provides some participation confirmation, not proof of institutional buying or selling. Price is 23.82% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      335.1996
+    ],
+    "resistance_levels": [
+      380.84,
+      431.9435
+    ],
+    "summary": "Price has reclaimed both major averages with a positive MACD histogram and above-average volume, supporting a constructive rebound. The negative MACD line, upper-band extension and still-negative 60-bar return leave longer-term follow-through unconfirmed."
+  },
+  "macro": {
+    "signal": "buy",
+    "confidence": "low",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: strong global tech spending and robust capital investment. Inference: semiconductor infrastructure demand may benefit, but aggregate spending does not prove a specific custom-chip design win.",
+      "Inference: advanced-computing export restrictions are a supply-chain/customer diligence risk, not proof every Broadcom product is restricted; higher rates affect valuation."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed.",
+      "Observed: January 15, 2026 BIS licensing rule permits case-by-case review for specified advanced-computing exports to China subject to conditions; no unrestricted approval or later policy change is assumed."
+    ],
+    "summary": "Broadcom has a positive inferred infrastructure demand backdrop, balanced by financing and export-policy uncertainty. The macro signal has low confidence because the snapshot does not establish product-specific demand or licensing effects."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Refreshed vendor snapshot trailing P/E 16.83x, forward P/E 14.59x. Vendor earnings basis is not independently matched; no sector average or fair value inferred.",
+    "margin_analysis": "Derived Q2 operating margin 11.44% versus 12.58%; FX translation moved from RM318.4m gain to RM2.1m loss.",
+    "debt_analysis": "Borrowings RM60.936bn excluding leases; lease liabilities RM31.198bn; cash/deposits RM15.280bn. Latest FCF not independently extracted.",
+    "growth_outlook": "Q2 revenue RM18.236bn versus RM16.835bn, but owners profit RM888.8m versus RM1,158.1m; H1 owners profit RM1.986bn versus RM2.216bn.",
+    "key_risks": [
+      "Profit contraction and regulated utility capital requirements limit earnings upside; leverage includes significant separate lease liabilities.",
+      "Snapshot financial statements lack fiscal_period_end/available_as_of and are not dated trend evidence."
+    ],
+    "key_strengths": [
+      "H1 operating profit RM4.539bn versus RM4.439bn; net current liabilities improved to RM3.242bn from RM8.071bn."
+    ],
+    "summary": "TENAGA: H1 operating profit RM4.539bn versus RM4.439bn; net current liabilities improved to RM3.242bn from RM8.071bn. Fundamental view is neutral with medium confidence; Profit contraction and regulated utility capital requirements limit earnings upside; leverage includes significant separate lease liabilities."
+  },
+  "sentiment": {
+    "signal": "sell",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "TNB August 27 Q2 report shows revenue rising to RM18.236 billion from RM16.835 billion but attributable earnings falling to RM888.8 million from RM1,158.1 million; H1 earnings also fell. Operating margin declined and FX translation shifted from a gain to a small loss; strong analyst buy counts contrast with earnings pressure, while tariff reconciliation is incomplete.",
+    "key_themes": [
+      "Revenue growth",
+      "Earnings decline",
+      "Currency effects"
+    ],
+    "notable_headlines": [
+      "2026-08-27 | direct_issuer_document | TNB August 27 Q2 report shows revenue rising to RM18.236 billion from RM16.835 billion but attributable earnings falling to RM888.8 million from RM1,158.1 million; H1 earnings also fell. | https://www.tnb.com.my/assets/quarterly_results/Financial_Unaudited_Results_-_2QFY2026.pdf"
+    ],
+    "social_sentiment": null,
+    "summary": "TNB August 27 Q2 report shows revenue rising to RM18.236 billion from RM16.835 billion but attributable earnings falling to RM888.8 million from RM1,158.1 million; H1 earnings also fell. Operating margin declined and FX translation shifted from a gain to a small loss; strong analyst buy counts contrast with earnings pressure, while tariff reconciliation is incomplete."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 12.9000, price is below by 6.95% versus SMA-50 13.8630 and below by 7.99% versus SMA-200 14.0195. Observed 5/20/60-bar returns are 1.42%/-6.79%/-9.79%. ATR-14 is 0.2643; Bollinger lower/middle/upper are 12.4716/13.1806/13.8896, with band position 0.3021. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 35.9644,
+    "rsi_assessment": "RSI-14 is 35.9644, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -0.2820, signal line -0.3047, histogram 0.0227: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
+    "volume_assessment": "Last completed-session volume 6,601,000 versus 20-bar average 8,574,930, ratio 0.7698. Below-average turnover supplies no strong participation confirmation. Price is 13.42% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      12.72
+    ],
+    "resistance_levels": [
+      13.94,
+      14.8
+    ],
+    "summary": "Price is below both major averages after negative 20- and 60-bar returns, while RSI remains weak. Positive MACD histogram and a modest five-bar rebound soften the bearish view but lack volume confirmation and have not repaired the trend."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "sector_macro_factors": [
+      "Observed: BNM cites ongoing investment and strong technology-related spending. Inference: these can support electricity demand, but no data-center load forecast is supplied.",
+      "Inference: regulated tariffs and fuel-cost pass-through determine whether commodity pressure affects profits; power capex also creates financing sensitivity."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Tenaga has a plausible investment-driven electricity demand tailwind, with fuel and regulated-return mechanisms limiting a direct macro profit conclusion. No unverified tariff or data-center catalyst is incorporated."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,54 @@
+{
+  "symbol": "0215",
+  "name": "SLVEST",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/0215/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 4226506752.0,
+    "pe_ratio": 48.0,
+    "forward_pe": 25.239544,
+    "dividend_yield": 0.0
+  },
+  "sources": [
+    {
+      "title": "SLVEST latest observed issuer financial/fund disclosure",
+      "url": "https://solarvest.com/solarvest-delivers-stronger-1qfy27-performance-with-20-yoy-growth-in-net-profit/",
+      "publication_date": "2026-08-19",
+      "reporting_period": "Q1 FY2027 ended 2026-06-30",
+      "observed_facts": [
+        "Revenue RM155.9m +13.2% YoY; net profit RM19.0m +19.8%.",
+        "Net margin 12.2%, versus 11.5% prior year."
+      ],
+      "limitations": []
+    },
+    {
+      "url": "https://solarvest.com/wp-content/uploads/2026/05/SHB-FINANCIAL-RESULTS-Q4-FY2026.pdf",
+      "reporting_period": "FY2026 ended2026-03-31",
+      "publication_date": "2026-05",
+      "source_type": "issuer_primary",
+      "observed_facts": [
+        "FY26borrowings345.515m+66.330m;leases19.577m+1.843m;cash194.933m/deposits51.322m/shortterminvestments240.939m.",
+        "CFO90.560m;PP&E58.183m;intangible0.265m;investmentproperty21.053m; associates41.958m+2.174m/JV45.039m.",
+        "Equity/warrant/ESOP proceeds257.248m+120.169m+9.404m."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "Latestissuerpressrelease https://solarvest.com/solarvest-delivers-stronger-1qfy27-performance-with-20-yoy-growth-in-net-profit/ ; issuer-authoredBursamirror https://www.klsescreener.com/v2/announcements/view/11650265 confirmsQ1EPS1.99senvs2.11sen."
+  ],
+  "derived_math": [
+    "FY26FCF90.560-58.183-0.265=32.112m;afterinvestmentproperty11.059m; equity/warrant/ESOPproceeds386.821m."
+  ],
+  "gaps": [
+    "LatestJune30fullPDFnotretrievedfromissuercentre (onlyFY26Q4listed) orblockedBursa/mirrorattachment; oldestFY26balance/cashnot representedaslatest."
+  ],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

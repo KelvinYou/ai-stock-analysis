@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "AVGO",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/AVGO/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 7,
+    "buy": 40,
+    "hold": 3,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial",
+      "date": "2026-09-02",
+      "observed_facts": "Broadcom reports third-quarter revenue growth of 86%, free cash flow of $13.7 billion and fourth-quarter revenue guidance of $34.8 billion.",
+      "negative_evidence_or_limitations": "Guidance is prospective; issuer identifies significant customer-demand, trade-restriction and debt risks."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

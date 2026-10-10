@@ -1,0 +1,135 @@
+{
+  "symbol": "5258",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "18d0aeb321bc9838ab9f2a7d3f26ad60da677d4eda15b767be564b380ce27000",
+    "price_history.csv": "96745cee4be3f7f93ee69e20f058a914924a9e39fecc37187e273e080d519c04",
+    "indicators.json": "b51a634579fbbffedbe2b639b69fc621eb93410f94c715d66a507964dc905837",
+    "fundamentals.json": "93f8cab71e59d68a286dac245381cace5255aec331aa2b469d1a2a9ce56411d1"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "5258",
+      "analysis_date": "2026-10-07",
+      "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/5258/fundamentals.json",
+      "sources": [
+        {
+          "title": "BIMB latest observed issuer financial/fund disclosure",
+          "url": "https://www.klsescreener.com/v2/announcements/view/11654065",
+          "publication_date": "2026-08-26",
+          "reporting_period": "Q2/H1 ended 2026-06-30",
+          "observed_facts": [
+            "Q2 attributable profit RM139.122m versus RM126.685m; H1 RM254.154m versus RM252.950m (+0.5%).",
+            "Corporate profit margins and FCF are unsuitable bank operating comparators; latest net financing margin not verified from primary supplement.",
+            "NAV/share RM3.59 versus RM3.56; latest CET1, liquidity and impaired-financing ratios not independently verified from accessible primary supplement."
+          ],
+          "limitations": [
+            "Issuer-authored Bursa summary accessible through a third-party mirror; original Bursa attachment and issuer detailed supplement blocked. Media/broker capital metrics were not promoted to verified primary facts."
+          ],
+          "source_type": "issuer_authored_exchange_disclosure_mirror"
+        }
+      ],
+      "limitations": [
+        "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+        "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+      ],
+      "judgement": {
+        "signal": "neutral",
+        "confidence": "low"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "5258",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/5258/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 0,
+        "buy": 1,
+        "hold": 7,
+        "sell": 0,
+        "strongSell": 0
+      },
+      "sources": [
+        {
+          "url": "https://www.klsescreener.com/v2/announcements/view/11654065",
+          "date": "2026-08-26",
+          "reporting_period": "Q2/H1 ended 2026-06-30",
+          "source_type": "issuer_authored_exchange_disclosure_mirror",
+          "observed_facts": [
+            "Q2 attributable profit RM139.122m versus RM126.685m; H1 RM254.154m versus RM252.950m (+0.5%).",
+            "Corporate profit margins and FCF are unsuitable bank operating comparators; latest net financing margin not verified from primary supplement.",
+            "NAV/share RM3.59 versus RM3.56; latest CET1, liquidity and impaired-financing ratios not independently verified from accessible primary supplement."
+          ],
+          "limitations": [
+            "Issuer-authored Bursa summary accessible through a third-party mirror; original Bursa attachment and issuer detailed supplement blocked. Media/broker capital metrics were not promoted to verified primary facts."
+          ],
+          "verification": "Primary facts cross-checked against current-run fundamentals evidence; scanned reports visually verified by fundamentals role. Signals independently assessed."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction",
+        "Issuer-authored Bursa summary accessible through a third-party mirror; original Bursa attachment and issuer detailed supplement blocked. Media/broker capital metrics were not promoted to verified primary facts."
+      ],
+      "primary_fact_crosscheck_path": "5258/fundamentals-evidence.json"
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast.",
+      "input_identity": {
+        "symbol": "5258",
+        "name": "BIMB",
+        "source": "inputs/5258/fundamentals.json#info",
+        "note": "Bank Islam; identity corrected from RHB. Sector reasoning remains generic to avoid unsupported bank-specific exposures."
+      }
+    }
+  },
+  "mode": "in-session"
+}

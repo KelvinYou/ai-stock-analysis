@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "argument": {
+      "type": "string",
+      "description": "Your substantive argument (2-3 paragraphs)"
+    },
+    "key_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "3-5 key bullet points"
+    },
+    "rebuttal_to_previous": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Direct rebuttal to opponent's last argument (null if first round)"
+    }
+  },
+  "required": [
+    "argument",
+    "key_points",
+    "rebuttal_to_previous"
+  ]
+}

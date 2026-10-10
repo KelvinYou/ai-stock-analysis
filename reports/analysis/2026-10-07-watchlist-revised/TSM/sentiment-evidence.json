@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "TSM",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/TSM/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 6,
+    "buy": 14,
+    "hold": 1,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://pr.tsmc.com/english/news/3332",
+      "date": "2026-08-11",
+      "observed_facts": "TSMC board approved second-quarter revenue of NT$1,270.38 billion and profit of NT$706.56 billion, and a NT$7 per-share quarterly dividend.",
+      "negative_evidence_or_limitations": "Board approval and dividend are observed events; this source alone does not demonstrate an incremental growth surprise or price response."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

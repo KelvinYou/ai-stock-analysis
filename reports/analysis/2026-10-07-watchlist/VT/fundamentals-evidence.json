@@ -1,0 +1,31 @@
+{
+  "symbol": "VT",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/VT/fundamentals.json",
+  "sources": [
+    {
+      "title": "Vanguard Total World Stock Inde latest observed issuer financial/fund disclosure",
+      "url": "https://advisors.vanguard.com/investments/products/new/vt/vanguard-total-world-stock-etf",
+      "publication_date": null,
+      "reporting_period": "2026-07-31 portfolio; 2026-02-27 expense ratio",
+      "observed_facts": [
+        "FTSE Global All Cap exposure; 10,068 holdings. Portfolio earnings growth is an aggregate statistic, not fund corporate revenue.",
+        "Corporate operating margins and FCF are not applicable to this ETF.",
+        "Corporate leverage assessment is not applicable; underlying portfolio companies retain their own debt risks."
+      ],
+      "limitations": [
+        "ETF applicability: no corporate financial statements expected. Product page publish date unavailable; metric as-of dates disclosed."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "low"
+  }
+}

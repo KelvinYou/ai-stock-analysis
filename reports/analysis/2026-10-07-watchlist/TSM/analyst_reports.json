@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Refreshed vendor snapshot trailing P/E 35.31x, forward P/E 22.00x. Vendor earnings basis is not independently matched; no sector average or fair value inferred.",
+    "margin_analysis": "Derived net margin55.62%; ADR EPSUS$4.31 is not ordinary-share EPS.",
+    "debt_analysis": "Current debt/FCF not extracted; fab investment and overseas-capacity economics need cash-flow review.",
+    "growth_outlook": "Revenue NT$1,270.38bn; net income NT$706.56bn; diluted EPS NT$27.25.",
+    "key_risks": [
+      "Taiwan concentration and capital-intensive foundry execution (inference).",
+      "Snapshot financial statements lack fiscal_period_end/available_as_of and are not dated trend evidence."
+    ],
+    "key_strengths": [
+      "Substantial positive earnings and margin; latest issuer quarter available."
+    ],
+    "summary": "Taiwan Semiconductor Manufactur: Substantial positive earnings and margin; latest issuer quarter available. Fundamental view is buy with medium confidence; Taiwan concentration and capital-intensive foundry execution (inference)."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "neutral",
+    "news_summary": "TSMC board approved second-quarter revenue of NT$1,270.38 billion and profit of NT$706.56 billion, and a NT$7 per-share quarterly dividend. Board approval and dividend are observed events; this source alone does not demonstrate an incremental growth surprise or price response. Yahoo recommendations fetched 2026-10-07T11:50:30.471949, period 0m: strong buy 6, buy 14, hold 1, sell 0, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Capital distributions",
+      "Confirmed quarterly results"
+    ],
+    "notable_headlines": [
+      "2026-08-11 | issuer/issuer-hosted evidence | TSMC board approved second-quarter revenue of NT$1,270.38 billion and profit of NT$706.56 billion, and a NT$7 per-share quarterly dividend. | https://pr.tsmc.com/english/news/3332"
+    ],
+    "social_sentiment": null,
+    "summary": "TSMC board approved second-quarter revenue of NT$1,270.38 billion and profit of NT$706.56 billion, and a NT$7 per-share quarterly dividend. Board approval and dividend are observed events; this source alone does not demonstrate an incremental growth surprise or price response."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 482.3000, price is above by 12.84% versus SMA-50 427.4255 and above by 24.48% versus SMA-200 387.4561. Observed 5/20/60-bar returns are 5.55%/10.16%/14.71%. ATR-14 is 10.1243; Bollinger lower/middle/upper are 404.8505/445.8453/486.8400, with band position 0.9446. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 87.9793,
+    "rsi_assessment": "RSI-14 is 87.9793, overbought. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line 14.2112, signal line 10.3073, histogram 3.9039: positive short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 8,326,000 versus 20-bar average 9,856,045, ratio 0.8448. Below-average turnover supplies no strong participation confirmation. Price is 1.06% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      371.7228,
+      411.4462
+    ],
+    "resistance_levels": [
+      487.47
+    ],
+    "summary": "Both major averages, positive MACD and positive multiweek returns support a strong uptrend. RSI near 88 and a close near the observed high show substantial extension, while below-average turnover leaves a fresh breakout unconfirmed."
+  },
+  "macro": {
+    "signal": "buy",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: BNM cites strong tech spending and robust E&E demand, and Fed reports robust capital investment. Inference: these support foundry demand, while new-capacity financing and discount-rate hurdles rise.",
+      "Observed: BIS advanced-computing export licensing remains conditional for specified China shipments. Inference: foundry customer/product diligence and permitted end-use matter; no new cross-Strait event is assumed."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed.",
+      "Observed: January 15, 2026 BIS licensing rule permits case-by-case review for specified advanced-computing exports to China subject to conditions; no unrestricted approval or later policy change is assumed."
+    ],
+    "summary": "TSMC has a positive inferred foundry demand backdrop from verified technology spending. Capital intensity and semiconductor licensing requirements are meaningful offsets, limiting confidence to medium."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,31 @@
+{
+  "symbol": "5296",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/5296/fundamentals.json",
+  "sources": [
+    {
+      "title": "MRDIY latest observed issuer financial/fund disclosure",
+      "url": "https://corporate.mrdiy.com/news.html/id/2623004",
+      "publication_date": "2026-08-11",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 revenue RM1.257bn vs RM1.214bn; attributable profit RM134.406m vs RM158.581m.",
+        "Derived attributable-profit/revenue ratio 10.69%, vs13.06%; earnings lag revenue.",
+        "NAV/share RM0.1932 versus RM0.2128 year-end; current debt and FCF not extracted."
+      ],
+      "limitations": [
+        "Dated issuer release; fair-value model and independently matched current balance-sheet detail are incomplete."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

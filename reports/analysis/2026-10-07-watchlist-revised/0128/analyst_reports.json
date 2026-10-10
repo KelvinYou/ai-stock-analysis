@@ -1,0 +1,70 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Frozen October 6 snapshot: trailing P/E 47.18 x, forward P/E 38.23 x (vendor estimate), dividend yield 0.39% (vendor reported). Inference:47.18 x earnings and cash-quality offsets balance observed growth; not an automatic neutral due missing intrinsic value.",
+    "margin_analysis": "Q2revenue RM186.906 m vs RM156.432 m, owners profit RM47.723 m vs RM33.489 m; derived net margin 25.53%. H1owners profit+40%, but other operating income and investment/FX gains contribute to earnings, so all growth is not core.",
+    "debt_analysis": "No bank borrowings atJune 30; lease liabilities RM31.573 m. Cash/deposits RM560.618 m plus short term investments RM961.350 m are strong liquidity. H1CFO62.623 m vs 50.801 m, PP&E27.132 m gives FCF35.491 m. Warrant exercise proceeds RM636.783 m helped fund RM670.034 m shortterminvestment purchases; liquidity increase is not all operating cash.",
+    "growth_outlook": "Inference: semiconductor-service growth and liquidity support a durable franchise, but 47.18 x trailing/38.23 x forward earnings already require sustained expansion. Receivable absorption RM80.148 m and investment gains constrain quality of growth.",
+    "key_risks": [
+      "Premium valuation and dilution from exercised warrants.",
+      "Otherincome support and receivable build; H1FCF is much smaller than reported profit."
+    ],
+    "key_strengths": [
+      "Observed revenue/profit growth and positive FCF.",
+      "Essentially bankdebt-free with substantial liquid assets."
+    ],
+    "summary": "Frontken combines strong growth and liquidity with a demanding frozen valuation and weaker cash conversion than headline profit suggests. Neutral/medium reflects these specific valuation and earnings-quality offsets, while preserving the verified positive operating thesis."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "Frontken issuer Q2/H1 report shows quarterly revenue rising to RM186.906 million from RM156.432 million and attributable profit to RM47.723 million from RM33.489 million; half-year attributable earnings grew 40%. September 21-22 issuer-hosted media records Taiwan capacity purchases of about RM118 million. Other operating income rose materially, so profit growth cannot all be attributed to core revenue; the quarterly report publication date was not retrieved, although reporting periods were verified.",
+    "key_themes": [
+      "Semiconductor service growth",
+      "Taiwan capacity expansion",
+      "Other operating income"
+    ],
+    "notable_headlines": [
+      "Q2/H1 ended 2026-06-30 | direct_issuer_document | Frontken issuer Q2/H1 report shows quarterly revenue rising to RM186.906 million from RM156.432 million and attributable profit to RM47.723 million from RM33.489 million; half-year attributable earnings grew 40%. September 21-22 issuer-hosted media records Taiwan capacity purchases of about RM118 million. | https://insage.com.my/ir/cmn/downloading.aspx?sFileName=26217000068817&sReportType=QR"
+    ],
+    "social_sentiment": null,
+    "summary": "Frontken issuer Q2/H1 report shows quarterly revenue rising to RM186.906 million from RM156.432 million and attributable profit to RM47.723 million from RM33.489 million; half-year attributable earnings grew 40%. September 21-22 issuer-hosted media records Taiwan capacity purchases of about RM118 million. Other operating income rose materially, so profit growth cannot all be attributed to core revenue; the quarterly report publication date was not retrieved, although reporting periods were verified."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 5.2000, price is above by 2.92% versus SMA-50 5.0527 and above by 15.47% versus SMA-200 4.5032. Observed 5/20/60-bar returns are 4.42%/7.00%/7.86%. ATR-14 is 0.1293; Bollinger lower/middle/upper are 4.7762/4.9845/5.1928, with band position 1.0173. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 69.2308,
+    "rsi_assessment": "RSI-14 is 69.2308, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line 0.0279, signal line -0.0011, histogram 0.0290: positive short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 6,241,200 versus 20-bar average 4,758,130, ratio 1.3117. Above-average turnover provides some participation confirmation, not proof of institutional buying or selling. Price is 3.33% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      4.6318,
+      4.78
+    ],
+    "resistance_levels": [
+      5.3,
+      5.3789
+    ],
+    "summary": "Price has reclaimed both major averages with positive MACD momentum and above-average volume. The close slightly exceeds the upper band near observed resistance, so the bullish setup still needs follow-through rather than extrapolation of the recent rebound."
+  },
+  "macro": {
+    "signal": "buy",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "sector_macro_factors": [
+      "Observed: BNM cites robust E&E demand and technology-related spending. Inference: more semiconductor production and investment can support maintenance/service activity, without proving Frontken-specific wins.",
+      "Inference: imported equipment and international operations create mixed FX effects; the single USD/MYR fixing is not directional."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed.",
+      "Observed: January 15, 2026 BIS licensing rule permits case-by-case review for specified advanced-computing exports to China subject to conditions; no unrestricted approval or later policy change is assumed."
+    ],
+    "summary": "Frontken has a positive inferred macro demand backdrop from the verified technology expansion. The signal does not assume a specific fab project, margin uplift or FX gain."
+  },
+  "pipeline_mode": "in-session"
+}

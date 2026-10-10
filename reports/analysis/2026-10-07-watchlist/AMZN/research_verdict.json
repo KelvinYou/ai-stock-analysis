@@ -1,0 +1,23 @@
+{
+  "ticker": "AMZN",
+  "judged_view": "neutral",
+  "confidence": "medium",
+  "thesis": "The bear carries the cash and valuation hurdle because negative trailing FCF remains observed even after correcting the mismatch with quarterly AWS profit. The latest operating improvement is substantial counterevidence, so neutral does not imply cloud deterioration. Productive investment and recurring purchase value are not yet demonstrated.",
+  "winning_side": "bear",
+  "strongest_counterexample": "AWS revenue grew 37% and operating income rose to $16.6bn from $10.2bn, while consolidated operating income increased to $27.5bn, demonstrating strong current operating economics.",
+  "invalidation_conditions": [
+    "A subsequent comparable trailing period reports FCF above zero and a reconciled recurring earnings/cash valuation excluding investment gains, reversing the load-bearing cash objection.",
+    "A subsequent comparable AWS operating-income result below the observed prior-year $10.2bn while trailing FCF remains negative would defeat the retained improving-operating counterweight."
+  ],
+  "evidence_gaps": [
+    "Matched operating cash/capex and incremental capacity returns.",
+    "Net debt and recurring owner-cash valuation excluding investment gains.",
+    "Timing of sustainable post-investment cash."
+  ],
+  "decisive_factors": [
+    "Trailing FCF -$7.6bn.",
+    "$53.4bn pre-tax other income mainly from Anthropic investments distorts net earnings.",
+    "Quarterly profit and trailing cash cannot establish matched incremental returns."
+  ],
+  "pipeline_mode": "in-session"
+}

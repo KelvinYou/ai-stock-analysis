@@ -1,0 +1,70 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Snapshot trailing/forward P/E 23.10/6.30; forward earnings may be near a cycle peak. Derived adjusted FY FCF yield is 3.60%, more restrained than the earnings multiple.",
+    "margin_analysis": "Q4 revenue $8.97bn (+51% sequentially); adjusted operating income $7.104bn. GAAP profit includes $804m equity gains; adjusted net income $6.162bn is the better earnings reference.",
+    "debt_analysis": "Cash $4.762bn; current and long-term debt zero. FY adjusted FCF $8.743bn deducts Flash Ventures and NBM prepayments from reported $11.494bn FCF.",
+    "growth_outlook": "FY revenue rose 175%; Q1 FY27 revenue guidance $10.3\u201310.8bn is prospective. Pricing supplied two-thirds of Q4 sequential growth.",
+    "key_risks": [
+      "NAND price-cycle reversal",
+      "Peak margins and forward estimates",
+      "Customer deposits and supply commitments constrain cash"
+    ],
+    "key_strengths": [
+      "Debt-free balance sheet",
+      "Strong normalized cash generation"
+    ],
+    "summary": "Normalized cash generation and a debt-free balance sheet support buy despite a powerful pricing cycle. Confidence is medium because peak earnings cannot be capitalized as permanent."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "Sandisk reports fourth-quarter revenue growth of 51% sequentially and FY2026 revenue growth of 175%; ten new-business-model agreements signed. Approximately two thirds of quarterly revenue growth came from pricing, making cycle durability a key uncertainty; new guidance is prospective. Yahoo recommendations fetched 2026-10-07T11:50:31.349508, period 0m: strong buy 4, buy 17, hold 3, sell 0, strong sell 1. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "NAND pricing",
+      "Datacenter mix",
+      "Memory cyclicality"
+    ],
+    "notable_headlines": [
+      "2026-08-05 | issuer/issuer-hosted evidence | Sandisk reports fourth-quarter revenue growth of 51% sequentially and FY2026 revenue growth of 175%; ten new-business-model agreements signed. | https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-fourth-quarter-2026-financial-results"
+    ],
+    "social_sentiment": null,
+    "summary": "Sandisk reports fourth-quarter revenue growth of 51% sequentially and FY2026 revenue growth of 175%; ten new-business-model agreements signed. Approximately two thirds of quarterly revenue growth came from pricing, making cycle durability a key uncertainty; new guidance is prospective."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "low",
+    "trend": "As of 2026-10-06 close 1660.4600, price is above by 6.94% versus SMA-50 1552.6645 and above by 43.07% versus SMA-200 1160.5952. Observed 5/20/60-bar returns are -4.01%/-4.46%/-0.81%. ATR-14 is 93.3632; Bollinger lower/middle/upper are 1512.9394/1707.7842/1902.6291, with band position 0.3786. These describe current trend and range, not entry, stop or target recommendations. History contains 413 bars from 2025-02-13, enough for SMA-200 but not a ten-year comparable series. The extraordinary 252-bar return is descriptive only; corporate-action and predecessor-history comparability are not independently established by these files.",
+    "rsi_14": 58.3429,
+    "rsi_assessment": "RSI-14 is 58.3429, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line 36.0818, signal line 49.4632, histogram -13.3814: negative short-term momentum. A positive MACD line with a negative histogram means bullish momentum is slowing.",
+    "volume_assessment": "Last completed-session volume 6,513,600 versus 20-bar average 8,680,535, ratio 0.7504. Below-average turnover supplies no strong participation confirmation. Price is 29.47% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      998.19,
+      1504.2
+    ],
+    "resistance_levels": [
+      1909.48
+    ],
+    "summary": "The supplied series remains above SMA-50 and SMA-200, but negative MACD histogram, falling 5- and 20-bar returns and low volume indicate cooling momentum. Only 413 bars are available and the extraordinary historical appreciation is not independently verified for corporate-action comparability, so recent observed ranges carry more weight than extrapolation."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: global tech spending is strong. Inference: storage demand may benefit, but this is not a NAND price, inventory or capacity-utilization series.",
+      "Inference: memory is cyclical and capital intensive; higher rates and global cost pressure can offset demand, with export policy applicability product specific."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed.",
+      "Observed: January 15, 2026 BIS licensing rule permits case-by-case review for specified advanced-computing exports to China subject to conditions; no unrestricted approval or later policy change is assumed."
+    ],
+    "summary": "SanDisk has potential broad technology demand support, but NAND pricing and inventories are unverified in the macro layer. A neutral low-confidence signal avoids turning generic AI spending into a memory-cycle forecast."
+  },
+  "pipeline_mode": "in-session"
+}

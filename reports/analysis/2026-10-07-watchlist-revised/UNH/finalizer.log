@@ -1,0 +1,70 @@
+{
+  "ticker": "UNH",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "overall_signal": "buy",
+  "conviction": {
+    "score": 0.41,
+    "signal_convergence": 0.5455,
+    "explanation": "Multi-period underwriting improvement and completed debt repayments substantiate recovery at 16.64x estimated earnings. Debt remains material, regulated cash is constrained and Optum scripts declined; the imminent results test and unconfirmed chart keep conviction measured."
+  },
+  "executive_summary": "UnitedHealth has delivered recovery beyond raised guidance: Q2 medical care ratio improved to 86.7% and H1 to 85.3%, while operating margin rose. Debt fell from$78.389bn to$73.328bn with$4.813bn net repayments, showing completed financial repair despite regulated cash constraints.\n\nThe 16.64x forward estimate can offer compensation if underwriting gains persist. Debt still exceeds cash/short investments materially, Optum Rx scripts fell to 387m from 414m and medical costs can recur. October 13 results are an information test, not promised upside; technical stabilization has not confirmed recovery.",
+  "bull_case": "Continued claims discipline and cash-supported deleveraging could sustain an earnings recovery without relying solely on guidance.",
+  "bear_case": "Renewed medical-cost pressure or Optum weakness could interrupt recovery; consolidated insurer cash is not freely distributable.",
+  "key_uncertainties": [
+    "Durability of medical-care-ratio improvement and ancillary volumes.",
+    "Regulated cash availability and working-capital contribution.",
+    "Forward EPS guidance is not achieved earnings."
+  ],
+  "catalysts_upcoming": [
+    "October 13 results: sustained underwriting improvement and controlled debt would validate recovery.",
+    "Further disclosed repayments alongside comparable operating cash and stabilized Optum scripts would strengthen financial repair."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Low beta (0.61) \u2014 historically less sensitive to broad-market moves.",
+      "Sector: Healthcare \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 61.4% over available price history. Projected worst case (2-sigma): ~42.6% from current $376.32.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": 376.27,
+    "entry_rationale": "Buy-the-dip to SMA-20 support near $376.27",
+    "stop_loss": 361.18,
+    "stop_rationale": "2x ATR-14 ($7.54) below entry \u2014 invalidates the setup",
+    "take_profit_1": 387.79,
+    "take_profit_2": 458.79,
+    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "UNH",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "UnitedHealth has a supported recovery purchase from multi-period underwriting improvement and actual debt reduction, rather than raised guidance alone. H1 medical care ratio improved to 85.3% from 87.1%, while debt fell to $73.328bn and net repayments totaled $4.813bn. Those delivered outcomes give the bull credible support at an estimated 16.64x forward reference, with medical-cost recurrence and regulated cash constraints limiting conviction.",
+    "winning_side": "bull",
+    "strongest_counterexample": "Optum Rx scripts fell to 387m from 414m and debt still materially exceeds cash/short investments; medical costs can recur, and consolidated insurer cash is not freely transferable to the holding company.",
+    "invalidation_conditions": [
+      "Next comparable Q2 medical care ratio at or above the prior 89.4% would invalidate the current underwriting-repair thesis.",
+      "Debt above $73.328bn with comparable H1 CFO below $19.964bn would weaken observed balance-sheet repair; evaluate regulated cash separately."
+    ],
+    "evidence_gaps": [],
+    "decisive_factors": [
+      "Repayment is already completed despite regulated-cash restrictions, avoiding a hypothetical free-transfer assumption.",
+      "The $50m Q2 reserve release is insufficient to explain the whole recovery; October 13 results are a test, not promised upside."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "buy",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}
+
+synced to Supabase: analysis_runs/913c6d80-2536-49c3-87a4-d7b803a2dea4

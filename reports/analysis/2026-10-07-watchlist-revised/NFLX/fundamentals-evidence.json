@@ -1,0 +1,71 @@
+{
+  "symbol": "NFLX",
+  "as_of": "2026-10-07",
+  "status": "OK",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+  "sources": [
+    {
+      "url": "https://s22.q4cdn.com/959853165/files/doc_financials/2026/q2/FINAL-Q2-26-Shareholder-Letter.pdf",
+      "publication_date": "2026-07-16",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    },
+    {
+      "url": "https://s22.q4cdn.com/959853165/files/doc_financials/2026/q1/FINAL-Q1-26-Shareholder-Letter.pdf",
+      "publication_date": "2026-04-16",
+      "reporting_period": "Q1 ended 2026-03-31",
+      "source_type": "primary issuer disclosure"
+    }
+  ],
+  "observed_table_metrics": {
+    "units": "USD million",
+    "Q2_revenue": 12559.938,
+    "prior_Q2_revenue": 11079.166,
+    "Q2_operating_margin_percent": 33.4,
+    "prior_Q2_operating_margin_percent": 34.1,
+    "Q2_net_income": 3401.414,
+    "H1_net_income": 8684.205,
+    "Q1_termination_fee_cash_and_pretax_income": 2800,
+    "fee_income_classification": "Interest and other income; outside operating income.",
+    "Q2_CFO": 1743.812,
+    "Q2_capex": 218.644,
+    "prior_Q2_CFO": 2423.258,
+    "prior_Q2_capex": 155.889,
+    "H1_CFO": 7034.017,
+    "H1_capex": 414.774,
+    "prior_H1_CFO": 5212.457,
+    "prior_H1_capex": 284.166,
+    "current_debt_carrying": 2483.758,
+    "long_term_debt_carrying": 11825.548,
+    "cash": 9099.232,
+    "short_investments": 28.678,
+    "issuer_net_debt": 5244.19,
+    "total_content_obligations": 25106.705,
+    "prior_content_obligations": 24039.228,
+    "content_current_BS_liability": 3866.522,
+    "content_noncurrent_BS_liability": 1625.6,
+    "Q2_content_additions": 4927.523,
+    "Q2_content_liability_change": -181.794,
+    "Q2_content_amortization": 4311.309,
+    "FY_revenue_guidance": [
+      51000,
+      51400
+    ],
+    "FY_operating_margin_guidance_percent": 31.5,
+    "FY_FCF_guidance": 12500,
+    "prior_pre_fee_FCF_guidance": 11000,
+    "Q2_repurchase_cash_rounded": 4700
+  },
+  "derived_math": {
+    "Q2_FCF": "1743.812-218.644=1525.168; prior2423.258-155.889=2267.369",
+    "H1_FCF": "7034.017-414.774=6619.243; prior5212.457-284.166=4928.291",
+    "illustrative_H1_FCF_less_gross_fee": "6619.243-2800=3819.243; not after-tax normalized FCF because fee-related tax timing spans quarters",
+    "Q2_cash_content_spend": "4927.523-(-181.794)=5109.317; cash/amortization=1.185x",
+    "FY_fee_enhanced_guidance_FCF_yield_percent": "12500/286021*100=4.37; prospective, not recurring observed yield"
+  },
+  "residual_limitations": [
+    "Exact fee-related cash-tax allocation unavailable; no invented after-tax normalized EPS/FCF.",
+    "Total content commitments include balance-sheet and unrecognized portions; not all added to financial debt."
+  ]
+}

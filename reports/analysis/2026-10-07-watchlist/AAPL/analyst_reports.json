@@ -1,0 +1,66 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Refreshed vendor snapshot trailing P/E 38.17x, forward P/E 34.82x. Vendor earnings basis is not independently matched; no sector average or fair value inferred.",
+    "margin_analysis": "Gross margin50.1% includes approximately2percentage-points tariff-refund benefit.",
+    "debt_analysis": "Quarterly operating cash flow was a record, but current debt amounts/FCF are not independently extracted.",
+    "growth_outlook": "Revenue $109.4bn +16%; diluted EPS$2.02 +29%.",
+    "key_risks": [
+      "Tariff refunds add $0.11 EPS; valuation should normalise this benefit.",
+      "Snapshot financial statements lack fiscal_period_end/available_as_of and are not dated trend evidence."
+    ],
+    "key_strengths": [
+      "Double-digit growth across iPhone, Mac, Services and each geography."
+    ],
+    "summary": "Apple Inc.: Double-digit growth across iPhone, Mac, Services and each geography. Fundamental view is neutral with medium confidence; Tariff refunds add $0.11 EPS; valuation should normalise this benefit."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "Apple reports fiscal third-quarter revenue growth of 16% and EPS growth of 29%, with June-quarter records for iPhone, Mac and services. Gross margin includes roughly two percentage points of tariff refunds and EPS a $0.11 benefit; these effects should not be extrapolated. Yahoo recommendations fetched 2026-10-07T11:50:28.365728, period 0m: strong buy 6, buy 19, hold 13, sell 3, strong sell 3. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Hardware and services growth",
+      "Tariff refunds"
+    ],
+    "notable_headlines": [
+      "2026-07-30 | issuer/issuer-hosted evidence | Apple reports fiscal third-quarter revenue growth of 16% and EPS growth of 29%, with June-quarter records for iPhone, Mac and services. | https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/"
+    ],
+    "social_sentiment": null,
+    "summary": "Apple reports fiscal third-quarter revenue growth of 16% and EPS growth of 29%, with June-quarter records for iPhone, Mac and services. Gross margin includes roughly two percentage points of tariff refunds and EPS a $0.11 benefit; these effects should not be extrapolated."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 333.6300, price is above by 3.52% versus SMA-50 322.2985 and above by 15.28% versus SMA-200 289.4067. Observed 5/20/60-bar returns are 1.28%/5.51%/5.23%. ATR-14 is 6.4179; Bollinger lower/middle/upper are 322.1669/333.4115/344.6561, with band position 0.5097. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 51.4893,
+    "rsi_assessment": "RSI-14 is 51.4893, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line 3.2611, signal line 4.3085, histogram -1.0473: negative short-term momentum. A positive MACD line with a negative histogram means bullish momentum is slowing.",
+    "volume_assessment": "Last completed-session volume 30,425,700 versus 20-bar average 41,722,990, ratio 0.7292. Below-average turnover supplies no strong participation confirmation. Price is 3.39% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      299.7415,
+      309.9
+    ],
+    "resistance_levels": [
+      345.34
+    ],
+    "summary": "The medium- and long-term trend remains positive above both major averages, but the negative MACD histogram and weak volume signal consolidation. Neutral RSI and a mid-band close do not establish a fresh momentum entry near the recent high."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: Fed describes resilient spending, but raised rates amid elevated inflation. Inference: consumer hardware faces competing purchasing-power and financing effects.",
+      "Inference: global supply-chain, input and currency exposures are relevant, but no new company-specific tariff or production disruption is verified."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Apple faces resilient aggregate demand alongside a higher discount-rate hurdle and consumer purchasing-power pressure. This is balanced evidence rather than a verified hardware replacement-cycle catalyst."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,53 @@
+{
+  "symbol": "4197",
+  "name": "SIME",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/4197/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 16970838016.0,
+    "pe_ratio": 9.576923,
+    "forward_pe": 10.2523985,
+    "dividend_yield": 5.62
+  },
+  "sources": [
+    {
+      "title": "SIME latest observed issuer financial/fund disclosure",
+      "url": "https://www.sime.com/investor-relations/financial-result/12893/",
+      "publication_date": "2026-08-27",
+      "reporting_period": "FY2026 ended 2026-06-30",
+      "observed_facts": [
+        "FY26 revenue RM69.5bn; net profit RM1.76bn. No prior-year comparison observed here.",
+        "Net-profit/revenue ratio approximately 2.53%, derived from rounded issuer headline figures."
+      ],
+      "limitations": []
+    },
+    {
+      "url": "https://www.sime.com/wp-content/uploads/2026/08/QR-Q4FY26-BOD.pdf",
+      "reporting_period": "FY2026 ended2026-06-30",
+      "publication_date": "2026-08-27",
+      "source_type": "issuer_primary",
+      "observed_facts": [
+        "Borrowings3679m+2706m vs4891m+2231m; cash/deposits2794m; leases1758m+411m; perpetualsukuk1181m.",
+        "CFO3511m; cash fixedassets1085m; financecost371m; lease608m; shareholderdividend886m/NCI438m/sukuk70m.",
+        "Reported ownersprofit1762mvs2061m; MVV disposal gains434mvs901m; BoardFY27coreperformanceconsistentwithFY26."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "Issuer release https://www.sime.com/media/news-release/2026/08/sime-reports-higher-core-net-profit-of-rm1-55-billion-for-fy2026/ retrieved via curl: coreprofit1.55bn+32.6%;coreROE8%vs6.2%;FY26declareddividend14sen."
+  ],
+  "derived_math": [
+    "Borrowings3679+2706=6385m;netdebt excludingleases6385-2794=3591m.",
+    "FCF3511-1085=2426m;afterfinance/lease2426-371-608=1447m;afteralldistributions1447-886-438-70=53m."
+  ],
+  "gaps": [],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

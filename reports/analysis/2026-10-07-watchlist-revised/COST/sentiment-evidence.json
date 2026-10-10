@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "COST",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/COST/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 4,
+    "buy": 20,
+    "hold": 13,
+    "sell": 1,
+    "strongSell": 1
+  },
+  "sources": [
+    {
+      "url": "https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Operating-Results/default.aspx",
+      "date": "2026-09-24",
+      "observed_facts": "FY2026 net sales grew 10.1%; fourth-quarter adjusted comparable sales rose 6.7%; annual earnings rose.",
+      "negative_evidence_or_limitations": "Quarter EPS includes a nonrecurring $0.15 tariff-refund benefit; operating news does not establish valuation upside."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

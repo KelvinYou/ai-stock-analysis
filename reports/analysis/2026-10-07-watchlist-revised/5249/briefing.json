@@ -1,0 +1,68 @@
+{
+  "ticker": "5249",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "overall_signal": "sell",
+  "conviction": {
+    "score": -0.5,
+    "signal_convergence": 0.5,
+    "explanation": "Noncash gains representing 51.31% of PBT weaken 8.54x headline cheapness while borrowings rose 29.4% and net debt reached RM21.818bn. CFO improvement is accepted, but acquisitions/expansion still required material net borrowing; the downtrend adds timing risk."
+  },
+  "executive_summary": "IOI Properties has improving operations: CFO rose to RM2.391bn from RM1.060bn and left RM1.780bn after specified property/land/equipment outlays before acquisitions and interest. Growing assets can support future recurring income.\n\nThe valuation/funding combination remains unfavorable. Fair-value and JV remeasurement gains supplied 51.31% of PBT, so 8.54x trailing earnings is weak recurring-value evidence; forward P/E is 17.71x. Borrowings rose about 29.4%, net debt reached RM21.818bn before leases, and expansion required RM3.258bn net drawdowns. Sell recognizes those costs alongside an unbroken weak price trend.",
+  "bull_case": "Successful asset lease-up and collections could turn improved CFO into recurring income and eventual deleveraging.",
+  "bear_case": "Debt-funded expansion and noncash headline profit may mask weaker per-share cash returns; financing exposure can persist even with higher CFO.",
+  "key_uncertainties": [
+    "Recurring profit excluding property/JV valuation gains.",
+    "Cash after acquisitions, deposits and interest.",
+    "Collection and lease-up timing on the enlarged asset base."
+  ],
+  "catalysts_upcoming": [
+    "Positive cash after all specified expansion and interest costs without net borrowing would weaken the financing thesis.",
+    "Lower net debt with recurring earnings growth excluding valuation gains would support genuine value compensation."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Low beta (0.40) \u2014 historically less sensitive to broad-market moves.",
+      "Sector: Real Estate \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 61.9% over available price history. Projected worst case (2-sigma): ~49.9% from current $3.32.",
+    "risk_reward_ratio": "N/A (bearish signal)"
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 3.58,
+    "stop_rationale": "Thesis invalidated if price breaks above $3.58.",
+    "take_profit_1": 3.32,
+    "take_profit_2": 3.27,
+    "target_rationale": "Primary: reduce/exit at/near current $3.32. Next downside watch: $3.27 (nearest support).",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "5249",
+    "judged_view": "sell",
+    "confidence": "medium",
+    "thesis": "IOI Properties has improving operating cash, but the bear outweighs it with distorted headline valuation and financed expansion. Fair-value/remeasurement gains account for 51.31% of PBT, while borrowings rose approximately 29.4% and net debt reached RM21.818bn before leases. The 8.54x trailing multiple therefore supplies weak downside protection; speculative future asset conversion does not yet outweigh current financing exposure.",
+    "winning_side": "bear",
+    "strongest_counterexample": "CFO rose to RM2.391bn from RM1.060bn and left RM1.780bn after the specified property/land/equipment spend before acquisitions and interest, so the asset base has a real cash-producing engine.",
+    "invalidation_conditions": [
+      "Comparable annual operating cash after specified asset spend, acquisition/deposit outlays and interest positive without net borrowing drawdowns would weaken the financing-dependence ruling.",
+      "Net debt below RM21.818bn alongside year-on-year profit growth excluding fair-value/JV remeasurement gains would undermine the leveraged-headline-value objection."
+    ],
+    "evidence_gaps": [],
+    "decisive_factors": [
+      "Improved CFO is accepted but expansion required RM3.258bn net borrowing drawdowns.",
+      "Estimated 17.71x forward earnings is materially less forgiving than gain-supported trailing cheapness."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "sell",
+    "sentiment": "neutral",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "sell",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "NVDA",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/NVDA/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 10,
+    "buy": 48,
+    "hold": 2,
+    "sell": 1,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+      "date": "2026-08-26",
+      "observed_facts": "NVIDIA reports fiscal second-quarter revenue of $96.2 billion, up 106% year on year, and data-center revenue growth of 117%.",
+      "negative_evidence_or_limitations": "Strong current-month analyst bullishness is not proof of additional upside; issuer optimism is not an independently verified price-impact trend."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

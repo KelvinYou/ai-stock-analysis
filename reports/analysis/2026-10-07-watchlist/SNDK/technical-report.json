@@ -1,0 +1,17 @@
+{
+  "signal": "neutral",
+  "confidence": "low",
+  "trend": "As of 2026-10-06 close 1660.4600, price is above by 6.94% versus SMA-50 1552.6645 and above by 43.07% versus SMA-200 1160.5952. Observed 5/20/60-bar returns are -4.01%/-4.46%/-0.81%. ATR-14 is 93.3632; Bollinger lower/middle/upper are 1512.9394/1707.7842/1902.6291, with band position 0.3786. These describe current trend and range, not entry, stop or target recommendations. History contains 413 bars from 2025-02-13, enough for SMA-200 but not a ten-year comparable series. The extraordinary 252-bar return is descriptive only; corporate-action and predecessor-history comparability are not independently established by these files.",
+  "rsi_14": 58.3429,
+  "rsi_assessment": "RSI-14 is 58.3429, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+  "macd_assessment": "MACD line 36.0818, signal line 49.4632, histogram -13.3814: negative short-term momentum. A positive MACD line with a negative histogram means bullish momentum is slowing.",
+  "volume_assessment": "Last completed-session volume 6,513,600 versus 20-bar average 8,680,535, ratio 0.7504. Below-average turnover supplies no strong participation confirmation. Price is 29.47% below the observed 52-week high; proximity is context, not a standalone signal.",
+  "support_levels": [
+    998.19,
+    1504.2
+  ],
+  "resistance_levels": [
+    1909.48
+  ],
+  "summary": "The supplied series remains above SMA-50 and SMA-200, but negative MACD histogram, falling 5- and 20-bar returns and low volume indicate cooling momentum. Only 413 bars are available and the extraordinary historical appreciation is not independently verified for corporate-action comparability, so recent observed ranges carry more weight than extrapolation."
+}

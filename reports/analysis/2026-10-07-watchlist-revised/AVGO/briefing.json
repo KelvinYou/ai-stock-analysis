@@ -1,0 +1,68 @@
+{
+  "ticker": "AVGO",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "overall_signal": "buy",
+  "conviction": {
+    "score": 0.61,
+    "signal_convergence": 1.0,
+    "explanation": "86% revenue growth, 171% GAAP operating-income growth, actual debt reduction and 20.51x interest coverage jointly support a positive growth-and-cash thesis. The constructive higher-volume rebound adds corroboration; concentration, 46.28x trailing valuation and material net debt prevent strong-buy conviction."
+  },
+  "executive_summary": "Broadcom supports a growth purchase from realized earnings and cash: quarterly FCF was $13.665bn, GAAP operating margin 53.92%, and stated debt declined from $65.136bn to $59.419bn. The 19.38x forward valuation has an operating foundation but remains an estimate, while the 46.28x trailing multiple leaves room for disappointment.\n\nCustomer concentration and $35.444bn net debt excluding leases remain material if AI demand slows. Recurring SBC cannot be ignored through adjusted margins. Reclaimed moving averages and stronger volume support recovery, but upper-band extension and an unconfirmed longer trend favor deliberate timing.",
+  "bull_case": "Rapid GAAP earnings and cash growth plus measured debt reduction can sustain financing capacity and reward continued infrastructure demand.",
+  "bear_case": "Concentrated spending or export restrictions could undermine forecast earnings and cash while leaving material debt; adjusted profitability excludes shareholder costs.",
+  "key_uncertainties": [
+    "Persistence of concentrated AI customer demand.",
+    "Forward earnings delivery and recurring SBC economics.",
+    "Whether technical recovery follows through beyond short-term extension."
+  ],
+  "catalysts_upcoming": [
+    "Next results: continued GAAP growth and FCF with stable or declining debt would confirm productive demand.",
+    "Q4 revenue delivery against $34.8bn guidance, accompanied by cash conversion, would strengthen the forward-valuation case."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (1.48) \u2014 price may amplify broad-market moves.",
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 48.3% over available price history. Projected worst case (2-sigma): ~75.7% from current $375.81.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": 354.44,
+    "entry_rationale": "Buy-the-dip to SMA-20 support near $354.44",
+    "stop_loss": 333.2,
+    "stop_rationale": "2x ATR-14 ($10.62) below entry \u2014 invalidates the setup",
+    "take_profit_1": 493.32,
+    "take_profit_2": null,
+    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "AVGO",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "Broadcom has delivered accelerating GAAP profitability and cash, with revenue growth of 86% and quarterly FCF of $13.665bn. Actual debt reduction to $59.419bn and 20.51x operating-interest coverage substantiate financing manageability, carrying the bull beyond adjusted earnings or a promised paydown. The estimated 19.38x forward multiple has a real growth foundation, although concentration and the 46.28x trailing multiple keep conviction bounded.",
+    "winning_side": "bull",
+    "strongest_counterexample": "A customer spending slowdown could simultaneously reduce exceptional cash generation and expose $35.444bn net debt; recurring SBC and the gap between GAAP and adjusted earnings remain shareholder costs.",
+    "invalidation_conditions": [
+      "In a comparable quarter, FCF below $13.665bn combined with stated debt above $59.419bn would invalidate the observed cash/deleveraging support.",
+      "Two consecutive quarters of year-on-year GAAP operating-income decline would falsify the acceleration thesis supporting the forecast valuation."
+    ],
+    "evidence_gaps": [],
+    "decisive_factors": [
+      "GAAP operating income grew 171% and FCF 95%, independently validating profitable demand.",
+      "Debt fell by $5.717bn; stronger-volume technical recovery corroborates rather than substitutes for the business case."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "buy",
+    "macro": "buy"
+  },
+  "synthesized_signal": "buy",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

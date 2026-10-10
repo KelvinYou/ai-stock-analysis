@@ -1,0 +1,31 @@
+{
+  "symbol": "SNDK",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/SNDK/fundamentals.json",
+  "sources": [
+    {
+      "title": "Sandisk Corporation latest observed issuer financial/fund disclosure",
+      "url": "https://investor.sandisk.com/node/8136/pdf",
+      "publication_date": "2026-08-05",
+      "reporting_period": "Q4/FY2026 ended 2026-07-03",
+      "observed_facts": [
+        "Q4 revenue$8.97bn +51% sequentially; FY26$20.25bn +175% YoY.",
+        "Q4 GAAP net income$6.90bn; net income requires nonrecurring/tax reconciliation before treating margin as sustainable.",
+        "Current debt/FCF not extracted; buyback authorisation is not cash generation."
+      ],
+      "limitations": [
+        "Dated issuer release; fair-value model and independently matched current balance-sheet detail are incomplete."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

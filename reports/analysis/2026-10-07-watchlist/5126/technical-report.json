@@ -1,0 +1,17 @@
+{
+  "signal": "neutral",
+  "confidence": "low",
+  "trend": "As of 2026-10-06 close 5.5900, price is below by 0.23% versus SMA-50 5.6028 and above by 21.06% versus SMA-200 4.6175. Observed 5/20/60-bar returns are -1.93%/-5.57%/8.54%. ATR-14 is 0.1870; Bollinger lower/middle/upper are 5.3787/5.9160/6.4532, with band position 0.1966. These describe current trend and range, not entry, stop or target recommendations.",
+  "rsi_14": 27.1429,
+  "rsi_assessment": "RSI-14 is 27.1429, oversold. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+  "macd_assessment": "MACD line -0.0272, signal line 0.0459, histogram -0.0731: negative short-term momentum. Interpret alongside the moving-average trend.",
+  "volume_assessment": "Last completed-session volume 168,500 versus 20-bar average 561,775, ratio 0.2999. Below-average turnover supplies no strong participation confirmation. Price is 12.66% below the observed 52-week high; proximity is context, not a standalone signal.",
+  "support_levels": [
+    4.97,
+    5.5
+  ],
+  "resistance_levels": [
+    6.4
+  ],
+  "summary": "The longer-term uptrend is undergoing a correction, with price just below SMA-50 and a negative MACD histogram. Oversold RSI does not confirm a rebound, and volume at only 0.30 times average makes either accumulation or distribution difficult to establish."
+}

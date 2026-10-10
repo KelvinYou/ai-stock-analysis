@@ -1,0 +1,18 @@
+{
+  "ticker": "JPM",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "JPMorgan supports a bounded franchise purchase with 23% normalized ROTCE, $16.9bn normalized quarterly earnings and 14.1% standardized CET1 at an estimated 13.24x forward reference. The bull decisively shows those returns already absorb the observed $2.5bn credit costs, so charging those losses against the thesis again would misstate current economics. Deposit growth and capital support resilience, while future credit deterioration and funding repricing remain genuine risks.",
+  "winning_side": "bull",
+  "strongest_counterexample": "Loan growth of 10% expands future credit exposure, card charge-offs are 3.34%, and only 4% ex-markets NII growth leaves less buffer if deposit costs rise; strong present returns do not insulate adverse-cycle shareholder losses.",
+  "invalidation_conditions": [
+    "Comparable-quarter normalized ROTCE below 23% with card charge-offs above 3.34% would undermine the observed return/credit compensation.",
+    "Standardized CET1 below the observed 14.1% together with normalized quarterly profit below $16.9bn would weaken the capital-supported purchase."
+  ],
+  "evidence_gaps": [],
+  "decisive_factors": [
+    "Normalized income excludes significant gains and is after current credit costs.",
+    "Bank capital and franchise growth, rather than industrial FCF or a predicted NIM uplift, support the ruling."
+  ],
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,61 @@
+{
+  "symbol": "AVGO",
+  "analysis_date": "2026-10-07",
+  "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "sources": [
+    {
+      "title": "Broadcom Inc. latest observed issuer financial/fund disclosure",
+      "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial",
+      "publication_date": "2026-09-02",
+      "reporting_period": "Q3 FY2026 ended 2026-08-02",
+      "sections_reviewed": [
+        "Income statement",
+        "Balance sheet",
+        "Cash-flow statement",
+        "GAAP/non-GAAP reconciliation where present"
+      ]
+    }
+  ],
+  "observed_facts": {
+    "Q3_USD_bn": {
+      "revenue": 29.591,
+      "operating_income_GAAP": 15.955,
+      "operating_income_adjusted": 20.095,
+      "net_income_GAAP": 13.088,
+      "CFO": 14.197,
+      "PPandE": 0.532,
+      "FCF": 13.665,
+      "SBC": 2.019,
+      "interest_expense": 0.778
+    },
+    "Aug2_balance_USD_bn": {
+      "cash": 23.975,
+      "short_debt": 2.252,
+      "long_debt": 57.167
+    },
+    "Nov2_2025_stated_debt_USD_bn": 65.136
+  },
+  "derived_calculations": [
+    "FCF=14.197-0.532=$13.665bn.",
+    "Debt=2.252+57.167=59.419; net debt=59.419-23.975=$35.444bn, leases excluded.",
+    "GAAP operating margin53.92%; operating income/interest=20.51x; adjusted margin67.91%."
+  ],
+  "frozen_valuation_inputs": {
+    "price_date": "2026-10-06",
+    "close": 375.81,
+    "vendor_pe": 46.28202,
+    "vendor_forward_pe": 19.377823,
+    "market_cap": 1793977876480.0,
+    "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/AVGO/fundamentals.json"
+  },
+  "remaining_gaps": [
+    "Forward EPS growth and future customer demand remain estimates; no intrinsic price target assigned."
+  ],
+  "materiality_and_revision_reason": "Buy retained with materially better debt/interest coverage evidence. Known leverage is manageable against measured cash generation; uncertainty alone is not a neutral trigger.",
+  "previous_role_signal": "buy",
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

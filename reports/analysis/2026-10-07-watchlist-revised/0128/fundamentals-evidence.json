@@ -1,0 +1,53 @@
+{
+  "symbol": "0128",
+  "name": "FRONTKN",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/0128/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 9409140736.0,
+    "pe_ratio": 47.18182,
+    "forward_pe": 38.22923,
+    "dividend_yield": 0.39
+  },
+  "sources": [
+    {
+      "title": "FRONTKN latest observed issuer financial/fund disclosure",
+      "url": "https://insage.com.my/ir/cmn/downloading.aspx?sFileName=26217000068817&sReportType=QR",
+      "publication_date": null,
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 revenue RM186.906m versus RM156.432m; owners profit RM47.723m versus RM33.489m. H1 revenue +30%, owners profit +40%.",
+        "Derived Q2 attributable-profit/revenue ratio 25.53%; other operating income RM11.217m versus RM3.573m means the profit increase is not all core revenue growth."
+      ],
+      "limitations": []
+    },
+    {
+      "url": "https://insage.com.my/ir/cmn/downloading.aspx?sFileName=26217000068817&sReportType=QR",
+      "reporting_period": "Q2/H1 ended2026-06-30",
+      "publication_date": null,
+      "source_type": "issuer_primary",
+      "observed_facts": [
+        "CFO62.623m vs50.801m;PP&E27.132m;warrantproceeds636.783m; shortterminvestmentpurchases670.034m.",
+        "Cash221.932m+deposits338.686m;shortterminvestments961.350m;bankborrowingsnil; leases28.692m+2.881m."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "Broken-font primaryPDF visually inspected financialposition page2/cashflows pages4-5. No bankdebt and warrant-funded investment buildup now extracted."
+  ],
+  "derived_math": [
+    "FCF62.623-27.132=35.491m;leases28.692+2.881=31.573m;cash/deposits221.932+338.686=560.618m."
+  ],
+  "gaps": [
+    "Publicationdate not independently retrieved; fiscaldates/comparatives verified visually."
+  ],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

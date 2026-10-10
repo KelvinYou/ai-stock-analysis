@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "0215",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/0215/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 1,
+    "buy": 8,
+    "hold": 2,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://solarvest.com/category/learn/news/",
+      "date": "2026-08-19",
+      "observed_facts": "Solarvest official news archive reports first-quarter FY2027 net profit growth of 20% year on year.",
+      "negative_evidence_or_limitations": "Headline-level evidence cannot establish sustainable margins or market reaction."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

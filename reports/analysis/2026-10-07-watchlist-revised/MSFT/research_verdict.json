@@ -1,0 +1,18 @@
+{
+  "ticker": "MSFT",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Microsoft supports a funded-compounding purchase: operating income grew 21%, adjusted EPS 22%, and annual cash FCF remained $66.987bn despite nearly doubled capex. Rising CFO and a $36.549bn liquid surplus excluding leases give the bull measured financing and growth support at 30.63x OpenAI-adjusted FY earnings. The 6.5% FCF decline and premium valuation constrain conviction, but imperfect conversion does not outweigh the large positive cash engine.",
+  "winning_side": "bull",
+  "strongest_counterexample": "Cash FCF declined while earnings grew, and its cash-PP&E definition excludes noncash equipment and some lease demands; poor incremental cloud returns could compress the premium despite accounting growth.",
+  "invalidation_conditions": [
+    "Next comparable annual cash FCF below $66.987bn alongside no year-on-year operating-income growth would undermine the funded-compounding basis.",
+    "A comparable year with cash PP&E exceeding CFO, from $115.948bn versus $182.935bn, would invalidate the positive cash-funding foundation."
+  ],
+  "evidence_gaps": [],
+  "decisive_factors": [
+    "CFO increased from $136.162bn to $182.935bn, establishing actual internal funding growth.",
+    "Adjusted EPS basis avoids investment-gain cheapness; technical extension argues for deliberate timing."
+  ],
+  "pipeline_mode": "in-session"
+}

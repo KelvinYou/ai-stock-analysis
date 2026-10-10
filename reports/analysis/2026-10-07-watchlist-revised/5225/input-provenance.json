@@ -1,0 +1,153 @@
+{
+  "symbol": "5225",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "84f614869c9b41e97cc88b225a6f8db5691ff9c661528a950dbfb94ae746c188",
+    "price_history.csv": "8eac0c19e0d601f870812051ff447cf7c696c9e3169285a3046da3e23f7de622",
+    "indicators.json": "dea46b8014d614b5e4eb7aaa516cf2b74326fc182d7c86dac022ef0e7f785b5f",
+    "fundamentals.json": "b4715ea02f9b7ca874a785e6da3910e9d526766ec416312ac67890507109a346"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "5225",
+      "name": "IHH",
+      "analysis_date": "2026-10-07",
+      "market_snapshot_date": "2026-10-06",
+      "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/5225/fundamentals.json",
+      "snapshot_valuation": {
+        "market_cap": 69805613056.0,
+        "pe_ratio": 30.384617,
+        "forward_pe": 27.045532,
+        "dividend_yield": 1.42
+      },
+      "sources": [
+        {
+          "title": "IHH latest observed issuer financial/fund disclosure",
+          "url": "https://ihhmy.listedcompany.com/misc/qr/IHH_Q2_2026_Quarterly_Report.pdf",
+          "publication_date": "2026-08-27",
+          "reporting_period": "Q2/H1 ended 2026-06-30",
+          "observed_facts": [
+            "Q2 revenue RM7.046bn +12%, EBITDA +19%; excluding MFRS129 growth is 7% and14%.",
+            "Q2 EBITDA RM1.607bn gives derived 22.81% EBITDA/revenue, distinct from operating margin."
+          ],
+          "limitations": []
+        },
+        {
+          "url": "https://ihhmy.listedcompany.com/misc/qr/IHH_Q2_2026_Quarterly_Report.pdf",
+          "reporting_period": "Q2/H1 ended2026-06-30",
+          "publication_date": "2026-08-27",
+          "source_type": "issuer_primary",
+          "observed_facts": [
+            "Loans7107m+5789m;overdraft80m;cash1412m;leases1973m+232m.",
+            "H1CFO2403m;PP&E1521m;intangibles99m;investmentproperty12m;financecostpaid359m;leasepayments271m;ownersdividend486m.",
+            "Q2exEIownersprofit569m+36%;H1exEI1028m+22%."
+          ],
+          "limitations": []
+        }
+      ],
+      "observed_additional_facts": [
+        "Fullincome/exceptionalitem/balance/cashflow sections read; bankoverdraft and leases separated."
+      ],
+      "derived_math": [
+        "Netdebt7107+5789+80-1412=11564m;leases1973+232=2205m;FCF2403-1521-99-12=771m;postfinance/lease771-359-271=141m."
+      ],
+      "gaps": [],
+      "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+      "judgement": {
+        "signal": "buy",
+        "confidence": "medium"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "5225",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/5225/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 5,
+        "buy": 17,
+        "hold": 1,
+        "sell": 0,
+        "strongSell": 0
+      },
+      "sources": [
+        {
+          "url": "https://ihhmy.listedcompany.com/media_releases.html",
+          "date": "2026-09-28",
+          "observed_facts": "IHH issuer media archive records August 27 double-digit second-quarter growth, September 24 NTK Japan High Court appeal statement and September 28 Fortis forensic-audit statement.",
+          "negative_evidence_or_limitations": "Legal and governance updates counter an exclusively bullish healthcare-growth narrative; linked statements were inaccessible, so no legal conclusions are inferred."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "7d3cced3ae963f5f6e4c1d10ba2836e2680f0d2a4f14341f928f5808328b989b",
+    "sentiment": "a373c95577ad4f155089522f73b97cbc4962c280a0de85406d39044e5b9e0f97",
+    "technical": "aef28d789c4e5cfbfcfb2cdfc059135525a99c9968e42054881070d42c22031b",
+    "macro": "805ed231b39d0b09987e6df43d7c5765b0c44262862de268c03f11b3e6e15bdf"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

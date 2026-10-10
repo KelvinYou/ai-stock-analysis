@@ -1,0 +1,100 @@
+# Watchlist — hand-curated tickers. No @us-major/@my-klci.
+# NOTE: inline comments are NOT supported — fetch.py:81 only skips whole-line #.
+# "MY:0166 # Inari" would parse as the ticker "0166 # INARI" and fail silently.
+#
+# MACHINE-READABLE THEME MARKER (parsed by web/lib/watchlist.ts, ignored by
+# fetch.py because it is a whole-line comment):
+#   #theme: <free text> — applies to every ticker below it
+# Themes persist until the next marker. Keep them in sync when you move a
+# ticker between blocks.
+#
+# Reviewed 2026-10-07: focus recurring research on broad-market coverage,
+# established businesses, and distinct sector/catalyst roles.
+# Paused from routine coverage: IBM, SOFI, TSLA, RKLB.
+# Historical research is retained; removal is not a sell recommendation.
+
+#theme: Global equity index core
+# VT — Vanguard Total World Stock ETF; index baseline, not a single stock.
+VT
+
+#theme: US consumer staples / membership retail
+# COST — operating-growth watch; valuation must be checked before any entry.
+COST
+
+#theme: MY core banks & construction
+MY:1155
+MY:5258
+MY:5398
+
+#theme: MY conglomerate
+# 4197 Sime Darby.
+MY:4197
+
+#theme: MY diversified
+# 0215 Solarvest / 5225 IHH / 5296 MR D.I.Y.
+MY:0215
+MY:5225
+MY:5296
+
+#theme: MY semiconductor equipment & services
+# Watch-only: verify current valuation and earnings before upgrading priority.
+# 0128 Frontken / 0097 ViTrox
+MY:0097
+MY:0128
+
+#theme: MY sector-gap
+# 6947 CelcomDigi — telco cash flow / merger integration.
+# 5249 IOI Properties — proposed IOIPG REIT; verify completion and proceeds.
+MY:5249
+MY:6947
+
+#theme: MY utilities / data-center power
+# 5347 Tenaga Nasional.
+MY:5347
+
+#theme: MY plantation
+# 5126 Sarawak Oil Palms Berhad — CPO/palm oil plantation.
+MY:5126
+
+#theme: US consumer hardware
+AAPL
+
+#theme: US cloud & platforms
+GOOGL
+MSFT
+AMZN
+META
+
+#theme: US AI semiconductor supply chain
+NVDA
+AVGO
+TSM
+
+#theme: US payments
+V
+
+#theme: US healthcare / managed-care recovery
+# UNH — monitor medical costs and guidance; not a defensive proxy by default.
+UNH
+
+#theme: US electrification / data-center power
+ETN
+
+#theme: US financials
+JPM
+
+#theme: US adtech / higher-risk research
+# APP — cash conversion, customer concentration and platform-policy exposure.
+APP
+
+#theme: US enterprise software / cloud financing
+# ORCL — backlog conversion, capex and funding remain research checkpoints.
+ORCL
+
+#theme: US NAND storage / memory cycle
+# SNDK — separate pricing-driven earnings from sustainable volume growth.
+# Validate historical-series comparability before using long-window returns.
+SNDK
+
+#theme: US media / streaming
+NFLX

@@ -1,0 +1,117 @@
+{
+  "symbol": "1155",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "6cab3002b5f285770a60ff7078e48e8f932dec108750263f0479bf718b1e34a4",
+    "price_history.csv": "72f9e949366f39166894a0701fbac047c699eac23cf68b2a505222f874b200c0",
+    "indicators.json": "026a64066a736d2436f46db20c99f67dbafb537c233cd9afc940388471ae0c5a",
+    "fundamentals.json": "0542370168b7297770cdd1d8894bfb11ef3020bdcf52011c6b296342b9121a59"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "1155",
+      "analysis_date": "2026-10-07",
+      "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/1155/fundamentals.json",
+      "sources": [
+        {
+          "title": "MAYBANK latest observed issuer financial/fund disclosure",
+          "url": "https://maybank.listedcompany.com/news.html/id/2625840",
+          "publication_date": "2026-08-27",
+          "reporting_period": "Q2/H1 ended 2026-06-30",
+          "observed_facts": [
+            "Q2 attributable profit RM2.690bn vs RM2.628bn; H1 RM5.171bn vs RM5.217bn.",
+            "Bank revenue declined to RM16.078bn from RM17.079bn; nonfinancial corporate margins are not the appropriate bank comparator.",
+            "Issuer quarter summary NAV/share RM7.6927; CET1 and asset quality require full bank supplement."
+          ],
+          "limitations": [
+            "Dated issuer release; fair-value model and independently matched current balance-sheet detail are incomplete."
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+        "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+      ],
+      "judgement": {
+        "signal": "neutral",
+        "confidence": "medium"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "1155",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/1155/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 2,
+        "buy": 7,
+        "hold": 8,
+        "sell": 0,
+        "strongSell": 1
+      },
+      "sources": [
+        {
+          "url": "https://maybank.listedcompany.com/news.html/id/2625840",
+          "date": "2026-08-27",
+          "observed_facts": "Maybank reports second-quarter attributable profit of RM2.690 billion versus RM2.628 billion a year earlier and a 31 sen dividend versus 30 sen.",
+          "negative_evidence_or_limitations": "Half-year attributable profit declined to RM5.171 billion from RM5.217 billion; revenue declined, limiting a bullish growth interpretation."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "mode": "in-session"
+}

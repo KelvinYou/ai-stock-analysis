@@ -1,0 +1,60 @@
+{
+  "symbol": "SNDK",
+  "as_of": "2026-10-07",
+  "status": "OK",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+  "sources": [
+    {
+      "url": "https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-fourth-quarter-2026-financial-results",
+      "publication_date": "2026-08-05",
+      "reporting_period": "FY/Q4 ended 2026-07-03",
+      "source_type": "primary issuer disclosure"
+    }
+  ],
+  "observed_table_metrics": {
+    "units": "USD million",
+    "Q4_revenue": 8970,
+    "FY_revenue": 20250,
+    "Q4_operating_income": 7037,
+    "Q4_adjusted_operating_income": 7104,
+    "Q4_GAAP_net_income": 6903,
+    "Q4_adjusted_net_income": 6162,
+    "Q4_equity_gain": 804,
+    "Q4_GAAP_tax": 946,
+    "Q4_adjusted_tax": 950,
+    "Q4_CFO": 7126,
+    "Q4_capex": 43,
+    "Q4_FCF": 7083,
+    "Q4_Flash_Ventures_net": 110,
+    "Q4_NBM_prepayments": 1938,
+    "Q4_adjusted_FCF": 5035,
+    "FY_CFO": 11671,
+    "FY_capex": 177,
+    "FY_FCF": 11494,
+    "FY_Flash_Ventures_net": 275,
+    "FY_NBM_prepayments": 2476,
+    "FY_adjusted_FCF": 8743,
+    "cash": 4762,
+    "prior_cash": 1481,
+    "debt": 0,
+    "prior_debt": 1849,
+    "refund_liabilities": 1500,
+    "current_contract_liabilities": 849,
+    "noncurrent_contract_liabilities": 393,
+    "Q1_revenue_guidance": [
+      10300,
+      10800
+    ]
+  },
+  "derived_math": {
+    "FY_adjusted_FCF": "11671-177-275-2476=8743",
+    "Q4_adjusted_FCF": "7126-43-110-1938=5035",
+    "adjusted_FCF_yield_percent": "8743/243123*100=3.60; frozen USD million market cap",
+    "Q4_adjusted_operating_margin_percent": "7104/8970*100=79.20"
+  },
+  "residual_limitations": [
+    "No assumption that extraordinary pricing/margins persist.",
+    "Tax reconciliation is a $4m difference, not a large tax windfall."
+  ]
+}

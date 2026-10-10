@@ -1,0 +1,61 @@
+{
+  "retrieved_at": "2026-10-08T08:27:25.271093+00:00",
+  "sources": [
+    {
+      "ticker": "AVGO",
+      "path": "raw/AVGO-valuation-prices.csv",
+      "sha256": "700dcdea1d2ead65147b3be1b59a05d414597092299b50c36032ed953920709e",
+      "provider": "Yahoo Finance via yfinance; Close is split adjusted, not dividend adjusted; current retrieved vintage",
+      "corporate_action_completeness": "provider_declared_not_independently_authenticated"
+    },
+    {
+      "ticker": "NVDA",
+      "path": "raw/NVDA-valuation-prices.csv",
+      "sha256": "22e39bd701cb183a6e19ca882678a9546760aba697001450a661329fd79478fc",
+      "provider": "Yahoo Finance via yfinance; Close is split adjusted, not dividend adjusted; current retrieved vintage",
+      "corporate_action_completeness": "provider_declared_not_independently_authenticated"
+    },
+    {
+      "ticker": "MSFT",
+      "path": "raw/MSFT-valuation-prices.csv",
+      "sha256": "61a862a849c0075d217c0ccbdd1563e0bff5d7cfa3c377f18a9a615d9ba1248d",
+      "provider": "Yahoo Finance via yfinance; Close is split adjusted, not dividend adjusted; current retrieved vintage",
+      "corporate_action_completeness": "provider_declared_not_independently_authenticated"
+    },
+    {
+      "ticker": "TSM",
+      "path": "raw/TSM-valuation-prices.csv",
+      "sha256": "6cd34eca2c40fbce10e57cba79e0a3f4d939dec2c9265917046e65b876d93984",
+      "provider": "Yahoo Finance via yfinance; Close is split adjusted, not dividend adjusted; current retrieved vintage",
+      "corporate_action_completeness": "provider_declared_not_independently_authenticated"
+    },
+    {
+      "ticker": "V",
+      "path": "raw/V-valuation-prices.csv",
+      "sha256": "c2ba2624cc2deea2d3643672d62672cea4be0d868af4e18ea9e52ef2f887b9d9",
+      "provider": "Yahoo Finance via yfinance; Close is split adjusted, not dividend adjusted; current retrieved vintage",
+      "corporate_action_completeness": "provider_declared_not_independently_authenticated"
+    },
+    {
+      "ticker": "UNH",
+      "path": "raw/UNH-valuation-prices.csv",
+      "sha256": "6bb167979cc163ad3a43db02fe739e2b233d3b1c213901e25e178100a1ac6c0e",
+      "provider": "Yahoo Finance via yfinance; Close is split adjusted, not dividend adjusted; current retrieved vintage",
+      "corporate_action_completeness": "provider_declared_not_independently_authenticated"
+    },
+    {
+      "ticker": "ORCL",
+      "path": "raw/ORCL-valuation-prices.csv",
+      "sha256": "5e570ab4624251dd743e94558a9b1408b638b597396cf055b81dfdfbda52acc3",
+      "provider": "Yahoo Finance via yfinance; Close is split adjusted, not dividend adjusted; current retrieved vintage",
+      "corporate_action_completeness": "provider_declared_not_independently_authenticated"
+    },
+    {
+      "ticker": "COST",
+      "path": "raw/COST-valuation-prices.csv",
+      "sha256": "8c7664c132e75bac9b9175a3e71e861b0bf9f7401e0f7d6af2593d8e852004fc",
+      "provider": "Yahoo Finance via yfinance; Close is split adjusted, not dividend adjusted; current retrieved vintage",
+      "corporate_action_completeness": "provider_declared_not_independently_authenticated"
+    }
+  ]
+}

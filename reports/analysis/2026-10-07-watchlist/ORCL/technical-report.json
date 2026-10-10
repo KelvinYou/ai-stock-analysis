@@ -1,0 +1,18 @@
+{
+  "signal": "neutral",
+  "confidence": "low",
+  "trend": "As of 2026-10-06 close 144.7700, price is above by 0.09% versus SMA-50 144.6392 and below by 10.54% versus SMA-200 161.8271. Observed 5/20/60-bar returns are 5.07%/-10.92%/10.06%. ATR-14 is 6.0821; Bollinger lower/middle/upper are 130.7495/144.2810/157.8125, with band position 0.5181. These describe current trend and range, not entry, stop or target recommendations.",
+  "rsi_14": 51.9281,
+  "rsi_assessment": "RSI-14 is 51.9281, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+  "macd_assessment": "MACD line -1.7614, signal line -1.7181, histogram -0.0434: negative short-term momentum. Interpret alongside the moving-average trend.",
+  "volume_assessment": "Last completed-session volume 19,996,700 versus 20-bar average 34,978,055, ratio 0.5717. Below-average turnover supplies no strong participation confirmation. Price is 54.68% below the observed 52-week high; proximity is context, not a standalone signal.",
+  "support_levels": [
+    114.5,
+    131.58
+  ],
+  "resistance_levels": [
+    166.0,
+    170.7
+  ],
+  "summary": "Price has only marginally reclaimed SMA-50 and remains materially below SMA-200, with nearly flat negative MACD histogram. Neutral RSI, weak volume and conflicting 20- and 60-bar returns leave direction unresolved after a volatile rebound."
+}

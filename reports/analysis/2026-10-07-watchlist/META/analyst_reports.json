@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Refreshed vendor snapshot trailing P/E 27.96x, forward P/E 21.17x. Vendor earnings basis is not independently matched; no sector average or fair value inferred.",
+    "margin_analysis": "Operating margin31% vs43%; legal charges$2.4bn and severance$1.18bn complicate recurring comparison.",
+    "debt_analysis": "Cash/securities$90.26bn vs long-term debt$83.66bn; CFO$31.86bn versus capex$31.08bn leaves FCF$784m.",
+    "growth_outlook": "Revenue$60.801bn +28%; net income$15.848bn -14%.",
+    "key_risks": [
+      "Capex commitment and declining margin constrain earnings conversion; liquidity excludes lease obligations in simple comparison.",
+      "Snapshot financial statements lack fiscal_period_end/available_as_of and are not dated trend evidence."
+    ],
+    "key_strengths": [
+      "Ad impressions+14% and price/ad+12% show monetisation strength."
+    ],
+    "summary": "Meta Platforms, Inc.: Ad impressions+14% and price/ad+12% show monetisation strength. Fundamental view is neutral with medium confidence; Capex commitment and declining margin constrain earnings conversion; liquidity excludes lease obligations in simple comparison."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Meta reports second-quarter revenue growth of 28%, ad impression growth of 14% and ad pricing growth of 12%. Expenses rose 55%, operating profit fell 8%, net income fell 14%; legal and severance charges plus $31.08 billion capital expenditure temper enthusiasm. Yahoo recommendations fetched 2026-10-07T11:50:29.688476, period 0m: strong buy 8, buy 47, hold 7, sell 1, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Ad growth",
+      "Legal charges",
+      "AI spending"
+    ],
+    "notable_headlines": [
+      "2026-07-29 | issuer/issuer-hosted evidence | Meta reports second-quarter revenue growth of 28%, ad impression growth of 14% and ad pricing growth of 12%. | https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx"
+    ],
+    "social_sentiment": null,
+    "summary": "Meta reports second-quarter revenue growth of 28%, ad impression growth of 14% and ad pricing growth of 12%. Expenses rose 55%, operating profit fell 8%, net income fell 14%; legal and severance charges plus $31.08 billion capital expenditure temper enthusiasm."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 738.8800, price is above by 17.19% versus SMA-50 630.5163 and above by 17.6% versus SMA-200 628.2747. Observed 5/20/60-bar returns are 0.01%/20.54%/12.60%. ATR-14 is 28.3921; Bollinger lower/middle/upper are 626.2262/708.2354/790.2446, with band position 0.6868. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 62.4392,
+    "rsi_assessment": "RSI-14 is 62.4392, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line 32.6761, signal line 34.4652, histogram -1.7891: negative short-term momentum. A positive MACD line with a negative histogram means bullish momentum is slowing.",
+    "volume_assessment": "Last completed-session volume 12,547,300 versus 20-bar average 23,310,210, ratio 0.5383. Below-average turnover supplies no strong participation confirmation. Price is 5.25% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      524.0764,
+      638.0564
+    ],
+    "resistance_levels": [
+      779.82
+    ],
+    "summary": "Price remains well above both major averages after a sharp 20-bar advance, but the negative MACD histogram indicates slowing momentum. Flat five-bar returns and volume at only 0.54 times average favor consolidation over a confirmed new breakout."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: US spending remains resilient and capital investment robust, alongside a 25bp Fed hike. Inference: advertisers have demand support, while valuation and capex returns face a higher hurdle.",
+      "Inference: customer budgets and data-center energy costs can be affected by inflation; no new platform regulation is established by the snapshot."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Meta receives broad support from resilient advertiser end-demand, balanced by inflation and investment return hurdles. Macro evidence alone does not prove advertising monetization or AI capex efficiency."
+  },
+  "pipeline_mode": "in-session"
+}

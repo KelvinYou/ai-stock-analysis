@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "AMZN",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/AMZN/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 15,
+    "buy": 42,
+    "hold": 2,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx?mode=light",
+      "date": "2026-07-30",
+      "observed_facts": "Amazon reports second-quarter sales growth of 20%, AWS growth of 37% and operating income growth of 43%.",
+      "negative_evidence_or_limitations": "Trailing free cash flow became a $7.6 billion outflow; net income includes $53.4 billion pre-tax other income mainly from Anthropic investments."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

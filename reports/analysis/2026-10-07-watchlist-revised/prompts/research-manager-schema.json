@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "judged_view": {
+      "type": "string",
+      "enum": [
+        "strong_buy",
+        "buy",
+        "neutral",
+        "sell",
+        "strong_sell"
+      ],
+      "description": "Your ruling on direction. neutral is valid."
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "description": "Your confidence in the ruling, not in the stock"
+    },
+    "winning_side": {
+      "type": "string",
+      "enum": [
+        "bull",
+        "bear",
+        "neither"
+      ]
+    },
+    "thesis": {
+      "type": "string",
+      "description": "The load-bearing claim, in 2-4 sentences"
+    },
+    "strongest_counterexample": {
+      "type": "string",
+      "description": "The best argument against your own ruling, stated at full strength"
+    },
+    "invalidation_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Observable events with thresholds that would falsify the thesis"
+    },
+    "evidence_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Data nobody in the debate had (not merely disputed data)"
+    },
+    "decisive_factors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "The facts that actually decided the ruling"
+    }
+  },
+  "required": [
+    "judged_view",
+    "confidence",
+    "winning_side",
+    "thesis",
+    "strongest_counterexample",
+    "invalidation_conditions",
+    "evidence_gaps",
+    "decisive_factors"
+  ]
+}

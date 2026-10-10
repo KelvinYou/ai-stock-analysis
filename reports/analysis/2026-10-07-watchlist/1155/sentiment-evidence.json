@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "1155",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/1155/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 2,
+    "buy": 7,
+    "hold": 8,
+    "sell": 0,
+    "strongSell": 1
+  },
+  "sources": [
+    {
+      "url": "https://maybank.listedcompany.com/news.html/id/2625840",
+      "date": "2026-08-27",
+      "observed_facts": "Maybank reports second-quarter attributable profit of RM2.690 billion versus RM2.628 billion a year earlier and a 31 sen dividend versus 30 sen.",
+      "negative_evidence_or_limitations": "Half-year attributable profit declined to RM5.171 billion from RM5.217 billion; revenue declined, limiting a bullish growth interpretation."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

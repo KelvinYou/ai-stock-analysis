@@ -1,0 +1,72 @@
+{
+  "symbol": "AAPL",
+  "analysis_date": "2026-10-07",
+  "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "sources": [
+    {
+      "title": "Apple Q3 FY2026 results",
+      "url": "https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/",
+      "publication_date": "2026-07-30",
+      "reporting_period": "Q3 ended2026-06-27",
+      "sections_reviewed": [
+        "Revenue/EPS and tariff commentary"
+      ]
+    },
+    {
+      "title": "Apple consolidated financial statements Q3 FY2026",
+      "url": "https://www.apple.com/newsroom/pdfs/fy2026q3/FY26_Q3_Consolidated_Financial_Statements.pdf",
+      "publication_date": "2026-07-30",
+      "reporting_period": "Q3/9M ended2026-06-27; balance June27",
+      "sections_reviewed": [
+        "All3pages: income/balance/cash"
+      ]
+    }
+  ],
+  "observed_facts": {
+    "Q3_USD_bn": {
+      "revenue": 109.417,
+      "operating_income": 35.695,
+      "prior_operating_income": 28.202,
+      "net_income": 29.789
+    },
+    "9M_USD_bn": {
+      "CFO": 116.996,
+      "PPandE": 6.799,
+      "prior_CFO": 81.754,
+      "prior_PPandE": 9.473
+    },
+    "June27_USD_bn": {
+      "cash": 39.544,
+      "current_securities": 22.855,
+      "noncurrent_securities": 84.118,
+      "commercial_paper": 1.997,
+      "current_term_debt": 11.007,
+      "noncurrent_term_debt": 71.34
+    },
+    "Q3_EPS": 2.02,
+    "tariff_EPS_benefit": 0.11
+  },
+  "derived_calculations": [
+    "9M FCF=116.996-6.799=110.197 versus81.754-9.473=72.281 ($bn).",
+    "Debt=1.997+11.007+71.340=84.344; liquid assets=39.544+22.855+84.118=146.517; surplus62.173 ($bn), excluding leases.",
+    "Operating margin35.695/109.417=32.62%; operating income growth26.57%; Q3EPS normalised2.02-0.11=1.91."
+  ],
+  "frozen_valuation_inputs": {
+    "price_date": "2026-10-06",
+    "close": 333.63,
+    "vendor_pe": 38.17277,
+    "vendor_forward_pe": 34.81532,
+    "market_cap": 4869056364544.0,
+    "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/AAPL/fundamentals.json"
+  },
+  "remaining_gaps": [
+    "No annualised FCF or TTM tariff adjustment inferred from nine-month cash and one-quarter EPS."
+  ],
+  "materiality_and_revision_reason": "Neutral retained for demanding valuation, not unextracted financial tables. Measured cash growth strongly supports quality but does not by itself establish sufficient upside at38x.",
+  "previous_role_signal": "neutral",
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

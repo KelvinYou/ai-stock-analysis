@@ -1,0 +1,54 @@
+{
+  "symbol": "1155",
+  "name": "MAYBANK",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/1155/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 119746232320.0,
+    "pe_ratio": 11.511627,
+    "forward_pe": 10.676501,
+    "dividend_yield": 6.2
+  },
+  "sources": [
+    {
+      "title": "MAYBANK latest observed issuer financial/fund disclosure",
+      "url": "https://maybank.listedcompany.com/news.html/id/2625840",
+      "publication_date": "2026-08-27",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 attributable profit RM2.690bn vs RM2.628bn; H1 RM5.171bn vs RM5.217bn.",
+        "Bank revenue declined to RM16.078bn from RM17.079bn; nonfinancial corporate margins are not the appropriate bank comparator."
+      ],
+      "limitations": []
+    },
+    {
+      "url": "https://maybank.listedcompany.com/newsroom/Maybank_Group_FS_-_June_2026_(Bursa)_20260827.pdf",
+      "reporting_period": "H1/Q2 ended2026-06-30",
+      "publication_date": "2026-08-27",
+      "source_type": "issuer_primary",
+      "observed_facts": [
+        "H1 NII6364.352m vs6394.735m; net operating income14610.882m vs15396.580m; overhead7234.683m vs7527.994m.",
+        "Group CET1 15.657%, total capital19.413%, before proposed first interim dividend deduction; prior16.041%,19.960%.",
+        "Net impaired ratio0.80% vs0.79%; gross impaired9362.216m vs8810.197m."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "Full bank statement pages1,32,66 inspected through PDFKit text; capital definitions and group/bank columns matched."
+  ],
+  "derived_math": [
+    "H1 NII growth=(6364.352/6394.735-1)*100=-0.475%; owners profit growth=(5171.020/5216.886-1)*100=-0.879%."
+  ],
+  "gaps": [
+    "Published NIM ratio not located; NII is reported separately and is not mislabeled NIM."
+  ],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

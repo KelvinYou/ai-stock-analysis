@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "ORCL",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/ORCL/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 7,
+    "buy": 28,
+    "hold": 7,
+    "sell": 1,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+      "date": "2026-09-10",
+      "observed_facts": "Oracle reports fiscal first-quarter revenue growth of 30%, cloud infrastructure growth of 121% and RPO of $664 billion.",
+      "negative_evidence_or_limitations": "RPO is future contracted activity, not cash received; financing and conversion of capacity commitments remain unresolved by this release."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

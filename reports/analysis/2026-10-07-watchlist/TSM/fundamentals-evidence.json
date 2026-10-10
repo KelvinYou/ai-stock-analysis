@@ -1,0 +1,31 @@
+{
+  "symbol": "TSM",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/TSM/fundamentals.json",
+  "sources": [
+    {
+      "title": "Taiwan Semiconductor Manufactur latest observed issuer financial/fund disclosure",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-07/a80d7933be643644081584087731f73b22ea5a2c/2Q26%20EarningsRelease.pdf",
+      "publication_date": "2026-07-16",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "observed_facts": [
+        "Revenue NT$1,270.38bn; net income NT$706.56bn; diluted EPS NT$27.25.",
+        "Derived net margin55.62%; ADR EPSUS$4.31 is not ordinary-share EPS.",
+        "Current debt/FCF not extracted; fab investment and overseas-capacity economics need cash-flow review."
+      ],
+      "limitations": [
+        "Dated issuer release; fair-value model and independently matched current balance-sheet detail are incomplete."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

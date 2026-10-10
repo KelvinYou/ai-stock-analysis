@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "5347",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/5347/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 4,
+    "buy": 12,
+    "hold": 5,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://www.tnb.com.my/assets/quarterly_results/Financial_Unaudited_Results_-_2QFY2026.pdf",
+      "date": "2026-08-27",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "source_type": "direct_issuer_document",
+      "observed_facts": [
+        "Q2 revenue RM18.236bn versus RM16.835bn, but owners profit RM888.8m versus RM1,158.1m; H1 owners profit RM1.986bn versus RM2.216bn.",
+        "Derived Q2 operating margin 11.44% versus 12.58%; FX translation moved from RM318.4m gain to RM2.1m loss.",
+        "Borrowings RM60.936bn excluding leases; lease liabilities RM31.198bn; cash/deposits RM15.280bn. Latest FCF not independently extracted."
+      ],
+      "limitations": [
+        "Issuer PDF is scanned; statements on pages1-3 visually inspected through PDFKit renders. Release date corroborated by issuer Aug27 announcement; regulatory/AFA effects require full tariff reconciliation."
+      ],
+      "verification": "Primary facts cross-checked against current-run fundamentals evidence; scanned reports visually verified by fundamentals role. Signals independently assessed."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction",
+    "Issuer PDF is scanned; statements on pages1-3 visually inspected through PDFKit renders. Release date corroborated by issuer Aug27 announcement; regulatory/AFA effects require full tariff reconciliation."
+  ],
+  "primary_fact_crosscheck_path": "5347/fundamentals-evidence.json"
+}

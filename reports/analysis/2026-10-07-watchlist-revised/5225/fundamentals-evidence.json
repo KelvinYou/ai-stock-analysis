@@ -1,0 +1,52 @@
+{
+  "symbol": "5225",
+  "name": "IHH",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/5225/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 69805613056.0,
+    "pe_ratio": 30.384617,
+    "forward_pe": 27.045532,
+    "dividend_yield": 1.42
+  },
+  "sources": [
+    {
+      "title": "IHH latest observed issuer financial/fund disclosure",
+      "url": "https://ihhmy.listedcompany.com/misc/qr/IHH_Q2_2026_Quarterly_Report.pdf",
+      "publication_date": "2026-08-27",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 revenue RM7.046bn +12%, EBITDA +19%; excluding MFRS129 growth is 7% and14%.",
+        "Q2 EBITDA RM1.607bn gives derived 22.81% EBITDA/revenue, distinct from operating margin."
+      ],
+      "limitations": []
+    },
+    {
+      "url": "https://ihhmy.listedcompany.com/misc/qr/IHH_Q2_2026_Quarterly_Report.pdf",
+      "reporting_period": "Q2/H1 ended2026-06-30",
+      "publication_date": "2026-08-27",
+      "source_type": "issuer_primary",
+      "observed_facts": [
+        "Loans7107m+5789m;overdraft80m;cash1412m;leases1973m+232m.",
+        "H1CFO2403m;PP&E1521m;intangibles99m;investmentproperty12m;financecostpaid359m;leasepayments271m;ownersdividend486m.",
+        "Q2exEIownersprofit569m+36%;H1exEI1028m+22%."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "Fullincome/exceptionalitem/balance/cashflow sections read; bankoverdraft and leases separated."
+  ],
+  "derived_math": [
+    "Netdebt7107+5789+80-1412=11564m;leases1973+232=2205m;FCF2403-1521-99-12=771m;postfinance/lease771-359-271=141m."
+  ],
+  "gaps": [],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

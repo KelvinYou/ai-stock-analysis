@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "mode": "read-only real provider; no model calls",
+  "observations": [
+    {
+      "ticker": "AAPL",
+      "captured_at": "2026-10-08T18:24:18.070839",
+      "provider_capture": "current",
+      "bars": 251,
+      "financial_periods": 5,
+      "financial_currency": "USD",
+      "valuation_price": {
+        "price": 336.6700134277344,
+        "price_date": "2026-10-07",
+        "available_as_of": "2026-10-08",
+        "currency": "USD",
+        "share_basis": "yahoo-listed:AAPL",
+        "source": "yahoo_plain_close_provider_observed_at_capture"
+      },
+      "readiness": {
+        "statement": true,
+        "history_periods": 5,
+        "growth": false,
+        "valuation": false,
+        "statement_age_days": 100,
+        "statement_filing_age_days": 0,
+        "gaps": [
+          "comparable_year_ago_period_unavailable",
+          "trailing_eps_with_common_share_basis_unavailable",
+          "pe_unavailable",
+          "market_cap_unavailable"
+        ]
+      }
+    },
+    {
+      "ticker": "1155",
+      "captured_at": "2026-10-08T18:24:19.125547",
+      "provider_capture": "current",
+      "bars": 251,
+      "financial_periods": 5,
+      "financial_currency": "MYR",
+      "valuation_price": {
+        "price": 9.800000190734863,
+        "price_date": "2026-10-08",
+        "available_as_of": "2026-10-08",
+        "currency": "MYR",
+        "share_basis": "yahoo-listed:1155.KL",
+        "source": "yahoo_plain_close_provider_observed_at_capture"
+      },
+      "readiness": {
+        "statement": true,
+        "history_periods": 5,
+        "growth": false,
+        "valuation": false,
+        "statement_age_days": 100,
+        "statement_filing_age_days": 0,
+        "gaps": [
+          "comparable_year_ago_period_unavailable",
+          "trailing_eps_with_common_share_basis_unavailable",
+          "pe_unavailable",
+          "market_cap_unavailable"
+        ]
+      }
+    }
+  ]
+}
