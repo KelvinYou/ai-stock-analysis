@@ -3,6 +3,10 @@ import { SHARE_METADATA_CACHE_CONTROL } from "./lib/share/cache";
 
 const config: NextConfig = {
   typedRoutes: false,
+  outputFileTracingIncludes: {
+    "/allocation": ["./data/allocation-research.json", "./data/allocation-research.sha256"],
+    "/allocation/evidence": ["./data/allocation-research.json", "./data/allocation-research.sha256"],
+  },
 
   /**
    * The metadata image routes are prerendered, and Next stamps its own

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight, BookOpen, LayoutDashboard } from "lucide-react";
+import { ArrowUpRight, BookOpen, LayoutDashboard, Layers } from "lucide-react";
 import { BookShape } from "@/components/consensus/book-shape";
 import { NeedsALook } from "@/components/layout/needs-a-look";
 import { cn } from "@/lib/utils";
@@ -100,6 +100,7 @@ export function Sidebar({
           <NavItem href="/" icon={LayoutDashboard} onNavigate={onClose}>
             Screener
           </NavItem>
+          <NavItem href="/allocation" icon={Layers} onNavigate={onClose}>Allocation</NavItem>
           <NavItem href="/about" icon={BookOpen} onNavigate={onClose}>
             How it works
           </NavItem>

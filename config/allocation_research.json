@@ -1,0 +1,59 @@
+{
+  "default_id": "monthly-20",
+  "experiments": [
+    {
+      "id": "monthly-20",
+      "label": "Monthly history \u00b7 20 bps",
+      "kind": "monthly",
+      "source": "2026-10-09-momentum-validation-extended/current_adjusted-20bps-block3.json",
+      "sha256": "728d459eec920ad5f94e803520be367353a250b98dddd38eefbb623e3c74a47c"
+    },
+    {
+      "id": "monthly-40",
+      "label": "Monthly history \u00b7 40 bps",
+      "kind": "monthly",
+      "source": "2026-10-09-momentum-validation-extended/current_adjusted-40bps-block3.json",
+      "sha256": "5c140895c8b1b596120428fa62332ffdee1ab2a4d08f16fb87d9d83982c2cebd"
+    },
+    {
+      "id": "monthly-80",
+      "label": "Monthly history \u00b7 80 bps",
+      "kind": "monthly",
+      "source": "2026-10-09-momentum-validation-extended/current_adjusted-80bps-block3.json",
+      "sha256": "18e50ec2933a5cda7d51a8be743f116194daf5db51a869210d29a3e0aa60a4c6"
+    },
+    {
+      "id": "episodes-0",
+      "label": "Nine episodes \u00b7 0 bps",
+      "kind": "episodes",
+      "source": "2026-10-09-pipeline-gap-diagnostics-final/diagnostics-0bps.json",
+      "sha256": "8c908d6279cbe31058139dd1b1346cf771747c0a2af54aed73ecb4b24fbe062e"
+    },
+    {
+      "id": "episodes-10",
+      "label": "Nine episodes \u00b7 10 bps",
+      "kind": "episodes",
+      "source": "2026-10-09-pipeline-gap-diagnostics-final/diagnostics-10bps.json",
+      "sha256": "23d8e33778277760bfd2cd0cfba280a762bb293264dfaf60acbf7c478a29e504"
+    },
+    {
+      "id": "episodes-20",
+      "label": "Nine episodes \u00b7 20 bps",
+      "kind": "episodes",
+      "source": "2026-10-09-pipeline-gap-diagnostics-final/diagnostics-20bps.json",
+      "sha256": "64e5646dd6915f77c8b9c13fe63aec1feee28e90da1581889fb832bf5c8e8755"
+    }
+  ],
+  "support": [
+    {
+      "id": "extended",
+      "source": "2026-10-09-momentum-validation-extended/summary.json",
+      "sha256": "ed3effbb71d87eb282f9dd09ceced5ca970bd15c8757d7d750af4a1ba6407c97"
+    },
+    {
+      "id": "concentration",
+      "source": "2026-10-09-momentum-reliability/concentration.json",
+      "sha256": "09df8638a670b6b7fce380161f4b8b1a90b246055504754ea65d144f57a7b104"
+    }
+  ]
+}
