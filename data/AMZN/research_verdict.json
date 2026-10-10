@@ -1,21 +1,18 @@
 {
   "ticker": "AMZN",
   "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Neutral: the financial snapshot shows positive earnings but low FCF relative to revenue; short-term weakness and longer-term positive returns conflict. The financial snapshot contains measured levels, but a single period cannot establish trends.",
-  "winning_side": "neither",
-  "strongest_counterexample": "Neutral: the financial snapshot shows positive earnings but low FCF relative to revenue; short-term weakness and longer-term positive returns conflict. A later dated comparative filing or sustained price confirmation could change the ruling.",
+  "confidence": "medium",
+  "thesis": "Amazon has a strong operating business but a presently weaker owner-cash return proposition. The bear carries the financing objection: negative $7.604bn TTM FCF and a $63.246bn increase in long-term debt coexist with material leases, while investment gains distort trailing cheapness. Rising AWS profitability and $161.403bn TTM CFO make successful reinvestment plausible, so restraint is warranted without asserting investment failure.",
+  "winning_side": "bear",
+  "strongest_counterexample": "AWS operating income rose from $10.2bn to $16.6bn and TTM CFO grew 33%; this expanding internal funding engine and $122.988bn liquidity can support cash recovery before a clear backward-looking signal appears.",
   "invalidation_conditions": [
-    "A sustained move back above the observed 20-bar high of $267.56 with improving dated operating results would make the cautious neutral stance too conservative."
+    "A reported TTM FCF above zero using the same net-PP&E definition, with long-term debt no higher than $128.894bn, would substantially defeat the present funding-gap objection.",
+    "AWS operating income below the observed $16.6bn in a comparable quarter alongside persistently negative TTM FCF would weaken the retained upside case."
   ],
-  "evidence_gaps": [
-    "Financial statement period/availability dates are absent.",
-    "Shopping-agent headline provides no transaction, seller, or revenue impact.",
-    "Dated analyst recommendations are not supplied."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "The snapshot reports $716.92B revenue and $77.67B net income, but FCF is $7.70B (1.1% of revenue) and operating margin is 11.2%. With no comparative periods, this supports a mixed fundamental view.",
-    "Price is below SMA-50 but remains above SMA-200; the 20-bar return and MACD are negative while longer supplied returns are positive. The evidence is mixed, with no clean directional confirmation."
+    "Capex already exceeds operating cash and debt has increased materially.",
+    "Operating growth is genuine, but 20.23x trailing earnings includes exceptional investment gains; estimated 24.47x forward is conditional."
   ],
   "pipeline_mode": "in-session"
 }

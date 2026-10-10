@@ -1,21 +1,18 @@
 {
   "ticker": "AVGO",
-  "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Neutral: strong snapshot profitability is offset by elevated reported trailing P/E and a weak intermediate price structure; the custom-chip headline is not company-specific evidence. The financial snapshot contains measured levels, but a single period cannot establish trends.",
-  "winning_side": "neither",
-  "strongest_counterexample": "Neutral: strong snapshot profitability is offset by elevated reported trailing P/E and a weak intermediate price structure; the custom-chip headline is not company-specific evidence. A later dated comparative filing or sustained price confirmation could change the ruling.",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Broadcom has delivered accelerating GAAP profitability and cash, with revenue growth of 86% and quarterly FCF of $13.665bn. Actual debt reduction to $59.419bn and 20.51x operating-interest coverage substantiate financing manageability, carrying the bull beyond adjusted earnings or a promised paydown. The estimated 19.38x forward multiple has a real growth foundation, although concentration and the 46.28x trailing multiple keep conviction bounded.",
+  "winning_side": "bull",
+  "strongest_counterexample": "A customer spending slowdown could simultaneously reduce exceptional cash generation and expose $35.444bn net debt; recurring SBC and the gap between GAAP and adjusted earnings remain shareholder costs.",
   "invalidation_conditions": [
-    "A close above the observed 20-bar high of $376.59 with sustained positive momentum would weaken the bearish technical reading."
+    "In a comparable quarter, FCF below $13.665bn combined with stated debt above $59.419bn would invalidate the observed cash/deleveraging support.",
+    "Two consecutive quarters of year-on-year GAAP operating-income decline would falsify the acceleration thesis supporting the forecast valuation."
   ],
-  "evidence_gaps": [
-    "Financial statement period/availability dates are absent.",
-    "Company-specific exposure to the Google/Nvidia chip story is unknown.",
-    "Dated analyst recommendations are not supplied."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "The snapshot reports operating margin 40.8%, FCF $26.91B (42.1% of revenue), and debt/equity 0.80. The trailing P/E is 45.34 with no peer context, leaving a balanced valuation/profitability view.",
-    "Price remains below SMA-50/SMA-200, and the 20/60-bar returns are negative, but the latest five-bar return and MACD histogram improved. The weak trend is not confirmed by volume and supports only a low-confidence bearish technical reading."
+    "GAAP operating income grew 171% and FCF 95%, independently validating profitable demand.",
+    "Debt fell by $5.717bn; stronger-volume technical recovery corroborates rather than substitutes for the business case."
   ],
   "pipeline_mode": "in-session"
 }

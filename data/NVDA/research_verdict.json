@@ -1,22 +1,18 @@
 {
   "ticker": "NVDA",
   "judged_view": "buy",
-  "confidence": "low",
-  "thesis": "The snapshot reports 60.4% operating margin, 55.6% net margin, and FCF equal to 44.8% of revenue; the price is above both moving averages with positive returns at all supplied horizons. The dated alliance headline has no economics, and no statement period is specified, so confidence remains moderate.",
+  "confidence": "medium",
+  "thesis": "NVIDIA earns a growth purchase from 124% operating-income growth, 66.24% operating margin and $21.341bn quarterly FCF after substantial working-capital absorption. The bull answers accounting-only and funding-fragility objections with positive H1 cash and a $23.220bn liquid surplus excluding equity marks. Concentrated collections and the extended chart constrain conviction, while the 15.14x forward estimate is a scenario rather than guaranteed cheapness.",
   "winning_side": "bull",
-  "strongest_counterexample": "A sustained close below the observed 20-bar low of $208.93, or later evidence that demand/monetization does not match the alliance narrative, would invalidate the near-term bullish reading.",
+  "strongest_counterexample": "Receivables absorbed $22.346bn and inventory $5.784bn in Q2; concentrated customer spending or impaired collection could reduce both realized cash and the earnings underpinning the forecast multiple.",
   "invalidation_conditions": [
-    "A sustained close below the observed 20-bar low of $208.93, or later evidence that demand/monetization does not match the alliance narrative, would invalidate the near-term bullish reading."
+    "A comparable quarter with FCF at or below zero while receivable cash absorption exceeds $22.346bn would invalidate demonstrated conversion resilience.",
+    "Year-on-year operating-income decline in two consecutive reported quarters would falsify the sustained profitable-demand thesis."
   ],
-  "evidence_gaps": [
-    "Financial statement period/availability dates are absent.",
-    "Alliance size, duration, deployment timing, and revenue contribution are not in the packet.",
-    "Dated analyst recommendations are not supplied."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "The snapshot reports 60.4% operating margin, 55.6% net margin, FCF $96.68B (44.8% of revenue), and debt/equity 0.07. This supports a positive measured-level view; period comparisons and alliance economics are absent.",
-    "Price is above both moving averages, returns are positive across the reported horizons, and MACD is positive. RSI is neutral and latest volume is below average, so the trend is constructive but not fully confirmed.",
-    "Statement period is not specified; no multi-period trend is inferred."
+    "Cash remains positive after the specified receivable and inventory burden.",
+    "Operating growth excludes equity gains; liquid capacity does not count risky equity investments or erase export/customer concentration."
   ],
   "pipeline_mode": "in-session"
 }

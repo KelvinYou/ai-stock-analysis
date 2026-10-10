@@ -1,0 +1,156 @@
+{
+  "symbol": "5296",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "0351d6fb7b8619cfb3072899f10f065b280bfe7815b36bc8066cafa7ce1f69a2",
+    "price_history.csv": "43c35695875bd7416d7605246dfbd49467cd717d29bda426476bd29996696e75",
+    "indicators.json": "44365c4c7448e0568026850f571c3b9d46b7c1fcdeae88fe1387ae7ede27a0b7",
+    "fundamentals.json": "e70bf92a97e66e11855cd7c50dea41bd4932e0cbd0dda750af05cd9da350e440"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "5296",
+      "name": "MRDIY",
+      "analysis_date": "2026-10-07",
+      "market_snapshot_date": "2026-10-06",
+      "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/5296/fundamentals.json",
+      "snapshot_valuation": {
+        "market_cap": 11752071168.0,
+        "pe_ratio": 17.714285,
+        "forward_pe": 16.31579,
+        "dividend_yield": 5.32
+      },
+      "sources": [
+        {
+          "title": "MRDIY latest observed issuer financial/fund disclosure",
+          "url": "https://corporate.mrdiy.com/news.html/id/2623004",
+          "publication_date": "2026-08-11",
+          "reporting_period": "Q2/H1 ended 2026-06-30",
+          "observed_facts": [
+            "Q2 revenue RM1.257bn vs RM1.214bn; attributable profit RM134.406m vs RM158.581m.",
+            "Derived attributable-profit/revenue ratio 10.69%, vs13.06%; earnings lag revenue."
+          ],
+          "limitations": []
+        },
+        {
+          "url": "https://corporate.mrdiy.com/newsroom/Bursa_Announcement_DIY-2QFY2026_20260811.pdf",
+          "reporting_period": "Q2/H1 ended2026-06-30",
+          "publication_date": "2026-08-11",
+          "source_type": "issuer_primary",
+          "observed_facts": [
+            "Cash605.159m; currentborrowings15.827m/noncurrent530.207m; currentlease263.156m/noncurrent1207.366m.",
+            "H1CFO686.727m;PP&E60.439m;intangible1.249m;leaseprincipal121.249m;borrowinginterest4.694m/leaseinterest36.138m; dividend511.784m.",
+            "H1inventoryrelease124.040m; operatingprofit481.701m vs481.106m."
+          ],
+          "limitations": []
+        }
+      ],
+      "observed_additional_facts": [
+        "Fullstatement pages1-6 extracted; balance-sheet equity1831.215m agrees with changes in equity. Summary NAV/share appears reversed in PDF row, so NAV not used.",
+        "Verified equity declines from RM2.016543bn to RM1.831215bn: H1 profit RM326.426m minus paid dividends RM511.784m explains the decrease. Exchange summary NAV/share 0.1932 current versus 0.2128 prior agrees with that direction, but full-PDF NAV row is reversed; numerical NAV not used in the report."
+      ],
+      "derived_math": [
+        "Borrowings530.207+15.827=546.034m;netcash605.159-546.034=59.125m.",
+        "Leases1207.366+263.156=1470.522m; leaseinclusive netdebt546.034+1470.522-605.159=1411.397m.",
+        "FCF686.727-60.439-1.249=625.039m; conservativeafterleaseprincipal/interest625.039-121.249-4.694-36.138=462.958m."
+      ],
+      "gaps": [],
+      "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+      "judgement": {
+        "signal": "buy",
+        "confidence": "medium"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "5296",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/5296/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 2,
+        "buy": 11,
+        "hold": 2,
+        "sell": 0,
+        "strongSell": 1
+      },
+      "sources": [
+        {
+          "url": "https://corporate.mrdiy.com/news.html/id/2623004",
+          "date": "2026-08-11",
+          "observed_facts": "MR DIY second-quarter revenue rose from RM1.214 billion to RM1.257 billion, but attributable profit fell from RM158.581 million to RM134.406 million.",
+          "negative_evidence_or_limitations": "Current-month analyst buy lean is contrarian to the reported profit decline; no verified price-response evidence."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "7bbd39ea47755a03dab9e3f673867e6448da5514b1a4812fb9c3fef990fdb976",
+    "sentiment": "146e2214673d03fc488f90d0005b05dd3412aa34e6d5787f929b28f51630fc59",
+    "technical": "a4b31ddae49b5abb8bf98f54e540c5bbac0dc6ff10fcc30a8597229fe8cf4362",
+    "macro": "56aa5cbae8b85fcfd140058bb8b5dab13c48ad19668f1f5b45d2af53b54e56be"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

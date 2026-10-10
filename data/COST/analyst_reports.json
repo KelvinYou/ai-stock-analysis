@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Oct6 $935.68 /FY26 EPS$20.76=45.07x; removing disclosed $0.15 tariff benefit gives EPS$20.61 and45.40x (analyst normalisation). Vendor44.49x/forward37.41x use other earnings bases. FY FCF yield2.26% versus frozen market cap is demanding.",
+    "margin_analysis": "FY operating margin=11.685/303.154=3.85%, versus10.383/275.235=3.77%. Net margin=9.226/303.154=3.04%, including membership fees in denominator.",
+    "debt_analysis": "Cash$20.207bn+short investments$1.094bn versus stated debt$6.162bn excluding leases. CFO$15.825bn less PP&E$6.435bn gives FCF$9.390bn; liquidity and cash conversion are strong.",
+    "growth_outlook": "FY sales+10.1%, adjusted comparable sales+6.6%, EPS+14.0%; tariff normalisation barely alters the operating-growth thesis.",
+    "key_risks": [
+      "At45.4x normalised FY earnings, return depends on sustaining high growth or valuation premium; evidence supports quality more clearly than entry upside.",
+      "Working-capital contribution$2.328bn is part of CFO; FCF is not owner earnings after every lease obligation."
+    ],
+    "key_strengths": [
+      "Positive FCF and liquid assets well above stated debt.",
+      "Membership fees$5.907bn versus$5.323bn support recurring economics."
+    ],
+    "summary": "Costco has verified earnings growth, improving operating margin and a strong cash balance. Neutral reflects demanding entry valuation rather than missing debt or cash-flow data."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "FY2026 net sales grew 10.1%; fourth-quarter adjusted comparable sales rose 6.7%; annual earnings rose. Quarter EPS includes a nonrecurring $0.15 tariff-refund benefit; operating news does not establish valuation upside. Yahoo recommendations fetched 2026-10-07T11:50:26.786779, period 0m: strong buy 4, buy 20, hold 13, sell 1, strong sell 1. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Membership retail",
+      "Comparable sales growth",
+      "Nonrecurring tariff refunds"
+    ],
+    "notable_headlines": [
+      "2026-09-24 | issuer/issuer-hosted evidence | FY2026 net sales grew 10.1%; fourth-quarter adjusted comparable sales rose 6.7%; annual earnings rose. | https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Operating-Results/default.aspx"
+    ],
+    "social_sentiment": null,
+    "summary": "FY2026 net sales grew 10.1%; fourth-quarter adjusted comparable sales rose 6.7%; annual earnings rose. Quarter EPS includes a nonrecurring $0.15 tariff-refund benefit; operating news does not establish valuation upside."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 935.6800, price is above by 0.33% versus SMA-50 932.5808 and below by 2.55% versus SMA-200 960.1458. Observed 5/20/60-bar returns are 1.20%/2.80%/1.16%. ATR-14 is 15.1629; Bollinger lower/middle/upper are 884.2265/909.3735/934.5205, with band position 1.0231. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 74.1367,
+    "rsi_assessment": "RSI-14 is 74.1367, overbought. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -1.0921, signal line -5.4599, histogram 4.3678: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
+    "volume_assessment": "Last completed-session volume 1,899,800 versus 20-bar average 2,379,390, ratio 0.7984. Below-average turnover supplies no strong participation confirmation. Price is 14.53% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      883.1
+    ],
+    "resistance_levels": [
+      937.04,
+      987.55
+    ],
+    "summary": "Price has only narrowly reclaimed SMA-50 and remains below SMA-200 despite a strengthening positive MACD histogram. Overbought RSI, an upper-band close and below-average volume argue for waiting for broader confirmation of the recovery."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: Fed reports resilient spending and elevated inflation; BNM notes global cost pressure. Inference: value-oriented staple retail may remain comparatively resilient but still faces labor, merchandise and freight costs.",
+      "Inference: discount-rate pressure can affect valuation even when defensive operating demand holds; macro evidence alone does not assess its premium multiple."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Costco has a relatively resilient consumption profile under the verified spending backdrop. Cost pressure and the rate increase offset that support, leaving the macro layer neutral."
+  },
+  "pipeline_mode": "in-session"
+}

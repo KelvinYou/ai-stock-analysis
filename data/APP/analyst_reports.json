@@ -2,62 +2,67 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Reported P/E is 25.26 and forward P/E is 15.03; no peer benchmark or forecast assumptions are supplied.",
-    "margin_analysis": "The snapshot reports gross margin 87.9%, operating margin 75.8%, and net margin 60.8%; one period does not establish durability.",
-    "debt_analysis": "Reported debt/equity is 1.66; cash and maturity details are absent.",
-    "growth_outlook": "One snapshot reports revenue $5.48B, net income $3.33B, and FCF $3.94B (71.9% of revenue). No growth trend is inferred.",
+    "pe_assessment": "Snapshot trailing/forward P/E 21.68/13.29; inference: attractive against observed growth, subject to estimate durability.",
+    "margin_analysis": "Q2 revenue $1.924bn (+53%); derived GAAP operating margin 77.68%. Continuing net income grew 64%; discontinued prior-year income is excluded from that comparison.",
+    "debt_analysis": "Cash $3.053bn against $3.515bn debt: derived net debt $0.462bn. Q2 FCF $0.863bn covers financing needs, although receivables increased.",
+    "growth_outlook": "Q3 revenue guidance $2.055\u20132.085bn is prospective; current growth and profitability support a positive thesis.",
     "key_risks": [
-      "Debt/equity is about 1.66; cash and maturities are not supplied.",
-      "The single period cannot establish whether unusually high margins and FCF persist.",
-      "Dated growth-warning headlines are not adjudicated by company operating data in this packet."
+      "Advertising/platform concentration",
+      "Receivables and cash conversion",
+      "Exceptionally high margins may normalize"
     ],
     "key_strengths": [
-      "The snapshot reports very high margins and positive FCF relative to revenue."
+      "Strong operating growth",
+      "Small net debt relative to cash generation"
     ],
-    "summary": "The snapshot reports 75.8% operating margin, 60.8% net margin, and FCF $3.94B (71.9% of revenue), offset by debt/equity of 1.66. This is strong but single-period profitability evidence, not a growth trend."
+    "summary": "Operating growth, high margins and limited net leverage support buy at the frozen forward multiple. Confidence remains medium because advertising economics and cash conversion can change."
   },
   "sentiment": {
-    "signal": "sell",
-    "confidence": "low",
-    "news_tone": "negative but contested",
-    "news_summary": "Several dated 2026-09-23 headlines report an Edgewater Research concern that growth may be hitting a ceiling and a share-price drop; a separate Stocktwits headline also notes Citi's view of rapid client expansion. These are attributed research/media claims, not verified operating results. Relative recommendation periods are not used.",
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "AppLovin reports second-quarter revenue growth of 53%, continuing-operation profit growth of 64% and free cash flow of $863.3 million. No independent dated negative catalyst was verified in this evidence set; positive operations do not resolve regulatory, platform or valuation risks. Yahoo recommendations fetched 2026-10-07T11:50:31.657274, period 0m: strong buy 7, buy 20, hold 6, sell 0, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
     "key_themes": [
-      "Growth durability; client expansion claims; sharp share-price weakness"
+      "Advertising platform growth",
+      "Cash conversion"
     ],
     "notable_headlines": [
-      "2026-09-23 Stocktwits: APP stock drops after Edgewater says growth has stalled; Citi sees rapid client expansion.",
-      "2026-09-23 GuruFocus: AppLovin falls as Edgewater sees growth hitting a ceiling."
+      "2026-08-05 | issuer/issuer-hosted evidence | AppLovin reports second-quarter revenue growth of 53%, continuing-operation profit growth of 64% and free cash flow of $863.3 million. | https://investors.applovin.com/news/news-details/2026/AppLovin-Announces-Second-Quarter-2026-Financial-Results/"
     ],
     "social_sentiment": null,
-    "summary": "Several dated 2026-09-23 headlines report an Edgewater Research concern that growth may be hitting a ceiling and a share-price drop; a separate Stocktwits headline also notes Citi's view of rapid client expansion. These are attributed research/media claims, not verified operating results. Relative recommendation periods are not used."
+    "summary": "AppLovin reports second-quarter revenue growth of 53%, continuing-operation profit growth of 64% and free cash flow of $863.3 million. No independent dated negative catalyst was verified in this evidence set; positive operations do not resolve regulatory, platform or valuation risks."
   },
   "technical": {
     "signal": "sell",
-    "confidence": "medium",
-    "trend": "Weak: close $315.25 was 10.21% below SMA-50 and 33.21% below SMA-200; 60/252-bar returns were -33.92%/-51.47%, though the 20-bar return was +5.58%.",
-    "rsi_14": null,
-    "rsi_assessment": "RSI-14 was 51.37, neutral and not oversold.",
-    "macd_assessment": "MACD histogram was +3.8088, showing improving short-term momentum despite price remaining below both averages.",
-    "volume_assessment": "Latest volume was 1.37x the 20-bar average during a weak longer trend; participation alone does not confirm reversal.",
+    "confidence": "high",
+    "trend": "As of 2026-10-06 close 278.7800, price is below by 14.44% versus SMA-50 325.8348 and below by 38.37% versus SMA-200 452.3478. Observed 5/20/60-bar returns are -8.79%/-10.65%/-37.05%. ATR-14 is 15.6839; Bollinger lower/middle/upper are 269.9362/308.8705/347.8048, with band position 0.1136. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 30.0084,
+    "rsi_assessment": "RSI-14 is 30.0084, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -14.0721, signal line -11.2377, histogram -2.8345: negative short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 4,363,000 versus 20-bar average 5,460,255, ratio 0.7990. Below-average turnover supplies no strong participation confirmation. Price is 62.23% below the observed 52-week high; proximity is context, not a standalone signal.",
     "support_levels": [
-      299.865,
-      297.5
+      266.84
     ],
     "resistance_levels": [
       338.34,
-      576.46
+      462.69
     ],
-    "summary": "Price remains well below SMA-50 and SMA-200 and the 60/252-bar returns are deeply negative, while the 20-bar return and MACD histogram improved. This can be an early bounce within a downtrend; evidence supports a bearish technical signal with medium confidence."
+    "summary": "Price is deeply below both major averages with negative MACD and substantial declines across every provided horizon. RSI near 30 and proximity to the observed low permit a rebound but do not confirm one; volatility remains elevated and volume does not validate accumulation."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "low",
-    "fed_impact": "The supplied macro context says the Fed target range was 3.75%-4.00%, effective 2026-09-17, after a 25 bp increase announced 2026-09-16. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm. The ticker packet has no dated issuer-specific macro snapshot, so net company impact is undetermined.",
-    "interest_rate_outlook": "No forward rate path is supplied; no forecast is assigned.",
-    "fx_impact": null,
-    "sector_macro_factors": [],
-    "geopolitical_risks": [],
-    "summary": "Macro evidence is limited to the supplied Fed snapshot; no company-specific effect, FX direction, or forward policy view is inferred. Signal remains neutral with low confidence."
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: resilient spending supports aggregate demand, while higher Fed rates raise the discount-rate hurdle. Inference: advertising demand and long-duration valuation face competing effects.",
+      "No platform-policy, mobile privacy or APP-specific advertising-budget change is verified in this snapshot."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "AppLovin has a mixed spending and discount-rate backdrop. The macro layer remains neutral with low confidence because mobile advertising exposure cannot be mapped precisely from these aggregate releases."
   },
   "pipeline_mode": "in-session"
 }

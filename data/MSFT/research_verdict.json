@@ -1,22 +1,18 @@
 {
   "ticker": "MSFT",
   "judged_view": "buy",
-  "confidence": "low",
-  "thesis": "The supplied snapshot reports 40.3% net margin and FCF equal to 20.2% of revenue, while price is above SMA-50/SMA-200 and the 60-bar return is positive. Negative MACD and a Copilot-discount headline without economics temper the buy view; the statement period is not specified, so no trend is claimed.",
+  "confidence": "medium",
+  "thesis": "Microsoft supports a funded-compounding purchase: operating income grew 21%, adjusted EPS 22%, and annual cash FCF remained $66.987bn despite nearly doubled capex. Rising CFO and a $36.549bn liquid surplus excluding leases give the bull measured financing and growth support at 30.63x OpenAI-adjusted FY earnings. The 6.5% FCF decline and premium valuation constrain conviction, but imperfect conversion does not outweigh the large positive cash engine.",
   "winning_side": "bull",
-  "strongest_counterexample": "If the price continues to hold above SMA-50 while MACD turns positive and dated results show Copilot revenue growing without margin deterioration, a neutral ruling would be too cautious.",
+  "strongest_counterexample": "Cash FCF declined while earnings grew, and its cash-PP&E definition excludes noncash equipment and some lease demands; poor incremental cloud returns could compress the premium despite accounting growth.",
   "invalidation_conditions": [
-    "If the price continues to hold above SMA-50 while MACD turns positive and dated results show Copilot revenue growing without margin deterioration, a neutral ruling would be too cautious."
+    "Next comparable annual cash FCF below $66.987bn alongside no year-on-year operating-income growth would undermine the funded-compounding basis.",
+    "A comparable year with cash PP&E exceeding CFO, from $115.948bn versus $182.935bn, would invalidate the positive cash-funding foundation."
   ],
-  "evidence_gaps": [
-    "Financial statement period/availability dates are absent.",
-    "Copilot discount headline has no pricing, adoption, or margin details.",
-    "Dated analyst recommendations are not supplied."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "The snapshot shows 46.8% operating margin, 40.3% net margin, $66.99B FCF (20.2% of revenue), and debt/equity of 0.13. These support a positive level-based view; no growth trend is inferred.",
-    "Price is above both moving averages and the 60-bar return is strong, but MACD is negative, recent volume is below average, and the 252-bar return is slightly negative. The technical trend is constructive with reduced confidence.",
-    "Statement period is not specified; no multi-period trend is inferred."
+    "CFO increased from $136.162bn to $182.935bn, establishing actual internal funding growth.",
+    "Adjusted EPS basis avoids investment-gain cheapness; technical extension argues for deliberate timing."
   ],
   "pipeline_mode": "in-session"
 }

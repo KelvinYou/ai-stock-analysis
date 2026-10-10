@@ -1,30 +1,31 @@
 {
   "ticker": "5296",
-  "date": "2026-09-25",
-  "data_as_of": "2026-09-24",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
   "overall_signal": "neutral",
   "conviction": {
     "score": 0.0,
-    "signal_convergence": 0.3333,
-    "explanation": "Evidence is mixed or insufficient for a directional conclusion; deterministic finalization will recompute convergence and apply the actionability gate."
+    "signal_convergence": 0.5,
+    "explanation": "Revenue growth and positive cash after lease servicing preserve recovery upside, but deteriorating margins, inventory-supported cash and dividends above the conservative surplus weaken the income compensation at 17.71x. A weak price trend adds timing risk; the evidence is balanced rather than an established impairment."
   },
-  "executive_summary": "MRDIY\u2019s current financial snapshot is solid\u2014RM853.99M FCF, RM632.69M net income, and P/E 18.57\u2014but the share price remains below all major averages, near the 52-week low, and down 20.04% over 60 bars. With no dated multi-period cash-flow or dividend evidence, fundamentals and technicals conflict; signal stays neutral.",
-  "bull_case": "Positive current profitability and FCF could support a recovery if later statements confirm persistence and dividend coverage.",
-  "bear_case": "The medium-term downtrend is not reversed, volume is low, and debt/payout context is incomplete; earnings commentary headlines do not prove a floor.",
+  "executive_summary": "MR D.I.Y. has a financed recovery opportunity: H1 sales grew 6.46%, operating profit was broadly flat and conservative cash after capex, lease principal and specified interest was RM462.958m. The 17.71x trailing multiple and reported 5.32% yield provide possible compensation.\n\nThe income proposition is weakened by RM511.784m dividends, RM124.040m inventory-release support and quarterly margin contraction to 10.69%. Lease-inclusive net debt is RM1.411bn. Cash remains positive even in the stated inventory sensitivity, but payout restraint or cost repair is not yet observed; neutral fits the economic and technical offsets.",
+  "bull_case": "Sales growth and substantial post-lease cash can finance a margin recovery if expenses normalize and more cash is retained.",
+  "bear_case": "Continued cost pressure or fading inventory releases could reduce payout coverage and increase financing needs; a weak chart gives no reversal confirmation.",
   "key_uncertainties": [
-    "Subsequent earnings/FCF persistence is unknown.",
-    "Dividend coverage and debt maturities are not supplied.",
-    "Price trend may remain weak despite current profitability."
+    "Recurring cash after inventory movements and lease obligations.",
+    "Cost normalization and distribution discipline.",
+    "No confirmed price bottom."
   ],
   "catalysts_upcoming": [
-    "Dated earnings and payout data confirming sustained cash generation."
+    "Next comparable results: margin recovery and dividends within the same conservative cash bridge would strengthen the income case.",
+    "Cash-flow disclosure showing positive conversion without another large inventory release would improve confidence."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "Low beta (0.48) \u2014 historically less sensitive to broad-market moves.",
+      "Low beta (0.51) \u2014 historically less sensitive to broad-market moves.",
       "Sector: Consumer Cyclical \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 51.4% over available price history. Projected worst case (2-sigma): ~52.7% from current $1.30.",
+    "max_drawdown_scenario": "Historical max drawdown: 51.4% over available price history. Projected worst case (2-sigma): ~53.5% from current $1.25.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -36,30 +37,28 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.33). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.50). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "5296",
     "judged_view": "neutral",
-    "confidence": "low",
-    "thesis": "Current FCF, earnings, and margins support business quality, while price is below all key averages and near its 52-week low; the snapshot has no trend history.",
-    "winning_side": "neither",
-    "strongest_counterexample": "The strongest counterexample is a profitable, cash-generative retailer trading at P/E 18.57 whose decline is a temporary de-rating; no dated earnings trend or reversal signal confirms this.",
+    "confidence": "medium",
+    "thesis": "MR D.I.Y. retains a plausible recovery case, but its quoted 5.32% yield is not fully supported by the conservative H1 cash bridge. The bear carries the payout-quality objection: RM511.784m dividends exceed RM462.958m cash after the specified capex, leases and interest, while quarterly net margin fell to 10.69%. Positive operating cash and 17.71x trailing earnings preserve upside, so this supports waiting rather than a demonstrated business-value sell.",
+    "winning_side": "bear",
+    "strongest_counterexample": "Even mechanically removing the RM124.040m inventory release leaves RM338.918m positive adjusted cash, and H1 revenue grew 6.46% with operating profit broadly flat; recovery has real financing resources.",
     "invalidation_conditions": [
-      "A close below the observed 20-bar low would weaken the stabilization case."
+      "A subsequent comparable H1 with dividends no greater than cash after the same capex/lease/interest bridge, and quarterly attributable-profit/revenue margin at least the prior 13.06%, would defeat the present wait thesis.",
+      "Negative cash after the same bridge in the next comparable H1, from positive RM462.958m, would require a more bearish ruling."
     ],
-    "evidence_gaps": [
-      "Multi-period earnings/FCF, dividend payout, and debt maturity data are unavailable.",
-      "Dated headlines do not resolve dividend value or sustainability."
-    ],
+    "evidence_gaps": [],
     "decisive_factors": [
-      "Positive RM853.99M FCF and RM632.69M net income.",
-      "Price is below SMA-20/50/200 and down 20.04% over 60 bars."
+      "Payout coverage is a disclosed cash dispute, not a missing-data problem.",
+      "Lease-inclusive net debt RM1.411bn and inventory-supported CFO make recurring yield quality material."
     ]
   },
   "agent_signal_breakdown": {
     "fundamentals": "buy",
-    "sentiment": "neutral",
+    "sentiment": "sell",
     "technical": "sell",
     "macro": "neutral"
   },

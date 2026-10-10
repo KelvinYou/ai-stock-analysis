@@ -1,0 +1,168 @@
+{
+  "symbol": "TSM",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "574cce6effb6a8ad29b89f5c617515e5fbfc38cf2d0de85e6a53a1a592a83afa",
+    "price_history.csv": "82680495b2ce0d987126d335d23d67e281c6e195e1c726f8b7a4a9020f89e785",
+    "indicators.json": "a7a2088c229c38754aa99d95c65eb06df4487121aae8d7862dd8748cce32922b",
+    "fundamentals.json": "4f5cf0541013c3c8238021128a83a9e51f7adbacf359c67d00b1c838a9d5f51f"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "TSM",
+      "as_of": "2026-10-07",
+      "status": "OK",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+      "sources": [
+        {
+          "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-07/6f49632674bd2d0fd48cb65aaf89ec6ab510b559/2Q26%20ManagementReport.pdf",
+          "publication_date": "2026-07-16",
+          "reporting_period": "Q2 ended 2026-06-30",
+          "source_type": "primary issuer disclosure"
+        },
+        {
+          "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-07/114aaca0fea2050e96b91fffbab9ed04ba09cd92/FS.pdf",
+          "publication_date": "2026-07-16",
+          "reporting_period": "Q2/H1 ended 2026-06-30",
+          "source_type": "primary issuer disclosure"
+        }
+      ],
+      "observed_table_metrics": {
+        "units": "NTD billion unless stated",
+        "Q2_revenue": 1270.38,
+        "prior_Q2_revenue": 933.79,
+        "Q2_operating_margin_percent": 60.3,
+        "prior_Q2_operating_margin_percent": 49.6,
+        "Q2_gross_margin_percent": 67.7,
+        "Q2_net_income": 706.56,
+        "Vanguard_disposal_and_mark_to_market_gains": 63.2,
+        "Q2_CFO": 783.36,
+        "Q2_capex": 496.0,
+        "Q2_FCF": 287.36,
+        "prior_Q2_FCF": 199.85,
+        "Q1_FCF": 348.21,
+        "H1_CFO": 1482.341,
+        "H1_capex": 846.765,
+        "cash_and_marketables": 3518.01,
+        "interest_bearing_debt": 1031.68,
+        "inventory_days": 87,
+        "prior_Q1_inventory_days": 80,
+        "prior_Q2_inventory_days": 76,
+        "Q3_revenue_guidance_USD_billion": [
+          44.6,
+          45.8
+        ],
+        "Q3_operating_margin_guidance_percent": [
+          56,
+          58
+        ]
+      },
+      "derived_math": {
+        "net_cash": "3518.01-1031.68=2486.33",
+        "H1_FCF": "1482.341-846.765=635.576"
+      },
+      "residual_limitations": [
+        "Vanguard gain is pre-tax; no invented after-tax normalized EPS.",
+        "Forward valuation and guidance are estimates."
+      ]
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "TSM",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/TSM/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 6,
+        "buy": 14,
+        "hold": 1,
+        "sell": 0,
+        "strongSell": 0
+      },
+      "sources": [
+        {
+          "url": "https://pr.tsmc.com/english/news/3332",
+          "date": "2026-08-11",
+          "observed_facts": "TSMC board approved second-quarter revenue of NT$1,270.38 billion and profit of NT$706.56 billion, and a NT$7 per-share quarterly dividend.",
+          "negative_evidence_or_limitations": "Board approval and dividend are observed events; this source alone does not demonstrate an incremental growth surprise or price response."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        },
+        {
+          "url": "https://www.govinfo.gov/app/details/FR-2026-01-15/2026-00789",
+          "event_date": "2026-01-15",
+          "facts": [
+            "Specified advanced-computing exports to China are subject to case-by-case license review and conditions; applicability is product and end-use specific."
+          ],
+          "limitation": "Dated regulatory evidence; does not prove absence of subsequent amendments or approval of any specific product."
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "5e13122177f1594d3b3b937ef50b719ab08d38ea22db3b7062416c2757da20f7",
+    "sentiment": "e29239d8601cc5b9d2876794eb924f7298d1e2ecef3b312526c7107fb55201f4",
+    "technical": "b553b5382509e264a8fa8f125652cb48d0b020c13ae1a1e04d5a7d5084193ae1",
+    "macro": "e3ec9a98d580a35667fdb4082d0fd605255ba27ba5fdb43abb7eacbafa75321f"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

@@ -1,30 +1,31 @@
 {
   "ticker": "1155",
-  "date": "2026-09-25",
-  "data_as_of": "2026-09-24",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
   "overall_signal": "neutral",
   "conviction": {
     "score": 0.0,
-    "signal_convergence": 0.3333,
-    "explanation": "The supplied 6.11% yield and moderate P/E are countered by a weak intermediate chart and a dated earnings-miss headline; missing bank credit and capital data prevent a directional conclusion."
+    "signal_convergence": 0.25,
+    "explanation": "Stable distributable earnings, measured bank capital and 6.2% reported income compensation outweigh modest credit deterioration for an income horizon. Falling operating income and a confirmed downtrend keep the positive score restrained; this is not a near-term price-recovery claim."
   },
-  "executive_summary": "As of the 2026-09-24 price bar, Maybank is neutral. The 6.11% indicated yield and P/E of 11.63 are supportive, while price remains below its 50- and 200-day averages and a dated May headline reports weaker revenue and an earnings miss. Confidence is low because dated financial and bank credit-quality evidence is missing.",
-  "bull_case": "A moderate trailing and forward P/E, 6.11% indicated yield, and reported net margin of 37.7%.",
-  "bear_case": "The 20/60-bar decline, negative MACD histogram, close below SMA-50/200, and dated earnings-miss headline.",
+  "executive_summary": "Maybank supports a measured income purchase: H1 profit was nearly stable, the interim dividend increased to 31 sen, and disclosed CET1 was 15.657% before that dividend deduction. At 11.51x trailing earnings and a vendor-reported 6.2% yield, the return proposition does not require fast earnings growth.\n\nOperating income fell and gross impaired loans rose, although net impairment changed only from 0.79% to 0.80%. Below-average trend levels and negative momentum argue for patience. Stable BNM policy supports neither guaranteed margin expansion nor a recovery forecast.",
+  "bull_case": "Stable profit, cost restraint and disclosed capital can sustain income distributions without multiple expansion.",
+  "bear_case": "Revenue erosion and higher credit charges could weaken both earnings and capital after distributions; the weak chart adds near-term downside.",
   "key_uncertainties": [
-    "Whether a subsequent dated filing confirms or reverses the earnings/revenue weakness.",
-    "Bank asset-quality, capital-adequacy and dividend-coverage data are absent.",
-    "The financial snapshot has no fiscal-period or availability date."
+    "Capital after the proposed dividend deduction.",
+    "Persistence of cost savings and gross-credit deterioration.",
+    "Reported yield is not a guaranteed future payout."
   ],
   "catalysts_upcoming": [
-    "Next dated results: verify revenue, earnings, credit quality and capital metrics; release date was not supplied."
+    "Next bank results: operating-income stabilization with contained net impairment would strengthen income durability.",
+    "Next dividend and post-distribution capital disclosure: maintained payout with resilient CET1 would support the thesis."
   ],
   "risk_assessment": {
     "correlation_notes": [
-      "Low beta (0.11) \u2014 historically less sensitive to broad-market moves.",
+      "Low beta (0.10) \u2014 historically less sensitive to broad-market moves.",
       "Sector: Financial Services \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 26.5% over available price history. Projected worst case (2-sigma): ~24.5% from current $10.12.",
+    "max_drawdown_scenario": "Historical max drawdown: 26.5% over available price history. Projected worst case (2-sigma): ~20.5% from current $9.97.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -36,37 +37,34 @@
     "take_profit_2": null,
     "target_rationale": null,
     "horizon": "swing (2-8 weeks)",
-    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.33). Wait for a clearer setup."
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.25). Wait for a clearer setup."
   },
   "research_verdict": {
     "ticker": "1155",
-    "judged_view": "neutral",
-    "confidence": "low",
-    "thesis": "Neutral is appropriate: a supplied 6.11% yield and moderate P/E do not outweigh the price below SMA-50/200 and the dated earnings-miss headline. The financial snapshot has no period date and bank credit/capital evidence is missing.",
-    "winning_side": "neither",
-    "strongest_counterexample": "The bull case is supported by the 6.11% indicated yield and lower forward P/E, together with RSI 24.8 near the observed 20/60-bar low.",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "Maybank offers a defensible income return at 11.51x trailing earnings and a vendor-reported 6.2% yield, supported by nearly stable H1 profit and 15.657% CET1. The bull establishes measured distribution capacity without requiring earnings acceleration; declining income and rising gross impairment limit conviction but do not yet outweigh that compensation.",
+    "winning_side": "bull",
+    "strongest_counterexample": "Net operating income fell to RM14.611bn from RM15.397bn, gross impaired loans rose to RM9.362bn, and both capital ratios declined before the proposed dividend deduction; cost restraint may not indefinitely protect payout capacity.",
     "invalidation_conditions": [
-      "A future dated report showing sustained revenue and earnings recovery would weaken the neutral view.",
-      "A persistent close below the observed 20/60-bar low would strengthen the technical bear case."
+      "Reassess if the next comparable H1 attributable profit falls below RM5.171bn while net impaired loans exceed the observed 0.80% ratio.",
+      "Reassess if the next declared first interim dividend is below the observed 31 sen and post-distribution CET1 falls below 15.657%; compare capital on a consistent dividend basis."
     ],
-    "evidence_gaps": [
-      "Financial snapshot lacks fiscal-period and availability dates.",
-      "No bank asset-quality, capital-adequacy or dividend-coverage measures.",
-      "No USD/MYR snapshot; the current recommendation feed has no dated ratings and was excluded."
-    ],
+    "evidence_gaps": [],
     "decisive_factors": [
-      "Price is below SMA-50 and SMA-200 with negative 20/60-bar returns.",
-      "The 2026-05-31 dated headline reports an earnings miss and weaker revenue.",
-      "The yield and valuation do not resolve missing credit-quality evidence."
+      "Stable H1 earnings and an increased declared interim payout support income ownership.",
+      "Capital is quantified and qualified for the dividend deduction; weak technicals affect entry timing rather than erase the income case."
     ]
   },
   "agent_signal_breakdown": {
-    "fundamentals": "neutral",
+    "fundamentals": "buy",
     "sentiment": "neutral",
     "technical": "sell",
     "macro": "neutral"
   },
-  "synthesized_signal": "neutral",
-  "signal_gate_reasons": [],
+  "synthesized_signal": "buy",
+  "signal_gate_reasons": [
+    "synthesis_actionability_gate_failed"
+  ],
   "pipeline_mode": "in-session"
 }

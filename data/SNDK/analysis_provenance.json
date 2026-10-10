@@ -1,0 +1,169 @@
+{
+  "symbol": "SNDK",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "6667883bb913d1a103712ee980d09e8fd3cc7e7361e5cae1aa7412e2d96b52b2",
+    "price_history.csv": "8ab900a42670881dbb20b4d972b8dacdfdacbc5b70878c0e7698a50428ad47d5",
+    "indicators.json": "27c9b89aa25918a55e7bd4ebd214137808aea6d91542cdfee12fcb601acca802",
+    "fundamentals.json": "54f5a10fc3663d350b1d5e6f7b9460a92b3403a2c1f918a92871061360e34569"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "SNDK",
+      "as_of": "2026-10-07",
+      "status": "OK",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+      "sources": [
+        {
+          "url": "https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-fourth-quarter-2026-financial-results",
+          "publication_date": "2026-08-05",
+          "reporting_period": "FY/Q4 ended 2026-07-03",
+          "source_type": "primary issuer disclosure"
+        }
+      ],
+      "observed_table_metrics": {
+        "units": "USD million",
+        "Q4_revenue": 8970,
+        "FY_revenue": 20250,
+        "Q4_operating_income": 7037,
+        "Q4_adjusted_operating_income": 7104,
+        "Q4_GAAP_net_income": 6903,
+        "Q4_adjusted_net_income": 6162,
+        "Q4_equity_gain": 804,
+        "Q4_GAAP_tax": 946,
+        "Q4_adjusted_tax": 950,
+        "Q4_CFO": 7126,
+        "Q4_capex": 43,
+        "Q4_FCF": 7083,
+        "Q4_Flash_Ventures_net": 110,
+        "Q4_NBM_prepayments": 1938,
+        "Q4_adjusted_FCF": 5035,
+        "FY_CFO": 11671,
+        "FY_capex": 177,
+        "FY_FCF": 11494,
+        "FY_Flash_Ventures_net": 275,
+        "FY_NBM_prepayments": 2476,
+        "FY_adjusted_FCF": 8743,
+        "cash": 4762,
+        "prior_cash": 1481,
+        "debt": 0,
+        "prior_debt": 1849,
+        "refund_liabilities": 1500,
+        "current_contract_liabilities": 849,
+        "noncurrent_contract_liabilities": 393,
+        "Q1_revenue_guidance": [
+          10300,
+          10800
+        ]
+      },
+      "derived_math": {
+        "FY_adjusted_FCF": "11671-177-275-2476=8743",
+        "Q4_adjusted_FCF": "7126-43-110-1938=5035",
+        "adjusted_FCF_yield_percent": "8743/243123*100=3.60; frozen USD million market cap",
+        "Q4_adjusted_operating_margin_percent": "7104/8970*100=79.20"
+      },
+      "residual_limitations": [
+        "No assumption that extraordinary pricing/margins persist.",
+        "Tax reconciliation is a $4m difference, not a large tax windfall."
+      ]
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "SNDK",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/SNDK/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 4,
+        "buy": 17,
+        "hold": 3,
+        "sell": 0,
+        "strongSell": 1
+      },
+      "sources": [
+        {
+          "url": "https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-fourth-quarter-2026-financial-results",
+          "date": "2026-08-05",
+          "observed_facts": "Sandisk reports fourth-quarter revenue growth of 51% sequentially and FY2026 revenue growth of 175%; ten new-business-model agreements signed.",
+          "negative_evidence_or_limitations": "Approximately two thirds of quarterly revenue growth came from pricing, making cycle durability a key uncertainty; new guidance is prospective."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        },
+        {
+          "url": "https://www.govinfo.gov/app/details/FR-2026-01-15/2026-00789",
+          "event_date": "2026-01-15",
+          "facts": [
+            "Specified advanced-computing exports to China are subject to case-by-case license review and conditions; applicability is product and end-use specific."
+          ],
+          "limitation": "Dated regulatory evidence; does not prove absence of subsequent amendments or approval of any specific product."
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "76e18dc2544e8caba70184672b331f557fd0f88639ceef8ac4c3eff2c2a5530f",
+    "sentiment": "67d1d5ad42dc9500c50c20b11e371f0c028471e62f5805c4337d1043b566b055",
+    "technical": "dc149906b5ba1540fe1afbb0c0d7012ec27e2bb4df8e525f015b3dc8e7cd1095",
+    "macro": "8a3129ef8ff75979b5145405ce0b26973c7c54df0d3b52ec28ed4c29d8c16d5b"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

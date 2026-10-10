@@ -1,0 +1,173 @@
+{
+  "symbol": "AMZN",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "04cfc0b1c6b643904c8d2fc028b435c8e7eb4e0ab344ee18d3a850c8566c6af9",
+    "price_history.csv": "138f1c3538f830ea69d9b085cb55a730218ad34444da41dbc15f1d4c9607865f",
+    "indicators.json": "6e05c37aa3c09649efaa793efc621809450c45c14459bd5c9f19628965934e6a",
+    "fundamentals.json": "14d35b6ba1630ad40b98bdca63e7fecac682170de8e563fd51ea3c73148caa57"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "AMZN",
+      "analysis_date": "2026-10-07",
+      "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "sources": [
+        {
+          "title": "Amazon.com, Inc. latest observed issuer financial/fund disclosure",
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx?mode=light",
+          "publication_date": "2026-07-30",
+          "reporting_period": "Q2 ended 2026-06-30",
+          "sections_reviewed": [
+            "Income statement",
+            "Balance sheet",
+            "Cash-flow statement",
+            "GAAP/non-GAAP reconciliation where present"
+          ]
+        }
+      ],
+      "observed_facts": {
+        "Q2_USD_bn": {
+          "revenue": 200.606,
+          "operating_income": 27.461,
+          "net_income": 62.6,
+          "nonoperating_pretax_other_income": 53.4,
+          "CFO": 45.387,
+          "gross_PPandE": 54.208,
+          "sales_incentives": 1.132
+        },
+        "H1_USD_bn": {
+          "CFO": 71.419,
+          "gross_PPandE": 98.411,
+          "sales_incentives": 2.101
+        },
+        "TTM_USD_bn": {
+          "CFO": 161.403,
+          "net_PPandE": 169.007,
+          "FCF": -7.604
+        },
+        "June30_USD_bn": {
+          "cash": 78.213,
+          "marketable_securities": 44.775,
+          "long_debt": 128.894,
+          "long_lease_liabilities": 94.338
+        },
+        "December31_long_debt_USD_bn": 65.648,
+        "TTM_GAAP_EPS": 12.44
+      },
+      "derived_calculations": [
+        "Q2netcapex=54.208-1.132=53.076; FCF=45.387-53.076=-7.689 ($bn).",
+        "H1FCF=71.419-(98.411-2.101)=-24.891 ($bn).",
+        "TTMFCF=161.403-169.007=-7.604 ($bn); issuer formula excludes further lease-financing adjustment.",
+        "Liquid assets=78.213+44.775=122.988; long-debt increase=128.894-65.648=63.246 ($bn)."
+      ],
+      "frozen_valuation_inputs": {
+        "price_date": "2026-10-06",
+        "close": 256.29,
+        "vendor_pe": 20.228098,
+        "vendor_forward_pe": 24.465168,
+        "market_cap": 2764424347648.0,
+        "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/AMZN/fundamentals.json"
+      },
+      "remaining_gaps": [
+        "Future utilisation/cash return on ongoing AI capex cannot be resolved by a current earnings release; no fabricated recurring EPS or intrinsic price target."
+      ],
+      "materiality_and_revision_reason": "Neutral retained with substantive cash/financing reasons. Accessible CFO, capex and debt are now quantified; quarterly and TTM cash weakness is weighed against genuinely improving operating profitability.",
+      "previous_role_signal": "neutral",
+      "judgement": {
+        "signal": "neutral",
+        "confidence": "medium"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "AMZN",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/AMZN/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 15,
+        "buy": 42,
+        "hold": 2,
+        "sell": 0,
+        "strongSell": 0
+      },
+      "sources": [
+        {
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx?mode=light",
+          "date": "2026-07-30",
+          "observed_facts": "Amazon reports second-quarter sales growth of 20%, AWS growth of 37% and operating income growth of 43%.",
+          "negative_evidence_or_limitations": "Trailing free cash flow became a $7.6 billion outflow; net income includes $53.4 billion pre-tax other income mainly from Anthropic investments."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "df7f8fdb1f1110f89c0b024dc82b3178b17d109b17a23d8bbbedf876af546542",
+    "sentiment": "991c0272c7563655c9c9d663fffc73f8d6d602f861d8a68082090bc21af9e2bc",
+    "technical": "9ac737a2883f55dd6d1653a6be8df340899174f62e98bb4e74c9c8b5b35501f8",
+    "macro": "db4cbf71cd9a5bc0700359e302b6f852a8374e7c6e0460a8a290345d72e86cc4"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

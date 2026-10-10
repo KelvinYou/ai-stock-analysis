@@ -1,21 +1,18 @@
 {
   "ticker": "SNDK",
   "judged_view": "neutral",
-  "confidence": "low",
-  "thesis": "Neutral: snapshot profitability is strong, but the recent 60-bar return is negative, dated coverage describes a fading rally, and the extreme reported 252-bar return needs price-series comparability review. The financial snapshot contains measured levels, but a single period cannot establish trends.",
-  "winning_side": "neither",
-  "strongest_counterexample": "Neutral: snapshot profitability is strong, but the recent 60-bar return is negative, dated coverage describes a fading rally, and the extreme reported 252-bar return needs price-series comparability review. A later dated comparative filing or sustained price confirmation could change the ruling.",
+  "confidence": "medium",
+  "thesis": "Sandisk has genuine cash strength and actual debt repayment to zero, but the bear carries the through-cycle valuation objection. A 3.60% adjusted annual FCF yield is much less forgiving than 6.30x forecast earnings when two-thirds of sequential revenue growth came from pricing and adjusted operating margin reached 79.20%. That imbalance supports waiting for a more durable cash basis without claiming an imminent NAND downturn or rejecting the verified cash normalization.",
+  "winning_side": "bear",
+  "strongest_counterexample": "$8.743bn adjusted annual FCF survives $2.476bn prepayment and $0.275bn venture-investment deductions; zero stated debt and $4.762bn cash can finance customer growth through softer pricing and make present earnings more durable than the bear assumes.",
   "invalidation_conditions": [
-    "A sustained close above the observed 20-bar high of $1,909.48, along with comparable price history and dated evidence of memory-demand durability, would strengthen the bullish case."
+    "Comparable adjusted annual FCF above $8.743bn after the same prepayment/venture deductions, while sequential pricing contribution falls below the disclosed two-thirds share, would weaken the peak-sensitive valuation ruling.",
+    "Adjusted annual FCF at or below zero with stated debt returning above zero would invalidate the current resilience counterweight."
   ],
-  "evidence_gaps": [
-    "Financial statement period/availability dates are absent.",
-    "Price-series corporate-action/comparability context is not included despite an extreme reported 252-bar return and 52-week range.",
-    "Memory pricing and company-specific demand data are absent."
-  ],
+  "evidence_gaps": [],
   "decisive_factors": [
-    "The snapshot reports 61.6% operating margin, 56.5% net margin, FCF $11.49B (56.8% of revenue), and debt/equity near 0.01. This is positive single-period evidence, but persistence is uncertain and the extreme price history needs separate validation.",
-    "Price is well above both moving averages, with a strong 20-bar return and positive MACD, but the 60-bar return is negative and price remains 22.84% below its 52-week high. The reported 252-bar return and 52-week range are exceptionally large; verify price-series adjustments before extrapolating them."
+    "Normalization addresses cash exaggeration but does not establish through-cycle repeatability.",
+    "Deposits/commitments qualify available cash; technical history contains only 413 bars and cannot establish long historical comparability."
   ],
   "pipeline_mode": "in-session"
 }
