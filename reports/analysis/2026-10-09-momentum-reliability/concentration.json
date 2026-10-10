@@ -1,0 +1,1610 @@
+{
+  "primary8": {
+    "source_sha256": "ea705b1e5c70e70fa8afcab5f3a2dc04992750c3ff9377d6fbd2016f6a44eec7",
+    "periods": 103,
+    "winning_excess_months": 54,
+    "total_log_excess": 0.25181670085251534,
+    "total_relative_wealth_advantage": 0.2863602269406269,
+    "positive_log_excess": 1.404431152428017,
+    "cuts": [
+      {
+        "k": 1,
+        "positive_log_excess_share": 0.07515682129505327,
+        "candidate_return_both_arms_omit_months": 11.015544768207366,
+        "hold_return_both_arms_omit_months": 9.380583490620452,
+        "remaining_log_excess": 0.14626411970827713,
+        "top_months": [
+          {
+            "as_of_date": "2024-11-29",
+            "selected_tickers": [
+              "NVDA",
+              "TSM",
+              "AVGO"
+            ],
+            "candidate_net": 0.15885298104699785,
+            "hold_net": 0.04276738408282654,
+            "log_excess": 0.10555258114423821
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "positive_log_excess_share": 0.19715870678041555,
+        "candidate_return_both_arms_omit_months": 7.127358689428173,
+        "hold_return_both_arms_omit_months": 7.33376316980505,
+        "remaining_log_excess": -0.025079128922321132,
+        "top_months": [
+          {
+            "as_of_date": "2024-11-29",
+            "selected_tickers": [
+              "NVDA",
+              "TSM",
+              "AVGO"
+            ],
+            "candidate_net": 0.15885298104699785,
+            "hold_net": 0.04276738408282654,
+            "log_excess": 0.10555258114423821
+          },
+          {
+            "as_of_date": "2020-06-30",
+            "selected_tickers": [
+              "NVDA",
+              "MSFT",
+              "TSM"
+            ],
+            "candidate_net": 0.1778670925567858,
+            "hold_net": 0.08040070918970521,
+            "log_excess": 0.0863732548594077
+          },
+          {
+            "as_of_date": "2023-04-28",
+            "selected_tickers": [
+              "NVDA",
+              "ORCL",
+              "AVGO"
+            ],
+            "candidate_net": 0.25515612633649987,
+            "hold_net": 0.15291091487151104,
+            "log_excess": 0.08496999377119058
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "positive_log_excess_share": 0.2924907098756964,
+        "candidate_return_both_arms_omit_months": 7.068453926139313,
+        "hold_return_both_arms_omit_months": 8.4586365515934,
+        "remaining_log_excess": -0.1589663638926978,
+        "top_months": [
+          {
+            "as_of_date": "2024-11-29",
+            "selected_tickers": [
+              "NVDA",
+              "TSM",
+              "AVGO"
+            ],
+            "candidate_net": 0.15885298104699785,
+            "hold_net": 0.04276738408282654,
+            "log_excess": 0.10555258114423821
+          },
+          {
+            "as_of_date": "2020-06-30",
+            "selected_tickers": [
+              "NVDA",
+              "MSFT",
+              "TSM"
+            ],
+            "candidate_net": 0.1778670925567858,
+            "hold_net": 0.08040070918970521,
+            "log_excess": 0.0863732548594077
+          },
+          {
+            "as_of_date": "2023-04-28",
+            "selected_tickers": [
+              "NVDA",
+              "ORCL",
+              "AVGO"
+            ],
+            "candidate_net": 0.25515612633649987,
+            "hold_net": 0.15291091487151104,
+            "log_excess": 0.08496999377119058
+          },
+          {
+            "as_of_date": "2020-01-31",
+            "selected_tickers": [
+              "MSFT",
+              "NVDA",
+              "TSM"
+            ],
+            "candidate_net": 0.04946041837135495,
+            "hold_net": -0.028572990766067334,
+            "log_excess": 0.07726528983482701
+          },
+          {
+            "as_of_date": "2022-05-31",
+            "selected_tickers": [
+              "AVGO",
+              "COST",
+              "UNH"
+            ],
+            "candidate_net": -0.040172827659854415,
+            "hold_net": -0.09301011826167527,
+            "log_excess": 0.05662194513554966
+          }
+        ]
+      },
+      {
+        "k": 10,
+        "positive_log_excess_share": 0.45876520477664035,
+        "candidate_return_both_arms_omit_months": 5.737968901560991,
+        "hold_return_both_arms_omit_months": 8.976636145912684,
+        "remaining_log_excess": -0.39248744438581695,
+        "top_months": [
+          {
+            "as_of_date": "2024-11-29",
+            "selected_tickers": [
+              "NVDA",
+              "TSM",
+              "AVGO"
+            ],
+            "candidate_net": 0.15885298104699785,
+            "hold_net": 0.04276738408282654,
+            "log_excess": 0.10555258114423821
+          },
+          {
+            "as_of_date": "2020-06-30",
+            "selected_tickers": [
+              "NVDA",
+              "MSFT",
+              "TSM"
+            ],
+            "candidate_net": 0.1778670925567858,
+            "hold_net": 0.08040070918970521,
+            "log_excess": 0.0863732548594077
+          },
+          {
+            "as_of_date": "2023-04-28",
+            "selected_tickers": [
+              "NVDA",
+              "ORCL",
+              "AVGO"
+            ],
+            "candidate_net": 0.25515612633649987,
+            "hold_net": 0.15291091487151104,
+            "log_excess": 0.08496999377119058
+          },
+          {
+            "as_of_date": "2020-01-31",
+            "selected_tickers": [
+              "MSFT",
+              "NVDA",
+              "TSM"
+            ],
+            "candidate_net": 0.04946041837135495,
+            "hold_net": -0.028572990766067334,
+            "log_excess": 0.07726528983482701
+          },
+          {
+            "as_of_date": "2022-05-31",
+            "selected_tickers": [
+              "AVGO",
+              "COST",
+              "UNH"
+            ],
+            "candidate_net": -0.040172827659854415,
+            "hold_net": -0.09301011826167527,
+            "log_excess": 0.05662194513554966
+          },
+          {
+            "as_of_date": "2020-05-29",
+            "selected_tickers": [
+              "NVDA",
+              "MSFT",
+              "TSM"
+            ],
+            "candidate_net": 0.1061381267510415,
+            "hold_net": 0.050455752098019876,
+            "log_excess": 0.051650664251236315
+          },
+          {
+            "as_of_date": "2025-08-29",
+            "selected_tickers": [
+              "AVGO",
+              "ORCL",
+              "NVDA"
+            ],
+            "candidate_net": 0.1605208926163808,
+            "hold_net": 0.10619805933586904,
+            "log_excess": 0.047939985461578766
+          },
+          {
+            "as_of_date": "2020-12-31",
+            "selected_tickers": [
+              "NVDA",
+              "TSM",
+              "AVGO"
+            ],
+            "candidate_net": 0.04994594087549964,
+            "hold_net": 0.0021384019360400726,
+            "log_excess": 0.04660255915469378
+          },
+          {
+            "as_of_date": "2026-05-29",
+            "selected_tickers": [
+              "TSM",
+              "AVGO",
+              "NVDA"
+            ],
+            "candidate_net": -0.05288901419828107,
+            "hold_net": -0.09497639533776424,
+            "log_excess": 0.04545525771582766
+          },
+          {
+            "as_of_date": "2022-08-31",
+            "selected_tickers": [
+              "UNH",
+              "COST",
+              "AVGO"
+            ],
+            "candidate_net": -0.06193877913224555,
+            "hold_net": -0.10040685462804025,
+            "log_excess": 0.04187261390978261
+          }
+        ]
+      }
+    ],
+    "selection_frequency": {
+      "AVGO": 69,
+      "COST": 22,
+      "MSFT": 42,
+      "NVDA": 69,
+      "ORCL": 23,
+      "TSM": 46,
+      "UNH": 17,
+      "V": 21
+    },
+    "annual_signal_date_log_excess": [
+      {
+        "signal_year": "2018",
+        "periods": 12,
+        "log_excess": -0.039975609541178694
+      },
+      {
+        "signal_year": "2019",
+        "periods": 12,
+        "log_excess": -0.023664122149625412
+      },
+      {
+        "signal_year": "2020",
+        "periods": 12,
+        "log_excess": 0.2941068616798852
+      },
+      {
+        "signal_year": "2021",
+        "periods": 12,
+        "log_excess": -0.1316078099484843
+      },
+      {
+        "signal_year": "2022",
+        "periods": 12,
+        "log_excess": 0.014290963437888892
+      },
+      {
+        "signal_year": "2023",
+        "periods": 12,
+        "log_excess": 0.08923215410608544
+      },
+      {
+        "signal_year": "2024",
+        "periods": 12,
+        "log_excess": 0.10869234804254183
+      },
+      {
+        "signal_year": "2025",
+        "periods": 12,
+        "log_excess": -0.05565674194041473
+      },
+      {
+        "signal_year": "2026",
+        "periods": 7,
+        "log_excess": -0.003601342834182881
+      }
+    ],
+    "best_10": [
+      {
+        "as_of_date": "2024-11-29",
+        "selected_tickers": [
+          "NVDA",
+          "TSM",
+          "AVGO"
+        ],
+        "candidate_net": 0.15885298104699785,
+        "hold_net": 0.04276738408282654,
+        "log_excess": 0.10555258114423821
+      },
+      {
+        "as_of_date": "2020-06-30",
+        "selected_tickers": [
+          "NVDA",
+          "MSFT",
+          "TSM"
+        ],
+        "candidate_net": 0.1778670925567858,
+        "hold_net": 0.08040070918970521,
+        "log_excess": 0.0863732548594077
+      },
+      {
+        "as_of_date": "2023-04-28",
+        "selected_tickers": [
+          "NVDA",
+          "ORCL",
+          "AVGO"
+        ],
+        "candidate_net": 0.25515612633649987,
+        "hold_net": 0.15291091487151104,
+        "log_excess": 0.08496999377119058
+      },
+      {
+        "as_of_date": "2020-01-31",
+        "selected_tickers": [
+          "MSFT",
+          "NVDA",
+          "TSM"
+        ],
+        "candidate_net": 0.04946041837135495,
+        "hold_net": -0.028572990766067334,
+        "log_excess": 0.07726528983482701
+      },
+      {
+        "as_of_date": "2022-05-31",
+        "selected_tickers": [
+          "AVGO",
+          "COST",
+          "UNH"
+        ],
+        "candidate_net": -0.040172827659854415,
+        "hold_net": -0.09301011826167527,
+        "log_excess": 0.05662194513554966
+      },
+      {
+        "as_of_date": "2020-05-29",
+        "selected_tickers": [
+          "NVDA",
+          "MSFT",
+          "TSM"
+        ],
+        "candidate_net": 0.1061381267510415,
+        "hold_net": 0.050455752098019876,
+        "log_excess": 0.051650664251236315
+      },
+      {
+        "as_of_date": "2025-08-29",
+        "selected_tickers": [
+          "AVGO",
+          "ORCL",
+          "NVDA"
+        ],
+        "candidate_net": 0.1605208926163808,
+        "hold_net": 0.10619805933586904,
+        "log_excess": 0.047939985461578766
+      },
+      {
+        "as_of_date": "2020-12-31",
+        "selected_tickers": [
+          "NVDA",
+          "TSM",
+          "AVGO"
+        ],
+        "candidate_net": 0.04994594087549964,
+        "hold_net": 0.0021384019360400726,
+        "log_excess": 0.04660255915469378
+      },
+      {
+        "as_of_date": "2026-05-29",
+        "selected_tickers": [
+          "TSM",
+          "AVGO",
+          "NVDA"
+        ],
+        "candidate_net": -0.05288901419828107,
+        "hold_net": -0.09497639533776424,
+        "log_excess": 0.04545525771582766
+      },
+      {
+        "as_of_date": "2022-08-31",
+        "selected_tickers": [
+          "UNH",
+          "COST",
+          "AVGO"
+        ],
+        "candidate_net": -0.06193877913224555,
+        "hold_net": -0.10040685462804025,
+        "log_excess": 0.04187261390978261
+      }
+    ],
+    "worst_10": [
+      {
+        "as_of_date": "2026-06-30",
+        "selected_tickers": [
+          "TSM",
+          "AVGO",
+          "UNH"
+        ],
+        "candidate_net": -0.03667707240048701,
+        "hold_net": 0.003562952454511402,
+        "log_excess": -0.040923208577951134
+      },
+      {
+        "as_of_date": "2024-10-31",
+        "selected_tickers": [
+          "NVDA",
+          "TSM",
+          "AVGO"
+        ],
+        "candidate_net": -0.008667935507263302,
+        "hold_net": 0.032847632069052196,
+        "log_excess": -0.04102539940538215
+      },
+      {
+        "as_of_date": "2023-08-31",
+        "selected_tickers": [
+          "NVDA",
+          "AVGO",
+          "ORCL"
+        ],
+        "candidate_net": -0.10549293131712756,
+        "hold_net": -0.06597858724637011,
+        "log_excess": -0.04322655852448659
+      },
+      {
+        "as_of_date": "2018-03-29",
+        "selected_tickers": [
+          "NVDA",
+          "MSFT",
+          "TSM"
+        ],
+        "candidate_net": -0.03444574791059607,
+        "hold_net": 0.010062878215041985,
+        "log_excess": -0.045065572598596476
+      },
+      {
+        "as_of_date": "2022-03-31",
+        "selected_tickers": [
+          "NVDA",
+          "COST",
+          "AVGO"
+        ],
+        "candidate_net": -0.1727487511486544,
+        "hold_net": -0.1339928980946294,
+        "log_excess": -0.04578465290074102
+      },
+      {
+        "as_of_date": "2025-02-28",
+        "selected_tickers": [
+          "NVDA",
+          "AVGO",
+          "ORCL"
+        ],
+        "candidate_net": -0.15567096593274665,
+        "hold_net": -0.11079709624125601,
+        "log_excess": -0.05178317825587479
+      },
+      {
+        "as_of_date": "2022-12-30",
+        "selected_tickers": [
+          "UNH",
+          "V",
+          "ORCL"
+        ],
+        "candidate_net": 0.04083689223952103,
+        "hold_net": 0.1014060365227861,
+        "log_excess": -0.05656248497467473
+      },
+      {
+        "as_of_date": "2026-07-31",
+        "selected_tickers": [
+          "UNH",
+          "TSM",
+          "AVGO"
+        ],
+        "candidate_net": -0.02441647974159311,
+        "hold_net": 0.03600163253926314,
+        "log_excess": -0.060088224333242915
+      },
+      {
+        "as_of_date": "2021-11-30",
+        "selected_tickers": [
+          "NVDA",
+          "ORCL",
+          "MSFT"
+        ],
+        "candidate_net": -0.0498494325165626,
+        "hold_net": 0.021352411589528757,
+        "log_excess": -0.07226245764879696
+      },
+      {
+        "as_of_date": "2022-10-31",
+        "selected_tickers": [
+          "UNH",
+          "COST",
+          "V"
+        ],
+        "candidate_net": 0.02197071233016179,
+        "hold_net": 0.10647672235070273,
+        "log_excess": -0.0794480089392869
+      }
+    ]
+  },
+  "prior11": {
+    "source_sha256": "57b2b961febae55e9273285f1c6f9e6886d3161958494b19301e3ae6399aa9ea",
+    "periods": 103,
+    "winning_excess_months": 59,
+    "total_log_excess": 0.7812773114291832,
+    "total_relative_wealth_advantage": 1.184260465276005,
+    "positive_log_excess": 2.304151352344375,
+    "cuts": [
+      {
+        "k": 1,
+        "positive_log_excess_share": 0.06808157618920135,
+        "candidate_return_both_arms_omit_months": 21.939752350674734,
+        "hold_return_both_arms_omit_months": 11.286047396947444,
+        "remaining_log_excess": 0.6244070555830983,
+        "top_months": [
+          {
+            "as_of_date": "2022-11-30",
+            "selected_tickers": [
+              "UNH",
+              "V",
+              "AVGO"
+            ],
+            "candidate_net": -0.01634000822708659,
+            "hold_net": -0.15915272459371516,
+            "log_excess": 0.1568702558460849
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "positive_log_excess_share": 0.17802816632091062,
+        "candidate_return_both_arms_omit_months": 13.108084361131652,
+        "hold_return_both_arms_omit_months": 8.73448290954172,
+        "remaining_log_excess": 0.3710734712454677,
+        "top_months": [
+          {
+            "as_of_date": "2022-11-30",
+            "selected_tickers": [
+              "UNH",
+              "V",
+              "AVGO"
+            ],
+            "candidate_net": -0.01634000822708659,
+            "hold_net": -0.15915272459371516,
+            "log_excess": 0.1568702558460849
+          },
+          {
+            "as_of_date": "2020-07-31",
+            "selected_tickers": [
+              "TSLA",
+              "NVDA",
+              "AAPL"
+            ],
+            "candidate_net": 0.4059690553380555,
+            "hold_net": 0.23722007913538848,
+            "log_excess": 0.12785979294516628
+          },
+          {
+            "as_of_date": "2023-12-29",
+            "selected_tickers": [
+              "NVDA",
+              "META",
+              "AVGO"
+            ],
+            "candidate_net": 0.15649807705039587,
+            "hold_net": 0.02012253105178164,
+            "log_excess": 0.12547379139246434
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "positive_log_excess_share": 0.25920408931771755,
+        "candidate_return_both_arms_omit_months": 10.137056126483213,
+        "hold_return_both_arms_omit_months": 8.26502056653926,
+        "remaining_log_excess": 0.18403185849457218,
+        "top_months": [
+          {
+            "as_of_date": "2022-11-30",
+            "selected_tickers": [
+              "UNH",
+              "V",
+              "AVGO"
+            ],
+            "candidate_net": -0.01634000822708659,
+            "hold_net": -0.15915272459371516,
+            "log_excess": 0.1568702558460849
+          },
+          {
+            "as_of_date": "2020-07-31",
+            "selected_tickers": [
+              "TSLA",
+              "NVDA",
+              "AAPL"
+            ],
+            "candidate_net": 0.4059690553380555,
+            "hold_net": 0.23722007913538848,
+            "log_excess": 0.12785979294516628
+          },
+          {
+            "as_of_date": "2023-12-29",
+            "selected_tickers": [
+              "NVDA",
+              "META",
+              "AVGO"
+            ],
+            "candidate_net": 0.15649807705039587,
+            "hold_net": 0.02012253105178164,
+            "log_excess": 0.12547379139246434
+          },
+          {
+            "as_of_date": "2025-10-31",
+            "selected_tickers": [
+              "AVGO",
+              "TSLA",
+              "GOOGL"
+            ],
+            "candidate_net": 0.03964952959615786,
+            "hold_net": -0.05597747408991697,
+            "log_excess": 0.09648891651465527
+          },
+          {
+            "as_of_date": "2024-01-31",
+            "selected_tickers": [
+              "NVDA",
+              "META",
+              "AVGO"
+            ],
+            "candidate_net": 0.21845832108379803,
+            "hold_net": 0.11297175227038037,
+            "log_excess": 0.09055269623624025
+          }
+        ]
+      },
+      {
+        "k": 10,
+        "positive_log_excess_share": 0.4152805626390076,
+        "candidate_return_both_arms_omit_months": 3.2803522178933573,
+        "hold_return_both_arms_omit_months": 4.1019726480792,
+        "remaining_log_excess": -0.17559195857781906,
+        "top_months": [
+          {
+            "as_of_date": "2022-11-30",
+            "selected_tickers": [
+              "UNH",
+              "V",
+              "AVGO"
+            ],
+            "candidate_net": -0.01634000822708659,
+            "hold_net": -0.15915272459371516,
+            "log_excess": 0.1568702558460849
+          },
+          {
+            "as_of_date": "2020-07-31",
+            "selected_tickers": [
+              "TSLA",
+              "NVDA",
+              "AAPL"
+            ],
+            "candidate_net": 0.4059690553380555,
+            "hold_net": 0.23722007913538848,
+            "log_excess": 0.12785979294516628
+          },
+          {
+            "as_of_date": "2023-12-29",
+            "selected_tickers": [
+              "NVDA",
+              "META",
+              "AVGO"
+            ],
+            "candidate_net": 0.15649807705039587,
+            "hold_net": 0.02012253105178164,
+            "log_excess": 0.12547379139246434
+          },
+          {
+            "as_of_date": "2025-10-31",
+            "selected_tickers": [
+              "AVGO",
+              "TSLA",
+              "GOOGL"
+            ],
+            "candidate_net": 0.03964952959615786,
+            "hold_net": -0.05597747408991697,
+            "log_excess": 0.09648891651465527
+          },
+          {
+            "as_of_date": "2024-01-31",
+            "selected_tickers": [
+              "NVDA",
+              "META",
+              "AVGO"
+            ],
+            "candidate_net": 0.21845832108379803,
+            "hold_net": 0.11297175227038037,
+            "log_excess": 0.09055269623624025
+          },
+          {
+            "as_of_date": "2026-03-31",
+            "selected_tickers": [
+              "TSM",
+              "GOOGL",
+              "AVGO"
+            ],
+            "candidate_net": 0.2602547617842328,
+            "hold_net": 0.15825443078581797,
+            "log_excess": 0.08439982169625998
+          },
+          {
+            "as_of_date": "2024-11-29",
+            "selected_tickers": [
+              "NVDA",
+              "TSM",
+              "AVGO"
+            ],
+            "candidate_net": 0.15885298104699785,
+            "hold_net": 0.07300698911973424,
+            "log_excess": 0.07696572922901714
+          },
+          {
+            "as_of_date": "2023-04-28",
+            "selected_tickers": [
+              "NVDA",
+              "META",
+              "AVGO"
+            ],
+            "candidate_net": 0.2578223371264361,
+            "hold_net": 0.17024587172960273,
+            "log_excess": 0.07216804834591894
+          },
+          {
+            "as_of_date": "2020-04-30",
+            "selected_tickers": [
+              "TSLA",
+              "NVDA",
+              "AAPL"
+            ],
+            "candidate_net": 0.1639489837898216,
+            "hold_net": 0.09105018934089285,
+            "log_excess": 0.06467781113444039
+          },
+          {
+            "as_of_date": "2020-06-30",
+            "selected_tickers": [
+              "TSLA",
+              "NVDA",
+              "AAPL"
+            ],
+            "candidate_net": 0.21688899419546837,
+            "hold_net": 0.1444053882219877,
+            "log_excess": 0.06141240666675479
+          }
+        ]
+      }
+    ],
+    "selection_frequency": {
+      "AAPL": 21,
+      "AMZN": 14,
+      "AVGO": 56,
+      "GOOGL": 17,
+      "META": 19,
+      "MSFT": 20,
+      "NVDA": 64,
+      "TSLA": 36,
+      "TSM": 29,
+      "UNH": 15,
+      "V": 18
+    },
+    "annual_signal_date_log_excess": [
+      {
+        "signal_year": "2018",
+        "periods": 12,
+        "log_excess": -0.03401469633455476
+      },
+      {
+        "signal_year": "2019",
+        "periods": 12,
+        "log_excess": -0.14140769574755352
+      },
+      {
+        "signal_year": "2020",
+        "periods": 12,
+        "log_excess": 0.35463929472221656
+      },
+      {
+        "signal_year": "2021",
+        "periods": 12,
+        "log_excess": 0.048165126328865784
+      },
+      {
+        "signal_year": "2022",
+        "periods": 12,
+        "log_excess": 0.0798215566347625
+      },
+      {
+        "signal_year": "2023",
+        "periods": 12,
+        "log_excess": 0.2366332893785303
+      },
+      {
+        "signal_year": "2024",
+        "periods": 12,
+        "log_excess": 0.11083188929088099
+      },
+      {
+        "signal_year": "2025",
+        "periods": 12,
+        "log_excess": 0.07946078993991759
+      },
+      {
+        "signal_year": "2026",
+        "periods": 7,
+        "log_excess": 0.047147757216117775
+      }
+    ],
+    "best_10": [
+      {
+        "as_of_date": "2022-11-30",
+        "selected_tickers": [
+          "UNH",
+          "V",
+          "AVGO"
+        ],
+        "candidate_net": -0.01634000822708659,
+        "hold_net": -0.15915272459371516,
+        "log_excess": 0.1568702558460849
+      },
+      {
+        "as_of_date": "2020-07-31",
+        "selected_tickers": [
+          "TSLA",
+          "NVDA",
+          "AAPL"
+        ],
+        "candidate_net": 0.4059690553380555,
+        "hold_net": 0.23722007913538848,
+        "log_excess": 0.12785979294516628
+      },
+      {
+        "as_of_date": "2023-12-29",
+        "selected_tickers": [
+          "NVDA",
+          "META",
+          "AVGO"
+        ],
+        "candidate_net": 0.15649807705039587,
+        "hold_net": 0.02012253105178164,
+        "log_excess": 0.12547379139246434
+      },
+      {
+        "as_of_date": "2025-10-31",
+        "selected_tickers": [
+          "AVGO",
+          "TSLA",
+          "GOOGL"
+        ],
+        "candidate_net": 0.03964952959615786,
+        "hold_net": -0.05597747408991697,
+        "log_excess": 0.09648891651465527
+      },
+      {
+        "as_of_date": "2024-01-31",
+        "selected_tickers": [
+          "NVDA",
+          "META",
+          "AVGO"
+        ],
+        "candidate_net": 0.21845832108379803,
+        "hold_net": 0.11297175227038037,
+        "log_excess": 0.09055269623624025
+      },
+      {
+        "as_of_date": "2026-03-31",
+        "selected_tickers": [
+          "TSM",
+          "GOOGL",
+          "AVGO"
+        ],
+        "candidate_net": 0.2602547617842328,
+        "hold_net": 0.15825443078581797,
+        "log_excess": 0.08439982169625998
+      },
+      {
+        "as_of_date": "2024-11-29",
+        "selected_tickers": [
+          "NVDA",
+          "TSM",
+          "AVGO"
+        ],
+        "candidate_net": 0.15885298104699785,
+        "hold_net": 0.07300698911973424,
+        "log_excess": 0.07696572922901714
+      },
+      {
+        "as_of_date": "2023-04-28",
+        "selected_tickers": [
+          "NVDA",
+          "META",
+          "AVGO"
+        ],
+        "candidate_net": 0.2578223371264361,
+        "hold_net": 0.17024587172960273,
+        "log_excess": 0.07216804834591894
+      },
+      {
+        "as_of_date": "2020-04-30",
+        "selected_tickers": [
+          "TSLA",
+          "NVDA",
+          "AAPL"
+        ],
+        "candidate_net": 0.1639489837898216,
+        "hold_net": 0.09105018934089285,
+        "log_excess": 0.06467781113444039
+      },
+      {
+        "as_of_date": "2020-06-30",
+        "selected_tickers": [
+          "TSLA",
+          "NVDA",
+          "AAPL"
+        ],
+        "candidate_net": 0.21688899419546837,
+        "hold_net": 0.1444053882219877,
+        "log_excess": 0.06141240666675479
+      }
+    ],
+    "worst_10": [
+      {
+        "as_of_date": "2021-08-31",
+        "selected_tickers": [
+          "GOOGL",
+          "NVDA",
+          "TSM"
+        ],
+        "candidate_net": -0.07180923530876071,
+        "hold_net": -0.028088768025754933,
+        "log_excess": -0.04602719810009688
+      },
+      {
+        "as_of_date": "2021-11-30",
+        "selected_tickers": [
+          "NVDA",
+          "TSLA",
+          "GOOGL"
+        ],
+        "candidate_net": -0.03549350707438281,
+        "hold_net": 0.01027821216018185,
+        "log_excess": -0.046364465256680046
+      },
+      {
+        "as_of_date": "2022-03-31",
+        "selected_tickers": [
+          "NVDA",
+          "TSLA",
+          "AAPL"
+        ],
+        "candidate_net": -0.20895985386142468,
+        "hold_net": -0.1688740832320494,
+        "log_excess": -0.049432587635086844
+      },
+      {
+        "as_of_date": "2022-06-30",
+        "selected_tickers": [
+          "UNH",
+          "AVGO",
+          "AAPL"
+        ],
+        "candidate_net": 0.11642804120855943,
+        "hold_net": 0.18565927813555175,
+        "log_excess": -0.06016463284436871
+      },
+      {
+        "as_of_date": "2026-07-31",
+        "selected_tickers": [
+          "GOOGL",
+          "UNH",
+          "TSM"
+        ],
+        "candidate_net": -0.034113267751332166,
+        "hold_net": 0.0387237115016561,
+        "log_excess": -0.07270146509238432
+      },
+      {
+        "as_of_date": "2023-01-31",
+        "selected_tickers": [
+          "UNH",
+          "AVGO",
+          "V"
+        ],
+        "candidate_net": -0.02540469584299443,
+        "hold_net": 0.05616801639204664,
+        "log_excess": -0.08038024587011824
+      },
+      {
+        "as_of_date": "2019-12-31",
+        "selected_tickers": [
+          "AAPL",
+          "NVDA",
+          "TSM"
+        ],
+        "candidate_net": -0.02487490482832999,
+        "hold_net": 0.0576738027422408,
+        "log_excess": -0.08126148438304792
+      },
+      {
+        "as_of_date": "2024-10-31",
+        "selected_tickers": [
+          "NVDA",
+          "TSM",
+          "AVGO"
+        ],
+        "candidate_net": -0.008667935507263302,
+        "hold_net": 0.0814096570814836,
+        "log_excess": -0.08697114865618492
+      },
+      {
+        "as_of_date": "2018-09-28",
+        "selected_tickers": [
+          "AMZN",
+          "NVDA",
+          "MSFT"
+        ],
+        "candidate_net": -0.17235528660023625,
+        "hold_net": -0.09099587856575311,
+        "log_excess": -0.09376565599541738
+      },
+      {
+        "as_of_date": "2022-12-30",
+        "selected_tickers": [
+          "UNH",
+          "V",
+          "AVGO"
+        ],
+        "candidate_net": 0.026953028025491044,
+        "hold_net": 0.18173525229611148,
+        "log_excess": -0.14038771824007196
+      }
+    ]
+  },
+  "prior5": {
+    "source_sha256": "2cccd598f4685f9115c4e02ee948377942054fbbacaf108c27e930e72f91b5b3",
+    "periods": 103,
+    "winning_excess_months": 44,
+    "total_log_excess": -0.30244076836315864,
+    "total_relative_wealth_advantage": -0.26098774013160275,
+    "positive_log_excess": 0.8079083502774759,
+    "cuts": [
+      {
+        "k": 1,
+        "positive_log_excess_share": 0.10471935833126632,
+        "candidate_return_both_arms_omit_months": 7.992030599037111,
+        "hold_return_both_arms_omit_months": 12.241861118041804,
+        "remaining_log_excess": -0.38704441239468784,
+        "top_months": [
+          {
+            "as_of_date": "2024-12-31",
+            "selected_tickers": [
+              "NVDA",
+              "AMZN",
+              "GOOGL"
+            ],
+            "candidate_net": -0.01649229601749591,
+            "hold_net": -0.09627796744426437,
+            "log_excess": 0.08460364403152922
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "positive_log_excess_share": 0.24132006212622234,
+        "candidate_return_both_arms_omit_months": 8.135712162449511,
+        "hold_return_both_arms_omit_months": 14.023211046388855,
+        "remaining_log_excess": -0.4974052616444129,
+        "top_months": [
+          {
+            "as_of_date": "2024-12-31",
+            "selected_tickers": [
+              "NVDA",
+              "AMZN",
+              "GOOGL"
+            ],
+            "candidate_net": -0.01649229601749591,
+            "hold_net": -0.09627796744426437,
+            "log_excess": 0.08460364403152922
+          },
+          {
+            "as_of_date": "2025-10-31",
+            "selected_tickers": [
+              "GOOGL",
+              "NVDA",
+              "AMZN"
+            ],
+            "candidate_net": -0.04063814614750827,
+            "hold_net": -0.09727670695547562,
+            "log_excess": 0.06085225213638024
+          },
+          {
+            "as_of_date": "2020-01-31",
+            "selected_tickers": [
+              "AAPL",
+              "MSFT",
+              "NVDA"
+            ],
+            "candidate_net": 0.025965890052169538,
+            "hold_net": -0.02359136469707585,
+            "log_excess": 0.049508597113344835
+          }
+        ]
+      },
+      {
+        "k": 5,
+        "positive_log_excess_share": 0.34619874541936196,
+        "candidate_return_both_arms_omit_months": 6.390326820446816,
+        "hold_return_both_arms_omit_months": 12.227653288002928,
+        "remaining_log_excess": -0.5821376256430472,
+        "top_months": [
+          {
+            "as_of_date": "2024-12-31",
+            "selected_tickers": [
+              "NVDA",
+              "AMZN",
+              "GOOGL"
+            ],
+            "candidate_net": -0.01649229601749591,
+            "hold_net": -0.09627796744426437,
+            "log_excess": 0.08460364403152922
+          },
+          {
+            "as_of_date": "2025-10-31",
+            "selected_tickers": [
+              "GOOGL",
+              "NVDA",
+              "AMZN"
+            ],
+            "candidate_net": -0.04063814614750827,
+            "hold_net": -0.09727670695547562,
+            "log_excess": 0.06085225213638024
+          },
+          {
+            "as_of_date": "2020-01-31",
+            "selected_tickers": [
+              "AAPL",
+              "MSFT",
+              "NVDA"
+            ],
+            "candidate_net": 0.025965890052169538,
+            "hold_net": -0.02359136469707585,
+            "log_excess": 0.049508597113344835
+          },
+          {
+            "as_of_date": "2024-11-29",
+            "selected_tickers": [
+              "NVDA",
+              "AMZN",
+              "GOOGL"
+            ],
+            "candidate_net": 0.05602458876251992,
+            "hold_net": 0.010142535743324486,
+            "log_excess": 0.044420024431591106
+          },
+          {
+            "as_of_date": "2021-09-30",
+            "selected_tickers": [
+              "GOOGL",
+              "NVDA",
+              "MSFT"
+            ],
+            "candidate_net": 0.17058979262827934,
+            "hold_net": 0.12433907990660623,
+            "log_excess": 0.040312339567043165
+          }
+        ]
+      },
+      {
+        "k": 10,
+        "positive_log_excess_share": 0.5435131825962138,
+        "candidate_return_both_arms_omit_months": 4.869200822828083,
+        "hold_return_both_arms_omit_months": 11.32054366290069,
+        "remaining_log_excess": -0.7415496070685262,
+        "top_months": [
+          {
+            "as_of_date": "2024-12-31",
+            "selected_tickers": [
+              "NVDA",
+              "AMZN",
+              "GOOGL"
+            ],
+            "candidate_net": -0.01649229601749591,
+            "hold_net": -0.09627796744426437,
+            "log_excess": 0.08460364403152922
+          },
+          {
+            "as_of_date": "2025-10-31",
+            "selected_tickers": [
+              "GOOGL",
+              "NVDA",
+              "AMZN"
+            ],
+            "candidate_net": -0.04063814614750827,
+            "hold_net": -0.09727670695547562,
+            "log_excess": 0.06085225213638024
+          },
+          {
+            "as_of_date": "2020-01-31",
+            "selected_tickers": [
+              "AAPL",
+              "MSFT",
+              "NVDA"
+            ],
+            "candidate_net": 0.025965890052169538,
+            "hold_net": -0.02359136469707585,
+            "log_excess": 0.049508597113344835
+          },
+          {
+            "as_of_date": "2024-11-29",
+            "selected_tickers": [
+              "NVDA",
+              "AMZN",
+              "GOOGL"
+            ],
+            "candidate_net": 0.05602458876251992,
+            "hold_net": 0.010142535743324486,
+            "log_excess": 0.044420024431591106
+          },
+          {
+            "as_of_date": "2021-09-30",
+            "selected_tickers": [
+              "GOOGL",
+              "NVDA",
+              "MSFT"
+            ],
+            "candidate_net": 0.17058979262827934,
+            "hold_net": 0.12433907990660623,
+            "log_excess": 0.040312339567043165
+          },
+          {
+            "as_of_date": "2020-07-31",
+            "selected_tickers": [
+              "NVDA",
+              "AAPL",
+              "AMZN"
+            ],
+            "candidate_net": 0.1938518380033556,
+            "hold_net": 0.15297433644657085,
+            "log_excess": 0.03483993552603398
+          },
+          {
+            "as_of_date": "2023-01-31",
+            "selected_tickers": [
+              "AAPL",
+              "MSFT",
+              "NVDA"
+            ],
+            "candidate_net": 0.07058430877797672,
+            "hold_net": 0.034307577150169855,
+            "log_excess": 0.03447238714731917
+          },
+          {
+            "as_of_date": "2020-04-30",
+            "selected_tickers": [
+              "NVDA",
+              "AAPL",
+              "MSFT"
+            ],
+            "candidate_net": 0.1322824112250196,
+            "hold_net": 0.09613861863895884,
+            "log_excess": 0.03244177115815611
+          },
+          {
+            "as_of_date": "2018-10-31",
+            "selected_tickers": [
+              "AMZN",
+              "AAPL",
+              "MSFT"
+            ],
+            "candidate_net": -0.001990525092321893,
+            "hold_net": -0.03084673013485764,
+            "log_excess": 0.02933999754372628
+          },
+          {
+            "as_of_date": "2018-11-30",
+            "selected_tickers": [
+              "AMZN",
+              "MSFT",
+              "GOOGL"
+            ],
+            "candidate_net": -0.12818579069039915,
+            "hold_net": -0.15252745077138996,
+            "log_excess": 0.028317890050243544
+          }
+        ]
+      }
+    ],
+    "selection_frequency": {
+      "AAPL": 57,
+      "AMZN": 51,
+      "GOOGL": 51,
+      "MSFT": 67,
+      "NVDA": 83
+    },
+    "annual_signal_date_log_excess": [
+      {
+        "signal_year": "2018",
+        "periods": 12,
+        "log_excess": 0.03141506064026062
+      },
+      {
+        "signal_year": "2019",
+        "periods": 12,
+        "log_excess": -0.01154850218081389
+      },
+      {
+        "signal_year": "2020",
+        "periods": 12,
+        "log_excess": 0.06881443924291955
+      },
+      {
+        "signal_year": "2021",
+        "periods": 12,
+        "log_excess": 0.053363182562745075
+      },
+      {
+        "signal_year": "2022",
+        "periods": 12,
+        "log_excess": -0.15512239461524924
+      },
+      {
+        "signal_year": "2023",
+        "periods": 12,
+        "log_excess": 0.0141760737065585
+      },
+      {
+        "signal_year": "2024",
+        "periods": 12,
+        "log_excess": -0.011051924738758174
+      },
+      {
+        "signal_year": "2025",
+        "periods": 12,
+        "log_excess": -0.18481158248469717
+      },
+      {
+        "signal_year": "2026",
+        "periods": 7,
+        "log_excess": -0.10767512049612392
+      }
+    ],
+    "best_10": [
+      {
+        "as_of_date": "2024-12-31",
+        "selected_tickers": [
+          "NVDA",
+          "AMZN",
+          "GOOGL"
+        ],
+        "candidate_net": -0.01649229601749591,
+        "hold_net": -0.09627796744426437,
+        "log_excess": 0.08460364403152922
+      },
+      {
+        "as_of_date": "2025-10-31",
+        "selected_tickers": [
+          "GOOGL",
+          "NVDA",
+          "AMZN"
+        ],
+        "candidate_net": -0.04063814614750827,
+        "hold_net": -0.09727670695547562,
+        "log_excess": 0.06085225213638024
+      },
+      {
+        "as_of_date": "2020-01-31",
+        "selected_tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "candidate_net": 0.025965890052169538,
+        "hold_net": -0.02359136469707585,
+        "log_excess": 0.049508597113344835
+      },
+      {
+        "as_of_date": "2024-11-29",
+        "selected_tickers": [
+          "NVDA",
+          "AMZN",
+          "GOOGL"
+        ],
+        "candidate_net": 0.05602458876251992,
+        "hold_net": 0.010142535743324486,
+        "log_excess": 0.044420024431591106
+      },
+      {
+        "as_of_date": "2021-09-30",
+        "selected_tickers": [
+          "GOOGL",
+          "NVDA",
+          "MSFT"
+        ],
+        "candidate_net": 0.17058979262827934,
+        "hold_net": 0.12433907990660623,
+        "log_excess": 0.040312339567043165
+      },
+      {
+        "as_of_date": "2020-07-31",
+        "selected_tickers": [
+          "NVDA",
+          "AAPL",
+          "AMZN"
+        ],
+        "candidate_net": 0.1938518380033556,
+        "hold_net": 0.15297433644657085,
+        "log_excess": 0.03483993552603398
+      },
+      {
+        "as_of_date": "2023-01-31",
+        "selected_tickers": [
+          "AAPL",
+          "MSFT",
+          "NVDA"
+        ],
+        "candidate_net": 0.07058430877797672,
+        "hold_net": 0.034307577150169855,
+        "log_excess": 0.03447238714731917
+      },
+      {
+        "as_of_date": "2020-04-30",
+        "selected_tickers": [
+          "NVDA",
+          "AAPL",
+          "MSFT"
+        ],
+        "candidate_net": 0.1322824112250196,
+        "hold_net": 0.09613861863895884,
+        "log_excess": 0.03244177115815611
+      },
+      {
+        "as_of_date": "2018-10-31",
+        "selected_tickers": [
+          "AMZN",
+          "AAPL",
+          "MSFT"
+        ],
+        "candidate_net": -0.001990525092321893,
+        "hold_net": -0.03084673013485764,
+        "log_excess": 0.02933999754372628
+      },
+      {
+        "as_of_date": "2018-11-30",
+        "selected_tickers": [
+          "AMZN",
+          "MSFT",
+          "GOOGL"
+        ],
+        "candidate_net": -0.12818579069039915,
+        "hold_net": -0.15252745077138996,
+        "log_excess": 0.028317890050243544
+      }
+    ],
+    "worst_10": [
+      {
+        "as_of_date": "2025-03-31",
+        "selected_tickers": [
+          "AAPL",
+          "NVDA",
+          "AMZN"
+        ],
+        "candidate_net": 0.0023099641952908367,
+        "hold_net": 0.038788860263018476,
+        "log_excess": -0.035748176760445526
+      },
+      {
+        "as_of_date": "2019-05-31",
+        "selected_tickers": [
+          "MSFT",
+          "AMZN",
+          "GOOGL"
+        ],
+        "candidate_net": 0.07555944725743502,
+        "hold_net": 0.11799471960965832,
+        "log_excess": -0.03869570938988623
+      },
+      {
+        "as_of_date": "2025-04-30",
+        "selected_tickers": [
+          "NVDA",
+          "AAPL",
+          "AMZN"
+        ],
+        "candidate_net": 0.07752243006110326,
+        "hold_net": 0.12110554171087445,
+        "log_excess": -0.03965092972535522
+      },
+      {
+        "as_of_date": "2022-06-30",
+        "selected_tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "candidate_net": 0.1114257417233655,
+        "hold_net": 0.16059863283769954,
+        "log_excess": -0.04329229167029526
+      },
+      {
+        "as_of_date": "2026-04-30",
+        "selected_tickers": [
+          "GOOGL",
+          "NVDA",
+          "AMZN"
+        ],
+        "candidate_net": 0.020006056747058354,
+        "hold_net": 0.06716330258977357,
+        "log_excess": -0.045195443693353606
+      },
+      {
+        "as_of_date": "2018-09-28",
+        "selected_tickers": [
+          "AMZN",
+          "NVDA",
+          "MSFT"
+        ],
+        "candidate_net": -0.17235528660023625,
+        "hold_net": -0.13116106753660775,
+        "log_excess": -0.048573787740052554
+      },
+      {
+        "as_of_date": "2022-12-30",
+        "selected_tickers": [
+          "AAPL",
+          "MSFT",
+          "GOOGL"
+        ],
+        "candidate_net": 0.07568636129909656,
+        "hold_net": 0.14352668771298693,
+        "log_excess": -0.06115813936140031
+      },
+      {
+        "as_of_date": "2024-04-30",
+        "selected_tickers": [
+          "NVDA",
+          "AMZN",
+          "GOOGL"
+        ],
+        "candidate_net": 0.12094326938815003,
+        "hold_net": 0.20333845682695362,
+        "log_excess": -0.07092920575616483
+      },
+      {
+        "as_of_date": "2025-01-31",
+        "selected_tickers": [
+          "NVDA",
+          "AMZN",
+          "GOOGL"
+        ],
+        "candidate_net": -0.05186058910672331,
+        "hold_net": 0.023953065832835744,
+        "log_excess": -0.07692442105404662
+      },
+      {
+        "as_of_date": "2026-07-31",
+        "selected_tickers": [
+          "GOOGL",
+          "AAPL",
+          "AMZN"
+        ],
+        "candidate_net": -0.0479730061112007,
+        "hold_net": 0.04903686977886723,
+        "log_excess": -0.09703436601302298
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "prepared_at_utc": "2026-10-09T08:59:42.130198+00:00",
+  "status": "post_hoc_research_only",
+  "panels": [
+    "AVGO",
+    "COST",
+    "MSFT",
+    "NVDA",
+    "ORCL",
+    "TSM",
+    "UNH",
+    "V"
+  ],
+  "lookback_months": 12,
+  "top_n": 3,
+  "signal_dates": [
+    "2018-01-01",
+    "2026-08-14"
+  ],
+  "runs": [
+    {
+      "snapshot": "original",
+      "cost_bps": 20,
+      "bootstrap_block_months": 3
+    },
+    {
+      "snapshot": "original",
+      "cost_bps": 40,
+      "bootstrap_block_months": 3
+    },
+    {
+      "snapshot": "original",
+      "cost_bps": 80,
+      "bootstrap_block_months": 3
+    },
+    {
+      "snapshot": "current_adjusted",
+      "cost_bps": 20,
+      "bootstrap_block_months": 3
+    },
+    {
+      "snapshot": "current_adjusted",
+      "cost_bps": 40,
+      "bootstrap_block_months": 3
+    },
+    {
+      "snapshot": "current_adjusted",
+      "cost_bps": 80,
+      "bootstrap_block_months": 3
+    },
+    {
+      "snapshot": "current_adjusted",
+      "cost_bps": 20,
+      "bootstrap_block_months": 6
+    },
+    {
+      "snapshot": "current_adjusted",
+      "cost_bps": 20,
+      "bootstrap_block_months": 12
+    }
+  ],
+  "cost_status": "user_authorized_research_budget_not_calibrated",
+  "base_cost_bps_per_side": 20,
+  "stress_costs_bps_per_side": [
+    40,
+    80
+  ],
+  "cost_scope": "proportional transaction-cost budget; no independently calibrated broker minimum, FX, dividend tax or fills",
+  "rolling_diagnostic_months": 24,
+  "roll_step_months": 1,
+  "input_hashes": {
+    "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-09-momentum-reliability/return-source-audit-network/AVGO-unadjusted-actions.csv": "34d0b9d5f732e02a1f8f728672684222e5cf9c84059042a28f8b81b4a091a819",
+    "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-09-momentum-reliability/return-source-audit-network/COST-unadjusted-actions.csv": "fcd93a40c549e97eeb12899a13fad269f519e8535ed6c6dc9449536bcdb1f63a",
+    "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-09-momentum-reliability/return-source-audit-network/MSFT-unadjusted-actions.csv": "60c867a944069e165c07eb183f95b4e3d052bbb0d0794762f70e4df92bd12786",
+    "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-09-momentum-reliability/return-source-audit-network/NVDA-unadjusted-actions.csv": "9b65f0771f8322c68ade32d3fb8451e9c0cdf8784fdc4f339f83b91c1524be04",
+    "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-09-momentum-reliability/return-source-audit-network/ORCL-unadjusted-actions.csv": "e8b5cf7a064b68b2ae91f1d4016b9aacafeb1b666c28af08fb27cc84ad5faab6",
+    "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-09-momentum-reliability/return-source-audit-network/TSM-unadjusted-actions.csv": "c4a497c040d266be78653b40f19df976d318ec8dda78c4e99affc348b88a8e4c",
+    "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-09-momentum-reliability/return-source-audit-network/UNH-unadjusted-actions.csv": "30a8b1bf6b72dbdaf1ecbf6b5dd9581114e5e4f7ec02e87bdd8a0eec9c8e63d5",
+    "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-09-momentum-reliability/return-source-audit-network/V-unadjusted-actions.csv": "2487f57bfa00e89d1b04324820c9a6003c9879ff5e2f4b1421bfe0a7012c3570",
+    "/private/tmp/momentum-reliability-20261009/prices/AVGO/price_history.csv": "d72ac31dfad5932478fee2223579e899589e90f33d739dbbebb0803301afe1b4",
+    "/private/tmp/momentum-reliability-20261009/prices/COST/price_history.csv": "5e23f30812342d7ebfb3f341419f48e3dc45c2e7c14b840d1aef9fbe0c1c0aa3",
+    "/private/tmp/momentum-reliability-20261009/prices/MSFT/price_history.csv": "857e8f529e95663802840043d5faec27d7c01ebbf46454966fb1ba6cda0b7841",
+    "/private/tmp/momentum-reliability-20261009/prices/NVDA/price_history.csv": "34e2937025e55549b23a8a9bce32d2e118cd1a7c252d8fc75e379ad4614fb9b1",
+    "/private/tmp/momentum-reliability-20261009/prices/ORCL/price_history.csv": "2941691f780cb2468f804a9b024dc29c5ea18a9f580c2bdb02f1648ef253ce17",
+    "/private/tmp/momentum-reliability-20261009/prices/TSM/price_history.csv": "12dffcaa910e3e5820603557bab0a04c994c58d233ee9cef7af7ed232b93ca7a",
+    "/private/tmp/momentum-reliability-20261009/prices/UNH/price_history.csv": "d8bed0d94958165da3ec69fbeb087a20ebace17b8af7579ddb988e556d596ec8",
+    "/private/tmp/momentum-reliability-20261009/prices/V/price_history.csv": "4ee9a747e1aa1946165788cc3eb55e43c0cd77ab448c4a934c066a6631e5a1bb"
+  },
+  "parameter_selection": "all scenarios reported; no winner selection; previous searches unresolved",
+  "historical_oos_claim": false
+}

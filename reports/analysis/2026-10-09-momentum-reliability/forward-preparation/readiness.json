@@ -1,0 +1,301 @@
+{
+  "prepared_at_utc": "2026-10-09T08:23:48.566392+00:00",
+  "status": "prepared_not_activated",
+  "protocol_sha256": "aac79d6aab65926dfff4cd4c3c3aa0e7f799aa3741123571dac8fe0a793fb284",
+  "specification_sha256": "c3ad7e8e026306b619cae4683aa407fe94a373a187134be9e55f490652b8323d",
+  "collector": "src/stock_analysis/portfolio_cohort.py",
+  "collector_sha256": "6ef635e6ab07e4e4dca51fdeb86000883bf1f7d4faa8461b58af265d9c9a7469",
+  "portfolio_cohort_tests_passed": 13,
+  "calendar_source": "https://www.nyse.com/trade/hours-calendars",
+  "draft_decisions": [
+    {
+      "anchor": "2026-10-12",
+      "decision_session": "2026-10-12",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2026-10-12T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2026-11-16",
+      "decision_session": "2026-11-16",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2026-11-16T21:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2026-12-21",
+      "decision_session": "2026-12-21",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2026-12-21T21:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2027-01-25",
+      "decision_session": "2027-01-25",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2027-01-25T21:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2027-03-01",
+      "decision_session": "2027-03-01",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2027-03-01T21:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2027-04-05",
+      "decision_session": "2027-04-05",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2027-04-05T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2027-05-10",
+      "decision_session": "2027-05-10",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2027-05-10T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2027-06-14",
+      "decision_session": "2027-06-14",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2027-06-14T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2027-07-19",
+      "decision_session": "2027-07-19",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2027-07-19T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2027-08-23",
+      "decision_session": "2027-08-23",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2027-08-23T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2027-09-27",
+      "decision_session": "2027-09-27",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2027-09-27T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2027-11-01",
+      "decision_session": "2027-11-01",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2027-11-01T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2027-12-06",
+      "decision_session": "2027-12-06",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2027-12-06T21:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-01-10",
+      "decision_session": "2028-01-10",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-01-10T21:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-02-14",
+      "decision_session": "2028-02-14",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-02-14T21:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-03-20",
+      "decision_session": "2028-03-20",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-03-20T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-04-24",
+      "decision_session": "2028-04-24",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-04-24T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-05-29",
+      "decision_session": "2028-05-26",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-05-26T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-07-03",
+      "decision_session": "2028-07-03",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-07-03T17:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "13:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-08-07",
+      "decision_session": "2028-08-07",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-08-07T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-09-11",
+      "decision_session": "2028-09-11",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-09-11T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-10-16",
+      "decision_session": "2028-10-16",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-10-16T20:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-11-20",
+      "decision_session": "2028-11-20",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-11-20T21:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2028-12-25",
+      "decision_session": "2028-12-22",
+      "status": "draft_NYSE_scheduled_holiday_and_close_mapping",
+      "seal_window_opens_utc": "2028-12-22T21:00:00+00:00",
+      "note": "Common NASDAQ sessions, exceptional closures and input coverage require verification; existing collector freezes conservatively after 16:00 ET even on early-close dates.",
+      "scheduled_close_et": "16:00",
+      "collector_current_not_before_et": "16:00"
+    },
+    {
+      "anchor": "2029-01-29",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2029-03-05",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2029-04-09",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2029-05-14",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2029-06-18",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2029-07-23",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2029-08-27",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2029-10-01",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2029-11-05",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2029-12-10",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2030-01-14",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    },
+    {
+      "anchor": "2030-02-18",
+      "decision_session": null,
+      "status": "unavailable_official_calendar_not_verified"
+    }
+  ],
+  "activation_blockers": [
+    "Complete common exchange-calendar mapping through February 2030; NYSE source published only through 2028",
+    "Pinned actual provider/model and prompt/tool provenance",
+    "Ready eight-name same-decision-session inputs and nine-arm plan sealed before next Open"
+  ],
+  "promotion_blockers": [
+    "Verified total-return and terminal-event source",
+    "Broker-calibrated execution costs",
+    "Mature unseen effective sample and statistical gates",
+    "Unresolved prior search history"
+  ],
+  "first_anchor": "2026-10-12",
+  "live_execution_authorized": false
+}

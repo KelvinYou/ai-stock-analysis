@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "mode": "cross-sectional",
+  "verdict": "research_only",
+  "findings": [
+    {
+      "status": "Warning",
+      "code": "strict_hold_loss",
+      "detail": "Net candidate return did not beat strict hold on this window."
+    },
+    {
+      "status": "Warning",
+      "code": "excess_uncertain",
+      "detail": "The paired 95% excess-return interval is unavailable or includes zero."
+    },
+    {
+      "status": "Warning",
+      "code": "matched_passive_loss",
+      "detail": "The allocator did not beat the same-schedule passive allocation."
+    },
+    {
+      "status": "Warning",
+      "code": "return_basis_unverified",
+      "detail": "Dividend and terminal-return treatment is not verified for the price input."
+    },
+    {
+      "status": "Warning",
+      "code": "search_count",
+      "detail": "Ledger has 16 unique recorded candidate arms; earlier/manual searches are not reconstructed."
+    }
+  ],
+  "next_checks": [
+    "Inspect exposure, selection, and the dated trade log before proposing a new rule.",
+    "Freeze the rule and data snapshot; use an untouched forward period for confirmation."
+  ],
+  "auto_tuning_performed": false
+}

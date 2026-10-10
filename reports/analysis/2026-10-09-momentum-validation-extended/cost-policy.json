@@ -1,0 +1,14 @@
+{
+  "status": "user_authorized_research_assumption_not_broker_calibrated",
+  "cost_bps_per_side": 20,
+  "twice_cost_bps_per_side": 40,
+  "severe_stress_bps_per_side": 80,
+  "applies_to": "same proportional traded-notional fees for allocator and benchmark",
+  "broker_minimums_calibrated": false,
+  "fx_dividend_tax_calibrated": false,
+  "slippage_calibrated": false,
+  "fee_source_reference": "https://www.interactivebrokers.com/en/pricing/commissions-stocks.php",
+  "reference_use": "published commissions/minimums demonstrate order-size dependence; not a recommendation of broker or an inferred user account",
+  "recommendation_rationale": "Use a conservative transparent research budget while actual broker/order size unknown; stress at 2x and 4x instead of interpreting commission-free as cost-free",
+  "promotion_cost_gate_passed": false
+}

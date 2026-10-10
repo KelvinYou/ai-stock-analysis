@@ -1,0 +1,204 @@
+{
+  "costs": {
+    "0": [
+      {
+        "strategy": "overall",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2086464587396449,
+        "n_trades": 0,
+        "max_drawdown_pct": 0.0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002120246568946985,
+          0.0011617572901753159
+        ]
+      },
+      {
+        "strategy": "technical",
+        "total_return_pct": -0.05530452007998574,
+        "excess_return_pct": -0.26395097881963064,
+        "n_trades": 21,
+        "max_drawdown_pct": -0.09017047863750302,
+        "effective_n": 7.000000000000001,
+        "deflated_sharpe": 0.021066217719745397,
+        "strict_hold_log_excess_ci_95": [
+          -0.0023015354947366366,
+          0.0008361786108660364
+        ]
+      },
+      {
+        "strategy": "buy_and_hold",
+        "total_return_pct": 0.2086464587396449,
+        "excess_return_pct": 0.0,
+        "n_trades": 8,
+        "max_drawdown_pct": -0.19232658621369322,
+        "effective_n": 1.0,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": null
+      },
+      {
+        "strategy": "ft_weighted",
+        "total_return_pct": -0.018294515398324256,
+        "excess_return_pct": -0.22694097413796915,
+        "n_trades": 20,
+        "max_drawdown_pct": -0.055908029933194096,
+        "effective_n": 7.0,
+        "deflated_sharpe": 0.06291711053840016,
+        "strict_hold_log_excess_ci_95": [
+          -0.0021541256202006,
+          0.0010276552735089528
+        ]
+      },
+      {
+        "strategy": "ft_agreement",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2086464587396449,
+        "n_trades": 0,
+        "max_drawdown_pct": 0.0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002120246568946985,
+          0.0011617572901753159
+        ]
+      }
+    ],
+    "10": [
+      {
+        "strategy": "overall",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2066464587396449,
+        "n_trades": 0,
+        "max_drawdown_pct": 0.0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.0021220450835618197,
+          0.0011629174816506589
+        ]
+      },
+      {
+        "strategy": "technical",
+        "total_return_pct": -0.0590997293815195,
+        "excess_return_pct": -0.2657461881211644,
+        "n_trades": 21,
+        "max_drawdown_pct": -0.09158601700162938,
+        "effective_n": 7.000000000000001,
+        "deflated_sharpe": 0.016713302320467378,
+        "strict_hold_log_excess_ci_95": [
+          -0.002319245075136711,
+          0.0008167284431264536
+        ]
+      },
+      {
+        "strategy": "buy_and_hold",
+        "total_return_pct": 0.2066464587396449,
+        "excess_return_pct": 0.0,
+        "n_trades": 8,
+        "max_drawdown_pct": -0.19249145251124564,
+        "effective_n": 1.0,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": null
+      },
+      {
+        "strategy": "ft_weighted",
+        "total_return_pct": -0.022037030870798845,
+        "excess_return_pct": -0.22868348961044374,
+        "n_trades": 20,
+        "max_drawdown_pct": -0.05726417912119497,
+        "effective_n": 7.0,
+        "deflated_sharpe": 0.05237592679082404,
+        "strict_hold_log_excess_ci_95": [
+          -0.0021671433658258334,
+          0.001011882568158495
+        ]
+      },
+      {
+        "strategy": "ft_agreement",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2066464587396449,
+        "n_trades": 0,
+        "max_drawdown_pct": 0.0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.0021220450835618197,
+          0.0011629174816506589
+        ]
+      }
+    ],
+    "20": [
+      {
+        "strategy": "overall",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2046464587396449,
+        "n_trades": 0,
+        "max_drawdown_pct": 0.0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002123846458983721,
+          0.001164079984269952
+        ]
+      },
+      {
+        "strategy": "technical",
+        "total_return_pct": -0.0628823407638236,
+        "excess_return_pct": -0.26752879950346853,
+        "n_trades": 21,
+        "max_drawdown_pct": -0.09300028757957261,
+        "effective_n": 7.000000000000001,
+        "deflated_sharpe": 0.01310078620780053,
+        "strict_hold_log_excess_ci_95": [
+          -0.002336968720054787,
+          0.000797262001423964
+        ]
+      },
+      {
+        "strategy": "buy_and_hold",
+        "total_return_pct": 0.2046464587396449,
+        "excess_return_pct": 0.0,
+        "n_trades": 8,
+        "max_drawdown_pct": -0.19265660170485127,
+        "effective_n": 1.0,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": null
+      },
+      {
+        "strategy": "ft_weighted",
+        "total_return_pct": -0.0257676287580789,
+        "excess_return_pct": -0.2304140874977238,
+        "n_trades": 20,
+        "max_drawdown_pct": -0.05861926658812317,
+        "effective_n": 7.0,
+        "deflated_sharpe": 0.04317009725131843,
+        "strict_hold_log_excess_ci_95": [
+          -0.002182133133359599,
+          0.0009960833918786925
+        ]
+      },
+      {
+        "strategy": "ft_agreement",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2046464587396449,
+        "n_trades": 0,
+        "max_drawdown_pct": 0.0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002123846458983721,
+          0.001164079984269952
+        ]
+      }
+    ]
+  },
+  "pipeline_signals": {
+    "neutral": 93,
+    "sell": 3
+  },
+  "original_sealed_files_unchanged": 107,
+  "trial_order_invariance": true,
+  "new_forecasts": 0,
+  "new_price_fetches": 0
+}

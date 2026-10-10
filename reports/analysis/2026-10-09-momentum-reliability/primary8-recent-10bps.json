@@ -1,0 +1,181 @@
+{
+  "factor": "long-only cross-sectional momentum",
+  "hypothesis": "At each month-end, the top 3 of a fixed universe by 12-month trailing return will outperform equal-weight buy-and-hold after costs.",
+  "universe": [
+    "AVGO",
+    "COST",
+    "MSFT",
+    "NVDA",
+    "ORCL",
+    "TSM",
+    "UNH",
+    "V"
+  ],
+  "config": {
+    "lookback_months": 12,
+    "top_n": 3,
+    "cost_bps_per_side": 10.0,
+    "bootstrap_block_periods": 3,
+    "bootstrap_resamples": 2000,
+    "bootstrap_seed": 0
+  },
+  "data_start": "2016-10-07",
+  "data_end": "2026-09-01",
+  "signal_date_cutoff": "2026-08-14",
+  "oos_start": "2026-01-30",
+  "oos_end": "2026-09-01",
+  "periods": 7,
+  "effective_n": 7.0,
+  "effective_n_basis": "portfolio_overlap_clustered_v1",
+  "gross_compound_return": 0.1395739584614013,
+  "net_compound_return": 0.1367282211204357,
+  "buy_and_hold_return": 0.14144013932798538,
+  "excess_return": -0.004711918207549681,
+  "net_mean_period_return": 0.02171171209401022,
+  "max_drawdown": -0.1604112614242389,
+  "annualized_sharpe": 0.828599680215687,
+  "net_p_value": 0.5501720599407193,
+  "final_liquidation_cost": 0.001,
+  "period_log": [
+    {
+      "as_of_date": "2026-01-30",
+      "exit_date": "2026-03-02",
+      "selected_tickers": [
+        "TSM",
+        "NVDA",
+        "AVGO"
+      ],
+      "turnover": 1.0,
+      "gross_return": -0.003957846711062883,
+      "allocation_cost": 0.001,
+      "net_return": -0.004953888864351885,
+      "entry_date": "2026-02-02",
+      "matched_passive_gross_return": -0.027089496213714467,
+      "matched_passive_net_return": -0.02806240671750082,
+      "matched_passive_turnover": 1.0,
+      "strict_hold_net_return": -0.02806240671750082
+    },
+    {
+      "as_of_date": "2026-02-27",
+      "exit_date": "2026-04-01",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "NVDA"
+      ],
+      "turnover": 0.036332197920683595,
+      "gross_return": -0.0117619300368678,
+      "allocation_cost": 0.000036332197920683596,
+      "net_return": -0.011797834898018333,
+      "entry_date": "2026-03-02",
+      "matched_passive_gross_return": -0.015210942395704474,
+      "matched_passive_net_return": -0.01524438907589809,
+      "matched_passive_turnover": 0.03396329390074367,
+      "strict_hold_net_return": -0.017228401167751227
+    },
+    {
+      "as_of_date": "2026-03-31",
+      "exit_date": "2026-05-01",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "NVDA"
+      ],
+      "turnover": 0.014949966391886088,
+      "gross_return": 0.20409696332490018,
+      "allocation_cost": 0.000014949966391886088,
+      "net_return": 0.20407896211576593,
+      "entry_date": "2026-04-01",
+      "matched_passive_gross_return": 0.16341510927213887,
+      "matched_passive_net_return": 0.1633975098553142,
+      "matched_passive_turnover": 0.015127375159946478,
+      "strict_hold_net_return": 0.16309871167255074
+    },
+    {
+      "as_of_date": "2026-04-30",
+      "exit_date": "2026-06-01",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "NVDA"
+      ],
+      "turnover": 0.03335929703102403,
+      "gross_return": 0.07867329642793189,
+      "allocation_cost": 0.00003335929703102403,
+      "net_return": 0.07863731264503704,
+      "entry_date": "2026-05-01",
+      "matched_passive_gross_return": 0.0858027464150695,
+      "matched_passive_net_return": 0.085761419310596,
+      "matched_passive_turnover": 0.03806133720860834,
+      "strict_hold_net_return": 0.08038936106226723
+    },
+    {
+      "as_of_date": "2026-05-29",
+      "exit_date": "2026-07-01",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "NVDA"
+      ],
+      "turnover": 0.0021269942238524298,
+      "gross_return": -0.052886999694399986,
+      "allocation_cost": 2.12699422385243e-6,
+      "net_return": -0.05288901419828107,
+      "entry_date": "2026-06-01",
+      "matched_passive_gross_return": -0.06994802480962513,
+      "matched_passive_net_return": -0.06998463723441262,
+      "matched_passive_turnover": 0.03936599863676039,
+      "strict_hold_net_return": -0.07478559215456079
+    },
+    {
+      "as_of_date": "2026-06-30",
+      "exit_date": "2026-08-03",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "UNH"
+      ],
+      "turnover": 0.3754236421034006,
+      "gross_return": -0.036315282373956426,
+      "allocation_cost": 0.0003754236421034006,
+      "net_return": -0.03667707240048701,
+      "entry_date": "2026-07-01",
+      "matched_passive_gross_return": 0.020308666822471746,
+      "matched_passive_net_return": 0.02023516046934737,
+      "matched_passive_turnover": 0.07204325074803183,
+      "strict_hold_net_return": 0.01091631858492417
+    },
+    {
+      "as_of_date": "2026-07-31",
+      "exit_date": "2026-09-01",
+      "selected_tickers": [
+        "UNH",
+        "TSM",
+        "AVGO"
+      ],
+      "turnover": 0.0370519972311516,
+      "gross_return": -0.02340373481914089,
+      "allocation_cost": 0.0000370519972311516,
+      "net_return": -0.02441647974159311,
+      "entry_date": "2026-08-03",
+      "matched_passive_gross_return": 0.0249049671085943,
+      "matched_passive_net_return": 0.02384241490173178,
+      "matched_passive_turnover": 0.03676918923024238,
+      "strict_hold_net_return": 0.01673481542523425
+    }
+  ],
+  "matched_passive_return": 0.17449968975122676,
+  "matched_passive_excess_return": -0.03777146863079106,
+  "strict_hold_log_excess_ci_95": [
+    -0.015542876826132089,
+    0.02153827371760281
+  ],
+  "matched_passive_log_excess_ci_95": [
+    -0.0216336992626891,
+    0.020247770235018673
+  ],
+  "buy_and_hold_max_drawdown": -0.12739300523239383,
+  "matched_passive_max_drawdown": -0.11765231103115603,
+  "drawdown_basis": "daily_close_mark_to_market",
+  "price_basis": "provided_open_close_not_dividend_verified"
+}

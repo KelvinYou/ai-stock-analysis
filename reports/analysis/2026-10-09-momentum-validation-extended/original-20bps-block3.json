@@ -1,0 +1,1909 @@
+{
+  "factor": "long-only cross-sectional momentum",
+  "hypothesis": "At each month-end, the top 3 of a fixed universe by 12-month trailing return will outperform equal-weight buy-and-hold after costs.",
+  "universe": [
+    "AVGO",
+    "COST",
+    "MSFT",
+    "NVDA",
+    "ORCL",
+    "TSM",
+    "UNH",
+    "V"
+  ],
+  "config": {
+    "lookback_months": 12,
+    "top_n": 3,
+    "cost_bps_per_side": 20.0,
+    "bootstrap_block_periods": 3,
+    "bootstrap_resamples": 2000,
+    "bootstrap_seed": 0
+  },
+  "data_start": "2016-10-07",
+  "data_end": "2026-09-01",
+  "signal_date_cutoff": "2026-08-14",
+  "oos_start": "2018-01-31",
+  "oos_end": "2026-09-01",
+  "periods": 103,
+  "effective_n": 103.0,
+  "effective_n_basis": "portfolio_overlap_clustered_v1",
+  "gross_compound_return": 13.17910429222592,
+  "net_compound_return": 12.673872836372304,
+  "buy_and_hold_return": 9.802873999461088,
+  "excess_return": 2.870998836911216,
+  "net_mean_period_return": 0.02872880091706747,
+  "max_drawdown": -0.35601327943372996,
+  "annualized_sharpe": 1.2623316908591669,
+  "net_p_value": 0.00035169720558635685,
+  "final_liquidation_cost": 0.002,
+  "period_log": [
+    {
+      "as_of_date": "2018-01-31",
+      "exit_date": "2018-03-01",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "V"
+      ],
+      "turnover": 1.0,
+      "gross_return": -0.012995141347119618,
+      "allocation_cost": 0.002,
+      "net_return": -0.014969151064425423,
+      "entry_date": "2018-02-01",
+      "matched_passive_gross_return": -0.010284029843293643,
+      "matched_passive_net_return": -0.012263461783607155,
+      "matched_passive_turnover": 1.0,
+      "strict_hold_net_return": -0.012263461783607155
+    },
+    {
+      "as_of_date": "2018-02-28",
+      "exit_date": "2018-04-02",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "TSM"
+      ],
+      "turnover": 0.34369632546181655,
+      "gross_return": -0.030710827573869115,
+      "allocation_cost": 0.0006873926509236331,
+      "net_return": -0.03137710982761466,
+      "entry_date": "2018-03-01",
+      "matched_passive_gross_return": -0.039384404854407265,
+      "matched_passive_net_return": -0.03939987330156469,
+      "matched_passive_turnover": 0.008051320026254805,
+      "strict_hold_net_return": -0.03963516458574688
+    },
+    {
+      "as_of_date": "2018-03-29",
+      "exit_date": "2018-05-01",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "TSM"
+      ],
+      "turnover": 0.010481835489894231,
+      "gross_return": -0.03443562702368367,
+      "allocation_cost": 2.0963670979788464e-05,
+      "net_return": -0.034455868797508504,
+      "entry_date": "2018-04-02",
+      "matched_passive_gross_return": 0.01020260324996261,
+      "matched_passive_net_return": 0.010181601822006892,
+      "matched_passive_turnover": 0.010394661371981709,
+      "strict_hold_net_return": 0.010062878215041985
+    },
+    {
+      "as_of_date": "2018-04-30",
+      "exit_date": "2018-06-01",
+      "selected_tickers": [
+        "NVDA",
+        "V",
+        "MSFT"
+      ],
+      "turnover": 0.3333333333333333,
+      "gross_return": 0.08080934768077104,
+      "allocation_cost": 0.0006666666666666666,
+      "net_return": 0.08008880811565033,
+      "entry_date": "2018-05-01",
+      "matched_passive_gross_return": 0.05306838354768717,
+      "matched_passive_net_return": 0.053019067799134234,
+      "matched_passive_turnover": 0.023415264062252285,
+      "strict_hold_net_return": 0.05301047917734607
+    },
+    {
+      "as_of_date": "2018-05-31",
+      "exit_date": "2018-07-02",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "UNH"
+      ],
+      "turnover": 0.3367478107344194,
+      "gross_return": -0.027182147871469626,
+      "allocation_cost": 0.0006734956214688388,
+      "net_return": -0.0278373364353649,
+      "entry_date": "2018-06-01",
+      "matched_passive_gross_return": -0.020170487405995002,
+      "matched_passive_net_return": -0.0202040261739318,
+      "matched_passive_turnover": 0.01711459366431925,
+      "strict_hold_net_return": -0.019562013761511447
+    },
+    {
+      "as_of_date": "2018-06-29",
+      "exit_date": "2018-08-01",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "V"
+      ],
+      "turnover": 0.3508782073007445,
+      "gross_return": 0.058688018403043975,
+      "allocation_cost": 0.000701756414601489,
+      "net_return": 0.05794507729506804,
+      "entry_date": "2018-07-02",
+      "matched_passive_gross_return": 0.054864992153165745,
+      "matched_passive_net_return": 0.054826022329827584,
+      "matched_passive_turnover": 0.01847147437256326,
+      "strict_hold_net_return": 0.051837804951683754
+    },
+    {
+      "as_of_date": "2018-07-31",
+      "exit_date": "2018-09-04",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "COST"
+      ],
+      "turnover": 0.3356197542337196,
+      "gross_return": 0.08574498749921385,
+      "allocation_cost": 0.0006712395084674392,
+      "net_return": 0.08501619256748372,
+      "entry_date": "2018-08-01",
+      "matched_passive_gross_return": 0.05055180771580765,
+      "matched_passive_net_return": 0.05051326493382491,
+      "matched_passive_turnover": 0.018344065328125374,
+      "strict_hold_net_return": 0.05213742594882826
+    },
+    {
+      "as_of_date": "2018-08-31",
+      "exit_date": "2018-10-01",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "COST"
+      ],
+      "turnover": 0.016299373847648846,
+      "gross_return": 0.020316953641594877,
+      "allocation_cost": 3.259874769529769e-05,
+      "net_return": 0.020283692586653856,
+      "entry_date": "2018-09-04",
+      "matched_passive_gross_return": 0.03999296753880596,
+      "matched_passive_net_return": 0.03996217490362031,
+      "matched_passive_turnover": 0.014804251637660186,
+      "strict_hold_net_return": 0.03682411809701361
+    },
+    {
+      "as_of_date": "2018-09-28",
+      "exit_date": "2018-11-01",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "COST"
+      ],
+      "turnover": 0.004856501365215732,
+      "gross_return": -0.11744778939897112,
+      "allocation_cost": 9.713002730431465e-06,
+      "net_return": -0.11745636163100248,
+      "entry_date": "2018-10-01",
+      "matched_passive_gross_return": -0.08859891625645329,
+      "matched_passive_net_return": -0.08862557252856196,
+      "matched_passive_turnover": 0.014623787805410939,
+      "strict_hold_net_return": -0.08881165238158154
+    },
+    {
+      "as_of_date": "2018-10-31",
+      "exit_date": "2018-12-03",
+      "selected_tickers": [
+        "COST",
+        "MSFT",
+        "V"
+      ],
+      "turnover": 0.33333333333333337,
+      "gross_return": 0.03957177564813056,
+      "allocation_cost": 0.0006666666666666668,
+      "net_return": 0.03887872779769852,
+      "entry_date": "2018-11-01",
+      "matched_passive_gross_return": 0.014022061580270737,
+      "matched_passive_net_return": 0.013964134309983223,
+      "matched_passive_turnover": 0.028563121297975738,
+      "strict_hold_net_return": 0.018778943167587055
+    },
+    {
+      "as_of_date": "2018-11-30",
+      "exit_date": "2019-01-02",
+      "selected_tickers": [
+        "MSFT",
+        "COST",
+        "V"
+      ],
+      "turnover": 0.008348497851293157,
+      "gross_return": -0.11781906758961787,
+      "allocation_cost": 1.6696995702586314e-05,
+      "net_return": -0.11783379736085531,
+      "entry_date": "2018-12-03",
+      "matched_passive_gross_return": -0.10913298841818456,
+      "matched_passive_net_return": -0.10918084900897962,
+      "matched_passive_turnover": 0.026861804384298422,
+      "strict_hold_net_return": -0.10586852678780517
+    },
+    {
+      "as_of_date": "2018-12-31",
+      "exit_date": "2019-02-01",
+      "selected_tickers": [
+        "MSFT",
+        "V",
+        "UNH"
+      ],
+      "turnover": 0.3337898707872283,
+      "gross_return": 0.059916802247236715,
+      "allocation_cost": 0.0006675797415744566,
+      "net_return": 0.059209223262302046,
+      "entry_date": "2019-01-02",
+      "matched_passive_gross_return": 0.0772308810283979,
+      "matched_passive_net_return": 0.07717318781196636,
+      "matched_passive_turnover": 0.026778482425479963,
+      "strict_hold_net_return": 0.07483394951578193
+    },
+    {
+      "as_of_date": "2019-01-31",
+      "exit_date": "2019-03-01",
+      "selected_tickers": [
+        "UNH",
+        "AVGO",
+        "MSFT"
+      ],
+      "turnover": 0.33881328325801585,
+      "gross_return": 0.010507284714568223,
+      "allocation_cost": 0.0006776265665160318,
+      "net_return": 0.009822538132787662,
+      "entry_date": "2019-02-01",
+      "matched_passive_gross_return": 0.04143357873427912,
+      "matched_passive_net_return": 0.04140582730330444,
+      "matched_passive_turnover": 0.01332366823075743,
+      "strict_hold_net_return": 0.037919605246082254
+    },
+    {
+      "as_of_date": "2019-02-28",
+      "exit_date": "2019-04-01",
+      "selected_tickers": [
+        "MSFT",
+        "V",
+        "AVGO"
+      ],
+      "turnover": 0.3333333333333333,
+      "gross_return": 0.06960250389040408,
+      "allocation_cost": 0.0006666666666666666,
+      "net_return": 0.06888943555447713,
+      "entry_date": "2019-03-01",
+      "matched_passive_gross_return": 0.07334059146838479,
+      "matched_passive_net_return": 0.07329994376602667,
+      "matched_passive_turnover": 0.018935137029854464,
+      "strict_hold_net_return": 0.0694534796873786
+    },
+    {
+      "as_of_date": "2019-03-29",
+      "exit_date": "2019-05-01",
+      "selected_tickers": [
+        "AVGO",
+        "V",
+        "MSFT"
+      ],
+      "turnover": 0.009825997062737069,
+      "gross_return": 0.06852407465650692,
+      "allocation_cost": 1.9651994125474136e-05,
+      "net_return": 0.06850307602766903,
+      "entry_date": "2019-04-01",
+      "matched_passive_gross_return": 0.03211516319337515,
+      "matched_passive_net_return": 0.03207672890672342,
+      "matched_passive_turnover": 0.018619185156044465,
+      "strict_hold_net_return": 0.0345902275462652
+    },
+    {
+      "as_of_date": "2019-04-30",
+      "exit_date": "2019-06-03",
+      "selected_tickers": [
+        "AVGO",
+        "MSFT",
+        "V"
+      ],
+      "turnover": 0.008992821105756721,
+      "gross_return": -0.09411353720559669,
+      "allocation_cost": 1.7985642211513442e-05,
+      "net_return": -0.09412983015540077,
+      "entry_date": "2019-05-01",
+      "matched_passive_gross_return": -0.09119309290619414,
+      "matched_passive_net_return": -0.09122726855389351,
+      "matched_passive_turnover": 0.018802480170776112,
+      "strict_hold_net_return": -0.08561861770916418
+    },
+    {
+      "as_of_date": "2019-05-31",
+      "exit_date": "2019-07-01",
+      "selected_tickers": [
+        "MSFT",
+        "V",
+        "COST"
+      ],
+      "turnover": 0.33333333333333337,
+      "gross_return": 0.09989940905286317,
+      "allocation_cost": 0.0006666666666666668,
+      "net_return": 0.09916614278016112,
+      "entry_date": "2019-06-03",
+      "matched_passive_gross_return": 0.12870353579063704,
+      "matched_passive_net_return": 0.12860551443544077,
+      "matched_passive_turnover": 0.04342209981981805,
+      "strict_hold_net_return": 0.11926141560220799
+    },
+    {
+      "as_of_date": "2019-06-28",
+      "exit_date": "2019-08-01",
+      "selected_tickers": [
+        "MSFT",
+        "V",
+        "ORCL"
+      ],
+      "turnover": 0.3377378148994047,
+      "gross_return": 0.004612839551386323,
+      "allocation_cost": 0.0006754756297988094,
+      "net_return": 0.0039342480608861585,
+      "entry_date": "2019-07-01",
+      "matched_passive_gross_return": 0.003706403932731042,
+      "matched_passive_net_return": 0.0036575053886240827,
+      "matched_passive_turnover": 0.024358987805220098,
+      "strict_hold_net_return": 0.004683336622884857
+    },
+    {
+      "as_of_date": "2019-07-31",
+      "exit_date": "2019-09-03",
+      "selected_tickers": [
+        "AVGO",
+        "V",
+        "MSFT"
+      ],
+      "turnover": 0.33396523252162724,
+      "gross_return": -0.007409562997050718,
+      "allocation_cost": 0.0006679304650432545,
+      "net_return": -0.008072544389235548,
+      "entry_date": "2019-08-01",
+      "matched_passive_gross_return": -0.01829812086383127,
+      "matched_passive_net_return": -0.018318776204199194,
+      "matched_passive_turnover": 0.010520169517304737,
+      "strict_hold_net_return": -0.013608360782617943
+    },
+    {
+      "as_of_date": "2019-08-30",
+      "exit_date": "2019-10-01",
+      "selected_tickers": [
+        "AVGO",
+        "COST",
+        "MSFT"
+      ],
+      "turnover": 0.341449789591169,
+      "gross_return": 0.003269665271270668,
+      "allocation_cost": 0.000682899579182338,
+      "net_return": 0.0025845328390505795,
+      "entry_date": "2019-09-03",
+      "matched_passive_gross_return": 0.020464329400264963,
+      "matched_passive_net_return": 0.020430064558555117,
+      "matched_passive_turnover": 0.016788848332354868,
+      "strict_hold_net_return": 0.013692144830373204
+    },
+    {
+      "as_of_date": "2019-09-30",
+      "exit_date": "2019-11-01",
+      "selected_tickers": [
+        "COST",
+        "MSFT",
+        "AVGO"
+      ],
+      "turnover": 0.006331514638182628,
+      "gross_return": 0.0408754905598987,
+      "allocation_cost": 1.2663029276365256e-05,
+      "net_return": 0.0408623099230887,
+      "entry_date": "2019-10-01",
+      "matched_passive_gross_return": 0.07103843399797727,
+      "matched_passive_net_return": 0.07098972985624341,
+      "matched_passive_turnover": 0.022736878616060205,
+      "strict_hold_net_return": 0.06282076275339249
+    },
+    {
+      "as_of_date": "2019-10-31",
+      "exit_date": "2019-12-02",
+      "selected_tickers": [
+        "TSM",
+        "MSFT",
+        "AVGO"
+      ],
+      "turnover": 0.33587544181503765,
+      "gross_return": 0.057438425038224196,
+      "allocation_cost": 0.0006717508836300753,
+      "net_return": 0.05672808984182054,
+      "entry_date": "2019-11-01",
+      "matched_passive_gross_return": 0.05291744381148006,
+      "matched_passive_net_return": 0.05287045045528349,
+      "matched_passive_turnover": 0.02231578385978373,
+      "strict_hold_net_return": 0.04945785590532804
+    },
+    {
+      "as_of_date": "2019-11-29",
+      "exit_date": "2020-01-02",
+      "selected_tickers": [
+        "TSM",
+        "MSFT",
+        "AVGO"
+      ],
+      "turnover": 0.008501187241009317,
+      "gross_return": 0.0606277704305389,
+      "allocation_cost": 1.7002374482018634e-05,
+      "net_return": 0.06060973724000007,
+      "entry_date": "2019-12-02",
+      "matched_passive_gross_return": 0.03579526330605738,
+      "matched_passive_net_return": 0.03576493078803189,
+      "matched_passive_turnover": 0.014642139764542844,
+      "strict_hold_net_return": 0.03300059648993619
+    },
+    {
+      "as_of_date": "2019-12-31",
+      "exit_date": "2020-02-03",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "MSFT"
+      ],
+      "turnover": 0.3379581340337869,
+      "gross_return": -0.00916132641889237,
+      "allocation_cost": 0.0006759162680675738,
+      "net_return": -0.009831050397396401,
+      "entry_date": "2020-01-02",
+      "matched_passive_gross_return": -0.0047901130607928555,
+      "matched_passive_net_return": -0.00483184928609659,
+      "matched_passive_turnover": 0.020968554398199606,
+      "strict_hold_net_return": -0.0004394262916649055
+    },
+    {
+      "as_of_date": "2020-01-31",
+      "exit_date": "2020-03-02",
+      "selected_tickers": [
+        "MSFT",
+        "NVDA",
+        "TSM"
+      ],
+      "turnover": 0.027765640777448503,
+      "gross_return": 0.04948955812142545,
+      "allocation_cost": 5.5531281554897006e-05,
+      "net_return": 0.04943127862128449,
+      "entry_date": "2020-02-03",
+      "matched_passive_gross_return": -0.021650856417722214,
+      "matched_passive_net_return": -0.021697461016367825,
+      "matched_passive_turnover": 0.023817978965579203,
+      "strict_hold_net_return": -0.028572990766067334
+    },
+    {
+      "as_of_date": "2020-02-28",
+      "exit_date": "2020-04-01",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "TSM"
+      ],
+      "turnover": 0.04002107273739278,
+      "gross_return": -0.09390203480638566,
+      "allocation_cost": 8.004214547478556e-05,
+      "net_return": -0.09397456083153011,
+      "entry_date": "2020-03-02",
+      "matched_passive_gross_return": -0.09729499708608597,
+      "matched_passive_net_return": -0.09734555147084523,
+      "matched_passive_turnover": 0.0280016088291047,
+      "strict_hold_net_return": -0.09746787031880905
+    },
+    {
+      "as_of_date": "2020-03-31",
+      "exit_date": "2020-05-01",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "TSM"
+      ],
+      "turnover": 0.013466034860515869,
+      "gross_return": 0.1273066064425981,
+      "allocation_cost": 2.693206972103174e-05,
+      "net_return": 0.1272762457424763,
+      "entry_date": "2020-04-01",
+      "matched_passive_gross_return": 0.1343305692814426,
+      "matched_passive_net_return": 0.13427972520111475,
+      "matched_passive_turnover": 0.022411491722450147,
+      "strict_hold_net_return": 0.13180206653114718
+    },
+    {
+      "as_of_date": "2020-04-30",
+      "exit_date": "2020-06-01",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "TSM"
+      ],
+      "turnover": 0.006420411937311216,
+      "gross_return": 0.08463751590906446,
+      "allocation_cost": 1.2840823874622432e-05,
+      "net_return": 0.0846235882697548,
+      "entry_date": "2020-05-01",
+      "matched_passive_gross_return": 0.06942279243167783,
+      "matched_passive_net_return": 0.06939428137815873,
+      "matched_passive_turnover": 0.013330113085802564,
+      "strict_hold_net_return": 0.06674869934140877
+    },
+    {
+      "as_of_date": "2020-05-29",
+      "exit_date": "2020-07-01",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "TSM"
+      ],
+      "turnover": 0.04854450846330177,
+      "gross_return": 0.1061918262895148,
+      "allocation_cost": 9.708901692660354e-05,
+      "net_return": 0.10608442721256806,
+      "entry_date": "2020-06-01",
+      "matched_passive_gross_return": 0.049565943048804254,
+      "matched_passive_net_return": 0.049506041462538564,
+      "matched_passive_turnover": 0.02853636146567267,
+      "strict_hold_net_return": 0.050455752098019876
+    },
+    {
+      "as_of_date": "2020-06-30",
+      "exit_date": "2020-08-03",
+      "selected_tickers": [
+        "NVDA",
+        "MSFT",
+        "TSM"
+      ],
+      "turnover": 0.008396939721168478,
+      "gross_return": 0.17787698311881212,
+      "allocation_cost": 1.6793879442336957e-05,
+      "net_return": 0.17785720199475974,
+      "entry_date": "2020-07-01",
+      "matched_passive_gross_return": 0.08265200278064791,
+      "matched_passive_net_return": 0.08259617091344196,
+      "matched_passive_turnover": 0.025784770666198206,
+      "strict_hold_net_return": 0.08040070918970521
+    },
+    {
+      "as_of_date": "2020-07-31",
+      "exit_date": "2020-09-01",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "MSFT"
+      ],
+      "turnover": 0.05298485464420524,
+      "gross_return": 0.11843642335273988,
+      "allocation_cost": 0.00010596970928841049,
+      "net_return": 0.11831790297009959,
+      "entry_date": "2020-08-03",
+      "matched_passive_gross_return": 0.08451160064338159,
+      "matched_passive_net_return": 0.08442969158624747,
+      "matched_passive_turnover": 0.037763107875293064,
+      "strict_hold_net_return": 0.08797909426115713
+    },
+    {
+      "as_of_date": "2020-08-31",
+      "exit_date": "2020-10-01",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "MSFT"
+      ],
+      "turnover": 0.04111044908613204,
+      "gross_return": -0.0010610296971809517,
+      "allocation_cost": 8.222089817226408e-05,
+      "net_return": -0.0011431633565384125,
+      "entry_date": "2020-09-01",
+      "matched_passive_gross_return": 0.01323545717630524,
+      "matched_passive_net_return": 0.01318604486117314,
+      "matched_passive_turnover": 0.024383431699916108,
+      "strict_hold_net_return": 0.008665255543486936
+    },
+    {
+      "as_of_date": "2020-09-30",
+      "exit_date": "2020-11-02",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "MSFT"
+      ],
+      "turnover": 0.017431907613631004,
+      "gross_return": -0.03070220621782064,
+      "allocation_cost": 3.486381522726201e-05,
+      "net_return": -0.03073599963700313,
+      "entry_date": "2020-10-01",
+      "matched_passive_gross_return": -0.0322243720339918,
+      "matched_passive_net_return": -0.032254722989465745,
+      "matched_passive_turnover": 0.01568078105962284,
+      "strict_hold_net_return": -0.032382490686522256
+    },
+    {
+      "as_of_date": "2020-10-30",
+      "exit_date": "2020-12-01",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "MSFT"
+      ],
+      "turnover": 0.021202629627679798,
+      "gross_return": 0.09508237984637402,
+      "allocation_cost": 4.2405259255359596e-05,
+      "net_return": 0.09503594259415071,
+      "entry_date": "2020-11-02",
+      "matched_passive_gross_return": 0.09954041101017225,
+      "matched_passive_net_return": 0.09949909875693841,
+      "matched_passive_turnover": 0.018786145929800685,
+      "strict_hold_net_return": 0.10004888488301728
+    },
+    {
+      "as_of_date": "2020-11-30",
+      "exit_date": "2021-01-04",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "MSFT"
+      ],
+      "turnover": 0.021753846505340763,
+      "gross_return": 0.04772762681281202,
+      "allocation_cost": 4.3507693010681524e-05,
+      "net_return": 0.047682042600865726,
+      "entry_date": "2020-12-01",
+      "matched_passive_gross_return": 0.049476377460778154,
+      "matched_passive_net_return": 0.049438445736099235,
+      "matched_passive_turnover": 0.018071738198967027,
+      "strict_hold_net_return": 0.04698861427855861
+    },
+    {
+      "as_of_date": "2020-12-31",
+      "exit_date": "2021-02-01",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "AVGO"
+      ],
+      "turnover": 0.35757459723707985,
+      "gross_return": 0.05032150916610907,
+      "allocation_cost": 0.0007151491944741598,
+      "net_return": 0.049570372584890166,
+      "entry_date": "2021-01-04",
+      "matched_passive_gross_return": -0.009700087468372628,
+      "matched_passive_net_return": -0.00974621305683554,
+      "matched_passive_turnover": 0.02328869662576368,
+      "strict_hold_net_return": 0.0021384019360400726
+    },
+    {
+      "as_of_date": "2021-01-29",
+      "exit_date": "2021-03-01",
+      "selected_tickers": [
+        "TSM",
+        "NVDA",
+        "AVGO"
+      ],
+      "turnover": 0.021240910917667777,
+      "gross_return": 0.05204697390998432,
+      "allocation_cost": 4.248182183533555e-05,
+      "net_return": 0.052002281037876186,
+      "entry_date": "2021-02-01",
+      "matched_passive_gross_return": 0.03572957676913652,
+      "matched_passive_net_return": 0.035665236728885,
+      "matched_passive_turnover": 0.031060250520330603,
+      "strict_hold_net_return": 0.03396804144357055
+    },
+    {
+      "as_of_date": "2021-02-26",
+      "exit_date": "2021-04-01",
+      "selected_tickers": [
+        "TSM",
+        "NVDA",
+        "AVGO"
+      ],
+      "turnover": 0.003541287321525699,
+      "gross_return": -0.026245001137399766,
+      "allocation_cost": 7.082574643051398e-06,
+      "net_return": -0.02625189782986337,
+      "entry_date": "2021-03-01",
+      "matched_passive_gross_return": 0.022535390179421508,
+      "matched_passive_net_return": 0.022499114381116625,
+      "matched_passive_turnover": 0.01773816273417187,
+      "strict_hold_net_return": 0.010438518360834464
+    },
+    {
+      "as_of_date": "2021-03-31",
+      "exit_date": "2021-05-03",
+      "selected_tickers": [
+        "TSM",
+        "NVDA",
+        "AVGO"
+      ],
+      "turnover": 0.007803809690073077,
+      "gross_return": 0.014942098610486043,
+      "allocation_cost": 1.5607619380146155e-05,
+      "net_return": 0.014926257780518037,
+      "entry_date": "2021-04-01",
+      "matched_passive_gross_return": 0.05370018436594244,
+      "matched_passive_net_return": 0.05365225335634638,
+      "matched_passive_turnover": 0.02274414027215879,
+      "strict_hold_net_return": 0.045858896731081
+    },
+    {
+      "as_of_date": "2021-04-30",
+      "exit_date": "2021-06-01",
+      "selected_tickers": [
+        "TSM",
+        "NVDA",
+        "AVGO"
+      ],
+      "turnover": 0.03266613430600443,
+      "gross_return": 0.04296574804568539,
+      "allocation_cost": 6.533226861200886e-05,
+      "net_return": 0.04289760872728077,
+      "entry_date": "2021-05-03",
+      "matched_passive_gross_return": 0.02445609497555913,
+      "matched_passive_net_return": 0.024413078211605654,
+      "matched_passive_turnover": 0.0209949280230379,
+      "strict_hold_net_return": 0.024154212980925654
+    },
+    {
+      "as_of_date": "2021-05-28",
+      "exit_date": "2021-07-01",
+      "selected_tickers": [
+        "TSM",
+        "NVDA",
+        "AVGO"
+      ],
+      "turnover": 0.010462299386924973,
+      "gross_return": 0.08574772101356996,
+      "allocation_cost": 2.0924598773849945e-05,
+      "net_return": 0.08572500217813817,
+      "entry_date": "2021-06-01",
+      "matched_passive_gross_return": 0.043676290073896534,
+      "matched_passive_net_return": 0.043654129036671874,
+      "matched_passive_turnover": 0.010616815498928095,
+      "strict_hold_net_return": 0.05258811834145153
+    },
+    {
+      "as_of_date": "2021-06-30",
+      "exit_date": "2021-08-02",
+      "selected_tickers": [
+        "TSM",
+        "NVDA",
+        "AVGO"
+      ],
+      "turnover": 0.04650340528367827,
+      "gross_return": -0.006435369023979825,
+      "allocation_cost": 9.300681056735655e-05,
+      "net_return": -0.006527777301399418,
+      "entry_date": "2021-07-01",
+      "matched_passive_gross_return": 0.04259423689357454,
+      "matched_passive_net_return": 0.042538537660835374,
+      "matched_passive_turnover": 0.026711845686584412,
+      "strict_hold_net_return": 0.03409181201314501
+    },
+    {
+      "as_of_date": "2021-07-30",
+      "exit_date": "2021-09-01",
+      "selected_tickers": [
+        "NVDA",
+        "ORCL",
+        "AVGO"
+      ],
+      "turnover": 0.33825822018441287,
+      "gross_return": 0.05792498127359861,
+      "allocation_cost": 0.0006765164403688258,
+      "net_return": 0.05720927763109018,
+      "entry_date": "2021-08-02",
+      "matched_passive_gross_return": 0.031647135961265796,
+      "matched_passive_net_return": 0.03160731382640547,
+      "matched_passive_turnover": 0.019300269187100913,
+      "strict_hold_net_return": 0.04072912253055323
+    },
+    {
+      "as_of_date": "2021-08-31",
+      "exit_date": "2021-10-01",
+      "selected_tickers": [
+        "NVDA",
+        "ORCL",
+        "TSM"
+      ],
+      "turnover": 0.34608936242041993,
+      "gross_return": -0.05283891460200403,
+      "allocation_cost": 0.0006921787248408399,
+      "net_return": -0.05349451935431371,
+      "entry_date": "2021-09-01",
+      "matched_passive_gross_return": -0.04093857980090326,
+      "matched_passive_net_return": -0.04097670391950947,
+      "matched_passive_turnover": 0.019875744036470563,
+      "strict_hold_net_return": -0.045994543039832685
+    },
+    {
+      "as_of_date": "2021-09-30",
+      "exit_date": "2021-11-01",
+      "selected_tickers": [
+        "NVDA",
+        "ORCL",
+        "TSM"
+      ],
+      "turnover": 0.012681126660386788,
+      "gross_return": 0.11596687171115437,
+      "allocation_cost": 2.5362253320773577e-05,
+      "net_return": 0.1159385682766565,
+      "entry_date": "2021-10-01",
+      "matched_passive_gross_return": 0.10521933948769308,
+      "matched_passive_net_return": 0.10518965303852812,
+      "matched_passive_turnover": 0.01343011658597243,
+      "strict_hold_net_return": 0.11560118667260352
+    },
+    {
+      "as_of_date": "2021-10-29",
+      "exit_date": "2021-12-01",
+      "selected_tickers": [
+        "NVDA",
+        "ORCL",
+        "MSFT"
+      ],
+      "turnover": 0.33879016518617405,
+      "gross_return": 0.08787694115521841,
+      "allocation_cost": 0.0006775803303723481,
+      "net_return": 0.08713981713802599,
+      "entry_date": "2021-11-01",
+      "matched_passive_gross_return": 0.04691629857491453,
+      "matched_passive_net_return": 0.04685134360723775,
+      "matched_passive_turnover": 0.03102204434350911,
+      "strict_hold_net_return": 0.07431608679659207
+    },
+    {
+      "as_of_date": "2021-11-30",
+      "exit_date": "2022-01-03",
+      "selected_tickers": [
+        "NVDA",
+        "ORCL",
+        "MSFT"
+      ],
+      "turnover": 0.06355557842566442,
+      "gross_return": -0.04978904130945664,
+      "allocation_cost": 0.00012711115685132884,
+      "net_return": -0.04990982372366859,
+      "entry_date": "2021-12-01",
+      "matched_passive_gross_return": 0.04297802549709133,
+      "matched_passive_net_return": 0.04289861604336931,
+      "matched_passive_turnover": 0.03806861303916355,
+      "strict_hold_net_return": 0.021352411589528757
+    },
+    {
+      "as_of_date": "2021-12-31",
+      "exit_date": "2022-02-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "MSFT"
+      ],
+      "turnover": 0.3518144002734711,
+      "gross_return": -0.11770497808433385,
+      "allocation_cost": 0.0007036288005469422,
+      "net_return": -0.11832578627233292,
+      "entry_date": "2022-01-03",
+      "matched_passive_gross_return": -0.06757303030995582,
+      "matched_passive_net_return": -0.06763581178982603,
+      "matched_passive_turnover": 0.03366562846799487,
+      "strict_hold_net_return": -0.08217535319784468
+    },
+    {
+      "as_of_date": "2022-01-31",
+      "exit_date": "2022-03-01",
+      "selected_tickers": [
+        "NVDA",
+        "COST",
+        "UNH"
+      ],
+      "turnover": 0.6818929251305782,
+      "gross_return": -0.0036157990886704176,
+      "allocation_cost": 0.0013637858502611564,
+      "net_return": -0.004974653763297088,
+      "entry_date": "2022-02-01",
+      "matched_passive_gross_return": -0.0350748109281314,
+      "matched_passive_net_return": -0.03512372454666246,
+      "matched_passive_turnover": 0.025345808713979637,
+      "strict_hold_net_return": -0.03443183002013733
+    },
+    {
+      "as_of_date": "2022-02-28",
+      "exit_date": "2022-04-01",
+      "selected_tickers": [
+        "NVDA",
+        "COST",
+        "UNH"
+      ],
+      "turnover": 0.011310439411503198,
+      "gross_return": 0.10878730633016978,
+      "allocation_cost": 2.2620878823006396e-05,
+      "net_return": 0.1087622245868729,
+      "entry_date": "2022-03-01",
+      "matched_passive_gross_return": 0.06960307736409183,
+      "matched_passive_net_return": 0.06956771445135002,
+      "matched_passive_turnover": 0.016530857796843837,
+      "strict_hold_net_return": 0.07246871053945204
+    },
+    {
+      "as_of_date": "2022-03-31",
+      "exit_date": "2022-05-02",
+      "selected_tickers": [
+        "NVDA",
+        "COST",
+        "AVGO"
+      ],
+      "turnover": 0.33333333333333337,
+      "gross_return": -0.17247290878491608,
+      "allocation_cost": 0.0006666666666666668,
+      "net_return": -0.17302459351239285,
+      "entry_date": "2022-04-01",
+      "matched_passive_gross_return": -0.11273560399399206,
+      "matched_passive_net_return": -0.11276853024267908,
+      "matched_passive_turnover": 0.018554925023038807,
+      "strict_hold_net_return": -0.1339928980946294
+    },
+    {
+      "as_of_date": "2022-04-29",
+      "exit_date": "2022-06-01",
+      "selected_tickers": [
+        "COST",
+        "UNH",
+        "AVGO"
+      ],
+      "turnover": 0.33333333333333337,
+      "gross_return": -0.02930058183703295,
+      "allocation_cost": 0.0006666666666666668,
+      "net_return": -0.029947714782475043,
+      "entry_date": "2022-05-02",
+      "matched_passive_gross_return": -0.007539886436016871,
+      "matched_passive_net_return": -0.007603637214793735,
+      "matched_passive_turnover": 0.03211755208375744,
+      "strict_hold_net_return": -0.00910930616702696
+    },
+    {
+      "as_of_date": "2022-05-31",
+      "exit_date": "2022-07-01",
+      "selected_tickers": [
+        "AVGO",
+        "COST",
+        "UNH"
+      ],
+      "turnover": 0.030489161722282304,
+      "gross_return": -0.04014356244169951,
+      "allocation_cost": 6.097832344456461e-05,
+      "net_return": -0.040202092878009243,
+      "entry_date": "2022-06-01",
+      "matched_passive_gross_return": -0.08464298623258046,
+      "matched_passive_net_return": -0.08467347500016087,
+      "matched_passive_turnover": 0.016654030679736476,
+      "strict_hold_net_return": -0.09301011826167527
+    },
+    {
+      "as_of_date": "2022-06-30",
+      "exit_date": "2022-08-01",
+      "selected_tickers": [
+        "UNH",
+        "COST",
+        "AVGO"
+      ],
+      "turnover": 0.047641531397299264,
+      "gross_return": 0.09803422261042308,
+      "allocation_cost": 9.528306279459853e-05,
+      "net_return": 0.09792959854663952,
+      "entry_date": "2022-07-01",
+      "matched_passive_gross_return": 0.10579635459144957,
+      "matched_passive_net_return": 0.10570684197211744,
+      "matched_passive_turnover": 0.040474278541599455,
+      "strict_hold_net_return": 0.10892465577034567
+    },
+    {
+      "as_of_date": "2022-07-29",
+      "exit_date": "2022-09-01",
+      "selected_tickers": [
+        "UNH",
+        "COST",
+        "AVGO"
+      ],
+      "turnover": 0.012013643841697869,
+      "gross_return": -0.052525750998364575,
+      "allocation_cost": 2.4027287683395737e-05,
+      "net_return": -0.0525485162347179,
+      "entry_date": "2022-08-01",
+      "matched_passive_gross_return": -0.07151183779095664,
+      "matched_passive_net_return": -0.07154179066906086,
+      "matched_passive_turnover": 0.016129919218924982,
+      "strict_hold_net_return": -0.0778866481975763
+    },
+    {
+      "as_of_date": "2022-08-31",
+      "exit_date": "2022-10-03",
+      "selected_tickers": [
+        "UNH",
+        "COST",
+        "AVGO"
+      ],
+      "turnover": 0.007974700025849935,
+      "gross_return": -0.06193129831574599,
+      "allocation_cost": 1.594940005169987e-05,
+      "net_return": -0.06194625994874503,
+      "entry_date": "2022-09-01",
+      "matched_passive_gross_return": -0.10516177400475207,
+      "matched_passive_net_return": -0.10519807970970818,
+      "matched_passive_turnover": 0.020286183525315547,
+      "strict_hold_net_return": -0.10040685462804025
+    },
+    {
+      "as_of_date": "2022-09-30",
+      "exit_date": "2022-11-01",
+      "selected_tickers": [
+        "UNH",
+        "COST",
+        "AVGO"
+      ],
+      "turnover": 0.014713437317766115,
+      "gross_return": 0.07235958779376697,
+      "allocation_cost": 2.942687463553223e-05,
+      "net_return": 0.0723280316026127,
+      "entry_date": "2022-10-03",
+      "matched_passive_gross_return": 0.09020715912337339,
+      "matched_passive_net_return": 0.0901609033211721,
+      "matched_passive_turnover": 0.021214226036824636,
+      "strict_hold_net_return": 0.07667400291425275
+    },
+    {
+      "as_of_date": "2022-10-31",
+      "exit_date": "2022-12-01",
+      "selected_tickers": [
+        "UNH",
+        "COST",
+        "V"
+      ],
+      "turnover": 0.33610123337291803,
+      "gross_return": 0.022314313431800827,
+      "allocation_cost": 0.0006722024667458361,
+      "net_return": 0.021627111228522455,
+      "entry_date": "2022-11-01",
+      "matched_passive_gross_return": 0.11383540037359427,
+      "matched_passive_net_return": 0.11375558427603805,
+      "matched_passive_turnover": 0.035829395227243065,
+      "strict_hold_net_return": 0.10647672235070273
+    },
+    {
+      "as_of_date": "2022-11-30",
+      "exit_date": "2023-01-03",
+      "selected_tickers": [
+        "UNH",
+        "V",
+        "AVGO"
+      ],
+      "turnover": 0.3421600497728416,
+      "gross_return": -0.016011152305118553,
+      "allocation_cost": 0.0006843200995456832,
+      "net_return": -0.016684515651324894,
+      "entry_date": "2022-12-01",
+      "matched_passive_gross_return": -0.052882874823907175,
+      "matched_passive_net_return": -0.05295949468044492,
+      "matched_passive_turnover": 0.040448986984295644,
+      "strict_hold_net_return": -0.05615752536663868
+    },
+    {
+      "as_of_date": "2022-12-30",
+      "exit_date": "2023-02-01",
+      "selected_tickers": [
+        "UNH",
+        "V",
+        "ORCL"
+      ],
+      "turnover": 0.35024421329447497,
+      "gross_return": 0.041201567063257914,
+      "allocation_cost": 0.0007004884265889499,
+      "net_return": 0.040472217415783884,
+      "entry_date": "2023-01-03",
+      "matched_passive_gross_return": 0.1048211011378042,
+      "matched_passive_net_return": 0.10477243023268534,
+      "matched_passive_turnover": 0.022026600084251113,
+      "strict_hold_net_return": 0.1014060365227861
+    },
+    {
+      "as_of_date": "2023-01-31",
+      "exit_date": "2023-03-01",
+      "selected_tickers": [
+        "ORCL",
+        "UNH",
+        "AVGO"
+      ],
+      "turnover": 0.36187461818765665,
+      "gross_return": -0.017148674396019897,
+      "allocation_cost": 0.0007237492363753133,
+      "net_return": -0.0178600122923962,
+      "entry_date": "2023-02-01",
+      "matched_passive_gross_return": 0.0005269998620921479,
+      "matched_passive_net_return": 0.0004483496217086991,
+      "matched_passive_turnover": 0.03930440677467181,
+      "strict_hold_net_return": 0.010160217729078998
+    },
+    {
+      "as_of_date": "2023-02-28",
+      "exit_date": "2023-04-03",
+      "selected_tickers": [
+        "ORCL",
+        "AVGO",
+        "V"
+      ],
+      "turnover": 0.33333333333333337,
+      "gross_return": 0.057617793017863406,
+      "allocation_cost": 0.0006666666666666668,
+      "net_return": 0.05691271448918478,
+      "entry_date": "2023-03-01",
+      "matched_passive_gross_return": 0.07649493113814645,
+      "matched_passive_net_return": 0.07643905035178489,
+      "matched_passive_turnover": 0.02595496957082042,
+      "strict_hold_net_return": 0.08815379624498947
+    },
+    {
+      "as_of_date": "2023-03-31",
+      "exit_date": "2023-05-01",
+      "selected_tickers": [
+        "ORCL",
+        "AVGO",
+        "V"
+      ],
+      "turnover": 0.009873218916574722,
+      "gross_return": 0.014950294714121237,
+      "allocation_cost": 1.9746437833149443e-05,
+      "net_return": 0.014930253061222976,
+      "entry_date": "2023-04-03",
+      "matched_passive_gross_return": 0.007412522754826997,
+      "matched_passive_net_return": 0.007369716314914232,
+      "matched_passive_turnover": 0.02124573545882253,
+      "strict_hold_net_return": 0.008086257941751624
+    },
+    {
+      "as_of_date": "2023-04-28",
+      "exit_date": "2023-06-01",
+      "selected_tickers": [
+        "NVDA",
+        "ORCL",
+        "AVGO"
+      ],
+      "turnover": 0.3446682048489872,
+      "gross_return": 0.25558888790452233,
+      "allocation_cost": 0.0006893364096979744,
+      "net_return": 0.25472336476847746,
+      "entry_date": "2023-05-01",
+      "matched_passive_gross_return": 0.12106604801986416,
+      "matched_passive_net_return": 0.12102985139275768,
+      "matched_passive_turnover": 0.0161438423590081,
+      "strict_hold_net_return": 0.15291091487151104
+    },
+    {
+      "as_of_date": "2023-05-31",
+      "exit_date": "2023-07-03",
+      "selected_tickers": [
+        "NVDA",
+        "ORCL",
+        "AVGO"
+      ],
+      "turnover": 0.03962517873837565,
+      "gross_return": 0.1068900260982657,
+      "allocation_cost": 7.92503574767513e-05,
+      "net_return": 0.10680230466801,
+      "entry_date": "2023-06-01",
+      "matched_passive_gross_return": 0.06311439263489223,
+      "matched_passive_net_return": 0.06300348359916574,
+      "matched_passive_turnover": 0.05216232443796602,
+      "strict_hold_net_return": 0.070185817379427
+    },
+    {
+      "as_of_date": "2023-06-30",
+      "exit_date": "2023-08-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "ORCL"
+      ],
+      "turnover": 0.005511058794026358,
+      "gross_return": 0.040643643771604114,
+      "allocation_cost": 1.1022117588052716e-05,
+      "net_return": 0.040632173674995054,
+      "entry_date": "2023-07-03",
+      "matched_passive_gross_return": 0.023165634417033718,
+      "matched_passive_net_return": 0.02313380678312127,
+      "matched_passive_turnover": 0.015553510028964067,
+      "strict_hold_net_return": 0.03423220964188164
+    },
+    {
+      "as_of_date": "2023-07-31",
+      "exit_date": "2023-09-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "ORCL"
+      ],
+      "turnover": 0.0166867607739814,
+      "gross_return": 0.03642275212752392,
+      "allocation_cost": 3.3373521547962804e-05,
+      "net_return": 0.03638816305047299,
+      "entry_date": "2023-08-01",
+      "matched_passive_gross_return": 0.0035887530621170616,
+      "matched_passive_net_return": 0.003554413019762448,
+      "matched_passive_turnover": 0.017108622555736502,
+      "strict_hold_net_return": 0.01475920300852451
+    },
+    {
+      "as_of_date": "2023-08-31",
+      "exit_date": "2023-10-02",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "ORCL"
+      ],
+      "turnover": 0.011143868421635367,
+      "gross_return": -0.10548296293696564,
+      "allocation_cost": 2.2287736843270734e-05,
+      "net_return": -0.10550289969728965,
+      "entry_date": "2023-09-01",
+      "matched_passive_gross_return": -0.05248233118698932,
+      "matched_passive_net_return": -0.05251556682533809,
+      "matched_passive_turnover": 0.017538268384188538,
+      "strict_hold_net_return": -0.06597858724637011
+    },
+    {
+      "as_of_date": "2023-09-29",
+      "exit_date": "2023-11-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "ORCL"
+      ],
+      "turnover": 0.011088946561424479,
+      "gross_return": -0.02374991993758413,
+      "allocation_cost": 2.2177893122848957e-05,
+      "net_return": -0.023771571107520928,
+      "entry_date": "2023-10-02",
+      "matched_passive_gross_return": 0.006333884154183553,
+      "matched_passive_net_return": 0.006281203083294162,
+      "matched_passive_turnover": 0.026174747625470667,
+      "strict_hold_net_return": -0.005761803653024313
+    },
+    {
+      "as_of_date": "2023-10-31",
+      "exit_date": "2023-12-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "MSFT"
+      ],
+      "turnover": 0.3496203546343918,
+      "gross_return": 0.11486253163950835,
+      "allocation_cost": 0.0006992407092687836,
+      "net_return": 0.11408297437214765,
+      "entry_date": "2023-11-01",
+      "matched_passive_gross_return": 0.09890408391145544,
+      "matched_passive_net_return": 0.09886502654429874,
+      "matched_passive_turnover": 0.017771053783726024,
+      "strict_hold_net_return": 0.1049402089777811
+    },
+    {
+      "as_of_date": "2023-11-30",
+      "exit_date": "2024-01-02",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "MSFT"
+      ],
+      "turnover": 0.006910567900098807,
+      "gross_return": 0.08006705721811956,
+      "allocation_cost": 1.3821135800197615e-05,
+      "net_return": 0.08005212946464835,
+      "entry_date": "2023-12-01",
+      "matched_passive_gross_return": 0.036803428632211324,
+      "matched_passive_net_return": 0.036779489392487985,
+      "matched_passive_turnover": 0.01154473406552925,
+      "strict_hold_net_return": 0.052063745338035025
+    },
+    {
+      "as_of_date": "2023-12-29",
+      "exit_date": "2024-02-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "MSFT"
+      ],
+      "turnover": 0.033731577397497575,
+      "gross_return": 0.14102615211621564,
+      "allocation_cost": 6.746315479499516e-05,
+      "net_return": 0.14094917489229042,
+      "entry_date": "2024-01-02",
+      "matched_passive_gross_return": 0.08744371065971782,
+      "matched_passive_net_return": 0.08736968181414473,
+      "matched_passive_turnover": 0.03403801265638836,
+      "strict_hold_net_return": 0.11869635144320398
+    },
+    {
+      "as_of_date": "2024-01-31",
+      "exit_date": "2024-03-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "MSFT"
+      ],
+      "turnover": 0.03506789776337951,
+      "gross_return": 0.1434481036036686,
+      "allocation_cost": 7.013579552675903e-05,
+      "net_return": 0.14336790696127877,
+      "entry_date": "2024-02-01",
+      "matched_passive_gross_return": 0.07869154735012945,
+      "matched_passive_net_return": 0.07864216369538024,
+      "matched_passive_turnover": 0.022890535700643512,
+      "strict_hold_net_return": 0.12858523245217413
+    },
+    {
+      "as_of_date": "2024-02-29",
+      "exit_date": "2024-04-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "MSFT"
+      ],
+      "turnover": 0.04221072135383078,
+      "gross_return": 0.054563770374470424,
+      "allocation_cost": 8.442144270766156e-05,
+      "net_return": 0.054474742579547986,
+      "entry_date": "2024-03-01",
+      "matched_passive_gross_return": 0.04245645264844704,
+      "matched_passive_net_return": 0.042380980608845764,
+      "matched_passive_turnover": 0.036199133023446475,
+      "strict_hold_net_return": 0.059896111699442395
+    },
+    {
+      "as_of_date": "2024-03-28",
+      "exit_date": "2024-05-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "COST"
+      ],
+      "turnover": 0.34929402578908897,
+      "gross_return": -0.03497737535536819,
+      "allocation_cost": 0.0006985880515781779,
+      "net_return": -0.035651528630447515,
+      "entry_date": "2024-04-01",
+      "matched_passive_gross_return": -0.042741519075890244,
+      "matched_passive_net_return": -0.04278395056910611,
+      "matched_passive_turnover": 0.022163028096116956,
+      "strict_hold_net_return": -0.046213735680913165
+    },
+    {
+      "as_of_date": "2024-04-30",
+      "exit_date": "2024-06-03",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "TSM"
+      ],
+      "turnover": 0.34148267278189315,
+      "gross_return": 0.1741624389701144,
+      "allocation_cost": 0.0006829653455637864,
+      "net_return": 0.17336052671423507,
+      "entry_date": "2024-05-01",
+      "matched_passive_gross_return": 0.09859226116473091,
+      "matched_passive_net_return": 0.09856527680990967,
+      "matched_passive_turnover": 0.01228133301820035,
+      "strict_hold_net_return": 0.16593001974228905
+    },
+    {
+      "as_of_date": "2024-05-31",
+      "exit_date": "2024-07-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "COST"
+      ],
+      "turnover": 0.36626054013733234,
+      "gross_return": 0.11061078217973995,
+      "allocation_cost": 0.0007325210802746647,
+      "net_return": 0.10979723636981298,
+      "entry_date": "2024-06-03",
+      "matched_passive_gross_return": 0.0924706565315603,
+      "matched_passive_net_return": 0.09239821678570559,
+      "matched_passive_turnover": 0.033154092250253016,
+      "strict_hold_net_return": 0.09956595469828355
+    },
+    {
+      "as_of_date": "2024-06-28",
+      "exit_date": "2024-08-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "TSM"
+      ],
+      "turnover": 0.34048843895237824,
+      "gross_return": -0.043501972818906845,
+      "allocation_cost": 0.0006809768779047565,
+      "net_return": -0.04415332585917875,
+      "entry_date": "2024-07-01",
+      "matched_passive_gross_return": -0.01221476512027335,
+      "matched_passive_net_return": -0.012270736427840934,
+      "matched_passive_turnover": 0.028331719077775895,
+      "strict_hold_net_return": -0.03233345596893039
+    },
+    {
+      "as_of_date": "2024-07-31",
+      "exit_date": "2024-09-03",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "TSM"
+      ],
+      "turnover": 0.007965765031759747,
+      "gross_return": 0.011000333153998322,
+      "allocation_cost": 1.5931530063519496e-05,
+      "net_return": 0.010984226371796524,
+      "entry_date": "2024-08-01",
+      "matched_passive_gross_return": 0.024755460807886556,
+      "matched_passive_net_return": 0.024710570860843273,
+      "matched_passive_turnover": 0.021902760590346772,
+      "strict_hold_net_return": 0.012437280572007506
+    },
+    {
+      "as_of_date": "2024-08-30",
+      "exit_date": "2024-10-01",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "AVGO"
+      ],
+      "turnover": 0.007890921678119528,
+      "gross_return": 0.058028177857113596,
+      "allocation_cost": 1.5781843356239055e-05,
+      "net_return": 0.05801148022214431,
+      "entry_date": "2024-09-03",
+      "matched_passive_gross_return": 0.04893750285827696,
+      "matched_passive_net_return": 0.04891437062541226,
+      "matched_passive_turnover": 0.011026506727907247,
+      "strict_hold_net_return": 0.04964497970339291
+    },
+    {
+      "as_of_date": "2024-09-30",
+      "exit_date": "2024-11-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "TSM"
+      ],
+      "turnover": 0.005971157459932541,
+      "gross_return": 0.0637610531472917,
+      "allocation_cost": 1.1942314919865083e-05,
+      "net_return": 0.0637483493777955,
+      "entry_date": "2024-10-01",
+      "matched_passive_gross_return": 0.01803328926887078,
+      "matched_passive_net_return": 0.017986734986211506,
+      "matched_passive_turnover": 0.022864813533093407,
+      "strict_hold_net_return": 0.04201255231616859
+    },
+    {
+      "as_of_date": "2024-10-31",
+      "exit_date": "2024-12-02",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "AVGO"
+      ],
+      "turnover": 0.027078230370770867,
+      "gross_return": -0.0086410912623525,
+      "allocation_cost": 5.4156460741541736e-05,
+      "net_return": -0.008694779752174364,
+      "entry_date": "2024-11-01",
+      "matched_passive_gross_return": 0.04924282522139363,
+      "matched_passive_net_return": 0.04919092405706138,
+      "matched_passive_turnover": 0.024732675356366626,
+      "strict_hold_net_return": 0.032847632069052196
+    },
+    {
+      "as_of_date": "2024-11-29",
+      "exit_date": "2025-01-02",
+      "selected_tickers": [
+        "NVDA",
+        "TSM",
+        "AVGO"
+      ],
+      "turnover": 0.013214929666327174,
+      "gross_return": 0.15886829541001435,
+      "allocation_cost": 2.642985933265435e-05,
+      "net_return": 0.15883766668398147,
+      "entry_date": "2024-12-02",
+      "matched_passive_gross_return": 0.02134770893945613,
+      "matched_passive_net_return": 0.02130144180638549,
+      "matched_passive_turnover": 0.02265004007230305,
+      "strict_hold_net_return": 0.04276738408282654
+    },
+    {
+      "as_of_date": "2024-12-31",
+      "exit_date": "2025-02-03",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "TSM"
+      ],
+      "turnover": 0.08464963765318495,
+      "gross_return": -0.07685061746679307,
+      "allocation_cost": 0.0001692992753063699,
+      "net_return": -0.07700690598825555,
+      "entry_date": "2025-01-02",
+      "matched_passive_gross_return": -0.011612875588781157,
+      "matched_passive_net_return": -0.011722767613039475,
+      "matched_passive_turnover": 0.05559159035167451,
+      "strict_hold_net_return": -0.07072066631294605
+    },
+    {
+      "as_of_date": "2025-01-31",
+      "exit_date": "2025-03-03",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "TSM"
+      ],
+      "turnover": 0.03257000135296825,
+      "gross_return": -0.023139730269854716,
+      "allocation_cost": 6.514000270593651e-05,
+      "net_return": -0.02320336295046832,
+      "entry_date": "2025-02-03",
+      "matched_passive_gross_return": -0.0060106125419070455,
+      "matched_passive_net_return": -0.006075823751124587,
+      "matched_passive_turnover": 0.03280276934560686,
+      "strict_hold_net_return": 0.012536605691528247
+    },
+    {
+      "as_of_date": "2025-02-28",
+      "exit_date": "2025-04-01",
+      "selected_tickers": [
+        "NVDA",
+        "AVGO",
+        "ORCL"
+      ],
+      "turnover": 0.34358682921338957,
+      "gross_return": -0.1553807658882055,
+      "allocation_cost": 0.0006871736584267792,
+      "net_return": -0.1559611659772877,
+      "entry_date": "2025-03-03",
+      "matched_passive_gross_return": -0.0787703143760987,
+      "matched_passive_net_return": -0.07883417141452087,
+      "matched_passive_turnover": 0.034658587005318466,
+      "strict_hold_net_return": -0.11079709624125601
+    },
+    {
+      "as_of_date": "2025-03-31",
+      "exit_date": "2025-05-01",
+      "selected_tickers": [
+        "COST",
+        "AVGO",
+        "V"
+      ],
+      "turnover": 0.6771694740306912,
+      "gross_return": 0.0758949611799948,
+      "allocation_cost": 0.0013543389480613823,
+      "net_return": 0.07443783473004584,
+      "entry_date": "2025-04-01",
+      "matched_passive_gross_return": 0.036714353885186776,
+      "matched_passive_net_return": 0.036642611337251774,
+      "matched_passive_turnover": 0.0346009234202542,
+      "strict_hold_net_return": 0.06224060775090129
+    },
+    {
+      "as_of_date": "2025-04-30",
+      "exit_date": "2025-06-02",
+      "selected_tickers": [
+        "AVGO",
+        "COST",
+        "V"
+      ],
+      "turnover": 0.035649462040167085,
+      "gross_return": 0.10837525940857279,
+      "allocation_cost": 7.129892408033416e-05,
+      "net_return": 0.10829623344509964,
+      "entry_date": "2025-05-01",
+      "matched_passive_gross_return": 0.06998248246433733,
+      "matched_passive_net_return": 0.0699038029101533,
+      "matched_passive_turnover": 0.036766748742856785,
+      "strict_hold_net_return": 0.13791639537369146
+    },
+    {
+      "as_of_date": "2025-05-30",
+      "exit_date": "2025-07-01",
+      "selected_tickers": [
+        "AVGO",
+        "ORCL",
+        "V"
+      ],
+      "turnover": 0.35044236493347525,
+      "gross_return": 0.1472841413951939,
+      "allocation_cost": 0.0007008847298669505,
+      "net_return": 0.1464800274596716,
+      "entry_date": "2025-06-02",
+      "matched_passive_gross_return": 0.10720497521911315,
+      "matched_passive_net_return": 0.10710584221614416,
+      "matched_passive_turnover": 0.04476723153697925,
+      "strict_hold_net_return": 0.12481606231205197
+    },
+    {
+      "as_of_date": "2025-06-30",
+      "exit_date": "2025-08-01",
+      "selected_tickers": [
+        "AVGO",
+        "ORCL",
+        "V"
+      ],
+      "turnover": 0.05477478428099508,
+      "gross_return": 0.04975580355750027,
+      "allocation_cost": 0.00010954956856199016,
+      "net_return": 0.049640803262125166,
+      "entry_date": "2025-07-01",
+      "matched_passive_gross_return": 0.01629962292485848,
+      "matched_passive_net_return": 0.016213855367746444,
+      "matched_passive_turnover": 0.04219599967236964,
+      "strict_hold_net_return": 0.06349920650596763
+    },
+    {
+      "as_of_date": "2025-07-31",
+      "exit_date": "2025-09-02",
+      "selected_tickers": [
+        "AVGO",
+        "ORCL",
+        "NVDA"
+      ],
+      "turnover": 0.335084146818276,
+      "gross_return": -0.0393154758116229,
+      "allocation_cost": 0.000670168293636552,
+      "net_return": -0.03995929611992122,
+      "entry_date": "2025-08-01",
+      "matched_passive_gross_return": 0.0031409808880631385,
+      "matched_passive_net_return": 0.0030613378286186155,
+      "matched_passive_turnover": 0.03969684269803811,
+      "strict_hold_net_return": -0.01991759516804149
+    },
+    {
+      "as_of_date": "2025-08-29",
+      "exit_date": "2025-10-01",
+      "selected_tickers": [
+        "AVGO",
+        "ORCL",
+        "NVDA"
+      ],
+      "turnover": 0.02252184011545358,
+      "gross_return": 0.160547030271043,
+      "allocation_cost": 4.504368023090716e-05,
+      "net_return": 0.1604947549617184,
+      "entry_date": "2025-09-02",
+      "matched_passive_gross_return": 0.10317514674923914,
+      "matched_passive_net_return": 0.10310709776120897,
+      "matched_passive_turnover": 0.03084233189572331,
+      "strict_hold_net_return": 0.10619805933586904
+    },
+    {
+      "as_of_date": "2025-09-30",
+      "exit_date": "2025-11-03",
+      "selected_tickers": [
+        "AVGO",
+        "ORCL",
+        "TSM"
+      ],
+      "turnover": 0.34036182288815986,
+      "gross_return": 0.05779162529605826,
+      "allocation_cost": 0.0006807236457763197,
+      "net_return": 0.05707156152441506,
+      "entry_date": "2025-10-01",
+      "matched_passive_gross_return": 0.03555970261387112,
+      "matched_passive_net_return": 0.0354806617447323,
+      "matched_passive_turnover": 0.03816335694573029,
+      "strict_hold_net_return": 0.08363613580753858
+    },
+    {
+      "as_of_date": "2025-10-31",
+      "exit_date": "2025-12-01",
+      "selected_tickers": [
+        "AVGO",
+        "TSM",
+        "ORCL"
+      ],
+      "turnover": 0.033017759587665535,
+      "gross_return": -0.07814751448048585,
+      "allocation_cost": 6.603551917533108e-05,
+      "net_return": -0.07820838948797015,
+      "entry_date": "2025-11-03",
+      "matched_passive_gross_return": -0.06366063921603506,
+      "matched_passive_net_return": -0.06371420805202155,
+      "matched_passive_turnover": 0.028605459852548844,
+      "strict_hold_net_return": -0.08014552474008163
+    },
+    {
+      "as_of_date": "2025-11-28",
+      "exit_date": "2026-01-02",
+      "selected_tickers": [
+        "AVGO",
+        "TSM",
+        "NVDA"
+      ],
+      "turnover": 0.3333333333333333,
+      "gross_return": 0.023930054400306378,
+      "allocation_cost": 0.0006666666666666666,
+      "net_return": 0.023247434364039643,
+      "entry_date": "2025-12-01",
+      "matched_passive_gross_return": 0.007557500130437156,
+      "matched_passive_net_return": 0.007483012437640824,
+      "matched_passive_turnover": 0.036964487280756,
+      "strict_hold_net_return": 0.010945801298697943
+    },
+    {
+      "as_of_date": "2025-12-31",
+      "exit_date": "2026-02-02",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "NVDA"
+      ],
+      "turnover": 0.04191924423950938,
+      "gross_return": -0.009769933395056902,
+      "allocation_cost": 8.383848847901876e-05,
+      "net_return": -0.009852952787087643,
+      "entry_date": "2026-01-02",
+      "matched_passive_gross_return": -0.04780950957140229,
+      "matched_passive_net_return": -0.04786041912851868,
+      "matched_passive_turnover": 0.026732863659171005,
+      "strict_hold_net_return": -0.03155889841375923
+    },
+    {
+      "as_of_date": "2026-01-30",
+      "exit_date": "2026-03-02",
+      "selected_tickers": [
+        "TSM",
+        "NVDA",
+        "AVGO"
+      ],
+      "turnover": 0.023552148523671518,
+      "gross_return": -0.003957846711062883,
+      "allocation_cost": 4.710429704734304e-05,
+      "net_return": -0.004004764576523101,
+      "entry_date": "2026-02-02",
+      "matched_passive_gross_return": -0.027089496213714467,
+      "matched_passive_net_return": -0.027162987535977234,
+      "matched_passive_turnover": 0.03776879886527167,
+      "strict_hold_net_return": -0.03631376871566553
+    },
+    {
+      "as_of_date": "2026-02-27",
+      "exit_date": "2026-04-01",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "NVDA"
+      ],
+      "turnover": 0.036332197920683595,
+      "gross_return": -0.0117619300368678,
+      "allocation_cost": 7.266439584136719e-05,
+      "net_return": -0.011833739759169126,
+      "entry_date": "2026-03-02",
+      "matched_passive_gross_return": -0.015210942395704474,
+      "matched_passive_net_return": -0.015277835756091873,
+      "matched_passive_turnover": 0.03396329390074367,
+      "strict_hold_net_return": -0.005889616749513342
+    },
+    {
+      "as_of_date": "2026-03-31",
+      "exit_date": "2026-05-01",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "NVDA"
+      ],
+      "turnover": 0.014949966391886088,
+      "gross_return": 0.20409696332490018,
+      "allocation_cost": 2.9899932783772175e-05,
+      "net_return": 0.2040609609066315,
+      "entry_date": "2026-04-01",
+      "matched_passive_gross_return": 0.16341510927213887,
+      "matched_passive_net_return": 0.16337991043848943,
+      "matched_passive_turnover": 0.015127375159946478,
+      "strict_hold_net_return": 0.1736351083611386
+    },
+    {
+      "as_of_date": "2026-04-30",
+      "exit_date": "2026-06-01",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "NVDA"
+      ],
+      "turnover": 0.03335929703102403,
+      "gross_return": 0.07867329642793189,
+      "allocation_cost": 6.671859406204806e-05,
+      "net_return": 0.0786013288621421,
+      "entry_date": "2026-05-01",
+      "matched_passive_gross_return": 0.0858027464150695,
+      "matched_passive_net_return": 0.08572009220612276,
+      "matched_passive_turnover": 0.03806133720860834,
+      "strict_hold_net_return": 0.07938566296152125
+    },
+    {
+      "as_of_date": "2026-05-29",
+      "exit_date": "2026-07-01",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "NVDA"
+      ],
+      "turnover": 0.0021269942238524298,
+      "gross_return": -0.052886999694399986,
+      "allocation_cost": 4.25398844770486e-06,
+      "net_return": -0.052891028702162,
+      "entry_date": "2026-06-01",
+      "matched_passive_gross_return": -0.06994802480962513,
+      "matched_passive_net_return": -0.07002124965919998,
+      "matched_passive_turnover": 0.03936599863676039,
+      "strict_hold_net_return": -0.09497639533776424
+    },
+    {
+      "as_of_date": "2026-06-30",
+      "exit_date": "2026-08-03",
+      "selected_tickers": [
+        "TSM",
+        "AVGO",
+        "UNH"
+      ],
+      "turnover": 0.3754236421034006,
+      "gross_return": -0.036315282373956426,
+      "allocation_cost": 0.0007508472842068012,
+      "net_return": -0.037038862427017594,
+      "entry_date": "2026-07-01",
+      "matched_passive_gross_return": 0.020308666822471746,
+      "matched_passive_net_return": 0.02016165411622306,
+      "matched_passive_turnover": 0.07204325074803183,
+      "strict_hold_net_return": 0.003562952454511402
+    },
+    {
+      "as_of_date": "2026-07-31",
+      "exit_date": "2026-09-01",
+      "selected_tickers": [
+        "UNH",
+        "TSM",
+        "AVGO"
+      ],
+      "turnover": 0.0370519972311516,
+      "gross_return": -0.02340373481914089,
+      "allocation_cost": 7.41039944623032e-05,
+      "net_return": -0.025429152294361046,
+      "entry_date": "2026-08-03",
+      "matched_passive_gross_return": 0.0249049671085943,
+      "matched_passive_net_return": 0.022779938064718674,
+      "matched_passive_turnover": 0.03676918923024238,
+      "strict_hold_net_return": 0.03496459386805251
+    }
+  ],
+  "matched_passive_return": 7.878806632908345,
+  "matched_passive_excess_return": 4.795066203463959,
+  "strict_hold_log_excess_ci_95": [
+    -0.002720716957406569,
+    0.008957684062480237
+  ],
+  "matched_passive_log_excess_ci_95": [
+    -0.002419669395119383,
+    0.011968741404401014
+  ],
+  "buy_and_hold_max_drawdown": -0.347263734245133,
+  "matched_passive_max_drawdown": -0.31240245676389056,
+  "drawdown_basis": "daily_close_mark_to_market",
+  "price_basis": "provided_open_close_not_dividend_verified"
+}

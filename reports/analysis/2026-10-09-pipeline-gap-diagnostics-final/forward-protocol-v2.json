@@ -1,0 +1,136 @@
+{
+  "version": 2,
+  "status": "prepared_rules_frozen_collection_not_activated",
+  "prepared_date": "2026-10-09",
+  "specification": "docs/design/pipeline-forward-validation-v2.md",
+  "specification_sha256": "c3ad7e8e026306b619cae4683aa407fe94a373a187134be9e55f490652b8323d",
+  "first_proposed_anchor": "2026-10-12",
+  "anchors": [
+    "2026-10-12",
+    "2026-11-16",
+    "2026-12-21",
+    "2027-01-25",
+    "2027-03-01",
+    "2027-04-05",
+    "2027-05-10",
+    "2027-06-14",
+    "2027-07-19",
+    "2027-08-23",
+    "2027-09-27",
+    "2027-11-01",
+    "2027-12-06",
+    "2028-01-10",
+    "2028-02-14",
+    "2028-03-20",
+    "2028-04-24",
+    "2028-05-29",
+    "2028-07-03",
+    "2028-08-07",
+    "2028-09-11",
+    "2028-10-16",
+    "2028-11-20",
+    "2028-12-25",
+    "2029-01-29",
+    "2029-03-05",
+    "2029-04-09",
+    "2029-05-14",
+    "2029-06-18",
+    "2029-07-23",
+    "2029-08-27",
+    "2029-10-01",
+    "2029-11-05",
+    "2029-12-10",
+    "2030-01-14",
+    "2030-02-18"
+  ],
+  "horizon_calendar_days": 30,
+  "universe": [
+    "AVGO",
+    "COST",
+    "MSFT",
+    "NVDA",
+    "ORCL",
+    "TSM",
+    "UNH",
+    "V"
+  ],
+  "market": "US",
+  "currency": "USD",
+  "primary_candidate": "allocator_only",
+  "arms": [
+    "continuous_strict_hold",
+    "scheduled_passive",
+    "allocator_only",
+    "ft_weighted_only",
+    "ft_agreement_only",
+    "ai_only",
+    "allocator_plus_ft_weighted",
+    "allocator_plus_ft_agreement",
+    "allocator_plus_ai"
+  ],
+  "within_run_comparison_count": 9,
+  "allocator": {
+    "lookback_months": 12,
+    "top_n": 3,
+    "sleeve_weight": 0.3333333333333333
+  },
+  "cost_bps_per_side": [
+    0,
+    10,
+    20
+  ],
+  "cost_status": "assumed_not_calibrated",
+  "cash_primary_annual_return": 0,
+  "allow_short": false,
+  "continuous_hold_weight": 0.125,
+  "entry": "first_common_session_open_strictly_after_decision",
+  "exit": "first_common_session_close_on_or_after_decision_plus_30_days",
+  "decision": "latest_completed_common_session_on_or_before_anchor; forecasts_sealed_before_next_open",
+  "missing_input": "retain_panel; existing_guards_abstain; no_forced_buy",
+  "ft_confidence_weights": {
+    "high": 1,
+    "medium": 0.75,
+    "low": 0.5
+  },
+  "ft_tie_order": "symbol; no_AI_conviction",
+  "episode_fee_convention": "multiplicative_entry_exit",
+  "bootstrap": {
+    "daily_block_trading_sessions": 21,
+    "resamples": 2000,
+    "seed": 0
+  },
+  "promotion": {
+    "minimum_effective_n": 30,
+    "minimum_dsr": 0.95,
+    "paired_ci_lower_must_exceed": 0,
+    "twice_calibrated_cost_excess_must_exceed": 0,
+    "maximum_drawdown_deterioration_pp": 5,
+    "hybrid_must_beat_allocator": true
+  },
+  "descriptive_checkpoints": [
+    6,
+    12,
+    24
+  ],
+  "activation_required": [
+    "nine_arm_collector_acceptance_pass",
+    "actual_model_provider_prompt_tool_and_input_hash_manifest_before_first_entry"
+  ],
+  "model_provenance": null,
+  "prompt_provenance": null,
+  "activation_at_utc": null,
+  "promotion_additionally_requires": [
+    "actual_ingested_distribution_delisting_merger_returns",
+    "externally_calibrated_costs",
+    "mature_unseen_sample",
+    "complete_search_history_or_unresolved_gate",
+    "authenticated_provider_for_AI_claim"
+  ],
+  "missed_first_cutoff": "new_future_protocol_version; no_backdating",
+  "old_cohort": {
+    "path": "reports/analysis/2026-10-07-forward-cohort",
+    "score_not_before_utc": "2026-11-07"
+  },
+  "historical_diagnostic": "reports/analysis/2026-10-09-pipeline-gap-diagnostics-final",
+  "live_execution_authorized": false
+}
