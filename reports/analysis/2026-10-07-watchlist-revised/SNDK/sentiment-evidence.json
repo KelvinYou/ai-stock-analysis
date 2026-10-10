@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "SNDK",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/SNDK/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 4,
+    "buy": 17,
+    "hold": 3,
+    "sell": 0,
+    "strongSell": 1
+  },
+  "sources": [
+    {
+      "url": "https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-fourth-quarter-2026-financial-results",
+      "date": "2026-08-05",
+      "observed_facts": "Sandisk reports fourth-quarter revenue growth of 51% sequentially and FY2026 revenue growth of 175%; ten new-business-model agreements signed.",
+      "negative_evidence_or_limitations": "Approximately two thirds of quarterly revenue growth came from pricing, making cycle durability a key uncertainty; new guidance is prospective."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

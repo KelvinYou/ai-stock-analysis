@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-07",
+  "pipeline_mode": "in-session",
+  "watchlist_sha256": "c75ea7dc8bffcd14a4f515a2917070d35c6a62cddc2e50672c477e023d90f41d",
+  "tickers": [
+    {
+      "symbol": "VT",
+      "market": "US",
+      "theme": "Global equity index core"
+    },
+    {
+      "symbol": "COST",
+      "market": "US",
+      "theme": "US consumer staples / membership retail"
+    },
+    {
+      "symbol": "1155",
+      "market": "MY",
+      "theme": "MY core banks & construction"
+    },
+    {
+      "symbol": "5258",
+      "market": "MY",
+      "theme": "MY core banks & construction"
+    },
+    {
+      "symbol": "5398",
+      "market": "MY",
+      "theme": "MY core banks & construction"
+    },
+    {
+      "symbol": "4197",
+      "market": "MY",
+      "theme": "MY conglomerate"
+    },
+    {
+      "symbol": "0215",
+      "market": "MY",
+      "theme": "MY diversified"
+    },
+    {
+      "symbol": "5225",
+      "market": "MY",
+      "theme": "MY diversified"
+    },
+    {
+      "symbol": "5296",
+      "market": "MY",
+      "theme": "MY diversified"
+    },
+    {
+      "symbol": "0097",
+      "market": "MY",
+      "theme": "MY semiconductor equipment & services"
+    },
+    {
+      "symbol": "0128",
+      "market": "MY",
+      "theme": "MY semiconductor equipment & services"
+    },
+    {
+      "symbol": "5249",
+      "market": "MY",
+      "theme": "MY sector-gap"
+    },
+    {
+      "symbol": "6947",
+      "market": "MY",
+      "theme": "MY sector-gap"
+    },
+    {
+      "symbol": "5347",
+      "market": "MY",
+      "theme": "MY utilities / data-center power"
+    },
+    {
+      "symbol": "5126",
+      "market": "MY",
+      "theme": "MY plantation"
+    },
+    {
+      "symbol": "AAPL",
+      "market": "US",
+      "theme": "US consumer hardware"
+    },
+    {
+      "symbol": "GOOGL",
+      "market": "US",
+      "theme": "US cloud & platforms"
+    },
+    {
+      "symbol": "MSFT",
+      "market": "US",
+      "theme": "US cloud & platforms"
+    },
+    {
+      "symbol": "AMZN",
+      "market": "US",
+      "theme": "US cloud & platforms"
+    },
+    {
+      "symbol": "META",
+      "market": "US",
+      "theme": "US cloud & platforms"
+    },
+    {
+      "symbol": "NVDA",
+      "market": "US",
+      "theme": "US AI semiconductor supply chain"
+    },
+    {
+      "symbol": "AVGO",
+      "market": "US",
+      "theme": "US AI semiconductor supply chain"
+    },
+    {
+      "symbol": "TSM",
+      "market": "US",
+      "theme": "US AI semiconductor supply chain"
+    },
+    {
+      "symbol": "V",
+      "market": "US",
+      "theme": "US payments"
+    },
+    {
+      "symbol": "UNH",
+      "market": "US",
+      "theme": "US healthcare / managed-care recovery"
+    },
+    {
+      "symbol": "ETN",
+      "market": "US",
+      "theme": "US electrification / data-center power"
+    },
+    {
+      "symbol": "JPM",
+      "market": "US",
+      "theme": "US financials"
+    },
+    {
+      "symbol": "APP",
+      "market": "US",
+      "theme": "US adtech / higher-risk research"
+    },
+    {
+      "symbol": "ORCL",
+      "market": "US",
+      "theme": "US enterprise software / cloud financing"
+    },
+    {
+      "symbol": "SNDK",
+      "market": "US",
+      "theme": "US NAND storage / memory cycle"
+    },
+    {
+      "symbol": "NFLX",
+      "market": "US",
+      "theme": "US media / streaming"
+    }
+  ],
+  "scope": "31 active watchlist symbols; 18 US including VT ETF, 13 MY",
+  "status": "complete",
+  "research_quality": "corrected_and_reviewed",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "reason": "Complete missing extractable financial evidence and independently regenerate debate, adjudication and synthesis",
+  "verification": {
+    "status": "passed",
+    "exact_completed_runs": 31,
+    "public_artifacts": 124,
+    "normalized_payload_matches": 124,
+    "enabled_watchlist": 31,
+    "dashboard_provenance_column_available": false,
+    "note": "Remote summary view lacks briefing_data_as_of migration; data_as_of verified directly in all31 public briefing payloads",
+    "symbols": [
+      "0097",
+      "0128",
+      "0215",
+      "1155",
+      "4197",
+      "5126",
+      "5225",
+      "5249",
+      "5258",
+      "5296",
+      "5347",
+      "5398",
+      "6947",
+      "AAPL",
+      "AMZN",
+      "APP",
+      "AVGO",
+      "COST",
+      "ETN",
+      "GOOGL",
+      "JPM",
+      "META",
+      "MSFT",
+      "NFLX",
+      "NVDA",
+      "ORCL",
+      "SNDK",
+      "TSM",
+      "UNH",
+      "V",
+      "VT"
+    ]
+  }
+}

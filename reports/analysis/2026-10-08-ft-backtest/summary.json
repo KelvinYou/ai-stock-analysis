@@ -1,0 +1,288 @@
+{
+  "costs": {
+    "0": [
+      {
+        "strategy": "overall",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2086464587396449,
+        "max_drawdown_pct": 0.0,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002120246568946985,
+          0.0011617572901753159
+        ],
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 0.0
+      },
+      {
+        "strategy": "fundamentals",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2086464587396449,
+        "max_drawdown_pct": 0.0,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002120246568946985,
+          0.0011617572901753159
+        ],
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 0.0
+      },
+      {
+        "strategy": "technical",
+        "total_return_pct": -0.05530452007998574,
+        "excess_return_pct": -0.26395097881963064,
+        "max_drawdown_pct": -0.09017047863750302,
+        "n_trades": 21,
+        "effective_n": 7.000000000000001,
+        "deflated_sharpe": 0.021066217719745397,
+        "strict_hold_log_excess_ci_95": [
+          -0.0023015354947366366,
+          0.0008361786108660364
+        ],
+        "matched_exposure_excess_pct": -0.021514181552818083,
+        "mean_committed_principal_pct": 0.16591516546089108
+      },
+      {
+        "strategy": "buy_and_hold",
+        "total_return_pct": 0.2086464587396449,
+        "excess_return_pct": 0.0,
+        "max_drawdown_pct": -0.19232658621369322,
+        "n_trades": 8,
+        "effective_n": 1.0,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": null,
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 1.0
+      },
+      {
+        "strategy": "ft_weighted",
+        "total_return_pct": -0.018294515398324256,
+        "excess_return_pct": -0.22694097413796915,
+        "max_drawdown_pct": -0.055908029933194096,
+        "n_trades": 20,
+        "effective_n": 7.0,
+        "deflated_sharpe": 0.06291711053840016,
+        "strict_hold_log_excess_ci_95": [
+          -0.0021541256202006,
+          0.0010276552735089528
+        ],
+        "matched_exposure_excess_pct": 0.007924632722020031,
+        "mean_committed_principal_pct": 0.15983717590353774
+      },
+      {
+        "strategy": "ft_agreement",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2086464587396449,
+        "max_drawdown_pct": 0.0,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002120246568946985,
+          0.0011617572901753159
+        ],
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 0.0
+      }
+    ],
+    "10": [
+      {
+        "strategy": "overall",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2066464587396449,
+        "max_drawdown_pct": 0.0,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.0021220450835618197,
+          0.0011629174816506589
+        ],
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 0.0
+      },
+      {
+        "strategy": "fundamentals",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2066464587396449,
+        "max_drawdown_pct": 0.0,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.0021220450835618197,
+          0.0011629174816506589
+        ],
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 0.0
+      },
+      {
+        "strategy": "technical",
+        "total_return_pct": -0.0590997293815195,
+        "excess_return_pct": -0.2657461881211644,
+        "max_drawdown_pct": -0.09158601700162938,
+        "n_trades": 21,
+        "effective_n": 7.000000000000001,
+        "deflated_sharpe": 0.016713302320467378,
+        "strict_hold_log_excess_ci_95": [
+          -0.002319245075136711,
+          0.0008167284431264536
+        ],
+        "matched_exposure_excess_pct": -0.021381825069553995,
+        "mean_committed_principal_pct": 0.1656451931420899
+      },
+      {
+        "strategy": "buy_and_hold",
+        "total_return_pct": 0.2066464587396449,
+        "excess_return_pct": 0.0,
+        "max_drawdown_pct": -0.19249145251124564,
+        "n_trades": 8,
+        "effective_n": 1.0,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": null,
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 1.0
+      },
+      {
+        "strategy": "ft_weighted",
+        "total_return_pct": -0.022037030870798845,
+        "excess_return_pct": -0.22868348961044374,
+        "max_drawdown_pct": -0.05726417912119497,
+        "n_trades": 20,
+        "effective_n": 7.0,
+        "deflated_sharpe": 0.05237592679082404,
+        "strict_hold_log_excess_ci_95": [
+          -0.0021671433658258334,
+          0.001011882568158495
+        ],
+        "matched_exposure_excess_pct": 0.007975052592452264,
+        "mean_committed_principal_pct": 0.15958511576607862
+      },
+      {
+        "strategy": "ft_agreement",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2066464587396449,
+        "max_drawdown_pct": 0.0,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.0021220450835618197,
+          0.0011629174816506589
+        ],
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 0.0
+      }
+    ],
+    "20": [
+      {
+        "strategy": "overall",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2046464587396449,
+        "max_drawdown_pct": 0.0,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002123846458983721,
+          0.001164079984269952
+        ],
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 0.0
+      },
+      {
+        "strategy": "fundamentals",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2046464587396449,
+        "max_drawdown_pct": 0.0,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002123846458983721,
+          0.001164079984269952
+        ],
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 0.0
+      },
+      {
+        "strategy": "technical",
+        "total_return_pct": -0.0628823407638236,
+        "excess_return_pct": -0.26752879950346853,
+        "max_drawdown_pct": -0.09300028757957261,
+        "n_trades": 21,
+        "effective_n": 7.000000000000001,
+        "deflated_sharpe": 0.01310078620780053,
+        "strict_hold_log_excess_ci_95": [
+          -0.002336968720054787,
+          0.000797262001423964
+        ],
+        "matched_exposure_excess_pct": -0.021249823243112406,
+        "mean_committed_principal_pct": 0.16537569785719933
+      },
+      {
+        "strategy": "buy_and_hold",
+        "total_return_pct": 0.2046464587396449,
+        "excess_return_pct": 0.0,
+        "max_drawdown_pct": -0.19265660170485127,
+        "n_trades": 8,
+        "effective_n": 1.0,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": null,
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 1.0
+      },
+      {
+        "strategy": "ft_weighted",
+        "total_return_pct": -0.0257676287580789,
+        "excess_return_pct": -0.2304140874977238,
+        "max_drawdown_pct": -0.05861926658812317,
+        "n_trades": 20,
+        "effective_n": 7.0,
+        "deflated_sharpe": 0.04317009725131843,
+        "strict_hold_log_excess_ci_95": [
+          -0.002182133133359599,
+          0.0009960833918786925
+        ],
+        "matched_exposure_excess_pct": 0.008025300134795542,
+        "mean_committed_principal_pct": 0.1593334896147018
+      },
+      {
+        "strategy": "ft_agreement",
+        "total_return_pct": 0.0,
+        "excess_return_pct": -0.2046464587396449,
+        "max_drawdown_pct": 0.0,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002123846458983721,
+          0.001164079984269952
+        ],
+        "matched_exposure_excess_pct": null,
+        "mean_committed_principal_pct": 0.0
+      }
+    ]
+  },
+  "signals": {
+    "ft_weighted": {
+      "neutral": 35,
+      "buy": 20,
+      "sell": 41
+    },
+    "ft_agreement": {
+      "neutral": 88,
+      "sell": 8
+    }
+  },
+  "verification": {
+    "original_sealed_files_unchanged": 107,
+    "complete_trials": 96,
+    "existing_strategy_returns_match": true,
+    "original_scored_inputs_unchanged": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "symbol": "5249",
+  "name": "IOIPG",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/5249/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 18335463424.0,
+    "pe_ratio": 8.538462,
+    "forward_pe": 17.70994,
+    "dividend_yield": 2.38
+  },
+  "sources": [
+    {
+      "title": "IOIPG latest observed issuer financial/fund disclosure",
+      "url": "https://files.ioiproperties.com.my/dsites/s3fs-public/financial-results/files/IOIPGB%204Q%20FY2026.pdf",
+      "publication_date": "2026-08-27",
+      "reporting_period": "FY2026 ended 2026-06-30",
+      "observed_facts": [
+        "FY revenue RM4.444bn versus RM3.062bn; owners profit RM2.154bn versus RM1.064bn. Q4 owners profit fell to RM523.111m from RM823.930m.",
+        "FY PBT includes RM855.177m property fair-value gains and RM502.789m joint-venture remeasurement; reported EPS is not recurring earning power.",
+        "Borrowings RM25.353bn versus RM19.590bn; cash/deposits RM3.535bn. CFO RM2.391bn is positive, but acquisition outlays require separate cash-flow treatment."
+      ],
+      "limitations": []
+    },
+    {
+      "url": "https://files.ioiproperties.com.my/dsites/s3fs-public/financial-results/files/IOIPGB%204Q%20FY2026.pdf",
+      "reporting_period": "FY2026 ended2026-06-30",
+      "publication_date": "2026-08-27",
+      "source_type": "issuer_primary",
+      "observed_facts": [
+        "CFO2391.216m;PP&E241.437m;investmentproperty154.894m;developmentland214.689m.",
+        "JVacquisition2379.128m;assetdeposit388.843m;investingoutflow3340.179m;borrowingdraw11446.518m/repayment8188.855m.",
+        "Noncashfairvalue855.177m andJVremeasurement502.789m vsPBT2646.596m."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "Fullstatements separate maintenance/growthassetspend andacquisitionoutlays; nofundraising/REITcompletionproceeds assumed."
+  ],
+  "derived_math": [
+    "Noncashgain/PBT=(855.177+502.789)/2646.596=51.31%; preacquisitioncash2391.216-241.437-154.894-214.689=1780.196m.",
+    "Netdrawdowns11446.518-8188.855=3257.663m; borrowingsgrowth(25353/19590-1)*100=29.42% approximatefromroundedbalances."
+  ],
+  "gaps": [],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "sell",
+    "confidence": "medium"
+  }
+}

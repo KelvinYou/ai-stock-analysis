@@ -1,0 +1,52 @@
+{
+  "symbol": "JPM",
+  "as_of": "2026-10-07",
+  "status": "OK",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+  "sources": [
+    {
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/6cded9fd-a164-4e6c-8cff-377357cf105c.pdf",
+      "publication_date": "2026-07-14",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    }
+  ],
+  "observed_table_metrics": {
+    "units": "USD billion unless stated",
+    "Q2_net_income": 21.2,
+    "Q2_EPS": 7.7,
+    "Q2_net_income_ex_significant_items": 16.9,
+    "Q2_EPS_ex_significant_items": 6.14,
+    "normalized_net_income_growth_percent": 13,
+    "Visa_gain_pretax": 4.6,
+    "equity_gain_pretax": 1.0,
+    "headline_ROTCE_percent": 29,
+    "normalized_ROTCE_percent": 23,
+    "standardized_CET1_percent": 14.1,
+    "advanced_CET1_percent": 14.2,
+    "total_capital": 303,
+    "standardized_RWA": 2100,
+    "NII": 25.6,
+    "NII_growth_percent": 10,
+    "NII_ex_markets": 23.7,
+    "NII_ex_markets_growth_percent": 4,
+    "managed_revenue": 58,
+    "expenses": 27.3,
+    "credit_costs": 2.5,
+    "net_chargeoffs": 2.4,
+    "reserve_build": 0.149,
+    "card_net_chargeoff_rate_percent": 3.34,
+    "average_loan_growth_percent": 10,
+    "average_deposit_growth_percent": 7,
+    "tangible_book_per_share_USD": 113.35,
+    "book_per_share_USD": 133.01
+  },
+  "derived_math": {
+    "normalization": "Use issuer ex-significant-item income and ROTCE; pre-tax gains are not subtracted directly from after-tax earnings."
+  },
+  "residual_limitations": [
+    "Numerical NIM was not separately extracted; observed NII and ex-markets NII growth establish rate/volume sensitivity without inventing NIM.",
+    "No industrial FCF/debt-to-cash interpretation for a deposit-taking bank."
+  ]
+}

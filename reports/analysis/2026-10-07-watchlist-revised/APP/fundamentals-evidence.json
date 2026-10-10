@@ -1,0 +1,42 @@
+{
+  "symbol": "APP",
+  "as_of": "2026-10-07",
+  "status": "OK",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+  "sources": [
+    {
+      "url": "https://investors.applovin.com/news/news-details/2026/AppLovin-Announces-Second-Quarter-2026-Financial-Results/",
+      "publication_date": "2026-08-05",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    }
+  ],
+  "observed_table_metrics": {
+    "units": "USD million",
+    "Q2_revenue": 1923.686,
+    "Q2_prior_revenue": 1258.754,
+    "Q2_operating_income": 1494.277,
+    "Q2_prior_operating_income": 957.682,
+    "Q2_continuing_net_income": 1266.538,
+    "Q2_prior_continuing_net_income": 771.856,
+    "Q2_CFO": 869.0,
+    "Q2_company_FCF": 863.3,
+    "cash": 3053.306,
+    "debt": 3515.072,
+    "receivables": 2171.017,
+    "prior_receivables": 1819.366,
+    "Q3_revenue_guidance": [
+      2055,
+      2085
+    ]
+  },
+  "derived_math": {
+    "operating_margin_percent": "1494.277 / 1923.686 * 100 = 77.68",
+    "net_debt": "3515.072 - 3053.306 = 461.766",
+    "FCF_to_continuing_NI_percent": "863.3 / 1266.538 *100 = 68.16"
+  },
+  "residual_limitations": [
+    "No calibrated fair-value model; forward P/E is a dated vendor estimate."
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "symbol": "MSFT",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "4b05d64652edff8a680c52a847cb3e9f1c8a55f1a912aa61125d24510070053a",
+    "price_history.csv": "986f4e590451e3914fa46f91d649553b0f04b409666681b1b127138425a213e7",
+    "indicators.json": "f01777f45d85a561c533f9201f09df4a59605ec9e80f15310da961ac3d1556f1",
+    "fundamentals.json": "e997222cf2f7248f05632afc90359d50c794f5bfa744cf82abb075e08ada7a46"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "MSFT",
+      "analysis_date": "2026-10-07",
+      "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "sources": [
+        {
+          "title": "Microsoft Corporation latest observed issuer financial/fund disclosure",
+          "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+          "publication_date": "2026-07-29",
+          "reporting_period": "Q4 FY2026 ended 2026-06-30",
+          "sections_reviewed": [
+            "Income statement",
+            "Balance sheet",
+            "Cash-flow statement",
+            "GAAP/non-GAAP reconciliation where present"
+          ]
+        }
+      ],
+      "observed_facts": {
+        "FY26_USD_bn": {
+          "revenue": 331.839,
+          "operating_income": 155.237,
+          "net_income": 133.749,
+          "OpenAI_adjusted_net_income": 128.786,
+          "CFO": 182.935,
+          "cash_PPandE": 115.948
+        },
+        "FY25_USD_bn": {
+          "CFO": 136.162,
+          "cash_PPandE": 64.551
+        },
+        "June30_USD_bn": {
+          "cash": 20.935,
+          "short_investments": 55.908,
+          "current_debt": 9.227,
+          "long_debt": 31.067,
+          "noncurrent_operating_leases": 16.532
+        },
+        "EPS": {
+          "FY_GAAP": 17.95,
+          "FY_OpenAI_adjusted": 17.28,
+          "Q4_GAAP": 4.81,
+          "Q4_OpenAI_adjusted": 4.74,
+          "Q4_separate_net_discrete_benefit": 0.27
+        }
+      },
+      "derived_calculations": [
+        "FY cash FCF=182.935-115.948=66.987; prior136.162-64.551=71.611 ($bn); growth-6.46%.",
+        "Net liquid-assets surplus=76.843-40.294=36.549 ($bn), leases excluded.",
+        "Price/FY adjusted EPS=529.30/17.28=30.63x; Q4 operating margin45.11%."
+      ],
+      "frozen_valuation_inputs": {
+        "price_date": "2026-10-06",
+        "close": 529.3,
+        "vendor_pe": 29.259258,
+        "vendor_forward_pe": 22.354725,
+        "market_cap": 3930341244928.0,
+        "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/MSFT/fundamentals.json"
+      },
+      "remaining_gaps": [
+        "Future lease/noncash equipment commitments require more detailed10-K schedule for an all-in owner-cash forecast; measured cash FCF explicitly narrower."
+      ],
+      "materiality_and_revision_reason": "Buy retained with actual debt/FCF reconciliation. Lower cash conversion is material but robust profits and liquidity outweigh it at the observed growth-supported valuation.",
+      "previous_role_signal": "buy",
+      "judgement": {
+        "signal": "buy",
+        "confidence": "medium"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "MSFT",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/MSFT/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 14,
+        "buy": 41,
+        "hold": 1,
+        "sell": 0,
+        "strongSell": 0
+      },
+      "sources": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+          "date": "2026-07-29",
+          "observed_facts": "Microsoft reports fourth-quarter revenue growth of 18%, Azure growth of 43% and cloud revenue growth of 27%.",
+          "negative_evidence_or_limitations": "Related earnings-call disclosure says cloud gross margin declined year on year from AI infrastructure and mix; investment gains and discrete items benefited EPS."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "ff37c4c0bed1b46ae45b6efe3608cb3b7adcaddbd30234f8b21b2c1ad78a7959",
+    "sentiment": "3bc14d3e5582f8cfa3e6eb0c0e4c887d3ba68e87b1f05dfb12c68a4aec8d8de1",
+    "technical": "1185f59a9b075f154b383aab210963e11acfb797b48b5898bf434fb052f65423",
+    "macro": "9a9ac25fe67383aa3ebcf10bf0ff48f845219f65b4561eb1e3ca8852a16e4e39"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

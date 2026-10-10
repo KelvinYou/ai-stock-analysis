@@ -1,0 +1,70 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "medium",
+    "pe_assessment": "Snapshot trailing/forward P/E 22.34/13.16 appears modest, but funding intensity makes earnings alone incomplete.",
+    "margin_analysis": "Q1 FY27 revenue grew 30%; GAAP operating margin 35% versus 29%, while adjusted margin stayed 42%. Interest rose 55%.",
+    "debt_analysis": "Debt $125.337bn less cash/securities gives $88.260bn net debt. CFO $23.103bn included $11.363bn financing prepayments; gross capex $28.499bn and $19.909bn equity proceeds reveal external funding dependence.",
+    "growth_outlook": "IaaS grew 121% and RPO reached $664bn; revenue recognition and cash returns must catch up with contracted investment.",
+    "key_risks": [
+      "Negative FCF and dependence on funding",
+      "Equity dilution",
+      "Large future lease/purchase commitments"
+    ],
+    "key_strengths": [
+      "Rapid cloud infrastructure growth",
+      "Large contracted backlog"
+    ],
+    "summary": "Cloud growth is substantial, but the current funding gap, leverage and dilution outweigh the low forward multiple in this assessment. Sell reflects financing risk rather than a claim of imminent insolvency."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Oracle reports fiscal first-quarter revenue growth of 30%, cloud infrastructure growth of 121% and RPO of $664 billion. RPO is future contracted activity, not cash received; financing and conversion of capacity commitments remain unresolved by this release. Yahoo recommendations fetched 2026-10-07T11:50:31.819638, period 0m: strong buy 7, buy 28, hold 7, sell 1, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Cloud infrastructure growth",
+      "Capacity delivery",
+      "Funding needs"
+    ],
+    "notable_headlines": [
+      "2026-09-10 | issuer/issuer-hosted evidence | Oracle reports fiscal first-quarter revenue growth of 30%, cloud infrastructure growth of 121% and RPO of $664 billion. | https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
+    ],
+    "social_sentiment": null,
+    "summary": "Oracle reports fiscal first-quarter revenue growth of 30%, cloud infrastructure growth of 121% and RPO of $664 billion. RPO is future contracted activity, not cash received; financing and conversion of capacity commitments remain unresolved by this release."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "low",
+    "trend": "As of 2026-10-06 close 144.7700, price is above by 0.09% versus SMA-50 144.6392 and below by 10.54% versus SMA-200 161.8271. Observed 5/20/60-bar returns are 5.07%/-10.92%/10.06%. ATR-14 is 6.0821; Bollinger lower/middle/upper are 130.7495/144.2810/157.8125, with band position 0.5181. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 51.9281,
+    "rsi_assessment": "RSI-14 is 51.9281, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -1.7614, signal line -1.7181, histogram -0.0434: negative short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 19,996,700 versus 20-bar average 34,978,055, ratio 0.5717. Below-average turnover supplies no strong participation confirmation. Price is 54.68% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      114.5,
+      131.58
+    ],
+    "resistance_levels": [
+      166.0,
+      170.7
+    ],
+    "summary": "Price has only marginally reclaimed SMA-50 and remains materially below SMA-200, with nearly flat negative MACD histogram. Neutral RSI, weak volume and conflicting 20- and 60-bar returns leave direction unresolved after a volatile rebound."
+  },
+  "macro": {
+    "signal": "sell",
+    "confidence": "low",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: Fed raised its target 25bp, while tech-related spending remains strong. Inference: a financing-sensitive cloud infrastructure expansion has a higher marginal funding and project-return hurdle.",
+      "Inference: demand support can offset this financing pressure; the snapshot does not quantify Oracle debt repricing, capex funding gaps or specific cloud contract conversion."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Oracle has a modest negative inferred financing backdrop under the verified Fed hike, despite supportive technology demand. Low confidence reflects the lack of debt repricing or project-return evidence; this macro sell is not a standalone trade recommendation."
+  },
+  "pipeline_mode": "in-session"
+}

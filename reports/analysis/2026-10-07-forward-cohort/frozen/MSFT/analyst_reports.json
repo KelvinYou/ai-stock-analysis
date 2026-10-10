@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Oct6$529.30/FY26GAAP$17.95=29.49x; /issuer OpenAI-adjusted$17.28=30.63x. Vendor29.26x/forward22.35x differ in basis. Adjusted FY EPS+22% gives reasonable growth support for the premium, not a guaranteed target multiple.",
+    "margin_analysis": "Q4 operating margin40.603/90.007=45.11%; FY operating income+21%. Q4$4.74 non-GAAP only removes OpenAI; separate$0.27 net discrete benefit includes Anthropic/retirement/XBOX and must not be double-subtracted mechanically.",
+    "debt_analysis": "Debt$9.227bn+$31.067bn=$40.294bn versus liquid assets$76.843bn; operating leases separately$16.532bn noncurrent. FY CFO$182.935bn less cash PP&E$115.948bn gives FCF$66.987bn, versus$71.611bn prior.",
+    "growth_outlook": "FY revenue+18%, adjusted EPS+22%; Azure quarterly growth43% and measured operating income reinforce demand. Capex nearly doubled and FY cash FCF declined6.5%, but remained strongly positive.",
+    "key_risks": [
+      "Cash FCF excludes noncash equipment/finance leases; AI capital intensity and investment gains affect earnings conversion.",
+      "Approximately30.6x adjusted FY earnings still requires durable growth; forward22.35x assumes forecasts realised."
+    ],
+    "key_strengths": [
+      "Operating profitability grows independently of investment gains.",
+      "Cash/securities exceed stated debt and annual cash FCF funds observed shareholder returns."
+    ],
+    "summary": "Microsoft earns buy from operating growth, strong liquidity and positive cash flow despite accelerating capex. Medium confidence reflects valuation and the gap between accounting earnings and infrastructure cash demands."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "Microsoft reports fourth-quarter revenue growth of 18%, Azure growth of 43% and cloud revenue growth of 27%. Related earnings-call disclosure says cloud gross margin declined year on year from AI infrastructure and mix; investment gains and discrete items benefited EPS. Yahoo recommendations fetched 2026-10-07T11:50:29.924582, period 0m: strong buy 14, buy 41, hold 1, sell 0, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Azure growth",
+      "AI infrastructure spending",
+      "Nonrecurring gains"
+    ],
+    "notable_headlines": [
+      "2026-07-29 | issuer/issuer-hosted evidence | Microsoft reports fourth-quarter revenue growth of 18%, Azure growth of 43% and cloud revenue growth of 27%. | https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast"
+    ],
+    "social_sentiment": null,
+    "summary": "Microsoft reports fourth-quarter revenue growth of 18%, Azure growth of 43% and cloud revenue growth of 27%. Related earnings-call disclosure says cloud gross margin declined year on year from AI infrastructure and mix; investment gains and discrete items benefited EPS."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 529.3000, price is above by 7.34% versus SMA-50 493.0931 and above by 22.52% versus SMA-200 431.9956. Observed 5/20/60-bar returns are 4.00%/7.16%/35.63%. ATR-14 is 12.2114; Bollinger lower/middle/upper are 482.0253/504.7135/527.4017, with band position 1.0418. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 76.3158,
+    "rsi_assessment": "RSI-14 is 76.3158, overbought. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line 9.5726, signal line 8.1361, histogram 1.4365: positive short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 21,092,600 versus 20-bar average 21,790,610, ratio 0.9680. Below-average turnover supplies no strong participation confirmation. Price is 3.62% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      376.6809,
+      486.0
+    ],
+    "resistance_levels": [
+      535.69
+    ],
+    "summary": "The uptrend is clear above both major averages with positive MACD and strong 60-bar performance. Overbought RSI and a close beyond the upper band, without above-average volume, limit confidence in adding at the current extension."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: BNM describes sustained tech-related spending and Fed reports robust capital investment. Inference: enterprise/cloud demand has support, while higher USD rates raise the discount rate and capex funding hurdle.",
+      "Inference: large compute investment also brings power and supply-chain cost sensitivity; no company-specific cloud contract or pricing catalyst is verified."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Microsoft has a favorable broad technology demand backdrop, with offsetting rate and infrastructure-cost pressure. The macro layer is neutral because returns on company-specific investment are outside this evidence."
+  },
+  "pipeline_mode": "in-session"
+}

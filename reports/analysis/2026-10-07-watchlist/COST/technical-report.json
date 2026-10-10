@@ -1,0 +1,17 @@
+{
+  "signal": "neutral",
+  "confidence": "medium",
+  "trend": "As of 2026-10-06 close 935.6800, price is above by 0.33% versus SMA-50 932.5808 and below by 2.55% versus SMA-200 960.1458. Observed 5/20/60-bar returns are 1.20%/2.80%/1.16%. ATR-14 is 15.1629; Bollinger lower/middle/upper are 884.2265/909.3735/934.5205, with band position 1.0231. These describe current trend and range, not entry, stop or target recommendations.",
+  "rsi_14": 74.1367,
+  "rsi_assessment": "RSI-14 is 74.1367, overbought. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+  "macd_assessment": "MACD line -1.0921, signal line -5.4599, histogram 4.3678: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
+  "volume_assessment": "Last completed-session volume 1,899,800 versus 20-bar average 2,379,390, ratio 0.7984. Below-average turnover supplies no strong participation confirmation. Price is 14.53% below the observed 52-week high; proximity is context, not a standalone signal.",
+  "support_levels": [
+    883.1
+  ],
+  "resistance_levels": [
+    937.04,
+    987.55
+  ],
+  "summary": "Price has only narrowly reclaimed SMA-50 and remains below SMA-200 despite a strengthening positive MACD histogram. Overbought RSI, an upper-band close and below-average volume argue for waiting for broader confirmation of the recovery."
+}

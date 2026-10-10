@@ -1,0 +1,86 @@
+{
+  "arms": {
+    "10": {
+      "signals": {
+        "neutral": 93,
+        "sell": 3
+      },
+      "report": {
+        "overall_hit_rate": 0.6666666666666666,
+        "hit_rate_ci_95": [
+          0.20765495512648796,
+          0.9385096847238394
+        ],
+        "effective_n": 3.0,
+        "ic_effective_n": 4.333333333333331,
+        "info_coefficient": -0.06968648410048553,
+        "info_coefficient_ci_95": [
+          -0.9433027651124222,
+          0.9257204921184695
+        ],
+        "active_mean_return": -0.014292143179968958,
+        "uncertainty_method": "effective_n_wilson_fisher_approx_v1"
+      },
+      "portfolio": {
+        "total_return_pct": 0.0,
+        "benchmark_return_pct": 0.2066464587396449,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.0021220450835618197,
+          0.0011629174816506589
+        ]
+      },
+      "promotion_ready": false,
+      "external_status": "FAIL"
+    },
+    "20": {
+      "signals": {
+        "neutral": 93,
+        "sell": 3
+      },
+      "report": {
+        "overall_hit_rate": 0.6666666666666666,
+        "hit_rate_ci_95": [
+          0.20765495512648796,
+          0.9385096847238394
+        ],
+        "effective_n": 3.0,
+        "ic_effective_n": 4.333333333333331,
+        "info_coefficient": -0.06968648410048553,
+        "info_coefficient_ci_95": [
+          -0.9433027651124222,
+          0.9257204921184695
+        ],
+        "active_mean_return": -0.014292143179968958,
+        "uncertainty_method": "effective_n_wilson_fisher_approx_v1"
+      },
+      "portfolio": {
+        "total_return_pct": 0.0,
+        "benchmark_return_pct": 0.2046464587396449,
+        "n_trades": 0,
+        "effective_n": null,
+        "deflated_sharpe": null,
+        "strict_hold_log_excess_ci_95": [
+          -0.002123846458983721,
+          0.001164079984269952
+        ]
+      },
+      "promotion_ready": false,
+      "external_status": "FAIL"
+    }
+  },
+  "unchanged_outcomes_per_arm": 96,
+  "unchanged_original_sealed_files": 107,
+  "latest_source_hashes_verified": 9,
+  "matches_previous_fixed_signals_scores_convergence": 96,
+  "tests": {
+    "passed": 276,
+    "subtests_passed": 4,
+    "dependency_deprecation_warnings": 1
+  },
+  "lint": "passed",
+  "forward_cohort_count": 31,
+  "ledger_rows": 6
+}

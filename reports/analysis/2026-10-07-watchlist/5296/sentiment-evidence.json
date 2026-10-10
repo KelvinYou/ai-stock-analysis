@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "5296",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/5296/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 2,
+    "buy": 11,
+    "hold": 2,
+    "sell": 0,
+    "strongSell": 1
+  },
+  "sources": [
+    {
+      "url": "https://corporate.mrdiy.com/news.html/id/2623004",
+      "date": "2026-08-11",
+      "observed_facts": "MR DIY second-quarter revenue rose from RM1.214 billion to RM1.257 billion, but attributable profit fell from RM158.581 million to RM134.406 million.",
+      "negative_evidence_or_limitations": "Current-month analyst buy lean is contrarian to the reported profit decline; no verified price-response evidence."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "signal": "neutral",
+  "confidence": "medium",
+  "trend": "As of 2026-10-06 close 333.6300, price is above by 3.52% versus SMA-50 322.2985 and above by 15.28% versus SMA-200 289.4067. Observed 5/20/60-bar returns are 1.28%/5.51%/5.23%. ATR-14 is 6.4179; Bollinger lower/middle/upper are 322.1669/333.4115/344.6561, with band position 0.5097. These describe current trend and range, not entry, stop or target recommendations.",
+  "rsi_14": 51.4893,
+  "rsi_assessment": "RSI-14 is 51.4893, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+  "macd_assessment": "MACD line 3.2611, signal line 4.3085, histogram -1.0473: negative short-term momentum. A positive MACD line with a negative histogram means bullish momentum is slowing.",
+  "volume_assessment": "Last completed-session volume 30,425,700 versus 20-bar average 41,722,990, ratio 0.7292. Below-average turnover supplies no strong participation confirmation. Price is 3.39% below the observed 52-week high; proximity is context, not a standalone signal.",
+  "support_levels": [
+    299.7415,
+    309.9
+  ],
+  "resistance_levels": [
+    345.34
+  ],
+  "summary": "The medium- and long-term trend remains positive above both major averages, but the negative MACD histogram and weak volume signal consolidation. Neutral RSI and a mid-band close do not establish a fresh momentum entry near the recent high."
+}

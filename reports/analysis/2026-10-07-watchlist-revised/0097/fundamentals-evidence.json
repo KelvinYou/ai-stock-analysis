@@ -1,0 +1,52 @@
+{
+  "symbol": "0097",
+  "name": "VITROX",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/0097/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 21336606720.0,
+    "pe_ratio": 93.833336,
+    "forward_pe": 55.855946,
+    "dividend_yield": 0.17
+  },
+  "sources": [
+    {
+      "title": "VITROX latest observed issuer financial/fund disclosure",
+      "url": "https://www.vitrox.com/pdf/investor/quarterly-report/vitrox_q22026.pdf",
+      "publication_date": "2026-07-30",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 revenue RM374.915m +104.8%; attributable earnings RM85.043m +202.3%.",
+        "Derived Q2 attributable earnings/revenue22.68%; subsidiary tax incentives support earnings.",
+        "Borrowings RM82.238m. H1 CFO RM24.163m less PP&E purchases RM39.929m gives derived FCF -RM15.766m."
+      ],
+      "limitations": []
+    },
+    {
+      "url": "https://www.vitrox.com/pdf/investor/quarterly-report/vitrox_q22026.pdf",
+      "reporting_period": "Q2/H1 ended2026-06-30",
+      "publication_date": "2026-07-30",
+      "source_type": "issuer_primary",
+      "observed_facts": [
+        "Cash368.960m; borrowings60.733m+21.505m;leases0.224m+0.236m.",
+        "CFO24.163m vs74.190m;PP&E39.929m;inventory429.334m vs299.233m;receivables527.137m vs374.544m."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "Fullstatement cash/balance and two-period performance inspected."
+  ],
+  "derived_math": [
+    "Netcash368.960-82.238=286.722m;FCF24.163-39.929=-15.766m;CFO/H1ownersprofit24.163/136.241=17.735%."
+  ],
+  "gaps": [],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "sell",
+    "confidence": "medium"
+  }
+}

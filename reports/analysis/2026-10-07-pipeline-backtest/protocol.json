@@ -1,0 +1,18 @@
+{
+  "status": "frozen_before_predictions_and_scoring",
+  "purpose": "Exploratory current-session pipeline reliability pilot, not authenticated production-provider or promotion evidence",
+  "tickers": ["AVGO", "NVDA", "MSFT", "TSM", "V", "UNH", "ORCL", "COST"],
+  "selection_policy": "Six current US executable buys plus the US sell and independently rechecked neutral COST; selected before this pilot's outcomes, but from the current surviving watchlist",
+  "start": "2025-09-01",
+  "end": "2026-08-01",
+  "interval": "monthly",
+  "horizon_days": 30,
+  "lookback_days": 365,
+  "cost_bps_per_side": 10,
+  "predeclared_cost_stress_bps_per_side": 20,
+  "allow_short": false,
+  "benchmark": "strict equal-weight buy_and_hold; rolling_long diagnostic separately",
+  "model_identity": "Codex based on GPT-6; exact deployed model revision and training cutoff unavailable",
+  "provider_authenticated": false,
+  "limitations": ["Current-survivor selected universe", "SEC filing events are not complete production news", "FRED DFF is not full macro coverage", "Costs are assumptions, not broker-calibrated", "Short clustered sample cannot satisfy minimum effective n of 30", "Historical model-knowledge contamination cannot be excluded", "Session consensus-only conviction differs from production min(model score, consensus); parity arm to be reported separately"]
+}

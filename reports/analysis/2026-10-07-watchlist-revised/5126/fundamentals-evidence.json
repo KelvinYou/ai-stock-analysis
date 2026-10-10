@@ -1,0 +1,53 @@
+{
+  "symbol": "5126",
+  "name": "SOP",
+  "analysis_date": "2026-10-07",
+  "market_snapshot_date": "2026-10-06",
+  "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/5126/fundamentals.json",
+  "snapshot_valuation": {
+    "market_cap": 5038249472.0,
+    "pe_ratio": 10.843138,
+    "forward_pe": 10.000001,
+    "dividend_yield": 3.41
+  },
+  "sources": [
+    {
+      "title": "SOP latest observed issuer financial/fund disclosure",
+      "url": "https://www.klsescreener.com/v2/announcements/view/11657125",
+      "publication_date": "2026-08-28",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 revenue RM1.458bn versus RM1.307bn; owners profit RM153.686m versus RM91.917m (+67.2%). H1 owners profit increased only 6%.",
+        "Derived Q2 owners-profit/revenue ratio 10.54% versus 7.03%; H1 ratio 7.51%, so quarterly recovery should not be extrapolated."
+      ],
+      "limitations": [],
+      "source_type": "issuer_authored_exchange_disclosure_mirror"
+    },
+    {
+      "url": "https://www.klsescreener.com/v2/announcements/view/11657125",
+      "reporting_period": "Q2/H1 ended2026-06-30",
+      "publication_date": "2026-08-28",
+      "source_type": "issuer_authored_exchange_disclosure_mirror",
+      "observed_facts": [
+        "Q2revenue1458mvs1307m;ownersprofit153.686mvs91.917m;H1ownersprofitgrowth6%; NAV/share4.75vs4.60."
+      ],
+      "limitations": []
+    }
+  ],
+  "observed_additional_facts": [
+    "IssuerIRread and exchangeoriginal/mirrorattachmentattempted; PDFhttps://www.klsescreener.com/FileAccess/apbursaweb/download?id=240126&name=EA_FR_ATTACHMENTS returnedHTML ratherthanfinancialPDF. This is a genuineaccessgap."
+  ],
+  "derived_math": [
+    "Q2ownersprofitgrowth153.686/91.917-1=67.2%;Q2ownersprofit/revenue=10.54%approximate."
+  ],
+  "gaps": [
+    "Latestbalance/cashflow fullPDFblocked;no mediafinancialfiguresorforecastCPOprices adopted."
+  ],
+  "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "low"
+  }
+}

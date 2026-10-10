@@ -1,0 +1,31 @@
+{
+  "symbol": "5249",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/5249/fundamentals.json",
+  "sources": [
+    {
+      "title": "IOIPG latest observed issuer financial/fund disclosure",
+      "url": "https://files.ioiproperties.com.my/dsites/s3fs-public/financial-results/files/IOIPGB%204Q%20FY2026.pdf",
+      "publication_date": "2026-08-27",
+      "reporting_period": "FY2026 ended 2026-06-30",
+      "observed_facts": [
+        "FY revenue RM4.444bn versus RM3.062bn; owners profit RM2.154bn versus RM1.064bn. Q4 owners profit fell to RM523.111m from RM823.930m.",
+        "FY PBT includes RM855.177m property fair-value gains and RM502.789m joint-venture remeasurement; reported EPS is not recurring earning power.",
+        "Borrowings RM25.353bn versus RM19.590bn; cash/deposits RM3.535bn. CFO RM2.391bn is positive, but acquisition outlays require separate cash-flow treatment."
+      ],
+      "limitations": [
+        "Direct issuer FY26 report retrieved via current investor-centre; older investor page query routes returned stale FY22/FY23 files and were excluded. No intrinsic valuation or matched peers established."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

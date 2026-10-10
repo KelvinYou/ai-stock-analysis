@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "5398",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/5398/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 2,
+    "buy": 15,
+    "hold": 2,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://gamuda.com/2026/09/gamuda-records-49-surge-in-full-year-domestic-construction-earnings/press-releases/",
+      "date": "2026-09-29",
+      "observed_facts": "Gamuda reports full-year profit growth of 5%, revenue growth of 14% and RM61 billion construction orderbook.",
+      "negative_evidence_or_limitations": "Net gearing reached 72%, above its 70% internal limit; quarterly property profit fell 41%."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

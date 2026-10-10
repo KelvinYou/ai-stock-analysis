@@ -1,0 +1,31 @@
+{
+  "symbol": "UNH",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/UNH/fundamentals.json",
+  "sources": [
+    {
+      "title": "UnitedHealth Group Incorporated latest observed issuer financial/fund disclosure",
+      "url": "https://www.unitedhealthgroup.com/newsroom/2026/2026-07-16-uhg-reports-second-quarter-2026-results.html",
+      "publication_date": "2026-07-16",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "observed_facts": [
+        "Revenue$112.0bn; adjusted FY26 EPS outlook raised to$19.50-$20.00.",
+        "Operations earnings$8.0bn; reported net margin4.9%.",
+        "CFO$11.1bn,1.9x net income; debt/capital41.2%."
+      ],
+      "limitations": [
+        "Dated issuer release; fair-value model and independently matched current balance-sheet detail are incomplete."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

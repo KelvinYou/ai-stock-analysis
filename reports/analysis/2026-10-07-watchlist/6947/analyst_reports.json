@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Refreshed vendor snapshot trailing P/E 19.31x, forward P/E 16.28x. Vendor earnings basis is not independently matched; no sector average or fair value inferred.",
+    "margin_analysis": "H1 EBIT RM1.441bn +0.6%; Q2 PAT -7.7% due to lower EBIT and higher finance costs.",
+    "debt_analysis": "Higher net finance costs explicitly pressured quarterly PAT; debt maturity profile not extracted.",
+    "growth_outlook": "Q2 service revenue RM2.730bn +1.4%; H1 RM5.427bn +1.5%.",
+    "key_risks": [
+      "Prepaid revenue -3.2%; modest growth and financing burden limit upside inference.",
+      "Snapshot financial statements lack fiscal_period_end/available_as_of and are not dated trend evidence."
+    ],
+    "key_strengths": [
+      "YTD operational savings RM141m; Home & Fibre revenue +47.2%."
+    ],
+    "summary": "CDB: YTD operational savings RM141m; Home & Fibre revenue +47.2%. Fundamental view is neutral with medium confidence; Prepaid revenue -3.2%; modest growth and financing burden limit upside inference."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "CelcomDigi reports second-quarter service revenue growth of 1.4% and year-to-date operating savings of RM141 million. Quarterly profit after tax fell 7.7%, with lower EBIT and higher net finance costs; prepaid subscribers and revenue declined. Yahoo recommendations fetched 2026-10-07T11:50:27.985871, period 0m: strong buy 2, buy 11, hold 5, sell 1, strong sell 1. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Integration savings",
+      "Service revenue growth",
+      "Finance-cost pressure"
+    ],
+    "notable_headlines": [
+      "2026-08-14 | issuer/issuer-hosted evidence | CelcomDigi reports second-quarter service revenue growth of 1.4% and year-to-date operating savings of RM141 million. | https://corporate.celcomdigi.com/news/celcomdigi-delivers-resilient-q2-fy2026-performance-with-service-revenue-growth-and-strong-operational-efficiencies"
+    ],
+    "social_sentiment": null,
+    "summary": "CelcomDigi reports second-quarter service revenue growth of 1.4% and year-to-date operating savings of RM141 million. Quarterly profit after tax fell 7.7%, with lower EBIT and higher net finance costs; prepaid subscribers and revenue declined."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 2.5300, price is below by 7.96% versus SMA-50 2.7489 and below by 13.72% versus SMA-200 2.9324. Observed 5/20/60-bar returns are -2.69%/-7.19%/-13.46%. ATR-14 is 0.0629; Bollinger lower/middle/upper are 2.4709/2.6181/2.7653, with band position 0.2008. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 27.2727,
+    "rsi_assessment": "RSI-14 is 27.2727, oversold. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -0.0645, signal line -0.0600, histogram -0.0045: negative short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 1,955,300 versus 20-bar average 3,166,895, ratio 0.6174. Below-average turnover supplies no strong participation confirmation. Price is 29.46% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      2.47
+    ],
+    "resistance_levels": [
+      2.77,
+      3.0222
+    ],
+    "summary": "Price remains below both major averages near its observed 52-week low, with negative MACD and broadly negative returns. Oversold RSI signals stretched downside conditions but supplies no reversal confirmation, and low turnover limits confidence in a fresh breakdown."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "sector_macro_factors": [
+      "Observed: domestic demand remains supported and OPR is unchanged. Inference: recurring telecom demand is relatively resilient, with stable funding conditions for network investment.",
+      "Inference: telecom is capital intensive; imported network equipment and financing costs can offset defensive revenue characteristics."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "CelcomDigi has a stable macro environment for recurring connectivity demand. Network capex, financing and equipment costs prevent a clear macro buy signal without operating evidence."
+  },
+  "pipeline_mode": "in-session"
+}

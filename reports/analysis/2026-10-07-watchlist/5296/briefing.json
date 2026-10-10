@@ -1,0 +1,75 @@
+{
+  "ticker": "5296",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "overall_signal": "sell",
+  "conviction": {
+    "score": -0.4,
+    "signal_convergence": 0.5,
+    "explanation": "Medium evidence confidence. The bear carries direction on observed deterioration rather than missing data: earnings and profit conversion fell despite growing revenue, with lower NAV/share and an adverse price trend. The bull offers unverified recovery optionality, not evidence of stabilisation. Sell denotes an unfavorable research view; this envelope does not establish the holder's disposal decision or a price forecast. Conviction describes the current evidence, not a calibrated win rate; outcome memory has no observations."
+  },
+  "executive_summary": "MR D.I.Y. shows observed deterioration rather than only missing evidence: profit fell to RM134.406m from RM158.581m despite revenue growth, profit/revenue declined to 10.69% from 13.06%, and NAV/share fell. Its profitable sales base preserves recovery optionality but does not demonstrate cost relief or margin stabilization. Reduce research priority for a new position while awaiting a demonstrated operating reversal. This research signal does not determine a holder-specific disposal action.\n\nPrice remains materially below SMA-50 and SMA-200 and just above the 52-week low following a steep 60-bar decline. A small positive MACD histogram reflects slowing downside momentum, not a confirmed reversal, especially with weak participation. MR D.I.Y. has supportive Malaysian consumption conditions, balanced by merchandise and logistics cost exposure. The macro layer remains neutral because these conditions do not quantify company-specific sales or margins. The bear carries direction on observed deterioration rather than missing data: earnings and profit conversion fell despite growing revenue, with lower NAV/share and an adverse price trend. The bull offers unverified recovery optionality, not evidence of stabilisation. Sell denotes an unfavorable research view; this envelope does not establish the holder's disposal decision or a price forecast.",
+  "bull_case": "MR D.I.Y. retains sales growth and a profitable quarterly and H1 base. Round two concedes there is no observed cost relief and preserves only conditional recovery optionality if profit conversion stabilises and the price compensates for risk. Strongest disconfirming evidence to caution: The business still generated RM134.406m quarterly and RM326.426m H1 profit while sales grew, leaving a substantial operating base capable of recovery.",
+  "bear_case": "Quarterly profit and its revenue ratio fell despite sales growth, and NAV per share declined. Round two distinguishes existing profitability from evidence of restoration, noting that cost, cash and fair-value evidence do not yet validate a recovery purchase.",
+  "key_uncertainties": [
+    "Causes and recurring nature of margin pressure.",
+    "Current debt, FCF, distribution support and matched valuation.",
+    "Causes and repeatability of margin pressure, and evidence of cost stabilisation.",
+    "Current debt, FCF and distribution support.",
+    "Matched valuation allowance and confirmed operating/price recovery.",
+    "Vendor financial statements lack verified fiscal/availability timing; vendor forward P/E is an estimate, and a matched normalised fair-value model is unavailable."
+  ],
+  "catalysts_upcoming": [
+    "Next comparable issuer disclosure, date unavailable here: A subsequent comparable quarter reports attributable profit above RM158.581m and profit/revenue at least the prior 13.06%, with positive post-investment cash, directly reversing the load-bearing deterioration.",
+    "Reassessment trigger rather than a forecast: Verified recurring cost relief accompanied by positive comparable earnings growth would require reassessment even before full margin restoration."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Low beta (0.51) \u2014 historically less sensitive to broad-market moves.",
+      "Sector: Consumer Cyclical \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 51.4% over available price history. Projected worst case (2-sigma): ~53.5% from current $1.25.",
+    "risk_reward_ratio": "N/A (bearish signal)"
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 1.32,
+    "stop_rationale": "Thesis invalidated if price breaks above $1.32.",
+    "take_profit_1": 1.25,
+    "take_profit_2": 1.24,
+    "target_rationale": "Primary: reduce/exit at/near current $1.25. Next downside watch: $1.24 (nearest support).",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "5296",
+    "judged_view": "sell",
+    "confidence": "medium",
+    "thesis": "The bear carries direction on observed deterioration rather than missing data: earnings and profit conversion fell despite growing revenue, with lower NAV/share and an adverse price trend. The bull offers unverified recovery optionality, not evidence of stabilisation. Sell denotes an unfavorable research view; this envelope does not establish the holder's disposal decision or a price forecast.",
+    "winning_side": "bear",
+    "strongest_counterexample": "The business still generated RM134.406m quarterly and RM326.426m H1 profit while sales grew, leaving a substantial operating base capable of recovery.",
+    "invalidation_conditions": [
+      "A subsequent comparable quarter reports attributable profit above RM158.581m and profit/revenue at least the prior 13.06%, with positive post-investment cash, directly reversing the load-bearing deterioration.",
+      "Verified recurring cost relief accompanied by positive comparable earnings growth would require reassessment even before full margin restoration."
+    ],
+    "evidence_gaps": [
+      "Causes and recurring nature of margin pressure.",
+      "Current debt, FCF, distribution support and matched valuation."
+    ],
+    "decisive_factors": [
+      "Q2 profit RM134.406m versus RM158.581m despite revenue growth.",
+      "Profit/revenue 10.69% versus 13.06%; NAV/share fell.",
+      "Price below both averages with weak volume; no cost stabilisation verified."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "sell",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "sell",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

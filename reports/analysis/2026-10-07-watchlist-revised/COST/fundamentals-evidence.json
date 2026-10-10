@@ -1,0 +1,64 @@
+{
+  "symbol": "COST",
+  "analysis_date": "2026-10-07",
+  "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "sources": [
+    {
+      "title": "Costco Wholesale Corporation latest observed issuer financial/fund disclosure",
+      "url": "https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Operating-Results/default.aspx",
+      "publication_date": "2026-09-24",
+      "reporting_period": "FY2026 ended 2026-08-30",
+      "sections_reviewed": [
+        "Income statement",
+        "Balance sheet",
+        "Cash-flow statement",
+        "GAAP/non-GAAP reconciliation where present"
+      ]
+    }
+  ],
+  "observed_facts": {
+    "FY26_USD_bn": {
+      "total_revenue": 303.154,
+      "operating_income": 11.685,
+      "net_income": 9.226,
+      "CFO": 15.825,
+      "PPandE": 6.435,
+      "cash": 20.207,
+      "short_investments": 1.094,
+      "current_debt": 2.248,
+      "long_debt": 3.914,
+      "long_operating_leases": 2.414
+    },
+    "FY25_USD_bn": {
+      "total_revenue": 275.235,
+      "operating_income": 10.383,
+      "CFO": 13.335,
+      "PPandE": 5.498
+    },
+    "FY26_EPS": 20.76,
+    "nonrecurring_tariff_EPS": 0.15
+  },
+  "derived_calculations": [
+    "FCF=15.825-6.435=$9.390bn; FY25=13.335-5.498=$7.837bn.",
+    "Debt=2.248+3.914=$6.162bn, excluding leases; liquid-assets surplus=20.207+1.094-6.162=$15.139bn.",
+    "Normalised EPS=20.76-0.15=20.61; price/EPS=45.40x; FCF/frozen market cap=2.26%."
+  ],
+  "frozen_valuation_inputs": {
+    "price_date": "2026-10-06",
+    "close": 935.68,
+    "vendor_pe": 44.492626,
+    "vendor_forward_pe": 37.405552,
+    "market_cap": 414755127296.0,
+    "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/COST/fundamentals.json"
+  },
+  "remaining_gaps": [
+    "No independently modelled intrinsic value or assumption that the current multiple will persist."
+  ],
+  "materiality_and_revision_reason": "Replaces earlier false cash/debt gaps and incorrect net-margin denominator. Financial quality rises in confidence, but the45x entry multiple and2.26% FCF yield remain substantive reasons for neutral.",
+  "previous_role_signal": "neutral",
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

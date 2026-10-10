@@ -1,0 +1,60 @@
+{
+  "symbol": "V",
+  "as_of": "2026-10-07",
+  "status": "OK",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000103/q32026earningsrelease.htm",
+      "publication_date": "2026-07-28",
+      "reporting_period": "Q3 FY26 ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000104/v-20260630.htm",
+      "publication_date": "2026-07-28",
+      "reporting_period": "Q3/9M ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    }
+  ],
+  "observed_table_metrics": {
+    "units": "USD million",
+    "Q3_revenue": 11633,
+    "Q3_operating_income": 6877,
+    "Q3_expenses": 4756,
+    "Q3_adjusted_expenses": 3878,
+    "Q3_severance": 563,
+    "Q3_litigation_provision": 253,
+    "prior_Q3_litigation_provision": 615,
+    "Q3_adjusted_net_income": 6296,
+    "Q3_adjusted_EPS": 3.32,
+    "prior_Q3_adjusted_EPS": 2.98,
+    "nine_month_CFO": 16342,
+    "prior_nine_month_CFO": 16821,
+    "nine_month_capex": 1178,
+    "prior_nine_month_capex": 1093,
+    "litigation_accrual_cash_change": -1758,
+    "prior_litigation_accrual_cash_change": 622,
+    "cash": 12359,
+    "securities": 1433,
+    "restricted_litigation_cash": 888,
+    "restricted_collateral": 4310,
+    "other_restricted_cash": 1211,
+    "debt_carrying_value": 23858,
+    "debt_face_value": 24131,
+    "current_debt": 2996,
+    "nine_month_repurchase_cash": 16430,
+    "nine_month_dividends": 3852
+  },
+  "derived_math": {
+    "GAAP_operating_margin_percent": "6877/11633*100=59.12",
+    "adjusted_operating_margin_percent": "(11633-3878)/11633*100=66.66",
+    "nine_month_FCF": "16342-1178=15164; prior16821-1093=15728",
+    "net_debt_ex_restricted_cash": "23858-12359-1433=10066"
+  },
+  "residual_limitations": [
+    "Litigation adjustments do not eliminate real cash obligations.",
+    "Restricted balances excluded from available cash."
+  ]
+}

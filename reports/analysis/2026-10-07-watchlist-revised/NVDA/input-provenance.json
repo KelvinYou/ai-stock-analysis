@@ -1,0 +1,182 @@
+{
+  "symbol": "NVDA",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "f1716f82a13ae76944a041c4de68f35b32ad750189b673c9f1b86a076e62c2dc",
+    "price_history.csv": "a6b941e533edc863b9684d9b0b0a932a6d7447858c27d48328196bbaa0b35f51",
+    "indicators.json": "dedf60cc57e1276901a6019d23b0aede17562ea9c16248f63d1414efa20239b4",
+    "fundamentals.json": "2d4a3f5a710f83d3143d4ad1459f9be419f5c049f8b27b49024776ae908d901c"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "NVDA",
+      "analysis_date": "2026-10-07",
+      "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "sources": [
+        {
+          "title": "NVIDIA Corporation latest observed issuer financial/fund disclosure",
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/",
+          "publication_date": "2026-08-26",
+          "reporting_period": "Q2 FY2027 ended 2026-07-26",
+          "sections_reviewed": [
+            "Income statement",
+            "Balance sheet",
+            "Cash-flow statement",
+            "GAAP/non-GAAP reconciliation where present"
+          ]
+        }
+      ],
+      "observed_facts": {
+        "Q2_USD_bn": {
+          "revenue": 96.221,
+          "operating_income": 63.734,
+          "CFO": 24.077,
+          "PPandE_intangibles": 2.677,
+          "asset_principal_payments": 0.059,
+          "FCF": 21.341,
+          "equity_gains": 7.771,
+          "AR_cash_outflow": 22.346,
+          "inventory_cash_outflow": 5.784
+        },
+        "H1_USD_bn": {
+          "CFO": 74.421,
+          "PPandE_intangibles": 4.434,
+          "asset_principal": 0.092,
+          "FCF": 69.895
+        },
+        "July26_USD_bn": {
+          "cash": 22.443,
+          "marketable_debt_securities": 34.143,
+          "marketable_equities": 42.783,
+          "short_debt": 1.0,
+          "long_debt": 32.366,
+          "AR": 63.059
+        },
+        "Q2_EPS": {
+          "GAAP": 2.46,
+          "issuer_adjusted_including_SBC": 2.22
+        }
+      },
+      "derived_calculations": [
+        "Q2FCF=24.077-2.677-0.059=21.341; H1=74.421-4.434-0.092=69.895 ($bn).",
+        "Debt=1+32.366=33.366; safe liquid assets=22.443+34.143=56.586; surplus23.220 ($bn), excluding leases and equity holdings.",
+        "Operating margin63.734/96.221=66.24%; Q2FCF/revenue22.18%, no annualisation."
+      ],
+      "frozen_valuation_inputs": {
+        "price_date": "2026-10-06",
+        "close": 239.24,
+        "vendor_pe": 30.207071,
+        "vendor_forward_pe": 15.14251,
+        "market_cap": 5776928145408.0,
+        "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/NVDA/fundamentals.json"
+      },
+      "remaining_gaps": [
+        "Customer concentration and longer-horizon guarantees/commitments need detailed filings for a downside scenario; current AR absorption already incorporated."
+      ],
+      "materiality_and_revision_reason": "Buy retained because measured operating strength and cash/liquidity outweigh known reinvestment risks. Previous false debt/FCF gaps corrected; GAAP EPS and AR conversion are explicitly normalised/qualified.",
+      "previous_role_signal": "buy",
+      "judgement": {
+        "signal": "buy",
+        "confidence": "medium"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "NVDA",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/NVDA/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 10,
+        "buy": 48,
+        "hold": 2,
+        "sell": 1,
+        "strongSell": 0
+      },
+      "sources": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+          "date": "2026-08-26",
+          "observed_facts": "NVIDIA reports fiscal second-quarter revenue of $96.2 billion, up 106% year on year, and data-center revenue growth of 117%.",
+          "negative_evidence_or_limitations": "Strong current-month analyst bullishness is not proof of additional upside; issuer optimism is not an independently verified price-impact trend."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        },
+        {
+          "url": "https://www.govinfo.gov/app/details/FR-2026-01-15/2026-00789",
+          "event_date": "2026-01-15",
+          "facts": [
+            "Specified advanced-computing exports to China are subject to case-by-case license review and conditions; applicability is product and end-use specific."
+          ],
+          "limitation": "Dated regulatory evidence; does not prove absence of subsequent amendments or approval of any specific product."
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "93ad1dd466d3baeee8372d43b231bd6bce2992c55d2ba63b6ac93e58752de2a8",
+    "sentiment": "23d7e989d14e5994df58e47760c2948d0edf6f59de8ea0b04c3eb5921ff66695",
+    "technical": "1f2a74984d0ad4c632f7a57dad30b5a16fcb658c9832c83ec2f53de8b45fd58e",
+    "macro": "0a808d3f502dec4fd4ef562144ea99449c6ec38f349234f15f5fc55c9b28913f"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

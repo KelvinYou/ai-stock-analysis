@@ -1,0 +1,159 @@
+{
+  "symbol": "UNH",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "99701e6d79a45932dc7b6664e986537aaa303645de27757d9940487806cab0d4",
+    "price_history.csv": "901a6c374bc235447bdd47771409468e698e3eb2e3370737d966301490cbf680",
+    "indicators.json": "01625438c0c3af1f8cc5987028a112a250c994e162b06f1aaf05d36e43dbfa1a",
+    "fundamentals.json": "6ce82c1626919feea236282a871dec75024202d3adac1809e38e8b99c32191b3"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "UNH",
+      "as_of": "2026-10-07",
+      "status": "OK",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+      "sources": [
+        {
+          "url": "https://www.unitedhealthgroup.com/newsroom/2026/2026-07-16-uhg-reports-second-quarter-2026-results.html",
+          "publication_date": "2026-07-16",
+          "reporting_period": "Q2 ended 2026-06-30",
+          "source_type": "primary issuer disclosure"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000197/unh-20260630.htm",
+          "publication_date": "2026-08-10",
+          "reporting_period": "Q2/H1 ended 2026-06-30",
+          "source_type": "primary issuer disclosure"
+        }
+      ],
+      "observed_table_metrics": {
+        "units": "USD million unless stated",
+        "Q2_revenue": 112000,
+        "Q2_operating_income": 8000,
+        "Q2_medical_care_ratio_percent": 86.7,
+        "prior_Q2_medical_care_ratio_percent": 89.4,
+        "H1_medical_care_ratio_percent": 85.3,
+        "prior_H1_medical_care_ratio_percent": 87.1,
+        "Q2_operating_margin_percent": 7.1,
+        "prior_Q2_operating_margin_percent": 4.6,
+        "H1_CFO": 19964,
+        "prior_H1_CFO": 12644,
+        "H1_capex": 1562,
+        "prior_H1_capex": 1784,
+        "cash": 28585,
+        "short_investments": 2883,
+        "current_debt": 3827,
+        "long_term_debt": 69501,
+        "prior_total_debt": 78389,
+        "H1_net_debt_repayments": 4813,
+        "Q2_Optum_Rx_scripts_million": 387,
+        "prior_Q2_Optum_Rx_scripts_million": 414,
+        "FY_adjusted_EPS_guidance": [
+          19.5,
+          20.0
+        ],
+        "Q2_loss_contract_reserve_release": 50,
+        "H1_loss_contract_reserve_release": 187
+      },
+      "derived_math": {
+        "net_debt_before_regulated_cash_constraints": "3827+69501-28585-2883=41860",
+        "H1_CFO_less_capex": "19964-1562=18402; prior12644-1784=10860; not an unrestricted insurer distributable-cash measure"
+      },
+      "residual_limitations": [
+        "Regulated subsidiaries prevent treating consolidated cash as freely available holding-company liquidity.",
+        "Working capital and medical payables affect insurer CFO."
+      ]
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "UNH",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/UNH/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 7,
+        "buy": 15,
+        "hold": 4,
+        "sell": 0,
+        "strongSell": 0
+      },
+      "sources": [
+        {
+          "url": "https://www.unitedhealthgroup.com/newsroom/2026/2026-07-16-uhg-reports-second-quarter-2026-results.html",
+          "date": "2026-07-16",
+          "observed_facts": "UnitedHealth reports second-quarter revenue of $112 billion and raises full-year adjusted EPS outlook to $19.50-$20.00.",
+          "negative_evidence_or_limitations": "Outlook is management guidance, not confirmed recovery for subsequent quarters; third-quarter results are scheduled October 13."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "08269452f7514cd6ecc348bf8f976c69e8afd82b687b5adcf681439055ee06f7",
+    "sentiment": "13b912aab7f91e8fd2499cccb3794fc2a363c222e17f0855ecb54d4f5a2a2ae2",
+    "technical": "4cd8ba75b8976febe4795e97f4da34b3f959a45e0800846425c5b748dddf2787",
+    "macro": "071444e5b6a23bbfe5455a631ef2c522530334df481f58307c90e7f66dc8abfe"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

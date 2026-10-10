@@ -1,0 +1,20 @@
+{
+  "analyst_reports": {
+    "valid": 384,
+    "unique_trial_count": 96,
+    "missing_evidence_guards": "passed",
+    "technical_rsi_parity": "passed"
+  },
+  "existing_tests": {
+    "command": ".venv/bin/python -m pytest tests/test_backtest_stats.py tests/test_backtest_quality_analysis.py tests/test_backtest_experiment_ledger_integration.py -q",
+    "passed": 64,
+    "failed": 1,
+    "subtests_passed": 4,
+    "failure": "test_scored_pipeline_runs_append_ledger_even_when_report_prefix_is_reused: mock portfolio.strategies contains dicts; main.py:585 expects strategy.strategy. Existing fixture/contract mismatch; production code and tests not changed."
+  },
+  "sealed_files_unchanged": 107,
+  "scored_trials_complete": 96,
+  "arms_with_identical_outcomes": 3,
+  "experiment_ledger_rows": 3,
+  "external_validation": "FAIL"
+}

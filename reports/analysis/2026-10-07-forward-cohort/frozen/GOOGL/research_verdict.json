@@ -1,0 +1,20 @@
+{
+  "ticker": "GOOGL",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Alphabet presents a conditional growth purchase based on 30% operating-income growth, Cloud operating income of $8.814bn, and positive $53.273bn TTM FCF. The bull establishes productive current operations and funding capacity at an estimated 23.07x forward reference, without using gain-inflated 17.38x trailing earnings as protection. Recent cash compression and $49.6bn equity funding are material per-share costs, so the ruling has medium conviction rather than assuming all company growth reaches owners.",
+  "winning_side": "bull",
+  "strongest_counterexample": "Q2 FCF was negative $5.855bn and H1 only $4.261bn while a $49.6bn equity raise dilutes participation; stronger operating profit can coexist with poorer owner-cash economics.",
+  "invalidation_conditions": [
+    "A subsequent reported TTM FCF at or below zero, from $53.273bn, would invalidate the cash-capacity foundation.",
+    "Comparable Cloud operating income below $8.814bn while H1 FCF falls below $4.261bn would undermine productive-growth compensation for dilution."
+  ],
+  "evidence_gaps": [
+    "The release does not separately disaggregate current debt embedded in current liabilities; liquidity less disclosed long-term debt is explicitly a partial comparison."
+  ],
+  "decisive_factors": [
+    "Cloud profitability is realized operating evidence, separate from $97.983bn other income.",
+    "Large liquidity and positive TTM cash counter funding fragility, but neither removes negative recent cash or dilution."
+  ],
+  "pipeline_mode": "in-session"
+}

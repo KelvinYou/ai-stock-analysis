@@ -1,0 +1,59 @@
+{
+  "symbol": "TSM",
+  "as_of": "2026-10-07",
+  "status": "OK",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+  "sources": [
+    {
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-07/6f49632674bd2d0fd48cb65aaf89ec6ab510b559/2Q26%20ManagementReport.pdf",
+      "publication_date": "2026-07-16",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    },
+    {
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-07/114aaca0fea2050e96b91fffbab9ed04ba09cd92/FS.pdf",
+      "publication_date": "2026-07-16",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    }
+  ],
+  "observed_table_metrics": {
+    "units": "NTD billion unless stated",
+    "Q2_revenue": 1270.38,
+    "prior_Q2_revenue": 933.79,
+    "Q2_operating_margin_percent": 60.3,
+    "prior_Q2_operating_margin_percent": 49.6,
+    "Q2_gross_margin_percent": 67.7,
+    "Q2_net_income": 706.56,
+    "Vanguard_disposal_and_mark_to_market_gains": 63.2,
+    "Q2_CFO": 783.36,
+    "Q2_capex": 496.0,
+    "Q2_FCF": 287.36,
+    "prior_Q2_FCF": 199.85,
+    "Q1_FCF": 348.21,
+    "H1_CFO": 1482.341,
+    "H1_capex": 846.765,
+    "cash_and_marketables": 3518.01,
+    "interest_bearing_debt": 1031.68,
+    "inventory_days": 87,
+    "prior_Q1_inventory_days": 80,
+    "prior_Q2_inventory_days": 76,
+    "Q3_revenue_guidance_USD_billion": [
+      44.6,
+      45.8
+    ],
+    "Q3_operating_margin_guidance_percent": [
+      56,
+      58
+    ]
+  },
+  "derived_math": {
+    "net_cash": "3518.01-1031.68=2486.33",
+    "H1_FCF": "1482.341-846.765=635.576"
+  },
+  "residual_limitations": [
+    "Vanguard gain is pre-tax; no invented after-tax normalized EPS.",
+    "Forward valuation and guidance are estimates."
+  ]
+}

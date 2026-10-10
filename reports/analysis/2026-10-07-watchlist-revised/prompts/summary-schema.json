@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "bull_case_summary": {
+      "type": "string"
+    },
+    "bear_case_summary": {
+      "type": "string"
+    },
+    "key_points_of_agreement": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "key_points_of_disagreement": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolved_uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "bull_case_summary",
+    "bear_case_summary",
+    "key_points_of_agreement",
+    "key_points_of_disagreement",
+    "unresolved_uncertainties"
+  ]
+}

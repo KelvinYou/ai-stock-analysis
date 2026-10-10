@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "ETN",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/ETN/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 5,
+    "buy": 18,
+    "hold": 4,
+    "sell": 0,
+    "strongSell": 1
+  },
+  "sources": [
+    {
+      "url": "https://www.eaton.com/cr/en-us/company/news-insights/news-releases/2026/eaton-reports-record-second-quarter-2026-results.html",
+      "date": "2026-07-31",
+      "observed_facts": "Eaton reports sales growth of 21%, organic growth of 14% and electrical backlog growth of 43%, and raises full-year adjusted EPS guidance.",
+      "negative_evidence_or_limitations": "Segment margin fell 80 basis points year on year despite beating guidance; transaction and restructuring adjustments remain material."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

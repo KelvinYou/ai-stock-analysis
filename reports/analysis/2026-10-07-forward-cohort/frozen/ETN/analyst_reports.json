@@ -1,0 +1,70 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Snapshot trailing/forward P/E 44.02/27.40 leaves limited room for acquisition and margin disappointment. Neutral reflects a material valuation/leverage tradeoff, not missing financial extraction.",
+    "margin_analysis": "Q2 segment margin 23.1%, down 80bp; adjusted EPS $3.15 versus GAAP $2.11 includes $1.04 of amortization, acquisition and restructuring adjustments.",
+    "debt_analysis": "Debt $20.611bn rose from $9.895bn; cash/investments $0.695bn. H1 derived FCF $1.188bn improved, but $11.079bn acquisition payments required financing.",
+    "growth_outlook": "Sales grew 21%, organic growth 14%, and electrical backlog 43%. FY adjusted EPS $13.40\u201313.60 is prospective, versus nearly flat guided GAAP EPS.",
+    "key_risks": [
+      "Acquisition leverage and integration",
+      "Premium forward valuation",
+      "Segment margin compression"
+    ],
+    "key_strengths": [
+      "Organic growth and backlog",
+      "Improved post-capex operating cash flow"
+    ],
+    "summary": "Demand and cash generation are strong, but doubled debt and a premium valuation balance the upside. Neutral is supported by this observed risk/reward tradeoff."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "Eaton reports sales growth of 21%, organic growth of 14% and electrical backlog growth of 43%, and raises full-year adjusted EPS guidance. Segment margin fell 80 basis points year on year despite beating guidance; transaction and restructuring adjustments remain material. Yahoo recommendations fetched 2026-10-07T11:50:31.804542, period 0m: strong buy 5, buy 18, hold 4, sell 0, strong sell 1. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Electrification orders",
+      "Backlog growth",
+      "Raised guidance"
+    ],
+    "notable_headlines": [
+      "2026-07-31 | issuer/issuer-hosted evidence | Eaton reports sales growth of 21%, organic growth of 14% and electrical backlog growth of 43%, and raises full-year adjusted EPS guidance. | https://www.eaton.com/cr/en-us/company/news-insights/news-releases/2026/eaton-reports-record-second-quarter-2026-results.html"
+    ],
+    "social_sentiment": null,
+    "summary": "Eaton reports sales growth of 21%, organic growth of 14% and electrical backlog growth of 43%, and raises full-year adjusted EPS guidance. Segment margin fell 80 basis points year on year despite beating guidance; transaction and restructuring adjustments remain material."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 445.0900, price is above by 5.38% versus SMA-50 422.3690 and above by 14.68% versus SMA-200 388.1168. Observed 5/20/60-bar returns are 2.73%/8.33%/9.55%. ATR-14 is 13.0593; Bollinger lower/middle/upper are 391.9393/424.4550/456.9707, with band position 0.8173. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 80.5096,
+    "rsi_assessment": "RSI-14 is 80.5096, overbought. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line 6.3313, signal line 4.4438, histogram 1.8876: positive short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 1,592,900 versus 20-bar average 2,077,015, ratio 0.7669. Below-average turnover supplies no strong participation confirmation. Price is 6.88% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      357.251,
+      387.0
+    ],
+    "resistance_levels": [
+      452.0,
+      478.0
+    ],
+    "summary": "Both major averages and positive MACD support an uptrend, but RSI above 80 and sub-average turnover weaken the case for a fresh momentum entry. The upper half of a wide Bollinger range describes extension and volatility without independently confirming a reversal."
+  },
+  "macro": {
+    "signal": "buy",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: Fed describes robust capital investment and BNM cites sustained tech-related spending. Inference: electrical infrastructure demand can benefit, including compute-related facilities, without a verified Eaton-specific order forecast.",
+      "Inference: elevated input costs, customer financing and the higher valuation hurdle remain offsets; no new infrastructure subsidy is assumed."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Eaton has a positive inferred electrical infrastructure demand backdrop from observed investment strength. Costs and financing sensitivity temper the signal, and the macro snapshot does not quantify incremental data-center orders."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Issuer July31 portfolio P/E20.8x; June30 fact-sheet22.8x is a different date. Frozen vendor20.77x is an aggregate holdings multiple, not fund earnings. No forward P/E or justified active return premium established.",
+    "margin_analysis": "Fund corporate margins/FCF do not apply. June30 issuer holdings ROE18.2% is an aggregate portfolio metric.",
+    "debt_analysis": "Corporate debt/capital ratios do not apply; underlying equity, regional and currency risk remain.",
+    "growth_outlook": "FTSE Global All Cap exposure and 0.06% expenses support long-term diversified ownership; this does not predict a short-term valuation re-rating.",
+    "key_risks": [
+      "June30 US weight61.9%, technology33.3% and top10weight21.7% retain concentrated equity risk.",
+      "Oct6 NAV/premium not retrieved; July valuation is not Oct6 fair value."
+    ],
+    "key_strengths": [
+      "Broad developed/emerging-market equity exposure with low recurring fees."
+    ],
+    "summary": "VT remains a sound diversified allocation vehicle. Neutral reflects no demonstrated tactical valuation edge, with fund-level evidence replacing inapplicable company metrics."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "neutral",
+    "news_summary": "Vanguard identifies VT as tracking the FTSE Global All Cap Index across large, medium and small companies worldwide. Fund objective and dated quote information do not measure near-term investor sentiment. No dated fund flow or rating evidence was retrieved. No analyst recommendations returned.",
+    "key_themes": [
+      "Global index exposure",
+      "No issuer earnings narrative"
+    ],
+    "notable_headlines": [
+      "2026-09-14 | issuer/issuer-hosted evidence | Vanguard identifies VT as tracking the FTSE Global All Cap Index across large, medium and small companies worldwide. | https://advisors.vanguard.com/investments/products/vt/vanguard-total-world-stock-etf"
+    ],
+    "social_sentiment": null,
+    "summary": "Vanguard identifies VT as tracking the FTSE Global All Cap Index across large, medium and small companies worldwide. Fund objective and dated quote information do not measure near-term investor sentiment. No dated fund flow or rating evidence was retrieved."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 160.7000, price is above by 0.87% versus SMA-50 159.3210 and above by 6.65% versus SMA-200 150.6789. Observed 5/20/60-bar returns are 1.42%/0.12%/3.40%. ATR-14 is 1.4962; Bollinger lower/middle/upper are 156.7568/159.0421/161.3273, with band position 0.8627. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 64.1427,
+    "rsi_assessment": "RSI-14 is 64.1427, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line 0.0601, signal line -0.0341, histogram 0.0942: positive short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 1,505,900 versus 20-bar average 2,742,635, ratio 0.5491. Below-average turnover supplies no strong participation confirmation. Price is 0.98% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      151.7402,
+      156.079
+    ],
+    "resistance_levels": [
+      161.55,
+      162.2931
+    ],
+    "summary": "The ETF remains above both major averages with a small positive MACD histogram and constructive RSI. Almost-flat 20-bar returns, proximity to the 52-week high and volume at only 0.55 times average leave a fresh momentum breakout unconfirmed."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "sector_macro_factors": [
+      "Observed: US capital investment/spending and Malaysian activity are resilient; Fed raised rates while BNM held. Inference: mixed growth and discount-rate effects across a globally diversified equity fund do not establish a regional allocation edge.",
+      "VT is a global equity ETF: its USD listing currency does not make its underlying economic or currency exposure exclusively US. No global country-weight, yield or currency-direction forecast is supplied."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "VT spans multiple countries and sectors, so two central-bank releases cannot establish a fund-wide directional advantage. The macro signal is neutral, with USD/MYR treated only as investor translation exposure rather than its full underlying currency exposure."
+  },
+  "pipeline_mode": "in-session"
+}

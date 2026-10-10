@@ -1,0 +1,789 @@
+{
+  "retrieved_at": "2026-10-08T08:21:38.904747+00:00",
+  "sources": [
+    {
+      "ticker": "NVDA",
+      "id": "fy2025q2",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2025",
+      "path": "raw/NVDA-fy2025q2.html",
+      "sha256": "df658a366baaa87e0d13d7e8443129722f69b336df0b67634b6626104c768675",
+      "status": "cached"
+    },
+    {
+      "ticker": "NVDA",
+      "id": "fy2025q3",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2025",
+      "path": "raw/NVDA-fy2025q3.html",
+      "sha256": "747b691fd04a626eee66001d6497af337c5e7cd424430c85b51b0222fdf4472d",
+      "status": "cached"
+    },
+    {
+      "ticker": "NVDA",
+      "id": "fy2025q4",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2025",
+      "path": "raw/NVDA-fy2025q4.html",
+      "sha256": "121af64027c06714de561b9888ceebd604856d214248a3ad187f5715a9de863d",
+      "status": "cached"
+    },
+    {
+      "ticker": "NVDA",
+      "id": "fy2026q1",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026",
+      "path": "raw/NVDA-fy2026q1.html",
+      "sha256": "8f85fb90d55c9d10b85694f1f64597a16ce9a1d7ca5ffa4f5d648c8e3e56275f",
+      "status": "cached"
+    },
+    {
+      "ticker": "NVDA",
+      "id": "fy2026q2",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2026",
+      "path": "raw/NVDA-fy2026q2.html",
+      "sha256": "0f23ab74f533eb88d7837676697706088f9ff4b1c144877283bbb01b81b10d83",
+      "status": "cached"
+    },
+    {
+      "ticker": "NVDA",
+      "id": "fy2026q3",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026",
+      "path": "raw/NVDA-fy2026q3.html",
+      "sha256": "ab7c017a14d96a2958ba98a891a3b9df63897daf90d5a69cf650d8ef0dd368e4",
+      "status": "cached"
+    },
+    {
+      "ticker": "NVDA",
+      "id": "fy2026q4",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+      "path": "raw/NVDA-fy2026q4.html",
+      "sha256": "7e56f4370725e5ae4621269c495ad853bcafe7e9694def1af088f0258e3e1366",
+      "status": "cached"
+    },
+    {
+      "ticker": "NVDA",
+      "id": "fy2027q1",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027",
+      "path": "raw/NVDA-fy2027q1.html",
+      "sha256": "9576b92d195262ca072b3edd8c1979e0816b0f243744cb1493ab9b4b6561936e",
+      "status": "cached"
+    },
+    {
+      "ticker": "MSFT",
+      "id": "fy2024q4",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2024-Q4/press-release-webcast",
+      "path": "raw/MSFT-fy2024q4.html",
+      "sha256": "6c19871ff221023fd739d52fa0791ccfca36b6382fecf92dc5b907bfd84efd67",
+      "status": "cached"
+    },
+    {
+      "ticker": "MSFT",
+      "id": "fy2025q1",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q1/press-release-webcast",
+      "path": "raw/MSFT-fy2025q1.html",
+      "sha256": "8a9657c5f68391153790b707c2344e48ebb19b3b4b03b23511886e5a3cf68fe7",
+      "status": "cached"
+    },
+    {
+      "ticker": "MSFT",
+      "id": "fy2025q2",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q2/press-release-webcast",
+      "path": "raw/MSFT-fy2025q2.html",
+      "sha256": "7b6c6feece58a655506cfe4a57527ac95c740855fe567d3ac34f69c25d6d93ca",
+      "status": "cached"
+    },
+    {
+      "ticker": "MSFT",
+      "id": "fy2025q3",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q3/press-release-webcast",
+      "path": "raw/MSFT-fy2025q3.html",
+      "sha256": "df1c96d6d159c0d2aa49c5f13f464121335091f73fda24de626250beff359fed",
+      "status": "cached"
+    },
+    {
+      "ticker": "MSFT",
+      "id": "fy2025q4",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q4/press-release-webcast",
+      "path": "raw/MSFT-fy2025q4.html",
+      "sha256": "a40f84db6263613d908068f504e1deec582a03e83ce61d3cd3246f9e13229617",
+      "status": "cached"
+    },
+    {
+      "ticker": "MSFT",
+      "id": "fy2026q1",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q1/press-release-webcast",
+      "path": "raw/MSFT-fy2026q1.html",
+      "sha256": "6ed5ad1837a8c98fb1cba5b9ac2d48eeb6094ba56fbe33d10d0b9bdf244ed5d6",
+      "status": "cached"
+    },
+    {
+      "ticker": "MSFT",
+      "id": "fy2026q2",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q2/press-release-webcast",
+      "path": "raw/MSFT-fy2026q2.html",
+      "sha256": "85ab2fdc8841b9dcc55fd1b61c763142330c05a1df66494e1038bd5062c3ed23",
+      "status": "cached"
+    },
+    {
+      "ticker": "MSFT",
+      "id": "fy2026q3",
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q3/press-release-webcast",
+      "path": "raw/MSFT-fy2026q3.html",
+      "sha256": "e16017da07f25d22118edb1f9750b2b63035eb63ed80763a6fa8a02282949ee0",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2024q2",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2024/q2",
+      "path": "raw/TSM-2024q2.html",
+      "sha256": "73eef4281791797c9fa57f827eb8e1d7b3485dacaeb43eaf5a8fc05207845db2",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2024q3",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2024/q3",
+      "path": "raw/TSM-2024q3.html",
+      "sha256": "587308d50981139f2b4c2a96e94bcdc0c995067c3b6c6524dea9c1a8771ed310",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2024q4",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2024/q4",
+      "path": "raw/TSM-2024q4.html",
+      "sha256": "ffac7a59f47cb79ce7d818de6076a48122f5886c6a8158067bf6b440d2047885",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q1",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2025/q1",
+      "path": "raw/TSM-2025q1.html",
+      "sha256": "e3bb552f863c9804cadbd1afa150b1314f400fa16c9812ff184191feca346d56",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q2",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2025/q2",
+      "path": "raw/TSM-2025q2.html",
+      "sha256": "4b9ab9c5e0b6006dd21dedb22428505c8be12595e36dd8b47f4b51533ea83d50",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q3",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2025/q3",
+      "path": "raw/TSM-2025q3.html",
+      "sha256": "1075ce29962cca9576fee1be0b0237861039d3da0a51d5f30e6041cf1582dc86",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q4",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2025/q4",
+      "path": "raw/TSM-2025q4.html",
+      "sha256": "7b5fb1d9ab9df3e917233981d3a0f6d53cbdbd5579aba7751f19e7b2fc00ad5b",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2026q1",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2026/q1",
+      "path": "raw/TSM-2026q1.html",
+      "sha256": "b6b87018f0b5065a78acf4f25bb82051579291b9084921f6c7877b5007b2310a",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2026q2",
+      "url": "https://investor.tsmc.com/english/quarterly-results/2026/q2",
+      "path": "raw/TSM-2026q2.html",
+      "sha256": "e925d5e51c99048d8e4d70b19926ffe23364929e8bef52916e4a48b8dd3cd5a1",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "index",
+      "url": "https://www.unitedhealthgroup.com/investors/financial-reports.html",
+      "path": "raw/UNH-index.html",
+      "sha256": "6351217115614e007bcf5274bdf29cf20912cb194e97f3dbab0872a89822dd53",
+      "status": "cached"
+    },
+    {
+      "ticker": "V",
+      "id": "fy2024q4",
+      "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2024/q4/Visa-Inc-Fourth-Quarter-2024-Financial-Results-Presentation.pdf",
+      "path": "raw/V-fy2024q4.pdf",
+      "sha256": "86f020ae9042d63743aa642fd9f6af92458aed1b36ceab350e44f9419a82c97d",
+      "status": "cached"
+    },
+    {
+      "ticker": "V",
+      "id": "fy2025q1",
+      "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2025/q1/Visa-Inc-First-Quarter-2025-Financial-Results-Presentation.pdf",
+      "path": "raw/V-fy2025q1.pdf",
+      "sha256": "13d84b4854ce003233c21e9b46624efd9edf12099b06188593b36324f97a2f8d",
+      "status": "cached"
+    },
+    {
+      "ticker": "V",
+      "id": "fy2025q2",
+      "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2025/q2/Visa-Inc-Second-Quarter-2025-Financial-Results-Presentation.pdf",
+      "path": "raw/V-fy2025q2.pdf",
+      "sha256": "6af4f0a3486db90d5dd90c0e3b9ff16693689046699dba810b6bf91b2b936809",
+      "status": "cached"
+    },
+    {
+      "ticker": "V",
+      "id": "fy2025q3",
+      "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2025/q3/Visa-Inc-Third-Quarter-2025-Financial-Results-Presentation.pdf",
+      "path": "raw/V-fy2025q3.pdf",
+      "sha256": "76d7075b04916d7df5ae3fa160e8fa03b9c1ab9b707fd025731c5bf803ae6935",
+      "status": "cached"
+    },
+    {
+      "ticker": "V",
+      "id": "fy2025q4",
+      "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2025/q4/Visa-Inc-Fourth-Quarter-2025-Financial-Results-Presentation.pdf",
+      "path": "raw/V-fy2025q4.pdf",
+      "sha256": "1413f94b4379a406d664554170571e7753d41fc4c390e657e9339fa6e302481c",
+      "status": "cached"
+    },
+    {
+      "ticker": "V",
+      "id": "fy2026q1",
+      "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2026/q1/Visa-Inc-First-Quarter-2026-Financial-Results-Presentation.pdf",
+      "path": "raw/V-fy2026q1.pdf",
+      "sha256": "9ff693c43ea71be70bb905bce9c0f9f370641f729bd0b29efe81b6f5bd30cf52",
+      "status": "cached"
+    },
+    {
+      "ticker": "V",
+      "id": "fy2026q2",
+      "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2026/q2/Visa-Inc-Second-Quarter-2026-Financial-Results-Presentation.pdf",
+      "path": "raw/V-fy2026q2.pdf",
+      "sha256": "6cced77ff562d1137ba50d73a6b113466a941767a8c1e1b0fca2f80863c26bd6",
+      "status": "cached"
+    },
+    {
+      "ticker": "AVGO",
+      "id": "fy2024q4",
+      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-fourth-quarter-and-fiscal-year-2024-financial-results-and-quarterly-dividend-302330736.html",
+      "path": "raw/AVGO-fy2024q4.html",
+      "sha256": "3c6530f413d241bd915385d2dac50b861948d9fdb7eddfa7d5c96aa70d187167",
+      "status": "cached"
+    },
+    {
+      "ticker": "AVGO",
+      "id": "fy2025q2",
+      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-second-quarter-fiscal-year-2025-financial-results-and-quarterly-dividend-302474693.html",
+      "path": "raw/AVGO-fy2025q2.html",
+      "sha256": "1944fe293d292ec3ef296c15710875b43580a6f9581cb05dcdc05aca32e7c1dd",
+      "status": "cached"
+    },
+    {
+      "ticker": "AVGO",
+      "id": "fy2025q4",
+      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-fourth-quarter-and-fiscal-year-2025-financial-results-and-quarterly-dividend-302639606.html",
+      "path": "raw/AVGO-fy2025q4.html",
+      "sha256": "5492602e2b59f63f8b761a8ec7f738b2bf32fc95e67bcdebc2a370e612767fd6",
+      "status": "cached"
+    },
+    {
+      "ticker": "AVGO",
+      "id": "fy2026q2",
+      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial-results-and-quarterly-dividend-302790698.html",
+      "path": "raw/AVGO-fy2026q2.html",
+      "sha256": "a3d17598b78872bdaf59a58c16e85aa2bf7dd82472109e85a1707c95c220a287",
+      "status": "cached"
+    },
+    {
+      "ticker": "ORCL",
+      "id": "fy2025q4",
+      "url": "https://s23.q4cdn.com/440135859/files/doc_financials/2025/q4/4q25-pressrelease-June-final.pdf",
+      "path": "raw/ORCL-fy2025q4.pdf",
+      "sha256": "5856c9eca4939fbce12400bdbd8da5e5d9e734467ccd7e696a61d3578049862c",
+      "status": "cached"
+    },
+    {
+      "ticker": "COST",
+      "id": "fy2025q3",
+      "url": "https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-Third-Quarter-and-Year-To-Date-Operating-Results-for-Fiscal-2025-2025.pdf",
+      "path": "raw/COST-fy2025q3.pdf",
+      "sha256": "bd2bde58d61b9764e30c0ae45102b12b370afb7a9f20ffa0ed8fc1a18c42bfe9",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2024q2-management",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2024-07/2550bfd736184ea491797ba93a95bc28efa4348c/2Q24ManagementReport.pdf",
+      "path": "raw/TSM-2024q2-management.pdf",
+      "sha256": "2b0f8f2712c7c721acddd0ca8ae9cf787110d874f0cebfe10a7bbcc92a8baaba",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2024q2-earnings",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2024-07/a152eded224aa1b83fdf342ed71d4c42af013915/2Q24EarningsRelease.pdf",
+      "path": "raw/TSM-2024q2-earnings.pdf",
+      "sha256": "84df9a6bb10278e70e4289f703dcdfcc8609b24ccebcfb42f0831da87f7d7134",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2024q3-management",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2024-10/a4e7bb7392eb95e242cf1bef89bee75a6ddbde3a/3Q24ManagementReport.pdf",
+      "path": "raw/TSM-2024q3-management.pdf",
+      "sha256": "2c3ac6460eebb85e1041f47c4f0480f245528b81e4243de91053b0e75c0f2d81",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2024q3-earnings",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2024-10/d00bfb55ffe01e36f56863f975e88d827f9943e8/3Q24EarningsRelease.pdf",
+      "path": "raw/TSM-2024q3-earnings.pdf",
+      "sha256": "0056cf0bb2d4e28f837c0216542512ac598e4592cd282fcb6a5b73e2a25bae42",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2024q4-management",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-01/2d8b2bb6fc3b5887d24ae0635f639c1cdca834f3/4Q24ManagementReport.pdf",
+      "path": "raw/TSM-2024q4-management.pdf",
+      "sha256": "77a71501d4b2b4bb8de88e4dfb0497531918c2f1caed8f727bf90f4a54ac1b05",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2024q4-earnings",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-01/cc4e1dec3474f69109d5455fbf8939c3e3cd5a71/4Q24EarningsRelease.pdf",
+      "path": "raw/TSM-2024q4-earnings.pdf",
+      "sha256": "3a2e2a2b10eaf67fb16f0f57edca44dc57ac472c2f24664abec5fe7c4d6ceb9a",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q1-management",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-04/8e7d27fd8fb010c689d221dc3b8450095bbfc7e2/1Q25ManagementReport.pdf",
+      "path": "raw/TSM-2025q1-management.pdf",
+      "sha256": "ed6e2c7bcc086a00c3df97a088927638c54944c1c384a50786f144e777318cce",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q1-earnings",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-04/6580235c47b7b8f1056b071faa44d958c2c3ba04/1Q25EarningsRelease.pdf",
+      "path": "raw/TSM-2025q1-earnings.pdf",
+      "sha256": "355254c5ab7af0d5a3d19f1371d94195a7401a555ec19fc977b9b7c875a3d651",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q2-management",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-07/1fec9df3de99e6e9f190e1eda7179449381ce6d8/2Q25ManagementReport.pdf",
+      "path": "raw/TSM-2025q2-management.pdf",
+      "sha256": "7c4cb660c9e18a856e78521e097c1e055ec4a0696a4464ead8d2843fe86ae07f",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q2-earnings",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-07/d9d294ed46ca22c560a17eb060373bc35f2d464a/2Q25EarningsRelease.pdf",
+      "path": "raw/TSM-2025q2-earnings.pdf",
+      "sha256": "14b24d4f735363fff90ef8d50611864d0dc000edfd74489994569b7428e78d40",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q3-management",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/90cb476be2e8406ba477c417a552d36d632db5c3/3Q25ManagementReport.pdf",
+      "path": "raw/TSM-2025q3-management.pdf",
+      "sha256": "f4642c936a33cefaf91c6c7d8d16f0696e91ea17430911f51c20d6f340462ccc",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q3-earnings",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2025-10/ff1cf977182dad2178b6d158e61d375ac98ff517/3Q25EarningsRelease.pdf",
+      "path": "raw/TSM-2025q3-earnings.pdf",
+      "sha256": "70bd2764e78e7b88a314272e1d4644fc5f4b67dfd6977a6a1465c8e42f5ccf88",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q4-management",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/00fe50f72b38d74e6b9b066398f020f337cd4e9d/4Q25%20Management%20Report.pdf",
+      "path": "raw/TSM-2025q4-management.pdf",
+      "sha256": "cbd5645aed3df57a59beb942110ec251a45c6407c401f8813cff4942e4503e35",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2025q4-earnings",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/3e49621566a3ca53bdf8aee2586929b666c17fd6/4Q25EarningsRelease.pdf",
+      "path": "raw/TSM-2025q4-earnings.pdf",
+      "sha256": "d14b67a858ffa01e6d16d64f81230d4fedfc7815b3a572b5e5feb0b2f2a2fbd9",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2026q1-management",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-04/5508a9df8981f587c73dbfaf9f577f142e22bbb1/1Q26ManagementReport.pdf",
+      "path": "raw/TSM-2026q1-management.pdf",
+      "sha256": "4878487acab931ea06635a8bb97cbb9dcf14e2140d4c480667298ca1c43e8bdc",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2026q1-earnings",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-04/e85216eea8dccd8ca75d7e040e8d57be3ccd618b/1Q26%20EarningsRelease.pdf",
+      "path": "raw/TSM-2026q1-earnings.pdf",
+      "sha256": "25675c5ad8fae2f042a5c1449fe8fb0d1419f323d23c15d1e204c053d9a7cc47",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2026q2-management",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-07/6f49632674bd2d0fd48cb65aaf89ec6ab510b559/2Q26%20ManagementReport.pdf",
+      "path": "raw/TSM-2026q2-management.pdf",
+      "sha256": "fad79c6a6ec870357df9eae00e680256956e34083ec84a226959c693eccb1a5f",
+      "status": "cached"
+    },
+    {
+      "ticker": "TSM",
+      "id": "2026q2-earnings",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-07/a80d7933be643644081584087731f73b22ea5a2c/2Q26%20EarningsRelease.pdf",
+      "path": "raw/TSM-2026q2-earnings.pdf",
+      "sha256": "67c8e14a5786449dc6cbc4e8e0472b8b56c33895e4c8abcdfe4f48ac5f60207e",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "unh-reports-first-quarter-2026-results",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2026/unh-reports-first-quarter-2026-results.pdf",
+      "path": "raw/UNH-unh-reports-first-quarter-2026-results.pdf",
+      "sha256": "dee9b2b3d844127fe7dc6f0558fd8864e18cf89160e4a62e368cfa016e9cc76c",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "Q1-202026-20Earnings-20Release-208-K",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2026/Q1%202026%20Earnings%20Release%208-K.pdf",
+      "path": "raw/UNH-Q1-202026-20Earnings-20Release-208-K.pdf",
+      "sha256": "16b67068b086434a5155f74b824a77ba9849928a7fd3d6ce8f9269014f9e49a4",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "unh-reports-second-quarter-2026-results",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2026/unh-reports-second-quarter-2026-results.pdf",
+      "path": "raw/UNH-unh-reports-second-quarter-2026-results.pdf",
+      "sha256": "ec192f74f52b859a9e26fb20a4313acfcf593a4ba64d5c0aca4903c3699b5699",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "Q2-202026-20Earnings-20Release-208-K",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2026/Q2%202026%20Earnings%20Release%208-K.pdf",
+      "path": "raw/UNH-Q2-202026-20Earnings-20Release-208-K.pdf",
+      "sha256": "6d3a7febcbe500e71966e8c8bc58f586a79bc662c98eebbff2a5f60784487f24",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "UNH-Reports-Q1-2025-Results-Revises-Full-Year-Guidance",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/UNH-Reports-Q1-2025-Results-Revises-Full-Year-Guidance.pdf",
+      "path": "raw/UNH-UNH-Reports-Q1-2025-Results-Revises-Full-Year-Guidance.pdf",
+      "sha256": "5fd2c6a2edc678afd6588c1e903b25241bc389da2544cd3292039a035f7f34ee",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "UNH-Q1-2025-Form-8K",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/UNH-Q1-2025-Form-8K.pdf",
+      "path": "raw/UNH-UNH-Q1-2025-Form-8K.pdf",
+      "sha256": "416258c4b6a28a9f2e273ff5ab17b1befe7687189e7776704e5667410f8a3cf6",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "unh-reestablishes-full-year-outlook-and-reports-second-quarter-2025-results",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/unh-reestablishes-full-year-outlook-and-reports-second-quarter-2025-results.pdf",
+      "path": "raw/UNH-unh-reestablishes-full-year-outlook-and-reports-second-quarter-2025-results.pdf",
+      "sha256": "4078979fb89798561de4a0ad313f13e2fb892eaa102364a735ea20b7b08bb259",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "unh-q2-2025-form-8k",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/unh-q2-2025-form-8k.pdf",
+      "path": "raw/UNH-unh-q2-2025-form-8k.pdf",
+      "sha256": "ff5534331193011f1689076115b612043f6e791417f93f8d414c535dba42787c",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "unh-reports-third-quarter-2025-results-and-raises-full-year-2025-earnings-outlook",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/unh-reports-third-quarter-2025-results-and-raises-full-year-2025-earnings-outlook.pdf",
+      "path": "raw/UNH-unh-reports-third-quarter-2025-results-and-raises-full-year-2025-earnings-outlook.pdf",
+      "sha256": "f3e873973740c8aab2ba830f7f46c0b7f33b35d11f5403aef67bc9acf63d46c9",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "unh-q3-2025-form-8k",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/unh-q3-2025-form-8k.pdf",
+      "path": "raw/UNH-unh-q3-2025-form-8k.pdf",
+      "sha256": "11e9e7d1323cfb837693c3a865765a3492de2fbadd38a0891ba5c5b12d13e9d4",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "unh-reports-2025-results-and-issues-2026-outlook",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/unh-reports-2025-results-and-issues-2026-outlook.pdf",
+      "path": "raw/UNH-unh-reports-2025-results-and-issues-2026-outlook.pdf",
+      "sha256": "da191e35c8e6b8b44aa3db80aba8cb259f72f1e915aa51653a4372d2f847e65f",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "UNH-Q4-2025-8K",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2025/UNH-Q4-2025-8K.pdf",
+      "path": "raw/UNH-UNH-Q4-2025-8K.pdf",
+      "sha256": "fe9d9ad9b476b52a5d394d8dd1ecf65e287d9f22123a5a94281b2f33d7db5234",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "UNH-Q1-2024-Release",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2024/UNH-Q1-2024-Release.pdf",
+      "path": "raw/UNH-UNH-Q1-2024-Release.pdf",
+      "sha256": "1c0a8ccae98e85ef4e7fe776165bb99a39b6d7488d0151bf26c819e8da6deb46",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "UNH-Q1-2024-Form-8K",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2024/UNH-Q1-2024-Form-8K.pdf",
+      "path": "raw/UNH-UNH-Q1-2024-Form-8K.pdf",
+      "sha256": "c67739216fea5dded193d2658724b3927c23a9ea4723b1773070a7cd3b1b6098",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "UNH-Q2-2024-Release",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2024/UNH-Q2-2024-Release.pdf",
+      "path": "raw/UNH-UNH-Q2-2024-Release.pdf",
+      "sha256": "2bd7f8bdc7a39e3f68f01917ccec764cbf8c328874986f4f1f55253a2d7de258",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "UNH-Q2-Form-8K",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2024/UNH-Q2-Form-8K.pdf",
+      "path": "raw/UNH-UNH-Q2-Form-8K.pdf",
+      "sha256": "d359403175dcf4c507686aa198110166a8862d56edbf778982d4654e392c9efb",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "UNH-Q3-2024-Release",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2024/UNH-Q3-2024-Release.pdf",
+      "path": "raw/UNH-UNH-Q3-2024-Release.pdf",
+      "sha256": "666b0971d5042f4e9ccf2f9edd02345ed81bc83f0c97fe9822de2f0e3adf04f6",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "UNH-Q3-2024-Form-8K",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2024/UNH-Q3-2024-Form-8K.pdf",
+      "path": "raw/UNH-UNH-Q3-2024-Form-8K.pdf",
+      "sha256": "99e1514f6446e5066e519a13d16ad10a928bf163a81b629efb772982ff283067",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "Additional-Non-GAAP-Reconciliation-Q3-2024",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2024/Additional-Non-GAAP-Reconciliation-Q3-2024.pdf",
+      "path": "raw/UNH-Additional-Non-GAAP-Reconciliation-Q3-2024.pdf",
+      "sha256": "e6fdc435661f36671d4e1898dc045cc632fd76fe6398d336cc029c58d7a47eea",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "2025-16-01-uhg-reports-fourth-quarter-results",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2024/2025-16-01-uhg-reports-fourth-quarter-results.pdf",
+      "path": "raw/UNH-2025-16-01-uhg-reports-fourth-quarter-results.pdf",
+      "sha256": "7dd627fa84e57a280941adc542bd2845513d38926495ac85f2236fae8879ff6a",
+      "status": "cached"
+    },
+    {
+      "ticker": "UNH",
+      "id": "UNH-Q4-2024-8K",
+      "url": "https://www.unitedhealthgroup.com/content/dam/UHG/PDF/investors/2024/UNH-Q4-2024-8K.pdf",
+      "path": "raw/UNH-UNH-Q4-2024-8K.pdf",
+      "sha256": "ce55207b783648f107676ea1bf0a16dcc09d1232340fc612631f95d55db4548d",
+      "status": "cached"
+    },
+    {
+      "ticker": "AVGO",
+      "id": "fy2025q1",
+      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-first-quarter-fiscal-year-2025-financial-results-and-quarterly-dividend-302395106.html",
+      "path": "raw/AVGO-fy2025q1.html",
+      "sha256": "6ed7ab54803aa148183d152197c7510f2cd1fe2125d3cdf91d8f58232023e639",
+      "status": "cached"
+    },
+    {
+      "ticker": "AVGO",
+      "id": "fy2025q3",
+      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-third-quarter-fiscal-year-2025-financial-results-and-quarterly-dividend-302547062.html",
+      "path": "raw/AVGO-fy2025q3.html",
+      "sha256": "2d4ca6cebcb8d96fc8b0a640d7db12d5090acd80a7e0a754daf8343bf8197b00",
+      "status": "cached"
+    },
+    {
+      "ticker": "AVGO",
+      "id": "fy2026q1",
+      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-first-quarter-fiscal-year-2026-financial-results-and-quarterly-dividend-302704490.html",
+      "path": "raw/AVGO-fy2026q1.html",
+      "sha256": "62a12b87f1d0e0c4b46b60830671731dff27cc1bf89f860710e2847533e13ade",
+      "status": "cached"
+    },
+    {
+      "ticker": "ORCL",
+      "id": "fy2026q1",
+      "url": "https://s23.q4cdn.com/440135859/files/doc_financials/2026/q1/1q26-pressrelease-September-final_.pdf",
+      "path": "raw/ORCL-fy2026q1.pdf",
+      "sha256": "1fdbebffb123401a9fa8b5706c338277de3ce3c801e3c16c1082207fff962b1f",
+      "status": "cached"
+    },
+    {
+      "ticker": "ORCL",
+      "id": "fy2026q3",
+      "url": "https://s23.q4cdn.com/440135859/files/doc_financials/2026/q3/3q26-pressrelease-March-FINAL.pdf",
+      "path": "raw/ORCL-fy2026q3.pdf",
+      "sha256": "40bd8f3b3d3264cbb20502baf9ac263fde79ca4b4c9aeef48a19bfe30f7e9403",
+      "status": "cached"
+    },
+    {
+      "ticker": "ORCL",
+      "id": "fy2026q2",
+      "url": "https://www.oracle.com/news/announcement/q2fy26-earnings-release-2025-12-10/",
+      "path": "raw/ORCL-fy2026q2.html",
+      "sha256": "22b2eca9da0235cffd652f6b717ec748a7bc90928f74b22820a6433dab9a4ab4",
+      "status": "cached"
+    },
+    {
+      "ticker": "ORCL",
+      "id": "fy2026q4",
+      "url": "https://www.oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10/",
+      "path": "raw/ORCL-fy2026q4.html",
+      "sha256": "4a6cc18a82e7c686d731075b35b9686b102f3ef9c1466c9a80822d1234149d4f",
+      "status": "cached"
+    },
+    {
+      "ticker": "ORCL",
+      "id": "fy2025q1",
+      "url": "https://www.oracle.com/news/announcement/q1fy25-earnings-release-2024-09-09/",
+      "path": "raw/ORCL-fy2025q1.html",
+      "sha256": "35d2ac43e140cccffb7ee31f30a0acab42341f675424d38ca63d99c31aa8141c",
+      "status": "cached"
+    },
+    {
+      "ticker": "ORCL",
+      "id": "fy2025q2",
+      "url": "https://www.oracle.com/news/announcement/q2fy25-earnings-release-2024-12-09/",
+      "path": "raw/ORCL-fy2025q2.html",
+      "sha256": "c94fd6103c25c4f47a47f7bea7f4997555d878c67d1bf23f0fefa28f09fff7a3",
+      "status": "cached"
+    },
+    {
+      "ticker": "ORCL",
+      "id": "fy2025q3",
+      "url": "https://www.oracle.com/news/announcement/q3fy25-earnings-release-2025-03-10/",
+      "path": "raw/ORCL-fy2025q3.html",
+      "sha256": "61b7fdbaac4720890ac7971f4b6d84cb7afaad2e220f21e02d6fc05ce7757057",
+      "status": "cached"
+    },
+    {
+      "ticker": "COST",
+      "id": "fy2025q4",
+      "url": "https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Operating-Results-2025.pdf",
+      "path": "raw/COST-fy2025q4.pdf",
+      "sha256": "25d4417ac2d1bcfa189a38454717a1ccaa10e13cd80f61fcba1019b8f6cc844c",
+      "status": "cached"
+    },
+    {
+      "ticker": "COST",
+      "id": "fy2026q1",
+      "url": "https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-First-Quarter-Fiscal-Year-2026-Operating-Results-2025.pdf",
+      "path": "raw/COST-fy2026q1.pdf",
+      "sha256": "65f33d68f4d9c9486819e9f8ac3a98157964f67b1fdca902a77680a3fc629914",
+      "status": "cached"
+    },
+    {
+      "ticker": "COST",
+      "id": "fy2026q3",
+      "url": "https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-Third-Quarter-and-Year-To-Date-Operating-Results-For-Fiscal-2026-2026.pdf",
+      "path": "raw/COST-fy2026q3.pdf",
+      "sha256": "7cd1f47a01df609872b4dc7e28d43a78612bd2cf86efe8bcfbe28979deb8be7c",
+      "status": "cached"
+    },
+    {
+      "ticker": "COST",
+      "id": "fy2026q2",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000909832/b8f1c7e9-68b8-41a7-834b-389b5783fdaf.pdf",
+      "path": "raw/COST-fy2026q2.pdf",
+      "sha256": "30e608547ab66c6f1f9bbf77bd84ab76af7d5c1b775419eb65a217d8f20a6877",
+      "status": "cached"
+    },
+    {
+      "ticker": "AVGO",
+      "id": "fy2024q3",
+      "url": "https://www.prnewswire.com/news-releases/broadcom-inc-announces-third-quarter-fiscal-year-2024-financial-results-and-quarterly-dividend-302239930.html",
+      "path": "raw/AVGO-fy2024q3.html",
+      "sha256": "b79dbdc78a4898e7ea25054b361fb08c3ffd91619657620265222f63a51276a1",
+      "status": "downloaded"
+    },
+    {
+      "ticker": "NVDA",
+      "id": "fy2025q1",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025",
+      "path": "raw/NVDA-fy2025q1.html",
+      "sha256": "69e839709037ea87a74cdbca53b44b5057510076f837eeae901b5903b16d8ba1",
+      "status": "downloaded"
+    },
+    {
+      "ticker": "COST",
+      "id": "fy2024q4",
+      "url": "https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2024-Operating-Results-2024.pdf",
+      "path": "raw/COST-fy2024q4.pdf",
+      "sha256": "590d2dc15e168ca52697a8d8b85b0f388cbea3eab8235b2ec8aa77ed4f173c57",
+      "status": "downloaded"
+    },
+    {
+      "ticker": "COST",
+      "id": "fy2025q1",
+      "url": "https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-First-Quarter-Fiscal-Year-2025-Operating-Results-2024.pdf",
+      "path": "raw/COST-fy2025q1.pdf",
+      "sha256": "90400c2dc658f81feae944feef147b132854671fbc88937ad699bbc86c66913c",
+      "status": "downloaded"
+    },
+    {
+      "ticker": "COST",
+      "id": "fy2025q2",
+      "url": "https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-Second-Quarter-and-Year-To-Date-Operating-Results-For-Fiscal-2025-and-February-Sales-Results-2025.pdf",
+      "path": "raw/COST-fy2025q2.pdf",
+      "sha256": "fa979d69e026ee800a14c06c55a7f5b98536622e4845e4d315c1dbebf03d7659",
+      "status": "downloaded"
+    },
+    {
+      "ticker": "V",
+      "id": "fy2024q3",
+      "url": "https://s1.q4cdn.com/050606653/files/doc_financials/2024/q3/Visa-Inc-Third-Quarter-2024-Financial-Results-Presentation.pdf",
+      "path": "raw/V-fy2024q3.pdf",
+      "sha256": "31f3bcb13717e04dac6cff5346811e126b0f1df795f13c6d4bb45e4ea4405ef7",
+      "status": "downloaded"
+    }
+  ]
+}

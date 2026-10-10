@@ -1,0 +1,72 @@
+{
+  "ticker": "VT",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.0,
+    "explanation": "Global breadth and 0.06% fees support strategic allocation, but the envelope establishes neither an allocation gap nor current NAV premium/discount or tactical valuation advantage. Neutral preserves long-horizon utility rather than implying poor fund quality."
+  },
+  "executive_summary": "VT is an efficient vehicle for long-horizon global equity participation through the FTSE Global All Cap mandate and 0.06% recurring expenses. It reduces dependence on individual-stock selection; fund corporate margins, debt and FCF are inapplicable.\n\nJune weights of 61.9% US,33.3% technology and 21.7% top ten retain correlated drawdown exposure. July portfolio P/E20.8x is not October fair value, and current NAV premium is unavailable. Neutral is a timing assessment: strategic ownership remains credible, but an increase requires allocation need and drawdown capacity outside this envelope.",
+  "bull_case": "Broad developed/emerging-market participation and low fees support disciplined compounding without needing a short-term alpha forecast.",
+  "bear_case": "Correlated equity drawdowns and meaningful US/technology concentration can impair returns; broad holdings do not remove systematic risk.",
+  "key_uncertainties": [
+    "October 6 NAV premium/discount unavailable.",
+    "Investor allocation need and drawdown capacity are outside this research envelope.",
+    "Portfolio metrics are date-specific aggregate holdings measures."
+  ],
+  "catalysts_upcoming": [
+    "Verified current fund NAV/premium disclosure would allow a contemporaneous trading assessment.",
+    "An identified strategic allocation shortfall with adequate drawdown capacity would support an allocation purchase without requiring a breakout."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "No significant market-context flags."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 34.2% over available price history. Projected worst case (2-sigma): ~23.1% from current $160.70.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "VT",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "The bull establishes VT as an efficient strategic ownership vehicle through global breadth and 0.06% expenses, despite quantified US and technology concentration. That wins the allocation-utility argument but does not establish that increasing exposure now has a tactical return advantage. Neutral therefore preserves strategic ownership merit while withholding a timing call that the evidence cannot support.",
+    "winning_side": "bull",
+    "strongest_counterexample": "Broad index participation at very low cost does not need a breakout or near-term alpha to reward a disciplined long-horizon allocation; waiting for a tactical edge can sacrifice market participation.",
+    "invalidation_conditions": [
+      "An issuer expense ratio above the current 0.06%, or a mandate change away from FTSE Global All Cap exposure, would invalidate the demonstrated low-cost global-allocation foundation.",
+      "A verified October premium/discount disclosure and an identified investor allocation shortfall would require reopening the timing/size ruling rather than inferring those facts from July portfolio valuation."
+    ],
+    "evidence_gaps": [
+      "October 6 NAV premium/discount was not retrieved.",
+      "The research envelope does not establish the investor allocation shortfall or drawdown capacity needed to size an increase."
+    ],
+    "decisive_factors": [
+      "June weights of 61.9% US, 33.3% technology and 21.7% top ten retain correlated drawdown risk while preserving genuine breadth.",
+      "July 20.8x portfolio P/E is not October fair value; corporate debt and FCF measures do not apply."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}
+
+synced to Supabase: analysis_runs/52b23fda-6362-4903-a227-4c85b9ca5fda

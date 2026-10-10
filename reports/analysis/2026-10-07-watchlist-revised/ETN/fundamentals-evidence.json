@@ -1,0 +1,66 @@
+{
+  "symbol": "ETN",
+  "as_of": "2026-10-07",
+  "status": "OK",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+  "sources": [
+    {
+      "url": "https://www.eaton.com/cr/en-us/company/news-insights/news-releases/2026/eaton-reports-record-second-quarter-2026-results.html",
+      "publication_date": "2026-07-31",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000030/etn-20260630.htm",
+      "publication_date": "2026-07-31",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    }
+  ],
+  "observed_table_metrics": {
+    "units": "USD million unless stated",
+    "Q2_sales": 8500,
+    "sales_growth_percent": 21,
+    "organic_sales_growth_percent": 14,
+    "electrical_backlog_growth_percent": 43,
+    "segment_margin_percent": 23.1,
+    "segment_margin_YoY_change_bp": -80,
+    "Q2_GAAP_EPS": 2.11,
+    "Q2_adjusted_EPS": 3.15,
+    "EPS_intangible_amortization_adjustment": 0.5,
+    "EPS_acquisition_divestiture_adjustment": 0.49,
+    "EPS_restructuring_adjustment": 0.05,
+    "cash": 483,
+    "short_investments": 212,
+    "short_debt": 2091,
+    "current_long_term_debt": 11,
+    "long_term_debt": 18509,
+    "prior_total_debt": 9895,
+    "H1_CFO": 1634,
+    "prior_H1_CFO": 1156,
+    "H1_capex": 446,
+    "prior_H1_capex": 349,
+    "H1_acquisition_cash": 11079,
+    "new_long_term_bond_issuance": 8500,
+    "undrawn_revolver": 4000,
+    "commercial_paper_in_short_debt": 2088,
+    "FY_adjusted_EPS_guidance": [
+      13.4,
+      13.6
+    ],
+    "FY_GAAP_EPS_guidance": [
+      10.36,
+      10.56
+    ]
+  },
+  "derived_math": {
+    "total_debt": "2091+11+18509=20611",
+    "net_debt": "20611-483-212=19916",
+    "H1_FCF": "1634-446=1188; prior1156-349=807"
+  },
+  "residual_limitations": [
+    "Acquisition cash is separate investing expenditure, not capex or recurring FCF.",
+    "Undrawn revolver supports commercial paper; not double-counted as unrestricted cash."
+  ]
+}

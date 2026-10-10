@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "5258",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/5258/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 0,
+    "buy": 1,
+    "hold": 7,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://www.klsescreener.com/v2/announcements/view/11654065",
+      "date": "2026-08-26",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "source_type": "issuer_authored_exchange_disclosure_mirror",
+      "observed_facts": [
+        "Q2 attributable profit RM139.122m versus RM126.685m; H1 RM254.154m versus RM252.950m (+0.5%).",
+        "Corporate profit margins and FCF are unsuitable bank operating comparators; latest net financing margin not verified from primary supplement.",
+        "NAV/share RM3.59 versus RM3.56; latest CET1, liquidity and impaired-financing ratios not independently verified from accessible primary supplement."
+      ],
+      "limitations": [
+        "Issuer-authored Bursa summary accessible through a third-party mirror; original Bursa attachment and issuer detailed supplement blocked. Media/broker capital metrics were not promoted to verified primary facts."
+      ],
+      "verification": "Primary facts cross-checked against current-run fundamentals evidence; scanned reports visually verified by fundamentals role. Signals independently assessed."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction",
+    "Issuer-authored Bursa summary accessible through a third-party mirror; original Bursa attachment and issuer detailed supplement blocked. Media/broker capital metrics were not promoted to verified primary facts."
+  ],
+  "primary_fact_crosscheck_path": "5258/fundamentals-evidence.json"
+}

@@ -1,0 +1,66 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Refreshed vendor snapshot trailing P/E 11.51x, forward P/E 10.68x. Vendor earnings basis is not independently matched; no sector average or fair value inferred.",
+    "margin_analysis": "Bank revenue declined to RM16.078bn from RM17.079bn; nonfinancial corporate margins are not the appropriate bank comparator.",
+    "debt_analysis": "Issuer quarter summary NAV/share RM7.6927; CET1 and asset quality require full bank supplement.",
+    "growth_outlook": "Q2 attributable profit RM2.690bn vs RM2.628bn; H1 RM5.171bn vs RM5.217bn.",
+    "key_risks": [
+      "H1 profit has not grown; credit and funding-cost risks remain.",
+      "Snapshot financial statements lack fiscal_period_end/available_as_of and are not dated trend evidence."
+    ],
+    "key_strengths": [
+      "Quarterly attributable earnings improved and interim dividend is 31 sen."
+    ],
+    "summary": "MAYBANK: Quarterly attributable earnings improved and interim dividend is 31 sen. Fundamental view is neutral with medium confidence; H1 profit has not grown; credit and funding-cost risks remain."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Maybank reports second-quarter attributable profit of RM2.690 billion versus RM2.628 billion a year earlier and a 31 sen dividend versus 30 sen. Half-year attributable profit declined to RM5.171 billion from RM5.217 billion; revenue declined, limiting a bullish growth interpretation. Yahoo recommendations fetched 2026-10-07T11:50:26.588421, period 0m: strong buy 2, buy 7, hold 8, sell 0, strong sell 1. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Quarterly profit stability",
+      "Half-year earnings pressure"
+    ],
+    "notable_headlines": [
+      "2026-08-27 | issuer/issuer-hosted evidence | Maybank reports second-quarter attributable profit of RM2.690 billion versus RM2.628 billion a year earlier and a 31 sen dividend versus 30 sen. | https://maybank.listedcompany.com/news.html/id/2625840"
+    ],
+    "social_sentiment": null,
+    "summary": "Maybank reports second-quarter attributable profit of RM2.690 billion versus RM2.628 billion a year earlier and a 31 sen dividend versus 30 sen. Half-year attributable profit declined to RM5.171 billion from RM5.217 billion; revenue declined, limiting a bullish growth interpretation."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 9.9700, price is below by 2.71% versus SMA-50 10.2475 and below by 6.05% versus SMA-200 10.6120. Observed 5/20/60-bar returns are -0.20%/-2.88%/-6.08%. ATR-14 is 0.1212; Bollinger lower/middle/upper are 9.9183/10.0843/10.2502, with band position 0.1557. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 40.4145,
+    "rsi_assessment": "RSI-14 is 40.4145, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -0.0752, signal line -0.0706, histogram -0.0046: negative short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 14,997,500 versus 20-bar average 11,925,215, ratio 1.2576. Above-average turnover provides some participation confirmation, not proof of institutional buying or selling. Price is 14.89% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      9.91
+    ],
+    "resistance_levels": [
+      10.3,
+      11.0421
+    ],
+    "summary": "Price remains below both major averages with negative MACD momentum and weak 20- and 60-bar returns. Above-average volume accompanies a close near the recent low, while RSI around 40 supplies no confirmed reversal."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "sector_macro_factors": [
+      "Observed: BNM held OPR at 2.75% and describes sustained domestic demand. Inference: loan demand and credit quality have a supportive broad backdrop.",
+      "Inference: unchanged policy does not establish wider bank net-interest margins; deposit competition, asset repricing and regional mix can offset each other."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Maybank benefits from resilient domestic activity, but the rate evidence does not prove a net-interest-margin uplift. Regional FX exposure and credit repricing make a neutral macro signal appropriate."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "research_only_post_hoc_on_previously_observed_outcomes",
+  "input_hashes": {
+    "2026-10-08-ft-backtest/pipeline-10bps.json": "5aef7e3065421d4892303fce6508508d8969ed091c80698d9314fbae703852cd",
+    "2026-10-08-ft-backtest/pipeline-20bps.json": "40929e08a837d4fc1972f990a9c856e0fe53c3dabfe93530546b499766a03298",
+    "2026-10-07-pipeline-backtest/session/predictions.json": "9b2a7da06be7c71b5289f504716062be437fe8415d25a88289612a6c06af5d5d",
+    "2026-10-07-pipeline-backtest/seal.json": "590c6402df3b4ee2f9bd6f14f6eedee9bf9be0409577dcb99767a154b7b0a6a4"
+  },
+  "script_sha256": "f3a86b4672b27e12cfde211683fb4ad267e463a2f96182e26e50a66ad60d67c8",
+  "arms": [
+    "ft_weighted",
+    "ft_agreement"
+  ],
+  "weights": {
+    "high": 1.0,
+    "medium": 0.75,
+    "low": 0.5
+  },
+  "rule": "Two-role confidence-weighted signed direction; neutral remains in denominator; reuse is_actionable consensus magnitude >0.30 and convergence >=0.40. Agreement additionally requires both directions equal and nonzero. No synthesized conviction or debate in FT arms.",
+  "missing_evidence": "neutral/low; all 96 trials retained",
+  "costs_bps_per_side": [
+    0,
+    10,
+    20
+  ],
+  "portfolio": "long-only, 10% of pre-session cash per signal; equal capped same-day sizing; next-session open, fixed 30-calendar-day close exit; idle cash earns zero in primary return",
+  "dsr_count": 11,
+  "limitations": [
+    "Existing sample and outcomes already inspected; this rule freeze is not prospective validation.",
+    "No fresh model/provider calls; sealed analyst forecasts reused.",
+    "55/96 historical fundamental packets; no historical sentiment; only one-rate macro snapshots.",
+    "Current-provider financials may be restated; survivor-selected 8-name basket; unknown model historical contamination.",
+    "Assumed costs, unverified terminal/distribution completeness; no production limit/stop execution replay.",
+    "DSR covers all 11 rows in this comparison, not all historical experiments."
+  ]
+}

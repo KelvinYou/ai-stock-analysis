@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "NFLX",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/NFLX/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 7,
+    "buy": 28,
+    "hold": 15,
+    "sell": 1,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://s22.q4cdn.com/959853165/files/doc_financials/2026/q2/FINAL-Q2-26-Shareholder-Letter.pdf",
+      "date": "2026-07-16",
+      "observed_facts": "Netflix shareholder letter reports second-quarter revenue growth of 13% to $12.6 billion, operating margin of 33% and results in line with guidance.",
+      "negative_evidence_or_limitations": "Full-year operating margin forecast remains 31.5%; performance in line with existing guidance is not a new upside surprise."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

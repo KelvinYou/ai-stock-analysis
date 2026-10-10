@@ -1,0 +1,154 @@
+{
+  "symbol": "4197",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "611785014922ef0094d0ccc7bf3b8d87b9214af3ea9d804c2d0fc05c5663d6eb",
+    "price_history.csv": "46eb543e66b311a4ee3b0274699ba39121a53751244d88a4a5e65ecb24e99453",
+    "indicators.json": "cf1ee2bead76214e81a13de305279858623abe8af1bcc3b9437b05b42c531b06",
+    "fundamentals.json": "5ab03d63710814014a0aef65a9a6bef6336c0368b67ce75277d4cb6895171697"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "4197",
+      "name": "SIME",
+      "analysis_date": "2026-10-07",
+      "market_snapshot_date": "2026-10-06",
+      "method": "Independent in-session fundamentals analyst applying exact stored prompt; primary full statements expanded and return thesis assessed against valuation and material risks. No signal quota.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/4197/fundamentals.json",
+      "snapshot_valuation": {
+        "market_cap": 16970838016.0,
+        "pe_ratio": 9.576923,
+        "forward_pe": 10.2523985,
+        "dividend_yield": 5.62
+      },
+      "sources": [
+        {
+          "title": "SIME latest observed issuer financial/fund disclosure",
+          "url": "https://www.sime.com/investor-relations/financial-result/12893/",
+          "publication_date": "2026-08-27",
+          "reporting_period": "FY2026 ended 2026-06-30",
+          "observed_facts": [
+            "FY26 revenue RM69.5bn; net profit RM1.76bn. No prior-year comparison observed here.",
+            "Net-profit/revenue ratio approximately 2.53%, derived from rounded issuer headline figures."
+          ],
+          "limitations": []
+        },
+        {
+          "url": "https://www.sime.com/wp-content/uploads/2026/08/QR-Q4FY26-BOD.pdf",
+          "reporting_period": "FY2026 ended2026-06-30",
+          "publication_date": "2026-08-27",
+          "source_type": "issuer_primary",
+          "observed_facts": [
+            "Borrowings3679m+2706m vs4891m+2231m; cash/deposits2794m; leases1758m+411m; perpetualsukuk1181m.",
+            "CFO3511m; cash fixedassets1085m; financecost371m; lease608m; shareholderdividend886m/NCI438m/sukuk70m.",
+            "Reported ownersprofit1762mvs2061m; MVV disposal gains434mvs901m; BoardFY27coreperformanceconsistentwithFY26."
+          ],
+          "limitations": []
+        }
+      ],
+      "observed_additional_facts": [
+        "Issuer release https://www.sime.com/media/news-release/2026/08/sime-reports-higher-core-net-profit-of-rm1-55-billion-for-fy2026/ retrieved via curl: coreprofit1.55bn+32.6%;coreROE8%vs6.2%;FY26declareddividend14sen."
+      ],
+      "derived_math": [
+        "Borrowings3679+2706=6385m;netdebt excludingleases6385-2794=3591m.",
+        "FCF3511-1085=2426m;afterfinance/lease2426-371-608=1447m;afteralldistributions1447-886-438-70=53m."
+      ],
+      "gaps": [],
+      "interpretation": "Report interpretations and outlook are analyst inference except explicitly identified management targets; targets are not guarantees.",
+      "judgement": {
+        "signal": "buy",
+        "confidence": "medium"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "4197",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/4197/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 2,
+        "buy": 8,
+        "hold": 6,
+        "sell": 0,
+        "strongSell": 0
+      },
+      "sources": [
+        {
+          "url": "https://www.sime.com/investor-relations/investor-centre/",
+          "date": "2026-08-27",
+          "observed_facts": "Sime investor centre records FY2026 revenue of RM69.5 billion and net profit of RM1.76 billion; its dated release headline reports higher core profit of RM1.55 billion.",
+          "negative_evidence_or_limitations": "Headline-level evidence only; segment drivers and negative earnings evidence were not fully retrieved."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "90b8b4928cfa35107849cbf32258ce3330db3fb1ec7eed2242bd4fdd7d29b1a4",
+    "sentiment": "4934b2750315ff539806043a26e52440e0226887bdd3c1f7d241bc67c0f145a0",
+    "technical": "72d4424b162c8b352975b3aa3d5cdb497256d6e52a1ca42365bfab12f78b8f67",
+    "macro": "86a021b79df039d6f6ab711de3f2c56cdf2f6236e67b708cb92368fa0fbeab06"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

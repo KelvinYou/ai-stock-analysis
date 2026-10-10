@@ -1,0 +1,58 @@
+{
+  "symbol": "UNH",
+  "as_of": "2026-10-07",
+  "status": "OK",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+  "sources": [
+    {
+      "url": "https://www.unitedhealthgroup.com/newsroom/2026/2026-07-16-uhg-reports-second-quarter-2026-results.html",
+      "publication_date": "2026-07-16",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000197/unh-20260630.htm",
+      "publication_date": "2026-08-10",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "source_type": "primary issuer disclosure"
+    }
+  ],
+  "observed_table_metrics": {
+    "units": "USD million unless stated",
+    "Q2_revenue": 112000,
+    "Q2_operating_income": 8000,
+    "Q2_medical_care_ratio_percent": 86.7,
+    "prior_Q2_medical_care_ratio_percent": 89.4,
+    "H1_medical_care_ratio_percent": 85.3,
+    "prior_H1_medical_care_ratio_percent": 87.1,
+    "Q2_operating_margin_percent": 7.1,
+    "prior_Q2_operating_margin_percent": 4.6,
+    "H1_CFO": 19964,
+    "prior_H1_CFO": 12644,
+    "H1_capex": 1562,
+    "prior_H1_capex": 1784,
+    "cash": 28585,
+    "short_investments": 2883,
+    "current_debt": 3827,
+    "long_term_debt": 69501,
+    "prior_total_debt": 78389,
+    "H1_net_debt_repayments": 4813,
+    "Q2_Optum_Rx_scripts_million": 387,
+    "prior_Q2_Optum_Rx_scripts_million": 414,
+    "FY_adjusted_EPS_guidance": [
+      19.5,
+      20.0
+    ],
+    "Q2_loss_contract_reserve_release": 50,
+    "H1_loss_contract_reserve_release": 187
+  },
+  "derived_math": {
+    "net_debt_before_regulated_cash_constraints": "3827+69501-28585-2883=41860",
+    "H1_CFO_less_capex": "19964-1562=18402; prior12644-1784=10860; not an unrestricted insurer distributable-cash measure"
+  },
+  "residual_limitations": [
+    "Regulated subsidiaries prevent treating consolidated cash as freely available holding-company liquidity.",
+    "Working capital and medical payables affect insurer CFO."
+  ]
+}

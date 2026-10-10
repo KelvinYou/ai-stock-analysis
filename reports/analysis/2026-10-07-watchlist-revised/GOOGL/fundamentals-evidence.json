@@ -1,0 +1,70 @@
+{
+  "symbol": "GOOGL",
+  "analysis_date": "2026-10-07",
+  "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "sources": [
+    {
+      "title": "Alphabet Inc. latest observed issuer financial/fund disclosure",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+      "publication_date": "2026-07-22",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "sections_reviewed": [
+        "Income statement",
+        "Balance sheet",
+        "Cash-flow statement",
+        "GAAP/non-GAAP reconciliation where present"
+      ]
+    }
+  ],
+  "observed_facts": {
+    "Q2_USD_bn": {
+      "revenue": 119.796,
+      "operating_income": 40.77,
+      "other_income": 97.983,
+      "CFO": 39.069,
+      "PPandE": 44.924,
+      "FCF": -5.855,
+      "Cloud_revenue": 24.768,
+      "Cloud_operating_income": 8.814
+    },
+    "H1_USD_bn": {
+      "CFO": 84.859,
+      "PPandE": 80.598
+    },
+    "TTM_USD_bn": {
+      "CFO": 185.675,
+      "PPandE": 132.402,
+      "FCF": 53.273
+    },
+    "June30_USD_bn": {
+      "cash": 55.911,
+      "marketable_securities": 186.563,
+      "long_debt": 98.165,
+      "operating_lease_liabilities": 14.591
+    },
+    "Q2_equity_capital_raise_USD_bn": 49.6
+  },
+  "derived_calculations": [
+    "Q2FCF=39.069-44.924=-5.855; H1=84.859-80.598=4.261; TTM=185.675-132.402=53.273 ($bn), periods not interchangeable.",
+    "Operating margin=40.770/119.796=34.03%; liquid assets less disclosed long-term debt=144.309 ($bn), not an all-in net-debt calculation."
+  ],
+  "frozen_valuation_inputs": {
+    "price_date": "2026-10-06",
+    "close": 347.68,
+    "vendor_pe": 17.383999,
+    "vendor_forward_pe": 23.068644,
+    "market_cap": 4252103868416.0,
+    "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/GOOGL/fundamentals.json"
+  },
+  "remaining_gaps": [
+    "Recurring TTM EPS after every investment/tax item is not supplied by the release; no fabricated normalised EPS.",
+    "Current debt embedded in other current liabilities is not separately disaggregated in release; long-term-debt comparison explicitly partial."
+  ],
+  "materiality_and_revision_reason": "Buy retained with stronger measured financial evidence, while previous trailing-P/E cheapness is explicitly rejected. Substantive growth/profitability offset capex pressure and dilution; future return remains conditional.",
+  "previous_role_signal": "buy",
+  "judgement": {
+    "signal": "buy",
+    "confidence": "medium"
+  }
+}

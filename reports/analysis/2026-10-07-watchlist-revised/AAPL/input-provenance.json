@@ -1,0 +1,173 @@
+{
+  "symbol": "AAPL",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "05067e27f560a0d7d6f6fc5da094380c7dc5acca72eb946e5b0aa4b179e49d51",
+    "price_history.csv": "cdc46add861b7c4dc4a391cd5abf1cd042ae146e0902712a9bad3fc3346bda76",
+    "indicators.json": "d2e02264c2e3d898d1d6213148fd0ef5849b9c2c799784116f64e7c2afbd9f03",
+    "fundamentals.json": "080275d45c3dbae77ad6875a48ac84c17d7d79bddd7e44df19ee967897c203c4"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "AAPL",
+      "analysis_date": "2026-10-07",
+      "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "sources": [
+        {
+          "title": "Apple Q3 FY2026 results",
+          "url": "https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/",
+          "publication_date": "2026-07-30",
+          "reporting_period": "Q3 ended2026-06-27",
+          "sections_reviewed": [
+            "Revenue/EPS and tariff commentary"
+          ]
+        },
+        {
+          "title": "Apple consolidated financial statements Q3 FY2026",
+          "url": "https://www.apple.com/newsroom/pdfs/fy2026q3/FY26_Q3_Consolidated_Financial_Statements.pdf",
+          "publication_date": "2026-07-30",
+          "reporting_period": "Q3/9M ended2026-06-27; balance June27",
+          "sections_reviewed": [
+            "All3pages: income/balance/cash"
+          ]
+        }
+      ],
+      "observed_facts": {
+        "Q3_USD_bn": {
+          "revenue": 109.417,
+          "operating_income": 35.695,
+          "prior_operating_income": 28.202,
+          "net_income": 29.789
+        },
+        "9M_USD_bn": {
+          "CFO": 116.996,
+          "PPandE": 6.799,
+          "prior_CFO": 81.754,
+          "prior_PPandE": 9.473
+        },
+        "June27_USD_bn": {
+          "cash": 39.544,
+          "current_securities": 22.855,
+          "noncurrent_securities": 84.118,
+          "commercial_paper": 1.997,
+          "current_term_debt": 11.007,
+          "noncurrent_term_debt": 71.34
+        },
+        "Q3_EPS": 2.02,
+        "tariff_EPS_benefit": 0.11
+      },
+      "derived_calculations": [
+        "9M FCF=116.996-6.799=110.197 versus81.754-9.473=72.281 ($bn).",
+        "Debt=1.997+11.007+71.340=84.344; liquid assets=39.544+22.855+84.118=146.517; surplus62.173 ($bn), excluding leases.",
+        "Operating margin35.695/109.417=32.62%; operating income growth26.57%; Q3EPS normalised2.02-0.11=1.91."
+      ],
+      "frozen_valuation_inputs": {
+        "price_date": "2026-10-06",
+        "close": 333.63,
+        "vendor_pe": 38.17277,
+        "vendor_forward_pe": 34.81532,
+        "market_cap": 4869056364544.0,
+        "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/AAPL/fundamentals.json"
+      },
+      "remaining_gaps": [
+        "No annualised FCF or TTM tariff adjustment inferred from nine-month cash and one-quarter EPS."
+      ],
+      "materiality_and_revision_reason": "Neutral retained for demanding valuation, not unextracted financial tables. Measured cash growth strongly supports quality but does not by itself establish sufficient upside at38x.",
+      "previous_role_signal": "neutral",
+      "judgement": {
+        "signal": "neutral",
+        "confidence": "medium"
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "AAPL",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/AAPL/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 6,
+        "buy": 19,
+        "hold": 13,
+        "sell": 3,
+        "strongSell": 3
+      },
+      "sources": [
+        {
+          "url": "https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/",
+          "date": "2026-07-30",
+          "observed_facts": "Apple reports fiscal third-quarter revenue growth of 16% and EPS growth of 29%, with June-quarter records for iPhone, Mac and services.",
+          "negative_evidence_or_limitations": "Gross margin includes roughly two percentage points of tariff refunds and EPS a $0.11 benefit; these effects should not be extrapolated."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "19fc0dc4e515e944979a37513deeff811c711c2bc5c082d1f2c0579024f77833",
+    "sentiment": "8b58ceb2b8c3525cde31753b6fdfd929fb209634ae62d9ba117742c27c7ac5f2",
+    "technical": "abbdcf55828bcc8771678715b9cd44deb81fa73b8652674320e1f3cbb4357a96",
+    "macro": "e0eba16c2986a4aa8c6ddf85e6611b46cc7d2c42ca55197ed99ab888fe0f4673"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "5126",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/5126/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 0,
+    "buy": 2,
+    "hold": 2,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://www.klsescreener.com/v2/announcements/view/11657125",
+      "date": "2026-08-28",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "source_type": "issuer_authored_exchange_disclosure_mirror",
+      "observed_facts": [
+        "Q2 revenue RM1.458bn versus RM1.307bn; owners profit RM153.686m versus RM91.917m (+67.2%). H1 owners profit increased only 6%.",
+        "Derived Q2 owners-profit/revenue ratio 10.54% versus 7.03%; H1 ratio 7.51%, so quarterly recovery should not be extrapolated.",
+        "NAV/share RM4.75 versus RM4.60; latest borrowings and FCF not independently extracted."
+      ],
+      "limitations": [
+        "Issuer-authored Bursa financial summary accessed through third-party mirror; issuer IR points to Bursa but original PDF is blocked. Latest primary balance-sheet/cash-flow details unavailable; no media causal claims used as verified facts."
+      ],
+      "verification": "Primary facts cross-checked against current-run fundamentals evidence; scanned reports visually verified by fundamentals role. Signals independently assessed."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction",
+    "Issuer-authored Bursa financial summary accessed through third-party mirror; issuer IR points to Bursa but original PDF is blocked. Latest primary balance-sheet/cash-flow details unavailable; no media causal claims used as verified facts."
+  ],
+  "primary_fact_crosscheck_path": "5126/fundamentals-evidence.json"
+}

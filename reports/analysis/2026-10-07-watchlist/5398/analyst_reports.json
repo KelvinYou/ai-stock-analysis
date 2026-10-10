@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Refreshed vendor snapshot trailing P/E 29.35x, forward P/E 16.57x. Vendor earnings basis is not independently matched; no sector average or fair value inferred.",
+    "margin_analysis": "PBT RM497.033m; a consolidated margin cannot be matched to revenue including JV share.",
+    "debt_analysis": "Debt and cash conversion require the full FY26 filing; undated snapshot is insufficient.",
+    "growth_outlook": "Q4 revenue including JV share RM5.827bn; attributable profit RM349.701m. No YoY trend inferred from this page.",
+    "key_risks": [
+      "Overseas project execution and working-capital risks; valuation needs normalised earnings.",
+      "Snapshot financial statements lack fiscal_period_end/available_as_of and are not dated trend evidence."
+    ],
+    "key_strengths": [
+      "Latest FY26 quarter is profitable."
+    ],
+    "summary": "GAMUDA: Latest FY26 quarter is profitable. Fundamental view is neutral with low confidence; Overseas project execution and working-capital risks; valuation needs normalised earnings."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Gamuda reports full-year profit growth of 5%, revenue growth of 14% and RM61 billion construction orderbook. Net gearing reached 72%, above its 70% internal limit; quarterly property profit fell 41%. Yahoo recommendations fetched 2026-10-07T11:50:26.368317, period 0m: strong buy 2, buy 15, hold 2, sell 0, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Data-center construction",
+      "Record orderbook",
+      "Gearing and property conversion"
+    ],
+    "notable_headlines": [
+      "2026-09-29 | issuer/issuer-hosted evidence | Gamuda reports full-year profit growth of 5%, revenue growth of 14% and RM61 billion construction orderbook. | https://gamuda.com/2026/09/gamuda-records-49-surge-in-full-year-domestic-construction-earnings/press-releases/"
+    ],
+    "social_sentiment": null,
+    "summary": "Gamuda reports full-year profit growth of 5%, revenue growth of 14% and RM61 billion construction orderbook. Net gearing reached 72%, above its 70% internal limit; quarterly property profit fell 41%."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 5.0000, price is above by 8.43% versus SMA-50 4.6112 and above by 14.6% versus SMA-200 4.3631. Observed 5/20/60-bar returns are 0.40%/8.93%/21.90%. ATR-14 is 0.1271; Bollinger lower/middle/upper are 4.6450/4.8990/5.1530, with band position 0.6988. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 66.2338,
+    "rsi_assessment": "RSI-14 is 66.2338, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line 0.1302, signal line 0.1271, histogram 0.0031: positive short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 17,113,400 versus 20-bar average 25,857,455, ratio 0.6618. Below-average turnover supplies no strong participation confirmation. Price is 7.40% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      4.0621,
+      4.58
+    ],
+    "resistance_levels": [
+      5.28
+    ],
+    "summary": "Price is above both major averages and 20- and 60-bar returns support an uptrend, with positive MACD and RSI below the overbought threshold. The small histogram and below-average volume temper confidence in a new breakout near recent resistance."
+  },
+  "macro": {
+    "signal": "buy",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "sector_macro_factors": [
+      "Observed: BNM reports ongoing Malaysian investment and sustained domestic activity. Inference: this supports the construction demand backdrop and stable OPR helps funding continuity.",
+      "Inference: elevated commodity input costs can compress fixed-price project margins; supportive aggregate investment does not prove Gamuda-specific awards."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "Gamuda receives a positive inferred demand backdrop from ongoing investment and stable domestic policy. Construction input costs and project financing remain material offsets, so confidence is medium."
+  },
+  "pipeline_mode": "in-session"
+}

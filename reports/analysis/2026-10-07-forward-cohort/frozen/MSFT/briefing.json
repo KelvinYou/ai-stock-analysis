@@ -1,0 +1,67 @@
+{
+  "ticker": "MSFT",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "overall_signal": "buy",
+  "conviction": {
+    "score": 0.43,
+    "signal_convergence": 0.5,
+    "explanation": "21% operating-income and 22% adjusted-EPS growth, rising CFO and $66.987bn annual cash FCF support funded compounding at 30.63x adjusted FY earnings. Falling FCF, capital intensity and overbought extension constrain the positive conviction despite strong funding."
+  },
+  "executive_summary": "Microsoft supports patient ownership through funded operating growth: FY operating income rose 21% and adjusted EPS 22%, while CFO increased to $182.935bn. Annual cash FCF remained $66.987bn after $115.948bn cash PP&E, with liquid assets exceeding stated debt by $36.549bn before leases.\n\nThe 30.63x OpenAI-adjusted FY multiple requires durable compounding. Capex nearly doubled and FCF fell 6.5%, while noncash equipment and lease burdens sit beyond the cash measure. Azure growth is substantive demand evidence, but overbought price extension and declining cloud gross margin argue for deliberate additions.",
+  "bull_case": "Growing profitable cloud activity and strong internal funding can earn the premium while continuing investment and shareholder returns.",
+  "bear_case": "Infrastructure costs can outpace incremental returns, weakening owner cash and compressing the multiple even while earnings grow.",
+  "key_uncertainties": [
+    "Returns on incremental cloud capacity and future capital intensity.",
+    "Full lease and noncash-equipment commitments beyond cash-PP&E FCF.",
+    "Persistence of adjusted earnings growth at the current valuation."
+  ],
+  "catalysts_upcoming": [
+    "Next cloud results: sustained operating growth with improved gross-margin or cash conversion would strengthen the thesis.",
+    "Comparable cash-flow and lease disclosures showing investment demands stabilize relative to CFO would support owner returns."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 37.1% over available price history. Projected worst case (2-sigma): ~79.7% from current $529.30.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": 504.71,
+    "entry_rationale": "Buy-the-dip to SMA-20 support near $504.71",
+    "stop_loss": 480.29,
+    "stop_rationale": "2x ATR-14 ($12.21) below entry \u2014 invalidates the setup",
+    "take_profit_1": 549.2,
+    "take_profit_2": 608.69,
+    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "MSFT",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "Microsoft supports a funded-compounding purchase: operating income grew 21%, adjusted EPS 22%, and annual cash FCF remained $66.987bn despite nearly doubled capex. Rising CFO and a $36.549bn liquid surplus excluding leases give the bull measured financing and growth support at 30.63x OpenAI-adjusted FY earnings. The 6.5% FCF decline and premium valuation constrain conviction, but imperfect conversion does not outweigh the large positive cash engine.",
+    "winning_side": "bull",
+    "strongest_counterexample": "Cash FCF declined while earnings grew, and its cash-PP&E definition excludes noncash equipment and some lease demands; poor incremental cloud returns could compress the premium despite accounting growth.",
+    "invalidation_conditions": [
+      "Next comparable annual cash FCF below $66.987bn alongside no year-on-year operating-income growth would undermine the funded-compounding basis.",
+      "A comparable year with cash PP&E exceeding CFO, from $115.948bn versus $182.935bn, would invalidate the positive cash-funding foundation."
+    ],
+    "evidence_gaps": [],
+    "decisive_factors": [
+      "CFO increased from $136.162bn to $182.935bn, establishing actual internal funding growth.",
+      "Adjusted EPS basis avoids investment-gain cheapness; technical extension argues for deliberate timing."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "buy",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

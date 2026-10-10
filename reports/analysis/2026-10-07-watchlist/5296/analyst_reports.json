@@ -1,0 +1,66 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Refreshed vendor snapshot trailing P/E 17.71x, forward P/E 16.32x. Vendor earnings basis is not independently matched; no sector average or fair value inferred.",
+    "margin_analysis": "Derived attributable-profit/revenue ratio 10.69%, vs13.06%; earnings lag revenue.",
+    "debt_analysis": "NAV/share RM0.1932 versus RM0.2128 year-end; current debt and FCF not extracted.",
+    "growth_outlook": "Q2 revenue RM1.257bn vs RM1.214bn; attributable profit RM134.406m vs RM158.581m.",
+    "key_risks": [
+      "Quarterly profit deterioration and lower equity/share offset revenue expansion.",
+      "Snapshot financial statements lack fiscal_period_end/available_as_of and are not dated trend evidence."
+    ],
+    "key_strengths": [
+      "H1 remains profitable at RM326.426m; interim quarterly dividend3.3sen."
+    ],
+    "summary": "MRDIY: H1 remains profitable at RM326.426m; interim quarterly dividend3.3sen. Fundamental view is neutral with medium confidence; Quarterly profit deterioration and lower equity/share offset revenue expansion."
+  },
+  "sentiment": {
+    "signal": "sell",
+    "confidence": "medium",
+    "news_tone": "negative",
+    "news_summary": "MR DIY second-quarter revenue rose from RM1.214 billion to RM1.257 billion, but attributable profit fell from RM158.581 million to RM134.406 million. Current-month analyst buy lean is contrarian to the reported profit decline; no verified price-response evidence. Yahoo recommendations fetched 2026-10-07T11:50:27.613842, period 0m: strong buy 2, buy 11, hold 2, sell 0, strong sell 1. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "key_themes": [
+      "Profit pressure",
+      "Sales growth without earnings growth"
+    ],
+    "notable_headlines": [
+      "2026-08-11 | issuer/issuer-hosted evidence | MR DIY second-quarter revenue rose from RM1.214 billion to RM1.257 billion, but attributable profit fell from RM158.581 million to RM134.406 million. | https://corporate.mrdiy.com/news.html/id/2623004"
+    ],
+    "social_sentiment": null,
+    "summary": "MR DIY second-quarter revenue rose from RM1.214 billion to RM1.257 billion, but attributable profit fell from RM158.581 million to RM134.406 million. Current-month analyst buy lean is contrarian to the reported profit decline; no verified price-response evidence."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 1.2500, price is below by 10.9% versus SMA-50 1.4029 and below by 19.83% versus SMA-200 1.5591. Observed 5/20/60-bar returns are -2.34%/-8.76%/-25.83%. ATR-14 is 0.0329; Bollinger lower/middle/upper are 1.2320/1.2895/1.3470, with band position 0.1564. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 42.8571,
+    "rsi_assessment": "RSI-14 is 42.8571, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -0.0393, signal line -0.0431, histogram 0.0037: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
+    "volume_assessment": "Last completed-session volume 4,557,000 versus 20-bar average 10,226,405, ratio 0.4456. Below-average turnover supplies no strong participation confirmation. Price is 32.12% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      1.24
+    ],
+    "resistance_levels": [
+      1.39,
+      1.7051
+    ],
+    "summary": "Price remains materially below SMA-50 and SMA-200 and just above the 52-week low following a steep 60-bar decline. A small positive MACD histogram reflects slowing downside momentum, not a confirmed reversal, especially with weak participation."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "sector_macro_factors": [
+      "Observed: BNM describes sustained domestic demand and contained domestic consumer-price pass-through. Inference: these support retail spending, including value-oriented purchases.",
+      "Inference: imported merchandise, freight and household discretionary budgets remain sensitive to global cost pressure; no net FX margin benefit is established."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "MR D.I.Y. has supportive Malaysian consumption conditions, balanced by merchandise and logistics cost exposure. The macro layer remains neutral because these conditions do not quantify company-specific sales or margins."
+  },
+  "pipeline_mode": "in-session"
+}

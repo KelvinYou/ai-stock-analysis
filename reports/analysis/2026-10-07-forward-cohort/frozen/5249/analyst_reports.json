@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "medium",
+    "pe_assessment": "Frozen October 6 snapshot: trailing P/E 8.54 x, forward P/E 17.71 x (vendor estimate), dividend yield 2.38% (vendor reported). Inference:forward estimate 17.71 x and noncash profits undermine apparent 8.54 x bargain; no peer NAV discount invented.",
+    "margin_analysis": "FYowners profit RM2.154 bn vs 1.064 bn; PBT2.647 bn includes investment property fair value gain 855.177 m and JV remeasurement 502.789 m. These combined noncash gains are 51.31% of PBT, so lowreportedP/E does not establish cheap recurring earnings.",
+    "debt_analysis": "Borrowings RM25.353 bn vs 19.590 bn, cash/deposits 3.535 bn:netdebt 21.818 bn beforeleases. CFO2.391 bn increased, but investing outflow 3.340 bn includes JV acquisition 2.379 bn and asset acquisition deposits 388.843 m; net borrowing drawdowns 3.258 bn financed expansion. CFOlessPP&E/investment property/development land outlays 1.780 bn before acquisitions andinterest.",
+    "growth_outlook": "Inference: property operations and acquisitions can growincome, but 8.54 x trailing vs 17.71 x estimated forwardP/E highlights nonrecurring reported earnings. Borrowings growth and cash required for expansion outweigh headline profit doubling for prospective returns.",
+    "key_risks": [
+      "Borrowings rose 29.4% derived; highabsolute netdebt and financing dependence.",
+      "Reported profit dominated by material fair value/remeasurement effects; property collection andlease-up execution."
+    ],
+    "key_strengths": [
+      "CFO rose RM1.060 bn\u21922.391 bn.",
+      "Growing revenue and operating assets provide potential recurring earnings."
+    ],
+    "summary": "IOI Properties\u2019 reported lowP/E is weakened by material noncash gains and rising net debt. Sell/medium reflects financing andearnings-quality risk at the frozen valuation, while recognizing improved operating cash generation."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "IOIPG direct issuer FY2026 report released August 27 confirms annual revenue of RM4.444 billion and attributable earnings of RM2.154 billion, alongside a Q4 earnings decline. Full-year profits include RM855.177 million fair-value and RM502.789 million remeasurement gains, and borrowings increased; recurring operating sentiment is weaker than headline annual growth.",
+    "key_themes": [
+      "Property investment growth",
+      "Revaluation gains",
+      "Debt and quarterly comparability"
+    ],
+    "notable_headlines": [
+      "2026-08-27 | direct_issuer_document | IOIPG direct issuer FY2026 report released August 27 confirms annual revenue of RM4.444 billion and attributable earnings of RM2.154 billion, alongside a Q4 earnings decline. | https://files.ioiproperties.com.my/dsites/s3fs-public/financial-results/files/IOIPGB%204Q%20FY2026.pdf"
+    ],
+    "social_sentiment": null,
+    "summary": "IOIPG direct issuer FY2026 report released August 27 confirms annual revenue of RM4.444 billion and attributable earnings of RM2.154 billion, alongside a Q4 earnings decline. Full-year profits include RM855.177 million fair-value and RM502.789 million remeasurement gains, and borrowings increased; recurring operating sentiment is weaker than headline annual growth."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "As of 2026-10-06 close 3.3200, price is below by 9.65% versus SMA-50 3.6744 and below by 5.01% versus SMA-200 3.4951. Observed 5/20/60-bar returns are -2.64%/-11.13%/-7.82%. ATR-14 is 0.1314; Bollinger lower/middle/upper are 3.2700/3.5345/3.7990, with band position 0.0945. These describe current trend and range, not entry, stop or target recommendations.",
+    "rsi_14": 26.087,
+    "rsi_assessment": "RSI-14 is 26.0870, oversold. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -0.0976, signal line -0.0808, histogram -0.0168: negative short-term momentum. Interpret alongside the moving-average trend.",
+    "volume_assessment": "Last completed-session volume 3,865,000 versus 20-bar average 6,143,170, ratio 0.6292. Below-average turnover supplies no strong participation confirmation. Price is 24.98% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "support_levels": [
+      3.32
+    ],
+    "resistance_levels": [
+      3.8,
+      3.9369
+    ],
+    "summary": "Price is below both major averages and at the observed 20- and 60-bar low, with negative MACD momentum and falling multiweek returns. Oversold RSI raises rebound risk but cannot outweigh the unbroken downtrend; below-average volume limits conviction about the latest decline."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
+    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
+    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "sector_macro_factors": [
+      "Observed: OPR remains 2.75% and Malaysian investment activity is ongoing. Inference: stable financing conditions are helpful for development planning, without constituting fresh monetary easing.",
+      "Inference: property debt service, buyer affordability and global construction-cost pressure are opposing considerations; no current REIT completion or transaction proceeds are assumed."
+    ],
+    "geopolitical_risks": [
+      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+    ],
+    "summary": "IOI Properties benefits from stable domestic policy, while development funding and input-cost sensitivities persist. This evidence supports a neutral assessment rather than assuming a rate-cut or asset-monetization catalyst."
+  },
+  "pipeline_mode": "in-session"
+}

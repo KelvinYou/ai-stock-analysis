@@ -1,0 +1,31 @@
+{
+  "symbol": "JPM",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/JPM/fundamentals.json",
+  "sources": [
+    {
+      "title": "JP Morgan Chase & Co. latest observed issuer financial/fund disclosure",
+      "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026048078/jpm-20260714.htm",
+      "publication_date": "2026-07-14",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "observed_facts": [
+        "Net income$21.2bn vs$15.0bn; EPS$7.70 vs$5.24.",
+        "Bank operating margins/FCF are not comparable to industrial firms; headline earnings need one-off reconciliation.",
+        "CET1, credit losses and liquidity ratios are not extracted from the attached bank supplement."
+      ],
+      "limitations": [
+        "8-K headline retrieved, detailed earnings supplement not parsed; two independent dated fundamental inputs not established."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "low"
+  }
+}

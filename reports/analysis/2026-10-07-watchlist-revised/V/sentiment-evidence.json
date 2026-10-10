@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "V",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/V/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 9,
+    "buy": 27,
+    "hold": 3,
+    "sell": 0,
+    "strongSell": 1
+  },
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000103/q32026earningsrelease.htm",
+      "date": "2026-07-28",
+      "observed_facts": "Visa reports fiscal third-quarter net revenue growth of 14%, payment-volume growth of 10% and processed-transaction growth of 10%.",
+      "negative_evidence_or_limitations": "Related Form10-Q says higher client incentives partly offset revenue growth; observed resilient spending does not confirm future price appreciation."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "as_of_date": "2026-10-06",
+  "rsi_14": 30.0084,
+  "macd": {
+    "macd_line": -14.0721,
+    "signal_line": -11.2377,
+    "histogram": -2.8345
+  },
+  "sma_20": 308.8705,
+  "sma_50": 325.8348,
+  "sma_200": 452.3478,
+  "ema_20": 303.2541,
+  "current_price": 278.78,
+  "price_vs_sma50": "below by 14.44%",
+  "price_vs_sma200": "below by 38.37%",
+  "atr_14": 15.6839,
+  "bollinger": {
+    "upper": 347.8048,
+    "middle": 308.8705,
+    "lower": 269.9362,
+    "pct": 0.1136
+  },
+  "volume": {
+    "current": 4363000,
+    "sma_20": 5460255.0,
+    "ratio": 0.799
+  },
+  "52_week": {
+    "high": 738.01,
+    "low": 266.84,
+    "pct_from_high": -0.6223,
+    "pct_from_low": 0.0447
+  },
+  "price_momentum": {
+    "return_5_bars": -0.0879,
+    "return_20_bars": -0.1065,
+    "return_60_bars": -0.3705,
+    "return_252_bars": -0.5917
+  },
+  "observed_levels": {
+    "20_bar_high": 338.34,
+    "20_bar_low": 266.84,
+    "60_bar_high": 462.69,
+    "60_bar_low": 266.84
+  },
+  "risk_context": {
+    "daily_volatility_20_bars": 0.0321
+  }
+}

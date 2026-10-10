@@ -1,0 +1,166 @@
+{
+  "symbol": "ORCL",
+  "date": "2026-10-07",
+  "data_as_of": "2026-10-06",
+  "input_sha256": {
+    "technicals.json": "f2227ec5ea1e91c02c5f5130c66e3d348fe39d1d3696ba1a8d93844a9dbf8a7a",
+    "price_history.csv": "f91e714cdfc4bbadcdcf809199b42c3a3a81fdf14dfdede104ac3f8dcdaced7a",
+    "indicators.json": "842b6ce523d272af55d5f7f07400db557e3be2df4ac5cf3feecb2f350b3c19d5",
+    "fundamentals.json": "882ba9bc71dfded415a567e02242429a55705cc46b75cda19df9deb156d5f145"
+  },
+  "prompt_sha256": {
+    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
+    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
+    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
+    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
+    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
+    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
+    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
+    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
+    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
+    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
+    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
+    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "symbol": "ORCL",
+      "as_of": "2026-10-07",
+      "status": "OK",
+      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+      "method": "Independent fundamental assessment from dated issuer income, balance-sheet and cash-flow disclosures; frozen October 6 valuation snapshot; management guidance is prospective.",
+      "sources": [
+        {
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+          "publication_date": "2026-09-10",
+          "reporting_period": "Q1 FY27 ended 2026-08-31",
+          "source_type": "primary issuer disclosure"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "publication_date": "2026-09-11",
+          "reporting_period": "Q1 FY27 ended 2026-08-31",
+          "source_type": "primary issuer disclosure"
+        }
+      ],
+      "observed_table_metrics": {
+        "units": "USD million unless stated",
+        "revenue": 19345,
+        "prior_revenue": 14926,
+        "operating_income": 6728,
+        "prior_operating_income": 4277,
+        "adjusted_operating_income": 8151,
+        "interest_expense": 1428,
+        "prior_interest_expense": 923,
+        "cash": 36369,
+        "securities": 708,
+        "current_debt": 7625,
+        "noncurrent_debt": 117712,
+        "prior_total_debt": 129541,
+        "CFO": 23103,
+        "capex": 28499,
+        "FCF": -5396,
+        "customer_financing_prepayments": 11363,
+        "other_short_term_capex_financing_adjustment": 830,
+        "net_capex_cash_outlay": 17966,
+        "net_equity_proceeds": 19909,
+        "weighted_diluted_shares": 3000,
+        "prior_weighted_diluted_shares": 2909,
+        "operating_lease_PV": 34621,
+        "finance_lease_PV": 9185,
+        "undiscounted_operating_lease_payments": 48050,
+        "undiscounted_finance_lease_payments": 15195,
+        "uncommenced_additional_lease_commitments": 288000,
+        "uncommenced_timing": "Generally commence FY27 Q2 through FY29; terms 15\u201319 years; outside recognized lease liabilities.",
+        "unconditional_purchase_obligations": 34150,
+        "RPO": 664000
+      },
+      "derived_math": {
+        "net_debt": "7625 +117712 -36369 -708 = 88260; excludes leases",
+        "operating_interest_coverage": "6728/1428 = 4.71x",
+        "FCF": "23103-28499 = -5396",
+        "illustrative_CFO_ex_financing_prepayments": "23103-11363 = 11740; not GAAP CFO or issuer FCF",
+        "illustrative_cash_capex_gap_ex_prepayments": "11740-28499 = -16759; not combined with net-capex adjustment",
+        "issuer_net_capex_cash_outlay": "28499+830-11363 =17966"
+      },
+      "residual_limitations": [
+        "Uncommenced nominal leases are future commitments, not current debt; no double-counted aggregate debt measure.",
+        "Future funding terms, RPO conversion and project-level returns remain uncertain."
+      ]
+    },
+    "sentiment": {
+      "as_of": "2026-10-07",
+      "symbol": "ORCL",
+      "prompt_path": "prompts/sentiment.txt",
+      "fresh_input_path": "inputs/ORCL/fundamentals.json",
+      "news_feed_count": 0,
+      "recommendation_period": "0m",
+      "recommendations": {
+        "index": 0,
+        "period": "0m",
+        "strongBuy": 7,
+        "buy": 28,
+        "hold": 7,
+        "sell": 1,
+        "strongSell": 0
+      },
+      "sources": [
+        {
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+          "date": "2026-09-10",
+          "observed_facts": "Oracle reports fiscal first-quarter revenue growth of 30%, cloud infrastructure growth of 121% and RPO of $664 billion.",
+          "negative_evidence_or_limitations": "RPO is future contracted activity, not cash received; financing and conversion of capacity commitments remain unresolved by this release."
+        }
+      ],
+      "coverage_gaps": [
+        "Yahoo news_headlines empty",
+        "No social media tool",
+        "No verified post-event market reaction"
+      ]
+    },
+    "macro": {
+      "as_of": "2026-10-07",
+      "observed_sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "event_date": "2026-09-16",
+          "facts": [
+            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+          ]
+        },
+        {
+          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+          "event_date": "2026-09-03",
+          "facts": [
+            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+          ]
+        },
+        {
+          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+          "event_date": "2026-10-06",
+          "facts": [
+            "USD/MYR reference 4.0858."
+          ]
+        }
+      ],
+      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
+    }
+  },
+  "role_report_sha256": {
+    "fundamentals": "96398032285844d495e896f9638a32d495b343046fd1b14ac2156743df0d1c79",
+    "sentiment": "7f71423b4d38da211b4cdc6fb79835db8f969fe67eb89ed77f2e4eae4c187343",
+    "technical": "1788696cf134444226ba2262122f05a9650647629e5250c0bc2f52debc9844b4",
+    "macro": "599adda7eaec02966d19c940ea6a56c018fc4641e1d7a560ea155cc600343ca9"
+  },
+  "mode": "in-session",
+  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
+  "retained_roles": [
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "newly_researched_roles": [
+    "fundamentals"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "symbol": "META",
+  "analysis_date": "2026-10-07",
+  "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "sources": [
+    {
+      "title": "Meta Platforms, Inc. latest observed issuer financial/fund disclosure",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+      "publication_date": "2026-07-29",
+      "reporting_period": "Q2 ended 2026-06-30",
+      "sections_reviewed": [
+        "Income statement",
+        "Balance sheet",
+        "Cash-flow statement",
+        "GAAP/non-GAAP reconciliation where present"
+      ]
+    }
+  ],
+  "observed_facts": {
+    "Q2_USD_bn": {
+      "revenue": 60.801,
+      "operating_income": 18.775,
+      "legal_charges": 2.4,
+      "severance": 1.18,
+      "CFO": 31.862,
+      "PPandE": 30.116,
+      "finance_lease_principal": 0.962,
+      "FCF": 0.784
+    },
+    "H1_USD_bn": {
+      "CFO": 64.088,
+      "PPandE": 49.113,
+      "finance_lease_principal": 1.805,
+      "FCF": 13.17,
+      "prior_FCF": 18.883
+    },
+    "June30_USD_bn": {
+      "cash": 15.462,
+      "marketable_securities": 74.798,
+      "long_debt": 83.664,
+      "noncurrent_operating_leases": 26.229
+    },
+    "FY_capex_guidance_USD_bn": [
+      130,
+      145
+    ]
+  },
+  "derived_calculations": [
+    "Q2FCF=31.862-30.116-0.962=0.784; H1=64.088-49.113-1.805=13.170 ($bn).",
+    "Illustrative operating margin excluding two specified charges=(18.775+2.4+1.18)/60.801=36.77%, not issuer-adjusted margin or net EPS.",
+    "Cash/securities minus long-term debt=90.260-83.664=6.596 ($bn), excluding leases; H1FCF growth=-30.25%."
+  ],
+  "frozen_valuation_inputs": {
+    "price_date": "2026-10-06",
+    "close": 738.88,
+    "vendor_pe": 27.95611,
+    "vendor_forward_pe": 21.167751,
+    "market_cap": 1882301399040.0,
+    "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/META/fundamentals.json"
+  },
+  "remaining_gaps": [
+    "Long-term AI incremental return and recurring legal costs remain scenario-dependent, not missing statements."
+  ],
+  "materiality_and_revision_reason": "Neutral retained because measured cash conversion and even adjusted operating-margin pressure weaken immediate return thesis at27.96x trailing; lower forward multiple is considered but unverified forecasts do not erase observed cash burden.",
+  "previous_role_signal": "neutral",
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

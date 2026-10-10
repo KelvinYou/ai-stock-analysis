@@ -1,0 +1,31 @@
+{
+  "symbol": "1155",
+  "analysis_date": "2026-10-07",
+  "method": "Independent in-session fundamental analyst, exact stored fundamentals system prompt applied; dated issuer evidence replaces undated financial-statement trend claims.",
+  "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
+  "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist/inputs/1155/fundamentals.json",
+  "sources": [
+    {
+      "title": "MAYBANK latest observed issuer financial/fund disclosure",
+      "url": "https://maybank.listedcompany.com/news.html/id/2625840",
+      "publication_date": "2026-08-27",
+      "reporting_period": "Q2/H1 ended 2026-06-30",
+      "observed_facts": [
+        "Q2 attributable profit RM2.690bn vs RM2.628bn; H1 RM5.171bn vs RM5.217bn.",
+        "Bank revenue declined to RM16.078bn from RM17.079bn; nonfinancial corporate margins are not the appropriate bank comparator.",
+        "Issuer quarter summary NAV/share RM7.6927; CET1 and asset quality require full bank supplement."
+      ],
+      "limitations": [
+        "Dated issuer release; fair-value model and independently matched current balance-sheet detail are incomplete."
+      ]
+    }
+  ],
+  "limitations": [
+    "Vendor statement timing metadata absent; no snapshot YoY financial trend inferred.",
+    "Forward P/E is a vendor estimate, not realised earnings or intrinsic value."
+  ],
+  "judgement": {
+    "signal": "neutral",
+    "confidence": "medium"
+  }
+}

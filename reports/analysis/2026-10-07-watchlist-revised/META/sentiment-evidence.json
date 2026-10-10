@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "META",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/META/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 8,
+    "buy": 47,
+    "hold": 7,
+    "sell": 1,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx",
+      "date": "2026-07-29",
+      "observed_facts": "Meta reports second-quarter revenue growth of 28%, ad impression growth of 14% and ad pricing growth of 12%.",
+      "negative_evidence_or_limitations": "Expenses rose 55%, operating profit fell 8%, net income fell 14%; legal and severance charges plus $31.08 billion capital expenditure temper enthusiasm."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}

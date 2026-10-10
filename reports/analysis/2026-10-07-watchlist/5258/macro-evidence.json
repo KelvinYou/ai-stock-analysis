@@ -1,0 +1,33 @@
+{
+  "as_of": "2026-10-07",
+  "observed_sources": [
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "event_date": "2026-09-16",
+      "facts": [
+        "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
+      ]
+    },
+    {
+      "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+      "event_date": "2026-09-03",
+      "facts": [
+        "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
+      ]
+    },
+    {
+      "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
+      "event_date": "2026-10-06",
+      "facts": [
+        "USD/MYR reference 4.0858."
+      ]
+    }
+  ],
+  "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast.",
+  "input_identity": {
+    "symbol": "5258",
+    "name": "BIMB",
+    "source": "inputs/5258/fundamentals.json#info",
+    "note": "Bank Islam; identity corrected from RHB. Sector reasoning remains generic to avoid unsupported bank-specific exposures."
+  }
+}

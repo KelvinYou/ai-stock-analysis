@@ -1,0 +1,38 @@
+{
+  "status": "complete",
+  "tickers": 31,
+  "analyst_reports": 124,
+  "new_fundamentals_reports": 31,
+  "retained_analyst_reports": 93,
+  "research_quality": "corrected_and_reviewed",
+  "debate_arguments": 124,
+  "debate_rounds_per_ticker": 2,
+  "moderator_summaries": 31,
+  "research_verdicts": 31,
+  "syntheses": 31,
+  "risk_finalized": 31,
+  "cloud_verified": 31,
+  "data_as_of": "2026-10-06",
+  "analysis_date": "2026-10-07",
+  "signals": {
+    "neutral": 22,
+    "buy": 7,
+    "sell": 2
+  },
+  "signals_before_gate": {
+    "neutral": 14,
+    "buy": 13,
+    "sell": 4
+  },
+  "gated_to_neutral": [
+    "0097",
+    "0215",
+    "1155",
+    "5258",
+    "APP",
+    "GOOGL",
+    "JPM",
+    "NFLX"
+  ],
+  "normalized_cloud_payload_matches": 124
+}

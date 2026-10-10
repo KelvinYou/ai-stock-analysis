@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-10-07",
+  "symbol": "UNH",
+  "prompt_path": "prompts/sentiment.txt",
+  "fresh_input_path": "inputs/UNH/fundamentals.json",
+  "news_feed_count": 0,
+  "recommendation_period": "0m",
+  "recommendations": {
+    "index": 0,
+    "period": "0m",
+    "strongBuy": 7,
+    "buy": 15,
+    "hold": 4,
+    "sell": 0,
+    "strongSell": 0
+  },
+  "sources": [
+    {
+      "url": "https://www.unitedhealthgroup.com/newsroom/2026/2026-07-16-uhg-reports-second-quarter-2026-results.html",
+      "date": "2026-07-16",
+      "observed_facts": "UnitedHealth reports second-quarter revenue of $112 billion and raises full-year adjusted EPS outlook to $19.50-$20.00.",
+      "negative_evidence_or_limitations": "Outlook is management guidance, not confirmed recovery for subsequent quarters; third-quarter results are scheduled October 13."
+    }
+  ],
+  "coverage_gaps": [
+    "Yahoo news_headlines empty",
+    "No social media tool",
+    "No verified post-event market reaction"
+  ]
+}
