@@ -1,0 +1,33 @@
+{
+  "mode": "in-session",
+  "analyst": "fundamentals",
+  "analysis_date": "2026-10-27",
+  "price_cutoff": "2026-10-26",
+  "prompt_owner": "repos/ai-stock-analysis/src/stock_analysis/agents/fundamentals.py:FundamentalsAgent.system_prompt",
+  "schema_owner": "repos/ai-stock-analysis/src/stock_analysis/models/agent_reports.py:FundamentalsReport",
+  "context_builder": "stock_analysis.data.fundamentals.build_fundamental_context",
+  "structured_source": "Fresh Yahoo current-provider capture in data/{ticker}/fundamentals.json; observed October 27, not original filing availability.",
+  "sources": {
+    "TSM": [
+      {"url": "https://pr.tsmc.com/english/news/3346", "published": "2026-10-15", "period_end": "2026-09-30", "supports": "Revenue, net income, ordinary-share versus ADR EPS, comparable growth and margins."},
+      {"url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000726/a3q26presentatione.htm", "published": "2026-10", "period_end": "2026-09-30", "supports": "Cash/marketable securities, long-term interest-bearing debt scope, equity, cash flow and Q4/full-year guidance."}
+    ],
+    "V": [
+      {"url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000103/q32026earningsrelease.htm", "published": "2026-07-28", "period_end": "2026-06-30", "supports": "Fiscal Q3 net revenue, revenue growth, GAAP and non-GAAP earnings."},
+      {"url": "https://investor.visa.com/news/news-details/2026/Visa-to-Announce-Fiscal-Fourth-Quarter-and-Full-Year-2026-Financial-Results-on-October-27-2026/default.aspx", "published": "2026-10-08", "supports": "Next earnings release after US close October 27; no Q4 result presumed available."}
+    ],
+    "UNH": [
+      {"url": "https://www.unitedhealthgroup.com/newsroom/2026/2026-10-13-uhg-reports-third-quarter-2026-results.html", "published": "2026-10-13", "period_end": "2026-09-30", "supports": "Newer Q3 revenue, operating earnings, net margin, operating cash flow, debt-to-capital, GAAP/adjusted EPS and raised guidance."}
+    ]
+  },
+  "readiness": {
+    "TSM": {"independent_fundamental_inputs": 3, "canonical_statement_age_days": 27, "comparable_growth_available": true, "same_basis_valuation_available": false, "material_gap": "Provider EPS has undeclared share basis and differs from ordinary-share EPS; official latest balance-sheet/cash-flow evidence is supplementary."},
+    "V": {"independent_fundamental_inputs": 5, "canonical_statement_age_days": 119, "comparable_growth_available": true, "same_basis_valuation_available": false, "material_gap": "Earnings due after close October 27; latest provider financial period is June30."},
+    "UNH": {"canonical_statement_age_days": 119, "comparable_growth_available": false, "same_basis_valuation_available": false, "material_gap": "Official Q3 already released but canonical provider statements remain Q2; supplemental Q3 evidence is explicitly distinguished."}
+  },
+  "limitations": [
+    "No price target, hypothetical sector-average valuation, annualized quarterly EPS or invented missing field is supplied.",
+    "Web supplements inform report prose; they do not silently mutate Layer1 structured data or satisfy a verified total-return/corporate-action gate.",
+    "Signals are fundamental analyst views, not portfolio orders or provider-authenticated forecasts."
+  ]
+}

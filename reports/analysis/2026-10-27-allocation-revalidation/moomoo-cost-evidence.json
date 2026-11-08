@@ -1,0 +1,150 @@
+{
+  "broker": "Moomoo Securities Malaysia",
+  "market": "US ordinary shares",
+  "source": "https://www.moomoo.com/my/support/topic9_136?from_platform=4&lang=en-us&platform_langArea=my",
+  "review_date": "2026-10-27",
+  "retrieval": "Official support search extraction; direct page returned JS/403. Effective-date history not reconstructed.",
+  "status": "published_tariff_identified_execution_calibration_incomplete",
+  "assumptions": {
+    "share_price_usd": 100,
+    "usd_myr": 4,
+    "price_and_fx_are_illustrative_not_observed": true,
+    "single_order_single_fill_same_day": true,
+    "promotion": "standard commission; no introductory waiver",
+    "rounding": "Commission rounded up to cents; stamp up to MYR1; other component precision retained, actual rounding unverified"
+  },
+  "excluded_unresolved": [
+    "spread_and_slippage",
+    "currency_conversion_cost",
+    "SST_applicability",
+    "ADR_charges",
+    "dividend_tax",
+    "historical_tariff_changes",
+    "multi_fill_rounding"
+  ],
+  "actual_order_notional_usd": null,
+  "calibrated_bps_per_side": null,
+  "promotion_ready": false,
+  "examples": [
+    {
+      "notional_usd": 100,
+      "side": "buy",
+      "components_usd": {
+        "commission": 0.03,
+        "platform": 0.99,
+        "stamp_duty": 0.25,
+        "settlement": 0.003,
+        "sec": 0.0,
+        "taf": 0.0,
+        "cat_as_listed_by_broker": 3e-06
+      },
+      "subtotal_usd": 1.273003,
+      "subtotal_bps": 127.3003
+    },
+    {
+      "notional_usd": 100,
+      "side": "sell",
+      "components_usd": {
+        "commission": 0.03,
+        "platform": 0.99,
+        "stamp_duty": 0.25,
+        "settlement": 0.003,
+        "sec": 0.01,
+        "taf": 0.01,
+        "cat_as_listed_by_broker": 3e-06
+      },
+      "subtotal_usd": 1.293003,
+      "subtotal_bps": 129.3003
+    },
+    {
+      "notional_usd": 500,
+      "side": "buy",
+      "components_usd": {
+        "commission": 0.15,
+        "platform": 0.99,
+        "stamp_duty": 0.5,
+        "settlement": 0.015,
+        "sec": 0.0,
+        "taf": 0.0,
+        "cat_as_listed_by_broker": 1.5e-05
+      },
+      "subtotal_usd": 1.655015,
+      "subtotal_bps": 33.1003
+    },
+    {
+      "notional_usd": 500,
+      "side": "sell",
+      "components_usd": {
+        "commission": 0.15,
+        "platform": 0.99,
+        "stamp_duty": 0.5,
+        "settlement": 0.015,
+        "sec": 0.0103,
+        "taf": 0.01,
+        "cat_as_listed_by_broker": 1.5e-05
+      },
+      "subtotal_usd": 1.675315,
+      "subtotal_bps": 33.5063
+    },
+    {
+      "notional_usd": 1000,
+      "side": "buy",
+      "components_usd": {
+        "commission": 0.3,
+        "platform": 0.99,
+        "stamp_duty": 1.0,
+        "settlement": 0.03,
+        "sec": 0.0,
+        "taf": 0.0,
+        "cat_as_listed_by_broker": 3e-05
+      },
+      "subtotal_usd": 2.32003,
+      "subtotal_bps": 23.2003
+    },
+    {
+      "notional_usd": 1000,
+      "side": "sell",
+      "components_usd": {
+        "commission": 0.3,
+        "platform": 0.99,
+        "stamp_duty": 1.0,
+        "settlement": 0.03,
+        "sec": 0.0206,
+        "taf": 0.01,
+        "cat_as_listed_by_broker": 3e-05
+      },
+      "subtotal_usd": 2.35063,
+      "subtotal_bps": 23.5063
+    },
+    {
+      "notional_usd": 5000,
+      "side": "buy",
+      "components_usd": {
+        "commission": 1.5,
+        "platform": 0.99,
+        "stamp_duty": 5.0,
+        "settlement": 0.15,
+        "sec": 0.0,
+        "taf": 0.0,
+        "cat_as_listed_by_broker": 0.00015
+      },
+      "subtotal_usd": 7.64015,
+      "subtotal_bps": 15.2803
+    },
+    {
+      "notional_usd": 5000,
+      "side": "sell",
+      "components_usd": {
+        "commission": 1.5,
+        "platform": 0.99,
+        "stamp_duty": 5.0,
+        "settlement": 0.15,
+        "sec": 0.103,
+        "taf": 0.01,
+        "cat_as_listed_by_broker": 0.00015
+      },
+      "subtotal_usd": 7.75315,
+      "subtotal_bps": 15.5063
+    }
+  ]
+}

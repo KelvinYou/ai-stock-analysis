@@ -1,0 +1,23 @@
+{
+  "baseline_head": "8d90db45fa509580d11306a6fbafeecc78d411df",
+  "scope": "uncommitted_worktree_local_acceptance",
+  "python": "3.14.5",
+  "tests_passed": 105,
+  "additional_subtests_passed": 4,
+  "analysis_backend_outage_browser_acceptance": true,
+  "network_price_download_passed": true,
+  "remote_activation_verified": false,
+  "source_sha256": {
+    "config/momentum.json": "db2c9f12df269b7e62729cf38955876ef8f381b02f29d67520c38af034d2d79c",
+    "src/stock_analysis/allocation_snapshot.py": "6c1de4dd9c9199c19536fe732125ba3ca36fe0ad2582b99356b8e5103cb67475",
+    "src/stock_analysis/momentum_dashboard.py": "557f2bdcfc7116d74d537f97758b0fa2c59add26fb48543e8f9fa59b709f88ee",
+    "scripts/refresh_momentum_dashboard.py": "c70b419d81a1e8c68989bfd4dd29058ce9af11a879a5cec3c5eea97930aa2c44",
+    "web/lib/momentum-types.ts": "05fb910f38dce7d8463d5630f394336302638618a811186b4d2c85c1dcb43df7",
+    "web/lib/momentum-data.ts": "16006b312a1f7015598ee24c7b466de973f045faafcb0d21d968764a6dfc907c",
+    "web/components/allocation/momentum-desk.tsx": "e9c843be6ab808f923aec8ca56c2f3b2abc696aee68af36cc9f3d2e1c795585d",
+    "web/app/momentum/page.tsx": "9731739da1a8f45c4bbbb64d465602a8ec41fb8831e4377b0e60d23465db8dc3",
+    "web/app/layout.tsx": "8005abd6cc65f4d430f48a07616e28387946693bca4a72174d3eb90ab72bb847",
+    ".github/workflows/momentum.yml": "5ec2ef6e8e7b3ab908779549cd48529d15aa72041151ade5d37cfcd5e2ba32ba",
+    "web/data/momentum.json": "24da1b2dd7fe2c3dd257a1b81065686e7df4d286f3b65cc3efdcabae6eb4b3ad"
+  }
+}

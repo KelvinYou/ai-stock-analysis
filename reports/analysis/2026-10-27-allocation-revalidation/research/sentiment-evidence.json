@@ -1,0 +1,175 @@
+{
+  "analysis_date": "2026-10-27",
+  "mode": "in-session",
+  "authority": "SentimentAgent.system_prompt; current_recommendations_are_usable; independent_sentiment_news",
+  "limitations": [
+    "No captured independent headlines or social-media observations.",
+    "Provider recommendation periods are aggregate observations, not individual rating-change dates.",
+    "Issuer earnings releases duplicate fundamental evidence; primary cross-checks below were not promoted to independent sentiment.",
+    "No Visa Oct27 after-market outcome consumed before release."
+  ],
+  "tickers": {
+    "TSM": {
+      "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/data/TSM/fundamentals.json",
+      "input_sha256": "1721327354f974fa2b474ce5e677318c6532462b404b26ab1c3b152b58232583",
+      "captured_at": "2026-10-27T03:48:01.984902Z",
+      "provider_capture": "current",
+      "news_count": 0,
+      "recommendations": [
+        {
+          "index": 0,
+          "period": "0m",
+          "strongBuy": 6,
+          "buy": 14,
+          "hold": 1,
+          "sell": 0,
+          "strongSell": 0
+        },
+        {
+          "index": 1,
+          "period": "-1m",
+          "strongBuy": 6,
+          "buy": 14,
+          "hold": 1,
+          "sell": 0,
+          "strongSell": 0
+        },
+        {
+          "index": 2,
+          "period": "-2m",
+          "strongBuy": 6,
+          "buy": 12,
+          "hold": 1,
+          "sell": 0,
+          "strongSell": 0
+        },
+        {
+          "index": 3,
+          "period": "-3m",
+          "strongBuy": 6,
+          "buy": 12,
+          "hold": 1,
+          "sell": 0,
+          "strongSell": 0
+        }
+      ],
+      "primary_context": {
+        "url": "https://pr.tsmc.com/english/news/3346",
+        "publisher": "TSMC issuer",
+        "publication_date": "2026-10-15",
+        "event": "Q3 2026 results and leading-edge demand outlook.",
+        "use": "Fundamental context; excluded as independent sentiment."
+      },
+      "signal": "buy",
+      "confidence": "medium"
+    },
+    "V": {
+      "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/data/V/fundamentals.json",
+      "input_sha256": "70c384f5da89625f2cc4c3779ba2e1c92984eab740c6a1c8e51851786ce75b4d",
+      "captured_at": "2026-10-27T03:48:02.014084Z",
+      "provider_capture": "current",
+      "news_count": 0,
+      "recommendations": [
+        {
+          "index": 0,
+          "period": "0m",
+          "strongBuy": 9,
+          "buy": 27,
+          "hold": 3,
+          "sell": 0,
+          "strongSell": 1
+        },
+        {
+          "index": 1,
+          "period": "-1m",
+          "strongBuy": 9,
+          "buy": 27,
+          "hold": 3,
+          "sell": 0,
+          "strongSell": 1
+        },
+        {
+          "index": 2,
+          "period": "-2m",
+          "strongBuy": 9,
+          "buy": 27,
+          "hold": 3,
+          "sell": 0,
+          "strongSell": 1
+        },
+        {
+          "index": 3,
+          "period": "-3m",
+          "strongBuy": 9,
+          "buy": 29,
+          "hold": 3,
+          "sell": 0,
+          "strongSell": 0
+        }
+      ],
+      "primary_context": {
+        "url": "https://investor.visa.com/news/news-details/2026/Visa-to-Announce-Fiscal-Fourth-Quarter-and-Full-Year-2026-Financial-Results-on-October-27-2026/default.aspx",
+        "publisher": "Visa issuer",
+        "publication_date": "2026-10-08",
+        "event": "Fiscal Q4/full-year results scheduled after US close Oct27, webcast 17:00 Eastern.",
+        "use": "Pending catalyst; no results or surprise inferred."
+      },
+      "signal": "neutral",
+      "confidence": "medium"
+    },
+    "UNH": {
+      "input_path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/data/UNH/fundamentals.json",
+      "input_sha256": "b0923213f94f214ce335e300b3591ebc7df9cca99f92cd54e93944ab81253757",
+      "captured_at": "2026-10-27T03:48:01.988219Z",
+      "provider_capture": "current",
+      "news_count": 0,
+      "recommendations": [
+        {
+          "index": 0,
+          "period": "0m",
+          "strongBuy": 6,
+          "buy": 15,
+          "hold": 5,
+          "sell": 0,
+          "strongSell": 0
+        },
+        {
+          "index": 1,
+          "period": "-1m",
+          "strongBuy": 7,
+          "buy": 15,
+          "hold": 4,
+          "sell": 0,
+          "strongSell": 0
+        },
+        {
+          "index": 2,
+          "period": "-2m",
+          "strongBuy": 7,
+          "buy": 16,
+          "hold": 4,
+          "sell": 0,
+          "strongSell": 0
+        },
+        {
+          "index": 3,
+          "period": "-3m",
+          "strongBuy": 6,
+          "buy": 16,
+          "hold": 5,
+          "sell": 0,
+          "strongSell": 0
+        }
+      ],
+      "primary_context": {
+        "url": "https://www.unitedhealthgroup.com/newsroom/2026/2026-10-13-uhg-reports-third-quarter-2026-results.html",
+        "publisher": "UnitedHealth Group issuer",
+        "publication_date": "2026-10-13",
+        "event": "Q3 2026 results; full-year adjusted EPS floor raised to $20.50.",
+        "use": "Fundamental context; excluded as independent sentiment."
+      },
+      "signal": "neutral",
+      "confidence": "medium"
+    }
+  }
+}
