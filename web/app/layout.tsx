@@ -42,7 +42,12 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const navTickers = await listTickerNavSummaries();
+  // Navigation is optional on price-only pages; an unavailable analysis service
+  // must not prevent the independent momentum snapshot from rendering.
+  const navTickers = await listTickerNavSummaries().catch(() => {
+    console.warn("Ticker navigation unavailable; rendering the page without ticker summaries.");
+    return [];
+  });
   return (
     <html
       lang="en"

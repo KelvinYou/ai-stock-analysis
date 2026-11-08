@@ -16,15 +16,51 @@ export type AllocationResearch = {
   version: 1; generated_at_utc: string; default_id: string;
   experiments: AllocationExperiment[]; current_plan: {status: "unavailable"; reason: string};
   reliability_status: string; promotion_ready: false; limitations: string[];
+  current_momentum?: CurrentMomentum;
+};
+export type CurrentMomentum = {status: "unavailable"; reason: string} | {
+  status: "available"; scope: "indicative_price_only"; as_of: string;
+  captured_at_utc: string; source_sha256: string; lookback_months: 12; top_n: 3;
+  universe: string[];
+  ranking: {ticker: string; score: number; lookback_date: string; target_weight: number}[];
 };
 const record = (v: unknown): v is Record<string, unknown> => !!v && typeof v === "object" && !Array.isArray(v);
 const finite = (v: unknown): v is number => typeof v === "number" && Number.isFinite(v);
 const nullable = (v: unknown) => v === null || finite(v);
 const strings = (v: unknown): v is string[] => Array.isArray(v) && v.every(x => typeof x === "string");
-const date = (v: unknown) => typeof v === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v);
+const date = (v: unknown): v is string => typeof v === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v);
+export function isCurrentMomentum(v: unknown): v is CurrentMomentum {
+  if (!record(v)) return false;
+  if (v.status === "unavailable") return typeof v.reason === "string" && v.reason.length > 0;
+  if (v.status !== "available" || v.scope !== "indicative_price_only" || !date(v.as_of)
+    || v.lookback_months !== 12 || v.top_n !== 3 || typeof v.captured_at_utc !== "string"
+    || !/(Z|[+-]\d{2}:\d{2})$/.test(v.captured_at_utc) || !Number.isFinite(Date.parse(v.captured_at_utc))
+    || typeof v.source_sha256 !== "string" || !/^[a-f0-9]{64}$/.test(v.source_sha256)
+    || !strings(v.universe) || v.universe.length < 3 || new Set(v.universe).size !== v.universe.length
+    || !v.universe.every(t => /^[A-Z][A-Z0-9.-]*$/.test(t))
+    || !Array.isArray(v.ranking) || v.ranking.length !== v.universe.length) return false;
+  if (Date.parse(v.captured_at_utc) < Date.parse(String(v.as_of))) return false;
+  const rows = v.ranking;
+  if (!rows.every((r, i) => record(r) && typeof r.ticker === "string" && (v.universe as string[]).includes(r.ticker)
+    && finite(r.score) && r.score > -1 && date(r.lookback_date) && r.lookback_date < String(v.as_of)
+    && r.target_weight === (i < 3 ? 1/3 : 0))) return false;
+  if (new Set(rows.map(r => r.ticker)).size !== rows.length) return false;
+  return rows.every((r,i) => i === 0 || rows[i-1].score > r.score
+    || (rows[i-1].score === r.score && rows[i-1].ticker < r.ticker));
+}
+export function currentMomentumForDate(v: CurrentMomentum | undefined, now = new Date()): CurrentMomentum {
+  if (!v) return {status: "unavailable", reason: "No approved current price snapshot is connected."};
+  if (v.status === "unavailable") return v;
+  const age = (Date.parse(now.toISOString().slice(0,10)) - Date.parse(v.as_of)) / 86_400_000;
+  if (!Number.isFinite(age) || age < 1 || age > 4 || Date.parse(v.captured_at_utc) > now.getTime()) return {
+    status: "unavailable", reason: "Current ranking expired. Refresh the complete price panel before using it.",
+  };
+  return v;
+}
 export function isAllocationResearch(v: unknown): v is AllocationResearch {
   if (!record(v) || v.version !== 1 || v.promotion_ready !== false || typeof v.generated_at_utc !== "string" || !Number.isFinite(Date.parse(v.generated_at_utc)) || typeof v.default_id !== "string" || typeof v.reliability_status !== "string" || !strings(v.limitations) || !record(v.current_plan) || v.current_plan.status !== "unavailable" || typeof v.current_plan.reason !== "string" || !Array.isArray(v.experiments) || !v.experiments.length) return false;
   const robustness = v.robustness;
+  if (v.current_momentum !== undefined && !isCurrentMomentum(v.current_momentum)) return false;
   if (!record(robustness) || !["rolling_wins","rolling_windows","rolling_min","omitted_months","omitted_allocator","omitted_hold"].every(k => finite(robustness[k]))) return false;
   const valid = v.experiments.every(e => {
     if (!record(e) || typeof e.id !== "string" || !/^[a-z0-9-]+$/.test(e.id)) return false;
@@ -36,5 +72,8 @@ export function isAllocationResearch(v: unknown): v is AllocationResearch {
     const arms = e.arms as Record<string, unknown>[];
     return new Set(arms.map(a => a.id)).size === arms.length && ["allocator_only", "continuous_strict_hold", "ai_only", "allocator_plus_ai"].every(id => arms.some(a => a.id === id)) && arms.every(a => (a.status !== "available" || finite(a.net_return)) && (a.mean_exposure === null || (finite(a.mean_exposure) && a.mean_exposure >= 0 && a.mean_exposure <= 1)));
   });
-  return valid && new Set(v.experiments.map(e => e.id)).size === v.experiments.length && v.experiments.some(e => e.id === v.default_id);
+  const snapshot = v.current_momentum as CurrentMomentum | undefined;
+  const defaultExperiment = v.experiments.find(e => e.id === v.default_id);
+  return valid && new Set(v.experiments.map(e => e.id)).size === v.experiments.length && !!defaultExperiment
+    && (snapshot?.status !== "available" || JSON.stringify([...snapshot.universe].sort()) === JSON.stringify([...defaultExperiment.universe].sort()));
 }

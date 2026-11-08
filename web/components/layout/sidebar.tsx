@@ -101,6 +101,7 @@ export function Sidebar({
             Screener
           </NavItem>
           <NavItem href="/allocation" icon={Layers} onNavigate={onClose}>Allocation</NavItem>
+          <NavItem href="/momentum" icon={Layers} onNavigate={onClose}>Momentum</NavItem>
           <NavItem href="/about" icon={BookOpen} onNavigate={onClose}>
             How it works
           </NavItem>

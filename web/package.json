@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "check:pipeline": "node scripts/check-pipeline.cjs",
-    "check:allocation": "node scripts/check-allocation.cjs"
+    "check:allocation": "node scripts/check-allocation.cjs",
+    "check:momentum": "node scripts/check-momentum.cjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.23",
