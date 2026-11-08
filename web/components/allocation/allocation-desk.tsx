@@ -4,7 +4,7 @@ import { ArrowUpRight, ArrowRight, Layers, ShieldCheck } from "lucide-react";
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, BarChart, Bar, ReferenceLine } from "recharts";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { SectionCard } from "@/components/shared/section-card";
-import type { AllocationResearch, AllocationExperiment } from "@/lib/allocation-types";
+import { currentMomentumForDate, type AllocationResearch, type AllocationExperiment } from "@/lib/allocation-types";
 const pct = (n: number | null) => n === null ? "Not recorded" : `${n >= 0 ? "+" : ""}${(n * 100).toFixed(2)}%`;
 const points = (n: number) => `${n >= 0 ? "+" : ""}${(n * 100).toFixed(2)} pp`;
 const color = (n: number | null) => n !== null && n < 0 ? "text-bear" : "text-ink";
@@ -31,8 +31,20 @@ export function AllocationDesk({data}: {data: AllocationResearch}) {
         <SectionCard title="Last historical selection" description={`Selected at ${e.last_selection.as_of}. This is not today's ranking or your holdings.`}><div className="flex flex-wrap gap-3">{e.last_selection.tickers.map(t => <a href={`/${t}`} key={t} className="flex items-center gap-3 rounded border px-4 py-3 text-sm text-ink hover:bg-secondary"><span className="num font-medium">{t}</span><span className="num text-graphite">33⅓%</span><ArrowUpRight className="size-3" aria-hidden /></a>)}</div></SectionCard>
         <details className="rounded border p-4"><summary className="cursor-pointer text-sm font-medium text-ink">Protocol and evidence</summary><div className="mt-4 space-y-3 text-micro text-graphite"><p>Universe: {e.universe.join(", ")}</p><p>{e.fee_basis}</p><p>Price basis: {e.price_basis.replaceAll("_", " ")}</p><ul className="space-y-2">{e.notes.map(n => <li key={n}>• {n}</li>)}</ul><p className="break-all num">Source SHA-256: {e.source_sha256}</p><a className="inline-block text-action underline underline-offset-4" href={`/allocation/evidence?id=${encodeURIComponent(e.id)}`}>Download this verified research view</a></div></details>
       </TabsContent>
-      <TabsContent value="snapshot"><section className="rounded border p-6"><Layers className="size-6 text-graphite" aria-hidden /><h2 className="mt-3 text-lg font-semibold text-ink">No current plan connected</h2><p className="mt-2 max-w-xl text-sm text-graphite">{data.current_plan.reason} A valid plan needs completed inputs from one common session. Historical selections cannot stand in for current target weights.</p><p className="mt-4 text-micro text-graphite">Forward research is not activated. No orders or portfolio changes are made from this page.</p></section></TabsContent>
+      <TabsContent value="snapshot"><CurrentSnapshot data={data} /></TabsContent>
     </Tabs>
+  </div>;
+}
+function CurrentSnapshot({data}: {data: AllocationResearch}) {
+  const snapshot = currentMomentumForDate(data.current_momentum);
+  if (snapshot.status === "unavailable") return <section className="rounded border p-6"><Layers className="size-6 text-graphite" aria-hidden /><h2 className="mt-3 text-lg font-semibold text-ink">Current ranking unavailable</h2><p role="status" className="mt-2 max-w-xl text-sm text-graphite">{snapshot.reason}</p><p className="mt-4 text-micro text-graphite">Historical selections cannot stand in for a current ranking.</p></section>;
+  return <div className="space-y-5">
+    <SectionCard title="Current momentum ranking" description={`Completed price session: ${snapshot.as_of}. Eight-stock research universe · US / USD.`}>
+      <div className="mb-4 rounded border bg-secondary p-4 text-sm text-ink"><p className="font-medium">Month-end preview · price only</p><p className="mt-2 text-graphite">Ranks the past 12 months. The monthly strategy decides at month-end and executes at the next common session Open. This preview is not a daily trading signal or an AI buy rating.</p></div>
+      <div role="region" aria-label="Current momentum ranking" tabIndex={0} className="overflow-x-auto rounded border"><table className="w-full min-w-[520px] text-sm"><thead className="border-b bg-secondary text-left text-micro text-graphite"><tr>{["Rank", "Stock", "12-month momentum", "Research weight"].map(label => <th key={label} className="px-4 py-3 font-medium">{label}</th>)}</tr></thead><tbody>{snapshot.ranking.map((row,index) => <tr key={row.ticker} className="border-b last:border-0"><td className="num px-4 py-3 text-graphite">{index+1}</td><th className="px-4 py-3 text-left font-medium"><a className="text-action underline underline-offset-4" href={`/${row.ticker}`}>{row.ticker}</a></th><td className={`num px-4 py-3 ${color(row.score)}`}>{pct(row.score)}</td><td className="num px-4 py-3 text-graphite">{row.target_weight > 0 ? "33⅓%" : "0%"}</td></tr>)}</tbody></table></div>
+      <p className="mt-3 text-micro text-graphite">Weights refer to a separate momentum research sleeve, not your entire portfolio or current holdings. Existing positions and order costs must be considered before sizing any trade.</p>
+    </SectionCard>
+    <section className="rounded border p-4 text-sm text-graphite"><p className="font-medium text-ink">What to check before acting</p><p className="mt-2">Review the final month-end ranking, each company’s dated research, earnings events, portfolio overlap and fees. The rule can remain invested when all eight stocks fall. Reliability remains unconfirmed; forward research is not activated.</p><p className="mt-3 text-micro">Captured {snapshot.captured_at_utc}. Lookback anchors: {Array.from(new Set(snapshot.ranking.map(r => r.lookback_date))).join(", ")}. Adjusted provider prices; investor-net total returns remain unverified.</p></section>
   </div>;
 }
 function Metric({label,value,note}: {label:string;value:string;note?:string}) {return <div><p className="eyebrow">{label}</p><p className="num mt-2 text-2xl font-medium tracking-tight text-ink">{value}</p>{note && <p className="mt-1 text-micro text-graphite">{note}</p>}</div>;}

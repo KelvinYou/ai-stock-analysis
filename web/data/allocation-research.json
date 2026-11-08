@@ -8,7 +8,7 @@
     "omitted_hold": 7.33376316980505
   },
   "version": 1,
-  "generated_at_utc": "2026-10-09T09:17:42.996635+00:00",
+  "generated_at_utc": "2026-10-27T03:59:05.149133+00:00",
   "default_id": "monthly-20",
   "experiments": [
     {
@@ -2580,6 +2580,75 @@
   "current_plan": {
     "status": "unavailable",
     "reason": "No pinned same-session plan is connected."
+  },
+  "current_momentum": {
+    "status": "available",
+    "scope": "indicative_price_only",
+    "as_of": "2026-10-26",
+    "captured_at_utc": "2026-10-27T03:59:04.658333+00:00",
+    "source_sha256": "252c8ffe1a9c2033fb13e58297b9f3606e5b3fe0d8a859a37098152cdb847277",
+    "lookback_months": 12,
+    "top_n": 3,
+    "universe": [
+      "AVGO",
+      "COST",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "TSM",
+      "UNH",
+      "V"
+    ],
+    "ranking": [
+      {
+        "ticker": "TSM",
+        "score": 0.4539645277036546,
+        "lookback_date": "2025-10-24",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "V",
+        "score": 0.172756949353003,
+        "lookback_date": "2025-10-24",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "UNH",
+        "score": 0.16313354384912016,
+        "lookback_date": "2025-10-24",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "NVDA",
+        "score": 0.16244764961125213,
+        "lookback_date": "2025-10-24",
+        "target_weight": 0
+      },
+      {
+        "ticker": "COST",
+        "score": 0.08462740011537462,
+        "lookback_date": "2025-10-24",
+        "target_weight": 0
+      },
+      {
+        "ticker": "MSFT",
+        "score": 0.02553809171402044,
+        "lookback_date": "2025-10-24",
+        "target_weight": 0
+      },
+      {
+        "ticker": "AVGO",
+        "score": -0.06357127775798355,
+        "lookback_date": "2025-10-24",
+        "target_weight": 0
+      },
+      {
+        "ticker": "ORCL",
+        "score": -0.5491241300487896,
+        "lookback_date": "2025-10-24",
+        "target_weight": 0
+      }
+    ]
   },
   "reliability_status": "Unconfirmed",
   "promotion_ready": false,
