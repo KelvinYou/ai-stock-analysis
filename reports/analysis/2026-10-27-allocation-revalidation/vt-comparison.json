@@ -1,0 +1,3254 @@
+{
+  "protocol": {
+    "captured_at_utc": "2026-10-27T03:51:14.565626+00:00",
+    "scope": "post_hoc_current_provider_vintage_research_only",
+    "universe": [
+      "AVGO",
+      "COST",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "TSM",
+      "UNH",
+      "V"
+    ],
+    "reference": "VT",
+    "lookback_months": 12,
+    "top_n": 3,
+    "signal_start": "2018-01-01",
+    "signal_end": "2026-08-14",
+    "scenarios_cost_bps_and_block_months": [
+      [
+        20,
+        3
+      ],
+      [
+        40,
+        3
+      ],
+      [
+        80,
+        3
+      ],
+      [
+        20,
+        6
+      ],
+      [
+        20,
+        12
+      ]
+    ],
+    "costs": "assumed_proportional_not_broker_calibrated",
+    "hashes": {
+      "AVGO": "4b6fa3a1f70319e9a1e3f05745a2c775125761dc88154b8b8737b35dcc439046",
+      "COST": "fe190247ecb871df90625f1baed4ef5e0dd48ac78e113320709a51832276cc80",
+      "MSFT": "93f83cdbc4898c3e71cdc52abb6be1a0386121cc4de54eda12e897bc7329182e",
+      "NVDA": "69c4052e449c6a14e19edb62241e2d0697bf1ff4ac55897795a211cc7a221b0b",
+      "ORCL": "abc4f7dc6e6e20e578245a5dfed1995d38991efce4cba8a930bf48aee88aedfc",
+      "TSM": "d750ea380068a65d85061800bcb27d668820d4d1905cb5e9169b0381a432e6ff",
+      "UNH": "a2d9aba6fc3979c70a3bcb29e419f5b259a1cf07e8fdca146e82e56e577d9e25",
+      "V": "12990e1010f903ee461370f1eccddffae3eae7604a149e05ffea0fd5a7b5649d",
+      "VT": "7b19b9b2c87c791aeaed99d706c32ca85dfbcf1ddda38010ed3d1bcdb24c2cac"
+    }
+  },
+  "scenarios": [
+    {
+      "cost_bps_per_side": 20,
+      "block_months": 3,
+      "entry_date": "2018-02-01",
+      "exit_date": "2026-09-01",
+      "periods": 103,
+      "effective_n": 103.0,
+      "allocator_net_return": 12.673842739888638,
+      "eight_stock_hold_net_return": 9.802898273420807,
+      "vt_net_return": 1.427675007367403,
+      "allocator_max_drawdown": -0.3560132630837738,
+      "vt_max_drawdown": -0.3423621375847057,
+      "mean_monthly_paired_log_excess_ci_95": [
+        0.006948848828807797,
+        0.02867218631307312
+      ],
+      "promotion_ready": false,
+      "period_log": [
+        {
+          "entry_date": "2018-02-01",
+          "exit_date": "2018-03-01",
+          "allocator_return": -0.014967506036272948,
+          "vt_return": -0.043540787720882546
+        },
+        {
+          "entry_date": "2018-03-01",
+          "exit_date": "2018-04-02",
+          "allocator_return": -0.03137405124019477,
+          "vt_return": -0.015744830191931847
+        },
+        {
+          "entry_date": "2018-04-02",
+          "exit_date": "2018-05-01",
+          "allocator_return": -0.03445725279586176,
+          "vt_return": 0.006812863534560787
+        },
+        {
+          "entry_date": "2018-05-01",
+          "exit_date": "2018-06-01",
+          "allocator_return": 0.08008419365918784,
+          "vt_return": 0.012992232572954343
+        },
+        {
+          "entry_date": "2018-06-01",
+          "exit_date": "2018-07-02",
+          "allocator_return": -0.027837100877283083,
+          "vt_return": -0.02215196146003129
+        },
+        {
+          "entry_date": "2018-07-02",
+          "exit_date": "2018-08-01",
+          "allocator_return": 0.05794708104503288,
+          "vt_return": 0.0382656351288011
+        },
+        {
+          "entry_date": "2018-08-01",
+          "exit_date": "2018-09-04",
+          "allocator_return": 0.0850184305109658,
+          "vt_return": 0.0029163885016063595
+        },
+        {
+          "entry_date": "2018-09-04",
+          "exit_date": "2018-10-01",
+          "allocator_return": 0.020282862811332736,
+          "vt_return": 0.012853671975297187
+        },
+        {
+          "entry_date": "2018-10-01",
+          "exit_date": "2018-11-01",
+          "allocator_return": -0.11745676113475223,
+          "vt_return": -0.07671107702359758
+        },
+        {
+          "entry_date": "2018-11-01",
+          "exit_date": "2018-12-03",
+          "allocator_return": 0.03887875766761417,
+          "vt_return": 0.027694960028918247
+        },
+        {
+          "entry_date": "2018-12-03",
+          "exit_date": "2019-01-02",
+          "allocator_return": -0.11783355745675739,
+          "vt_return": -0.10148314213957177
+        },
+        {
+          "entry_date": "2019-01-02",
+          "exit_date": "2019-02-01",
+          "allocator_return": 0.05920865960049926,
+          "vt_return": 0.09686963890045241
+        },
+        {
+          "entry_date": "2019-02-01",
+          "exit_date": "2019-03-01",
+          "allocator_return": 0.00982207271722424,
+          "vt_return": 0.032923260588611614
+        },
+        {
+          "entry_date": "2019-03-01",
+          "exit_date": "2019-04-01",
+          "allocator_return": 0.06888932091452782,
+          "vt_return": 0.012942820219650653
+        },
+        {
+          "entry_date": "2019-04-01",
+          "exit_date": "2019-05-01",
+          "allocator_return": 0.06850283961205217,
+          "vt_return": 0.02914854561633562
+        },
+        {
+          "entry_date": "2019-05-01",
+          "exit_date": "2019-06-03",
+          "allocator_return": -0.09412917962731926,
+          "vt_return": -0.060202814708194
+        },
+        {
+          "entry_date": "2019-06-03",
+          "exit_date": "2019-07-01",
+          "allocator_return": 0.09916633833860256,
+          "vt_return": 0.07360929386388837
+        },
+        {
+          "entry_date": "2019-07-01",
+          "exit_date": "2019-08-01",
+          "allocator_return": 0.003934255917739549,
+          "vt_return": -0.009470933051211494
+        },
+        {
+          "entry_date": "2019-08-01",
+          "exit_date": "2019-09-03",
+          "allocator_return": -0.008072303449812246,
+          "vt_return": -0.029748000110220385
+        },
+        {
+          "entry_date": "2019-09-03",
+          "exit_date": "2019-10-01",
+          "allocator_return": 0.0025846694253097713,
+          "vt_return": 0.03165603563323072
+        },
+        {
+          "entry_date": "2019-10-01",
+          "exit_date": "2019-11-01",
+          "allocator_return": 0.040862173279092584,
+          "vt_return": 0.03189195422645086
+        },
+        {
+          "entry_date": "2019-11-01",
+          "exit_date": "2019-12-02",
+          "allocator_return": 0.056727479704020256,
+          "vt_return": 0.020302890936053863
+        },
+        {
+          "entry_date": "2019-12-02",
+          "exit_date": "2020-01-02",
+          "allocator_return": 0.06060950168840651,
+          "vt_return": 0.039884100145165524
+        },
+        {
+          "entry_date": "2020-01-02",
+          "exit_date": "2020-02-03",
+          "allocator_return": -0.009833223346759845,
+          "vt_return": -0.01756130870920458
+        },
+        {
+          "entry_date": "2020-02-03",
+          "exit_date": "2020-03-02",
+          "allocator_return": 0.04943404129162121,
+          "vt_return": -0.07425003410805797
+        },
+        {
+          "entry_date": "2020-03-02",
+          "exit_date": "2020-04-01",
+          "allocator_return": -0.09397805535041637,
+          "vt_return": -0.17714841503280954
+        },
+        {
+          "entry_date": "2020-04-01",
+          "exit_date": "2020-05-01",
+          "allocator_return": 0.1272802731100351,
+          "vt_return": 0.12141658091541108
+        },
+        {
+          "entry_date": "2020-05-01",
+          "exit_date": "2020-06-01",
+          "allocator_return": 0.08462038443623676,
+          "vt_return": 0.07448218016961095
+        },
+        {
+          "entry_date": "2020-06-01",
+          "exit_date": "2020-07-01",
+          "allocator_return": 0.10608408354701715,
+          "vt_return": 0.03077132087374057
+        },
+        {
+          "entry_date": "2020-07-01",
+          "exit_date": "2020-08-03",
+          "allocator_return": 0.17785731661623871,
+          "vt_return": 0.05677754677040814
+        },
+        {
+          "entry_date": "2020-08-03",
+          "exit_date": "2020-09-01",
+          "allocator_return": 0.11831759470138281,
+          "vt_return": 0.05536620449062868
+        },
+        {
+          "entry_date": "2020-09-01",
+          "exit_date": "2020-10-01",
+          "allocator_return": -0.0011409268133523165,
+          "vt_return": -0.024073011673712563
+        },
+        {
+          "entry_date": "2020-10-01",
+          "exit_date": "2020-11-02",
+          "allocator_return": -0.030737762971741467,
+          "vt_return": -0.017228869523523316
+        },
+        {
+          "entry_date": "2020-11-02",
+          "exit_date": "2020-12-01",
+          "allocator_return": 0.09503767940015284,
+          "vt_return": 0.12572022245654857
+        },
+        {
+          "entry_date": "2020-12-01",
+          "exit_date": "2021-01-04",
+          "allocator_return": 0.04768088208962773,
+          "vt_return": 0.045632962917443454
+        },
+        {
+          "entry_date": "2021-01-04",
+          "exit_date": "2021-02-01",
+          "allocator_return": 0.0495695040447397,
+          "vt_return": -0.00021391418462624046
+        },
+        {
+          "entry_date": "2021-02-01",
+          "exit_date": "2021-03-01",
+          "allocator_return": 0.05200327305729169,
+          "vt_return": 0.029115900418118512
+        },
+        {
+          "entry_date": "2021-03-01",
+          "exit_date": "2021-04-01",
+          "allocator_return": -0.026252545857828546,
+          "vt_return": 0.021275855778006836
+        },
+        {
+          "entry_date": "2021-04-01",
+          "exit_date": "2021-05-03",
+          "allocator_return": 0.014926265172597653,
+          "vt_return": 0.041049550402453505
+        },
+        {
+          "entry_date": "2021-05-03",
+          "exit_date": "2021-06-01",
+          "allocator_return": 0.04289800458672799,
+          "vt_return": 0.018342521204773643
+        },
+        {
+          "entry_date": "2021-06-01",
+          "exit_date": "2021-07-01",
+          "allocator_return": 0.08572559295528204,
+          "vt_return": 0.0042100848158328485
+        },
+        {
+          "entry_date": "2021-07-01",
+          "exit_date": "2021-08-02",
+          "allocator_return": -0.006528276731516902,
+          "vt_return": 0.010699803997493706
+        },
+        {
+          "entry_date": "2021-08-02",
+          "exit_date": "2021-09-01",
+          "allocator_return": 0.057209326771775704,
+          "vt_return": 0.021173188318116987
+        },
+        {
+          "entry_date": "2021-09-01",
+          "exit_date": "2021-10-01",
+          "allocator_return": -0.05349419229536423,
+          "vt_return": -0.04285286654889253
+        },
+        {
+          "entry_date": "2021-10-01",
+          "exit_date": "2021-11-01",
+          "allocator_return": 0.11593888695316612,
+          "vt_return": 0.05231174624861712
+        },
+        {
+          "entry_date": "2021-11-01",
+          "exit_date": "2021-12-01",
+          "allocator_return": 0.08713893476859136,
+          "vt_return": -0.016942723011763583
+        },
+        {
+          "entry_date": "2021-12-01",
+          "exit_date": "2022-01-03",
+          "allocator_return": -0.04990950829872731,
+          "vt_return": 0.02956472345165606
+        },
+        {
+          "entry_date": "2022-01-03",
+          "exit_date": "2022-02-01",
+          "allocator_return": -0.11832606812847479,
+          "vt_return": -0.0467982642232172
+        },
+        {
+          "entry_date": "2022-02-01",
+          "exit_date": "2022-03-01",
+          "allocator_return": -0.004973884596815581,
+          "vt_return": -0.03383224616644298
+        },
+        {
+          "entry_date": "2022-03-01",
+          "exit_date": "2022-04-01",
+          "allocator_return": 0.10876223600713675,
+          "vt_return": 0.028182883249648905
+        },
+        {
+          "entry_date": "2022-04-01",
+          "exit_date": "2022-05-02",
+          "allocator_return": -0.17302436948887512,
+          "vt_return": -0.08781393683720462
+        },
+        {
+          "entry_date": "2022-05-02",
+          "exit_date": "2022-06-01",
+          "allocator_return": -0.029948260994909992,
+          "vt_return": 0.012692161948974157
+        },
+        {
+          "entry_date": "2022-06-01",
+          "exit_date": "2022-07-01",
+          "allocator_return": -0.040201704202377675,
+          "vt_return": -0.09242130318414465
+        },
+        {
+          "entry_date": "2022-07-01",
+          "exit_date": "2022-08-01",
+          "allocator_return": 0.09792950111475518,
+          "vt_return": 0.07201793184075123
+        },
+        {
+          "entry_date": "2022-08-01",
+          "exit_date": "2022-09-01",
+          "allocator_return": -0.052548331124625425,
+          "vt_return": -0.04409004394215266
+        },
+        {
+          "entry_date": "2022-09-01",
+          "exit_date": "2022-10-03",
+          "allocator_return": -0.06194638300612476,
+          "vt_return": -0.07767398304048345
+        },
+        {
+          "entry_date": "2022-10-03",
+          "exit_date": "2022-11-01",
+          "allocator_return": 0.0723281867660246,
+          "vt_return": 0.06665814414767213
+        },
+        {
+          "entry_date": "2022-11-01",
+          "exit_date": "2022-12-01",
+          "allocator_return": 0.021626987810468234,
+          "vt_return": 0.0721250639221509
+        },
+        {
+          "entry_date": "2022-12-01",
+          "exit_date": "2023-01-03",
+          "allocator_return": -0.01668506315299323,
+          "vt_return": -0.041050414448670525
+        },
+        {
+          "entry_date": "2023-01-03",
+          "exit_date": "2023-02-01",
+          "allocator_return": 0.040472337081653764,
+          "vt_return": 0.06675855586768242
+        },
+        {
+          "entry_date": "2023-02-01",
+          "exit_date": "2023-03-01",
+          "allocator_return": -0.01786039251591809,
+          "vt_return": -0.02708229245280036
+        },
+        {
+          "entry_date": "2023-03-01",
+          "exit_date": "2023-04-03",
+          "allocator_return": 0.05691254969764703,
+          "vt_return": 0.024734882980808948
+        },
+        {
+          "entry_date": "2023-04-03",
+          "exit_date": "2023-05-01",
+          "allocator_return": 0.014930825937771841,
+          "vt_return": 0.013029312107976754
+        },
+        {
+          "entry_date": "2023-05-01",
+          "exit_date": "2023-06-01",
+          "allocator_return": 0.2547214819989252,
+          "vt_return": -0.008038515313250283
+        },
+        {
+          "entry_date": "2023-06-01",
+          "exit_date": "2023-07-03",
+          "allocator_return": 0.10680319821944506,
+          "vt_return": 0.055748615980413474
+        },
+        {
+          "entry_date": "2023-07-03",
+          "exit_date": "2023-08-01",
+          "allocator_return": 0.0406325063696229,
+          "vt_return": 0.03111471197618032
+        },
+        {
+          "entry_date": "2023-08-01",
+          "exit_date": "2023-09-01",
+          "allocator_return": 0.03638800282815002,
+          "vt_return": -0.015487787521668905
+        },
+        {
+          "entry_date": "2023-09-01",
+          "exit_date": "2023-10-02",
+          "allocator_return": -0.10550348759853578,
+          "vt_return": -0.0522579660778828
+        },
+        {
+          "entry_date": "2023-10-02",
+          "exit_date": "2023-11-01",
+          "allocator_return": -0.02377160675097023,
+          "vt_return": -0.025163913772246804
+        },
+        {
+          "entry_date": "2023-11-01",
+          "exit_date": "2023-12-01",
+          "allocator_return": 0.11408274051627898,
+          "vt_return": 0.0861553855869488
+        },
+        {
+          "entry_date": "2023-12-01",
+          "exit_date": "2024-01-02",
+          "allocator_return": 0.08005266413244616,
+          "vt_return": 0.0450900669503147
+        },
+        {
+          "entry_date": "2024-01-02",
+          "exit_date": "2024-02-01",
+          "allocator_return": 0.14094936029610317,
+          "vt_return": 0.01146054279099884
+        },
+        {
+          "entry_date": "2024-02-01",
+          "exit_date": "2024-03-01",
+          "allocator_return": 0.14336760298660955,
+          "vt_return": 0.043772988712212246
+        },
+        {
+          "entry_date": "2024-03-01",
+          "exit_date": "2024-04-01",
+          "allocator_return": 0.05447475009368996,
+          "vt_return": 0.030514346649821
+        },
+        {
+          "entry_date": "2024-04-01",
+          "exit_date": "2024-05-01",
+          "allocator_return": -0.035651579498931496,
+          "vt_return": -0.03814166380381534
+        },
+        {
+          "entry_date": "2024-05-01",
+          "exit_date": "2024-06-03",
+          "allocator_return": 0.1733607074182717,
+          "vt_return": 0.05158800332841529
+        },
+        {
+          "entry_date": "2024-06-03",
+          "exit_date": "2024-07-01",
+          "allocator_return": 0.10979761082050854,
+          "vt_return": 0.01581522423498516
+        },
+        {
+          "entry_date": "2024-07-01",
+          "exit_date": "2024-08-01",
+          "allocator_return": -0.044153571630979105,
+          "vt_return": 0.014500436885714896
+        },
+        {
+          "entry_date": "2024-08-01",
+          "exit_date": "2024-09-03",
+          "allocator_return": 0.010984343514176098,
+          "vt_return": 0.018912278677245098
+        },
+        {
+          "entry_date": "2024-09-03",
+          "exit_date": "2024-10-01",
+          "allocator_return": 0.05801167932927709,
+          "vt_return": 0.027643976885944666
+        },
+        {
+          "entry_date": "2024-10-01",
+          "exit_date": "2024-11-01",
+          "allocator_return": 0.06374802542504243,
+          "vt_return": -0.016371556279644817
+        },
+        {
+          "entry_date": "2024-11-01",
+          "exit_date": "2024-12-02",
+          "allocator_return": -0.008694706405785735,
+          "vt_return": 0.036854618837625974
+        },
+        {
+          "entry_date": "2024-12-02",
+          "exit_date": "2025-01-02",
+          "allocator_return": 0.15883776400761995,
+          "vt_return": -0.026510011679189982
+        },
+        {
+          "entry_date": "2025-01-02",
+          "exit_date": "2025-02-03",
+          "allocator_return": -0.07700707114527694,
+          "vt_return": 0.01051014896319713
+        },
+        {
+          "entry_date": "2025-02-03",
+          "exit_date": "2025-03-03",
+          "allocator_return": -0.023203563203821775,
+          "vt_return": 0.01904046471173637
+        },
+        {
+          "entry_date": "2025-03-03",
+          "exit_date": "2025-04-01",
+          "allocator_return": -0.15596116143549044,
+          "vt_return": -0.04570362081512169
+        },
+        {
+          "entry_date": "2025-04-01",
+          "exit_date": "2025-05-01",
+          "allocator_return": 0.07443777531059537,
+          "vt_return": 0.01825885477346212
+        },
+        {
+          "entry_date": "2025-05-01",
+          "exit_date": "2025-06-02",
+          "allocator_return": 0.1082962337094,
+          "vt_return": 0.047080804550007294
+        },
+        {
+          "entry_date": "2025-06-02",
+          "exit_date": "2025-07-01",
+          "allocator_return": 0.14647989633145642,
+          "vt_return": 0.04613360083489093
+        },
+        {
+          "entry_date": "2025-07-01",
+          "exit_date": "2025-08-01",
+          "allocator_return": 0.04964080639211299,
+          "vt_return": 0.006236449438305813
+        },
+        {
+          "entry_date": "2025-08-01",
+          "exit_date": "2025-09-02",
+          "allocator_return": -0.03995933299285137,
+          "vt_return": 0.02502319331704106
+        },
+        {
+          "entry_date": "2025-09-02",
+          "exit_date": "2025-10-01",
+          "allocator_return": 0.16049455286398517,
+          "vt_return": 0.044058095776613015
+        },
+        {
+          "entry_date": "2025-10-01",
+          "exit_date": "2025-11-03",
+          "allocator_return": 0.05707161514886505,
+          "vt_return": 0.024989169919481524
+        },
+        {
+          "entry_date": "2025-11-03",
+          "exit_date": "2025-12-01",
+          "allocator_return": -0.07820826542354076,
+          "vt_return": -0.006591206975560593
+        },
+        {
+          "entry_date": "2025-12-01",
+          "exit_date": "2026-01-02",
+          "allocator_return": 0.023247321053431858,
+          "vt_return": 0.02303270792964285
+        },
+        {
+          "entry_date": "2026-01-02",
+          "exit_date": "2026-02-02",
+          "allocator_return": -0.009853018200623898,
+          "vt_return": 0.02052580482987465
+        },
+        {
+          "entry_date": "2026-02-02",
+          "exit_date": "2026-03-02",
+          "allocator_return": -0.0040045900888373565,
+          "vt_return": 0.0019975456045984163
+        },
+        {
+          "entry_date": "2026-03-02",
+          "exit_date": "2026-04-01",
+          "allocator_return": -0.011833786619656395,
+          "vt_return": -0.039889556561441775
+        },
+        {
+          "entry_date": "2026-04-01",
+          "exit_date": "2026-05-01",
+          "allocator_return": 0.20406079741923744,
+          "vt_return": 0.08798628606027048
+        },
+        {
+          "entry_date": "2026-05-01",
+          "exit_date": "2026-06-01",
+          "allocator_return": 0.07860140576394992,
+          "vt_return": 0.042480137043334976
+        },
+        {
+          "entry_date": "2026-06-01",
+          "exit_date": "2026-07-01",
+          "allocator_return": -0.05289109111126078,
+          "vt_return": -0.008135609454402726
+        },
+        {
+          "entry_date": "2026-07-01",
+          "exit_date": "2026-08-03",
+          "allocator_return": -0.03703884441695371,
+          "vt_return": 0.001344483332410773
+        },
+        {
+          "entry_date": "2026-08-03",
+          "exit_date": "2026-09-01",
+          "allocator_return": -0.025429153246056657,
+          "vt_return": 0.018419465808007907
+        }
+      ]
+    },
+    {
+      "cost_bps_per_side": 40,
+      "block_months": 3,
+      "entry_date": "2018-02-01",
+      "exit_date": "2026-09-01",
+      "periods": 103,
+      "effective_n": 103.0,
+      "allocator_net_return": 12.186215729677782,
+      "eight_stock_hold_net_return": 9.759643468907553,
+      "vt_net_return": 1.4179545966769025,
+      "allocator_max_drawdown": -0.35737072282282867,
+      "vt_max_drawdown": -0.3423621375847056,
+      "mean_monthly_paired_log_excess_ci_95": [
+        0.006635089714500235,
+        0.028332378846018372
+      ],
+      "promotion_ready": false,
+      "period_log": [
+        {
+          "entry_date": "2018-02-01",
+          "exit_date": "2018-03-01",
+          "allocator_return": -0.016941519050228337,
+          "vt_return": -0.04545753964929755
+        },
+        {
+          "entry_date": "2018-03-01",
+          "exit_date": "2018-04-02",
+          "allocator_return": -0.032040336071944564,
+          "vt_return": -0.015744830191931847
+        },
+        {
+          "entry_date": "2018-04-02",
+          "exit_date": "2018-05-01",
+          "allocator_return": -0.034477492545066935,
+          "vt_return": 0.006812863534560787
+        },
+        {
+          "entry_date": "2018-05-01",
+          "exit_date": "2018-06-01",
+          "allocator_return": 0.07936365717242388,
+          "vt_return": 0.012992232572954343
+        },
+        {
+          "entry_date": "2018-06-01",
+          "exit_date": "2018-07-02",
+          "allocator_return": -0.028492286612725626,
+          "vt_return": -0.02215196146003129
+        },
+        {
+          "entry_date": "2018-07-02",
+          "exit_date": "2018-08-01",
+          "allocator_return": 0.057204138665073234,
+          "vt_return": 0.0382656351288011
+        },
+        {
+          "entry_date": "2018-08-01",
+          "exit_date": "2018-09-04",
+          "allocator_return": 0.08428963750702634,
+          "vt_return": 0.0029163885016063595
+        },
+        {
+          "entry_date": "2018-09-04",
+          "exit_date": "2018-10-01",
+          "allocator_return": 0.020249599220127035,
+          "vt_return": 0.012853671975297187
+        },
+        {
+          "entry_date": "2018-10-01",
+          "exit_date": "2018-11-01",
+          "allocator_return": -0.11746533374820245,
+          "vt_return": -0.07671107702359758
+        },
+        {
+          "entry_date": "2018-11-01",
+          "exit_date": "2018-12-03",
+          "allocator_return": 0.03818570979725555,
+          "vt_return": 0.027694960028918247
+        },
+        {
+          "entry_date": "2018-12-03",
+          "exit_date": "2019-01-02",
+          "allocator_return": -0.11784828732973684,
+          "vt_return": -0.10148314213957177
+        },
+        {
+          "entry_date": "2019-01-02",
+          "exit_date": "2019-02-01",
+          "allocator_return": 0.058501081272531286,
+          "vt_return": 0.09686963890045241
+        },
+        {
+          "entry_date": "2019-02-01",
+          "exit_date": "2019-03-01",
+          "allocator_return": 0.009137326388072298,
+          "vt_return": 0.032923260588611614
+        },
+        {
+          "entry_date": "2019-03-01",
+          "exit_date": "2019-04-01",
+          "allocator_return": 0.06817625265507865,
+          "vt_return": 0.012942820219650653
+        },
+        {
+          "entry_date": "2019-04-01",
+          "exit_date": "2019-05-01",
+          "allocator_return": 0.06848184080004494,
+          "vt_return": 0.02914854561633562
+        },
+        {
+          "entry_date": "2019-05-01",
+          "exit_date": "2019-06-03",
+          "allocator_return": -0.09414547316593624,
+          "vt_return": -0.060202814708194
+        },
+        {
+          "entry_date": "2019-06-03",
+          "exit_date": "2019-07-01",
+          "allocator_return": 0.09843307193544137,
+          "vt_return": 0.07360929386388837
+        },
+        {
+          "entry_date": "2019-07-01",
+          "exit_date": "2019-08-01",
+          "allocator_return": 0.0032556641549215115,
+          "vt_return": -0.009470933051211494
+        },
+        {
+          "entry_date": "2019-08-01",
+          "exit_date": "2019-09-03",
+          "allocator_return": -0.008735285136907911,
+          "vt_return": -0.029748000110220385
+        },
+        {
+          "entry_date": "2019-09-03",
+          "exit_date": "2019-10-01",
+          "allocator_return": 0.0018995375257389036,
+          "vt_return": 0.03165603563323072
+        },
+        {
+          "entry_date": "2019-10-01",
+          "exit_date": "2019-11-01",
+          "allocator_return": 0.040848992655648564,
+          "vt_return": 0.03189195422645086
+        },
+        {
+          "entry_date": "2019-11-01",
+          "exit_date": "2019-12-02",
+          "allocator_return": 0.056017144742359415,
+          "vt_return": 0.020302890936053863
+        },
+        {
+          "entry_date": "2019-12-02",
+          "exit_date": "2020-01-02",
+          "allocator_return": 0.060591468995155884,
+          "vt_return": 0.039884100145165524
+        },
+        {
+          "entry_date": "2020-01-02",
+          "exit_date": "2020-02-03",
+          "allocator_return": -0.01050294535641405,
+          "vt_return": -0.01756130870920458
+        },
+        {
+          "entry_date": "2020-02-03",
+          "exit_date": "2020-03-02",
+          "allocator_return": 0.04937576049882608,
+          "vt_return": -0.07425003410805797
+        },
+        {
+          "entry_date": "2020-03-02",
+          "exit_date": "2020-04-01",
+          "allocator_return": -0.09405058307113168,
+          "vt_return": -0.17714841503280954
+        },
+        {
+          "entry_date": "2020-04-01",
+          "exit_date": "2020-05-01",
+          "allocator_return": 0.12724991434612276,
+          "vt_return": 0.12141658091541108
+        },
+        {
+          "entry_date": "2020-05-01",
+          "exit_date": "2020-06-01",
+          "allocator_return": 0.08460645968159963,
+          "vt_return": 0.07448218016961095
+        },
+        {
+          "entry_date": "2020-06-01",
+          "exit_date": "2020-07-01",
+          "allocator_return": 0.10597668798626447,
+          "vt_return": 0.03077132087374057
+        },
+        {
+          "entry_date": "2020-07-01",
+          "exit_date": "2020-08-03",
+          "allocator_return": 0.1778375337870417,
+          "vt_return": 0.05677754677040814
+        },
+        {
+          "entry_date": "2020-08-03",
+          "exit_date": "2020-09-01",
+          "allocator_return": 0.11819907549959763,
+          "vt_return": 0.05536620449062868
+        },
+        {
+          "entry_date": "2020-09-01",
+          "exit_date": "2020-10-01",
+          "allocator_return": -0.001223060322623426,
+          "vt_return": -0.024073011673712563
+        },
+        {
+          "entry_date": "2020-10-01",
+          "exit_date": "2020-11-02",
+          "allocator_return": -0.03077155780841201,
+          "vt_return": -0.017228869523523316
+        },
+        {
+          "entry_date": "2020-11-02",
+          "exit_date": "2020-12-01",
+          "allocator_return": 0.0949912404524269,
+          "vt_return": 0.12572022245654857
+        },
+        {
+          "entry_date": "2020-12-01",
+          "exit_date": "2021-01-04",
+          "allocator_return": 0.04763529955141932,
+          "vt_return": 0.045632962917443454
+        },
+        {
+          "entry_date": "2021-01-04",
+          "exit_date": "2021-02-01",
+          "allocator_return": 0.048818366795804646,
+          "vt_return": -0.00021391418462624046
+        },
+        {
+          "entry_date": "2021-02-01",
+          "exit_date": "2021-03-01",
+          "allocator_return": 0.05195857928515091,
+          "vt_return": 0.029115900418118512
+        },
+        {
+          "entry_date": "2021-03-01",
+          "exit_date": "2021-04-01",
+          "allocator_return": -0.026259443026940277,
+          "vt_return": 0.021275855778006836
+        },
+        {
+          "entry_date": "2021-04-01",
+          "exit_date": "2021-05-03",
+          "allocator_return": 0.014910425008601624,
+          "vt_return": 0.041049550402453505
+        },
+        {
+          "entry_date": "2021-05-03",
+          "exit_date": "2021-06-01",
+          "allocator_return": 0.04282986433855118,
+          "vt_return": 0.018342521204773643
+        },
+        {
+          "entry_date": "2021-06-01",
+          "exit_date": "2021-07-01",
+          "allocator_return": 0.08570287364328144,
+          "vt_return": 0.0042100848158328485
+        },
+        {
+          "entry_date": "2021-07-01",
+          "exit_date": "2021-08-02",
+          "allocator_return": -0.006620686093643857,
+          "vt_return": 0.010699803997493706
+        },
+        {
+          "entry_date": "2021-08-02",
+          "exit_date": "2021-09-01",
+          "allocator_return": 0.056493621183313136,
+          "vt_return": 0.021173188318116987
+        },
+        {
+          "entry_date": "2021-09-01",
+          "exit_date": "2021-10-01",
+          "allocator_return": -0.05414979749984783,
+          "vt_return": -0.04285286654889253
+        },
+        {
+          "entry_date": "2021-10-01",
+          "exit_date": "2021-11-01",
+          "allocator_return": 0.115910583234627,
+          "vt_return": 0.05231174624861712
+        },
+        {
+          "entry_date": "2021-11-01",
+          "exit_date": "2021-12-01",
+          "allocator_return": 0.0864018110566318,
+          "vt_return": -0.016942723011763583
+        },
+        {
+          "entry_date": "2021-12-01",
+          "exit_date": "2022-01-03",
+          "allocator_return": -0.05003029014684102,
+          "vt_return": 0.02956472345165606
+        },
+        {
+          "entry_date": "2022-01-03",
+          "exit_date": "2022-02-01",
+          "allocator_return": -0.11894687610252552,
+          "vt_return": -0.0467982642232172
+        },
+        {
+          "entry_date": "2022-02-01",
+          "exit_date": "2022-03-01",
+          "allocator_return": -0.006332740640134782,
+          "vt_return": -0.03383224616644298
+        },
+        {
+          "entry_date": "2022-03-01",
+          "exit_date": "2022-04-01",
+          "allocator_return": 0.10873715498292302,
+          "vt_return": 0.028182883249648905
+        },
+        {
+          "entry_date": "2022-04-01",
+          "exit_date": "2022-05-02",
+          "allocator_return": -0.17357605436580048,
+          "vt_return": -0.08781393683720462
+        },
+        {
+          "entry_date": "2022-05-02",
+          "exit_date": "2022-06-01",
+          "allocator_return": -0.03059539357596741,
+          "vt_return": 0.012692161948974157
+        },
+        {
+          "entry_date": "2022-06-01",
+          "exit_date": "2022-07-01",
+          "allocator_return": -0.04026023443606508,
+          "vt_return": -0.09242130318414465
+        },
+        {
+          "entry_date": "2022-07-01",
+          "exit_date": "2022-08-01",
+          "allocator_return": 0.09782487734191259,
+          "vt_return": 0.07201793184075123
+        },
+        {
+          "entry_date": "2022-08-01",
+          "exit_date": "2022-09-01",
+          "allocator_return": -0.052571096607577195,
+          "vt_return": -0.04409004394215266
+        },
+        {
+          "entry_date": "2022-09-01",
+          "exit_date": "2022-10-03",
+          "allocator_return": -0.06196134481292093,
+          "vt_return": -0.07767398304048345
+        },
+        {
+          "entry_date": "2022-10-03",
+          "exit_date": "2022-11-01",
+          "allocator_return": 0.07229663039475875,
+          "vt_return": 0.06665814414767213
+        },
+        {
+          "entry_date": "2022-11-01",
+          "exit_date": "2022-12-01",
+          "allocator_return": 0.020939785452309678,
+          "vt_return": 0.0721250639221509
+        },
+        {
+          "entry_date": "2022-12-01",
+          "exit_date": "2023-01-03",
+          "allocator_return": -0.017358426236224633,
+          "vt_return": -0.041050414448670525
+        },
+        {
+          "entry_date": "2023-01-03",
+          "exit_date": "2023-02-01",
+          "allocator_return": 0.03974298797581377,
+          "vt_return": 0.06675855586768242
+        },
+        {
+          "entry_date": "2023-02-01",
+          "exit_date": "2023-03-01",
+          "allocator_return": -0.018571730114817275,
+          "vt_return": -0.02708229245280036
+        },
+        {
+          "entry_date": "2023-03-01",
+          "exit_date": "2023-04-03",
+          "allocator_return": 0.05620747127890291,
+          "vt_return": 0.024734882980808948
+        },
+        {
+          "entry_date": "2023-04-03",
+          "exit_date": "2023-05-01",
+          "allocator_return": 0.014910784504086783,
+          "vt_return": 0.013029312107976754
+        },
+        {
+          "entry_date": "2023-05-01",
+          "exit_date": "2023-06-01",
+          "allocator_return": 0.2538559603210955,
+          "vt_return": -0.008038515313250283
+        },
+        {
+          "entry_date": "2023-06-01",
+          "exit_date": "2023-07-03",
+          "allocator_return": 0.10671547702751227,
+          "vt_return": 0.055748615980413474
+        },
+        {
+          "entry_date": "2023-07-03",
+          "exit_date": "2023-08-01",
+          "allocator_return": 0.040621036685623224,
+          "vt_return": 0.03111471197618032
+        },
+        {
+          "entry_date": "2023-08-01",
+          "exit_date": "2023-09-01",
+          "allocator_return": 0.03635341344006782,
+          "vt_return": -0.015487787521668905
+        },
+        {
+          "entry_date": "2023-09-01",
+          "exit_date": "2023-10-02",
+          "allocator_return": -0.10552342442664286,
+          "vt_return": -0.0522579660778828
+        },
+        {
+          "entry_date": "2023-10-02",
+          "exit_date": "2023-11-01",
+          "allocator_return": -0.023793258113624538,
+          "vt_return": -0.025163913772246804
+        },
+        {
+          "entry_date": "2023-11-01",
+          "exit_date": "2023-12-01",
+          "allocator_return": 0.1133031829377038,
+          "vt_return": 0.0861553855869488
+        },
+        {
+          "entry_date": "2023-12-01",
+          "exit_date": "2024-01-02",
+          "allocator_return": 0.08003773629528821,
+          "vt_return": 0.0450900669503147
+        },
+        {
+          "entry_date": "2024-01-02",
+          "exit_date": "2024-02-01",
+          "allocator_return": 0.14087238289331028,
+          "vt_return": 0.01146054279099884
+        },
+        {
+          "entry_date": "2024-02-01",
+          "exit_date": "2024-03-01",
+          "allocator_return": 0.1432874058756275,
+          "vt_return": 0.043772988712212246
+        },
+        {
+          "entry_date": "2024-03-01",
+          "exit_date": "2024-04-01",
+          "allocator_return": 0.05438572255553109,
+          "vt_return": 0.030514346649821
+        },
+        {
+          "entry_date": "2024-04-01",
+          "exit_date": "2024-05-01",
+          "allocator_return": -0.0363257325500308,
+          "vt_return": -0.03814166380381534
+        },
+        {
+          "entry_date": "2024-05-01",
+          "exit_date": "2024-06-03",
+          "allocator_return": 0.1725587950209051,
+          "vt_return": 0.05158800332841529
+        },
+        {
+          "entry_date": "2024-06-03",
+          "exit_date": "2024-07-01",
+          "allocator_return": 0.1089840650584355,
+          "vt_return": 0.01581522423498516
+        },
+        {
+          "entry_date": "2024-07-01",
+          "exit_date": "2024-08-01",
+          "allocator_return": -0.04480492408042125,
+          "vt_return": 0.014500436885714896
+        },
+        {
+          "entry_date": "2024-08-01",
+          "exit_date": "2024-09-03",
+          "allocator_return": 0.01096823649102907,
+          "vt_return": 0.018912278677245098
+        },
+        {
+          "entry_date": "2024-09-03",
+          "exit_date": "2024-10-01",
+          "allocator_return": 0.05799498156608207,
+          "vt_return": 0.027643976885944666
+        },
+        {
+          "entry_date": "2024-10-01",
+          "exit_date": "2024-11-01",
+          "allocator_return": 0.06373532168534823,
+          "vt_return": -0.016371556279644817
+        },
+        {
+          "entry_date": "2024-11-01",
+          "exit_date": "2024-12-02",
+          "allocator_return": -0.008748394894123934,
+          "vt_return": 0.036854618837625974
+        },
+        {
+          "entry_date": "2024-12-02",
+          "exit_date": "2025-01-02",
+          "allocator_return": 0.15880713557457748,
+          "vt_return": -0.026510011679189982
+        },
+        {
+          "entry_date": "2025-01-02",
+          "exit_date": "2025-02-03",
+          "allocator_return": -0.07716335970829791,
+          "vt_return": 0.01051014896319713
+        },
+        {
+          "entry_date": "2025-02-03",
+          "exit_date": "2025-03-03",
+          "allocator_return": -0.023267195870025015,
+          "vt_return": 0.01904046471173637
+        },
+        {
+          "entry_date": "2025-03-03",
+          "exit_date": "2025-04-01",
+          "allocator_return": -0.15654156146685128,
+          "vt_return": -0.04570362081512169
+        },
+        {
+          "entry_date": "2025-04-01",
+          "exit_date": "2025-05-01",
+          "allocator_return": 0.0729806491908187,
+          "vt_return": 0.01825885477346212
+        },
+        {
+          "entry_date": "2025-05-01",
+          "exit_date": "2025-06-02",
+          "allocator_return": 0.10821720780983024,
+          "vt_return": 0.047080804550007294
+        },
+        {
+          "entry_date": "2025-06-02",
+          "exit_date": "2025-07-01",
+          "allocator_return": 0.14567578264667036,
+          "vt_return": 0.04613360083489093
+        },
+        {
+          "entry_date": "2025-07-01",
+          "exit_date": "2025-08-01",
+          "allocator_return": 0.04952580625106995,
+          "vt_return": 0.006236449438305813
+        },
+        {
+          "entry_date": "2025-08-01",
+          "exit_date": "2025-09-02",
+          "allocator_return": -0.04060315336460152,
+          "vt_return": 0.02502319331704106
+        },
+        {
+          "entry_date": "2025-09-02",
+          "exit_date": "2025-10-01",
+          "allocator_return": 0.1604422774929517,
+          "vt_return": 0.044058095776613015
+        },
+        {
+          "entry_date": "2025-10-01",
+          "exit_date": "2025-11-03",
+          "allocator_return": 0.05635155122522417,
+          "vt_return": 0.024989169919481524
+        },
+        {
+          "entry_date": "2025-11-03",
+          "exit_date": "2025-12-01",
+          "allocator_return": -0.07826914045540734,
+          "vt_return": -0.006591206975560593
+        },
+        {
+          "entry_date": "2025-12-01",
+          "exit_date": "2026-01-02",
+          "allocator_return": 0.02256470109275588,
+          "vt_return": 0.02303270792964285
+        },
+        {
+          "entry_date": "2026-01-02",
+          "exit_date": "2026-02-02",
+          "allocator_return": -0.00993603763190043,
+          "vt_return": 0.02052580482987465
+        },
+        {
+          "entry_date": "2026-02-02",
+          "exit_date": "2026-03-02",
+          "allocator_return": -0.0040515079910745655,
+          "vt_return": 0.0019975456045984163
+        },
+        {
+          "entry_date": "2026-03-02",
+          "exit_date": "2026-04-01",
+          "allocator_return": -0.011905596301297505,
+          "vt_return": -0.039889556561441775
+        },
+        {
+          "entry_date": "2026-04-01",
+          "exit_date": "2026-05-01",
+          "allocator_return": 0.20402479508302274,
+          "vt_return": 0.08798628606027048
+        },
+        {
+          "entry_date": "2026-05-01",
+          "exit_date": "2026-06-01",
+          "allocator_return": 0.07852943813939484,
+          "vt_return": 0.042480137043334976
+        },
+        {
+          "entry_date": "2026-06-01",
+          "exit_date": "2026-07-01",
+          "allocator_return": -0.05289512006026864,
+          "vt_return": -0.008135609454402726
+        },
+        {
+          "entry_date": "2026-07-01",
+          "exit_date": "2026-08-03",
+          "allocator_return": -0.037762424433289365,
+          "vt_return": 0.001344483332410773
+        },
+        {
+          "entry_date": "2026-08-03",
+          "exit_date": "2026-09-01",
+          "allocator_return": -0.02745428117961357,
+          "vt_return": 0.016378545034845704
+        }
+      ]
+    },
+    {
+      "cost_bps_per_side": 80,
+      "block_months": 3,
+      "entry_date": "2018-02-01",
+      "exit_date": "2026-09-01",
+      "periods": 103,
+      "effective_n": 103.0,
+      "allocator_net_return": 11.261393043400105,
+      "eight_stock_hold_net_return": 9.673394169637424,
+      "vt_net_return": 1.3985722732539188,
+      "allocator_max_drawdown": -0.36008152541358074,
+      "vt_max_drawdown": -0.3423621375847057,
+      "mean_monthly_paired_log_excess_ci_95": [
+        0.006038874746487707,
+        0.02775501311902126
+      ],
+      "promotion_ready": false,
+      "period_log": [
+        {
+          "entry_date": "2018-02-01",
+          "exit_date": "2018-03-01",
+          "allocator_return": -0.020889545078139005,
+          "vt_return": -0.049291043506127674
+        },
+        {
+          "entry_date": "2018-03-01",
+          "exit_date": "2018-04-02",
+          "allocator_return": -0.03337290573544438,
+          "vt_return": -0.015744830191931847
+        },
+        {
+          "entry_date": "2018-04-02",
+          "exit_date": "2018-05-01",
+          "allocator_return": -0.034517972043477285,
+          "vt_return": 0.006812863534560787
+        },
+        {
+          "entry_date": "2018-05-01",
+          "exit_date": "2018-06-01",
+          "allocator_return": 0.07792258419889597,
+          "vt_return": 0.012992232572954343
+        },
+        {
+          "entry_date": "2018-06-01",
+          "exit_date": "2018-07-02",
+          "allocator_return": -0.029802658083610822,
+          "vt_return": -0.02215196146003129
+        },
+        {
+          "entry_date": "2018-07-02",
+          "exit_date": "2018-08-01",
+          "allocator_return": 0.055718253905153725,
+          "vt_return": 0.0382656351288011
+        },
+        {
+          "entry_date": "2018-08-01",
+          "exit_date": "2018-09-04",
+          "allocator_return": 0.08283205149914741,
+          "vt_return": 0.0029163885016063595
+        },
+        {
+          "entry_date": "2018-09-04",
+          "exit_date": "2018-10-01",
+          "allocator_return": 0.020183072037716077,
+          "vt_return": 0.012853671975297187
+        },
+        {
+          "entry_date": "2018-10-01",
+          "exit_date": "2018-11-01",
+          "allocator_return": -0.11748247897510278,
+          "vt_return": -0.07671107702359758
+        },
+        {
+          "entry_date": "2018-11-01",
+          "exit_date": "2018-12-03",
+          "allocator_return": 0.03679961405653809,
+          "vt_return": 0.027694960028918247
+        },
+        {
+          "entry_date": "2018-12-03",
+          "exit_date": "2019-01-02",
+          "allocator_return": -0.11787774707569565,
+          "vt_return": -0.10148314213957177
+        },
+        {
+          "entry_date": "2019-01-02",
+          "exit_date": "2019-02-01",
+          "allocator_return": 0.05708592461659534,
+          "vt_return": 0.09686963890045241
+        },
+        {
+          "entry_date": "2019-02-01",
+          "exit_date": "2019-03-01",
+          "allocator_return": 0.007767833729768414,
+          "vt_return": 0.032923260588611614
+        },
+        {
+          "entry_date": "2019-03-01",
+          "exit_date": "2019-04-01",
+          "allocator_return": 0.06675011613617987,
+          "vt_return": 0.012942820219650653
+        },
+        {
+          "entry_date": "2019-04-01",
+          "exit_date": "2019-05-01",
+          "allocator_return": 0.06843984317603047,
+          "vt_return": 0.02914854561633562
+        },
+        {
+          "entry_date": "2019-05-01",
+          "exit_date": "2019-06-03",
+          "allocator_return": -0.09417806024317044,
+          "vt_return": -0.060202814708194
+        },
+        {
+          "entry_date": "2019-06-03",
+          "exit_date": "2019-07-01",
+          "allocator_return": 0.09696653912911901,
+          "vt_return": 0.07360929386388837
+        },
+        {
+          "entry_date": "2019-07-01",
+          "exit_date": "2019-08-01",
+          "allocator_return": 0.0018984806292854373,
+          "vt_return": -0.009470933051211494
+        },
+        {
+          "entry_date": "2019-08-01",
+          "exit_date": "2019-09-03",
+          "allocator_return": -0.010061248511099352,
+          "vt_return": -0.029748000110220385
+        },
+        {
+          "entry_date": "2019-09-03",
+          "exit_date": "2019-10-01",
+          "allocator_return": 0.0005292737265971681,
+          "vt_return": 0.03165603563323072
+        },
+        {
+          "entry_date": "2019-10-01",
+          "exit_date": "2019-11-01",
+          "allocator_return": 0.040822631408760524,
+          "vt_return": 0.03189195422645086
+        },
+        {
+          "entry_date": "2019-11-01",
+          "exit_date": "2019-12-02",
+          "allocator_return": 0.05459647481903818,
+          "vt_return": 0.020302890936053863
+        },
+        {
+          "entry_date": "2019-12-02",
+          "exit_date": "2020-01-02",
+          "allocator_return": 0.060555403608654634,
+          "vt_return": 0.039884100145165524
+        },
+        {
+          "entry_date": "2020-01-02",
+          "exit_date": "2020-02-03",
+          "allocator_return": -0.01184238937572235,
+          "vt_return": -0.01756130870920458
+        },
+        {
+          "entry_date": "2020-02-03",
+          "exit_date": "2020-03-02",
+          "allocator_return": 0.049259198913235824,
+          "vt_return": -0.07425003410805797
+        },
+        {
+          "entry_date": "2020-03-02",
+          "exit_date": "2020-04-01",
+          "allocator_return": -0.09419563851256207,
+          "vt_return": -0.17714841503280954
+        },
+        {
+          "entry_date": "2020-04-01",
+          "exit_date": "2020-05-01",
+          "allocator_return": 0.12718919681829854,
+          "vt_return": 0.12141658091541108
+        },
+        {
+          "entry_date": "2020-05-01",
+          "exit_date": "2020-06-01",
+          "allocator_return": 0.08457861017232515,
+          "vt_return": 0.07448218016961095
+        },
+        {
+          "entry_date": "2020-06-01",
+          "exit_date": "2020-07-01",
+          "allocator_return": 0.1057618968647589,
+          "vt_return": 0.03077132087374057
+        },
+        {
+          "entry_date": "2020-07-01",
+          "exit_date": "2020-08-03",
+          "allocator_return": 0.1777979681286479,
+          "vt_return": 0.05677754677040814
+        },
+        {
+          "entry_date": "2020-08-03",
+          "exit_date": "2020-09-01",
+          "allocator_return": 0.1179620370960266,
+          "vt_return": 0.05536620449062868
+        },
+        {
+          "entry_date": "2020-09-01",
+          "exit_date": "2020-10-01",
+          "allocator_return": -0.001387327341165867,
+          "vt_return": -0.024073011673712563
+        },
+        {
+          "entry_date": "2020-10-01",
+          "exit_date": "2020-11-02",
+          "allocator_return": -0.030839147481753093,
+          "vt_return": -0.017228869523523316
+        },
+        {
+          "entry_date": "2020-11-02",
+          "exit_date": "2020-12-01",
+          "allocator_return": 0.09489836255697504,
+          "vt_return": 0.12572022245654857
+        },
+        {
+          "entry_date": "2020-12-01",
+          "exit_date": "2021-01-04",
+          "allocator_return": 0.047544134475002275,
+          "vt_return": 0.045632962917443454
+        },
+        {
+          "entry_date": "2021-01-04",
+          "exit_date": "2021-02-01",
+          "allocator_return": 0.04731609229793432,
+          "vt_return": -0.00021391418462624046
+        },
+        {
+          "entry_date": "2021-02-01",
+          "exit_date": "2021-03-01",
+          "allocator_return": 0.0518691917408689,
+          "vt_return": 0.029115900418118512
+        },
+        {
+          "entry_date": "2021-03-01",
+          "exit_date": "2021-04-01",
+          "allocator_return": -0.026273237365163515,
+          "vt_return": 0.021275855778006836
+        },
+        {
+          "entry_date": "2021-04-01",
+          "exit_date": "2021-05-03",
+          "allocator_return": 0.014878744680609568,
+          "vt_return": 0.041049550402453505
+        },
+        {
+          "entry_date": "2021-05-03",
+          "exit_date": "2021-06-01",
+          "allocator_return": 0.04269358384219779,
+          "vt_return": 0.018342521204773643
+        },
+        {
+          "entry_date": "2021-06-01",
+          "exit_date": "2021-07-01",
+          "allocator_return": 0.08565743501928047,
+          "vt_return": 0.0042100848158328485
+        },
+        {
+          "entry_date": "2021-07-01",
+          "exit_date": "2021-08-02",
+          "allocator_return": -0.006805504817897434,
+          "vt_return": 0.010699803997493706
+        },
+        {
+          "entry_date": "2021-08-02",
+          "exit_date": "2021-09-01",
+          "allocator_return": 0.055062210006388,
+          "vt_return": 0.021173188318116987
+        },
+        {
+          "entry_date": "2021-09-01",
+          "exit_date": "2021-10-01",
+          "allocator_return": -0.05546100790881536,
+          "vt_return": -0.04285286654889253
+        },
+        {
+          "entry_date": "2021-10-01",
+          "exit_date": "2021-11-01",
+          "allocator_return": 0.11585397579754919,
+          "vt_return": 0.05231174624861712
+        },
+        {
+          "entry_date": "2021-11-01",
+          "exit_date": "2021-12-01",
+          "allocator_return": 0.08492756363271292,
+          "vt_return": -0.016942723011763583
+        },
+        {
+          "entry_date": "2021-12-01",
+          "exit_date": "2022-01-03",
+          "allocator_return": -0.05027185384306876,
+          "vt_return": 0.02956472345165606
+        },
+        {
+          "entry_date": "2022-01-03",
+          "exit_date": "2022-02-01",
+          "allocator_return": -0.1201884920506271,
+          "vt_return": -0.0467982642232172
+        },
+        {
+          "entry_date": "2022-02-01",
+          "exit_date": "2022-03-01",
+          "allocator_return": -0.009050452726773184,
+          "vt_return": -0.03383224616644298
+        },
+        {
+          "entry_date": "2022-03-01",
+          "exit_date": "2022-04-01",
+          "allocator_return": 0.1086869929344958,
+          "vt_return": 0.028182883249648905
+        },
+        {
+          "entry_date": "2022-04-01",
+          "exit_date": "2022-05-02",
+          "allocator_return": -0.1746794241196512,
+          "vt_return": -0.08781393683720462
+        },
+        {
+          "entry_date": "2022-05-02",
+          "exit_date": "2022-06-01",
+          "allocator_return": -0.03188965873808236,
+          "vt_return": 0.012692161948974157
+        },
+        {
+          "entry_date": "2022-06-01",
+          "exit_date": "2022-07-01",
+          "allocator_return": -0.040377294903439775,
+          "vt_return": -0.09242130318414465
+        },
+        {
+          "entry_date": "2022-07-01",
+          "exit_date": "2022-08-01",
+          "allocator_return": 0.09761562979622784,
+          "vt_return": 0.07201793184075123
+        },
+        {
+          "entry_date": "2022-08-01",
+          "exit_date": "2022-09-01",
+          "allocator_return": -0.05261662757348118,
+          "vt_return": -0.04409004394215266
+        },
+        {
+          "entry_date": "2022-09-01",
+          "exit_date": "2022-10-03",
+          "allocator_return": -0.061991268426513035,
+          "vt_return": -0.07767398304048345
+        },
+        {
+          "entry_date": "2022-10-03",
+          "exit_date": "2022-11-01",
+          "allocator_return": 0.07223351765222663,
+          "vt_return": 0.06665814414767213
+        },
+        {
+          "entry_date": "2022-11-01",
+          "exit_date": "2022-12-01",
+          "allocator_return": 0.01956538073599301,
+          "vt_return": 0.0721250639221509
+        },
+        {
+          "entry_date": "2022-12-01",
+          "exit_date": "2023-01-03",
+          "allocator_return": -0.01870515240268733,
+          "vt_return": -0.041050414448670525
+        },
+        {
+          "entry_date": "2023-01-03",
+          "exit_date": "2023-02-01",
+          "allocator_return": 0.03828428976413423,
+          "vt_return": 0.06675855586768242
+        },
+        {
+          "entry_date": "2023-02-01",
+          "exit_date": "2023-03-01",
+          "allocator_return": -0.01999440531261576,
+          "vt_return": -0.02708229245280036
+        },
+        {
+          "entry_date": "2023-03-01",
+          "exit_date": "2023-04-03",
+          "allocator_return": 0.054797314441414224,
+          "vt_return": 0.024734882980808948
+        },
+        {
+          "entry_date": "2023-04-03",
+          "exit_date": "2023-05-01",
+          "allocator_return": 0.014870701636716444,
+          "vt_return": 0.013029312107976754
+        },
+        {
+          "entry_date": "2023-05-01",
+          "exit_date": "2023-06-01",
+          "allocator_return": 0.2521249169654365,
+          "vt_return": -0.008038515313250283
+        },
+        {
+          "entry_date": "2023-06-01",
+          "exit_date": "2023-07-03",
+          "allocator_return": 0.10654003464364714,
+          "vt_return": 0.055748615980413474
+        },
+        {
+          "entry_date": "2023-07-03",
+          "exit_date": "2023-08-01",
+          "allocator_return": 0.04059809731762387,
+          "vt_return": 0.03111471197618032
+        },
+        {
+          "entry_date": "2023-08-01",
+          "exit_date": "2023-09-01",
+          "allocator_return": 0.03628423466390385,
+          "vt_return": -0.015487787521668905
+        },
+        {
+          "entry_date": "2023-09-01",
+          "exit_date": "2023-10-02",
+          "allocator_return": -0.1055632980828568,
+          "vt_return": -0.0522579660778828
+        },
+        {
+          "entry_date": "2023-10-02",
+          "exit_date": "2023-11-01",
+          "allocator_return": -0.02383656083893293,
+          "vt_return": -0.025163913772246804
+        },
+        {
+          "entry_date": "2023-11-01",
+          "exit_date": "2023-12-01",
+          "allocator_return": 0.11174406778055368,
+          "vt_return": 0.0861553855869488
+        },
+        {
+          "entry_date": "2023-12-01",
+          "exit_date": "2024-01-02",
+          "allocator_return": 0.0800078806209723,
+          "vt_return": 0.0450900669503147
+        },
+        {
+          "entry_date": "2024-01-02",
+          "exit_date": "2024-02-01",
+          "allocator_return": 0.1407184280877245,
+          "vt_return": 0.01146054279099884
+        },
+        {
+          "entry_date": "2024-02-01",
+          "exit_date": "2024-03-01",
+          "allocator_return": 0.14312701165366337,
+          "vt_return": 0.043772988712212246
+        },
+        {
+          "entry_date": "2024-03-01",
+          "exit_date": "2024-04-01",
+          "allocator_return": 0.05420766747921313,
+          "vt_return": 0.030514346649821
+        },
+        {
+          "entry_date": "2024-04-01",
+          "exit_date": "2024-05-01",
+          "allocator_return": -0.037674038652229735,
+          "vt_return": -0.03814166380381534
+        },
+        {
+          "entry_date": "2024-05-01",
+          "exit_date": "2024-06-03",
+          "allocator_return": 0.17095497022617212,
+          "vt_return": 0.05158800332841529
+        },
+        {
+          "entry_date": "2024-06-03",
+          "exit_date": "2024-07-01",
+          "allocator_return": 0.10735697353428941,
+          "vt_return": 0.01581522423498516
+        },
+        {
+          "entry_date": "2024-07-01",
+          "exit_date": "2024-08-01",
+          "allocator_return": -0.04610762897930554,
+          "vt_return": 0.014500436885714896
+        },
+        {
+          "entry_date": "2024-08-01",
+          "exit_date": "2024-09-03",
+          "allocator_return": 0.010936022444734794,
+          "vt_return": 0.018912278677245098
+        },
+        {
+          "entry_date": "2024-09-03",
+          "exit_date": "2024-10-01",
+          "allocator_return": 0.05796158603969226,
+          "vt_return": 0.027643976885944666
+        },
+        {
+          "entry_date": "2024-10-01",
+          "exit_date": "2024-11-01",
+          "allocator_return": 0.06370991420596006,
+          "vt_return": -0.016371556279644817
+        },
+        {
+          "entry_date": "2024-11-01",
+          "exit_date": "2024-12-02",
+          "allocator_return": -0.008855771870800555,
+          "vt_return": 0.036854618837625974
+        },
+        {
+          "entry_date": "2024-12-02",
+          "exit_date": "2025-01-02",
+          "allocator_return": 0.15874587870849233,
+          "vt_return": -0.026510011679189982
+        },
+        {
+          "entry_date": "2025-01-02",
+          "exit_date": "2025-02-03",
+          "allocator_return": -0.07747593683433973,
+          "vt_return": 0.01051014896319713
+        },
+        {
+          "entry_date": "2025-02-03",
+          "exit_date": "2025-03-03",
+          "allocator_return": -0.023394461202431494,
+          "vt_return": 0.01904046471173637
+        },
+        {
+          "entry_date": "2025-03-03",
+          "exit_date": "2025-04-01",
+          "allocator_return": -0.15770236152957273,
+          "vt_return": -0.04570362081512169
+        },
+        {
+          "entry_date": "2025-04-01",
+          "exit_date": "2025-05-01",
+          "allocator_return": 0.07006639695126538,
+          "vt_return": 0.01825885477346212
+        },
+        {
+          "entry_date": "2025-05-01",
+          "exit_date": "2025-06-02",
+          "allocator_return": 0.10805915601069094,
+          "vt_return": 0.047080804550007294
+        },
+        {
+          "entry_date": "2025-06-02",
+          "exit_date": "2025-07-01",
+          "allocator_return": 0.14406755527709825,
+          "vt_return": 0.04613360083489093
+        },
+        {
+          "entry_date": "2025-07-01",
+          "exit_date": "2025-08-01",
+          "allocator_return": 0.04929580596898364,
+          "vt_return": 0.006236449438305813
+        },
+        {
+          "entry_date": "2025-08-01",
+          "exit_date": "2025-09-02",
+          "allocator_return": -0.0418907941081017,
+          "vt_return": 0.02502319331704106
+        },
+        {
+          "entry_date": "2025-09-02",
+          "exit_date": "2025-10-01",
+          "allocator_return": 0.16033772675088453,
+          "vt_return": 0.044058095776613015
+        },
+        {
+          "entry_date": "2025-10-01",
+          "exit_date": "2025-11-03",
+          "allocator_return": 0.05491142337794219,
+          "vt_return": 0.024989169919481524
+        },
+        {
+          "entry_date": "2025-11-03",
+          "exit_date": "2025-12-01",
+          "allocator_return": -0.07839089051914028,
+          "vt_return": -0.006591206975560593
+        },
+        {
+          "entry_date": "2025-12-01",
+          "exit_date": "2026-01-02",
+          "allocator_return": 0.0211994611714037,
+          "vt_return": 0.02303270792964285
+        },
+        {
+          "entry_date": "2026-01-02",
+          "exit_date": "2026-02-02",
+          "allocator_return": -0.010102076494453271,
+          "vt_return": 0.02052580482987465
+        },
+        {
+          "entry_date": "2026-02-02",
+          "exit_date": "2026-03-02",
+          "allocator_return": -0.0041453437955488726,
+          "vt_return": 0.0019975456045984163
+        },
+        {
+          "entry_date": "2026-03-02",
+          "exit_date": "2026-04-01",
+          "allocator_return": -0.012049215664579838,
+          "vt_return": -0.039889556561441775
+        },
+        {
+          "entry_date": "2026-04-01",
+          "exit_date": "2026-05-01",
+          "allocator_return": 0.2039527904105931,
+          "vt_return": 0.08798628606027048
+        },
+        {
+          "entry_date": "2026-05-01",
+          "exit_date": "2026-06-01",
+          "allocator_return": 0.07838550289028445,
+          "vt_return": 0.042480137043334976
+        },
+        {
+          "entry_date": "2026-06-01",
+          "exit_date": "2026-07-01",
+          "allocator_return": -0.052903177958284586,
+          "vt_return": -0.008135609454402726
+        },
+        {
+          "entry_date": "2026-07-01",
+          "exit_date": "2026-08-03",
+          "allocator_return": -0.03920958446596057,
+          "vt_return": 0.001344483332410773
+        },
+        {
+          "entry_date": "2026-08-03",
+          "exit_date": "2026-09-01",
+          "allocator_return": -0.031503668611251645,
+          "vt_return": 0.012296703488520855
+        }
+      ]
+    },
+    {
+      "cost_bps_per_side": 20,
+      "block_months": 6,
+      "entry_date": "2018-02-01",
+      "exit_date": "2026-09-01",
+      "periods": 103,
+      "effective_n": 103.0,
+      "allocator_net_return": 12.673842739888638,
+      "eight_stock_hold_net_return": 9.802898273420807,
+      "vt_net_return": 1.427675007367403,
+      "allocator_max_drawdown": -0.3560132630837738,
+      "vt_max_drawdown": -0.3423621375847057,
+      "mean_monthly_paired_log_excess_ci_95": [
+        0.008189443686774617,
+        0.028373350879523033
+      ],
+      "promotion_ready": false,
+      "period_log": [
+        {
+          "entry_date": "2018-02-01",
+          "exit_date": "2018-03-01",
+          "allocator_return": -0.014967506036272948,
+          "vt_return": -0.043540787720882546
+        },
+        {
+          "entry_date": "2018-03-01",
+          "exit_date": "2018-04-02",
+          "allocator_return": -0.03137405124019477,
+          "vt_return": -0.015744830191931847
+        },
+        {
+          "entry_date": "2018-04-02",
+          "exit_date": "2018-05-01",
+          "allocator_return": -0.03445725279586176,
+          "vt_return": 0.006812863534560787
+        },
+        {
+          "entry_date": "2018-05-01",
+          "exit_date": "2018-06-01",
+          "allocator_return": 0.08008419365918784,
+          "vt_return": 0.012992232572954343
+        },
+        {
+          "entry_date": "2018-06-01",
+          "exit_date": "2018-07-02",
+          "allocator_return": -0.027837100877283083,
+          "vt_return": -0.02215196146003129
+        },
+        {
+          "entry_date": "2018-07-02",
+          "exit_date": "2018-08-01",
+          "allocator_return": 0.05794708104503288,
+          "vt_return": 0.0382656351288011
+        },
+        {
+          "entry_date": "2018-08-01",
+          "exit_date": "2018-09-04",
+          "allocator_return": 0.0850184305109658,
+          "vt_return": 0.0029163885016063595
+        },
+        {
+          "entry_date": "2018-09-04",
+          "exit_date": "2018-10-01",
+          "allocator_return": 0.020282862811332736,
+          "vt_return": 0.012853671975297187
+        },
+        {
+          "entry_date": "2018-10-01",
+          "exit_date": "2018-11-01",
+          "allocator_return": -0.11745676113475223,
+          "vt_return": -0.07671107702359758
+        },
+        {
+          "entry_date": "2018-11-01",
+          "exit_date": "2018-12-03",
+          "allocator_return": 0.03887875766761417,
+          "vt_return": 0.027694960028918247
+        },
+        {
+          "entry_date": "2018-12-03",
+          "exit_date": "2019-01-02",
+          "allocator_return": -0.11783355745675739,
+          "vt_return": -0.10148314213957177
+        },
+        {
+          "entry_date": "2019-01-02",
+          "exit_date": "2019-02-01",
+          "allocator_return": 0.05920865960049926,
+          "vt_return": 0.09686963890045241
+        },
+        {
+          "entry_date": "2019-02-01",
+          "exit_date": "2019-03-01",
+          "allocator_return": 0.00982207271722424,
+          "vt_return": 0.032923260588611614
+        },
+        {
+          "entry_date": "2019-03-01",
+          "exit_date": "2019-04-01",
+          "allocator_return": 0.06888932091452782,
+          "vt_return": 0.012942820219650653
+        },
+        {
+          "entry_date": "2019-04-01",
+          "exit_date": "2019-05-01",
+          "allocator_return": 0.06850283961205217,
+          "vt_return": 0.02914854561633562
+        },
+        {
+          "entry_date": "2019-05-01",
+          "exit_date": "2019-06-03",
+          "allocator_return": -0.09412917962731926,
+          "vt_return": -0.060202814708194
+        },
+        {
+          "entry_date": "2019-06-03",
+          "exit_date": "2019-07-01",
+          "allocator_return": 0.09916633833860256,
+          "vt_return": 0.07360929386388837
+        },
+        {
+          "entry_date": "2019-07-01",
+          "exit_date": "2019-08-01",
+          "allocator_return": 0.003934255917739549,
+          "vt_return": -0.009470933051211494
+        },
+        {
+          "entry_date": "2019-08-01",
+          "exit_date": "2019-09-03",
+          "allocator_return": -0.008072303449812246,
+          "vt_return": -0.029748000110220385
+        },
+        {
+          "entry_date": "2019-09-03",
+          "exit_date": "2019-10-01",
+          "allocator_return": 0.0025846694253097713,
+          "vt_return": 0.03165603563323072
+        },
+        {
+          "entry_date": "2019-10-01",
+          "exit_date": "2019-11-01",
+          "allocator_return": 0.040862173279092584,
+          "vt_return": 0.03189195422645086
+        },
+        {
+          "entry_date": "2019-11-01",
+          "exit_date": "2019-12-02",
+          "allocator_return": 0.056727479704020256,
+          "vt_return": 0.020302890936053863
+        },
+        {
+          "entry_date": "2019-12-02",
+          "exit_date": "2020-01-02",
+          "allocator_return": 0.06060950168840651,
+          "vt_return": 0.039884100145165524
+        },
+        {
+          "entry_date": "2020-01-02",
+          "exit_date": "2020-02-03",
+          "allocator_return": -0.009833223346759845,
+          "vt_return": -0.01756130870920458
+        },
+        {
+          "entry_date": "2020-02-03",
+          "exit_date": "2020-03-02",
+          "allocator_return": 0.04943404129162121,
+          "vt_return": -0.07425003410805797
+        },
+        {
+          "entry_date": "2020-03-02",
+          "exit_date": "2020-04-01",
+          "allocator_return": -0.09397805535041637,
+          "vt_return": -0.17714841503280954
+        },
+        {
+          "entry_date": "2020-04-01",
+          "exit_date": "2020-05-01",
+          "allocator_return": 0.1272802731100351,
+          "vt_return": 0.12141658091541108
+        },
+        {
+          "entry_date": "2020-05-01",
+          "exit_date": "2020-06-01",
+          "allocator_return": 0.08462038443623676,
+          "vt_return": 0.07448218016961095
+        },
+        {
+          "entry_date": "2020-06-01",
+          "exit_date": "2020-07-01",
+          "allocator_return": 0.10608408354701715,
+          "vt_return": 0.03077132087374057
+        },
+        {
+          "entry_date": "2020-07-01",
+          "exit_date": "2020-08-03",
+          "allocator_return": 0.17785731661623871,
+          "vt_return": 0.05677754677040814
+        },
+        {
+          "entry_date": "2020-08-03",
+          "exit_date": "2020-09-01",
+          "allocator_return": 0.11831759470138281,
+          "vt_return": 0.05536620449062868
+        },
+        {
+          "entry_date": "2020-09-01",
+          "exit_date": "2020-10-01",
+          "allocator_return": -0.0011409268133523165,
+          "vt_return": -0.024073011673712563
+        },
+        {
+          "entry_date": "2020-10-01",
+          "exit_date": "2020-11-02",
+          "allocator_return": -0.030737762971741467,
+          "vt_return": -0.017228869523523316
+        },
+        {
+          "entry_date": "2020-11-02",
+          "exit_date": "2020-12-01",
+          "allocator_return": 0.09503767940015284,
+          "vt_return": 0.12572022245654857
+        },
+        {
+          "entry_date": "2020-12-01",
+          "exit_date": "2021-01-04",
+          "allocator_return": 0.04768088208962773,
+          "vt_return": 0.045632962917443454
+        },
+        {
+          "entry_date": "2021-01-04",
+          "exit_date": "2021-02-01",
+          "allocator_return": 0.0495695040447397,
+          "vt_return": -0.00021391418462624046
+        },
+        {
+          "entry_date": "2021-02-01",
+          "exit_date": "2021-03-01",
+          "allocator_return": 0.05200327305729169,
+          "vt_return": 0.029115900418118512
+        },
+        {
+          "entry_date": "2021-03-01",
+          "exit_date": "2021-04-01",
+          "allocator_return": -0.026252545857828546,
+          "vt_return": 0.021275855778006836
+        },
+        {
+          "entry_date": "2021-04-01",
+          "exit_date": "2021-05-03",
+          "allocator_return": 0.014926265172597653,
+          "vt_return": 0.041049550402453505
+        },
+        {
+          "entry_date": "2021-05-03",
+          "exit_date": "2021-06-01",
+          "allocator_return": 0.04289800458672799,
+          "vt_return": 0.018342521204773643
+        },
+        {
+          "entry_date": "2021-06-01",
+          "exit_date": "2021-07-01",
+          "allocator_return": 0.08572559295528204,
+          "vt_return": 0.0042100848158328485
+        },
+        {
+          "entry_date": "2021-07-01",
+          "exit_date": "2021-08-02",
+          "allocator_return": -0.006528276731516902,
+          "vt_return": 0.010699803997493706
+        },
+        {
+          "entry_date": "2021-08-02",
+          "exit_date": "2021-09-01",
+          "allocator_return": 0.057209326771775704,
+          "vt_return": 0.021173188318116987
+        },
+        {
+          "entry_date": "2021-09-01",
+          "exit_date": "2021-10-01",
+          "allocator_return": -0.05349419229536423,
+          "vt_return": -0.04285286654889253
+        },
+        {
+          "entry_date": "2021-10-01",
+          "exit_date": "2021-11-01",
+          "allocator_return": 0.11593888695316612,
+          "vt_return": 0.05231174624861712
+        },
+        {
+          "entry_date": "2021-11-01",
+          "exit_date": "2021-12-01",
+          "allocator_return": 0.08713893476859136,
+          "vt_return": -0.016942723011763583
+        },
+        {
+          "entry_date": "2021-12-01",
+          "exit_date": "2022-01-03",
+          "allocator_return": -0.04990950829872731,
+          "vt_return": 0.02956472345165606
+        },
+        {
+          "entry_date": "2022-01-03",
+          "exit_date": "2022-02-01",
+          "allocator_return": -0.11832606812847479,
+          "vt_return": -0.0467982642232172
+        },
+        {
+          "entry_date": "2022-02-01",
+          "exit_date": "2022-03-01",
+          "allocator_return": -0.004973884596815581,
+          "vt_return": -0.03383224616644298
+        },
+        {
+          "entry_date": "2022-03-01",
+          "exit_date": "2022-04-01",
+          "allocator_return": 0.10876223600713675,
+          "vt_return": 0.028182883249648905
+        },
+        {
+          "entry_date": "2022-04-01",
+          "exit_date": "2022-05-02",
+          "allocator_return": -0.17302436948887512,
+          "vt_return": -0.08781393683720462
+        },
+        {
+          "entry_date": "2022-05-02",
+          "exit_date": "2022-06-01",
+          "allocator_return": -0.029948260994909992,
+          "vt_return": 0.012692161948974157
+        },
+        {
+          "entry_date": "2022-06-01",
+          "exit_date": "2022-07-01",
+          "allocator_return": -0.040201704202377675,
+          "vt_return": -0.09242130318414465
+        },
+        {
+          "entry_date": "2022-07-01",
+          "exit_date": "2022-08-01",
+          "allocator_return": 0.09792950111475518,
+          "vt_return": 0.07201793184075123
+        },
+        {
+          "entry_date": "2022-08-01",
+          "exit_date": "2022-09-01",
+          "allocator_return": -0.052548331124625425,
+          "vt_return": -0.04409004394215266
+        },
+        {
+          "entry_date": "2022-09-01",
+          "exit_date": "2022-10-03",
+          "allocator_return": -0.06194638300612476,
+          "vt_return": -0.07767398304048345
+        },
+        {
+          "entry_date": "2022-10-03",
+          "exit_date": "2022-11-01",
+          "allocator_return": 0.0723281867660246,
+          "vt_return": 0.06665814414767213
+        },
+        {
+          "entry_date": "2022-11-01",
+          "exit_date": "2022-12-01",
+          "allocator_return": 0.021626987810468234,
+          "vt_return": 0.0721250639221509
+        },
+        {
+          "entry_date": "2022-12-01",
+          "exit_date": "2023-01-03",
+          "allocator_return": -0.01668506315299323,
+          "vt_return": -0.041050414448670525
+        },
+        {
+          "entry_date": "2023-01-03",
+          "exit_date": "2023-02-01",
+          "allocator_return": 0.040472337081653764,
+          "vt_return": 0.06675855586768242
+        },
+        {
+          "entry_date": "2023-02-01",
+          "exit_date": "2023-03-01",
+          "allocator_return": -0.01786039251591809,
+          "vt_return": -0.02708229245280036
+        },
+        {
+          "entry_date": "2023-03-01",
+          "exit_date": "2023-04-03",
+          "allocator_return": 0.05691254969764703,
+          "vt_return": 0.024734882980808948
+        },
+        {
+          "entry_date": "2023-04-03",
+          "exit_date": "2023-05-01",
+          "allocator_return": 0.014930825937771841,
+          "vt_return": 0.013029312107976754
+        },
+        {
+          "entry_date": "2023-05-01",
+          "exit_date": "2023-06-01",
+          "allocator_return": 0.2547214819989252,
+          "vt_return": -0.008038515313250283
+        },
+        {
+          "entry_date": "2023-06-01",
+          "exit_date": "2023-07-03",
+          "allocator_return": 0.10680319821944506,
+          "vt_return": 0.055748615980413474
+        },
+        {
+          "entry_date": "2023-07-03",
+          "exit_date": "2023-08-01",
+          "allocator_return": 0.0406325063696229,
+          "vt_return": 0.03111471197618032
+        },
+        {
+          "entry_date": "2023-08-01",
+          "exit_date": "2023-09-01",
+          "allocator_return": 0.03638800282815002,
+          "vt_return": -0.015487787521668905
+        },
+        {
+          "entry_date": "2023-09-01",
+          "exit_date": "2023-10-02",
+          "allocator_return": -0.10550348759853578,
+          "vt_return": -0.0522579660778828
+        },
+        {
+          "entry_date": "2023-10-02",
+          "exit_date": "2023-11-01",
+          "allocator_return": -0.02377160675097023,
+          "vt_return": -0.025163913772246804
+        },
+        {
+          "entry_date": "2023-11-01",
+          "exit_date": "2023-12-01",
+          "allocator_return": 0.11408274051627898,
+          "vt_return": 0.0861553855869488
+        },
+        {
+          "entry_date": "2023-12-01",
+          "exit_date": "2024-01-02",
+          "allocator_return": 0.08005266413244616,
+          "vt_return": 0.0450900669503147
+        },
+        {
+          "entry_date": "2024-01-02",
+          "exit_date": "2024-02-01",
+          "allocator_return": 0.14094936029610317,
+          "vt_return": 0.01146054279099884
+        },
+        {
+          "entry_date": "2024-02-01",
+          "exit_date": "2024-03-01",
+          "allocator_return": 0.14336760298660955,
+          "vt_return": 0.043772988712212246
+        },
+        {
+          "entry_date": "2024-03-01",
+          "exit_date": "2024-04-01",
+          "allocator_return": 0.05447475009368996,
+          "vt_return": 0.030514346649821
+        },
+        {
+          "entry_date": "2024-04-01",
+          "exit_date": "2024-05-01",
+          "allocator_return": -0.035651579498931496,
+          "vt_return": -0.03814166380381534
+        },
+        {
+          "entry_date": "2024-05-01",
+          "exit_date": "2024-06-03",
+          "allocator_return": 0.1733607074182717,
+          "vt_return": 0.05158800332841529
+        },
+        {
+          "entry_date": "2024-06-03",
+          "exit_date": "2024-07-01",
+          "allocator_return": 0.10979761082050854,
+          "vt_return": 0.01581522423498516
+        },
+        {
+          "entry_date": "2024-07-01",
+          "exit_date": "2024-08-01",
+          "allocator_return": -0.044153571630979105,
+          "vt_return": 0.014500436885714896
+        },
+        {
+          "entry_date": "2024-08-01",
+          "exit_date": "2024-09-03",
+          "allocator_return": 0.010984343514176098,
+          "vt_return": 0.018912278677245098
+        },
+        {
+          "entry_date": "2024-09-03",
+          "exit_date": "2024-10-01",
+          "allocator_return": 0.05801167932927709,
+          "vt_return": 0.027643976885944666
+        },
+        {
+          "entry_date": "2024-10-01",
+          "exit_date": "2024-11-01",
+          "allocator_return": 0.06374802542504243,
+          "vt_return": -0.016371556279644817
+        },
+        {
+          "entry_date": "2024-11-01",
+          "exit_date": "2024-12-02",
+          "allocator_return": -0.008694706405785735,
+          "vt_return": 0.036854618837625974
+        },
+        {
+          "entry_date": "2024-12-02",
+          "exit_date": "2025-01-02",
+          "allocator_return": 0.15883776400761995,
+          "vt_return": -0.026510011679189982
+        },
+        {
+          "entry_date": "2025-01-02",
+          "exit_date": "2025-02-03",
+          "allocator_return": -0.07700707114527694,
+          "vt_return": 0.01051014896319713
+        },
+        {
+          "entry_date": "2025-02-03",
+          "exit_date": "2025-03-03",
+          "allocator_return": -0.023203563203821775,
+          "vt_return": 0.01904046471173637
+        },
+        {
+          "entry_date": "2025-03-03",
+          "exit_date": "2025-04-01",
+          "allocator_return": -0.15596116143549044,
+          "vt_return": -0.04570362081512169
+        },
+        {
+          "entry_date": "2025-04-01",
+          "exit_date": "2025-05-01",
+          "allocator_return": 0.07443777531059537,
+          "vt_return": 0.01825885477346212
+        },
+        {
+          "entry_date": "2025-05-01",
+          "exit_date": "2025-06-02",
+          "allocator_return": 0.1082962337094,
+          "vt_return": 0.047080804550007294
+        },
+        {
+          "entry_date": "2025-06-02",
+          "exit_date": "2025-07-01",
+          "allocator_return": 0.14647989633145642,
+          "vt_return": 0.04613360083489093
+        },
+        {
+          "entry_date": "2025-07-01",
+          "exit_date": "2025-08-01",
+          "allocator_return": 0.04964080639211299,
+          "vt_return": 0.006236449438305813
+        },
+        {
+          "entry_date": "2025-08-01",
+          "exit_date": "2025-09-02",
+          "allocator_return": -0.03995933299285137,
+          "vt_return": 0.02502319331704106
+        },
+        {
+          "entry_date": "2025-09-02",
+          "exit_date": "2025-10-01",
+          "allocator_return": 0.16049455286398517,
+          "vt_return": 0.044058095776613015
+        },
+        {
+          "entry_date": "2025-10-01",
+          "exit_date": "2025-11-03",
+          "allocator_return": 0.05707161514886505,
+          "vt_return": 0.024989169919481524
+        },
+        {
+          "entry_date": "2025-11-03",
+          "exit_date": "2025-12-01",
+          "allocator_return": -0.07820826542354076,
+          "vt_return": -0.006591206975560593
+        },
+        {
+          "entry_date": "2025-12-01",
+          "exit_date": "2026-01-02",
+          "allocator_return": 0.023247321053431858,
+          "vt_return": 0.02303270792964285
+        },
+        {
+          "entry_date": "2026-01-02",
+          "exit_date": "2026-02-02",
+          "allocator_return": -0.009853018200623898,
+          "vt_return": 0.02052580482987465
+        },
+        {
+          "entry_date": "2026-02-02",
+          "exit_date": "2026-03-02",
+          "allocator_return": -0.0040045900888373565,
+          "vt_return": 0.0019975456045984163
+        },
+        {
+          "entry_date": "2026-03-02",
+          "exit_date": "2026-04-01",
+          "allocator_return": -0.011833786619656395,
+          "vt_return": -0.039889556561441775
+        },
+        {
+          "entry_date": "2026-04-01",
+          "exit_date": "2026-05-01",
+          "allocator_return": 0.20406079741923744,
+          "vt_return": 0.08798628606027048
+        },
+        {
+          "entry_date": "2026-05-01",
+          "exit_date": "2026-06-01",
+          "allocator_return": 0.07860140576394992,
+          "vt_return": 0.042480137043334976
+        },
+        {
+          "entry_date": "2026-06-01",
+          "exit_date": "2026-07-01",
+          "allocator_return": -0.05289109111126078,
+          "vt_return": -0.008135609454402726
+        },
+        {
+          "entry_date": "2026-07-01",
+          "exit_date": "2026-08-03",
+          "allocator_return": -0.03703884441695371,
+          "vt_return": 0.001344483332410773
+        },
+        {
+          "entry_date": "2026-08-03",
+          "exit_date": "2026-09-01",
+          "allocator_return": -0.025429153246056657,
+          "vt_return": 0.018419465808007907
+        }
+      ]
+    },
+    {
+      "cost_bps_per_side": 20,
+      "block_months": 12,
+      "entry_date": "2018-02-01",
+      "exit_date": "2026-09-01",
+      "periods": 103,
+      "effective_n": 103.0,
+      "allocator_net_return": 12.673842739888638,
+      "eight_stock_hold_net_return": 9.802898273420807,
+      "vt_net_return": 1.427675007367403,
+      "allocator_max_drawdown": -0.3560132630837738,
+      "vt_max_drawdown": -0.3423621375847057,
+      "mean_monthly_paired_log_excess_ci_95": [
+        0.008715668452212548,
+        0.028932650655621422
+      ],
+      "promotion_ready": false,
+      "period_log": [
+        {
+          "entry_date": "2018-02-01",
+          "exit_date": "2018-03-01",
+          "allocator_return": -0.014967506036272948,
+          "vt_return": -0.043540787720882546
+        },
+        {
+          "entry_date": "2018-03-01",
+          "exit_date": "2018-04-02",
+          "allocator_return": -0.03137405124019477,
+          "vt_return": -0.015744830191931847
+        },
+        {
+          "entry_date": "2018-04-02",
+          "exit_date": "2018-05-01",
+          "allocator_return": -0.03445725279586176,
+          "vt_return": 0.006812863534560787
+        },
+        {
+          "entry_date": "2018-05-01",
+          "exit_date": "2018-06-01",
+          "allocator_return": 0.08008419365918784,
+          "vt_return": 0.012992232572954343
+        },
+        {
+          "entry_date": "2018-06-01",
+          "exit_date": "2018-07-02",
+          "allocator_return": -0.027837100877283083,
+          "vt_return": -0.02215196146003129
+        },
+        {
+          "entry_date": "2018-07-02",
+          "exit_date": "2018-08-01",
+          "allocator_return": 0.05794708104503288,
+          "vt_return": 0.0382656351288011
+        },
+        {
+          "entry_date": "2018-08-01",
+          "exit_date": "2018-09-04",
+          "allocator_return": 0.0850184305109658,
+          "vt_return": 0.0029163885016063595
+        },
+        {
+          "entry_date": "2018-09-04",
+          "exit_date": "2018-10-01",
+          "allocator_return": 0.020282862811332736,
+          "vt_return": 0.012853671975297187
+        },
+        {
+          "entry_date": "2018-10-01",
+          "exit_date": "2018-11-01",
+          "allocator_return": -0.11745676113475223,
+          "vt_return": -0.07671107702359758
+        },
+        {
+          "entry_date": "2018-11-01",
+          "exit_date": "2018-12-03",
+          "allocator_return": 0.03887875766761417,
+          "vt_return": 0.027694960028918247
+        },
+        {
+          "entry_date": "2018-12-03",
+          "exit_date": "2019-01-02",
+          "allocator_return": -0.11783355745675739,
+          "vt_return": -0.10148314213957177
+        },
+        {
+          "entry_date": "2019-01-02",
+          "exit_date": "2019-02-01",
+          "allocator_return": 0.05920865960049926,
+          "vt_return": 0.09686963890045241
+        },
+        {
+          "entry_date": "2019-02-01",
+          "exit_date": "2019-03-01",
+          "allocator_return": 0.00982207271722424,
+          "vt_return": 0.032923260588611614
+        },
+        {
+          "entry_date": "2019-03-01",
+          "exit_date": "2019-04-01",
+          "allocator_return": 0.06888932091452782,
+          "vt_return": 0.012942820219650653
+        },
+        {
+          "entry_date": "2019-04-01",
+          "exit_date": "2019-05-01",
+          "allocator_return": 0.06850283961205217,
+          "vt_return": 0.02914854561633562
+        },
+        {
+          "entry_date": "2019-05-01",
+          "exit_date": "2019-06-03",
+          "allocator_return": -0.09412917962731926,
+          "vt_return": -0.060202814708194
+        },
+        {
+          "entry_date": "2019-06-03",
+          "exit_date": "2019-07-01",
+          "allocator_return": 0.09916633833860256,
+          "vt_return": 0.07360929386388837
+        },
+        {
+          "entry_date": "2019-07-01",
+          "exit_date": "2019-08-01",
+          "allocator_return": 0.003934255917739549,
+          "vt_return": -0.009470933051211494
+        },
+        {
+          "entry_date": "2019-08-01",
+          "exit_date": "2019-09-03",
+          "allocator_return": -0.008072303449812246,
+          "vt_return": -0.029748000110220385
+        },
+        {
+          "entry_date": "2019-09-03",
+          "exit_date": "2019-10-01",
+          "allocator_return": 0.0025846694253097713,
+          "vt_return": 0.03165603563323072
+        },
+        {
+          "entry_date": "2019-10-01",
+          "exit_date": "2019-11-01",
+          "allocator_return": 0.040862173279092584,
+          "vt_return": 0.03189195422645086
+        },
+        {
+          "entry_date": "2019-11-01",
+          "exit_date": "2019-12-02",
+          "allocator_return": 0.056727479704020256,
+          "vt_return": 0.020302890936053863
+        },
+        {
+          "entry_date": "2019-12-02",
+          "exit_date": "2020-01-02",
+          "allocator_return": 0.06060950168840651,
+          "vt_return": 0.039884100145165524
+        },
+        {
+          "entry_date": "2020-01-02",
+          "exit_date": "2020-02-03",
+          "allocator_return": -0.009833223346759845,
+          "vt_return": -0.01756130870920458
+        },
+        {
+          "entry_date": "2020-02-03",
+          "exit_date": "2020-03-02",
+          "allocator_return": 0.04943404129162121,
+          "vt_return": -0.07425003410805797
+        },
+        {
+          "entry_date": "2020-03-02",
+          "exit_date": "2020-04-01",
+          "allocator_return": -0.09397805535041637,
+          "vt_return": -0.17714841503280954
+        },
+        {
+          "entry_date": "2020-04-01",
+          "exit_date": "2020-05-01",
+          "allocator_return": 0.1272802731100351,
+          "vt_return": 0.12141658091541108
+        },
+        {
+          "entry_date": "2020-05-01",
+          "exit_date": "2020-06-01",
+          "allocator_return": 0.08462038443623676,
+          "vt_return": 0.07448218016961095
+        },
+        {
+          "entry_date": "2020-06-01",
+          "exit_date": "2020-07-01",
+          "allocator_return": 0.10608408354701715,
+          "vt_return": 0.03077132087374057
+        },
+        {
+          "entry_date": "2020-07-01",
+          "exit_date": "2020-08-03",
+          "allocator_return": 0.17785731661623871,
+          "vt_return": 0.05677754677040814
+        },
+        {
+          "entry_date": "2020-08-03",
+          "exit_date": "2020-09-01",
+          "allocator_return": 0.11831759470138281,
+          "vt_return": 0.05536620449062868
+        },
+        {
+          "entry_date": "2020-09-01",
+          "exit_date": "2020-10-01",
+          "allocator_return": -0.0011409268133523165,
+          "vt_return": -0.024073011673712563
+        },
+        {
+          "entry_date": "2020-10-01",
+          "exit_date": "2020-11-02",
+          "allocator_return": -0.030737762971741467,
+          "vt_return": -0.017228869523523316
+        },
+        {
+          "entry_date": "2020-11-02",
+          "exit_date": "2020-12-01",
+          "allocator_return": 0.09503767940015284,
+          "vt_return": 0.12572022245654857
+        },
+        {
+          "entry_date": "2020-12-01",
+          "exit_date": "2021-01-04",
+          "allocator_return": 0.04768088208962773,
+          "vt_return": 0.045632962917443454
+        },
+        {
+          "entry_date": "2021-01-04",
+          "exit_date": "2021-02-01",
+          "allocator_return": 0.0495695040447397,
+          "vt_return": -0.00021391418462624046
+        },
+        {
+          "entry_date": "2021-02-01",
+          "exit_date": "2021-03-01",
+          "allocator_return": 0.05200327305729169,
+          "vt_return": 0.029115900418118512
+        },
+        {
+          "entry_date": "2021-03-01",
+          "exit_date": "2021-04-01",
+          "allocator_return": -0.026252545857828546,
+          "vt_return": 0.021275855778006836
+        },
+        {
+          "entry_date": "2021-04-01",
+          "exit_date": "2021-05-03",
+          "allocator_return": 0.014926265172597653,
+          "vt_return": 0.041049550402453505
+        },
+        {
+          "entry_date": "2021-05-03",
+          "exit_date": "2021-06-01",
+          "allocator_return": 0.04289800458672799,
+          "vt_return": 0.018342521204773643
+        },
+        {
+          "entry_date": "2021-06-01",
+          "exit_date": "2021-07-01",
+          "allocator_return": 0.08572559295528204,
+          "vt_return": 0.0042100848158328485
+        },
+        {
+          "entry_date": "2021-07-01",
+          "exit_date": "2021-08-02",
+          "allocator_return": -0.006528276731516902,
+          "vt_return": 0.010699803997493706
+        },
+        {
+          "entry_date": "2021-08-02",
+          "exit_date": "2021-09-01",
+          "allocator_return": 0.057209326771775704,
+          "vt_return": 0.021173188318116987
+        },
+        {
+          "entry_date": "2021-09-01",
+          "exit_date": "2021-10-01",
+          "allocator_return": -0.05349419229536423,
+          "vt_return": -0.04285286654889253
+        },
+        {
+          "entry_date": "2021-10-01",
+          "exit_date": "2021-11-01",
+          "allocator_return": 0.11593888695316612,
+          "vt_return": 0.05231174624861712
+        },
+        {
+          "entry_date": "2021-11-01",
+          "exit_date": "2021-12-01",
+          "allocator_return": 0.08713893476859136,
+          "vt_return": -0.016942723011763583
+        },
+        {
+          "entry_date": "2021-12-01",
+          "exit_date": "2022-01-03",
+          "allocator_return": -0.04990950829872731,
+          "vt_return": 0.02956472345165606
+        },
+        {
+          "entry_date": "2022-01-03",
+          "exit_date": "2022-02-01",
+          "allocator_return": -0.11832606812847479,
+          "vt_return": -0.0467982642232172
+        },
+        {
+          "entry_date": "2022-02-01",
+          "exit_date": "2022-03-01",
+          "allocator_return": -0.004973884596815581,
+          "vt_return": -0.03383224616644298
+        },
+        {
+          "entry_date": "2022-03-01",
+          "exit_date": "2022-04-01",
+          "allocator_return": 0.10876223600713675,
+          "vt_return": 0.028182883249648905
+        },
+        {
+          "entry_date": "2022-04-01",
+          "exit_date": "2022-05-02",
+          "allocator_return": -0.17302436948887512,
+          "vt_return": -0.08781393683720462
+        },
+        {
+          "entry_date": "2022-05-02",
+          "exit_date": "2022-06-01",
+          "allocator_return": -0.029948260994909992,
+          "vt_return": 0.012692161948974157
+        },
+        {
+          "entry_date": "2022-06-01",
+          "exit_date": "2022-07-01",
+          "allocator_return": -0.040201704202377675,
+          "vt_return": -0.09242130318414465
+        },
+        {
+          "entry_date": "2022-07-01",
+          "exit_date": "2022-08-01",
+          "allocator_return": 0.09792950111475518,
+          "vt_return": 0.07201793184075123
+        },
+        {
+          "entry_date": "2022-08-01",
+          "exit_date": "2022-09-01",
+          "allocator_return": -0.052548331124625425,
+          "vt_return": -0.04409004394215266
+        },
+        {
+          "entry_date": "2022-09-01",
+          "exit_date": "2022-10-03",
+          "allocator_return": -0.06194638300612476,
+          "vt_return": -0.07767398304048345
+        },
+        {
+          "entry_date": "2022-10-03",
+          "exit_date": "2022-11-01",
+          "allocator_return": 0.0723281867660246,
+          "vt_return": 0.06665814414767213
+        },
+        {
+          "entry_date": "2022-11-01",
+          "exit_date": "2022-12-01",
+          "allocator_return": 0.021626987810468234,
+          "vt_return": 0.0721250639221509
+        },
+        {
+          "entry_date": "2022-12-01",
+          "exit_date": "2023-01-03",
+          "allocator_return": -0.01668506315299323,
+          "vt_return": -0.041050414448670525
+        },
+        {
+          "entry_date": "2023-01-03",
+          "exit_date": "2023-02-01",
+          "allocator_return": 0.040472337081653764,
+          "vt_return": 0.06675855586768242
+        },
+        {
+          "entry_date": "2023-02-01",
+          "exit_date": "2023-03-01",
+          "allocator_return": -0.01786039251591809,
+          "vt_return": -0.02708229245280036
+        },
+        {
+          "entry_date": "2023-03-01",
+          "exit_date": "2023-04-03",
+          "allocator_return": 0.05691254969764703,
+          "vt_return": 0.024734882980808948
+        },
+        {
+          "entry_date": "2023-04-03",
+          "exit_date": "2023-05-01",
+          "allocator_return": 0.014930825937771841,
+          "vt_return": 0.013029312107976754
+        },
+        {
+          "entry_date": "2023-05-01",
+          "exit_date": "2023-06-01",
+          "allocator_return": 0.2547214819989252,
+          "vt_return": -0.008038515313250283
+        },
+        {
+          "entry_date": "2023-06-01",
+          "exit_date": "2023-07-03",
+          "allocator_return": 0.10680319821944506,
+          "vt_return": 0.055748615980413474
+        },
+        {
+          "entry_date": "2023-07-03",
+          "exit_date": "2023-08-01",
+          "allocator_return": 0.0406325063696229,
+          "vt_return": 0.03111471197618032
+        },
+        {
+          "entry_date": "2023-08-01",
+          "exit_date": "2023-09-01",
+          "allocator_return": 0.03638800282815002,
+          "vt_return": -0.015487787521668905
+        },
+        {
+          "entry_date": "2023-09-01",
+          "exit_date": "2023-10-02",
+          "allocator_return": -0.10550348759853578,
+          "vt_return": -0.0522579660778828
+        },
+        {
+          "entry_date": "2023-10-02",
+          "exit_date": "2023-11-01",
+          "allocator_return": -0.02377160675097023,
+          "vt_return": -0.025163913772246804
+        },
+        {
+          "entry_date": "2023-11-01",
+          "exit_date": "2023-12-01",
+          "allocator_return": 0.11408274051627898,
+          "vt_return": 0.0861553855869488
+        },
+        {
+          "entry_date": "2023-12-01",
+          "exit_date": "2024-01-02",
+          "allocator_return": 0.08005266413244616,
+          "vt_return": 0.0450900669503147
+        },
+        {
+          "entry_date": "2024-01-02",
+          "exit_date": "2024-02-01",
+          "allocator_return": 0.14094936029610317,
+          "vt_return": 0.01146054279099884
+        },
+        {
+          "entry_date": "2024-02-01",
+          "exit_date": "2024-03-01",
+          "allocator_return": 0.14336760298660955,
+          "vt_return": 0.043772988712212246
+        },
+        {
+          "entry_date": "2024-03-01",
+          "exit_date": "2024-04-01",
+          "allocator_return": 0.05447475009368996,
+          "vt_return": 0.030514346649821
+        },
+        {
+          "entry_date": "2024-04-01",
+          "exit_date": "2024-05-01",
+          "allocator_return": -0.035651579498931496,
+          "vt_return": -0.03814166380381534
+        },
+        {
+          "entry_date": "2024-05-01",
+          "exit_date": "2024-06-03",
+          "allocator_return": 0.1733607074182717,
+          "vt_return": 0.05158800332841529
+        },
+        {
+          "entry_date": "2024-06-03",
+          "exit_date": "2024-07-01",
+          "allocator_return": 0.10979761082050854,
+          "vt_return": 0.01581522423498516
+        },
+        {
+          "entry_date": "2024-07-01",
+          "exit_date": "2024-08-01",
+          "allocator_return": -0.044153571630979105,
+          "vt_return": 0.014500436885714896
+        },
+        {
+          "entry_date": "2024-08-01",
+          "exit_date": "2024-09-03",
+          "allocator_return": 0.010984343514176098,
+          "vt_return": 0.018912278677245098
+        },
+        {
+          "entry_date": "2024-09-03",
+          "exit_date": "2024-10-01",
+          "allocator_return": 0.05801167932927709,
+          "vt_return": 0.027643976885944666
+        },
+        {
+          "entry_date": "2024-10-01",
+          "exit_date": "2024-11-01",
+          "allocator_return": 0.06374802542504243,
+          "vt_return": -0.016371556279644817
+        },
+        {
+          "entry_date": "2024-11-01",
+          "exit_date": "2024-12-02",
+          "allocator_return": -0.008694706405785735,
+          "vt_return": 0.036854618837625974
+        },
+        {
+          "entry_date": "2024-12-02",
+          "exit_date": "2025-01-02",
+          "allocator_return": 0.15883776400761995,
+          "vt_return": -0.026510011679189982
+        },
+        {
+          "entry_date": "2025-01-02",
+          "exit_date": "2025-02-03",
+          "allocator_return": -0.07700707114527694,
+          "vt_return": 0.01051014896319713
+        },
+        {
+          "entry_date": "2025-02-03",
+          "exit_date": "2025-03-03",
+          "allocator_return": -0.023203563203821775,
+          "vt_return": 0.01904046471173637
+        },
+        {
+          "entry_date": "2025-03-03",
+          "exit_date": "2025-04-01",
+          "allocator_return": -0.15596116143549044,
+          "vt_return": -0.04570362081512169
+        },
+        {
+          "entry_date": "2025-04-01",
+          "exit_date": "2025-05-01",
+          "allocator_return": 0.07443777531059537,
+          "vt_return": 0.01825885477346212
+        },
+        {
+          "entry_date": "2025-05-01",
+          "exit_date": "2025-06-02",
+          "allocator_return": 0.1082962337094,
+          "vt_return": 0.047080804550007294
+        },
+        {
+          "entry_date": "2025-06-02",
+          "exit_date": "2025-07-01",
+          "allocator_return": 0.14647989633145642,
+          "vt_return": 0.04613360083489093
+        },
+        {
+          "entry_date": "2025-07-01",
+          "exit_date": "2025-08-01",
+          "allocator_return": 0.04964080639211299,
+          "vt_return": 0.006236449438305813
+        },
+        {
+          "entry_date": "2025-08-01",
+          "exit_date": "2025-09-02",
+          "allocator_return": -0.03995933299285137,
+          "vt_return": 0.02502319331704106
+        },
+        {
+          "entry_date": "2025-09-02",
+          "exit_date": "2025-10-01",
+          "allocator_return": 0.16049455286398517,
+          "vt_return": 0.044058095776613015
+        },
+        {
+          "entry_date": "2025-10-01",
+          "exit_date": "2025-11-03",
+          "allocator_return": 0.05707161514886505,
+          "vt_return": 0.024989169919481524
+        },
+        {
+          "entry_date": "2025-11-03",
+          "exit_date": "2025-12-01",
+          "allocator_return": -0.07820826542354076,
+          "vt_return": -0.006591206975560593
+        },
+        {
+          "entry_date": "2025-12-01",
+          "exit_date": "2026-01-02",
+          "allocator_return": 0.023247321053431858,
+          "vt_return": 0.02303270792964285
+        },
+        {
+          "entry_date": "2026-01-02",
+          "exit_date": "2026-02-02",
+          "allocator_return": -0.009853018200623898,
+          "vt_return": 0.02052580482987465
+        },
+        {
+          "entry_date": "2026-02-02",
+          "exit_date": "2026-03-02",
+          "allocator_return": -0.0040045900888373565,
+          "vt_return": 0.0019975456045984163
+        },
+        {
+          "entry_date": "2026-03-02",
+          "exit_date": "2026-04-01",
+          "allocator_return": -0.011833786619656395,
+          "vt_return": -0.039889556561441775
+        },
+        {
+          "entry_date": "2026-04-01",
+          "exit_date": "2026-05-01",
+          "allocator_return": 0.20406079741923744,
+          "vt_return": 0.08798628606027048
+        },
+        {
+          "entry_date": "2026-05-01",
+          "exit_date": "2026-06-01",
+          "allocator_return": 0.07860140576394992,
+          "vt_return": 0.042480137043334976
+        },
+        {
+          "entry_date": "2026-06-01",
+          "exit_date": "2026-07-01",
+          "allocator_return": -0.05289109111126078,
+          "vt_return": -0.008135609454402726
+        },
+        {
+          "entry_date": "2026-07-01",
+          "exit_date": "2026-08-03",
+          "allocator_return": -0.03703884441695371,
+          "vt_return": 0.001344483332410773
+        },
+        {
+          "entry_date": "2026-08-03",
+          "exit_date": "2026-09-01",
+          "allocator_return": -0.025429153246056657,
+          "vt_return": 0.018419465808007907
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Fixed survivor-selected eight-name allocator; VT is a different universe",
+    "All history inspected; no new holdout or full-search DSR pass",
+    "Provider adjusted returns and assumed fees; no verified investor-net total returns",
+    "Cash yield zero; USD only, no personal balances or FX P&L"
+  ],
+  "promotion_ready": false
+}

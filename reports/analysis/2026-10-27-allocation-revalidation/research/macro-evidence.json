@@ -1,0 +1,77 @@
+{
+  "pipeline_mode": "in-session",
+  "review_date": "2026-10-27",
+  "decision": "Neutral/low for all three: no typed dated macro_snapshot is ingested in Layer 1. Verified web context stays separate and does not bypass production availability guards.",
+  "sources": [
+    {
+      "title": "Federal Reserve FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "observation_date": "2026-09-16",
+      "first_available_date": "2026-09-16",
+      "retrieved_on": "2026-10-27",
+      "facts": {
+        "federal_funds_target_range_percent": [
+          3.75,
+          4.0
+        ],
+        "change_percentage_points": 0.25
+      },
+      "context": "The Fed raised its target range and described inflation as elevated. This is dated context, not a forecast of the next decision."
+    },
+    {
+      "title": "Federal Reserve meeting calendar",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "retrieved_on": "2026-10-27",
+      "facts": {
+        "scheduled_next_meeting_dates": [
+          "2026-10-27",
+          "2026-10-28"
+        ]
+      },
+      "context": "The October policy outcome is not yet available at this research cutoff."
+    },
+    {
+      "title": "Bank Negara Malaysia Monetary Policy Statement",
+      "url": "https://www.bnm.gov.my/-/monetary-policy-%20statement-03092026",
+      "observation_date": "2026-09-03",
+      "first_available_date": "2026-09-03",
+      "retrieved_on": "2026-10-27",
+      "facts": {
+        "opr_percent": 2.75
+      },
+      "context": "BNM maintained OPR. Its statement describes resilient technology spending alongside geopolitical and financial-condition risks; it does not establish a company-specific return forecast."
+    }
+  ],
+  "unavailable": [
+    "Current observed USD/MYR for investment conversion",
+    "Typed macro evidence attached to fresh ticker inputs",
+    "Company-specific macro shock attribution",
+    "October 28 FOMC outcome"
+  ],
+  "ticker_inputs": {
+    "TSM": {
+      "fetched_at": "2026-10-27T03:48:01.984902+00:00",
+      "sector": "Technology",
+      "fundamentals_sha256": "1721327354f974fa2b474ce5e677318c6532462b404b26ab1c3b152b58232583",
+      "macro_snapshot_status": "unavailable",
+      "macro_snapshot": null,
+      "output": "/private/tmp/allocation-20261027/TSM-macro.json"
+    },
+    "V": {
+      "fetched_at": "2026-10-27T03:48:02.014084+00:00",
+      "sector": "Financial Services",
+      "fundamentals_sha256": "70c384f5da89625f2cc4c3779ba2e1c92984eab740c6a1c8e51851786ce75b4d",
+      "macro_snapshot_status": "unavailable",
+      "macro_snapshot": null,
+      "output": "/private/tmp/allocation-20261027/V-macro.json"
+    },
+    "UNH": {
+      "fetched_at": "2026-10-27T03:48:01.988219+00:00",
+      "sector": "Healthcare",
+      "fundamentals_sha256": "b0923213f94f214ce335e300b3591ebc7df9cca99f92cd54e93944ab81253757",
+      "macro_snapshot_status": "unavailable",
+      "macro_snapshot": null,
+      "output": "/private/tmp/allocation-20261027/UNH-macro.json"
+    }
+  }
+}

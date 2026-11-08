@@ -1,0 +1,21 @@
+{
+  "signal": "neutral",
+  "confidence": "medium",
+  "pe_assessment": "Current Yahoo metadata quotes trailing P/E 26.88 and forward P/E 17.64, but no common-share-basis trailing valuation is established by the deterministic context. The forward ratio depends on estimates and cannot establish that a recovery is underpriced.",
+  "margin_analysis": "Yahoo's latest structured period is June 30, 2026, with 7.13% operating margin and 4.90% net margin. The newer official October 13 Q3 release reports US$112.7bn revenue, US$6.6bn operating earnings and 3.6% net margin. The lower reported Q3 net margin versus the provider's Q2 figure warrants caution; different sources and adjustment conventions should be retained explicitly.",
+  "debt_analysis": "The stale June 30 provider snapshot reports US$73.328bn total debt, US$98.447bn equity and US$10.253bn quarterly free cash flow. The newer official Q3 release reports debt-to-capital of 41.7% and US$5.1bn operating cash flow. Operating cash flow is not free cash flow and must not replace it in comparisons.",
+  "growth_outlook": "The deterministic context cannot calculate a comparable year-over-year growth rate because the prior June quarter lacks a declared comparable duration. The October 13 official Q3 release raised full-year guidance to at least US$19.50 GAAP EPS and US$20.50 adjusted EPS, with Q3 EPS US$4.56 GAAP and US$4.69 adjusted. The guidance improvement is a positive management forecast, not proof that margins have normalized.",
+  "key_risks": [
+    "The provider's most recent structured statement is 119 days old and omits the already released September quarter.",
+    "Comparable growth is unavailable in the canonical context; do not calculate it from mismatched or undeclared fiscal durations.",
+    "Observed Q3 profitability remains thin, making earnings sensitive to operating-cost assumptions; this sensitivity is an inference.",
+    "Reported versus adjusted EPS and operating versus free cash flow are distinct accounting measures.",
+    "A provider forward P/E does not by itself validate the recovery valuation."
+  ],
+  "key_strengths": [
+    "The official Q3 release raised full-year earnings guidance.",
+    "Official Q3 operating cash flow remained positive at US$5.1bn.",
+    "The June provider snapshot showed positive profitability, equity and free cash flow, albeit with a stale reporting period."
+  ],
+  "summary": "The newer official release supports a recovery narrative, while the stale structured statement and lower Q3 net margin leave important uncertainty. Neutral/medium confidence is appropriate until current statements, valuation basis and earnings-quality drivers are reconciled; momentum rank alone is not a fundamental buy case."
+}

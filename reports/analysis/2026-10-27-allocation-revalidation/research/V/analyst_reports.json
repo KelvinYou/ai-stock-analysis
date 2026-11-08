@@ -1,0 +1,63 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Current Yahoo metadata quotes trailing P/E 34.40 and forward P/E 26.90. However, the deterministic context lacks trailing EPS and a dated common-share-basis valuation bridge, so these quotes do not establish a verified discount, fair value or entry target.",
+    "margin_analysis": "The June 30, 2026 quarter has provider operating margin 61.3% and net margin 48.4%, versus 66.8% and 51.8% in the comparable June 2025 quarter. Revenue and profit grew, but the observed margin compression means growth is not translating proportionally into earnings. No unsupported explanation is assigned to the expense increase.",
+    "debt_analysis": "The June 30 provider snapshot reports US$23.858bn total debt, US$35.178bn equity and US$6.137bn quarterly free cash flow. These are observed reported values; free cash flow supports financial capacity but does not by itself prove that all liabilities or contingent claims are immaterial.",
+    "growth_outlook": "The deterministic same-quarter comparison shows revenue growth of 14.36% and net-income growth of 6.75% versus June 2025. The July 28 official fiscal Q3 release corroborates net revenue of US$11.6bn, 14% revenue growth and US$5.6bn GAAP net income. Fiscal Q4/full-year results are scheduled after the US close on October 27 and are not yet available at this analysis cutoff.",
+    "key_risks": [
+      "A material earnings event is imminent; do not assume the quarter ended September 30 has already been reported.",
+      "Observed June-quarter operating and net margins are lower than the comparable prior-year quarter.",
+      "Same-basis valuation remains incomplete; provider P/E alone is not evidence of undervaluation.",
+      "The latest structured financial period is 119 days old despite today's provider capture."
+    ],
+    "key_strengths": [
+      "Comparable quarterly revenue and net income both grew year over year.",
+      "Observed quarterly free cash flow is substantial relative to quarterly net income.",
+      "The official fiscal Q3 release corroborates the core reported revenue and earnings figures."
+    ],
+    "summary": "Visa remains a profitable, cash-generative growth business in the observed quarter, but margin compression and the imminent October 27 earnings release prevent a clean fundamental add signal. Neutral/medium confidence means wait for new evidence and valuation reconciliation, not a claim that existing holdings must be sold."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "unavailable",
+    "news_summary": "No dated headlines were captured. The 0m table has 9 strong-buy, 27 buy, 3 hold and 1 strong-sell rating, unchanged from 1m; 3m had 9 strong-buy, 29 buy, 3 hold and no strong-sell. These buckets show constructive positioning but do not identify individual upgrade dates or fresh acceleration.",
+    "key_themes": [
+      "Broadly positive analyst stance",
+      "No latest monthly acceleration",
+      "Independent news tone unavailable"
+    ],
+    "notable_headlines": [],
+    "social_sentiment": null,
+    "summary": "Analyst positioning remains constructive but unchanged over the latest monthly bucket and slightly less favorable than 3m. With no captured independent news tone and a separately verified earnings event still pending, sentiment is neutral rather than an inferred immediate buy catalyst."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "Close above SMA20, SMA50 and SMA200; positive trend alignment.",
+    "rsi_14": 76.5442,
+    "rsi_assessment": "Overbought; continuation and reversal are both possible.",
+    "macd_assessment": "Positive MACD histogram supports the uptrend; it does not remove event risk.",
+    "volume_assessment": "Latest volume ratio 0.898 is below the 20-session mean; weak participation confirmation.",
+    "support_levels": [
+      356.75
+    ],
+    "resistance_levels": [
+      414.6
+    ],
+    "summary": "Trend alignment and positive MACD support a medium-confidence technical buy, qualified by elevated RSI and below-average latest volume."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Unavailable: no dated Fed snapshot is configured.",
+    "interest_rate_outlook": "Unavailable: no dated rate snapshot is configured.",
+    "fx_impact": "Unavailable: no dated FX snapshot is configured.",
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "Macro/FX data is unavailable in the ingested evidence envelope; no directional view is assigned. Separately verified official policy context is recorded in macro-evidence.json and is not substituted for a typed source snapshot."
+  },
+  "pipeline_mode": "in-session"
+}

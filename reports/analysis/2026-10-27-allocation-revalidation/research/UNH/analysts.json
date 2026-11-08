@@ -1,0 +1,63 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Current Yahoo metadata quotes trailing P/E 26.88 and forward P/E 17.64, but no common-share-basis trailing valuation is established by the deterministic context. The forward ratio depends on estimates and cannot establish that a recovery is underpriced.",
+    "margin_analysis": "Yahoo's latest structured period is June 30, 2026, with 7.13% operating margin and 4.90% net margin. The newer official October 13 Q3 release reports US$112.7bn revenue, US$6.6bn operating earnings and 3.6% net margin. The lower reported Q3 net margin versus the provider's Q2 figure warrants caution; different sources and adjustment conventions should be retained explicitly.",
+    "debt_analysis": "The stale June 30 provider snapshot reports US$73.328bn total debt, US$98.447bn equity and US$10.253bn quarterly free cash flow. The newer official Q3 release reports debt-to-capital of 41.7% and US$5.1bn operating cash flow. Operating cash flow is not free cash flow and must not replace it in comparisons.",
+    "growth_outlook": "The deterministic context cannot calculate a comparable year-over-year growth rate because the prior June quarter lacks a declared comparable duration. The October 13 official Q3 release raised full-year guidance to at least US$19.50 GAAP EPS and US$20.50 adjusted EPS, with Q3 EPS US$4.56 GAAP and US$4.69 adjusted. The guidance improvement is a positive management forecast, not proof that margins have normalized.",
+    "key_risks": [
+      "The provider's most recent structured statement is 119 days old and omits the already released September quarter.",
+      "Comparable growth is unavailable in the canonical context; do not calculate it from mismatched or undeclared fiscal durations.",
+      "Observed Q3 profitability remains thin, making earnings sensitive to operating-cost assumptions; this sensitivity is an inference.",
+      "Reported versus adjusted EPS and operating versus free cash flow are distinct accounting measures.",
+      "A provider forward P/E does not by itself validate the recovery valuation."
+    ],
+    "key_strengths": [
+      "The official Q3 release raised full-year earnings guidance.",
+      "Official Q3 operating cash flow remained positive at US$5.1bn.",
+      "The June provider snapshot showed positive profitability, equity and free cash flow, albeit with a stale reporting period."
+    ],
+    "summary": "The newer official release supports a recovery narrative, while the stale structured statement and lower Q3 net margin leave important uncertainty. Neutral/medium confidence is appropriate until current statements, valuation basis and earnings-quality drivers are reconciled; momentum rank alone is not a fundamental buy case."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "unavailable",
+    "news_summary": "No dated headlines were captured. The current 0m table has 6 strong-buy, 15 buy and 5 hold ratings; 1m had 7 strong-buy, 15 buy and 4 hold, while 2m had 7 strong-buy, 16 buy and 4 hold. This modest softening is an aggregate comparison, not proof of a particular downgrade event.",
+    "key_themes": [
+      "Positive but modestly softer analyst distribution",
+      "Independent news tone unavailable",
+      "Issuer results are separate fundamental evidence"
+    ],
+    "notable_headlines": [],
+    "social_sentiment": null,
+    "summary": "The analyst aggregate remains positive, but the latest buckets show less strong-buy support and more holds. Without captured independent news, sentiment remains neutral; issuer earnings are fundamental evidence rather than a second independent positive vote."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "Close above SMA20, SMA50 and SMA200; positive trend alignment.",
+    "rsi_14": 68.7337,
+    "rsi_assessment": "Elevated but below 70; avoid assuming unlimited upside.",
+    "macd_assessment": "Positive MACD histogram supports the uptrend; it does not remove event risk.",
+    "volume_assessment": "Latest volume ratio 0.7585 is below the 20-session mean; weak participation confirmation.",
+    "support_levels": [
+      362.6
+    ],
+    "resistance_levels": [
+      426.55
+    ],
+    "summary": "Trend alignment and positive MACD support a medium-confidence technical buy, qualified by elevated RSI and below-average latest volume."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Unavailable: no dated Fed snapshot is configured.",
+    "interest_rate_outlook": "Unavailable: no dated rate snapshot is configured.",
+    "fx_impact": "Unavailable: no dated FX snapshot is configured.",
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "Macro/FX data is unavailable in the ingested evidence envelope; no directional view is assigned. Separately verified official policy context is recorded in macro-evidence.json and is not substituted for a typed source snapshot."
+  }
+}

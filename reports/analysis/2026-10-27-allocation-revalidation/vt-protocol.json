@@ -1,0 +1,53 @@
+{
+  "captured_at_utc": "2026-10-27T03:51:14.565626+00:00",
+  "scope": "post_hoc_current_provider_vintage_research_only",
+  "universe": [
+    "AVGO",
+    "COST",
+    "MSFT",
+    "NVDA",
+    "ORCL",
+    "TSM",
+    "UNH",
+    "V"
+  ],
+  "reference": "VT",
+  "lookback_months": 12,
+  "top_n": 3,
+  "signal_start": "2018-01-01",
+  "signal_end": "2026-08-14",
+  "scenarios_cost_bps_and_block_months": [
+    [
+      20,
+      3
+    ],
+    [
+      40,
+      3
+    ],
+    [
+      80,
+      3
+    ],
+    [
+      20,
+      6
+    ],
+    [
+      20,
+      12
+    ]
+  ],
+  "costs": "assumed_proportional_not_broker_calibrated",
+  "hashes": {
+    "AVGO": "4b6fa3a1f70319e9a1e3f05745a2c775125761dc88154b8b8737b35dcc439046",
+    "COST": "fe190247ecb871df90625f1baed4ef5e0dd48ac78e113320709a51832276cc80",
+    "MSFT": "93f83cdbc4898c3e71cdc52abb6be1a0386121cc4de54eda12e897bc7329182e",
+    "NVDA": "69c4052e449c6a14e19edb62241e2d0697bf1ff4ac55897795a211cc7a221b0b",
+    "ORCL": "abc4f7dc6e6e20e578245a5dfed1995d38991efce4cba8a930bf48aee88aedfc",
+    "TSM": "d750ea380068a65d85061800bcb27d668820d4d1905cb5e9169b0381a432e6ff",
+    "UNH": "a2d9aba6fc3979c70a3bcb29e419f5b259a1cf07e8fdca146e82e56e577d9e25",
+    "V": "12990e1010f903ee461370f1eccddffae3eae7604a149e05ffea0fd5a7b5649d",
+    "VT": "7b19b9b2c87c791aeaed99d706c32ca85dfbcf1ddda38010ed3d1bcdb24c2cac"
+  }
+}
