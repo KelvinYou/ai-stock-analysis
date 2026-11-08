@@ -1,0 +1,459 @@
+{
+  "NVDA": {
+    "ticker": "NVDA",
+    "date": "2026-10-29",
+    "data_as_of": "2026-10-28",
+    "overall_signal": "buy",
+    "conviction": {
+      "score": 0.38,
+      "signal_convergence": 0.5,
+      "explanation": "Realized operating growth and positive cash support a conditional positive view, consistent with the research verdict. Weak short-term technicals, sequential cash compression and unverified valuation materially limit conviction."
+    },
+    "executive_summary": "NVIDIA has strong realized operations: FY27 Q2 revenue rose 106% to $96.221bn, gross margin was approximately 75%, and provider quarterly FCF remained positive at $21.4bn. The October27 Oracle announcement supplies deployment evidence, although planned expansion is not incremental recognized revenue. The research verdict favors conditional long-horizon growth exposure.\n\nThe strongest disconfirming evidence is quarterly FCF below the previous $48.587bn, combined with price below its 50-day average and negative MACD. No validated same-share-basis valuation establishes a margin of safety. The modest Buy expresses operating support rather than an overnight bottom, cheapness claim or aggressive immediate-entry instruction.",
+    "bull_case": "Realized 106% revenue growth, high margins and positive quarterly cash flow support continued profitable AI deployment; long-term technical trend remains above the 200-day average.",
+    "bear_case": "No verified valuation discount, sequential FCF compression, customer concentration and weak short-term momentum leave the entry and owner-return compensation uncertain.",
+    "key_uncertainties": [
+      "Future AI deployment monetization and concentration outcomes.",
+      "Sustainable cash conversion after the sequential decline.",
+      "Current fair value on a validated share basis.",
+      "Validated same-share-basis TTM valuation.",
+      "Complete refreshed liquidity and debt maturity assessment."
+    ],
+    "catalysts_upcoming": [
+      "Next comparable cash-flow disclosure showing recovery or further compression in FCF.",
+      "Subsequent earnings confirming revenue growth with maintained profitability.",
+      "Observed recovery in daily momentum and the 50-day trend would strengthen, rather than guarantee, tactical confirmation."
+    ],
+    "risk_assessment": {
+      "correlation_notes": [
+        "High beta (2.22) \u2014 price may amplify broad-market moves.",
+        "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+      ],
+      "max_drawdown_scenario": "Historical max drawdown: 66.3% over available price history. Projected worst case (2-sigma): ~69.4% from current $215.38.",
+      "risk_reward_ratio": null
+    },
+    "action_plan": {
+      "entry_limit": 210.35,
+      "entry_rationale": "Midway between current ($215.38) and Bollinger lower band ($205.32)",
+      "stop_loss": 198.25,
+      "stop_rationale": "2x ATR-14 ($6.05) below entry \u2014 invalidates the setup",
+      "take_profit_1": 242.25,
+      "take_profit_2": 247.69,
+      "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+      "horizon": "swing (2-8 weeks)",
+      "note": null
+    },
+    "research_verdict": {
+      "ticker": "NVDA",
+      "judged_view": "buy",
+      "confidence": "medium",
+      "thesis": "Realized operating expansion and profitability carry a conditional long-horizon growth case. Positive $21.4bn quarterly FCF supplies present cash support, while no valuation margin of safety or tactical bottom is established. The ruling supports bounded growth exposure rather than urgent aggressive entry.",
+      "winning_side": "bull",
+      "strongest_counterexample": "Quarterly FCF fell from $48.587bn to $21.4bn and the price has negative short-term momentum; strong revenue can coexist with worsening owner cash conversion at an unverified valuation.",
+      "invalidation_conditions": [
+        "Two subsequent comparable quarters with year-over-year revenue growth at or below 0% would invalidate the sustained operating-growth foundation.",
+        "Two consecutive reported quarters with free cash flow at or below zero would invalidate reliance on durable current cash generation."
+      ],
+      "evidence_gaps": [
+        "Validated same-share-basis TTM valuation.",
+        "Complete refreshed liquidity and debt maturity assessment."
+      ],
+      "decisive_factors": [
+        "Revenue and margins show strong realized operations.",
+        "Quarterly FCF is positive but below the previous quarter.",
+        "Oracle expansion plans are not recognized incremental revenue."
+      ]
+    },
+    "agent_signal_breakdown": {
+      "fundamentals": "buy",
+      "sentiment": "buy",
+      "technical": "neutral",
+      "macro": "neutral"
+    },
+    "synthesized_signal": "buy",
+    "signal_gate_reasons": [],
+    "pipeline_mode": "in-session"
+  },
+  "GOOGL": {
+    "ticker": "GOOGL",
+    "date": "2026-10-29",
+    "data_as_of": "2026-10-28",
+    "overall_signal": "neutral",
+    "conviction": {
+      "score": 0.0,
+      "signal_convergence": 0.4545,
+      "explanation": "Consistent with the wait-oriented research verdict: profitable growth is counterbalanced by two negative FCF quarters, capex and dilution. The post-earnings gap invalidates treating regular-close technical references as executable overnight levels."
+    },
+    "executive_summary": "Alphabet Q3 revenue grew 25%, operating income grew 30%, and Cloud operating profit reached $11.121bn. These support a viable long-term AI growth thesis and separate core operations from investment-loss-driven EPS volatility. TTM FCF remains positive at $19.747bn.\n\nRecent common-shareholder economics are weaker: Q3 FCF was negative $9.065bn after negative $5.855bn in Q2, with $51.355bn quarterly capex and $12.371bn common issuance. The research verdict favors waiting before adding, rather than asserting the business has failed. A roughly 10% after-hours decline does not establish fair value; daily indicators use the regular close and omit the gap, so their historical support is not an executable current floor.",
+    "bull_case": "Revenue, operating income and Cloud profitability are growing rapidly, with positive TTM FCF supporting eventual monetization of the AI investment cycle.",
+    "bear_case": "Two negative FCF quarters, heavy capex, common issuance and the post-earnings gap undermine an immediate add; positive operations do not prove per-share capital returns.",
+    "key_uncertainties": [
+      "Timing and magnitude of per-share cash-flow recovery.",
+      "Future capital requirements and dilution.",
+      "Post-gap technical structure and defensible fair value.",
+      "Validated recurring-earnings valuation excluding investment distortions.",
+      "A daily OHLC bar incorporating the post-earnings gap.",
+      "Complete current debt disaggregation and per-share investment-return assessment."
+    ],
+    "catalysts_upcoming": [
+      "Next quarterly cash statement showing whether FCF turns positive and TTM cash rebuilds.",
+      "Next share-count and financing disclosures showing the interaction of issuance, repurchases, stock compensation and diluted shares.",
+      "A complete daily bar incorporating the earnings gap will provide a relevant technical snapshot; it will not itself prove fair value."
+    ],
+    "risk_assessment": {
+      "correlation_notes": [
+        "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
+      ],
+      "max_drawdown_scenario": "Historical max drawdown: 44.3% over available price history. Projected worst case (2-sigma): ~47.5% from current $324.89.",
+      "risk_reward_ratio": null
+    },
+    "action_plan": {
+      "entry_limit": null,
+      "entry_rationale": null,
+      "stop_loss": null,
+      "stop_rationale": null,
+      "take_profit_1": null,
+      "take_profit_2": null,
+      "target_rationale": null,
+      "horizon": "swing (2-8 weeks)",
+      "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.45). Wait for a clearer setup."
+    },
+    "research_verdict": {
+      "ticker": "GOOGL",
+      "judged_view": "neutral",
+      "confidence": "medium",
+      "thesis": "The bear carries the decision against an immediate add because current owner-cash economics weakened despite strong operating growth. Two negative FCF quarters and common issuance make a lower quote insufficient buying evidence. This is a wait ruling, not a conclusion that the long-term business has failed.",
+      "winning_side": "bear",
+      "strongest_counterexample": "Revenue grew 25%, operating income grew 30%, Cloud operating profit reached $11.121bn and TTM FCF remains positive at $19.747bn; this may be productive investment rather than permanent deterioration.",
+      "invalidation_conditions": [
+        "Two subsequent quarters of positive FCF accompanied by no net common-share issuance would undermine the current cash-and-dilution basis for waiting.",
+        "Reported TTM FCF at or below zero would invalidate treating current pressure as compatible with a still-positive trailing cash foundation and require a stronger adverse reassessment."
+      ],
+      "evidence_gaps": [
+        "Validated recurring-earnings valuation excluding investment distortions.",
+        "A daily OHLC bar incorporating the post-earnings gap.",
+        "Complete current debt disaggregation and per-share investment-return assessment."
+      ],
+      "decisive_factors": [
+        "Revenue grew 25% and operating income grew 30%.",
+        "Cloud operating profit is real operating evidence.",
+        "Recent FCF was negative for two consecutive quarters and common shares were issued."
+      ]
+    },
+    "agent_signal_breakdown": {
+      "fundamentals": "neutral",
+      "sentiment": "sell",
+      "technical": "sell",
+      "macro": "neutral"
+    },
+    "synthesized_signal": "neutral",
+    "signal_gate_reasons": [],
+    "pipeline_mode": "in-session"
+  },
+  "AVGO": {
+    "ticker": "AVGO",
+    "date": "2026-10-29",
+    "data_as_of": "2026-10-28",
+    "overall_signal": "buy",
+    "conviction": {
+      "score": 0.42,
+      "signal_convergence": 0.5,
+      "explanation": "Consistent with the conditional bullish research verdict: rapid growth is accompanied by realized cash conversion. Leverage, customer concentration, residual-value support and absent verified valuation restrain conviction; improving short-term momentum is not a confirmed long-term reversal."
+    },
+    "executive_summary": "Broadcom Q3 revenue grew 86% to $29.591bn and FCF reached $13.665bn, or 46% of revenue. Current cash conversion gives the operating growth case substance independent of future customer financing. The research verdict favors a conditional long-horizon growth purchase.\n\nThe strongest countercase is the combination of $59.419bn reported debt, concentrated AI customers and residual-value support in the announced financing structure. The $63bn SPV is financing, not recognized sales, and expected 2027 deliveries are not realized current revenue. Missing same-basis valuation and a price still below both major averages limit the entry case despite a positive MACD histogram.",
+    "bull_case": "Realized revenue growth and $13.665bn quarterly FCF support a profitable AI deployment business; customer financing can enable deliveries.",
+    "bear_case": "Valuation is unresolved, debt is material, demand is concentrated and residual-value support adds contingent exposure; a financing SPV is not recognized revenue.",
+    "key_uncertainties": [
+      "Economic cost and eventual calls on residual-value support.",
+      "Customer deployment execution and delivery timing.",
+      "Same-basis valuation margin of safety.",
+      "Validated same-share-basis valuation.",
+      "Quantified residual-value support exposure and complete financing terms.",
+      "Updated complete debt maturity and liquidity reconciliation."
+    ],
+    "catalysts_upcoming": [
+      "Subsequent earnings showing whether revenue expansion continues with positive FCF conversion.",
+      "Disclosures quantifying residual-value support terms or actual obligations.",
+      "Actual customer deliveries and recognized revenue, rather than financing announcements alone."
+    ],
+    "risk_assessment": {
+      "correlation_notes": [
+        "High beta (1.48) \u2014 price may amplify broad-market moves.",
+        "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+      ],
+      "max_drawdown_scenario": "Historical max drawdown: 48.3% over available price history. Projected worst case (2-sigma): ~72.6% from current $351.81.",
+      "risk_reward_ratio": null
+    },
+    "action_plan": {
+      "entry_limit": 347.08,
+      "entry_rationale": "Buy-the-dip to SMA-20 support near $347.08",
+      "stop_loss": 324.68,
+      "stop_rationale": "2x ATR-14 ($11.20) below entry \u2014 invalidates the setup",
+      "take_profit_1": 366.74,
+      "take_profit_2": 493.32,
+      "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+      "horizon": "swing (2-8 weeks)",
+      "note": null
+    },
+    "research_verdict": {
+      "ticker": "AVGO",
+      "judged_view": "buy",
+      "confidence": "medium",
+      "thesis": "The bull carries a conditional long-horizon growth case because expansion is accompanied by substantial realized cash conversion, not merely customer announcements. $13.665bn quarterly FCF gives the business current financial support, while financing obligations, leverage and the purchase valuation remain material constraints. Tactical stabilization is not a confirmed long-term reversal.",
+      "winning_side": "bull",
+      "strongest_counterexample": "A $59.419bn reported debt burden, concentrated AI customers and residual-value support can transmit deployment or financing problems to shareholders even while current earnings are strong.",
+      "invalidation_conditions": [
+        "Two consecutive comparable quarters with free cash flow at or below zero would invalidate reliance on cash-generative growth.",
+        "Two consecutive quarters with year-over-year revenue growth at or below zero would invalidate the sustained expansion premise.",
+        "A disclosed material residual-value support payment exceeding the latest $13.665bn quarterly FCF would invalidate the assumption that present cash generation comfortably absorbs this exposure."
+      ],
+      "evidence_gaps": [
+        "Validated same-share-basis valuation.",
+        "Quantified residual-value support exposure and complete financing terms.",
+        "Updated complete debt maturity and liquidity reconciliation."
+      ],
+      "decisive_factors": [
+        "Q3 revenue rose 86% and AI semiconductor revenue rose 221%.",
+        "Quarterly FCF was $13.665bn.",
+        "The $63bn SPV is not recognized current sales."
+      ]
+    },
+    "agent_signal_breakdown": {
+      "fundamentals": "buy",
+      "sentiment": "buy",
+      "technical": "neutral",
+      "macro": "neutral"
+    },
+    "synthesized_signal": "buy",
+    "signal_gate_reasons": [],
+    "pipeline_mode": "in-session"
+  },
+  "VT": {
+    "ticker": "VT",
+    "date": "2026-10-29",
+    "data_as_of": "2026-10-28",
+    "overall_signal": "neutral",
+    "conviction": {
+      "score": 0.0,
+      "signal_convergence": 0.0,
+      "explanation": "Consistent with the low-confidence research verdict: this corporate-stock pipeline lacks ETF-specific valuation and implementation evidence. Neutral timing is compatible with a long-horizon diversified-core accumulation policy and is not a reason to condemn the holding."
+    },
+    "executive_summary": "VT is assessed here as an intended diversified global equity core, not as an operating company. Corporate profit, debt and cash-flow gaps are a coverage limitation, while no dated fund-specific directional catalyst was established. The technical picture is balanced, with price above the 200-day average but slightly negative MACD.\n\nNeither side establishes a special tactical opportunity or deterioration. Current look-through valuation, holdings weights, NAV premium/discount and tracking are unassessed. Neutral follows the research verdict and should remain separate from any established long-horizon allocation policy; absence of a timing edge does not require abandoning ordinary core accumulation.",
+    "bull_case": "The intended diversified global-core role can justify regular long-horizon accumulation; corporate-model missing data are not evidence of ETF deterioration.",
+    "bear_case": "ETF look-through valuation, NAV premium/discount, holdings and tracking are unassessed, leaving no verified tactical purchase advantage.",
+    "key_uncertainties": [
+      "Current ETF look-through valuation and constituent weights.",
+      "NAV premium/discount, tracking difference and fund-specific implementation risks.",
+      "ETF holdings and weights.",
+      "Dated NAV premium/discount and tracking-difference measurements.",
+      "Look-through valuation and implementation costs."
+    ],
+    "catalysts_upcoming": [
+      "A dated ETF-specific review of holdings, costs, tracking difference and NAV premium/discount would close coverage gaps.",
+      "An observed fund-level tracking or NAV dislocation would warrant reassessment after execution costs, rather than an automatic directional trade."
+    ],
+    "risk_assessment": {
+      "correlation_notes": [
+        "No significant market-context flags."
+      ],
+      "max_drawdown_scenario": "Historical max drawdown: 34.2% over available price history. Projected worst case (2-sigma): ~20.0% from current $158.29.",
+      "risk_reward_ratio": null
+    },
+    "action_plan": {
+      "entry_limit": null,
+      "entry_rationale": null,
+      "stop_loss": null,
+      "stop_rationale": null,
+      "take_profit_1": null,
+      "take_profit_2": null,
+      "target_rationale": null,
+      "horizon": "swing (2-8 weeks)",
+      "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
+    },
+    "research_verdict": {
+      "ticker": "VT",
+      "judged_view": "neutral",
+      "confidence": "low",
+      "thesis": "Neither advocate establishes a tactical direction because the shared evidence lacks ETF-specific valuation and implementation analysis. The diversified-core accumulation rationale remains separate and compatible with this neutral research ruling. Corporate-model coverage limitations should not be recast as negative fundamentals.",
+      "winning_side": "neither",
+      "strongest_counterexample": "A long-horizon investor can rationally accumulate a diversified global equity core without a near-term catalyst; waiting for a tactical edge may add no allocation value.",
+      "invalidation_conditions": [
+        "A complete dated fund-level review supplying all three currently absent inputs\u2014look-through valuation, executable NAV premium/discount, and tracking difference\u2014would invalidate the present coverage-gap basis for withholding a tactical assessment.",
+        "If the fund objective ceases to represent diversified global equity exposure, the core-role rationale would require revision."
+      ],
+      "evidence_gaps": [
+        "ETF holdings and weights.",
+        "Dated NAV premium/discount and tracking-difference measurements.",
+        "Look-through valuation and implementation costs."
+      ],
+      "decisive_factors": [
+        "Corporate earnings and leverage metrics do not appropriately characterize this ETF.",
+        "No dated fund-specific directional catalyst was established.",
+        "Price remains above its 200-day average with balanced short-term momentum."
+      ]
+    },
+    "agent_signal_breakdown": {
+      "fundamentals": "neutral",
+      "sentiment": "neutral",
+      "technical": "neutral",
+      "macro": "neutral"
+    },
+    "synthesized_signal": "neutral",
+    "signal_gate_reasons": [],
+    "pipeline_mode": "in-session"
+  },
+  "1155": {
+    "ticker": "1155",
+    "date": "2026-10-29",
+    "data_as_of": "2026-10-28",
+    "overall_signal": "neutral",
+    "conviction": {
+      "score": 0.0,
+      "signal_convergence": 0.0,
+      "explanation": "Consistent with the neutral research verdict: observed banking resilience and Q2 recovery are offset by slightly weaker first-half profit, dated credit data, missing valuation and weak longer-term technical confirmation."
+    },
+    "executive_summary": "Maybank reported Q2 attributable-profit growth of 2.4%, NIM of 2.10%, CET1 of 14.92% and liquidity buffers supporting an income-and-resilience case. Bank-specific funding, capital and credit measures are more appropriate than interpreting provider industrial FCF as distress.\n\nFirst-half profit was slightly below the prior year, and June30 capital and credit observations are 121 days old. Price remains below both major averages on low volume despite improving short-term momentum. The neutral research verdict is appropriate: no structural impairment is established, but sustained earnings acceleration, dividend coverage and current valuation remain insufficiently evidenced for a stronger add.",
+    "bull_case": "Reported capital and liquidity buffers, Q2 profit recovery, margin improvement and an interim dividend support a measured banking income case.",
+    "bear_case": "First-half profit remains slightly down, statements are 121 days old, valuation and distribution sustainability are unverified, and the longer-term trend is weak.",
+    "key_uncertainties": [
+      "Latest funding margins and asset quality.",
+      "Same-basis valuation and ongoing dividend coverage.",
+      "Whether quarterly recovery will persist.",
+      "Current bank valuation on a validated share basis.",
+      "Post-June30 asset-quality, funding-margin and capital data.",
+      "Current dividend coverage assessment."
+    ],
+    "catalysts_upcoming": [
+      "Next bank results showing whether quarterly profit and margin recovery persists.",
+      "Updated asset quality, capital and funding-liquidity metrics after June30.",
+      "Fresh dividend-coverage and validated valuation evidence before treating the income case as a purchase opportunity."
+    ],
+    "risk_assessment": {
+      "correlation_notes": [
+        "Low beta (0.10) \u2014 historically less sensitive to broad-market moves.",
+        "Sector: Financial Services \u2014 use sector-specific catalysts and risks in the thesis."
+      ],
+      "max_drawdown_scenario": "Historical max drawdown: 26.5% over available price history. Projected worst case (2-sigma): ~20.1% from current $9.99.",
+      "risk_reward_ratio": null
+    },
+    "action_plan": {
+      "entry_limit": null,
+      "entry_rationale": null,
+      "stop_loss": null,
+      "stop_rationale": null,
+      "take_profit_1": null,
+      "take_profit_2": null,
+      "target_rationale": null,
+      "horizon": "swing (2-8 weeks)",
+      "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
+    },
+    "research_verdict": {
+      "ticker": "1155",
+      "judged_view": "neutral",
+      "confidence": "medium",
+      "thesis": "Stable observed bank buffers support retaining an income thesis, but a single quarterly recovery does not establish sustained earnings acceleration or an attractive current price. The bear establishes reasons to wait, not evidence of structural impairment. Neutral is more defensible than a directional buy or sell.",
+      "winning_side": "neither",
+      "strongest_counterexample": "Q2 profit and net interest margin improved, while reported CET1 of 14.92%, liquidity ratios and the interim dividend provide tangible resilience and income evidence.",
+      "invalidation_conditions": [
+        "Two subsequent comparable quarters with attributable-profit growth above 0% and a dated valuation assessment would invalidate the present lack-of-confirmed-recovery basis and require a fresh buy assessment.",
+        "A subsequent comparable report with CET1 below the observed 14.92% and attributable-profit growth below 0% would weaken the stable-buffer-and-earnings foundation and require adverse reassessment."
+      ],
+      "evidence_gaps": [
+        "Current bank valuation on a validated share basis.",
+        "Post-June30 asset-quality, funding-margin and capital data.",
+        "Current dividend coverage assessment."
+      ],
+      "decisive_factors": [
+        "Q2 profit grew 2.4% while half-year profit was slightly below the prior year.",
+        "Reported capital and liquidity buffers are June30 observations.",
+        "Industrial FCF treatment is inappropriate for a bank."
+      ]
+    },
+    "agent_signal_breakdown": {
+      "fundamentals": "neutral",
+      "sentiment": "neutral",
+      "technical": "neutral",
+      "macro": "neutral"
+    },
+    "synthesized_signal": "neutral",
+    "signal_gate_reasons": [],
+    "pipeline_mode": "in-session"
+  },
+  "5258": {
+    "ticker": "5258",
+    "date": "2026-10-29",
+    "data_as_of": "2026-10-28",
+    "overall_signal": "neutral",
+    "conviction": {
+      "score": 0.0,
+      "signal_convergence": 0.2727,
+      "explanation": "Consistent with the wait-oriented research verdict: Q2 recovery and reported bank buffers preserve optionality, but near-flat half-year profit, dated credit evidence, sparse catalysts and weak larger trends do not establish an adequately priced turnaround."
+    },
+    "executive_summary": "Bank Islam Q2 profit rose 9.8%, while reported impaired financing of 0.98% and total capital of 17.8% provide a bank-specific foundation for a possible recovery. Near-flat first-half profit prevents extrapolating a single better quarter into sustained growth.\n\nThe larger price trend remains below both major averages near the yearly low, and recent sentiment evidence is sparse. No verified valuation proves that low-price proximity is cheapness. Neutral adopts the research verdict against immediate averaging down without turning dated capital observations or unsuitable industrial FCF into an automatic sell thesis.",
+    "bull_case": "Q2 profit recovery and reported capital and impaired-financing ratios support a possible patient recovery, without treating bank FCF as industrial distress.",
+    "bear_case": "Half-year profit is nearly flat, recent company catalysts and valuation evidence are sparse, and the larger technical trend remains weak near the yearly low.",
+    "key_uncertainties": [
+      "Post-June30 financing-margin and credit outcomes.",
+      "Validated valuation and a fresh revaluation catalyst.",
+      "Whether the weak technical trend will reverse.",
+      "Validated same-share-basis bank valuation.",
+      "Post-June30 financing margins, asset-quality and capital observations.",
+      "Recent company-specific catalyst evidence."
+    ],
+    "catalysts_upcoming": [
+      "Next results showing whether financing margins and attributable earnings improve beyond a single quarter.",
+      "Post-June30 impaired-financing and capital disclosures confirming or weakening the recovery foundation.",
+      "Observed sustained improvement in the larger daily trend would improve tactical evidence without proving fair value."
+    ],
+    "risk_assessment": {
+      "correlation_notes": [
+        "Low beta (0.19) \u2014 historically less sensitive to broad-market moves.",
+        "Sector: Financial Services \u2014 use sector-specific catalysts and risks in the thesis."
+      ],
+      "max_drawdown_scenario": "Historical max drawdown: 44.8% over available price history. Projected worst case (2-sigma): ~28.4% from current $2.00.",
+      "risk_reward_ratio": null
+    },
+    "action_plan": {
+      "entry_limit": null,
+      "entry_rationale": null,
+      "stop_loss": null,
+      "stop_rationale": null,
+      "take_profit_1": null,
+      "take_profit_2": null,
+      "target_rationale": null,
+      "horizon": "swing (2-8 weeks)",
+      "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.27). Wait for a clearer setup."
+    },
+    "research_verdict": {
+      "ticker": "5258",
+      "judged_view": "neutral",
+      "confidence": "medium",
+      "thesis": "The bear carries the argument against adding immediately because a quarterly recovery and low-price proximity do not establish a sustained, adequately priced turnaround. Nearly flat half-year earnings, dated credit evidence and a weak larger trend favor waiting. This is not evidence for an automatic liquidation of an existing holding.",
+      "winning_side": "bear",
+      "strongest_counterexample": "Q2 profit grew 9.8%, with reported capital of 17.8% and impaired financing below 1%; those facts support a credible recovery scenario even though it remains unconfirmed.",
+      "invalidation_conditions": [
+        "Two subsequent comparable quarters of attributable-profit growth above 0%, with impaired financing at or below the observed 0.98%, would undermine the lack-of-confirmed-recovery reason for waiting.",
+        "A subsequent report showing attributable-profit growth below 0% and impaired financing above 0.98% would weaken the stable-credit recovery scenario and require a more adverse assessment."
+      ],
+      "evidence_gaps": [
+        "Validated same-share-basis bank valuation.",
+        "Post-June30 financing margins, asset-quality and capital observations.",
+        "Recent company-specific catalyst evidence."
+      ],
+      "decisive_factors": [
+        "Q2 profit grew 9.8% while half-year earnings were nearly flat.",
+        "Capital ratio 17.8% and impaired financing 0.98% are dated observations.",
+        "Price proximity to a low does not establish cheapness."
+      ]
+    },
+    "agent_signal_breakdown": {
+      "fundamentals": "neutral",
+      "sentiment": "neutral",
+      "technical": "sell",
+      "macro": "neutral"
+    },
+    "synthesized_signal": "neutral",
+    "signal_gate_reasons": [],
+    "pipeline_mode": "in-session"
+  }
+}

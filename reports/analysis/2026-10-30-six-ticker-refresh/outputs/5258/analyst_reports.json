@@ -1,0 +1,64 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Unavailable: deterministic context lacks validated same-share-basis TTM EPS and P/E. Provider metadata is not accepted as proof of a valuation discount; no earnings multiple is estimated.",
+    "margin_analysis": "Official issuer quarterly page confirms Q2 profitRM139.122m vsRM126.685m; reported financing-credit measures are more appropriate than industrial margins.",
+    "debt_analysis": "June30 issuer context reports capital17.8% and impaired financing0.98%; no post-June30 stress or asset-quality update established.",
+    "growth_outlook": "Official Q3 cells still blank. H1 profitRM254.154m vsRM252.950m nearly flat despite Q2+9.8%; published gross Q2 revenueRM1.363945bn is a different definition from providerRM718.770m.",
+    "key_risks": [
+      "No verified valuation discount or sustained H1 earnings acceleration.",
+      "Bank credit/funding evidence is122days old.",
+      "Provider bank FCF unsuitable as an industrial distress indicator."
+    ],
+    "key_strengths": [
+      "Q2 profit recovery confirmed on issuer page.",
+      "Reported bank credit and capital buffers preserve a recovery scenario."
+    ],
+    "summary": "Neutral balances verified Q2 improvement against nearly flat H1 profit and missing fresh credit/valuation evidence. A lower market price is not additional fundamental recovery evidence, and no new quarterly results were established."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "neutral",
+    "news_summary": "No fresh qualifying issuer-specific headline was independently established through Oct 29 in the searches performed. August half-year results are older context only; fresh 0 m recommendations remain 1 buy and 7 hold.",
+    "key_themes": [
+      "Sparse fresh news",
+      "Hold-heavy consensus",
+      "Old results are not a new catalyst"
+    ],
+    "notable_headlines": [],
+    "social_sentiment": null,
+    "summary": "News evidence remains sparse and current recommendation consensus remains mostly hold. No new favorable or adverse issuer event is inferred from the US AI sell-off, so neutral with low confidence remains appropriate."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "Weak intermediate and long-term trend with marginal recent stabilization.",
+    "rsi_14": 47.3684,
+    "rsi_assessment": "RSI 47.3684 is neutral; proximity to the yearly low does not itself indicate oversold momentum.",
+    "macd_assessment": "MACD line -0.0198, signal -0.0225, histogram 0.0026; histogram is positive (improving momentum), not an independent price forecast.",
+    "volume_assessment": "Completed-bar volume 431200 is 0.5548x its 20-bar average; interpret alongside trend and volatility.",
+    "support_levels": [
+      1.97
+    ],
+    "resistance_levels": [
+      2.08,
+      2.2
+    ],
+    "summary": "The close of 2.01 remains below both major moving averages, with negative twenty- and sixty-bar returns. A marginally positive MACD histogram and five-bar bounce have weak volume confirmation at 0.55x average; the observed 1.97 low is not a guaranteed support floor."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Inference: US policy can affect external funding and regional capital flows, while the directly relevant verified BNM OPR remains 2.75%.",
+    "interest_rate_outlook": "Observed: the Fed held 3.75%-4.00% on 2026-10-28, with two members preferring a 25bp increase and inflation described as elevated. The latest verified BNM OPR is 2.75%, dated 2026-09-03 and checked as current on 2026-10-30. No next policy move is assumed.",
+    "fx_impact": "Observed BNM reference USD/MYR fell from 4.0818 on 2026-10-28 to 4.0664 on 2026-10-29. The stronger MYR could conditionally affect regional translation and funding, but a one-day observation does not establish a durable currency trend or quantify this bank's operating exposure.",
+    "sector_macro_factors": [
+      "Inference: Islamic financing yields and funding costs can respond to policy settings, but the unchanged observed OPR does not establish a financing-demand or margin direction."
+    ],
+    "geopolitical_risks": [],
+    "summary": "The dated Fed hold and BNM OPR establish the current rate backdrop without a new policy easing or tightening event. The one-day MYR strengthening changes translation of USD exposure but supplies no durable directional stock signal; sector transmission remains conditional inference."
+  },
+  "pipeline_mode": "in-session"
+}

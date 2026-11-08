@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "No validated same-share-basis TTM EPS/P-E is available in the deterministic context; current provider metadata is not evidence of a valuation discount.",
+    "margin_analysis": "Official Q2: net interest margin 2.10%, up 10bp YoY; first-half annualised ROE 11.6%. Provider industrial-company operating-margin fields are unavailable.",
+    "debt_analysis": "Bank funding debt is not comparable to industrial leverage. Official CET1 14.92%, total capital ratio 18.68%, LCR 130.0%, NSFR 113.4%; these are June30 observations.",
+    "growth_outlook": "Aug27 release: Q2 attributable profit RM2.690bn up 2.4%; first-half RM5.171bn versus RM5.217bn prior year, so one-quarter recovery is not sustained acceleration.",
+    "key_risks": [
+      "First-half profit slightly below prior year.",
+      "Funding margins, credit costs and regional exposures remain relevant.",
+      "No validated dated valuation or dividend sustainability assessment."
+    ],
+    "key_strengths": [
+      "Reported capital and liquidity buffers.",
+      "Interim 31 sen dividend and Q2 profit recovery."
+    ],
+    "summary": "Neutral reflects stable bank fundamentals without a verified valuation discount or sustained earnings acceleration. June30 statements are 121 days old; provider bank FCF is not used as an industrial cash-generation warning."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "neutral",
+    "news_summary": "Recent Maybank notices concern its dividend reinvestment plan and additional listing. Provider 0m recommendations are 2 strong buy,7 buy,8 hold, with no verified recent change history.",
+    "key_themes": [
+      "Dividend reinvestment",
+      "Mixed analyst consensus",
+      "No fresh earnings surprise established"
+    ],
+    "notable_headlines": [
+      "2026-10-23 | Maybank investor relations | New Issue Of Securities: Other Issue Of Securities",
+      "2026-10-22 | Maybank Bursa announcement via KLSE Screener | Additional Listing Announcement /Subdivision of Shares"
+    ],
+    "social_sentiment": null,
+    "summary": "Recent corporate-action notices and mixed consensus do not establish a decisive bullish or bearish event. Neutral is appropriate pending a fresh earnings or asset-quality catalyst."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Short-term stabilization below declining longer-term reference averages.",
+    "rsi_14": 63.3803,
+    "rsi_assessment": "RSI 63.3803 shows improving recent strength but is not overbought.",
+    "macd_assessment": "MACD line -0.029, signal -0.0454, histogram 0.0164; positive histogram indicates improving momentum.",
+    "volume_assessment": "Volume is 0.6133x the 20-bar average; confirmation is contextual, not a standalone signal.",
+    "support_levels": [
+      9.78
+    ],
+    "resistance_levels": [
+      10.12,
+      10.5957
+    ],
+    "summary": "The positive MACD histogram and improving RSI indicate stabilization, but the close remains below the 50- and 200-day averages. Volume at 0.61x its average and a negative 60-bar return leave the reversal unconfirmed."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Inference: US policy affects external funding conditions, while the directly relevant observed BNM OPR remains 2.75%.",
+    "interest_rate_outlook": "Observed: the Fed held its target at 3.75%-4.00% on 2026-10-28; two members preferred a 25bp increase and the statement described inflation as elevated. BNM OPR was 2.75% at its 2026-09-03 decision and remains the latest verified level as of 2026-10-29. Neither the next hike nor a cut is assumed.",
+    "fx_impact": "BNM reference USD/MYR was 4.0818 on 2026-10-28 versus 4.0858 on 2026-10-06; this small change does not establish a strong currency trend. No material directional FX conclusion for this MYR-listed holding is supported.",
+    "sector_macro_factors": [
+      "Inference: bank asset yields and deposit costs respond to policy settings, but an unchanged OPR does not establish the direction of net interest margins."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Verified Fed and BNM policy levels provide a dated macro backdrop, but neither the US hold nor the small USD/MYR change establishes a directional edge. Sector effects are conditional inferences; no fresh sector or geopolitical macro shock is supplied."
+  },
+  "pipeline_mode": "in-session"
+}

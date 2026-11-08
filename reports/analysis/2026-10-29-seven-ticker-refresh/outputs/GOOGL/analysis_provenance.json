@@ -1,0 +1,231 @@
+{
+  "symbol": "GOOGL",
+  "date": "2026-10-29",
+  "data_as_of": "2026-10-28",
+  "mode": "in-session",
+  "newly_researched_roles": [
+    "fundamentals",
+    "sentiment",
+    "technical",
+    "macro"
+  ],
+  "retained_roles": [],
+  "debate_rounds": 2,
+  "input_sha256": {
+    "fundamentals.json": "1ee163988d46ebf661e2d425f5e85e1376b0bc97f6209eb305e74a0a44ce0f2d",
+    "technicals.json": "399d650345c4170a0967ce25ffe65679e4a9b7c7ca327b42fb46bf92e7161b53",
+    "price_history.csv": "60cd2c7a17df4e1fb0ccd95346e6f54f0a986317904101f97cf1af26adb8eca2"
+  },
+  "prompt_source_sha256": {
+    "src/stock_analysis/agents/fundamentals.py": "b33681019d2e7c1c028137c1295ae506a436cddc5953ec9c96ccbe0992ddb3e8",
+    "src/stock_analysis/agents/sentiment.py": "6077431b5d221cb90b65acb611cbe9552e72b308778e57c7fb03a572af6e3280",
+    "src/stock_analysis/agents/technical.py": "b40fa5883e2a7c9e765bd5727ee7a965d965fa1d3584a287e0e3cb8d7acaf7fd",
+    "src/stock_analysis/agents/macro.py": "7867dd03bd3f38c03d8be50a7ecffefb35454ba100ff3c22d3cdc9d6278242b1",
+    "src/stock_analysis/debate/engine.py": "a902c4efb3864a7ba087ee64e08f67a7a4f8ef57c4ae0fda0a8d183290cf6903",
+    "src/stock_analysis/debate/research_manager.py": "6b93323cf8f65b6ce125dc78f2c1070d52e42f95be880c555b332e1522acbd2e",
+    "src/stock_analysis/synthesis/synthesizer.py": "20bf812d99952fba1c4a4935b4f08a42cf4371660c1d7c2b5af57ab2c62e5e2c"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "provider_capture": "2026-10-29",
+      "context_file": "fundamental-context.json",
+      "readiness": {
+        "statement": true,
+        "history_periods": 5,
+        "growth": true,
+        "valuation": false,
+        "statement_age_days": 121,
+        "statement_filing_age_days": 0,
+        "gaps": [
+          "trailing_eps_with_common_share_basis_unavailable",
+          "pe_unavailable",
+          "market_cap_unavailable"
+        ]
+      },
+      "note": "Provider available_as_of is capture date, not independently authenticated original filing date.",
+      "primary_reprint": [
+        {
+          "url": "https://ca.marketscreener.com/news/alphabet-2026-q3-earnings-press-release-ce785cd3d981f42c",
+          "published": "2026-10-28",
+          "period_end": "2026-09-30",
+          "facts": {
+            "revenue_bn": 127.577,
+            "operating_income_bn": 40.576,
+            "fcf_bn": -9.065,
+            "ttm_fcf_bn": 19.747,
+            "capex_bn": 51.355,
+            "common_stock_issuance_bn": 12.371
+          },
+          "note": "Company release syndicated by Publicnow; supersedes Q2 provider snapshot."
+        }
+      ],
+      "per_share_cash_watch": {
+        "source": "https://ca.marketscreener.com/news/alphabet-2026-q3-earnings-press-release-ce785cd3d981f42c",
+        "period_end": "2026-09-30",
+        "published": "2026-10-28",
+        "observed": {
+          "q3_fcf_usd_m": -9065,
+          "q2_fcf_usd_m": -5855,
+          "ttm_fcf_usd_m": 19747,
+          "q3_ocf_usd_m": 42290,
+          "q3_capex_usd_m": 51355,
+          "q3_common_issuance_net_usd_m": 12371,
+          "ytd_common_issuance_net_usd_m": 42870,
+          "q3_repurchases_usd_m": 0,
+          "ytd_repurchases_usd_m": 0,
+          "q3_diluted_weighted_shares_m": 12368,
+          "prior_year_q3_diluted_weighted_shares_m": 12203,
+          "ytd_diluted_weighted_shares_m": 12324,
+          "ending_common_shares_m": 12294,
+          "dec2025_ending_common_shares_m": 12088,
+          "q3_stock_comp_usd_m": 8630,
+          "q3_preferred_dividends_usd_m": 298
+        },
+        "watch_next_release": [
+          "Quarterly FCF returns positive and TTM FCF rebuilds rather than merely revenue growing.",
+          "Quarterly/TTM cash generation improves alongside diluted share count; do not divide TTM cash by a single quarter denominator without a clear definition.",
+          "Track common-stock issuance, repurchases, stock compensation and ending common shares together to assess dilution.",
+          "Separate preferred dividends and potential mandatory-convertible dilution from current common share cash participation.",
+          "Check capex and inventory build against operating cash flow; cash raised by securities issuance is financing, not business FCF."
+        ],
+        "no_estimates": true
+      }
+    },
+    "sentiment": {
+      "as_of": "2026-10-29",
+      "retrieved_at": "2026-10-29T02:28:37.869126+00:00",
+      "sources": {
+        "NVDA": [
+          {
+            "date": "2026-10-27",
+            "publisher": "NVIDIA",
+            "title": "NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure",
+            "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Oracle-Expand-NVIDIA-Vera-Rubin-to-Multi-Gigawatt-Scale-and-Bring-NVIDIA-Vera-CPU-to-Oracle-Cloud-Infrastructure/default.aspx",
+            "observation": "General availability on OCI and planned multi-gigawatt expansion; not recognized revenue.",
+            "retrieved_at": "2026-10-29T02:28:37.869126+00:00"
+          }
+        ],
+        "GOOGL": [
+          {
+            "date": "2026-10-28",
+            "publisher": "Alphabet via Publicnow / MarketScreener",
+            "title": "Alphabet Announces Third Quarter 2026 Results",
+            "url": "https://ca.marketscreener.com/news/alphabet-2026-q3-earnings-press-release-ce785cd3d981f42c",
+            "observation": "Revenue +25%, Cloud +103%, operating income +30%, EPS $2.12, investment losses and negative FCF.",
+            "retrieved_at": "2026-10-29T02:28:37.869126+00:00"
+          },
+          {
+            "date": "2026-10-28",
+            "publisher": "Alphabet management transcript / StockAnalysis",
+            "title": "Alphabet Q3 2026 earnings call",
+            "url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
+            "observation": "2027 capex expected to increase significantly; near-term Cloud margin headwinds. Page quotes $292.50 afterhours at 19:59 EDT versus $324.89 regular close, not a live October29 quote.",
+            "retrieved_at": "2026-10-29T02:28:37.869126+00:00"
+          }
+        ],
+        "AVGO": [
+          {
+            "date": "2026-10-26",
+            "publisher": "Bank of America",
+            "title": "Bank of America, Blackstone, Citi and Morgan Stanley Announce Landmark $63 Billion Financing Structure to Enable AI Compute Capacity in Partnership with Broadcom",
+            "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/10/bank-of-america--blackstone--citi-and-morgan-stanley-announce-la.html",
+            "observation": "SPV purchases Broadcom accelerators/networking and leases to Anthropic; expected deliveries start 2027. Broadcom provides residual value support equivalent to first-lien financing; $63bn is not current revenue.",
+            "retrieved_at": "2026-10-29T02:28:37.869126+00:00"
+          }
+        ],
+        "V": [
+          {
+            "date": "2026-10-27",
+            "publisher": "Visa",
+            "title": "Visa Fiscal Fourth Quarter and Full-Year 2026 Financial Results",
+            "url": "https://investor.visa.com/news/news-details/2026/Visa-Fiscal-Fourth-Quarter-and-Full-Year-2026-Financial-Results/default.aspx",
+            "observation": "Official announcement of earnings release.",
+            "retrieved_at": "2026-10-29T02:28:37.869126+00:00"
+          },
+          {
+            "date": "2026-10-27",
+            "publisher": "Visa release via Publicnow / MarketScreener",
+            "title": "Visa Reports Fiscal Fourth Quarter and Full-Year 2026 Results",
+            "url": "https://www.marketscreener.com/news/visa-q4-2026-financial-results-ce785cddd189f52d",
+            "observation": "Q4 revenue $12.1bn +13%, adjusted EPS $3.48 +17%, quarterly dividend increased 16%; litigation provisions continue.",
+            "retrieved_at": "2026-10-29T02:28:37.869126+00:00"
+          }
+        ],
+        "VT": [
+          {
+            "date": null,
+            "publisher": "Vanguard",
+            "title": "VT - Vanguard Total World Stock ETF",
+            "url": "https://advisors.vanguard.com/investments/products/vt/vanguard-total-world-stock-etf",
+            "observation": "Provider product context, no dated recent fund-specific directional catalyst established.",
+            "retrieved_at": "2026-10-29T02:28:37.869126+00:00"
+          }
+        ],
+        "1155": [
+          {
+            "date": "2026-10-23",
+            "publisher": "Maybank investor relations",
+            "title": "New Issue Of Securities: Other Issue Of Securities",
+            "url": "https://maybank.listedcompany.com/newsroom.html/cat/7649/year/2026",
+            "observation": "Recent dividend-reinvestment-plan notice; no verified recent earnings surprise or directional catalyst established.",
+            "retrieved_at": "2026-10-29T02:28:37.869126+00:00"
+          },
+          {
+            "date": "2026-10-22",
+            "publisher": "Maybank Bursa announcement via KLSE Screener",
+            "title": "Additional Listing Announcement /Subdivision of Shares",
+            "url": "https://www.mirror.klsescreener.com/v2/announcements/view/11689181",
+            "observation": "DRP listing of 45,256,861 new shares scheduled October23 at issue price RM9.80. Corporate action, not evidence of a trend.",
+            "retrieved_at": "2026-10-29T02:28:37.869126+00:00"
+          }
+        ],
+        "5258": [
+          {
+            "date": "2026-08-26",
+            "publisher": "Bank Islam Bursa announcement via KLSE Screener",
+            "title": "Quarterly results for financial period ended 30 June 2026",
+            "url": "https://www.klsescreener.com/v2/announcements/view/11654065",
+            "observation": "Older context only: Q2 PATAMI RM139.122m vs RM126.685m; H1 RM254.154m vs RM252.950m. Outside recent-news window, not a current sentiment catalyst.",
+            "retrieved_at": "2026-10-29T02:28:37.869126+00:00"
+          }
+        ]
+      },
+      "recommendations_source": "Fresh 2026-10-29 fundamentals.json analyst_recommendations[period=0m]; provider snapshots are not dated rating-change events."
+    },
+    "macro": {
+      "as_of": "2026-10-29",
+      "fed": {
+        "rate_range_pct": [
+          3.75,
+          4.0
+        ],
+        "decision_date": "2026-10-28",
+        "decision": "hold",
+        "dissents": "Two members preferred a 25bp increase",
+        "inflation": "remains elevated",
+        "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+      },
+      "bnm": {
+        "opr_pct": 2.75,
+        "decision_date": "2026-09-03",
+        "verified_current": "2026-10-29",
+        "source": "https://www.bnm.gov.my/monetary-stability/opr-decisions"
+      },
+      "fx": {
+        "usd_myr": 4.0818,
+        "as_of": "2026-10-28",
+        "prior_usd_myr": 4.0858,
+        "prior_as_of": "2026-10-06",
+        "source": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate"
+      },
+      "geopolitical_risks": [],
+      "sector_factors": [],
+      "note": "Do not infer future policy decisions. Sector sensitivity may be discussed as inference; no extra factual sector or geopolitical claims supplied."
+    }
+  },
+  "supplement_note": "Latest issuer releases override stale provider financial snapshots. GOOGL after-hours gap is narrative evidence; deterministic risk levels use completed regular-session bars.",
+  "archive": "reports/analysis/2026-10-29-seven-ticker-refresh",
+  "generated_at": "2026-10-29T02:35:14.433514+00:00",
+  "cloud_analysis_sync": "failed",
+  "cloud_sync_error": "PGRST204: analysis_artifacts.input_hash missing from schema cache"
+}

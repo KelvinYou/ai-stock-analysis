@@ -1,0 +1,15 @@
+{
+  "as_of": "2026-10-30",
+  "daily_cutoff": "2026-10-29",
+  "reason": "Bursa session open; volume gate alone allowed intraday1155 bar. Excluded consistently before analysis and deterministic risk.",
+  "excluded_bars": [
+    {
+      "date": "2026-10-30",
+      "open": 9.99,
+      "high": 10.02,
+      "low": 9.97,
+      "close": 9.98,
+      "volume": 2437500
+    }
+  ]
+}

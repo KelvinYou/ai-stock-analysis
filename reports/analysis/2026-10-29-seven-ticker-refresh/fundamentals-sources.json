@@ -1,0 +1,270 @@
+{
+  "NVDA": {
+    "provider_capture": "2026-10-29",
+    "context_file": "fundamental-context.json",
+    "readiness": {
+      "statement": true,
+      "history_periods": 5,
+      "growth": false,
+      "valuation": false,
+      "statement_age_days": 90,
+      "statement_filing_age_days": 0,
+      "gaps": [
+        "comparable_year_ago_period_unavailable",
+        "trailing_eps_with_common_share_basis_unavailable",
+        "pe_unavailable",
+        "market_cap_unavailable"
+      ]
+    },
+    "note": "Provider available_as_of is capture date, not independently authenticated original filing date.",
+    "primary": [
+      {
+        "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/",
+        "published": "2026-08-26",
+        "period_end": "2026-07-26",
+        "facts": {
+          "revenue_bn": 96.221,
+          "revenue_yoy_pct": 106,
+          "gross_margin_pct": 75
+        }
+      }
+    ]
+  },
+  "GOOGL": {
+    "provider_capture": "2026-10-29",
+    "context_file": "fundamental-context.json",
+    "readiness": {
+      "statement": true,
+      "history_periods": 5,
+      "growth": true,
+      "valuation": false,
+      "statement_age_days": 121,
+      "statement_filing_age_days": 0,
+      "gaps": [
+        "trailing_eps_with_common_share_basis_unavailable",
+        "pe_unavailable",
+        "market_cap_unavailable"
+      ]
+    },
+    "note": "Provider available_as_of is capture date, not independently authenticated original filing date.",
+    "primary_reprint": [
+      {
+        "url": "https://ca.marketscreener.com/news/alphabet-2026-q3-earnings-press-release-ce785cd3d981f42c",
+        "published": "2026-10-28",
+        "period_end": "2026-09-30",
+        "facts": {
+          "revenue_bn": 127.577,
+          "operating_income_bn": 40.576,
+          "fcf_bn": -9.065,
+          "ttm_fcf_bn": 19.747,
+          "capex_bn": 51.355,
+          "common_stock_issuance_bn": 12.371
+        },
+        "note": "Company release syndicated by Publicnow; supersedes Q2 provider snapshot."
+      }
+    ],
+    "per_share_cash_watch": {
+      "source": "https://ca.marketscreener.com/news/alphabet-2026-q3-earnings-press-release-ce785cd3d981f42c",
+      "period_end": "2026-09-30",
+      "published": "2026-10-28",
+      "observed": {
+        "q3_fcf_usd_m": -9065,
+        "q2_fcf_usd_m": -5855,
+        "ttm_fcf_usd_m": 19747,
+        "q3_ocf_usd_m": 42290,
+        "q3_capex_usd_m": 51355,
+        "q3_common_issuance_net_usd_m": 12371,
+        "ytd_common_issuance_net_usd_m": 42870,
+        "q3_repurchases_usd_m": 0,
+        "ytd_repurchases_usd_m": 0,
+        "q3_diluted_weighted_shares_m": 12368,
+        "prior_year_q3_diluted_weighted_shares_m": 12203,
+        "ytd_diluted_weighted_shares_m": 12324,
+        "ending_common_shares_m": 12294,
+        "dec2025_ending_common_shares_m": 12088,
+        "q3_stock_comp_usd_m": 8630,
+        "q3_preferred_dividends_usd_m": 298
+      },
+      "watch_next_release": [
+        "Quarterly FCF returns positive and TTM FCF rebuilds rather than merely revenue growing.",
+        "Quarterly/TTM cash generation improves alongside diluted share count; do not divide TTM cash by a single quarter denominator without a clear definition.",
+        "Track common-stock issuance, repurchases, stock compensation and ending common shares together to assess dilution.",
+        "Separate preferred dividends and potential mandatory-convertible dilution from current common share cash participation.",
+        "Check capex and inventory build against operating cash flow; cash raised by securities issuance is financing, not business FCF."
+      ],
+      "no_estimates": true
+    }
+  },
+  "AVGO": {
+    "provider_capture": "2026-10-29",
+    "context_file": "fundamental-context.json",
+    "readiness": {
+      "statement": true,
+      "history_periods": 5,
+      "growth": true,
+      "valuation": false,
+      "statement_age_days": 90,
+      "statement_filing_age_days": 0,
+      "gaps": [
+        "trailing_eps_with_common_share_basis_unavailable",
+        "pe_unavailable",
+        "market_cap_unavailable"
+      ]
+    },
+    "note": "Provider available_as_of is capture date, not independently authenticated original filing date.",
+    "primary": [
+      {
+        "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial",
+        "published": "2026-09-02",
+        "period_end": "2026-08-02",
+        "facts": {
+          "revenue_bn": 29.591,
+          "revenue_yoy_pct": 86,
+          "fcf_bn": 13.665,
+          "ai_revenue_bn": 16.7
+        }
+      }
+    ]
+  },
+  "V": {
+    "provider_capture": "2026-10-29",
+    "context_file": "fundamental-context.json",
+    "readiness": {
+      "statement": true,
+      "history_periods": 5,
+      "growth": true,
+      "valuation": false,
+      "statement_age_days": 121,
+      "statement_filing_age_days": 0,
+      "gaps": [
+        "trailing_eps_with_common_share_basis_unavailable",
+        "pe_unavailable",
+        "market_cap_unavailable"
+      ]
+    },
+    "note": "Provider available_as_of is capture date, not independently authenticated original filing date.",
+    "primary_reprint": [
+      {
+        "url": "https://uk.marketscreener.com/news/visa-q4-2026-financial-results-ce785cddd189f52d",
+        "published": "2026-10-27",
+        "period_end": "2026-09-30",
+        "facts": {
+          "revenue_bn": 12.139,
+          "gaap_net_income_bn": 6.002,
+          "gaap_eps": 3.19,
+          "adjusted_eps": 3.48,
+          "revenue_yoy_pct": 13,
+          "client_incentives_bn": 5.123,
+          "client_incentives_yoy_pct": 21
+        },
+        "note": "Company release syndicated by Publicnow; supersedes Q3 provider snapshot."
+      }
+    ]
+  },
+  "VT": {
+    "provider_capture": "2026-10-29",
+    "context_file": "fundamental-context.json",
+    "readiness": {
+      "statement": false,
+      "history_periods": 0,
+      "growth": false,
+      "valuation": false,
+      "statement_age_days": null,
+      "statement_filing_age_days": null,
+      "gaps": [
+        "statement_unavailable",
+        "dated_history_unavailable",
+        "comparable_year_ago_period_unavailable",
+        "trailing_eps_with_common_share_basis_unavailable",
+        "pe_unavailable",
+        "market_cap_unavailable"
+      ]
+    },
+    "note": "Provider available_as_of is capture date, not independently authenticated original filing date."
+  },
+  "1155": {
+    "provider_capture": "2026-10-29",
+    "context_file": "fundamental-context.json",
+    "readiness": {
+      "statement": true,
+      "history_periods": 5,
+      "growth": false,
+      "valuation": false,
+      "statement_age_days": 121,
+      "statement_filing_age_days": 0,
+      "gaps": [
+        "comparable_year_ago_period_unavailable",
+        "trailing_eps_with_common_share_basis_unavailable",
+        "dated_same_basis_valuation_price_unavailable",
+        "pe_unavailable",
+        "market_cap_unavailable"
+      ]
+    },
+    "note": "Provider available_as_of is capture date, not independently authenticated original filing date.",
+    "primary": [
+      {
+        "url": "https://links.sgx.com/FileOpen/Announcement-Maybank%20Group%20FY2026%20Q2%20Financial%20Results.ashx?App=Announcement&FileID=902561",
+        "published": "2026-08-27",
+        "period_end": "2026-06-30",
+        "facts": {
+          "q2_profit_myr_m": 2690.362,
+          "prior_q2_profit_myr_m": 2628.029,
+          "h1_profit_myr_m": 5171.02,
+          "prior_h1_profit_myr_m": 5216.886
+        }
+      },
+      {
+        "url": "https://ebs.publicnow.com/view/B03EBC3AF33F06F3ECD8F23D5108524C3E3B688A",
+        "published": "2026-08-27",
+        "note": "Maybank company release syndicated by Publicnow",
+        "facts": {
+          "cet1_pct": 14.92,
+          "total_capital_pct": 18.68,
+          "lcr_pct": 130,
+          "nsfr_pct": 113.4,
+          "nim_pct": 2.1,
+          "annualised_roe_pct": 11.6
+        }
+      }
+    ]
+  },
+  "5258": {
+    "provider_capture": "2026-10-29",
+    "context_file": "fundamental-context.json",
+    "readiness": {
+      "statement": true,
+      "history_periods": 5,
+      "growth": true,
+      "valuation": false,
+      "statement_age_days": 121,
+      "statement_filing_age_days": 0,
+      "gaps": [
+        "trailing_eps_with_common_share_basis_unavailable",
+        "dated_same_basis_valuation_price_unavailable",
+        "pe_unavailable",
+        "market_cap_unavailable"
+      ]
+    },
+    "note": "Provider available_as_of is capture date, not independently authenticated original filing date.",
+    "primary": [
+      {
+        "url": "https://bimb.irplc.com/investor-relations/new/financial-highlights-quarterly.html",
+        "period_end": "2026-06-30",
+        "facts": {
+          "q2_profit_myr_m": 139.122,
+          "prior_q2_profit_myr_m": 126.685,
+          "q2_gross_revenue_myr_m": 1363.945
+        }
+      },
+      {
+        "url": "https://www.linkedin.com/posts/bank-islam-malaysia-berhad_bimb-1h2026-financial-performance-activity-7498551375945965569-AUpt",
+        "period_end": "2026-06-30",
+        "note": "Official issuer post",
+        "facts": {
+          "gross_impaired_financing_pct": 0.98,
+          "total_capital_ratio_pct": 17.8
+        }
+      }
+    ]
+  }
+}

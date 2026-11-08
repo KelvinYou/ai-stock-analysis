@@ -1,0 +1,120 @@
+{
+  "NVDA": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Short-term correction within a positive long-term trend.",
+    "rsi_14": 35.0139,
+    "rsi_assessment": "RSI 35.0139 is weak but above the conventional oversold threshold; it does not establish a reversal.",
+    "macd_assessment": "MACD line -2.6585, signal -1.5322, histogram -1.1264; negative histogram indicates weak momentum.",
+    "volume_assessment": "Volume is 0.9207x the 20-bar average; confirmation is contextual, not a standalone signal.",
+    "support_levels": [
+      207.0184,
+      210.18
+    ],
+    "resistance_levels": [
+      243.37
+    ],
+    "summary": "The close is below the 50-day average but remains 5.66% above the 200-day average. Negative MACD and falling 5/20-bar returns keep the short-term setup weak, while sub-average volume does not confirm capitulation."
+  },
+  "GOOGL": {
+    "signal": "sell",
+    "confidence": "low",
+    "trend": "Bearish regular-session trend; post-earnings gap makes the close-based setup stale for execution.",
+    "rsi_14": 30.7882,
+    "rsi_assessment": "Regular-session RSI 30.7882 approaches oversold territory without confirming a bottom; the subsequent gap is excluded.",
+    "macd_assessment": "MACD line -6.0729, signal -3.209, histogram -2.8639; negative histogram indicates weak momentum.",
+    "volume_assessment": "Volume is 2.3696x the 20-bar average; confirmation is contextual, not a standalone signal.",
+    "support_levels": [
+      316.6
+    ],
+    "resistance_levels": [
+      359.4,
+      384.233
+    ],
+    "summary": "The regular close of 324.89 is below both major moving averages with negative MACD and 2.37x volume. The supplied after-hours observation near 292.50 at October 28 19:59 ET is excluded from the daily indicators and lies below recent close-based support; no live-price ATR entry or stop is inferred."
+  },
+  "AVGO": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Short-term recovery inside a weaker medium- and long-term trend.",
+    "rsi_14": 45.6199,
+    "rsi_assessment": "RSI 45.6199 is neutral-to-weak rather than oversold.",
+    "macd_assessment": "MACD line -6.2441, signal -6.6966, histogram 0.4525; positive histogram indicates improving momentum.",
+    "volume_assessment": "Volume is 1.0286x the 20-bar average; confirmation is contextual, not a standalone signal.",
+    "support_levels": [
+      320.23
+    ],
+    "resistance_levels": [
+      380.84,
+      431.9435
+    ],
+    "summary": "A 4.15% five-bar recovery and positive MACD histogram suggest stabilization, but the close remains below the 50- and 200-day averages. Near-average volume and a negative 60-bar return do not yet establish a durable trend reversal."
+  },
+  "V": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "Positive intermediate and long-term trend with overbought short-term momentum.",
+    "rsi_14": 70.4852,
+    "rsi_assessment": "RSI 70.4852 is overbought; strength can persist, but the reading increases pullback risk and does not justify chasing.",
+    "macd_assessment": "MACD line 9.2427, signal 8.8886, histogram 0.3542; positive histogram indicates improving momentum.",
+    "volume_assessment": "Volume is 1.1594x the 20-bar average; confirmation is contextual, not a standalone signal.",
+    "support_levels": [
+      356.75
+    ],
+    "resistance_levels": [
+      414.6
+    ],
+    "summary": "The close stands above both major moving averages, with positive MACD and an 11.49% 20-bar return. The overbought RSI and negative five-bar return temper this positive trend signal; the observed 414.60 high is resistance, not a guaranteed target."
+  },
+  "VT": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Sideways short-term consolidation within a positive longer-term trend.",
+    "rsi_14": 48.2759,
+    "rsi_assessment": "RSI 48.2759 is balanced with no oversold or overbought extreme.",
+    "macd_assessment": "MACD line -0.5111, signal -0.4619, histogram -0.0492; negative histogram indicates weak momentum.",
+    "volume_assessment": "Volume is 0.8739x the 20-bar average; confirmation is contextual, not a standalone signal.",
+    "support_levels": [
+      155.31
+    ],
+    "resistance_levels": [
+      161.22,
+      162.2931
+    ],
+    "summary": "The ETF trades near its 20- and 50-day averages while remaining 4.12% above the 200-day average. Slightly negative MACD, subdued volume and flat recent returns provide no strong tactical direction."
+  },
+  "1155": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Short-term stabilization below declining longer-term reference averages.",
+    "rsi_14": 63.3803,
+    "rsi_assessment": "RSI 63.3803 shows improving recent strength but is not overbought.",
+    "macd_assessment": "MACD line -0.029, signal -0.0454, histogram 0.0164; positive histogram indicates improving momentum.",
+    "volume_assessment": "Volume is 0.6133x the 20-bar average; confirmation is contextual, not a standalone signal.",
+    "support_levels": [
+      9.78
+    ],
+    "resistance_levels": [
+      10.12,
+      10.5957
+    ],
+    "summary": "The positive MACD histogram and improving RSI indicate stabilization, but the close remains below the 50- and 200-day averages. Volume at 0.61x its average and a negative 60-bar return leave the reversal unconfirmed."
+  },
+  "5258": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "Weak intermediate and long-term trend near the observed yearly low.",
+    "rsi_14": 47.3684,
+    "rsi_assessment": "RSI 47.3684 is neutral; proximity to a price low is not itself an oversold indicator.",
+    "macd_assessment": "MACD line -0.0224, signal -0.0231, histogram 0.0007; positive histogram indicates improving momentum.",
+    "volume_assessment": "Volume is 1.3279x the 20-bar average; confirmation is contextual, not a standalone signal.",
+    "support_levels": [
+      1.97
+    ],
+    "resistance_levels": [
+      2.08,
+      2.22
+    ],
+    "summary": "The close is below both major moving averages and only 1.52% above the 52-week low. A marginally positive MACD histogram and five-bar bounce have not reversed negative 20/60-bar momentum; the observed 1.97 low is a reference, not a guaranteed floor."
+  }
+}

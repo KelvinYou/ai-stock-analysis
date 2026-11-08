@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Unavailable: deterministic context lacks validated same-share-basis TTM EPS and P/E. Provider metadata is not accepted as proof of a valuation discount; no earnings multiple is estimated.",
+    "margin_analysis": "June30 bank release reports NIM2.10%,ROE11.6%annualised for H1. Corporate gross/operating margin comparisons are inappropriate.",
+    "debt_analysis": "Reported June30 CET1 14.92%,total capital18.68%,LCR130.0%,NSFR113.4%; these old bank buffers are not current stress results.",
+    "growth_outlook": "Issuer latest results index still lists Aug27 June30 results: Q2 attributable profitRM2.690bn vsRM2.628bn; H1RM5.171bn vsRM5.217bn. No sustained acceleration established.",
+    "key_risks": [
+      "122-day-old statement period despite current capture timestamp.",
+      "Slightly lower H1 profit, funding/credit risks and unverified valuation.",
+      "Past31sen interim distribution does not prove future dividend coverage."
+    ],
+    "key_strengths": [
+      "Reported bank capital and liquidity buffers.",
+      "Q2 profit and NIM recovery."
+    ],
+    "summary": "Neutral preserves an income-and-resilience thesis without calling the shares undervalued. Fresh issuer-index verification found no newer results, and bank provider FCF is not used as industrial liquidity evidence."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "neutral to modestly positive",
+    "news_summary": "Oct 29 The Edge reports Maybank statement on MYR corporate-account functionality for eligible Singapore clients. Recent DRP notices remain corporate-action context, and current 0 m consensus is 2 strong buy,7 buy,8 hold. No quantified earnings effect or fresh earnings surprise is established.",
+    "key_themes": [
+      "Cross-border transaction banking",
+      "Product expansion",
+      "Mixed analyst consensus"
+    ],
+    "notable_headlines": [
+      "2026-10-23 | Maybank investor relations | New Issue Of Securities: Other Issue Of Securities",
+      "2026-10-22 | Maybank Bursa announcement via KLSE Screener | Additional Listing Announcement /Subdivision of Shares",
+      "2026-10-29 | The Edge Malaysia quoting Maybank statement | Maybank launches ringgit account for Singapore corporate clients"
+    ],
+    "social_sentiment": null,
+    "summary": "The ringgit-account launch is a fresh positive business-development observation, but no measured group earnings impact supports upgrading sentiment to buy. Neutral balances that opportunity with a mixed recommendation snapshot and the absence of a new earnings catalyst."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Short-term stabilization below the intermediate and long-term moving averages.",
+    "rsi_14": 63.3803,
+    "rsi_assessment": "RSI 63.3803 indicates recent relative strength but is below the conventional overbought threshold.",
+    "macd_assessment": "MACD line -0.0255, signal -0.0414, histogram 0.016; histogram is positive (improving momentum), not an independent price forecast.",
+    "volume_assessment": "Completed-bar volume 11152000 is 0.9807x its 20-bar average; interpret alongside trend and volatility.",
+    "support_levels": [
+      9.78
+    ],
+    "resistance_levels": [
+      10.12,
+      10.5375
+    ],
+    "summary": "The completed October29 close of 10.00 is above the 20-day average but remains below the 50- and 200-day averages. Positive MACD and approximately average volume support stabilization rather than a confirmed larger trend reversal; the provisional October30 bar is excluded."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Inference: US policy can affect external funding and regional capital flows, while the directly relevant verified BNM OPR remains 2.75%.",
+    "interest_rate_outlook": "Observed: the Fed held 3.75%-4.00% on 2026-10-28, with two members preferring a 25bp increase and inflation described as elevated. The latest verified BNM OPR is 2.75%, dated 2026-09-03 and checked as current on 2026-10-30. No next policy move is assumed.",
+    "fx_impact": "Observed BNM reference USD/MYR fell from 4.0818 on 2026-10-28 to 4.0664 on 2026-10-29. The stronger MYR could conditionally affect regional translation and funding, but a one-day observation does not establish a durable currency trend or quantify this bank's operating exposure.",
+    "sector_macro_factors": [
+      "Inference: loan yields and deposit costs respond to policy settings, but the unchanged observed OPR does not establish a net-interest-margin direction."
+    ],
+    "geopolitical_risks": [],
+    "summary": "The dated Fed hold and BNM OPR establish the current rate backdrop without a new policy easing or tightening event. The one-day MYR strengthening changes translation of USD exposure but supplies no durable directional stock signal; sector transmission remains conditional inference."
+  },
+  "pipeline_mode": "in-session"
+}

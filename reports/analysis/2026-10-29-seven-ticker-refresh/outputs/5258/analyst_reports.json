@@ -1,0 +1,63 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "No validated same-share-basis TTM EPS/P-E is available in the deterministic context; current provider metadata is not evidence of a valuation discount.",
+    "margin_analysis": "Official Q2 attributable profit RM139.122m versus RM126.685m; bank-specific margin/capital evidence takes priority over generic provider margins.",
+    "debt_analysis": "Official 1H update reports total capital ratio 17.8% and gross impaired financing 0.98%; these are June30 observations, not current stress-test results.",
+    "growth_outlook": "Q2 profit grew 9.8%, but H1 profit RM254.154m versus RM252.950m was nearly flat. Official gross revenue RM1.363945bn differs in definition from provider RM718.770m net-style revenue.",
+    "key_risks": [
+      "Near-flat H1 earnings despite Q2 recovery.",
+      "Credit impairment and funding-cost sensitivity require monitoring.",
+      "Valuation evidence lacks same-basis dated inputs; no automatic cheap-stock conclusion."
+    ],
+    "key_strengths": [
+      "Q2 profit recovery.",
+      "Reported impaired-financing ratio below 1% and capital ratio 17.8%."
+    ],
+    "summary": "Neutral balances Q2 recovery against almost-flat H1 profit and incomplete valuation. June30 data is 121 days old; negative provider FCF is not interpreted as an industrial liquidity signal for a bank."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "neutral",
+    "news_summary": "No recent qualifying company-specific headline established; August26 half-year results are explicitly older context. Fresh 0m recommendations are 1 buy and7 hold.",
+    "key_themes": [
+      "Sparse recent news",
+      "Hold-heavy consensus"
+    ],
+    "notable_headlines": [],
+    "social_sentiment": null,
+    "summary": "Recent sentiment evidence is sparse and the current recommendation snapshot is predominantly hold. Older earnings context is not promoted into a new catalyst, so neutral with low confidence is appropriate."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "Weak intermediate and long-term trend near the observed yearly low.",
+    "rsi_14": 47.3684,
+    "rsi_assessment": "RSI 47.3684 is neutral; proximity to a price low is not itself an oversold indicator.",
+    "macd_assessment": "MACD line -0.0224, signal -0.0231, histogram 0.0007; positive histogram indicates improving momentum.",
+    "volume_assessment": "Volume is 1.3279x the 20-bar average; confirmation is contextual, not a standalone signal.",
+    "support_levels": [
+      1.97
+    ],
+    "resistance_levels": [
+      2.08,
+      2.22
+    ],
+    "summary": "The close is below both major moving averages and only 1.52% above the 52-week low. A marginally positive MACD histogram and five-bar bounce have not reversed negative 20/60-bar momentum; the observed 1.97 low is a reference, not a guaranteed floor."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Inference: US policy affects external funding conditions, while the directly relevant observed BNM OPR remains 2.75%.",
+    "interest_rate_outlook": "Observed: the Fed held its target at 3.75%-4.00% on 2026-10-28; two members preferred a 25bp increase and the statement described inflation as elevated. BNM OPR was 2.75% at its 2026-09-03 decision and remains the latest verified level as of 2026-10-29. Neither the next hike nor a cut is assumed.",
+    "fx_impact": "BNM reference USD/MYR was 4.0818 on 2026-10-28 versus 4.0858 on 2026-10-06; this small change does not establish a strong currency trend. No material directional FX conclusion for this MYR-listed holding is supported.",
+    "sector_macro_factors": [
+      "Inference: Islamic financing yields and funding costs respond to policy settings, but unchanged OPR alone does not determine financing demand or margins."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Verified Fed and BNM policy levels provide a dated macro backdrop, but neither the US hold nor the small USD/MYR change establishes a directional edge. Sector effects are conditional inferences; no fresh sector or geopolitical macro shock is supplied."
+  },
+  "pipeline_mode": "in-session"
+}
