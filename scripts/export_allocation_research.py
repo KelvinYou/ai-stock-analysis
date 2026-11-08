@@ -8,6 +8,8 @@ import math
 from datetime import UTC, datetime
 from pathlib import Path
 
+from stock_analysis.allocation_snapshot import public_current_momentum
+
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS = ROOT / "reports/analysis"
 MANIFEST = ROOT / "config/allocation_research.json"
@@ -179,7 +181,11 @@ def export() -> dict:
         view = monthly(raw, item) if item["kind"] == "monthly" else episodes(raw, item)
         view["source_sha256"] = digest
         experiments.append(view)
+    primary = next((view for view in experiments if view["id"] == manifest["default_id"]), None)
+    if primary is None:
+        raise ValueError("Default experiment missing")
     support = {}
+    support_hashes = {}
     for item in manifest["support"]:
         path = (REPORTS / item["source"]).resolve()
         if not path.is_relative_to(REPORTS.resolve()):
@@ -187,6 +193,7 @@ def export() -> dict:
         if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
             raise ValueError("Supporting source hash changed")
         support[item["id"]] = json.loads(path.read_text())
+        support_hashes[item["id"]] = item["sha256"]
     roll = support["extended"]["rolling_24m"]
     cut = support["concentration"]["primary8"]["cuts"][1]
     result = {
@@ -206,6 +213,12 @@ def export() -> dict:
             "status": "unavailable",
             "reason": "No pinned same-session plan is connected.",
         },
+        "current_momentum": public_current_momentum(
+            support["current_momentum"], universe=primary["universe"],
+            source_hash=support_hashes["current_momentum"], today=datetime.now(UTC).date(),
+        ) if "current_momentum" in support else {
+            "status": "unavailable", "reason": "No approved current price snapshot is connected.",
+        },
         "reliability_status": "Unconfirmed",
         "promotion_ready": False,
         "limitations": [
@@ -214,8 +227,6 @@ def export() -> dict:
             "Historical universe and prior strategy searches limit generalization.",
         ],
     }
-    if result["default_id"] not in {x["id"] for x in experiments}:
-        raise ValueError("Default experiment missing")
     return result
 
 
