@@ -1,0 +1,31 @@
+{
+  "id": "momentum-9-12m-top3-v2",
+  "lookback_months": 12,
+  "top_n": 3,
+  "universe": [
+    "AVGO",
+    "COST",
+    "GOOGL",
+    "MSFT",
+    "NVDA",
+    "ORCL",
+    "TSM",
+    "UNH",
+    "V"
+  ],
+  "reference": {
+    "ticker": "SPY",
+    "label": "SPY \u00b7 S&P 500",
+    "cost_bps_per_side": 20
+  },
+  "comparison_references": [
+    {
+      "ticker": "VOO",
+      "label": "VOO \u00b7 S&P 500"
+    },
+    {
+      "ticker": "VT",
+      "label": "VT \u00b7 Total World"
+    }
+  ]
+}

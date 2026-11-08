@@ -9,6 +9,7 @@ dependencies = [
     # reproducible in the deployment image.
     "claude-agent-sdk==0.2.139",
     "yfinance>=0.2.40",
+    "exchange-calendars>=4.11,<5",
     "pydantic>=2.7",
     "pydantic-settings>=2.3",
     "fastapi>=0.111",

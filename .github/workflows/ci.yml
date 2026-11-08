@@ -56,6 +56,10 @@ jobs:
         working-directory: web
         run: npm run check:pipeline
 
+      - name: Verify momentum data contract
+        working-directory: web
+        run: npm run check:momentum
+
       - name: Build web in offline filesystem mode
         working-directory: web
         env:

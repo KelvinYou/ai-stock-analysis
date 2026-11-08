@@ -1,811 +1,223 @@
-<p align="center">
-  <img src="docs/screenshot.png" alt="AI Stock Analysis dashboard" width="100%">
-</p>
+# AI Stock Analysis
 
-<h1 align="center">AI Stock Analysis 📈</h1>
+Four analysts research a stock. A bull and a bear challenge the evidence. A research manager rules on the argument, and a synthesizer produces a briefing with conditional price levels.
 
-<p align="center">
-  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.12+"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-A3E635?style=for-the-badge" alt="License: MIT"></a>
-  <a href="https://github.com/KelvinYou/ai-stock-analysis/actions/workflows/fetch.yml"><img src="https://img.shields.io/github/actions/workflow/status/KelvinYou/ai-stock-analysis/fetch.yml?branch=main&style=for-the-badge&label=Daily%20Fetch" alt="Daily Fetch"></a>
-  <a href="https://github.com/anthropics/claude-agent-sdk"><img src="https://img.shields.io/badge/Built%20with-Claude%20Agent%20SDK-6B4BFF?style=for-the-badge" alt="Built with Claude Agent SDK"></a>
-</p>
+The same workspace also provides a price-only momentum dashboard and portfolio strategy comparisons. You can inspect the data, disagreement, and research assumptions behind each output.
 
-<p align="center">
-  <b>Four specialist agents research a stock. A bull and a bear debate their findings. A synthesizer turns the argument into an actionable briefing — with entry, stop, and target levels.</b>
-</p>
+![Example NVDA research briefing showing the verdict, entry, stop loss, and targets](docs/screenshot.png)
 
----
+*Example ticker briefing. Prices and signals shown are historical research output.*
 
-**A four-layer research pipeline for equity decision support.** Fundamentals, Sentiment, Technical, and Macro/FX agents run in parallel. A Bull and Bear researcher then debate their findings across multiple rounds. A synthesizer merges the argument into a briefing with concrete price levels gated on conviction — not abstract "hold" signals.
+[Quick start](#quick-start) · [AI research](#ai-research) · [Momentum](#price-only-momentum) · [Backtesting](#backtesting-and-portfolio-research) · [Deployment](#api-and-deployment)
 
-Built on the [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk) with mixed-model routing — Haiku for analyst agents, Opus for adversarial debate, Sonnet for synthesis — so cost scales with the reasoning depth each layer actually needs.
+## What you can do
 
-<table>
-<tr><td width="30%"><b>🧑‍💼 Four parallel analyst agents</b></td><td>Fundamentals, Sentiment, Technical, and Macro/FX run concurrently. Each returns a typed report with a signal (strong buy → strong sell) and a confidence score.</td></tr>
-<tr><td><b>⚖️ Adversarial bull/bear debate</b></td><td>Multi-round researcher debate surfaces points of agreement, disagreement, and unresolved uncertainty — not a single averaged take.</td></tr>
-<tr><td><b>🎯 Actionable price levels</b></td><td>Briefings include entry, stop, and target levels gated on conviction. No abstract signals that tell you nothing.</td></tr>
-<tr><td><b>📊 Conviction & convergence metrics</b></td><td>Every briefing reports a conviction score (−1.0 to +1.0) capped by the confidence-weighted net consensus of the four agents, plus a deterministic convergence score.</td></tr>
-<tr><td><b>⏮️ Historical backtesting</b></td><td>Replay the full pipeline over any date range. Hit rate and directional accuracy against realized price moves — reported with confidence intervals, overlap-adjusted sample sizes, transaction costs, and a deflated Sharpe for the strategy comparison.</td></tr>
-<tr><td><b>🖥️ Web dashboard + REST API</b></td><td>Next.js research dashboard with per-ticker drill-down. FastAPI job queue for programmatic runs. Conviction meter, debate transcript, watchlist.</td></tr>
-<tr><td><b>💸 Cost-tuned model routing</b></td><td>Haiku for analyst agents, Opus for debate, Sonnet for synthesis. Configurable per layer in <code>config.py</code>.</td></tr>
-</table>
+| Workflow | Output | Requires an LLM key? |
+| --- | --- | --- |
+| Fetch market data | Price history, financials, news, and computed technical indicators | No |
+| Research a ticker | Analyst reports, bull/bear debate, research verdict, and briefing | Yes |
+| Follow momentum | Daily rankings, monthly model weights, and matched market references | No |
+| Compare strategies | Historical allocation results, cost scenarios, and uncertainty estimates | Depends on the research mode |
 
----
+Ticker research supports **US equities and Bursa Malaysia** through yfinance. The standalone momentum dashboard uses a configured US stock universe.
 
-## Quick Start
+**The AI pipeline has not demonstrated an after-cost advantage over strict buy-and-hold.** The [September comparison](reports/analysis/backtest-2026-09-24.md) is development research. Briefings and model weights remain research outputs; the repository places no brokerage orders and reads no personal holdings.
+
+## Quick start
+
+Use Python 3.12+. For the dashboard, use Node.js 20, matching CI.
 
 ```bash
 git clone https://github.com/KelvinYou/ai-stock-analysis.git
 cd ai-stock-analysis
-python -m venv .venv && source .venv/bin/activate
+python -m venv .venv
+source .venv/bin/activate
 pip install -e .
-export ANTHROPIC_API_KEY=sk-ant-...
 
-stock-analysis AAPL --market US -v
-```
-
-Works on Linux, macOS, and WSL2 with Python 3.12+. Node.js 18+ is required for the web dashboard.
-
-For a deployed backend, use `ANTHROPIC_API_KEY` as a server-side secret for the
-worker; do not copy `~/.claude` or run an interactive login in a container. The
-Agent SDK dependency is pinned and bundles the Claude Code CLI.
-
----
-
-## Commands
-
-| Command | Purpose |
-|---------|---------|
-| `stock-fetch <TICKER>...` | Fetch and persist market data (Layer 1 only). |
-| `stock-fetch --universe sp500` | Fetch a whole universe (`sp500`, `nasdaq100`, `klci`). |
-| `stock-analysis <TICKER>` | Run the full four-layer pipeline for one ticker. |
-| `stock-analysis-backtest` | Replay the pipeline over a historical date range and score it. |
-| `uvicorn stock_analysis.api.app:app --reload` | Start the FastAPI job server. |
-| `stock-analysis-worker` | Process durable Supabase analysis jobs. |
-| `cd web && npm run dev` | Start the Next.js dashboard on port 3000. |
-
-See [Usage](#usage) for full flag reference.
-
----
-
-## Architecture
-
-```
-Data Ingestion --> Analyst Agents --> Debate --> Research Manager --> Outcome Memory --> Synthesis
-  (Layer 1)         (Layer 2)         (Layer 3)     (Layer 3.5)       (context)         (Layer 4)
-                                                                                          |
-                                                                                 Research Briefing
-```
-
-**Layer 1 — Data Ingestion** fetches market data deterministically with no LLM involvement. Supports US equities via [yfinance](https://github.com/ranaroussi/yfinance) and Bursa/KLSE (Malaysia) — the MY fetcher resolves names to codes via `BURSA_ALIASES` and appends the `.KL` suffix. Ticker universes (S&P 500, NASDAQ 100, FBM KLCI) are pulled from Wikipedia.
-
-**Layer 2 — Analyst Agents** run four specialist LLM agents in parallel:
-- **Fundamentals** — P/E ratios, margins, debt structure, growth outlook
-- **Sentiment** — News tone, social sentiment, key themes
-- **Technical** — RSI, MACD, volume analysis, support/resistance levels
-- **Macro/FX** — Fed policy, interest rates, FX impact, geopolitical risks
-
-Each agent produces a structured report with a signal (strong buy → strong sell) and confidence level.
-
-**Layer 3 — Adversarial Debate** pits a Bull researcher against a Bear researcher across multiple rounds. They build cases, rebut each other, and surface points of agreement, disagreement, and unresolved uncertainty.
-
-**Layer 3.5 — Research Manager** rules on the debate instead of summarizing it: which side carried the argument, the load-bearing thesis, the strongest counterexample to its own ruling, falsifiable invalidation conditions, and evidence gaps (data nobody had, as opposed to data both sides read differently).
-
-**Layer 4 — Synthesis** merges reports, debate, verdict, and prior outcomes into a briefing with an executive summary, a conviction score, and deterministic entry/stop/target levels.
-
-Two things are deliberately *not* left to the model here. `signal_convergence` is computed from the analyst reports rather than self-reported, because it gates whether concrete levels get quoted. And a neutral view is a valid result: this package emits research evidence and conditional price levels; it does not decide whether the idea fits a user's holdings.
-
-**Outcome Memory** (deterministic supporting context) records what each resolved call actually earned, computes hit rate and conviction calibration, and feeds that track record into the next synthesis. Reads are gated on *exit* date, so a backtest can never see an outcome that had not resolved on the date being analyzed. Calibration is reported, never applied — nothing silently rescales a signal by a small-sample hit rate.
-
-Portfolio valuation, concentration limits, position sizing, and buy/hold/sell decisions belong in the consuming application. This public repository has no dependency on `personal-os`, `portfolio.yaml`, `policy.yaml`, or private holdings.
-
-See [`architecture.md`](architecture.md) for the full diagram.
-
----
-
-## Markets Supported
-
-| Market | Status | Data Sources |
-|--------|--------|-------------|
-| US (NYSE, NASDAQ) | Implemented | yfinance (price, financials, news, analyst recs) |
-| Malaysia (Bursa/KLSE) | Implemented | yfinance via `.KL` suffix, `BURSA_ALIASES` name→code map |
-
----
-
-## Prerequisites
-
-- Python 3.12+
-- An [Anthropic API key](https://console.anthropic.com/) (`ANTHROPIC_API_KEY` env var)
-- Node.js 18+ (for the web dashboard)
-
-Install with the dev extra — `pip install -e ".[dev]"` — if you intend to run
-`ruff` or `pytest`. Everything else is covered by [Quick Start](#quick-start).
-
----
-
-## Usage
-
-### Fetch market data
-
-```bash
-# Fetch data for one or more tickers
+# Fetch public market data without calling an LLM.
 stock-fetch AAPL MSFT GOOGL
-
-# Fetch all S&P 500 tickers
-stock-fetch --universe sp500
 ```
 
-### Run a full analysis
-
-```bash
-# Full pipeline: data → agents → debate → synthesis
-stock-analysis AAPL --market US --rounds 3 --model haiku --debate-model opus -v
-```
-
-### Portfolio decisions
-
-Completed single-ticker runs can now feed a deterministic portfolio research
-stage through `POST /api/v1/portfolio-plans`. Supply 3–50 distinct completed run
-UUIDs from one US/USD decision session. The response contains nine target-weight
-views: continuous hold, scheduled passive, allocator, FT weighted/agreement,
-AI, and three allocator hybrids. The allocator ranks trailing twelve-month
-returns and selects three equal sleeves; filtered sleeves remain cash.
-An unavailable panel returns reasons and cash-only views.
-
-These research weights use no personal holdings and place no orders. Portfolio
-valuation, concentration checks and account-specific sizing remain consumers'
-responsibility. See the [upgrade contract](docs/design/portfolio-pipeline-upgrade.md)
-for run binding, collection requirements and limitations.
-
-### Freeze and score portfolio research
-
-Use the module directly in an existing checkout; a fresh installation also
-provides `stock-analysis-portfolio`.
-
-```bash
-# Export completed cloud runs; the server credentials stay in the environment.
-.venv/bin/python -m stock_analysis.portfolio_cohort export \
-  --run-ids '<uuid1>,<uuid2>,<uuid3>' --output /tmp/portfolio-bundle.json
-.venv/bin/python -m stock_analysis.portfolio_cohort plan \
-  --bundle /tmp/portfolio-bundle.json --output /tmp/portfolio-plan.json
-
-# Freeze after the registered decision session closes, before its next open.
-# Use an activated protocol with pinned calendar/model/prompt provenance.
-.venv/bin/python -m stock_analysis.portfolio_cohort freeze \
-  --bundle /tmp/portfolio-bundle.json --protocol /path/to/activated-protocol.json \
-  --cohort /path/to/new-cohort
-.venv/bin/python -m stock_analysis.portfolio_cohort verify --cohort /path/to/new-cohort
-.venv/bin/python -m stock_analysis.portfolio_cohort score --cohort /path/to/mature-cohort
-.venv/bin/python -m stock_analysis.portfolio_cohort compare \
-  --cohorts /path/to/mature-cohort-1 /path/to/mature-cohort-2 \
-  --output /tmp/portfolio-comparison.json
-```
-
-Freeze rejects legacy naive timestamps, unavailable history and missing activation
-identity. Scoring rejects immature samples before fetching outcomes and never
-overwrites an existing score. Comparison retains continuous hold through episode
-gaps, reconciles daily equity with episode returns, and reports drawdown,
-21-session paired intervals versus hold and allocator, and nine-arm DSR.
-Provider-adjusted prices and assumed fees remain research inputs; all outputs
-keep `promotion_ready=false`. The prepared v2 protocol has not been activated.
-
-### Long-term holding use
-
-The current pipeline has not demonstrated an after-cost return advantage over
-strict buy-and-hold. The [September 2026 comparison](reports/analysis/backtest-2026-09-24.md)
-is development research, not a validated reason to trade on its conviction
-scores, entry levels, or stop levels. Its price fetch and dated research evidence
-can still support a long-term review.
-
-For that use, the consumer should answer a smaller set of questions:
-
-- What is held, what is each position worth, and are its price and FX inputs fresh?
-- How concentrated is the portfolio by company, sector, market, and currency?
-- For an individual company, what was the original holding thesis, which dated
-  filings or events have changed it, and what evidence would invalidate it?
-- What was the investor's actual return after dated cash flows, dividends,
-  fees, and currency conversion? A current holding's shares and average cost
-  cannot reconstruct that history.
-
-Broad-market funds mainly need allocation and contribution reviews. Individual
-stocks also need thesis reviews after material filings or events. This repository
-does not yet provide a transaction ledger or a validated long-hold thesis-change
-alert, so neither should be inferred from a briefing or a price-only P&L figure.
-
-### Run backtests
-
-```bash
-stock-analysis-backtest --tickers AAPL,MSFT --start 2024-01-01 --end 2024-12-31
-
-# Charge a one-way transaction cost (bps) on entry and exit. Reports gross and
-# net side by side — 0 is the default but it is an assumption, not neutral.
-stock-analysis-backtest --tickers AAPL --start 2024-01-01 --end 2024-12-31 \
-    --cost-bps 10
-
-# Also feed realized outcomes back into outcome memory. Off by default so that
-# repeated backtests over the same window stay comparable.
-stock-analysis-backtest --tickers AAPL --start 2024-01-01 --end 2024-12-31 \
-    --record-outcomes
-```
-
-API backtests regenerate every briefing. The old cache was keyed only by ticker
-and date, so a changed model or prompt could inherit an older prediction while
-the report named the new settings. `--no-resume` remains accepted for older
-scripts but is now redundant. Portfolio comparisons stop if any requested trial
-has a failed or missing outcome. Same-day orders size from one pre-session cash
-balance, with equal scaling if their combined target exceeds that balance.
-
-For an implementation-only rerun, keep the original scored trials, forward
-price paths, and allocator ranking history fixed:
-
-```bash
-stock-analysis-backtest --mode rescore --score-report /tmp/original-score.json \
-  --cost-bps 10 --output /tmp/corrected-score
-```
-
-When allocator scoring succeeds, new score artifacts include
-`allocator_price_histories`, capped at the last decision date. `rescore` uses
-that frozen panel and does not reread the mutable
-price store. Older score artifacts without it still recalculate the primary
-scorer and portfolio, but explicitly mark the sealed allocator and AI ablation
-unavailable; they cannot reproduce those diagnostics. This is a development
-comparison, not a fresh out-of-sample test. A second `session-score` call can
-fetch revised historical prices and is therefore a different price snapshot.
-Set `STORAGE_BACKEND=local` when the scored JSON must be written to `--output`;
-the configured cloud backend stores the artifact remotely instead.
-
-To attribute the return on idle portfolio cash, pass an official FRED DFF CSV
-or a JSON/JSONL replay containing `FRED:DFF` observations:
-
-```bash
-stock-analysis-backtest --mode rescore --score-report /tmp/original-score.json \
-  --cash-rate-replay /tmp/fred-dff.csv --cost-bps 10 \
-  --output /tmp/cash-yield-score
-```
-
-The report compounds end-of-day uninvested cash at the latest DFF observation
-available by that calendar date, using ACT/365 and at most four calendar days
-of carry. It identifies DFF as a reference proxy rather than a brokerage sweep
-or deposit yield. Cash attribution is diagnostic: it does not alter primary
-strategy returns or the promotion gate. The source observations and hash are
-embedded in the scored artifact so later fixed-input rescores need no network
-refresh.
-
-Portfolio comparisons also include `overall_fundamentals_confirmed`, a
-research-only alternative that takes an overall directional signal only when
-the fundamentals analyst agrees. It is included in the DSR strategy-search
-denominator but does not replace the `overall` promotion candidate. This
-post-hoc diagnostic is exploratory on previously inspected trials.
-
-### Run deterministic factor research
-
-This mode uses the local `data/<TICKER>/price_history.csv` only — no API key or
-LLM call. It runs the fixed long-only momentum baseline through expanding
-walk-forward folds, enters on the next bar's open, and reports gross and
-cost-adjusted returns side by side:
-
-```bash
-stock-analysis-backtest --mode factor --tickers AAPL \
-  --start 2020-01-01 --end 2026-08-14 \
-  --factor-lookback-bars 20 --factor-holding-bars 20 \
-  --walk-forward-train-bars 252 --walk-forward-test-bars 63 \
-  --cost-bps 10 --output factor-aapl
-```
-
-The factor is a research baseline, not a live-trading recommendation. The
-output includes the exact protocol, fold boundaries, trade log, Wilson interval,
-max drawdown, net p-value, and a buy-and-hold comparison. It does not fit a
-model inside the test folds, so its result is evidence about one fixed rule on
-one dataset rather than a claim of durable alpha.
-
-Completed factor and cross-sectional runs append their candidate and strict-hold
-benchmark to `backtest_experiments.jsonl` (override with `--experiment-ledger`).
-Local runs also write `<output>.quality.json`; every Markdown report ends with
-deterministic quality findings and next checks. The analysis flags benchmark
-losses, uncertain intervals, small samples, and unverified return inputs. It
-never changes a rule or promotes a historical winner. Ledger counts begin when
-recording starts and do not reconstruct earlier manual searches; repeated
-evaluations are identified separately. If identical frozen inputs and settings
-produce different recorded metrics, the next quality report flags the change
-for accounting review.
-
-### Run cross-sectional allocation research
-
-The cross-sectional mode tests a separate portfolio layer: at each month-end it
-ranks a fixed universe by the previous 12 months' return, holds the equal-weight
-top three for the next month, and charges entry, rebalance, and exit costs. The
-strict equal-weight buy-and-hold benchmark uses the same first and last month-end:
-
-```bash
-stock-analysis-backtest --mode cross-sectional \
-  --tickers AAPL,AMZN,AVGO,GOOGL,META,MSFT,NVDA,TSLA,TSM,UNH,V \
-  --start 2019-01-01 --end 2026-09-17 \
-  --cross-sectional-lookback-months 12 \
-  --cross-sectional-top-n 3 \
-  --cost-bps 10 --output cross-sectional-11
-```
-
-This is deterministic portfolio construction, not evidence that the AI analyst
-layer forecasts returns. Freeze the universe and parameters before using a final
-holdout; a result selected after inspecting that holdout is a research failure.
-
-Every headline metric ships with an interval, because a point estimate over a
-few dozen trials reads as an edge whether or not it is one:
-
-- **Hit rates** carry Wilson intervals, and the report says so outright when the
-  interval still spans 50%.
-- **Sample size is discounted for overlap.** Weekly as-of dates at a 30-day
-  horizon share most of their price path; 13 nominal trials can be worth 1.8
-  independent ones, and every t-statistic uses the discounted count.
-- **Sharpe is reported probabilistically** (PSR), correcting for the negative
-  skew and fat tails that flatter a raw Sharpe.
-- **The strategy comparison is deflated.** Scoring several strategies and
-  reporting the best is a search; the winner gets a Deflated Sharpe against the
-  expected best-of-N under the null.
-
-If `--interval` is shorter than `--horizon`, the report will tell you how much
-of the sample is redundant.
-
-### Run backtests in the current session (no API key)
-
-The Python process cannot call the current Claude/Codex conversation directly.
-Use the two-stage session mode instead: the first command writes point-in-time
-input packets without future prices; the current session writes the compact
-`SessionPrediction` records; the second command runs the normal scorer and
-portfolio simulation.
-
-```bash
-stock-analysis-backtest --mode session-prepare \
-  --tickers AAPL,MSFT --start 2025-08-01 --end 2026-07-01 \
-  --session-dir /tmp/aapl-msft-session
-
-# Write predictions.json in the session directory, then:
-stock-analysis-backtest --mode session-score \
-  --session-dir /tmp/aapl-msft-session \
-  --output /tmp/aapl-msft-backtest
-```
-
-If sealed 30-day windows overlap, the allocator/AI ablation now uses the
-earliest feasible non-overlapping date subset, chosen from execution dates
-without consulting returns. The primary pipeline and long-hold score still use
-every trial. Markdown, JSON, and the experiment ledger label the subset
-`research_only`; its result cannot satisfy the primary promotion gate. The
-subset is a diagnostic of AI's incremental value, not a replacement for a
-prospectively frozen non-overlapping schedule.
-
-Session predictions must contain `ticker`, `as_of_date`, `overall_signal`,
-`conviction_score`, `signal_convergence`, and optional `agent_signals` (whose
-values are exact `strong_buy`, `buy`, `neutral`, `sell`, or `strong_sell`
-signals). The declared ticker/date grid must be complete, extra predictions are rejected,
-and every packet's identity, path, and price dates are checked before forward
-prices are fetched. Historical packet metadata uses the requested ticker as
-the name and market-default currency; present-day provider names are not
-point-in-time evidence. During scoring, convergence is recomputed from the
-analyst signals;
-the conviction score uses the production cap `min(abs(raw model score), abs(net analyst consensus))`, with the signal sign, and
-directional predictions that disagree with that consensus or do not clear the
-deterministic conviction/convergence execution gate are scored as `neutral`.
-Raw model conviction is retained as `raw_conviction_score`; neutral synthesis has zero calibrated conviction. A gated directional thesis can retain its capped score for attribution without creating a trade.
-Optional `agent_confidences` can provide `high`, `medium`, or `low` weights.
-Session packets also declare point-in-time evidence availability. Without a
-replay directory, historical fundamentals use the yfinance filing-date adapter
-and latest-only yfinance news is excluded. For a stricter replay, the builder
-below supplies SEC CompanyFacts fundamentals, SEC filing events, and FRED DFF;
-current company-name, sector, and industry metadata is omitted unless a
-versioned source is provided. Legacy packets containing current names under
-an omitted-metadata marker fail the external metadata gate. When fundamentals,
-dated news/recommendations, or macro data are
-unavailable, scoring forces those analysts to `neutral` with `low` confidence
-instead of trusting unsupported directional output. Unavailable analysts remain neutral/low in the canonical four-role denominator, matching production. Manifest v4 records this contract. Legacy manifests still load, but old scored JSON is not silently rewritten. Use `rescore --recalibrate-session --session-dir ...` to apply the new calibration to frozen predictions and existing outcomes without fetching prices.
-
-Scored trial JSON preserves the signal path for later attribution:
-raw_agent_signals are the original analyst labels; agent_signals are the labels
-used by strategies after evidence guards and name normalization;
-synthesized_signal is the overall choice before deterministic gates;
-overall_signal is the final executable signal; and
-signal_gate_reasons contains stable reason codes. The Markdown report adds
-descriptive buy-overlap and gate counts. Older artifacts remain readable, but
-missing trace fields mean provenance was not recorded.
-
-To add historical evidence without opening a look-ahead path, pass a replay
-directory to `session-prepare`:
-
-```text
-replay/
-├── fundamentals/AAPL.jsonl # SEC facts + fiscal_period_end + available_as_of
-├── valuation/AAPL.jsonl    # optional dated price + currency + declared share_basis
-├── news/AAPL.jsonl         # published_at + available_as_of per record
-└── macro.jsonl             # as_of_date + available_as_of per snapshot
-```
-
-```bash
-stock-analysis-backtest --mode session-prepare \
-  --tickers AAPL,MSFT --start 2025-08-01 --end 2026-07-01 \
-  --session-dir /tmp/aapl-msft-session --replay-dir /path/to/replay
-```
-
-The loader keeps a record only when both clocks are on or before the trial
-date. Missing or malformed replay timestamps are excluded or fail closed; the
-pipeline never infers availability from a fiscal/event date alone. No replay
-directory means sentiment and macro remain explicitly unavailable, preserving
-the current behaviour.
-
-Both API backtests and session preparation accept `--replay-dir`. Financial
-history retains each known fiscal duration and its latest available revision.
-New packets and fundamental tools expose `fundamental_context`: observations,
-comparable year-ago growth, valuation and separate readiness/gap diagnostics.
-Quarterly and YTD cash flows are never combined. SEC date-only filing facts
-become available the following day.
-
-Valuation replay records require `price`, `price_date`, `available_as_of`,
-`currency`, `share_basis` and `source`. P/E requires four contiguous fiscal
-quarters or a current annual EPS period, with the same currency and declared
-share basis as that price. SEC output leaves the basis unknown; auto-adjusted
-technical prices do not establish it. Missing inputs keep valuation unavailable.
-Old sealed packets remain readable; enriched packets are checked against their
-source observations before outcome prices are fetched. Session preparation
-refuses to overwrite an existing manifest or packet set.
-
-The reproducible public-source builder is:
-
-```bash
-python -m stock_analysis.backtest.replay_builder \
-  --tickers AAPL,MSFT \
-  --start 2019-01-01 --end 2026-07-31 \
-  --output /tmp/stock-replay \
-  --user-agent 'your-project/1.0 contact: you@example.com'
-```
-
-SEC filing events are a dated primary event layer, not a complete historical
-provider news feed. FRED DFF is a dated Fed-funds series, not a complete macro
-dataset. These limitations are recorded in `manifest.json` and are enforced by
-the external validation gate. A custom news replay must explicitly declare
-`manifest.news.source.kind: provider_versioned` to satisfy that gate; an
-ambiguous or SEC-only replay remains blocked.
-
-Before treating a provider-backed score as externally validated, run:
-
-```bash
-stock-analysis-backtest --mode external-validate \
-  --session-dir /tmp/stock-session \
-  --score-report /tmp/stock-session/score.json
-```
-
-The gate checks packet pairing, complete scored coverage of the frozen panel,
-a survivorship-safe universe artifact, externally calibrated costs, effective
-sample size, and a strict long-hold win.
-Provider metadata is currently self-declared: even a well-formed
-`provider_run.json` remains `BLOCKED` until a real invocation is bound to the
-exact predictions and scored result. Missing artifacts return `BLOCKED`;
-observed mismatches return `FAIL`.
-
-`universe.json` uses schema version 1. It must record the source URL and
-extract hash, a frozen selection policy, the exact session tickers, and one
-`membership_records` row per `(ticker, as_of_date)` trial with a stable
-`security_id` and `member: true`. `membership_records_sha256` is the SHA-256 of
-the compact, key-sorted JSON encoding of that array. Its `return_treatment`
-object must identify a hashed total-return source, include distributions,
-delisting returns, and merger consideration, and set
-`missing_return_policy: "fail_closed"`. The scored JSON must carry the exact
-same object at `result.settings.terminal_return_provenance`; otherwise the
-terminal-return provenance gate fails. The current yfinance-backed scorer does
-not yet emit this provenance, so a universe metadata file alone cannot make a
-run pass.
-
-The portfolio table reports each strategy's excess return versus the strict
-equal-weight `buy_and_hold` benchmark: one position per ticker from its first
-available entry to its last available exit. `rolling_long` is retained as a
-diagnostic baseline for the older rolling-entry semantics. A strategy is not
-promotion-ready merely because it ranks first on Sharpe: the benchmark gate
-requires an observed benchmark win, portfolio effective sample size of at
-least 30, and a deflated Sharpe of at least 95%. The effective-sample contract
-is `portfolio_overlap_clustered_v1`: same-date securities share one dependence
-cluster and overlapping holding windows are discounted. The external validator
-requires this marker on the `overall` portfolio row; legacy scores without it
-are blocked, even if their ticker-level `effective_n` is large.
-
-`session-score` also appends a separate sealed-trial cross-sectional allocation
-section and `cross_sectional_trial_allocation` JSON field. It ranks the fixed
-universe by trailing price return using only data available at each as-of date,
-then applies the selected tickers' sealed forward outcomes. This deterministic
-layer is reported for comparison, but it does not alter the AI signal rows or
-the promotion gate; a missing price history fails that section closed.
-
-When synchronized AI predictions are available, the same output adds an
-`AI Signal Ablation` section and `signal_ablation` JSON field. It reports an
-AI-only long sleeve and an AI-positive filter over the fixed momentum basket,
-both against exposure-matched references. A conditional permutation test
-reassigns positive AI labels within each momentum basket while preserving the
-period, basket, and positive-label count. These are attribution diagnostics;
-they do not change the pipeline signal or promotion gate. Scored `api` and
-`session-score` arms are recorded prospectively in an append-only
-`backtest_experiments.jsonl` ledger in the current directory (override with
-`--experiment-ledger`) with config/input fingerprints, headline and per-arm
-metrics, and cumulative unique-config and scored-evaluation counts. Those
-counts are audit metadata only; no cross-run DSR correction is applied.
-Pre-ledger or manually explored candidates are not reconstructed.
-The ablation's drawdown uses sealed-window endpoints only; it does not capture
-losses inside a holding window.
-
-### Web dashboard
+Start the dashboard in a second terminal:
 
 ```bash
 cd web
-npm install
+npm ci
 npm run dev
-# → http://localhost:3000
 ```
 
-Every ticker page carries a **Share** button that renders a 16:9 summary card —
-verdict, price, levels, sparkline, and a QR code back to the page. The same
-image is the page's Open Graph card, so pasting a link into Slack or WhatsApp
-unfurls exactly what the button hands out.
+Open <http://localhost:3000>. Locally, the screener reads the repository's `data/` directory; fetching prices alone does not create an AI briefing.
 
-The QR encodes an absolute URL, so any deployment that is not the local dev
-server must set the origin:
+| Route | What it shows |
+| --- | --- |
+| `/` | Screener with prices, signals, conviction, and research freshness |
+| `/AAPL` | Ticker detail with price history, fundamentals, analysts, and debate |
+| `/momentum` | Independent price-only rankings and monthly model basket |
+| `/allocation` | Exported historical strategy comparisons and allocation research |
+| `/about` | Pipeline diagram and glossary |
+
+Ticker pages also provide a **Share** button for a 16:9 summary card, including price levels, a sparkline, and a QR code. The card is also used for Open Graph previews.
+
+## AI research
+
+Set your Anthropic credential in the terminal where you run the analysis:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://your-host.example npm run build
+export ANTHROPIC_API_KEY=your-api-key
+
+# These commands make paid model calls.
+stock-analysis AAPL --market US -v
+stock-analysis MAYBANK --market MY -v
+
+# Override analyst/debate models and debate depth.
+stock-analysis AAPL --rounds 3 --model haiku --debate-model opus -v
 ```
 
-Left unset it falls back to `http://localhost:3000`, which is a dead scan on
-anyone else's phone.
+### How a briefing is built
 
-For a deployed dashboard, configure the Next.js server to read through the
-FastAPI public-data seam. These variables are server-only — never prefix the
-token with `NEXT_PUBLIC_`:
+| Stage | Responsibility | Default model |
+| --- | --- | --- |
+| Data ingestion | Fetch prices, financials, and news; compute technical indicators | Deterministic |
+| Four parallel analysts | Evaluate fundamentals, sentiment, technicals, and macro/FX | Haiku |
+| Bull/bear debate | Build competing cases and rebut them across multiple rounds | Opus |
+| Research manager | Rule on the argument; identify invalidation conditions and evidence gaps | Sonnet |
+| Outcome memory | Supply resolved prior outcomes and calibration context | Deterministic |
+| Synthesis and risk checks | Produce the briefing; calculate conviction gates and conditional levels | Sonnet + deterministic checks |
+
+Analyst convergence is computed from the reports. Conviction is capped by the confidence-weighted analyst consensus. Entry, stop, and target levels require sufficient conviction, convergence, and usable technical inputs; a neutral result or unavailable levels is valid.
+
+Outcome memory only exposes calls resolved by the analysis date. Calibration is reported as context and does not silently rescale signals. Model defaults and optional stages live in [`config.py`](src/stock_analysis/config.py).
+
+[`pipeline.json`](pipeline.json) owns the pipeline structure used by the dashboard and generated [architecture documentation](architecture.md).
+
+### Fetching data separately
 
 ```bash
-STOCK_ANALYSIS_API_URL=https://api.your-host.example
-STOCK_ANALYSIS_API_TOKEN=your-fastapi-bearer-token
-NEXT_PUBLIC_SITE_URL=https://your-host.example
+stock-fetch AAPL MSFT GOOGL
+stock-fetch --universe sp500
+stock-fetch --universe nasdaq100
+stock-fetch --universe my-klci
 ```
 
-The dashboard then calls `GET /api/v1/tickers`,
-`GET /api/v1/tickers/{ticker}`, and `GET /api/v1/watchlist`. It does not need a
-Supabase key in the deployed web bundle. Direct Supabase reads remain only as a
-local transition fallback when the FastAPI variables are unset.
+The Malaysia adapter resolves supported names such as `MAYBANK` to Bursa codes and applies the `.KL` provider suffix.
 
-The analysis API accepts `X-Idempotency-Key` for safe client retries. A key is
-bound to the complete ticker/market/settings request; changing those values
-with the same key returns `409`. Cloud requests are queued durably, and worker
-replica count controls parallelism. `ANALYSIS_QUOTA_TIMEZONE` controls the
-daily cost-quota boundary (default `Asia/Kuala_Lumpur`).
+## Price-only momentum
 
-### Cloud-first storage
+`/momentum` runs independently of the AI pipeline, database, and model credentials. [`config/momentum.json`](config/momentum.json) defines the strategy ID, universe, lookback, and selection count.
 
-The default backend remains local for offline tests. To avoid durable local
-analysis files, configure `STORAGE_BACKEND=supabase`:
+The current rule ranks **nine US stocks by trailing 12-month return** and selects **three equal-weight sleeves**:
+
+- **Daily preview:** rankings from the latest synchronized completed price session.
+- **Monthly basket:** rankings anchored to the preceding month-end, with modeled execution at the next common session open. Daily rank changes do not trigger intramonth rotation.
+- **Reference context:** matched-date comparisons with SPY, VOO, VT, and the fixed universe held at equal initial weights, where data is available.
+
+The rule still selects three stocks when every return is negative. It has no automatic cash filter or AI veto. Historical baskets and curves are reconstructions from provider-adjusted prices; changing the universe requires fresh validation.
+
+From the repository root, with the Python environment activated:
 
 ```bash
-export STORAGE_BACKEND=supabase
-export SUPABASE_URL=https://your-project.supabase.co
-export SUPABASE_SERVICE_ROLE_KEY=your-server-only-service-key
+# Download public prices and publish the validated JSON/hash pair.
+python scripts/refresh_momentum_dashboard.py
 
+# Alternatively, use existing CSVs without downloading prices.
+python scripts/refresh_momentum_dashboard.py --prices-dir /path/to/public-prices
+```
+
+Local development reads `web/data/momentum.json` and its companion SHA-256 file. Production defaults to the public `main` branch snapshot; `MOMENTUM_SNAPSHOT_URL` can override the HTTPS JSON source, which must have a companion `.sha256` file.
+
+The [refresh workflow](.github/workflows/momentum.yml) is configured for 01:15 UTC daily. Refresh failures preserve the previous published snapshot. Readers verify its hash and structure, and withhold current targets when freshness checks fail. Browser refresh retrieves published snapshots; it does not download new market prices.
+
+See the [standalone momentum design](docs/design/momentum-standalone.md) and [reference context contract](docs/design/momentum-reference-context.md) for source evidence, calendar rules, and failure behavior.
+
+## Backtesting and portfolio research
+
+```bash
+# Replay the AI pipeline over historical dates; requires model credentials.
+# Costs are one-way basis points, charged on entry and exit.
+stock-analysis-backtest --tickers AAPL,MSFT \
+  --start 2024-01-01 --end 2024-12-31 --cost-bps 10
+```
+
+Research modes include deterministic factor tests, cross-sectional allocation, rescoring frozen predictions, session-based research without an API key, and external validation. The [backtesting reference](docs/backtesting.md) contains commands, point-in-time evidence requirements, and scoring policies.
+
+Reports include Wilson hit-rate intervals, overlap-adjusted effective sample sizes, probabilistic Sharpe, and Deflated Sharpe for strategy comparisons. Zero transaction cost is the default for the example backtest mode; set it explicitly when assessing after-cost results.
+
+Completed cloud analysis runs can also feed `POST /api/v1/portfolio-plans`. It compares nine research weight views spanning passive baselines, momentum allocation, analyst filters, AI signals, and hybrids. The `stock-analysis-portfolio` CLI exports, plans, freezes, verifies, scores, and compares forward cohorts. See [portfolio research](docs/backtesting.md#portfolio-decisions) for prerequisites.
+
+The `/allocation` dashboard reads a hash-verified export selected by [`config/allocation_research.json`](config/allocation_research.json). Rebuild that export with:
+
+```bash
+python scripts/export_allocation_research.py
+```
+
+Historical allocation experiments and the current momentum configuration may use different universes. An older experiment does not validate a changed strategy. Research outputs retain `promotion_ready=false`; personal sizing, concentration limits, and account decisions belong to the consuming application.
+
+## API and deployment
+
+```bash
+# Local API, from the repository root.
+uvicorn stock_analysis.api.app:app --reload
+```
+
+Storage defaults to local files. Production uses Supabase with a FastAPI control plane and a separate durable worker from the same Docker image:
+
+```bash
 stock-analysis-worker
 ```
 
-The worker claims rows from the durable `analysis_runs` queue and writes typed
-market snapshots, immutable per-layer artifacts, outcomes, and backtest
-reports to Supabase. In deployment, the Next.js server reads completed public
-data through FastAPI; it does not need a local `data/` directory or a Supabase
-key. See
-[`docs/supabase.md`](docs/supabase.md) for migration, import, and deployment
-steps.
+The API accepts `X-Idempotency-Key` for safe analysis retries. Keys bind to the full request; reusing a key with changed settings returns `409`. A cloud run becomes the latest visible briefing only after its final briefing artifact exists.
 
-### Deploy the backend
+For a deployed dashboard, configure the server-side API connection:
 
-The API and worker run as two long-lived services from the same Docker image.
-The API is public HTTPS plus a bearer token; the worker is private and consumes
-the Supabase queue. See [`docs/deployment.md`](docs/deployment.md) for the
-environment matrix, Docker commands, API calls, and acceptance checklist.
-
-The repository also carries generated acceptance assets:
-
-```bash
-python scripts/generate_openapi.py       # write contracts/openapi.json
-python scripts/generate_postman.py       # write the importable collection
-python scripts/generate_openapi.py --check
-python scripts/generate_postman.py --check
+```dotenv
+NEXT_PUBLIC_SITE_URL=https://your-host.example
+STOCK_ANALYSIS_API_URL=https://api.your-host.example
+STOCK_ANALYSIS_API_TOKEN=your-fastapi-bearer-token
 ```
 
-Import `postman/ai-stock-analysis.postman_collection.json` into Postman, set
-`base_url` and `api_token`, and run the health/contract requests first. The
-`Start paid canary` request enqueues a real LLM run and must be triggered
-manually only after the non-cost checks pass.
+Keep API tokens, Supabase service credentials, and `ANTHROPIC_API_KEY` server-side. The worker uses the pinned Agent SDK's bundled Claude Code CLI; deployed workers authenticate through the API key.
 
----
+Follow the [deployment guide](docs/deployment.md) for the full environment matrix, Docker commands, and acceptance checks. The [Supabase guide](docs/supabase.md) covers schema setup, migration, and persistence behavior.
 
-## Project Structure
+## Repository map
 
-```
-src/stock_analysis/
-├── models/              # Pydantic data models
-│   ├── market_data.py   # TickerData, PriceBar, FinancialStatements
-│   ├── agent_reports.py # FundamentalsReport, SentimentReport, TechnicalReport, MacroFXReport
-│   ├── debate.py        # DebateArgument, DebateRound, DebateResult
-│   └── synthesis.py     # Briefing, ConvictionScore, ActionPlan, RiskAssessment
-├── data/                # Layer 1 — data fetching and storage
-│   ├── fetcher_base.py  # Abstract BaseFetcher interface
-│   ├── us_market.py     # USMarketFetcher (yfinance)
-│   ├── my_market.py     # MYMarketFetcher (Bursa/KLSE, BURSA_ALIASES)
-│   ├── technicals.py    # Technical indicator calculations
-│   ├── universe.py      # Ticker universe loaders (S&P 500, NASDAQ 100, FBM KLCI)
-│   ├── store.py         # DataStore — local flat per-ticker persistence
-│   └── cloud.py         # SupabaseAnalysisStore — cloud-first persistence
-├── agents/              # Layer 2 — specialist analyst agents
-│   ├── base.py          # BaseAnalystAgent
-│   ├── fundamentals.py
-│   ├── sentiment.py
-│   ├── technical.py
-│   └── macro.py
-├── debate/              # Layer 3 — adversarial bull/bear debate
-│   └── engine.py        # DebateEngine
-├── synthesis/           # Layer 4 — synthesis and risk
-│   ├── synthesizer.py   # SynthesizerAgent
-│   └── risk_checker.py  # RiskChecker
-├── backtest/            # Historical backtesting
-│   ├── runner.py        # Backtester
-│   ├── scorer.py        # Hit rate / accuracy scoring, with interval estimates
-│   ├── stats.py         # Wilson / Student-t / PSR / DSR, no scipy dependency
-│   ├── portfolio.py     # Generic backtest simulation (no personal holdings)
-│   └── fetcher.py       # Historical data helper
-├── api/                 # FastAPI REST endpoints
-│   └── app.py           # versioned FastAPI control plane + health checks
-├── worker.py            # Durable Supabase job worker
-├── config.py            # Settings (models, debate rounds, data dir)
-├── orchestrator.py      # AnalysisPipeline — chains all four layers
-├── fetch.py             # stock-fetch CLI entry point
-└── main.py              # stock-analysis CLI entry point
+| Path | Owner |
+| --- | --- |
+| `src/stock_analysis/data/` | Market adapters, technicals, local and cloud storage |
+| `src/stock_analysis/agents/`, `debate/`, `synthesis/` | AI research stages |
+| `src/stock_analysis/backtest/` | Historical replay, scoring, statistics, and portfolio simulation |
+| `src/stock_analysis/momentum_*.py` | Momentum snapshots, calendar, context, and reconstructed paths |
+| `src/stock_analysis/api/`, `worker.py` | API and durable job execution |
+| `config/` | Public strategy rules and research export selection |
+| `data/<TICKER>/` | Local market snapshots and research artifacts |
+| `web/` | Next.js / React dashboard; `web/data/` holds public research exports |
+| `reports/analysis/` | Dated research results and supporting evidence |
+| `contracts/`, `postman/` | Generated API contract and acceptance collection |
 
-pipeline.json            # Canonical pipeline shape — feeds /about + architecture.md
-scripts/
-├── sync_architecture.py  # Regenerates the mermaid block from pipeline.json
-├── generate_openapi.py   # Writes/checks the FastAPI contract snapshot
-└── generate_postman.py   # Writes/checks the Postman acceptance collection
-
-contracts/
-└── openapi.json          # Generated FastAPI OpenAPI snapshot
-
-postman/
-└── ai-stock-analysis.postman_collection.json  # Generated API checks
-
-web/                     # Next.js dashboard
-├── app/
-│   ├── page.tsx         # Screener — one sortable row per watchlist ticker
-│   ├── about/           # Pipeline flowchart (SVG from pipeline.json) + glossary
-│   ├── dashboard/       # Redirect to / (the screener moved there)
-│   └── [ticker]/        # Per-ticker analysis view + opengraph/twitter-image
-├── assets/fonts/        # Static subsetted TTFs — site + share cards
-├── lib/
-│   ├── api.ts            # Server-side FastAPI public-read client
-│   ├── data.ts           # Reads FastAPI, Supabase, or local data into rows
-│   ├── watchlist.ts      # Reads FastAPI, Supabase, or tickers.txt
-│   ├── screener.ts      # Column defs, sorting, at-entry / stale predicates
-│   ├── pipeline.ts      # Loads pipeline.json + computes the flowchart layout
-│   └── share/           # 16:9 share card: JSX, palette, QR + sparkline SVGs
-└── components/
-    ├── briefing/        # Conviction meter, decision card, analyst/debate sections
-    ├── chart/           # Price chart
-    ├── share/           # Share button — native sheet, clipboard, download
-    ├── ticker-list/     # Screener table, cards, filters, star/watchlist
-    └── shared/          # Data-status strip and other UI primitives
-```
-
-Data is stored **flat per ticker**, overwritten on each run:
-
-```
-data/
-└── AAPL/
-    ├── price_history.csv      # full OHLCV history, merged on each fetch
-    ├── fundamentals.json      # TickerInfo + financials + news snapshot
-    ├── technicals.json        # computed indicators (no LLM)
-    ├── analyst_reports.json
-    ├── debate_result.json
-    ├── research_verdict.json  # Layer 3.5 adjudication
-    ├── briefing.json
-    ├── outcomes.jsonl         # append-only outcome log
-    └── calibration.json       # computed track record
-```
-
-The dated `data/<TICKER>/<DATE>/` layout is a backtest-only fallback, used when a
-`for_date` is passed. `DataStore`'s docstring is the authoritative reference.
-
-With `STORAGE_BACKEND=supabase`, these files are replaced by Postgres tables and
-JSONB artifacts. A completed run is promoted to the latest ticker view only
-after its final briefing artifact exists; failed runs never replace a previous
-visible briefing.
-
----
+Local ticker runs update flat files such as `price_history.csv`, `fundamentals.json`, `analyst_reports.json`, and `briefing.json`. Price history is merged; research artifacts represent the latest run. Outcomes are append-only. Dated subdirectories support historical runs; see [`DataStore`](src/stock_analysis/data/store.py) for the storage contract.
 
 ## Development
 
-`pipeline.json` at the repo root is the single source of truth for the pipeline's shape.
-The `/about` page renders it as an SVG flowchart, and `scripts/sync_architecture.py`
-renders it as the mermaid block in [`architecture.md`](architecture.md) — so edit
-`pipeline.json`, never the diagram:
-
 ```bash
-python scripts/sync_architecture.py           # rewrite architecture.md
-python scripts/sync_architecture.py --check   # exit 1 if out of date (for CI)
-```
+pip install -e ".[dev]"
+ruff check src tests scripts
+pytest -q
 
-```bash
-# Lint
-ruff check src/
-
-# Format
-ruff format src/
-
-# Run API server
-uvicorn stock_analysis.api.app:app --reload
-
-# Contract snapshots / Postman collection
-python scripts/generate_openapi.py
-python scripts/generate_postman.py
+# Check generated contracts and architecture.
 python scripts/generate_openapi.py --check
 python scripts/generate_postman.py --check
+python scripts/sync_architecture.py --check
 
-# Tests
-pytest
-pytest tests/path/to/test_file.py::test_name   # single test
+cd web
+npm run typecheck
+npm run check:pipeline
+npm run check:allocation
+npm run check:momentum
+npm run build
 ```
 
----
-
-## Tech Stack
-
-- **LLM orchestration**: [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk) (Haiku / Sonnet / Opus)
-- **Data models**: [Pydantic](https://docs.pydantic.dev/) v2
-- **Market data**: [yfinance](https://github.com/ranaroussi/yfinance)
-- **API**: [FastAPI](https://fastapi.tiangolo.com/) + [Uvicorn](https://www.uvicorn.org/)
-- **Web dashboard**: [Next.js](https://nextjs.org/) + [Tailwind CSS](https://tailwindcss.com/)
-- **HTTP client**: [httpx](https://www.python-httpx.org/)
-
----
+After editing `pipeline.json`, run `python scripts/sync_architecture.py` from the repository root to regenerate the architecture diagram.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
-
-## Disclaimer
-
-This tool is for informational and educational purposes only. It is not financial advice. Always do your own research before making investment decisions.
-
-### Prospective watchlist validation
-
-The 2026-10-07 cohort is frozen under `reports/analysis/2026-10-07-forward-cohort/`: all31 current forecasts, next eligible open on/after2026-10-08, exit close on/after2026-11-06. Scoring is blocked before2026-11-07UTC so the US exit session has closed. US and MY use separate local-currency portfolios; costs and2× stress are frozen assumptions. No orders or outcome-memory writes occur. One cohort is one date cluster, not proof of statistical edge.
-
-```bash
-python -m stock_analysis.backtest.prospective verify --cohort reports/analysis/2026-10-07-forward-cohort
-# On/after2026-11-07UTC:
-python -m stock_analysis.backtest.prospective score --cohort reports/analysis/2026-10-07-forward-cohort
-```
-
-Hit-rate and IC intervals now use their respective portfolio-clustered effective counts. Wilson intervals preserve the observed hit fraction and apply an effective-n design-effect approximation; Fisher intervals use all completed dated windows, including neutral forecasts, and are unavailable below effective n4. These are approximate intervals, not exact coverage guarantees for correlated observations. Legacy report fields load with uncertainty method unspecified; rescore to obtain the new method metadata.
-
-### Input isolation and evidence policy
-
-Cloud workers seal the complete typed input and cutoff before analyst work.
-Retries load that input and require matching stage SHA-256 hashes. Partial legacy
-runs without an input seal fail closed; completed legacy outputs remain readable.
-Apply `supabase/migrations/20261008000000_immutable_run_inputs.sql` before deploying
-these worker changes. Raw seals are service-only and immutable while the run exists.
-
-Live US/MY fetches retain quarterly history (annual fallback), statement currency,
-and a separately requested plain Close. Balance and cash-flow columns must match
-the income fiscal end and frequency. Provider observations are dated at capture;
-they do not establish original filing vintages or a common EPS/ADR share basis.
-Those unknowns stay unavailable. `STOCK_EVIDENCE_REPLAY_DIR` optionally overlays
-dated statement, valuation, news and macro evidence before the seal is written.
-Macro is unavailable when no dated source is configured.
-
-`ANALYSIS_NEWS_MAX_AGE_DAYS` defaults to 30 days, measured relative to the analysis
-cutoff. Archived facts are retained; stale headlines do not enter sentiment.
-Explicit issuer financial-result releases do not provide independent sentiment
-confirmation. Income and its derived margins count as one confidence dimension.
-Session manifest version 5 records the execution-contract change: session and API
-backtests require the same valid risk plan, and gated neutral execution carries
-zero conviction. Raw model scores remain available for attribution. Existing sealed
-packets, scored reports and forward forecasts are never rewritten by these fixes.
+[MIT](LICENSE). Research and educational use; outputs are not financial advice.
