@@ -1,154 +1,361 @@
 {
   "symbol": "VT",
-  "date": "2026-10-07",
-  "data_as_of": "2026-10-06",
-  "input_sha256": {
-    "technicals.json": "10117ba71088b0f83f233be0b4a2d94da5693137e924cc0acbe39aa2615bc7fe",
-    "price_history.csv": "d5f1c44587464c8ceb0ec3c55a8401143bb93207c09dc4241d9e9274c7168653",
-    "indicators.json": "e85c3db5a5406aecbdc6a92920da4b43291d463f947b9befd51772305630724d",
-    "fundamentals.json": "78bba92bd19e89b7594d9afc2e1809553e433662d242ee336a99b165a4db1e98"
-  },
-  "prompt_sha256": {
-    "synthesis.txt": "53dd498370cbae7071598ec23f18e5e4a321100341a27ec8de1f265b65dedc4c",
-    "summary-schema.json": "8f6d5158e79dde415a9b6d31758bd7fad2a20999dfbd0ae043c4e17d0c2d6283",
-    "synthesis-schema.json": "ad5f77452fe3c349e2d7fdc789cef1632b1144770c2b5005c70a82a8a66262b2",
-    "research-manager.txt": "c8205edda009c817a0e12e1b30f5079e75e7a79ce016d6e17deba34af7aef99c",
-    "technical.txt": "8954d29e5f2f14092e052d0bf1308141d68537b4e182c524cab8e1da71a80905",
-    "argument-schema.json": "5fc1d7ba2650b4e5f6a6865b79960ede7a463336de74887c146d5e25b6400127",
-    "research-manager-schema.json": "edb0d4183e7b37dd24f819a94e45c3db981080f86d190ed3b3fa696545f3e899",
-    "fundamentals.txt": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
-    "macro.txt": "f5915b31f2a8a1368fe549f0677621b2c55698bed4fead02309068f93843a626",
-    "bear.txt": "bd22bc17e571752553adf7871e2636eeb8a53f222a3c3d12f1808ccb74d260d6",
-    "bull.txt": "4179d57fd8acf766618663af2d1b03bbd290f41cb9ef080b50ba48fc9edb2fee",
-    "moderator.txt": "84e229f0b41c46e01e87fb1b8d68c40e4c27247453c97dc1cfe5b7e6fcbfe382",
-    "sentiment.txt": "f28d28b4698bb8cde6ccfb062e73f51c612fb8ad41a1bab5fca3b3d502f3aec9"
-  },
-  "source_evidence": {
-    "fundamentals": {
-      "symbol": "VT",
-      "analysis_date": "2026-10-07",
-      "method": "Independent fundamentals re-evaluation using exact stored system prompt and full accessible primary financial tables; no model API, desired direction quota, or undated snapshot trend claims.",
-      "prompt_sha256": "fd4e780e0c424703919d9dccb857b21bf2f1c836697054a6aa7b042c160a8ab7",
-      "sources": [
-        {
-          "title": "Vanguard VT issuer fact sheet",
-          "url": "https://fund-docs.vanguard.com/F3141.pdf",
-          "publication_date": null,
-          "reporting_period": "2026-06-30",
-          "sections_reviewed": [
-            "ETF attributes",
-            "Market/sector allocations",
-            "Fee and holdings tables"
-          ]
-        },
-        {
-          "title": "Vanguard VT product disclosure",
-          "url": "https://advisors.vanguard.com/investments/products/new/vt/vanguard-total-world-stock-etf",
-          "publication_date": null,
-          "reporting_period": "2026-07-31 holdings; 2026-02-27 fee",
-          "sections_reviewed": [
-            "Issuer indexed product disclosures; direct page has dynamic rendering limitation"
-          ]
-        }
-      ],
-      "observed_facts": {
-        "June30_fact_sheet": {
-          "holdings": 10048,
-          "portfolio_pe": 22.8,
-          "roe_pct": 18.2,
-          "top10_weight_pct": 21.7,
-          "US_weight_pct": 61.9,
-          "technology_pct": 33.3,
-          "expense_pct": 0.06
-        },
-        "July31_issuer_product_page": {
-          "holdings": 10068,
-          "portfolio_pe": 20.8
-        }
-      },
-      "derived_calculations": [],
-      "frozen_valuation_inputs": {
-        "price_date": "2026-10-06",
-        "close": 160.7,
-        "vendor_pe": 20.766272,
-        "vendor_forward_pe": null,
-        "market_cap": null,
-        "path": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist-revised/inputs/VT/fundamentals.json"
-      },
-      "remaining_gaps": [
-        "Oct6 fund NAV premium/discount not independently verified; long-term expected return is scenario-dependent."
-      ],
-      "materiality_and_revision_reason": "ETF applicability is expected, not missing corporate evidence. Neutral unchanged because low costs/diversification justify core ownership but do not establish tactical alpha.",
-      "previous_role_signal": "neutral",
-      "judgement": {
-        "signal": "neutral",
-        "confidence": "medium"
-      }
-    },
-    "sentiment": {
-      "as_of": "2026-10-07",
-      "symbol": "VT",
-      "prompt_path": "prompts/sentiment.txt",
-      "fresh_input_path": "inputs/VT/fundamentals.json",
-      "news_feed_count": 0,
-      "recommendation_period": null,
-      "recommendations": null,
-      "sources": [
-        {
-          "url": "https://advisors.vanguard.com/investments/products/vt/vanguard-total-world-stock-etf",
-          "date": "2026-09-14",
-          "observed_facts": "Vanguard identifies VT as tracking the FTSE Global All Cap Index across large, medium and small companies worldwide.",
-          "negative_evidence_or_limitations": "Fund objective and dated quote information do not measure near-term investor sentiment. No dated fund flow or rating evidence was retrieved."
-        }
-      ],
-      "coverage_gaps": [
-        "Yahoo news_headlines empty",
-        "No social media tool",
-        "No verified post-event market reaction"
-      ]
-    },
-    "macro": {
-      "as_of": "2026-10-07",
-      "observed_sources": [
-        {
-          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
-          "event_date": "2026-09-16",
-          "facts": [
-            "Target range raised 25bp to 3.75\u20134.00%; resilient spending and robust capital investment; inflation elevated."
-          ]
-        },
-        {
-          "url": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
-          "event_date": "2026-09-03",
-          "facts": [
-            "OPR unchanged 2.75%; strong global tech spending, robust E&E demand, ongoing domestic investment; commodity cost pressure and Middle East conflict risks."
-          ]
-        },
-        {
-          "url": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate",
-          "event_date": "2026-10-06",
-          "facts": [
-            "USD/MYR reference 4.0858."
-          ]
-        }
-      ],
-      "inference_boundary": "Sector transmission is analyst inference, not verified company earnings guidance. No rate path or FX forecast."
-    }
-  },
-  "role_report_sha256": {
-    "fundamentals": "e502d6f4efe39096ecd63105e07d52dce491f5f07e510a374b3e60ed3ebcc091",
-    "sentiment": "9ee3c28a035a25c98c1683aca0c3e749943c3bf410be968856e9e74e31a536e5",
-    "technical": "90bb89757ebca055530a5ce3b6d2a4cecb49ece3fac5874377b31d92b5c290c8",
-    "macro": "9567a79c001a15d49e7ad95c53065d7f892cb8bf5f690a0fdd278043ded3e22e"
-  },
+  "date": "2026-10-30",
+  "data_as_of": "2026-10-29",
   "mode": "in-session",
-  "revision_of": "/Users/kelvin.you/Documents/dev/personal-os/repos/ai-stock-analysis/reports/analysis/2026-10-07-watchlist",
-  "retained_roles": [
+  "newly_researched_roles": [
+    "fundamentals",
     "sentiment",
     "technical",
     "macro"
   ],
-  "newly_researched_roles": [
-    "fundamentals"
-  ]
+  "retained_roles": [],
+  "debate_rounds": 2,
+  "input_sha256": {
+    "fundamentals.json": "820b67dd54233da311bcb7c79d9d00434087bba89c33496663c93b77db32a313",
+    "technicals.json": "2d36125a6e88c446b1ed8ef2b95810fcae31ef341ec607fa6e5acb3d0bddb608",
+    "price_history.csv": "59eaf5f38c3ed503566ed26c91a65d4d287263a474069ef6c46dc42dae9797fc"
+  },
+  "prompt_source_sha256": {
+    "src/stock_analysis/agents/fundamentals.py": "b33681019d2e7c1c028137c1295ae506a436cddc5953ec9c96ccbe0992ddb3e8",
+    "src/stock_analysis/agents/sentiment.py": "6077431b5d221cb90b65acb611cbe9552e72b308778e57c7fb03a572af6e3280",
+    "src/stock_analysis/agents/technical.py": "b40fa5883e2a7c9e765bd5727ee7a965d965fa1d3584a287e0e3cb8d7acaf7fd",
+    "src/stock_analysis/agents/macro.py": "7867dd03bd3f38c03d8be50a7ecffefb35454ba100ff3c22d3cdc9d6278242b1",
+    "src/stock_analysis/debate/engine.py": "a902c4efb3864a7ba087ee64e08f67a7a4f8ef57c4ae0fda0a8d183290cf6903",
+    "src/stock_analysis/debate/research_manager.py": "6b93323cf8f65b6ce125dc78f2c1070d52e42f95be880c555b332e1522acbd2e",
+    "src/stock_analysis/synthesis/synthesizer.py": "20bf812d99952fba1c4a4935b4f08a42cf4371660c1d7c2b5af57ab2c62e5e2c"
+  },
+  "source_evidence": {
+    "fundamentals": {
+      "provider_capture": "2026-10-30",
+      "context_file": "fundamental-context.json",
+      "readiness": {
+        "statement": false,
+        "history_periods": 0,
+        "growth": false,
+        "valuation": false,
+        "statement_age_days": null,
+        "statement_filing_age_days": null,
+        "gaps": [
+          "statement_unavailable",
+          "dated_history_unavailable",
+          "comparable_year_ago_period_unavailable",
+          "trailing_eps_with_common_share_basis_unavailable",
+          "pe_unavailable",
+          "market_cap_unavailable"
+        ]
+      },
+      "note": "Current capture date is not original publication date. Re-read fresh provider context and checked current issuer releases; prior-day evidence retained only where no new filing was established.",
+      "independent_recheck": "2026-10-30"
+    },
+    "sentiment": {
+      "as_of": "2026-10-30",
+      "retrieved_at": "2026-10-30T03:30:51.744392+00:00",
+      "sources": {
+        "NVDA": [
+          {
+            "date": "2026-10-27",
+            "publisher": "NVIDIA",
+            "title": "NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure",
+            "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Oracle-Expand-NVIDIA-Vera-Rubin-to-Multi-Gigawatt-Scale-and-Bring-NVIDIA-Vera-CPU-to-Oracle-Cloud-Infrastructure/default.aspx",
+            "observation": "General availability on OCI and planned multi-gigawatt expansion; not recognized revenue.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-28",
+            "publisher": "NVIDIA",
+            "title": "NVIDIA Sets Conference Call for Third-Quarter Financial Results",
+            "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/default.aspx",
+            "observation": "FY27Q3 results conference call scheduled Nov17 2026, fiscal quarter ended Oct25. Official date supersedes media estimates.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Amazon",
+            "title": "Amazon.com Announces Third Quarter Results",
+            "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+            "observation": "AWS sales +39.3%; TTM FCF outflow $42.4bn; 2026 cash capex guidance approximately $220bn. These are Amazon observations, not measured NVDA/AVGO order changes.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-28",
+            "publisher": "Microsoft",
+            "title": "Microsoft announces first quarter results",
+            "url": "https://news.microsoft.com/source/2026/10/28/microsoft-announces-first-quarter-results-2",
+            "observation": "Revenue +19%, operating income +21%, Azure revenue +48%; non-GAAP EPS +18%. Do not infer Microsoft FCF from this summary release.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "How major US stock indexes fared Thursday 10/29/2026",
+            "url": "https://apnews.com/article/2c26b0b1bbc3bfab9f3f4b902172f458",
+            "observation": "Alphabet drove index losses while a majority of stocks rose; the decline was not uniform market breadth deterioration.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "A historic drop for Alphabet stock drags the US market lower",
+            "url": "https://apnews.com/article/1b5c71d31b4ce1e46b0db47b33141f6b",
+            "observation": "Alphabet Class A fell12.6% during the full post-earnings regular session. This supersedes using Oct28 afterhours reaction as the latest regular-session event.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "Amazon offers cautious view after disappointing3Q results but delivers strong cloud growth",
+            "url": "https://apnews.com/article/2de72b65d63006a7ce85eab441e2d6b7",
+            "observation": "AP observed Amazon down about7% in extended trading shortly after release; timestamped reaction, not current live price.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          }
+        ],
+        "GOOGL": [
+          {
+            "date": "2026-10-28",
+            "publisher": "Alphabet via Publicnow / MarketScreener",
+            "title": "Alphabet Announces Third Quarter 2026 Results",
+            "url": "https://ca.marketscreener.com/news/alphabet-2026-q3-earnings-press-release-ce785cd3d981f42c",
+            "observation": "Revenue +25%, Cloud +103%, operating income +30%, EPS $2.12, investment losses and negative FCF.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-28",
+            "publisher": "Alphabet management transcript / StockAnalysis",
+            "title": "Alphabet Q3 2026 earnings call",
+            "url": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/",
+            "observation": "2027 capex expected to increase significantly; near-term Cloud margin headwinds. Page quotes $292.50 afterhours at 19:59 EDT versus $324.89 regular close, not a live October29 quote.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Amazon",
+            "title": "Amazon.com Announces Third Quarter Results",
+            "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+            "observation": "AWS sales +39.3%; TTM FCF outflow $42.4bn; 2026 cash capex guidance approximately $220bn. These are Amazon observations, not measured NVDA/AVGO order changes.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-28",
+            "publisher": "Microsoft",
+            "title": "Microsoft announces first quarter results",
+            "url": "https://news.microsoft.com/source/2026/10/28/microsoft-announces-first-quarter-results-2",
+            "observation": "Revenue +19%, operating income +21%, Azure revenue +48%; non-GAAP EPS +18%. Do not infer Microsoft FCF from this summary release.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "How major US stock indexes fared Thursday 10/29/2026",
+            "url": "https://apnews.com/article/2c26b0b1bbc3bfab9f3f4b902172f458",
+            "observation": "Alphabet drove index losses while a majority of stocks rose; the decline was not uniform market breadth deterioration.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "A historic drop for Alphabet stock drags the US market lower",
+            "url": "https://apnews.com/article/1b5c71d31b4ce1e46b0db47b33141f6b",
+            "observation": "Alphabet Class A fell12.6% during the full post-earnings regular session. This supersedes using Oct28 afterhours reaction as the latest regular-session event.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "Amazon offers cautious view after disappointing3Q results but delivers strong cloud growth",
+            "url": "https://apnews.com/article/2de72b65d63006a7ce85eab441e2d6b7",
+            "observation": "AP observed Amazon down about7% in extended trading shortly after release; timestamped reaction, not current live price.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          }
+        ],
+        "AVGO": [
+          {
+            "date": "2026-10-26",
+            "publisher": "Bank of America",
+            "title": "Bank of America, Blackstone, Citi and Morgan Stanley Announce Landmark $63 Billion Financing Structure to Enable AI Compute Capacity in Partnership with Broadcom",
+            "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/10/bank-of-america--blackstone--citi-and-morgan-stanley-announce-la.html",
+            "observation": "SPV purchases Broadcom accelerators/networking and leases to Anthropic; expected deliveries start 2027. Broadcom provides residual value support equivalent to first-lien financing; $63bn is not current revenue.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Amazon",
+            "title": "Amazon.com Announces Third Quarter Results",
+            "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+            "observation": "AWS sales +39.3%; TTM FCF outflow $42.4bn; 2026 cash capex guidance approximately $220bn. These are Amazon observations, not measured NVDA/AVGO order changes.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-28",
+            "publisher": "Microsoft",
+            "title": "Microsoft announces first quarter results",
+            "url": "https://news.microsoft.com/source/2026/10/28/microsoft-announces-first-quarter-results-2",
+            "observation": "Revenue +19%, operating income +21%, Azure revenue +48%; non-GAAP EPS +18%. Do not infer Microsoft FCF from this summary release.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "How major US stock indexes fared Thursday 10/29/2026",
+            "url": "https://apnews.com/article/2c26b0b1bbc3bfab9f3f4b902172f458",
+            "observation": "Alphabet drove index losses while a majority of stocks rose; the decline was not uniform market breadth deterioration.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "A historic drop for Alphabet stock drags the US market lower",
+            "url": "https://apnews.com/article/1b5c71d31b4ce1e46b0db47b33141f6b",
+            "observation": "Alphabet Class A fell12.6% during the full post-earnings regular session. This supersedes using Oct28 afterhours reaction as the latest regular-session event.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "Amazon offers cautious view after disappointing3Q results but delivers strong cloud growth",
+            "url": "https://apnews.com/article/2de72b65d63006a7ce85eab441e2d6b7",
+            "observation": "AP observed Amazon down about7% in extended trading shortly after release; timestamped reaction, not current live price.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          }
+        ],
+        "VT": [
+          {
+            "date": null,
+            "publisher": "Vanguard",
+            "title": "VT - Vanguard Total World Stock ETF",
+            "url": "https://advisors.vanguard.com/investments/products/vt/vanguard-total-world-stock-etf",
+            "observation": "Provider product context, no dated recent fund-specific directional catalyst established.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Amazon",
+            "title": "Amazon.com Announces Third Quarter Results",
+            "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+            "observation": "AWS sales +39.3%; TTM FCF outflow $42.4bn; 2026 cash capex guidance approximately $220bn. These are Amazon observations, not measured NVDA/AVGO order changes.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-28",
+            "publisher": "Microsoft",
+            "title": "Microsoft announces first quarter results",
+            "url": "https://news.microsoft.com/source/2026/10/28/microsoft-announces-first-quarter-results-2",
+            "observation": "Revenue +19%, operating income +21%, Azure revenue +48%; non-GAAP EPS +18%. Do not infer Microsoft FCF from this summary release.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "How major US stock indexes fared Thursday 10/29/2026",
+            "url": "https://apnews.com/article/2c26b0b1bbc3bfab9f3f4b902172f458",
+            "observation": "Alphabet drove index losses while a majority of stocks rose; the decline was not uniform market breadth deterioration.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "A historic drop for Alphabet stock drags the US market lower",
+            "url": "https://apnews.com/article/1b5c71d31b4ce1e46b0db47b33141f6b",
+            "observation": "Alphabet Class A fell12.6% during the full post-earnings regular session. This supersedes using Oct28 afterhours reaction as the latest regular-session event.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "Associated Press",
+            "title": "Amazon offers cautious view after disappointing3Q results but delivers strong cloud growth",
+            "url": "https://apnews.com/article/2de72b65d63006a7ce85eab441e2d6b7",
+            "observation": "AP observed Amazon down about7% in extended trading shortly after release; timestamped reaction, not current live price.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          }
+        ],
+        "1155": [
+          {
+            "date": "2026-10-23",
+            "publisher": "Maybank investor relations",
+            "title": "New Issue Of Securities: Other Issue Of Securities",
+            "url": "https://maybank.listedcompany.com/newsroom.html/cat/7649/year/2026",
+            "observation": "Recent dividend-reinvestment-plan notice; no verified recent earnings surprise or directional catalyst established.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-22",
+            "publisher": "Maybank Bursa announcement via KLSE Screener",
+            "title": "Additional Listing Announcement /Subdivision of Shares",
+            "url": "https://www.mirror.klsescreener.com/v2/announcements/view/11689181",
+            "observation": "DRP listing of 45,256,861 new shares scheduled October23 at issue price RM9.80. Corporate action, not evidence of a trend.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          },
+          {
+            "date": "2026-10-29",
+            "publisher": "The Edge Malaysia quoting Maybank statement",
+            "title": "Maybank launches ringgit account for Singapore corporate clients",
+            "url": "https://theedgemalaysia.com/node/823800",
+            "observation": "Eligible Singapore corporate clients may hold and transact in MYR; product expansion, no quantified group profit impact.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          }
+        ],
+        "5258": [
+          {
+            "date": "2026-08-26",
+            "publisher": "Bank Islam Bursa announcement via KLSE Screener",
+            "title": "Quarterly results for financial period ended 30 June 2026",
+            "url": "https://www.klsescreener.com/v2/announcements/view/11654065",
+            "observation": "Older context only: Q2 PATAMI RM139.122m vs RM126.685m; H1 RM254.154m vs RM252.950m. Outside recent-news window, not a current sentiment catalyst.",
+            "retrieved_at": "2026-10-30T03:30:51.744392+00:00"
+          }
+        ]
+      },
+      "recommendations_source": "2026-10-30 fetched fundamentals.json period0m snapshots; not authenticated dated upgrade/downgrade events.",
+      "gaps": [
+        "No measured NVDA/AVGO order change established from Amazon or Microsoft disclosures.",
+        "No quantified VT holdings attribution or ETF valuation.",
+        "Sparse recent BIMB issuer news.",
+        "Maybank product launch profit effect unquantified."
+      ],
+      "change_from_prior_run": {
+        "NVDA": "buy to neutral: newly verified mixed hyperscaler growth and cash-return narrative",
+        "GOOGL": "sell retained: full postearnings regular-session event now observed",
+        "AVGO": "buy to neutral: mixed sector narrative without established own-order deterioration",
+        "VT": "neutral retained; confidence medium with new market-breadth evidence",
+        "1155": "neutral retained with fresh product launch",
+        "5258": "neutral retained, low confidence"
+      }
+    },
+    "macro": {
+      "as_of": "2026-10-30",
+      "fed": {
+        "rate_range_pct": [
+          3.75,
+          4.0
+        ],
+        "decision_date": "2026-10-28",
+        "decision": "hold",
+        "dissents": "Two members preferred a 25bp increase",
+        "inflation": "remains elevated",
+        "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+      },
+      "bnm": {
+        "opr_pct": 2.75,
+        "decision_date": "2026-09-03",
+        "verified_current": "2026-10-30",
+        "source": "https://www.bnm.gov.my/monetary-stability/opr-decisions",
+        "supporting_display_source": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate"
+      },
+      "fx": {
+        "usd_myr": 4.0664,
+        "as_of": "2026-10-29",
+        "prior_usd_myr": 4.0818,
+        "prior_as_of": "2026-10-28",
+        "source": "https://financialmarkets.bnm.gov.my/data-download-kl-usd-myr-reference-rate"
+      },
+      "geopolitical_risks": [],
+      "sector_factors": [],
+      "note": "Sector transmission is inference, not new earnings guidance. Do not infer future rates or a durable FX trend from one observation."
+    }
+  },
+  "supplement_note": "Latest issuer releases supplement missing or stale provider financials. Oct29 complete daily bars incorporate GOOGL earnings gap; Oct30 intraday Bursa bar excluded before deterministic risk. Extended quotes are separate reference snapshots.",
+  "archive": "reports/analysis/2026-10-30-six-ticker-refresh",
+  "generated_at": "2026-10-30T03:34:52.743702+00:00",
+  "cloud_analysis_sync": "not_attempted_schema_unavailable",
+  "cloud_sync_error": "Supabase GET analysis_artifacts failed (400): {\"code\":\"42703\",\"details\":null,\"hint\":null,\"message\":\"column analysis_artifacts.input_hash does not exist\"}"
 }
