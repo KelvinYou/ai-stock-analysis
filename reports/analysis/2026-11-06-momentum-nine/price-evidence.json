@@ -1,0 +1,42 @@
+{
+  "primary_source": {
+    "name": "Yahoo Finance (yfinance)",
+    "url": "https://finance.yahoo.com/"
+  },
+  "supplemental_source": {
+    "name": "Stock Analysis (S&P Global Market Intelligence)",
+    "url": "https://stockanalysis.com/stocks/"
+  },
+  "missing_sessions": [
+    {
+      "date": "2026-11-05",
+      "tickers": [
+        "AVGO",
+        "COST",
+        "GOOGL",
+        "MSFT",
+        "NVDA",
+        "ORCL",
+        "TSM",
+        "UNH",
+        "V"
+      ]
+    }
+  ],
+  "supplemented_sessions": [
+    {
+      "date": "2026-11-05",
+      "tickers": [
+        "AVGO",
+        "COST",
+        "GOOGL",
+        "MSFT",
+        "NVDA",
+        "ORCL",
+        "TSM",
+        "UNH",
+        "V"
+      ]
+    }
+  ]
+}
