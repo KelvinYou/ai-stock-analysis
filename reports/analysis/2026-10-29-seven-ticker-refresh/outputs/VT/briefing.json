@@ -1,0 +1,74 @@
+{
+  "ticker": "VT",
+  "date": "2026-10-29",
+  "data_as_of": "2026-10-28",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.0,
+    "explanation": "Consistent with the low-confidence research verdict: this corporate-stock pipeline lacks ETF-specific valuation and implementation evidence. Neutral timing is compatible with a long-horizon diversified-core accumulation policy and is not a reason to condemn the holding."
+  },
+  "executive_summary": "VT is assessed here as an intended diversified global equity core, not as an operating company. Corporate profit, debt and cash-flow gaps are a coverage limitation, while no dated fund-specific directional catalyst was established. The technical picture is balanced, with price above the 200-day average but slightly negative MACD.\n\nNeither side establishes a special tactical opportunity or deterioration. Current look-through valuation, holdings weights, NAV premium/discount and tracking are unassessed. Neutral follows the research verdict and should remain separate from any established long-horizon allocation policy; absence of a timing edge does not require abandoning ordinary core accumulation.",
+  "bull_case": "The intended diversified global-core role can justify regular long-horizon accumulation; corporate-model missing data are not evidence of ETF deterioration.",
+  "bear_case": "ETF look-through valuation, NAV premium/discount, holdings and tracking are unassessed, leaving no verified tactical purchase advantage.",
+  "key_uncertainties": [
+    "Current ETF look-through valuation and constituent weights.",
+    "NAV premium/discount, tracking difference and fund-specific implementation risks.",
+    "ETF holdings and weights.",
+    "Dated NAV premium/discount and tracking-difference measurements.",
+    "Look-through valuation and implementation costs."
+  ],
+  "catalysts_upcoming": [
+    "A dated ETF-specific review of holdings, costs, tracking difference and NAV premium/discount would close coverage gaps.",
+    "An observed fund-level tracking or NAV dislocation would warrant reassessment after execution costs, rather than an automatic directional trade."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "No significant market-context flags."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 34.2% over available price history. Projected worst case (2-sigma): ~20.0% from current $158.29.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "VT",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Neither advocate establishes a tactical direction because the shared evidence lacks ETF-specific valuation and implementation analysis. The diversified-core accumulation rationale remains separate and compatible with this neutral research ruling. Corporate-model coverage limitations should not be recast as negative fundamentals.",
+    "winning_side": "neither",
+    "strongest_counterexample": "A long-horizon investor can rationally accumulate a diversified global equity core without a near-term catalyst; waiting for a tactical edge may add no allocation value.",
+    "invalidation_conditions": [
+      "A complete dated fund-level review supplying all three currently absent inputs\u2014look-through valuation, executable NAV premium/discount, and tracking difference\u2014would invalidate the present coverage-gap basis for withholding a tactical assessment.",
+      "If the fund objective ceases to represent diversified global equity exposure, the core-role rationale would require revision."
+    ],
+    "evidence_gaps": [
+      "ETF holdings and weights.",
+      "Dated NAV premium/discount and tracking-difference measurements.",
+      "Look-through valuation and implementation costs."
+    ],
+    "decisive_factors": [
+      "Corporate earnings and leverage metrics do not appropriately characterize this ETF.",
+      "No dated fund-specific directional catalyst was established.",
+      "Price remains above its 200-day average with balanced short-term momentum."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

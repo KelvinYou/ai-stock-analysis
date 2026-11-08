@@ -1,0 +1,60 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Corporate P/E and profit-growth readiness unavailable; ETF look-through valuation is not provided.",
+    "margin_analysis": "Not applicable: diversified equity ETF is not an operating company.",
+    "debt_analysis": "Corporate debt/equity analysis is not applicable to the fund; underlying holdings risks are not measured here.",
+    "growth_outlook": "Fundamental company-statement layer is unavailable; no directional signal inferred from missing data.",
+    "key_risks": [
+      "ETF-specific holdings, geographic weights, tracking difference and current NAV premium/discount were not assessed by this corporate model."
+    ],
+    "key_strengths": [
+      "Diversification is the intended fund role, not a measured current fundamental signal."
+    ],
+    "summary": "Neutral/low records a model coverage limitation for an ETF. It does not mean the index fund is unattractive or should be sold."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "neutral",
+    "news_summary": "No dated recent VT-specific directional news or analyst recommendation evidence was established. Vanguard product information is structural ETF context, not a near-term sentiment signal.",
+    "key_themes": [
+      "Global equity diversification",
+      "Fund-specific news gap"
+    ],
+    "notable_headlines": [],
+    "social_sentiment": null,
+    "summary": "There is insufficient dated fund-specific evidence for a directional sentiment signal. Neutral does not imply avoiding a global index core; this layer cannot score the long-term allocation case from news alone."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Sideways short-term consolidation within a positive longer-term trend.",
+    "rsi_14": 48.2759,
+    "rsi_assessment": "RSI 48.2759 is balanced with no oversold or overbought extreme.",
+    "macd_assessment": "MACD line -0.5111, signal -0.4619, histogram -0.0492; negative histogram indicates weak momentum.",
+    "volume_assessment": "Volume is 0.8739x the 20-bar average; confirmation is contextual, not a standalone signal.",
+    "support_levels": [
+      155.31
+    ],
+    "resistance_levels": [
+      161.22,
+      162.2931
+    ],
+    "summary": "The ETF trades near its 20- and 50-day averages while remaining 4.12% above the 200-day average. Slightly negative MACD, subdued volume and flat recent returns provide no strong tactical direction."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Inference: unchanged US policy rates affect the valuation and funding backdrop for the global equity portfolio; this is an ETF, not a single operating company.",
+    "interest_rate_outlook": "Observed: the Fed held its target at 3.75%-4.00% on 2026-10-28; two members preferred a 25bp increase and the statement described inflation as elevated. BNM OPR was 2.75% at its 2026-09-03 decision and remains the latest verified level as of 2026-10-29. Neither the next hike nor a cut is assumed.",
+    "fx_impact": "BNM reference USD/MYR was 4.0818 on 2026-10-28 versus 4.0858 on 2026-10-06. Inference: the slight MYR strengthening marginally reduces MYR translation of unchanged USD holdings; this is not evidence of a sustained FX trend.",
+    "sector_macro_factors": [
+      "Global diversification does not remove equity discount-rate sensitivity, but no dated global demand shock is supplied."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Verified Fed and BNM policy levels provide a dated macro backdrop, but neither the US hold nor the small USD/MYR change establishes a directional edge. Sector effects are conditional inferences; no fresh sector or geopolitical macro shock is supplied."
+  },
+  "pipeline_mode": "in-session"
+}

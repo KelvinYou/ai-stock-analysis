@@ -1,0 +1,104 @@
+{
+  "NVDA": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Short-term correction with the longer-term 200-day reference still below price.",
+    "rsi_14": 34.6562,
+    "rsi_assessment": "RSI 34.6562 is weak but not conventionally oversold; it does not demonstrate a reversal.",
+    "macd_assessment": "MACD line -2.8256, signal -1.7909, histogram -1.0348; histogram is negative (weak momentum), not an independent price forecast.",
+    "volume_assessment": "Completed-bar volume 76216000 is 0.7672x its 20-bar average; interpret alongside trend and volatility.",
+    "support_levels": [
+      207.0184,
+      210.18
+    ],
+    "resistance_levels": [
+      243.37
+    ],
+    "summary": "The close of 213.66 remains 3.72% below its 50-day average but 4.74% above its 200-day average, leaving mixed trend evidence. Negative MACD and a 7.45% twenty-bar loss outweigh a small five-bar bounce for timing; below-average volume does not confirm capitulation."
+  },
+  "GOOGL": {
+    "signal": "sell",
+    "confidence": "high",
+    "trend": "Confirmed daily post-earnings gap breakdown with extreme oversold momentum; no confirmed bottom.",
+    "rsi_14": 15.5984,
+    "rsi_assessment": "RSI 15.5984 is extremely oversold; this increases rebound risk but is not evidence of a bottom or an automatic buy signal.",
+    "macd_assessment": "MACD line -9.4085, signal -4.4489, histogram -4.9596; histogram is negative (weak momentum), not an independent price forecast.",
+    "volume_assessment": "Completed-bar volume 138898500 is 4.4999x its 20-bar average; interpret alongside trend and volatility.",
+    "support_levels": [
+      280.36
+    ],
+    "resistance_levels": [
+      359.4,
+      364.17
+    ],
+    "summary": "The completed October29 bar closes at 283.82, about 16.6% below both major averages, with a sharply negative MACD histogram and 4.50x average volume. Price below the lower Bollinger band and ATR 10.7779 confirm elevated volatility after the gap; the observed 280.36 low is a reference rather than a guaranteed floor, and this technical sell describes the trend rather than long-term business value."
+  },
+  "AVGO": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Improving short-term momentum inside a weak intermediate and long-term trend.",
+    "rsi_14": 41.7711,
+    "rsi_assessment": "RSI 41.7711 is weak-to-neutral rather than oversold.",
+    "macd_assessment": "MACD line -5.3931, signal -6.4359, histogram 1.0428; histogram is positive (improving momentum), not an independent price forecast.",
+    "volume_assessment": "Completed-bar volume 16920000 is 0.7825x its 20-bar average; interpret alongside trend and volatility.",
+    "support_levels": [
+      320.23
+    ],
+    "resistance_levels": [
+      380.84,
+      431.9435
+    ],
+    "summary": "The close of 345.00 remains below the 50- and 200-day averages despite a positive MACD histogram and a 6.73% five-bar recovery. The 17.37% sixty-bar decline and volume at 0.78x average leave a durable reversal unconfirmed; ATR 11.665 describes substantial daily volatility."
+  },
+  "VT": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Short-term consolidation with the longer-term 200-day trend reference still below price.",
+    "rsi_14": 42.2371,
+    "rsi_assessment": "RSI 42.2371 is balanced-to-soft, without an oversold or overbought extreme.",
+    "macd_assessment": "MACD line -0.4525, signal -0.46, histogram 0.0075; histogram is positive (improving momentum), not an independent price forecast.",
+    "volume_assessment": "Completed-bar volume 2138200 is 0.7988x its 20-bar average; interpret alongside trend and volatility.",
+    "support_levels": [
+      155.31
+    ],
+    "resistance_levels": [
+      161.22,
+      162.2931
+    ],
+    "summary": "The ETF trades slightly below its 50-day average while remaining 3.86% above its 200-day average. A barely positive MACD histogram, subdued volume and nearly flat twenty-bar return supply no strong tactical edge; this neutral timing signal does not assess the long-term allocation rationale."
+  },
+  "1155": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Short-term stabilization below the intermediate and long-term moving averages.",
+    "rsi_14": 63.3803,
+    "rsi_assessment": "RSI 63.3803 indicates recent relative strength but is below the conventional overbought threshold.",
+    "macd_assessment": "MACD line -0.0255, signal -0.0414, histogram 0.016; histogram is positive (improving momentum), not an independent price forecast.",
+    "volume_assessment": "Completed-bar volume 11152000 is 0.9807x its 20-bar average; interpret alongside trend and volatility.",
+    "support_levels": [
+      9.78
+    ],
+    "resistance_levels": [
+      10.12,
+      10.5375
+    ],
+    "summary": "The completed October29 close of 10.00 is above the 20-day average but remains below the 50- and 200-day averages. Positive MACD and approximately average volume support stabilization rather than a confirmed larger trend reversal; the provisional October30 bar is excluded."
+  },
+  "5258": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "Weak intermediate and long-term trend with marginal recent stabilization.",
+    "rsi_14": 47.3684,
+    "rsi_assessment": "RSI 47.3684 is neutral; proximity to the yearly low does not itself indicate oversold momentum.",
+    "macd_assessment": "MACD line -0.0198, signal -0.0225, histogram 0.0026; histogram is positive (improving momentum), not an independent price forecast.",
+    "volume_assessment": "Completed-bar volume 431200 is 0.5548x its 20-bar average; interpret alongside trend and volatility.",
+    "support_levels": [
+      1.97
+    ],
+    "resistance_levels": [
+      2.08,
+      2.2
+    ],
+    "summary": "The close of 2.01 remains below both major moving averages, with negative twenty- and sixty-bar returns. A marginally positive MACD histogram and five-bar bounce have weak volume confirmation at 0.55x average; the observed 1.97 low is not a guaranteed support floor."
+  }
+}

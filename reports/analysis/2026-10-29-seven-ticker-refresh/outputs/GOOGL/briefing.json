@@ -1,0 +1,76 @@
+{
+  "ticker": "GOOGL",
+  "date": "2026-10-29",
+  "data_as_of": "2026-10-28",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.4545,
+    "explanation": "Consistent with the wait-oriented research verdict: profitable growth is counterbalanced by two negative FCF quarters, capex and dilution. The post-earnings gap invalidates treating regular-close technical references as executable overnight levels."
+  },
+  "executive_summary": "Alphabet Q3 revenue grew 25%, operating income grew 30%, and Cloud operating profit reached $11.121bn. These support a viable long-term AI growth thesis and separate core operations from investment-loss-driven EPS volatility. TTM FCF remains positive at $19.747bn.\n\nRecent common-shareholder economics are weaker: Q3 FCF was negative $9.065bn after negative $5.855bn in Q2, with $51.355bn quarterly capex and $12.371bn common issuance. The research verdict favors waiting before adding, rather than asserting the business has failed. A roughly 10% after-hours decline does not establish fair value; daily indicators use the regular close and omit the gap, so their historical support is not an executable current floor.",
+  "bull_case": "Revenue, operating income and Cloud profitability are growing rapidly, with positive TTM FCF supporting eventual monetization of the AI investment cycle.",
+  "bear_case": "Two negative FCF quarters, heavy capex, common issuance and the post-earnings gap undermine an immediate add; positive operations do not prove per-share capital returns.",
+  "key_uncertainties": [
+    "Timing and magnitude of per-share cash-flow recovery.",
+    "Future capital requirements and dilution.",
+    "Post-gap technical structure and defensible fair value.",
+    "Validated recurring-earnings valuation excluding investment distortions.",
+    "A daily OHLC bar incorporating the post-earnings gap.",
+    "Complete current debt disaggregation and per-share investment-return assessment."
+  ],
+  "catalysts_upcoming": [
+    "Next quarterly cash statement showing whether FCF turns positive and TTM cash rebuilds.",
+    "Next share-count and financing disclosures showing the interaction of issuance, repurchases, stock compensation and diluted shares.",
+    "A complete daily bar incorporating the earnings gap will provide a relevant technical snapshot; it will not itself prove fair value."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 44.3% over available price history. Projected worst case (2-sigma): ~47.5% from current $324.89.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.45). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "GOOGL",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "The bear carries the decision against an immediate add because current owner-cash economics weakened despite strong operating growth. Two negative FCF quarters and common issuance make a lower quote insufficient buying evidence. This is a wait ruling, not a conclusion that the long-term business has failed.",
+    "winning_side": "bear",
+    "strongest_counterexample": "Revenue grew 25%, operating income grew 30%, Cloud operating profit reached $11.121bn and TTM FCF remains positive at $19.747bn; this may be productive investment rather than permanent deterioration.",
+    "invalidation_conditions": [
+      "Two subsequent quarters of positive FCF accompanied by no net common-share issuance would undermine the current cash-and-dilution basis for waiting.",
+      "Reported TTM FCF at or below zero would invalidate treating current pressure as compatible with a still-positive trailing cash foundation and require a stronger adverse reassessment."
+    ],
+    "evidence_gaps": [
+      "Validated recurring-earnings valuation excluding investment distortions.",
+      "A daily OHLC bar incorporating the post-earnings gap.",
+      "Complete current debt disaggregation and per-share investment-return assessment."
+    ],
+    "decisive_factors": [
+      "Revenue grew 25% and operating income grew 30%.",
+      "Cloud operating profit is real operating evidence.",
+      "Recent FCF was negative for two consecutive quarters and common shares were issued."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "sell",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

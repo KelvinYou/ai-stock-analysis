@@ -1,0 +1,78 @@
+{
+  "ticker": "AVGO",
+  "date": "2026-10-29",
+  "data_as_of": "2026-10-28",
+  "overall_signal": "buy",
+  "conviction": {
+    "score": 0.42,
+    "signal_convergence": 0.5,
+    "explanation": "Consistent with the conditional bullish research verdict: rapid growth is accompanied by realized cash conversion. Leverage, customer concentration, residual-value support and absent verified valuation restrain conviction; improving short-term momentum is not a confirmed long-term reversal."
+  },
+  "executive_summary": "Broadcom Q3 revenue grew 86% to $29.591bn and FCF reached $13.665bn, or 46% of revenue. Current cash conversion gives the operating growth case substance independent of future customer financing. The research verdict favors a conditional long-horizon growth purchase.\n\nThe strongest countercase is the combination of $59.419bn reported debt, concentrated AI customers and residual-value support in the announced financing structure. The $63bn SPV is financing, not recognized sales, and expected 2027 deliveries are not realized current revenue. Missing same-basis valuation and a price still below both major averages limit the entry case despite a positive MACD histogram.",
+  "bull_case": "Realized revenue growth and $13.665bn quarterly FCF support a profitable AI deployment business; customer financing can enable deliveries.",
+  "bear_case": "Valuation is unresolved, debt is material, demand is concentrated and residual-value support adds contingent exposure; a financing SPV is not recognized revenue.",
+  "key_uncertainties": [
+    "Economic cost and eventual calls on residual-value support.",
+    "Customer deployment execution and delivery timing.",
+    "Same-basis valuation margin of safety.",
+    "Validated same-share-basis valuation.",
+    "Quantified residual-value support exposure and complete financing terms.",
+    "Updated complete debt maturity and liquidity reconciliation."
+  ],
+  "catalysts_upcoming": [
+    "Subsequent earnings showing whether revenue expansion continues with positive FCF conversion.",
+    "Disclosures quantifying residual-value support terms or actual obligations.",
+    "Actual customer deliveries and recognized revenue, rather than financing announcements alone."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (1.48) \u2014 price may amplify broad-market moves.",
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 48.3% over available price history. Projected worst case (2-sigma): ~72.6% from current $351.81.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": 347.08,
+    "entry_rationale": "Buy-the-dip to SMA-20 support near $347.08",
+    "stop_loss": 324.68,
+    "stop_rationale": "2x ATR-14 ($11.20) below entry \u2014 invalidates the setup",
+    "take_profit_1": 366.74,
+    "take_profit_2": 493.32,
+    "target_rationale": "TP1 = nearest technical resistance (SMA-200, BB-upper, or 52w high). TP2 = 52w high / +15% stretch. Consider scaling out: sell half at TP1, let the rest ride to TP2.",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "AVGO",
+    "judged_view": "buy",
+    "confidence": "medium",
+    "thesis": "The bull carries a conditional long-horizon growth case because expansion is accompanied by substantial realized cash conversion, not merely customer announcements. $13.665bn quarterly FCF gives the business current financial support, while financing obligations, leverage and the purchase valuation remain material constraints. Tactical stabilization is not a confirmed long-term reversal.",
+    "winning_side": "bull",
+    "strongest_counterexample": "A $59.419bn reported debt burden, concentrated AI customers and residual-value support can transmit deployment or financing problems to shareholders even while current earnings are strong.",
+    "invalidation_conditions": [
+      "Two consecutive comparable quarters with free cash flow at or below zero would invalidate reliance on cash-generative growth.",
+      "Two consecutive quarters with year-over-year revenue growth at or below zero would invalidate the sustained expansion premise.",
+      "A disclosed material residual-value support payment exceeding the latest $13.665bn quarterly FCF would invalidate the assumption that present cash generation comfortably absorbs this exposure."
+    ],
+    "evidence_gaps": [
+      "Validated same-share-basis valuation.",
+      "Quantified residual-value support exposure and complete financing terms.",
+      "Updated complete debt maturity and liquidity reconciliation."
+    ],
+    "decisive_factors": [
+      "Q3 revenue rose 86% and AI semiconductor revenue rose 221%.",
+      "Quarterly FCF was $13.665bn.",
+      "The $63bn SPV is not recognized current sales."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "buy",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "buy",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,125 @@
+{
+  "NVDA": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "No validated same-share-basis TTM EPS/P-E is available in the deterministic context; current provider metadata is not evidence of a valuation discount.",
+    "margin_analysis": "FY27 Q2 ended 2026-07-26: GAAP gross margin approximately 75%; provider operating margin 66.24%. Strong realized profitability.",
+    "debt_analysis": "Provider quarter-end reported debt $38.351bn versus equity $228.984bn; complete liquidity and maturity review not supplied.",
+    "growth_outlook": "Official Aug26 release reports $96.221bn revenue, up 106% YoY and 18% sequentially. This is realized growth, not an analyst forecast.",
+    "key_risks": [
+      "Hyperscaler investment concentration and supply/export constraints remain business risks.",
+      "Provider FCF $21.4bn is below the prior quarter $48.587bn; cash conversion requires monitoring.",
+      "No verified valuation margin of safety."
+    ],
+    "key_strengths": [
+      "Strong realized revenue growth and high margins.",
+      "Positive quarterly FCF $21.4bn in provider snapshot."
+    ],
+    "summary": "Operating growth and profitability support a conditional fundamental Buy, not a proven bargain. Financial period is approximately 90 days old on the provider-normalized calendar; official fiscal date differs from the provider month-end label."
+  },
+  "GOOGL": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "No validated same-share-basis TTM EPS/P-E is available in the deterministic context; current provider metadata is not evidence of a valuation discount. Trailing profit is additionally distorted by investment gains/losses.",
+    "margin_analysis": "Oct28 Q3 release: operating income $40.576bn, up 30%, operating margin 31.8%; Cloud operating income $11.121bn.",
+    "debt_analysis": "Q3 release reports long-term debt $125.1bn (partial debt category), new debt proceeds and common issuance; no complete net-debt comparison is asserted.",
+    "growth_outlook": "Q3 revenue $127.577bn up 25%; Search up 12%, Cloud up 103%. Fresh Q3 release supersedes stale June30 provider financials.",
+    "key_risks": [
+      "Quarterly FCF negative $9.065bn after Q2 negative $5.855bn; TTM FCF $19.747bn.",
+      "Q3 capex $51.355bn and common-stock issuance $12.371bn; dilution and cash conversion weaken per-share economics.",
+      "Equity-investment losses reduce EPS; removing one item does not establish a comparable consensus beat."
+    ],
+    "key_strengths": [
+      "Main-business operating income and Cloud profit still growing.",
+      "Positive TTM FCF despite current investment pressure."
+    ],
+    "summary": "Strong operations coexist with worsening near-term owner cash generation, so Neutral is more defensible than automatic dip-buying. Fresh Oct28 Q3 earnings are used instead of the provider Q2 snapshot, and no precise fair value is inferred."
+  },
+  "AVGO": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "No validated same-share-basis TTM EPS/P-E is available in the deterministic context; current provider metadata is not evidence of a valuation discount.",
+    "margin_analysis": "Sept2 official Q3 release: GAAP operating income $15.955bn on $29.591bn revenue; $13.665bn FCF, 46% of revenue. GAAP/non-GAAP metrics kept separate.",
+    "debt_analysis": "Provider reported debt $59.419bn versus equity $99.690bn; leverage requires monitoring despite strong FCF.",
+    "growth_outlook": "Official quarter ended Aug2: revenue up 86%; AI semiconductor revenue up 221% to $16.7bn. Q4 revenue $34.8bn is management guidance, not realized revenue.",
+    "key_risks": [
+      "Large-customer concentration and dependence on continued AI investment.",
+      "Material debt and outsourced supply-chain dependencies.",
+      "No validated valuation discount; strong growth can already be priced in."
+    ],
+    "key_strengths": [
+      "Realized revenue and operating-profit expansion.",
+      "Quarterly FCF $13.665bn versus $7.024bn a year earlier."
+    ],
+    "summary": "Strong realized growth and cash conversion support a conditional fundamental Buy. The official fiscal end Aug2 corrects the provider July31 label; absent same-basis valuation prevents calling it cheap."
+  },
+  "V": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "No validated same-share-basis TTM EPS/P-E is available in the deterministic context; current provider metadata is not evidence of a valuation discount.",
+    "margin_analysis": "Oct27 FY26 Q4 release: net revenue $12.139bn and GAAP net income $6.002bn; full-year GAAP and adjusted earnings remain separate.",
+    "debt_analysis": "June30 provider reported debt $23.858bn and equity $35.178bn are stale relative to Sept30 earnings; current full balance-sheet reconciliation not supplied.",
+    "growth_outlook": "Oct27 release: Q4 revenue up 13%, GAAP EPS $3.19 up 22%, adjusted EPS $3.48 up 17%; payment volume up 9%, cross-border ex-intra-Europe up 14%.",
+    "key_risks": [
+      "Client incentives Q4 $5.123bn, up 21%, faster than revenue.",
+      "Legal charges and investment items complicate GAAP profit growth.",
+      "Current valuation discount and refreshed full debt maturity profile unverified."
+    ],
+    "key_strengths": [
+      "Payments-network activity and revenue continue growing.",
+      "Full-year EPS $12.32 and adjusted EPS $13.27; growth supported by operations and repurchases, with different effects distinguished."
+    ],
+    "summary": "Fresh FY26 Q4 results support a conditional fundamental Buy, but do not establish an attractive entry price. Oct27 earnings override the June30 provider income snapshot; debt evidence is explicitly older."
+  },
+  "VT": {
+    "signal": "neutral",
+    "confidence": "low",
+    "pe_assessment": "Corporate P/E and profit-growth readiness unavailable; ETF look-through valuation is not provided.",
+    "margin_analysis": "Not applicable: diversified equity ETF is not an operating company.",
+    "debt_analysis": "Corporate debt/equity analysis is not applicable to the fund; underlying holdings risks are not measured here.",
+    "growth_outlook": "Fundamental company-statement layer is unavailable; no directional signal inferred from missing data.",
+    "key_risks": [
+      "ETF-specific holdings, geographic weights, tracking difference and current NAV premium/discount were not assessed by this corporate model."
+    ],
+    "key_strengths": [
+      "Diversification is the intended fund role, not a measured current fundamental signal."
+    ],
+    "summary": "Neutral/low records a model coverage limitation for an ETF. It does not mean the index fund is unattractive or should be sold."
+  },
+  "1155": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "No validated same-share-basis TTM EPS/P-E is available in the deterministic context; current provider metadata is not evidence of a valuation discount.",
+    "margin_analysis": "Official Q2: net interest margin 2.10%, up 10bp YoY; first-half annualised ROE 11.6%. Provider industrial-company operating-margin fields are unavailable.",
+    "debt_analysis": "Bank funding debt is not comparable to industrial leverage. Official CET1 14.92%, total capital ratio 18.68%, LCR 130.0%, NSFR 113.4%; these are June30 observations.",
+    "growth_outlook": "Aug27 release: Q2 attributable profit RM2.690bn up 2.4%; first-half RM5.171bn versus RM5.217bn prior year, so one-quarter recovery is not sustained acceleration.",
+    "key_risks": [
+      "First-half profit slightly below prior year.",
+      "Funding margins, credit costs and regional exposures remain relevant.",
+      "No validated dated valuation or dividend sustainability assessment."
+    ],
+    "key_strengths": [
+      "Reported capital and liquidity buffers.",
+      "Interim 31 sen dividend and Q2 profit recovery."
+    ],
+    "summary": "Neutral reflects stable bank fundamentals without a verified valuation discount or sustained earnings acceleration. June30 statements are 121 days old; provider bank FCF is not used as an industrial cash-generation warning."
+  },
+  "5258": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "No validated same-share-basis TTM EPS/P-E is available in the deterministic context; current provider metadata is not evidence of a valuation discount.",
+    "margin_analysis": "Official Q2 attributable profit RM139.122m versus RM126.685m; bank-specific margin/capital evidence takes priority over generic provider margins.",
+    "debt_analysis": "Official 1H update reports total capital ratio 17.8% and gross impaired financing 0.98%; these are June30 observations, not current stress-test results.",
+    "growth_outlook": "Q2 profit grew 9.8%, but H1 profit RM254.154m versus RM252.950m was nearly flat. Official gross revenue RM1.363945bn differs in definition from provider RM718.770m net-style revenue.",
+    "key_risks": [
+      "Near-flat H1 earnings despite Q2 recovery.",
+      "Credit impairment and funding-cost sensitivity require monitoring.",
+      "Valuation evidence lacks same-basis dated inputs; no automatic cheap-stock conclusion."
+    ],
+    "key_strengths": [
+      "Q2 profit recovery.",
+      "Reported impaired-financing ratio below 1% and capital ratio 17.8%."
+    ],
+    "summary": "Neutral balances Q2 recovery against almost-flat H1 profit and incomplete valuation. June30 data is 121 days old; negative provider FCF is not interpreted as an industrial liquidity signal for a bank."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "scope": "six current tickers",
+  "local": "complete",
+  "cloud_analysis_sync": "not_attempted_schema_unavailable",
+  "preflight": {
+    "configured_backend": "supabase",
+    "available": false,
+    "error": "Supabase GET analysis_artifacts failed (400): {\"code\":\"42703\",\"details\":null,\"hint\":null,\"message\":\"column analysis_artifacts.input_hash does not exist\"}"
+  },
+  "no_database_changes": true
+}
