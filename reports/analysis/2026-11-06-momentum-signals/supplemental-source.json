@@ -1,0 +1,97 @@
+{
+  "captured_at_utc": "2026-11-06T01:08:28.458756+00:00",
+  "session": "2026-11-05",
+  "historical_source": "Yahoo Finance / yfinance auto_adjust=True; original captured panel kept under prices/",
+  "supplemental_source": "Stock Analysis historical table; source attributed there to S&P Global Market Intelligence",
+  "method": "Replace only the missing November 5 OHLCV row using the observed table. Every supplemental adjusted close equals its close. Historical adjusted bars and ranking rules unchanged. No primary ticker history files modified.",
+  "rows": {
+    "AVGO": {
+      "url": "https://stockanalysis.com/stocks/avgo/history/",
+      "date": "2026-11-05",
+      "open": 311.89,
+      "high": 314.0,
+      "low": 290.12,
+      "close": 291.54,
+      "volume": 53900726,
+      "adj_close": 291.54,
+      "panel_sha256": "735d95714af2b32d0c369ef08e61dce143c7569fdd814d59dff6e371943b3e2f"
+    },
+    "COST": {
+      "url": "https://stockanalysis.com/stocks/cost/history/",
+      "date": "2026-11-05",
+      "open": 1070.99,
+      "high": 1081.55,
+      "low": 1061.0,
+      "close": 1066.46,
+      "volume": 4792903,
+      "adj_close": 1066.46,
+      "panel_sha256": "084887390c8ecb3c3e7d4f086278256e1bf216d6f1fbcadc832b091cfd0357d3"
+    },
+    "MSFT": {
+      "url": "https://stockanalysis.com/stocks/msft/history/",
+      "date": "2026-11-05",
+      "open": 554.94,
+      "high": 557.62,
+      "low": 532.68,
+      "close": 536.21,
+      "volume": 42858515,
+      "adj_close": 536.21,
+      "panel_sha256": "e58de020f98b7d51a178100be97f68fffe587e9ea1b82be1535954024f180b94"
+    },
+    "NVDA": {
+      "url": "https://stockanalysis.com/stocks/nvda/history/",
+      "date": "2026-11-05",
+      "open": 196.07,
+      "high": 196.25,
+      "low": 181.46,
+      "close": 181.84,
+      "volume": 307786349,
+      "adj_close": 181.84,
+      "panel_sha256": "8c3d6997ebb18699f6e663884471bb10177be33dadaa957765a717d4299740cd"
+    },
+    "ORCL": {
+      "url": "https://stockanalysis.com/stocks/orcl/history/",
+      "date": "2026-11-05",
+      "open": 123.0,
+      "high": 124.24,
+      "low": 111.66,
+      "close": 115.19,
+      "volume": 57040173,
+      "adj_close": 115.19,
+      "panel_sha256": "096bb20f026869e4e6c27d3989577f7a74be6404abaeb0f923d565aeebb7c79b"
+    },
+    "TSM": {
+      "url": "https://stockanalysis.com/stocks/tsm/history/",
+      "date": "2026-11-05",
+      "open": 379.75,
+      "high": 380.78,
+      "low": 351.19,
+      "close": 351.76,
+      "volume": 43045086,
+      "adj_close": 351.76,
+      "panel_sha256": "cf0c5097eb9a4401cc86244530cc74311b72ae3741b71e0bdd57d4632d2ca67e"
+    },
+    "UNH": {
+      "url": "https://stockanalysis.com/stocks/unh/history/",
+      "date": "2026-11-05",
+      "open": 412.4,
+      "high": 415.72,
+      "low": 394.08,
+      "close": 395.63,
+      "volume": 6883044,
+      "adj_close": 395.63,
+      "panel_sha256": "8d8c85480ee7c4f15ac8dbe9b1b81eb6c900ca3501d51d0500160833a5295b42"
+    },
+    "V": {
+      "url": "https://stockanalysis.com/stocks/v/history/",
+      "date": "2026-11-05",
+      "open": 440.8,
+      "high": 442.23,
+      "low": 421.93,
+      "close": 422.54,
+      "volume": 14978501,
+      "adj_close": 422.54,
+      "panel_sha256": "4e56b87def9cf58c4d193c63ff3c9496ed5025f7352e2226fbc1b6ce32884dab"
+    }
+  }
+}

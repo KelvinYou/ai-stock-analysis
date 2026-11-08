@@ -1,0 +1,981 @@
+{
+  "version": 1,
+  "generated_at_utc": "2026-11-06T02:08:48.049505+00:00",
+  "cycle_month": "2026-11",
+  "strategy": {
+    "id": "momentum-9-12m-top3-v2",
+    "lookback_months": 12,
+    "top_n": 3,
+    "universe": [
+      "AVGO",
+      "COST",
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "TSM",
+      "UNH",
+      "V"
+    ]
+  },
+  "ai_required": false,
+  "promotion_ready": false,
+  "preview": {
+    "status": "available",
+    "scope": "indicative_price_only",
+    "as_of": "2026-11-05",
+    "lookback_months": 12,
+    "top_n": 3,
+    "universe": [
+      "AVGO",
+      "COST",
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "TSM",
+      "UNH",
+      "V"
+    ],
+    "ranking": [
+      {
+        "ticker": "V",
+        "score": 0.2525563735782783,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "UNH",
+        "score": 0.23928922711545675,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "TSM",
+        "score": 0.21060792801263206,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "COST",
+        "score": 0.1472893496900498,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "MSFT",
+        "score": 0.0659787143142978,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "GOOGL",
+        "score": -0.003535392680130145,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "NVDA",
+        "score": -0.06625865705909073,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "AVGO",
+        "score": -0.18182720620446247,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "ORCL",
+        "score": -0.5336533757951316,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      }
+    ],
+    "captured_at_utc": "2026-11-06T02:08:48.049505+00:00",
+    "source_sha256": "8de81fcb295c25b4e4da1857a71031d713ab33900abbf3418aec7f803ed6780d"
+  },
+  "monthly": {
+    "status": "available",
+    "scope": "indicative_price_only",
+    "as_of": "2026-10-30",
+    "lookback_months": 12,
+    "top_n": 3,
+    "universe": [
+      "AVGO",
+      "COST",
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "TSM",
+      "UNH",
+      "V"
+    ],
+    "ranking": [
+      {
+        "ticker": "TSM",
+        "score": 0.3661363146187233,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "V",
+        "score": 0.2235068112297245,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "UNH",
+        "score": 0.2232305131579262,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "COST",
+        "score": 0.11717644719455289,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "MSFT",
+        "score": 0.01621081824065551,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "NVDA",
+        "score": 0.01303900060036245,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "GOOGL",
+        "score": -0.002212916590770053,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "AVGO",
+        "score": -0.1112612999270377,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "ORCL",
+        "score": -0.4957605107830819,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      }
+    ],
+    "captured_at_utc": "2026-11-06T02:08:48.049505+00:00",
+    "source_sha256": "25fcdfa1768fd2685e53e3c5f2808a04669b0cffc7784910fe93b0b36fadc431"
+  },
+  "price_evidence": {
+    "primary_source": {
+      "name": "Yahoo Finance (yfinance)",
+      "url": "https://finance.yahoo.com/"
+    },
+    "supplemental_source": {
+      "name": "Stock Analysis (S&P Global Market Intelligence)",
+      "url": "https://stockanalysis.com/stocks/"
+    },
+    "missing_sessions": [
+      {
+        "date": "2026-11-05",
+        "tickers": [
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "MSFT",
+          "NVDA",
+          "ORCL",
+          "TSM",
+          "UNH",
+          "V"
+        ]
+      }
+    ],
+    "supplemented_sessions": [
+      {
+        "date": "2026-11-05",
+        "tickers": [
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "MSFT",
+          "NVDA",
+          "ORCL",
+          "TSM",
+          "UNH",
+          "V"
+        ]
+      }
+    ]
+  },
+  "context": {
+    "status": "available",
+    "version": 1,
+    "as_of": "2026-11-05",
+    "periods": {
+      "d1": {
+        "start": "2026-11-04",
+        "end": "2026-11-05"
+      },
+      "m1": {
+        "start": "2026-10-05",
+        "end": "2026-11-05"
+      },
+      "m3": {
+        "start": "2026-08-05",
+        "end": "2026-11-05"
+      },
+      "m12": {
+        "start": "2025-11-05",
+        "end": "2026-11-05"
+      }
+    },
+    "stocks": [
+      {
+        "ticker": "V",
+        "close": 422.54,
+        "lookback_date": "2025-11-05",
+        "lookback_close": 337.34210205078125,
+        "returns": {
+          "d1": -0.03213690150225845,
+          "m1": 0.14289580959659043,
+          "m3": 0.14865403354890372,
+          "m12": 0.2525563735782783
+        },
+        "drawdown_63": -0.03213690150225845,
+        "return_since_monthly_close": 0.02163979724209164,
+        "gap_pp": 4.194844556564625,
+        "monthly_rank": 2,
+        "previous_rank": 2,
+        "rank_change_monthly": 1,
+        "rank_change_previous": 1
+      },
+      {
+        "ticker": "UNH",
+        "close": 395.63,
+        "lookback_date": "2025-11-05",
+        "lookback_close": 319.23944091796875,
+        "returns": {
+          "d1": -0.03358738755877566,
+          "m1": 0.04503675321590128,
+          "m3": -0.035575683183283746,
+          "m12": 0.23928922711545675
+        },
+        "drawdown_63": -0.06906209757539006,
+        "return_since_monthly_close": -0.027864464669850042,
+        "gap_pp": 2.8681299102824687,
+        "monthly_rank": 3,
+        "previous_rank": 3,
+        "rank_change_monthly": 1,
+        "rank_change_previous": 1
+      },
+      {
+        "ticker": "TSM",
+        "close": 351.76,
+        "lookback_date": "2025-11-05",
+        "lookback_close": 290.56475830078125,
+        "returns": {
+          "d1": -0.11115603284902087,
+          "m1": -0.27591599662635635,
+          "m3": -0.1480587769563395,
+          "m12": 0.21060792801263206
+        },
+        "drawdown_63": -0.27591599662635635,
+        "return_since_monthly_close": -0.1338734007069997,
+        "gap_pp": 0.0,
+        "monthly_rank": 1,
+        "previous_rank": 1,
+        "rank_change_monthly": -2,
+        "rank_change_previous": -2
+      },
+      {
+        "ticker": "COST",
+        "close": 1066.46,
+        "lookback_date": "2025-11-05",
+        "lookback_close": 929.5475463867188,
+        "returns": {
+          "d1": 0.01910234393390553,
+          "m1": 0.15648406850075403,
+          "m3": 0.13380845767318705,
+          "m12": 0.1472893496900498
+        },
+        "drawdown_63": 0.0,
+        "return_since_monthly_close": 0.053522710253167904,
+        "gap_pp": -6.331857832258225,
+        "monthly_rank": 4,
+        "previous_rank": 4,
+        "rank_change_monthly": 0,
+        "rank_change_previous": 0
+      },
+      {
+        "ticker": "MSFT",
+        "close": 536.21,
+        "lookback_date": "2025-11-05",
+        "lookback_close": 503.0213012695313,
+        "returns": {
+          "d1": -0.03524647035484618,
+          "m1": 0.021002337252074454,
+          "m3": 0.10207900156782812,
+          "m12": 0.0659787143142978
+        },
+        "drawdown_63": -0.03524647035484618,
+        "return_since_monthly_close": 0.02739941290891701,
+        "gap_pp": -14.462921369833426,
+        "monthly_rank": 5,
+        "previous_rank": 5,
+        "rank_change_monthly": 0,
+        "rank_change_previous": 0
+      },
+      {
+        "ticker": "GOOGL",
+        "close": 282.57,
+        "lookback_date": "2025-11-05",
+        "lookback_close": 283.5725402832031,
+        "returns": {
+          "d1": -0.022012227311125954,
+          "m1": -0.18443155538882716,
+          "m3": -0.21984482423481966,
+          "m12": -0.003535392680130145
+        },
+        "drawdown_63": -0.20913060048566368,
+        "return_since_monthly_close": 0.009755587828170986,
+        "gap_pp": -21.41433206927622,
+        "monthly_rank": 7,
+        "previous_rank": 6,
+        "rank_change_monthly": 1,
+        "rank_change_previous": 0
+      },
+      {
+        "ticker": "NVDA",
+        "close": 181.84,
+        "lookback_date": "2025-11-05",
+        "lookback_close": 194.74343872070312,
+        "returns": {
+          "d1": -0.09139061828096362,
+          "m1": -0.23884468545113713,
+          "m3": -0.16958547654393386,
+          "m12": -0.06625865705909073
+        },
+        "drawdown_63": -0.2399264511587056,
+        "return_since_monthly_close": -0.11141516544981844,
+        "gap_pp": -27.68665850717228,
+        "monthly_rank": 6,
+        "previous_rank": 7,
+        "rank_change_monthly": -1,
+        "rank_change_previous": 0
+      },
+      {
+        "ticker": "AVGO",
+        "close": 291.54,
+        "lookback_date": "2025-11-05",
+        "lookback_close": 356.3305969238281,
+        "returns": {
+          "d1": -0.10427679071128504,
+          "m1": -0.19577393135022536,
+          "m3": -0.3017335709523211,
+          "m12": -0.18182720620446247
+        },
+        "drawdown_63": -0.3085443250944825,
+        "return_since_monthly_close": -0.10592488958107482,
+        "gap_pp": -39.24351342170945,
+        "monthly_rank": 8,
+        "previous_rank": 8,
+        "rank_change_monthly": 0,
+        "rank_change_previous": 0
+      },
+      {
+        "ticker": "ORCL",
+        "close": 115.19,
+        "lookback_date": "2025-11-05",
+        "lookback_close": 247.0051116943359,
+        "returns": {
+          "d1": -0.06902128121905549,
+          "m1": -0.1885455018998381,
+          "m3": -0.19927951519080545,
+          "m12": -0.5336533757951316
+        },
+        "drawdown_63": -0.2886043282184585,
+        "return_since_monthly_close": -0.1184663533011685,
+        "gap_pp": -74.42613038077637,
+        "monthly_rank": 9,
+        "previous_rank": 9,
+        "rank_change_monthly": 0,
+        "rank_change_previous": 0
+      }
+    ],
+    "previous_rank_date": "2026-11-04",
+    "monthly_rank_date": "2026-10-30",
+    "ranking_history": [
+      {
+        "as_of": "2026-08-31",
+        "ranking": [
+          {
+            "ticker": "TSM",
+            "score": 0.8188297228329713,
+            "rank": 1
+          },
+          {
+            "ticker": "GOOGL",
+            "score": 0.5984127889386,
+            "rank": 2
+          },
+          {
+            "ticker": "UNH",
+            "score": 0.2903448202184371,
+            "rank": 3
+          },
+          {
+            "ticker": "NVDA",
+            "score": 0.26922770909695104,
+            "rank": 4
+          },
+          {
+            "ticker": "AVGO",
+            "score": 0.2544250917266355,
+            "rank": 5
+          },
+          {
+            "ticker": "V",
+            "score": 0.08705445330269246,
+            "rank": 6
+          },
+          {
+            "ticker": "MSFT",
+            "score": 0.009421640850716173,
+            "rank": 7
+          },
+          {
+            "ticker": "COST",
+            "score": 0.006442406239969056,
+            "rank": 8
+          },
+          {
+            "ticker": "ORCL",
+            "score": -0.3330402241795255,
+            "rank": 9
+          }
+        ]
+      },
+      {
+        "as_of": "2026-09-30",
+        "ranking": [
+          {
+            "ticker": "TSM",
+            "score": 0.6506790578107384,
+            "rank": 1
+          },
+          {
+            "ticker": "GOOGL",
+            "score": 0.41906539369460094,
+            "rank": 2
+          },
+          {
+            "ticker": "NVDA",
+            "score": 0.2269652262441526,
+            "rank": 3
+          },
+          {
+            "ticker": "UNH",
+            "score": 0.09138261115728419,
+            "rank": 4
+          },
+          {
+            "ticker": "AVGO",
+            "score": 0.07241742946222351,
+            "rank": 5
+          },
+          {
+            "ticker": "V",
+            "score": 0.06099876135224358,
+            "rank": 6
+          },
+          {
+            "ticker": "MSFT",
+            "score": -0.0016025012706666342,
+            "rank": 7
+          },
+          {
+            "ticker": "COST",
+            "score": -0.010780323208438247,
+            "rank": 8
+          },
+          {
+            "ticker": "ORCL",
+            "score": -0.5062405798126355,
+            "rank": 9
+          }
+        ]
+      },
+      {
+        "as_of": "2026-10-30",
+        "ranking": [
+          {
+            "ticker": "TSM",
+            "score": 0.3661363146187233,
+            "rank": 1
+          },
+          {
+            "ticker": "V",
+            "score": 0.2235068112297245,
+            "rank": 2
+          },
+          {
+            "ticker": "UNH",
+            "score": 0.2232305131579262,
+            "rank": 3
+          },
+          {
+            "ticker": "COST",
+            "score": 0.11717644719455289,
+            "rank": 4
+          },
+          {
+            "ticker": "MSFT",
+            "score": 0.01621081824065551,
+            "rank": 5
+          },
+          {
+            "ticker": "NVDA",
+            "score": 0.01303900060036245,
+            "rank": 6
+          },
+          {
+            "ticker": "GOOGL",
+            "score": -0.002212916590770053,
+            "rank": 7
+          },
+          {
+            "ticker": "AVGO",
+            "score": -0.1112612999270377,
+            "rank": 8
+          },
+          {
+            "ticker": "ORCL",
+            "score": -0.4957605107830819,
+            "rank": 9
+          }
+        ]
+      }
+    ],
+    "transition": {
+      "from": "2026-09-30",
+      "to": "2026-10-30",
+      "entries": [
+        "UNH",
+        "V"
+      ],
+      "exits": [
+        "GOOGL",
+        "NVDA"
+      ]
+    },
+    "decision_month_end": "2026-11-30",
+    "reference_ticker": "SPY",
+    "market": {
+      "status": "available",
+      "ticker": "SPY",
+      "label": "SPY \u00b7 S&P 500",
+      "as_of": "2026-11-05",
+      "returns": {
+        "d1": -0.044091753715052806,
+        "m1": -0.053986056512048464,
+        "m3": -0.0454277156708871,
+        "m12": 0.09346226497039334
+      },
+      "equal_weight_returns": {
+        "d1": -0.05330281842815841,
+        "m1": -0.07978807801678488,
+        "m3": -0.07661515047462049,
+        "m12": 0.014494106774655532
+      },
+      "curve": [
+        {
+          "date": "2026-08-05",
+          "market": 100.0,
+          "equal_weight": 100.0
+        },
+        {
+          "date": "2026-08-06",
+          "market": 99.84021935302748,
+          "equal_weight": 100.13655698752815
+        },
+        {
+          "date": "2026-08-07",
+          "market": 100.4507750498013,
+          "equal_weight": 100.62695461358781
+        },
+        {
+          "date": "2026-08-10",
+          "market": 100.42089665700607,
+          "equal_weight": 100.73200308738389
+        },
+        {
+          "date": "2026-08-11",
+          "market": 100.10003180987708,
+          "equal_weight": 99.54719222474951
+        },
+        {
+          "date": "2026-08-12",
+          "market": 100.35074323992421,
+          "equal_weight": 100.45442740270012
+        },
+        {
+          "date": "2026-08-13",
+          "market": 101.05094206357874,
+          "equal_weight": 101.16394317449885
+        },
+        {
+          "date": "2026-08-14",
+          "market": 100.85088639231958,
+          "equal_weight": 99.92345447081716
+        },
+        {
+          "date": "2026-08-17",
+          "market": 100.37412771228482,
+          "equal_weight": 98.91135536094157
+        },
+        {
+          "date": "2026-08-18",
+          "market": 99.69602570479704,
+          "equal_weight": 97.7915565704011
+        },
+        {
+          "date": "2026-08-19",
+          "market": 99.90516650586862,
+          "equal_weight": 97.1800825886501
+        },
+        {
+          "date": "2026-08-20",
+          "market": 99.06598029822436,
+          "equal_weight": 96.60833502709917
+        },
+        {
+          "date": "2026-08-21",
+          "market": 99.47128200799332,
+          "equal_weight": 97.6803423307111
+        },
+        {
+          "date": "2026-08-24",
+          "market": 99.17899200047565,
+          "equal_weight": 97.60797457591467
+        },
+        {
+          "date": "2026-08-25",
+          "market": 99.49596208504286,
+          "equal_weight": 98.08560459163904
+        },
+        {
+          "date": "2026-08-26",
+          "market": 99.51805095271456,
+          "equal_weight": 98.22723342892989
+        },
+        {
+          "date": "2026-08-27",
+          "market": 100.17017727846391,
+          "equal_weight": 99.68905716146175
+        },
+        {
+          "date": "2026-08-28",
+          "market": 99.9428423722824,
+          "equal_weight": 99.24611504468339
+        },
+        {
+          "date": "2026-08-31",
+          "market": 99.6440584443301,
+          "equal_weight": 98.71307792100895
+        },
+        {
+          "date": "2026-09-01",
+          "market": 98.95946251640768,
+          "equal_weight": 97.5514205638476
+        },
+        {
+          "date": "2026-09-02",
+          "market": 99.39853738153364,
+          "equal_weight": 98.31761245750764
+        },
+        {
+          "date": "2026-09-03",
+          "market": 100.439082813621,
+          "equal_weight": 99.40994425214646
+        },
+        {
+          "date": "2026-09-04",
+          "market": 100.05196726046694,
+          "equal_weight": 99.52849784857288
+        },
+        {
+          "date": "2026-09-08",
+          "market": 99.50246395397248,
+          "equal_weight": 99.84102061654528
+        },
+        {
+          "date": "2026-09-09",
+          "market": 99.04000461648592,
+          "equal_weight": 98.83374891945958
+        },
+        {
+          "date": "2026-09-10",
+          "market": 98.44633152314307,
+          "equal_weight": 97.5584094955836
+        },
+        {
+          "date": "2026-09-11",
+          "market": 99.28551773078733,
+          "equal_weight": 97.65331413364525
+        },
+        {
+          "date": "2026-09-14",
+          "market": 98.84254015460459,
+          "equal_weight": 97.04513690893424
+        },
+        {
+          "date": "2026-09-15",
+          "market": 98.38917389542546,
+          "equal_weight": 95.77791335228015
+        },
+        {
+          "date": "2026-09-16",
+          "market": 97.95528939755019,
+          "equal_weight": 95.75488388484146
+        },
+        {
+          "date": "2026-09-17",
+          "market": 99.06598029822436,
+          "equal_weight": 97.42469441566674
+        },
+        {
+          "date": "2026-09-18",
+          "market": 99.19347415840937,
+          "equal_weight": 97.72624901362673
+        },
+        {
+          "date": "2026-09-21",
+          "market": 100.73146820307896,
+          "equal_weight": 98.94288003185532
+        },
+        {
+          "date": "2026-09-22",
+          "market": 100.71584146186177,
+          "equal_weight": 98.75023420533832
+        },
+        {
+          "date": "2026-09-23",
+          "market": 99.99046975446622,
+          "equal_weight": 97.47436691837932
+        },
+        {
+          "date": "2026-09-24",
+          "market": 99.90842538882846,
+          "equal_weight": 97.31805733655405
+        },
+        {
+          "date": "2026-09-25",
+          "market": 100.45147451736341,
+          "equal_weight": 98.00499933556533
+        },
+        {
+          "date": "2026-09-28",
+          "market": 99.70396625132601,
+          "equal_weight": 97.67750896428625
+        },
+        {
+          "date": "2026-09-29",
+          "market": 99.5203480677765,
+          "equal_weight": 98.07275356544972
+        },
+        {
+          "date": "2026-09-30",
+          "market": 99.31588893027406,
+          "equal_weight": 97.57827455927077
+        },
+        {
+          "date": "2026-10-01",
+          "market": 99.4929972963989,
+          "equal_weight": 97.4810533854439
+        },
+        {
+          "date": "2026-10-02",
+          "market": 100.22878948077091,
+          "equal_weight": 99.1775054643767
+        },
+        {
+          "date": "2026-10-05",
+          "market": 100.90467385814704,
+          "equal_weight": 100.7429808707399
+        },
+        {
+          "date": "2026-10-06",
+          "market": 101.45944701684238,
+          "equal_weight": 101.4377261168862
+        },
+        {
+          "date": "2026-10-07",
+          "market": 101.21591307780193,
+          "equal_weight": 101.21103516675485
+        },
+        {
+          "date": "2026-10-08",
+          "market": 100.78746535052308,
+          "equal_weight": 99.22287607775411
+        },
+        {
+          "date": "2026-10-09",
+          "market": 101.39172583923788,
+          "equal_weight": 100.46785975830821
+        },
+        {
+          "date": "2026-10-12",
+          "market": 101.33051447905802,
+          "equal_weight": 99.99889999891704
+        },
+        {
+          "date": "2026-10-13",
+          "market": 101.31879839739264,
+          "equal_weight": 100.86146970628529
+        },
+        {
+          "date": "2026-10-14",
+          "market": 100.22357526803518,
+          "equal_weight": 99.07234916965145
+        },
+        {
+          "date": "2026-10-15",
+          "market": 100.50877521799144,
+          "equal_weight": 99.59226505221966
+        },
+        {
+          "date": "2026-10-16",
+          "market": 99.39662974272788,
+          "equal_weight": 97.85234400978567
+        },
+        {
+          "date": "2026-10-19",
+          "market": 99.81726409939814,
+          "equal_weight": 98.91270230023247
+        },
+        {
+          "date": "2026-10-20",
+          "market": 100.15195137937387,
+          "equal_weight": 99.40328293203464
+        },
+        {
+          "date": "2026-10-21",
+          "market": 100.67807816200273,
+          "equal_weight": 99.67807519741709
+        },
+        {
+          "date": "2026-10-22",
+          "market": 99.48909458534212,
+          "equal_weight": 98.04474774914705
+        },
+        {
+          "date": "2026-10-23",
+          "market": 98.96947762013792,
+          "equal_weight": 97.55260839412274
+        },
+        {
+          "date": "2026-10-26",
+          "market": 99.67271276889163,
+          "equal_weight": 97.94575290778211
+        },
+        {
+          "date": "2026-10-27",
+          "market": 100.23138863864378,
+          "equal_weight": 98.93143099241513
+        },
+        {
+          "date": "2026-10-28",
+          "market": 100.57649639559597,
+          "equal_weight": 100.09381093682184
+        },
+        {
+          "date": "2026-10-29",
+          "market": 100.1923217856008,
+          "equal_weight": 98.51458815475974
+        },
+        {
+          "date": "2026-10-30",
+          "market": 98.4160080146265,
+          "equal_weight": 96.05980137374246
+        },
+        {
+          "date": "2026-11-02",
+          "market": 97.94458277475285,
+          "equal_weight": 94.89353637202291
+        },
+        {
+          "date": "2026-11-03",
+          "market": 98.23759609531771,
+          "equal_weight": 96.1480611345764
+        },
+        {
+          "date": "2026-11-04",
+          "market": 99.86024161199293,
+          "equal_weight": 97.2156976056558
+        },
+        {
+          "date": "2026-11-05",
+          "market": 95.4572284329113,
+          "equal_weight": 92.33848495253795
+        }
+      ]
+    },
+    "cycle": {
+      "status": "available",
+      "decision_date": "2026-10-30",
+      "start": "2026-11-02",
+      "end": "2026-11-05",
+      "cost_bps_per_side": 20,
+      "rows": [
+        {
+          "id": "monthly_basket",
+          "gross": -0.051970911477137394,
+          "net_scenario": -0.05575923571487473
+        },
+        {
+          "id": "equal_weight",
+          "gross": -0.04481473959547529,
+          "net_scenario": -0.04863165989605178
+        },
+        {
+          "id": "market",
+          "gross": -0.034827851447608915,
+          "net_scenario": -0.03868467935322428
+        }
+      ]
+    }
+  },
+  "reference_evidence": {
+    "primary_source": {
+      "name": "Yahoo Finance (yfinance)",
+      "url": "https://finance.yahoo.com/"
+    },
+    "supplemental_source": {
+      "name": "Stock Analysis (S&P Global Market Intelligence)",
+      "url": "https://stockanalysis.com/etf/spy/history/"
+    },
+    "missing_sessions": [
+      {
+        "date": "2026-11-05",
+        "tickers": [
+          "SPY"
+        ]
+      }
+    ],
+    "supplemented_sessions": [
+      {
+        "date": "2026-11-05",
+        "tickers": [
+          "SPY"
+        ]
+      }
+    ]
+  }
+}

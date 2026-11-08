@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "generated_at_utc": "2026-11-06T01:54:14.898080+00:00",
+  "cycle_month": "2026-11",
+  "strategy": {
+    "id": "momentum-9-12m-top3-v2",
+    "lookback_months": 12,
+    "top_n": 3,
+    "universe": [
+      "AVGO",
+      "COST",
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "TSM",
+      "UNH",
+      "V"
+    ]
+  },
+  "ai_required": false,
+  "promotion_ready": false,
+  "preview": {
+    "status": "available",
+    "scope": "indicative_price_only",
+    "as_of": "2026-11-05",
+    "lookback_months": 12,
+    "top_n": 3,
+    "universe": [
+      "AVGO",
+      "COST",
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "TSM",
+      "UNH",
+      "V"
+    ],
+    "ranking": [
+      {
+        "ticker": "V",
+        "score": 0.2525563735782783,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "UNH",
+        "score": 0.23928922711545675,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "TSM",
+        "score": 0.21060792801263206,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "COST",
+        "score": 0.1472893496900498,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "MSFT",
+        "score": 0.0659787143142978,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "GOOGL",
+        "score": -0.003535392680130145,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "NVDA",
+        "score": -0.06625865705909073,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "AVGO",
+        "score": -0.18182720620446247,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "ORCL",
+        "score": -0.5336533757951316,
+        "lookback_date": "2025-11-05",
+        "target_weight": 0.0
+      }
+    ],
+    "captured_at_utc": "2026-11-06T01:54:14.898080+00:00",
+    "source_sha256": "8de81fcb295c25b4e4da1857a71031d713ab33900abbf3418aec7f803ed6780d"
+  },
+  "monthly": {
+    "status": "available",
+    "scope": "indicative_price_only",
+    "as_of": "2026-10-30",
+    "lookback_months": 12,
+    "top_n": 3,
+    "universe": [
+      "AVGO",
+      "COST",
+      "GOOGL",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "TSM",
+      "UNH",
+      "V"
+    ],
+    "ranking": [
+      {
+        "ticker": "TSM",
+        "score": 0.3661363146187233,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "V",
+        "score": 0.2235068112297245,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "UNH",
+        "score": 0.2232305131579262,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.3333333333333333
+      },
+      {
+        "ticker": "COST",
+        "score": 0.11717644719455289,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "MSFT",
+        "score": 0.01621081824065551,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "NVDA",
+        "score": 0.01303900060036245,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "GOOGL",
+        "score": -0.002212916590770053,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "AVGO",
+        "score": -0.1112612999270377,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      },
+      {
+        "ticker": "ORCL",
+        "score": -0.4957605107830819,
+        "lookback_date": "2025-10-31",
+        "target_weight": 0.0
+      }
+    ],
+    "captured_at_utc": "2026-11-06T01:54:14.898080+00:00",
+    "source_sha256": "25fcdfa1768fd2685e53e3c5f2808a04669b0cffc7784910fe93b0b36fadc431"
+  },
+  "price_evidence": {
+    "primary_source": {
+      "name": "Yahoo Finance (yfinance)",
+      "url": "https://finance.yahoo.com/"
+    },
+    "supplemental_source": {
+      "name": "Stock Analysis (S&P Global Market Intelligence)",
+      "url": "https://stockanalysis.com/stocks/"
+    },
+    "missing_sessions": [
+      {
+        "date": "2026-11-05",
+        "tickers": [
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "MSFT",
+          "NVDA",
+          "ORCL",
+          "TSM",
+          "UNH",
+          "V"
+        ]
+      }
+    ],
+    "supplemented_sessions": [
+      {
+        "date": "2026-11-05",
+        "tickers": [
+          "AVGO",
+          "COST",
+          "GOOGL",
+          "MSFT",
+          "NVDA",
+          "ORCL",
+          "TSM",
+          "UNH",
+          "V"
+        ]
+      }
+    ]
+  }
+}

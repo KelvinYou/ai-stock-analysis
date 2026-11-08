@@ -1,0 +1,11 @@
+# Latest-session and comparison acceptance
+
+[Status: OK] Local only; no commit or deployment.
+
+Fresh Yahoo OHLCV downloaded and preserved in raw/ and prices/ for all nine candidates and SPY/VOO/VT. All usable tails are November 5, 2026, with no supplemental rows. Public source metadata is separate for candidate, primary-reference and additional-reference panels. Candidate universe and momentum selection are unchanged. Long hold means fixed nine-stock equal-initial-weight buy-and-hold, not hindsight selection of current winners.
+
+Python owns exchange-calendar projection and coverage metadata. Runtime only compares timestamps against supplied closes. New capture timestamps cannot make old prices latest. Publication refuses incomplete latest-session candidate panels and preserves both previous JSON/hash files. Reference failure stays partial without changing selection. Runtime suppresses current targets on stock delay, calendar expiry/unknown, or month rollover. VOO/VT have matched-date return, indexed-curve and cycle-scenario values with separate source disclosures; visibility buttons are keyboard/touch accessible.
+
+Passed: child TS typecheck and runtime/source/route contract checks; 29 focused Python arithmetic, calendar and publication regression tests; Ruff; parent make design-check and make test. Design check retains two pre-existing chart contrast warnings. Real Chrome at 320/390/1440 in light/dark passed bounded-width, disclosure and four-line toggle checks; browser refresh, failure, invalid-payload, older-snapshot, polling-recovery and expiry checks passed. A clock replay crossing November 6 at 21:00 UTC verified that November 5 data becomes delayed and weights disappear. The comparison chart was visually inspected. Portable replay and screenshots are under ui/.
+
+This establishes latest scheduled completed-session coverage, not tick-level data or an exchange-authenticated price. Daily market ingestion and browser snapshot polling remain separate. Network ingestion excludes the current UTC date; after US close the UI can truthfully show delay until the next snapshot. No automatic secondary-provider service, full nine-name backtest or broker orders were introduced.
