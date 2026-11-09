@@ -23,6 +23,8 @@ Ticker research supports **US equities and Bursa Malaysia** through yfinance. Th
 
 **The AI pipeline has not demonstrated an after-cost advantage over strict buy-and-hold.** The [September comparison](reports/analysis/backtest-2026-09-24.md) is development research. Briefings and model weights remain research outputs; the repository places no brokerage orders and reads no personal holdings.
 
+Repository guidance starts in [AGENTS.md](AGENTS.md); use [docs/INDEX.md](docs/INDEX.md) for development conventions, pipeline invariants and design contracts.
+
 ## Quick start
 
 Use Python 3.12+. For the dashboard, use Node.js 20, matching CI.
