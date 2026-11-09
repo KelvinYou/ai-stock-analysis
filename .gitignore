@@ -61,3 +61,6 @@ logs/
 # Vercel project link (machine-specific)
 /.vercel
 reports/momentum_shadow/launchd.log
+
+# Filing RAG index: derived from SEC EDGAR, rebuild with `stock-filings <TICKER>`
+data/*/filings/
