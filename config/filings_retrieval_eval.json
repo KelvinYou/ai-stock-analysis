@@ -1,0 +1,16 @@
+{
+  "_comment": "Section-level relevance labels for scripts/eval_filings_retrieval.py. A hit counts when its section label is in `relevant`. Labels come from chunking.py's parser, so a parser mislabel affects the labels and the hits alike; this measures ranking, not parsing. Queries are written in investor language, deliberately not copying the item titles, so BM25 cannot win on heading words alone.",
+  "k": 5,
+  "queries": [
+    {"q": "What could go wrong for this business and hurt future results?", "relevant": ["Risk Factors"]},
+    {"q": "Does the company have enough cash to fund operations and debt payments?", "relevant": ["MD&A"]},
+    {"q": "Is the company being sued or facing regulatory investigations?", "relevant": ["Legal Proceedings", "Financial Statements", "Exhibits and Financial Statement Schedules"]},
+    {"q": "When does the company book sales from contracts with customers?", "relevant": ["Financial Statements", "Exhibits and Financial Statement Schedules"]},
+    {"q": "How exposed are earnings to exchange rates and interest rate moves?", "relevant": ["Market Risk", "MD&A"]},
+    {"q": "Who does the company compete with and what is its advantage?", "relevant": ["Business", "Risk Factors"]},
+    {"q": "Did management find weaknesses in internal controls over reporting?", "relevant": ["Controls and Procedures"]},
+    {"q": "How much stock did the company buy back during the period?", "relevant": ["Market for Common Equity", "Unregistered Sales and Repurchases", "MD&A", "Financial Statements"]},
+    {"q": "Why did profit margins change compared with last year?", "relevant": ["MD&A"]},
+    {"q": "How does the company protect itself against hacking and data breaches?", "relevant": ["Cybersecurity", "Risk Factors"]}
+  ]
+}
