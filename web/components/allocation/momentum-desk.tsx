@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowUpRight, RefreshCw } from "lucide-react";
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { SectionCard } from "@/components/shared/section-card";
@@ -111,7 +112,7 @@ export function MomentumDesk({data: original}: {data: MomentumDashboard}) {
       <p>Freshness compares the actual stock and reference dates with completed XNYS sessions, including holidays, DST and early closes. Scheduled calendar source: <a href="https://www.nyse.com/trade/hours-calendars" className="text-action underline underline-offset-4">NYSE calendar</a>. Unexpected closures or later provider price corrections require refreshed source evidence.</p>
       <p>The configured download targets 09:15 Malaysia time daily after US close. Web checks fetch published snapshots, not new market quotes. Remote scheduling is only active after publication; local source files are refreshed by the CLI.</p>
       <p>All three picks can fall together. The rule stays invested even when all scores are negative. Historical eight-stock results do not validate a changed nine-stock universe.</p>
-      <a href="/allocation" className="inline-flex min-h-11 items-center gap-1 text-action underline underline-offset-4">Historical evidence and uncertainty<ArrowUpRight className="size-3" aria-hidden/></a>
+      <Link href="/allocation" className="inline-flex min-h-11 items-center gap-1 text-action underline underline-offset-4">Historical evidence and uncertainty<ArrowUpRight className="size-3" aria-hidden/></Link>
     </div></details>
   </div>;
 }
