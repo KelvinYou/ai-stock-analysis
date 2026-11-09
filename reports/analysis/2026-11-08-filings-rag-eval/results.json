@@ -1,0 +1,1299 @@
+{
+  "as_of": "2026-11-08",
+  "tickers": [
+    "AAPL",
+    "MSFT",
+    "NVDA"
+  ],
+  "summary": {
+    "bm25": {
+      "hits": 25,
+      "n": 30,
+      "wilson": [
+        0.6643529481431982,
+        0.9266356575964831
+      ],
+      "mrr": 0.7444444444444444
+    },
+    "dense": {
+      "hits": 27,
+      "n": 30,
+      "wilson": [
+        0.7437855868473339,
+        0.9654007400402839
+      ],
+      "mrr": 0.8444444444444444
+    },
+    "hybrid": {
+      "hits": 28,
+      "n": 30,
+      "wilson": [
+        0.7867618227892791,
+        0.9815233646723066
+      ],
+      "mrr": 0.8527777777777777
+    }
+  },
+  "rows": [
+    {
+      "ticker": "AAPL",
+      "query": "What could go wrong for this business and hurt future results?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 0.5,
+      "top_sections": [
+        "MD&A",
+        "Risk Factors",
+        "Form 10-K Summary",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "What could go wrong for this business and hurt future results?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "What could go wrong for this business and hurt future results?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Does the company have enough cash to fund operations and debt payments?",
+      "mode": "bm25",
+      "hit": false,
+      "rr": 0.0,
+      "top_sections": [
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Does the company have enough cash to fund operations and debt payments?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Does the company have enough cash to fund operations and debt payments?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 0.5,
+      "top_sections": [
+        "Financial Statements",
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Is the company being sued or facing regulatory investigations?",
+      "mode": "bm25",
+      "hit": false,
+      "rr": 0.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Is the company being sued or facing regulatory investigations?",
+      "mode": "dense",
+      "hit": false,
+      "rr": 0.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Is the company being sued or facing regulatory investigations?",
+      "mode": "hybrid",
+      "hit": false,
+      "rr": 0.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "When does the company book sales from contracts with customers?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "When does the company book sales from contracts with customers?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 0.5,
+      "top_sections": [
+        "Business",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "When does the company book sales from contracts with customers?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Financial Statements",
+        "Financial Statements",
+        "Business",
+        "Financial Statements",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "How exposed are earnings to exchange rates and interest rate moves?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Market Risk",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "How exposed are earnings to exchange rates and interest rate moves?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Market Risk",
+        "Market Risk",
+        "Risk Factors",
+        "Financial Statements",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "How exposed are earnings to exchange rates and interest rate moves?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Market Risk",
+        "Financial Statements",
+        "Market Risk",
+        "Financial Statements",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Who does the company compete with and what is its advantage?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Business",
+        "Financial Statements",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Who does the company compete with and what is its advantage?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Business",
+        "Risk Factors",
+        "Business",
+        "Business",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Who does the company compete with and what is its advantage?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Business",
+        "Risk Factors",
+        "Business",
+        "Business"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Did management find weaknesses in internal controls over reporting?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Did management find weaknesses in internal controls over reporting?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Financial Statements",
+        "Financial Statements",
+        "Controls and Procedures"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Did management find weaknesses in internal controls over reporting?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "How much stock did the company buy back during the period?",
+      "mode": "bm25",
+      "hit": false,
+      "rr": 0.0,
+      "top_sections": [
+        "Legal Proceedings",
+        "Legal Proceedings",
+        "Legal Proceedings",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "How much stock did the company buy back during the period?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Unregistered Sales and Repurchases",
+        "Unregistered Sales and Repurchases",
+        "Unregistered Sales and Repurchases",
+        "Market for Common Equity",
+        "Unregistered Sales and Repurchases"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "How much stock did the company buy back during the period?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Unregistered Sales and Repurchases",
+        "Risk Factors",
+        "Risk Factors",
+        "Market for Common Equity",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Why did profit margins change compared with last year?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 0.5,
+      "top_sections": [
+        "Risk Factors",
+        "MD&A",
+        "Risk Factors",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Why did profit margins change compared with last year?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "Risk Factors",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "Why did profit margins change compared with last year?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 0.3333333333333333,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "MD&A",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "How does the company protect itself against hacking and data breaches?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Legal Proceedings",
+        "Legal Proceedings"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "How does the company protect itself against hacking and data breaches?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "query": "How does the company protect itself against hacking and data breaches?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "What could go wrong for this business and hurt future results?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "What could go wrong for this business and hurt future results?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "What could go wrong for this business and hurt future results?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Does the company have enough cash to fund operations and debt payments?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Does the company have enough cash to fund operations and debt payments?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Does the company have enough cash to fund operations and debt payments?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Is the company being sued or facing regulatory investigations?",
+      "mode": "bm25",
+      "hit": false,
+      "rr": 0.0,
+      "top_sections": [
+        "Controls and Procedures",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Is the company being sued or facing regulatory investigations?",
+      "mode": "dense",
+      "hit": false,
+      "rr": 0.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Is the company being sued or facing regulatory investigations?",
+      "mode": "hybrid",
+      "hit": false,
+      "rr": 0.0,
+      "top_sections": [
+        "Risk Factors",
+        "Business",
+        "Controls and Procedures",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "When does the company book sales from contracts with customers?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "When does the company book sales from contracts with customers?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Financial Statements",
+        "Financial Statements",
+        "MD&A",
+        "Financial Statements",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "When does the company book sales from contracts with customers?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Financial Statements",
+        "Financial Statements",
+        "MD&A",
+        "Financial Statements",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "How exposed are earnings to exchange rates and interest rate moves?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Market Risk",
+        "Market Risk",
+        "Market Risk",
+        "Market Risk",
+        "Market Risk"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "How exposed are earnings to exchange rates and interest rate moves?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Market Risk",
+        "Market Risk",
+        "MD&A",
+        "Market Risk",
+        "Market Risk"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "How exposed are earnings to exchange rates and interest rate moves?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Market Risk",
+        "Market Risk",
+        "Market Risk",
+        "Market Risk",
+        "Market Risk"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Who does the company compete with and what is its advantage?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Business",
+        "Risk Factors",
+        "Risk Factors",
+        "Business",
+        "Business"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Who does the company compete with and what is its advantage?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Who does the company compete with and what is its advantage?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Business",
+        "Business"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Did management find weaknesses in internal controls over reporting?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Did management find weaknesses in internal controls over reporting?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Did management find weaknesses in internal controls over reporting?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "How much stock did the company buy back during the period?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements",
+        "Cover",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "How much stock did the company buy back during the period?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Unregistered Sales and Repurchases",
+        "Unregistered Sales and Repurchases",
+        "Unregistered Sales and Repurchases",
+        "Unregistered Sales and Repurchases",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "How much stock did the company buy back during the period?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements",
+        "Cover",
+        "Market for Common Equity"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Why did profit margins change compared with last year?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "Financial Statements",
+        "Financial Statements",
+        "MD&A",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Why did profit margins change compared with last year?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "Why did profit margins change compared with last year?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "How does the company protect itself against hacking and data breaches?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "How does the company protect itself against hacking and data breaches?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "query": "How does the company protect itself against hacking and data breaches?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "What could go wrong for this business and hurt future results?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "What could go wrong for this business and hurt future results?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "What could go wrong for this business and hurt future results?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Does the company have enough cash to fund operations and debt payments?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "Exhibits and Financial Statement Schedules",
+        "Financial Statements",
+        "Financial Statements",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Does the company have enough cash to fund operations and debt payments?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 0.3333333333333333,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "MD&A",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Does the company have enough cash to fund operations and debt payments?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 0.5,
+      "top_sections": [
+        "Exhibits and Financial Statement Schedules",
+        "MD&A",
+        "Financial Statements",
+        "MD&A",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Is the company being sued or facing regulatory investigations?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 0.5,
+      "top_sections": [
+        "Risk Factors",
+        "Exhibits and Financial Statement Schedules",
+        "Risk Factors",
+        "Financial Statements",
+        "Exhibits and Financial Statement Schedules"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Is the company being sued or facing regulatory investigations?",
+      "mode": "dense",
+      "hit": false,
+      "rr": 0.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Is the company being sued or facing regulatory investigations?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 0.25,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Exhibits and Financial Statement Schedules",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "When does the company book sales from contracts with customers?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 0.5,
+      "top_sections": [
+        "Market Risk",
+        "Financial Statements",
+        "Financial Statements",
+        "Exhibits and Financial Statement Schedules",
+        "Financial Statements"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "When does the company book sales from contracts with customers?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Exhibits and Financial Statement Schedules",
+        "MD&A",
+        "Exhibits and Financial Statement Schedules",
+        "MD&A",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "When does the company book sales from contracts with customers?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Exhibits and Financial Statement Schedules",
+        "Exhibits and Financial Statement Schedules",
+        "MD&A",
+        "MD&A",
+        "Exhibits and Financial Statement Schedules"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "How exposed are earnings to exchange rates and interest rate moves?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Market Risk",
+        "Exhibits and Financial Statement Schedules",
+        "Risk Factors",
+        "Financial Statements",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "How exposed are earnings to exchange rates and interest rate moves?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Market Risk",
+        "Financial Statements",
+        "Financial Statements",
+        "Market Risk",
+        "Market Risk"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "How exposed are earnings to exchange rates and interest rate moves?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Market Risk",
+        "Exhibits and Financial Statement Schedules",
+        "Market Risk",
+        "Financial Statements",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Who does the company compete with and what is its advantage?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 0.3333333333333333,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "Risk Factors",
+        "Risk Factors",
+        "Business"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Who does the company compete with and what is its advantage?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Business",
+        "Risk Factors",
+        "Business",
+        "Business",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Who does the company compete with and what is its advantage?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Did management find weaknesses in internal controls over reporting?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Exhibits and Financial Statement Schedules",
+        "Exhibits and Financial Statement Schedules"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Did management find weaknesses in internal controls over reporting?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 0.5,
+      "top_sections": [
+        "Exhibits and Financial Statement Schedules",
+        "Controls and Procedures",
+        "Risk Factors",
+        "Risk Factors",
+        "Controls and Procedures"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Did management find weaknesses in internal controls over reporting?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Controls and Procedures",
+        "Controls and Procedures",
+        "Exhibits and Financial Statement Schedules",
+        "Risk Factors",
+        "Exhibits and Financial Statement Schedules"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "How much stock did the company buy back during the period?",
+      "mode": "bm25",
+      "hit": false,
+      "rr": 0.0,
+      "top_sections": [
+        "Cover",
+        "Cover",
+        "Risk Factors",
+        "Exhibits and Financial Statement Schedules",
+        "Cover"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "How much stock did the company buy back during the period?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Unregistered Sales and Repurchases",
+        "Unregistered Sales and Repurchases",
+        "Unregistered Sales and Repurchases",
+        "MD&A",
+        "Unregistered Sales and Repurchases"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "How much stock did the company buy back during the period?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Unregistered Sales and Repurchases",
+        "Unregistered Sales and Repurchases",
+        "Market for Common Equity",
+        "Financial Statements",
+        "Unregistered Sales and Repurchases"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Why did profit margins change compared with last year?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Why did profit margins change compared with last year?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "Why did profit margins change compared with last year?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A",
+        "MD&A"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "How does the company protect itself against hacking and data breaches?",
+      "mode": "bm25",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Controls and Procedures"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "How does the company protect itself against hacking and data breaches?",
+      "mode": "dense",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "query": "How does the company protect itself against hacking and data breaches?",
+      "mode": "hybrid",
+      "hit": true,
+      "rr": 1.0,
+      "top_sections": [
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Risk Factors",
+        "Controls and Procedures"
+      ]
+    }
+  ]
+}
