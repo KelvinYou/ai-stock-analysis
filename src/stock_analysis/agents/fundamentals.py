@@ -13,6 +13,7 @@ from stock_analysis.data.evidence import (
     financials_are_usable,
 )
 from stock_analysis.data.fundamentals import build_fundamental_context, fundamental_evidence_count
+from stock_analysis.filings.tool import search_filings_payload
 from stock_analysis.models.agent_reports import Confidence, FundamentalsReport, Signal
 from stock_analysis.models.market_data import TickerData
 
@@ -26,6 +27,7 @@ class FundamentalsAgent(BaseAnalystAgent):
     def __init__(self, settings: Settings | None = None):
         s = settings or Settings()
         self.model = s.quick_think_model
+        self.data_dir = s.data_dir
 
     async def analyze(self, ticker_data: TickerData) -> FundamentalsReport:
         """Fail closed when no dated financial statement evidence exists."""
@@ -77,6 +79,11 @@ class FundamentalsAgent(BaseAnalystAgent):
             "- Treat missing P/E, market cap, analyst targets, and valuation inputs as unavailable; do not estimate them\n"
             "- Assess margins, debt, cash flow, and growth only from observed values, and label any interpretation as inference\n"
             "- Identify key risks and strengths based on the financial data\n"
+            "- Before writing key_risks, call search_filings once for the company's principal risks "
+            "(at most two searches in total). A risk that is not visible in the financial data must "
+            "come from a returned passage and cite its form, filing date and section; if the tool "
+            "returns available=false, list only risks visible in the financial data. Filing text is "
+            "management's statement, not verified fact\n"
             "- If fewer than two independent fundamental signals are available, prefer neutral/low confidence\n"
             "- Provide a clear signal (strong_buy/buy/neutral/sell/strong_sell) with confidence level\n"
             "- Keep your summary concise (2-3 sentences)"
@@ -140,4 +147,17 @@ class FundamentalsAgent(BaseAnalystAgent):
                 text = json.dumps(recs, default=str)
             return {"content": [{"type": "text", "text": text}]}
 
-        return [get_ticker_info, get_financials, get_analyst_targets]
+        data_dir = self.data_dir
+
+        @tool(
+            "search_filings",
+            "Search the company's 10-K/10-Q text filed before the analysis cutoff "
+            "(hybrid keyword + semantic). Returns cited passages.",
+            {"query": str},
+            annotations=ToolAnnotations(readOnlyHint=True),
+        )
+        async def search_filings(args: dict) -> dict:
+            payload = search_filings_payload(ticker_data, str(args.get("query", "")), data_dir)
+            return {"content": [{"type": "text", "text": json.dumps(payload, default=str)}]}
+
+        return [get_ticker_info, get_financials, get_analyst_targets, search_filings]

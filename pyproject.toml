@@ -26,6 +26,11 @@ dependencies = [
 proxy = [
     "truststore>=0.9",
 ]
+# Dense half of the filing RAG (local ONNX embeddings). Without it the index
+# and search_filings run BM25-only and report mode="bm25".
+rag = [
+    "fastembed>=0.9",
+]
 dev = [
     "pytest>=8.2",
     "pytest-asyncio>=0.23",
@@ -35,6 +40,7 @@ dev = [
 [project.scripts]
 stock-analysis = "stock_analysis.main:cli"
 stock-fetch = "stock_analysis.fetch:cli"
+stock-filings = "stock_analysis.filings.cli:cli"
 stock-analysis-backtest = "stock_analysis.backtest.main:cli"
 stock-analysis-replay-build = "stock_analysis.backtest.replay_builder:cli"
 stock-analysis-worker = "stock_analysis.worker:cli"
