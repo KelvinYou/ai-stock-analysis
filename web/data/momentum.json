@@ -1,15 +1,11 @@
 {
   "session_calendar": {
     "exchange": "XNYS",
-    "library": "exchange_calendars 4.13.2",
+    "library": "exchange_calendars 4.13.3",
     "source_url": "https://www.nyse.com/trade/hours-calendars",
-    "valid_from_utc": "2026-11-04T00:00:00+00:00",
-    "valid_until_utc": "2027-01-24T00:00:00+00:00",
+    "valid_from_utc": "2026-11-05T00:00:00+00:00",
+    "valid_until_utc": "2027-01-25T00:00:00+00:00",
     "sessions": [
-      {
-        "date": "2026-11-04",
-        "close_utc": "2026-11-04T21:00:00+00:00"
-      },
       {
         "date": "2026-11-05",
         "close_utc": "2026-11-05T21:00:00+00:00"
@@ -225,7 +221,7 @@
     ]
   },
   "version": 1,
-  "generated_at_utc": "2026-11-14T07:35:30.231731+00:00",
+  "generated_at_utc": "2026-11-15T07:49:12.885983+00:00",
   "cycle_month": "2026-11",
   "strategy": {
     "id": "momentum-9-12m-top3-v2",
@@ -277,31 +273,31 @@
       },
       {
         "ticker": "UNH",
-        "score": 0.25799839768700106,
+        "score": 0.2579985162161893,
         "lookback_date": "2025-11-13",
         "target_weight": 0.3333333333333333
       },
       {
         "ticker": "COST",
-        "score": 0.20285220512303193,
+        "score": 0.202852125292871,
         "lookback_date": "2025-11-13",
         "target_weight": 0.0
       },
       {
         "ticker": "GOOGL",
-        "score": 0.06450498956285933,
+        "score": 0.06450510648356023,
         "lookback_date": "2025-11-13",
         "target_weight": 0.0
       },
       {
         "ticker": "MSFT",
-        "score": 0.049475079055279814,
+        "score": 0.04947514321501001,
         "lookback_date": "2025-11-13",
         "target_weight": 0.0
       },
       {
         "ticker": "AVGO",
-        "score": 0.028266694061010122,
+        "score": 0.028266787047454,
         "lookback_date": "2025-11-13",
         "target_weight": 0.0
       },
@@ -318,8 +314,8 @@
         "target_weight": 0.0
       }
     ],
-    "captured_at_utc": "2026-11-14T07:35:30.231731+00:00",
-    "source_sha256": "2dd5a50050807c79f27b6a7e1d5f529535078d89cfd7cb209445035da479a01b"
+    "captured_at_utc": "2026-11-15T07:49:12.885983+00:00",
+    "source_sha256": "aaf66c4ada35fce5b0846774b361b8b470615d5637ac645b333ef806ab532c4f"
   },
   "monthly": {
     "status": "available",
@@ -347,7 +343,7 @@
       },
       {
         "ticker": "V",
-        "score": 0.22350683749513278,
+        "score": 0.2235069481565013,
         "lookback_date": "2025-10-31",
         "target_weight": 0.3333333333333333
       },
@@ -389,13 +385,13 @@
       },
       {
         "ticker": "ORCL",
-        "score": -0.4957605107830819,
+        "score": -0.49576045140202285,
         "lookback_date": "2025-10-31",
         "target_weight": 0.0
       }
     ],
-    "captured_at_utc": "2026-11-14T07:35:30.231731+00:00",
-    "source_sha256": "0bdf9aa50c98e67910add87e65cef6cd311f0a1fbe2fe627220273b3e87e10ca"
+    "captured_at_utc": "2026-11-15T07:49:12.885983+00:00",
+    "source_sha256": "1bde04d88deac9eff65f6dbe8481dbecddc08f956fa39f858165031bb82f3b65"
   },
   "price_evidence": {
     "primary_source": {
@@ -442,7 +438,7 @@
         },
         "drawdown_63": -0.17923009261940714,
         "return_since_monthly_close": -0.018220751502021182,
-        "gap_pp": 16.988975794004713,
+        "gap_pp": 16.98896394108589,
         "monthly_rank": 1,
         "previous_rank": 1,
         "rank_change_monthly": 0,
@@ -461,7 +457,7 @@
         },
         "drawdown_63": -0.022956006665688533,
         "return_since_monthly_close": 0.031330823922302686,
-        "gap_pp": 1.8809335878106959,
+        "gap_pp": 1.8809217348918716,
         "monthly_rank": 2,
         "previous_rank": 2,
         "rank_change_monthly": 0,
@@ -471,12 +467,12 @@
         "ticker": "UNH",
         "close": 407.4599914550781,
         "lookback_date": "2025-11-13",
-        "lookback_close": 323.8954772949219,
+        "lookback_close": 323.89544677734375,
         "returns": {
           "d1": 0.005751207129029101,
           "m1": 0.07862129638306614,
           "m3": 0.02733662902231493,
-          "m12": 0.25799839768700106
+          "m12": 0.2579985162161893
         },
         "drawdown_63": -0.041225514326163504,
         "return_since_monthly_close": 0.0012039959527858635,
@@ -490,16 +486,16 @@
         "ticker": "COST",
         "close": 1106.2099609375,
         "lookback_date": "2025-11-13",
-        "lookback_close": 919.65576171875,
+        "lookback_close": 919.6558227539062,
         "returns": {
           "d1": 0.012818048269751303,
           "m1": 0.16049668402424833,
           "m3": 0.15178556165273438,
-          "m12": 0.20285220512303193
+          "m12": 0.202852125292871
         },
         "drawdown_63": 0.0,
         "return_since_monthly_close": 0.09279046204820252,
-        "gap_pp": -5.514619256396913,
+        "gap_pp": -5.51463909233183,
         "monthly_rank": 4,
         "previous_rank": 4,
         "rank_change_monthly": 0,
@@ -509,16 +505,16 @@
         "ticker": "GOOGL",
         "close": 295.7699890136719,
         "lookback_date": "2025-11-13",
-        "lookback_close": 277.8474426269531,
+        "lookback_close": 277.847412109375,
         "returns": {
           "d1": -0.009809250330155894,
           "m1": -0.16397198814457037,
           "m3": -0.14551304443198754,
-          "m12": 0.06450498956285933
+          "m12": 0.06450510648356023
         },
         "drawdown_63": -0.16677469082865837,
         "return_since_monthly_close": 0.05692536050689023,
-        "gap_pp": -19.349340812414173,
+        "gap_pp": -19.34934097326291,
         "monthly_rank": 7,
         "previous_rank": 5,
         "rank_change_monthly": 2,
@@ -528,16 +524,16 @@
         "ticker": "MSFT",
         "close": 523.8800048828125,
         "lookback_date": "2025-11-13",
-        "lookback_close": 499.1828918457031,
+        "lookback_close": 499.182861328125,
         "returns": {
           "d1": 0.0016826097185707045,
           "m1": -0.03601068522336037,
           "m3": 0.05632387967611696,
-          "m12": 0.049475079055279814
+          "m12": 0.04947514321501001
         },
         "drawdown_63": -0.05743070099174996,
         "return_since_monthly_close": 0.0037746581587849715,
-        "gap_pp": -20.852331863172125,
+        "gap_pp": -20.85233730011793,
         "monthly_rank": 5,
         "previous_rank": 7,
         "rank_change_monthly": -1,
@@ -547,16 +543,16 @@
         "ticker": "AVGO",
         "close": 347.010009765625,
         "lookback_date": "2025-11-13",
-        "lookback_close": 337.4708251953125,
+        "lookback_close": 337.4707946777344,
         "returns": {
           "d1": -0.04761767560506658,
           "m1": -0.028826475226962245,
           "m3": -0.1679625120003746,
-          "m12": 0.028266694061010122
+          "m12": 0.028266787047454
         },
         "drawdown_63": -0.08515289833052098,
         "return_since_monthly_close": 0.0641867764206403,
-        "gap_pp": -22.97317036259909,
+        "gap_pp": -22.97317291687353,
         "monthly_rank": 8,
         "previous_rank": 6,
         "rank_change_monthly": 1,
@@ -575,7 +571,7 @@
         },
         "drawdown_63": -0.31930278229253417,
         "return_since_monthly_close": -0.20421224301590146,
-        "gap_pp": -38.440232644470726,
+        "gap_pp": -38.44024449738955,
         "monthly_rank": 6,
         "previous_rank": 8,
         "rank_change_monthly": -2,
@@ -594,7 +590,7 @@
         },
         "drawdown_63": -0.2258577448362481,
         "return_since_monthly_close": -0.040713245346080895,
-        "gap_pp": -67.41534706379669,
+        "gap_pp": -67.41535891671552,
         "monthly_rank": 9,
         "previous_rank": 9,
         "rank_change_monthly": 0,
@@ -614,7 +610,7 @@
           },
           {
             "ticker": "GOOGL",
-            "score": 0.5984127889385997,
+            "score": 0.5984129038939519,
             "rank": 2
           },
           {
@@ -624,17 +620,17 @@
           },
           {
             "ticker": "NVDA",
-            "score": 0.26922770909695104,
+            "score": 0.2692275976354017,
             "rank": 4
           },
           {
             "ticker": "AVGO",
-            "score": 0.2544250917266355,
+            "score": 0.2544252216325966,
             "rank": 5
           },
           {
             "ticker": "V",
-            "score": 0.08705448602795318,
+            "score": 0.0870545812621446,
             "rank": 6
           },
           {
@@ -644,7 +640,7 @@
           },
           {
             "ticker": "COST",
-            "score": 0.006442275047811696,
+            "score": 0.0064423406438860464,
             "rank": 8
           },
           {
@@ -659,12 +655,12 @@
         "ranking": [
           {
             "ticker": "TSM",
-            "score": 0.6506788755347186,
+            "score": 0.6506790578107384,
             "rank": 1
           },
           {
             "ticker": "GOOGL",
-            "score": 0.41906539369460094,
+            "score": 0.41906548299748847,
             "rank": 2
           },
           {
@@ -684,7 +680,7 @@
           },
           {
             "ticker": "V",
-            "score": 0.06099873594869121,
+            "score": 0.060998640165465856,
             "rank": 6
           },
           {
@@ -714,7 +710,7 @@
           },
           {
             "ticker": "V",
-            "score": 0.22350683749513278,
+            "score": 0.2235069481565013,
             "rank": 2
           },
           {
@@ -749,7 +745,7 @@
           },
           {
             "ticker": "ORCL",
-            "score": -0.4957605107830819,
+            "score": -0.49576045140202285,
             "rank": 9
           }
         ]
@@ -779,7 +775,7 @@
           "d1": -0.003764360800556754,
           "m1": -0.030508958265932473,
           "m3": -0.0276761689663666,
-          "m12": 0.1349168148708042
+          "m12": 0.13491692825090817
         },
         "curve": [
           {
@@ -1663,7 +1659,7 @@
         "d1": -0.00831369967460147,
         "m1": -0.047661488321640966,
         "m3": -0.05035006786375329,
-        "m12": 0.08502602810807404
+        "m12": 0.08502606285984096
       },
       "curve": [
         {
