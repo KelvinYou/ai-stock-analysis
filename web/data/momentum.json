@@ -3,13 +3,9 @@
     "exchange": "XNYS",
     "library": "exchange_calendars 4.13.3",
     "source_url": "https://www.nyse.com/trade/hours-calendars",
-    "valid_from_utc": "2026-11-12T00:00:00+00:00",
-    "valid_until_utc": "2027-02-01T00:00:00+00:00",
+    "valid_from_utc": "2026-11-13T00:00:00+00:00",
+    "valid_until_utc": "2027-02-02T00:00:00+00:00",
     "sessions": [
-      {
-        "date": "2026-11-12",
-        "close_utc": "2026-11-12T21:00:00+00:00"
-      },
       {
         "date": "2026-11-13",
         "close_utc": "2026-11-13T21:00:00+00:00"
@@ -217,11 +213,15 @@
       {
         "date": "2027-01-29",
         "close_utc": "2027-01-29T21:00:00+00:00"
+      },
+      {
+        "date": "2027-02-01",
+        "close_utc": "2027-02-01T21:00:00+00:00"
       }
     ]
   },
   "version": 1,
-  "generated_at_utc": "2026-11-22T07:58:14.766246+00:00",
+  "generated_at_utc": "2026-11-23T08:58:25.352217+00:00",
   "cycle_month": "2026-11",
   "strategy": {
     "id": "momentum-9-12m-top3-v2",
@@ -273,13 +273,13 @@
       },
       {
         "ticker": "TSM",
-        "score": 0.16066003488818703,
+        "score": 0.160659905895705,
         "lookback_date": "2025-11-20",
         "target_weight": 0.3333333333333333
       },
       {
         "ticker": "UNH",
-        "score": 0.11991836090253538,
+        "score": 0.11991813565221299,
         "lookback_date": "2025-11-20",
         "target_weight": 0.0
       },
@@ -297,7 +297,7 @@
       },
       {
         "ticker": "AVGO",
-        "score": -0.11575633190854273,
+        "score": -0.1157564102939147,
         "lookback_date": "2025-11-20",
         "target_weight": 0.0
       },
@@ -314,8 +314,8 @@
         "target_weight": 0.0
       }
     ],
-    "captured_at_utc": "2026-11-22T07:58:14.766246+00:00",
-    "source_sha256": "7cee23859db96d0f4065259400b9ac4ec522d6d6579873dbac9a543f2702818b"
+    "captured_at_utc": "2026-11-23T08:58:25.352217+00:00",
+    "source_sha256": "35b813cd264a463c103cb5f635dd2080f93b3f3eb127643c3d39a3467ab9ad96"
   },
   "monthly": {
     "status": "available",
@@ -337,13 +337,13 @@
     "ranking": [
       {
         "ticker": "TSM",
-        "score": 0.3661364548591115,
+        "score": 0.3661363146187233,
         "lookback_date": "2025-10-31",
         "target_weight": 0.3333333333333333
       },
       {
         "ticker": "V",
-        "score": 0.22350672683378447,
+        "score": 0.22350683749513278,
         "lookback_date": "2025-10-31",
         "target_weight": 0.3333333333333333
       },
@@ -361,19 +361,19 @@
       },
       {
         "ticker": "MSFT",
-        "score": 0.01621081875446362,
+        "score": 0.016210697753116232,
         "lookback_date": "2025-10-31",
         "target_weight": 0.0
       },
       {
         "ticker": "NVDA",
-        "score": 0.013039077121586251,
+        "score": 0.01303900060036245,
         "lookback_date": "2025-10-31",
         "target_weight": 0.0
       },
       {
         "ticker": "GOOGL",
-        "score": -0.0022130251623071473,
+        "score": -0.0022128080192093114,
         "lookback_date": "2025-10-31",
         "target_weight": 0.0
       },
@@ -390,8 +390,8 @@
         "target_weight": 0.0
       }
     ],
-    "captured_at_utc": "2026-11-22T07:58:14.766246+00:00",
-    "source_sha256": "46622c6934a787d8d252791e0d7eca214213e9c380913262524176597fc48f27"
+    "captured_at_utc": "2026-11-23T08:58:25.352217+00:00",
+    "source_sha256": "353e23f0499af9c544103d35e7db0de7c9f45efded5dcc9b6ee38b8f1aab40c6"
   },
   "price_evidence": {
     "primary_source": {
@@ -438,7 +438,7 @@
         },
         "drawdown_63": -0.07777936907065885,
         "return_since_monthly_close": -0.026538651664312574,
-        "gap_pp": 9.032543205129006,
+        "gap_pp": 9.03255610437721,
         "monthly_rank": 2,
         "previous_rank": 2,
         "rank_change_monthly": 1,
@@ -457,7 +457,7 @@
         },
         "drawdown_63": -0.01040634791058681,
         "return_since_monthly_close": 0.08877977685642069,
-        "gap_pp": 8.04269676074405,
+        "gap_pp": 8.042709659992253,
         "monthly_rank": 4,
         "previous_rank": 3,
         "rank_change_monthly": 2,
@@ -467,12 +467,12 @@
         "ticker": "TSM",
         "close": 318.7099914550781,
         "lookback_date": "2025-11-20",
-        "lookback_close": 274.59375,
+        "lookback_close": 274.5937805175781,
         "returns": {
           "d1": -0.09480532031582822,
           "m1": -0.25023524625312865,
           "m3": -0.2318148798059524,
-          "m12": 0.16066003488818703
+          "m12": 0.160659905895705
         },
         "drawdown_63": -0.3439481279054676,
         "return_since_monthly_close": -0.21525130469727083,
@@ -486,16 +486,16 @@
         "ticker": "UNH",
         "close": 339.8500061035156,
         "lookback_date": "2025-11-20",
-        "lookback_close": 303.4596252441406,
+        "lookback_close": 303.4596862792969,
         "returns": {
           "d1": 0.028352683386878574,
           "m1": -0.1894051467167145,
           "m3": -0.11149105906465095,
-          "m12": 0.11991836090253538
+          "m12": 0.11991813565221299
         },
         "drawdown_63": -0.20031531526679547,
         "return_since_monthly_close": -0.16492614914087433,
-        "gap_pp": -4.074167398565165,
+        "gap_pp": -4.0741770243492015,
         "monthly_rank": 3,
         "previous_rank": 4,
         "rank_change_monthly": -1,
@@ -514,7 +514,7 @@
         },
         "drawdown_63": -0.1265635676067015,
         "return_since_monthly_close": -0.069847264381241,
-        "gap_pp": -13.953718217722644,
+        "gap_pp": -13.95370531847444,
         "monthly_rank": 5,
         "previous_rank": 5,
         "rank_change_monthly": 0,
@@ -533,7 +533,7 @@
         },
         "drawdown_63": -0.2526410467571387,
         "return_since_monthly_close": -0.0519939536284173,
-        "gap_pp": -24.174515284047835,
+        "gap_pp": -24.174502384799634,
         "monthly_rank": 7,
         "previous_rank": 7,
         "rank_change_monthly": 1,
@@ -543,16 +543,16 @@
         "ticker": "AVGO",
         "close": 304.4100036621094,
         "lookback_date": "2025-11-20",
-        "lookback_close": 344.26031494140625,
+        "lookback_close": 344.2603454589844,
         "returns": {
           "d1": -0.1218519860900058,
           "m1": -0.08960131558628026,
           "m3": -0.16225496359113534,
-          "m12": -0.11575633190854273
+          "m12": -0.1157564102939147
         },
         "drawdown_63": -0.19149558905060027,
         "return_since_monthly_close": -0.06645603472310546,
-        "gap_pp": -27.641636679672978,
+        "gap_pp": -27.64163161896197,
         "monthly_rank": 8,
         "previous_rank": 6,
         "rank_change_monthly": 1,
@@ -571,7 +571,7 @@
         },
         "drawdown_63": -0.47529679026493876,
         "return_since_monthly_close": -0.38658131766175763,
-        "gap_pp": -46.407706813287334,
+        "gap_pp": -46.40769391403913,
         "monthly_rank": 6,
         "previous_rank": 8,
         "rank_change_monthly": -2,
@@ -590,7 +590,7 @@
         },
         "drawdown_63": -0.3750661536211475,
         "return_since_monthly_close": -0.22560646009517737,
-        "gap_pp": -67.39549475426084,
+        "gap_pp": -67.39548185501263,
         "monthly_rank": 9,
         "previous_rank": 9,
         "rank_change_monthly": 0,
@@ -605,12 +605,12 @@
         "ranking": [
           {
             "ticker": "TSM",
-            "score": 0.8188297228329711,
+            "score": 0.8188298446996178,
             "rank": 1
           },
           {
             "ticker": "GOOGL",
-            "score": 0.5984129038939519,
+            "score": 0.5984127889385997,
             "rank": 2
           },
           {
@@ -620,7 +620,7 @@
           },
           {
             "ticker": "NVDA",
-            "score": 0.26922748617387193,
+            "score": 0.26922770909695104,
             "rank": 4
           },
           {
@@ -630,7 +630,7 @@
           },
           {
             "ticker": "V",
-            "score": 0.0870545812621446,
+            "score": 0.08705448602795318,
             "rank": 6
           },
           {
@@ -645,7 +645,7 @@
           },
           {
             "ticker": "ORCL",
-            "score": -0.3330402241795255,
+            "score": -0.3330402698659014,
             "rank": 9
           }
         ]
@@ -655,7 +655,7 @@
         "ranking": [
           {
             "ticker": "TSM",
-            "score": 0.6506790578107384,
+            "score": 0.6506788755347186,
             "rank": 1
           },
           {
@@ -670,12 +670,12 @@
           },
           {
             "ticker": "UNH",
-            "score": 0.09138261115728419,
+            "score": 0.09138251213261994,
             "rank": 4
           },
           {
             "ticker": "AVGO",
-            "score": 0.07241742946222351,
+            "score": 0.07241732952308344,
             "rank": 5
           },
           {
@@ -695,7 +695,7 @@
           },
           {
             "ticker": "ORCL",
-            "score": -0.5062405798126355,
+            "score": -0.5062405254233143,
             "rank": 9
           }
         ]
@@ -705,12 +705,12 @@
         "ranking": [
           {
             "ticker": "TSM",
-            "score": 0.3661364548591115,
+            "score": 0.3661363146187233,
             "rank": 1
           },
           {
             "ticker": "V",
-            "score": 0.22350672683378447,
+            "score": 0.22350683749513278,
             "rank": 2
           },
           {
@@ -725,17 +725,17 @@
           },
           {
             "ticker": "MSFT",
-            "score": 0.01621081875446362,
+            "score": 0.016210697753116232,
             "rank": 5
           },
           {
             "ticker": "NVDA",
-            "score": 0.013039077121586251,
+            "score": 0.01303900060036245,
             "rank": 6
           },
           {
             "ticker": "GOOGL",
-            "score": -0.0022130251623071473,
+            "score": -0.0022128080192093114,
             "rank": 7
           },
           {
@@ -775,7 +775,7 @@
           "d1": -0.034148464924241506,
           "m1": -0.10082061544474452,
           "m3": -0.09106266810674091,
-          "m12": 0.07150639619946975
+          "m12": 0.07150628593726371
         },
         "curve": [
           {
@@ -1659,7 +1659,7 @@
         "d1": -0.05124974903149346,
         "m1": -0.15392677350352182,
         "m3": -0.1266353860742932,
-        "m12": -0.024419964202572666
+        "m12": -0.024420012272370045
       },
       "curve": [
         {
