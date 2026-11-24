@@ -6,9 +6,9 @@
     "industry": "Specialty Industrial Machinery",
     "market": "US",
     "currency": "USD",
-    "market_cap": 130668085248.0,
-    "pe_ratio": 33.6004,
-    "forward_pe": 20.3934,
+    "market_cap": 123993661440.0,
+    "pe_ratio": 31.884115,
+    "forward_pe": 19.35172,
     "dividend_yield": 1.31,
     "beta": 1.139,
     "fifty_two_week_high": 478.0,
@@ -39,59 +39,130 @@
         "source": "yahoo_current_provider",
         "fiscal_period_end": "2026-09-30",
         "frequency": "quarter",
-        "observed_at": "2026-11-24T07:01:51.783523+00:00"
+        "observed_at": "2026-11-24T20:25:26.314387+00:00"
       },
       "net_income": {
         "source": "yahoo_current_provider",
         "fiscal_period_end": "2026-09-30",
         "frequency": "quarter",
-        "observed_at": "2026-11-24T07:01:51.783523+00:00"
+        "observed_at": "2026-11-24T20:25:26.314387+00:00"
       },
       "total_debt": {
         "source": "yahoo_current_provider",
         "fiscal_period_end": "2026-09-30",
         "frequency": "quarter",
-        "observed_at": "2026-11-24T07:01:51.783523+00:00"
+        "observed_at": "2026-11-24T20:25:26.314387+00:00"
       },
       "total_equity": {
         "source": "yahoo_current_provider",
         "fiscal_period_end": "2026-09-30",
         "frequency": "quarter",
-        "observed_at": "2026-11-24T07:01:51.783523+00:00"
+        "observed_at": "2026-11-24T20:25:26.314387+00:00"
       },
       "free_cash_flow": {
         "source": "yahoo_current_provider",
         "fiscal_period_end": "2026-09-30",
         "frequency": "quarter",
-        "observed_at": "2026-11-24T07:01:51.783523+00:00"
+        "observed_at": "2026-11-24T20:25:26.314387+00:00"
       },
       "diluted_eps": {
         "source": "yahoo_current_provider",
         "fiscal_period_end": "2026-09-30",
         "frequency": "quarter",
-        "observed_at": "2026-11-24T07:01:51.783523+00:00"
+        "observed_at": "2026-11-24T20:25:26.314387+00:00"
       },
       "gross_margin": {
         "source": "yahoo_current_provider",
         "fiscal_period_end": "2026-09-30",
         "frequency": "quarter",
-        "observed_at": "2026-11-24T07:01:51.783523+00:00"
+        "observed_at": "2026-11-24T20:25:26.314387+00:00"
       },
       "operating_margin": {
         "source": "yahoo_current_provider",
         "fiscal_period_end": "2026-09-30",
         "frequency": "quarter",
-        "observed_at": "2026-11-24T07:01:51.783523+00:00"
+        "observed_at": "2026-11-24T20:25:26.314387+00:00"
       },
       "net_margin": {
         "source": "yahoo_current_provider",
         "fiscal_period_end": "2026-09-30",
         "frequency": "quarter",
-        "observed_at": "2026-11-24T07:01:51.783523+00:00"
+        "observed_at": "2026-11-24T20:25:26.314387+00:00"
       }
     }
   },
   "financial_history": [
+    {
+      "revenue": 7028000000.0,
+      "net_income": 982000000.0,
+      "total_debt": 11583000000.0,
+      "total_equity": 18606000000.0,
+      "free_cash_flow": 716000000.0,
+      "gross_margin": 0.3695219123505976,
+      "operating_margin": 0.17871371656232213,
+      "net_margin": 0.13972680705748436,
+      "fiscal_period_end": "2025-06-30",
+      "available_as_of": "2026-11-24",
+      "availability_source": "yahoo_current_provider_observed_at_capture",
+      "fiscal_period_start": null,
+      "period_kind": "quarter",
+      "currency": "USD",
+      "debt_scope": "reported_total",
+      "diluted_eps": null,
+      "diluted_eps_currency": "USD",
+      "shares_outstanding": null,
+      "share_basis": null,
+      "fact_provenance": {
+        "revenue": {
+          "source": "yahoo_current_provider",
+          "fiscal_period_end": "2025-06-30",
+          "frequency": "quarter",
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
+        },
+        "net_income": {
+          "source": "yahoo_current_provider",
+          "fiscal_period_end": "2025-06-30",
+          "frequency": "quarter",
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
+        },
+        "total_debt": {
+          "source": "yahoo_current_provider",
+          "fiscal_period_end": "2025-06-30",
+          "frequency": "quarter",
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
+        },
+        "total_equity": {
+          "source": "yahoo_current_provider",
+          "fiscal_period_end": "2025-06-30",
+          "frequency": "quarter",
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
+        },
+        "free_cash_flow": {
+          "source": "yahoo_current_provider",
+          "fiscal_period_end": "2025-06-30",
+          "frequency": "quarter",
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
+        },
+        "gross_margin": {
+          "source": "yahoo_current_provider",
+          "fiscal_period_end": "2025-06-30",
+          "frequency": "quarter",
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
+        },
+        "operating_margin": {
+          "source": "yahoo_current_provider",
+          "fiscal_period_end": "2025-06-30",
+          "frequency": "quarter",
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
+        },
+        "net_margin": {
+          "source": "yahoo_current_provider",
+          "fiscal_period_end": "2025-06-30",
+          "frequency": "quarter",
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
+        }
+      }
+    },
     {
       "revenue": 6988000000.0,
       "net_income": 1010000000.0,
@@ -104,7 +175,7 @@
       "fiscal_period_end": "2025-09-30",
       "available_as_of": "2026-11-24",
       "availability_source": "yahoo_current_provider_observed_at_capture",
-      "fiscal_period_start": null,
+      "fiscal_period_start": "2025-07-01",
       "period_kind": "quarter",
       "currency": "USD",
       "debt_scope": "reported_total",
@@ -117,55 +188,55 @@
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "net_income": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "total_debt": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "total_equity": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "free_cash_flow": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "diluted_eps": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "gross_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "operating_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "net_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         }
       }
     },
@@ -194,55 +265,55 @@
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-12-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "net_income": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-12-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "total_debt": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-12-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "total_equity": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-12-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "free_cash_flow": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-12-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "diluted_eps": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-12-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "gross_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-12-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "operating_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-12-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "net_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2025-12-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         }
       }
     },
@@ -271,132 +342,84 @@
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-03-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "net_income": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-03-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "total_debt": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-03-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "total_equity": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-03-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "free_cash_flow": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-03-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "diluted_eps": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-03-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "gross_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-03-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "operating_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-03-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "net_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-03-31",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         }
       }
     },
     {
-      "revenue": 8531000000.0,
-      "net_income": 821000000.0,
-      "total_debt": 21326000000.0,
-      "total_equity": 20254000000.0,
-      "free_cash_flow": 874000000.0,
-      "gross_margin": 0.33466182159184155,
-      "operating_margin": 0.16316961669206423,
-      "net_margin": 0.09623725237369593,
+      "revenue": null,
+      "net_income": null,
+      "total_debt": null,
+      "total_equity": null,
+      "free_cash_flow": null,
+      "gross_margin": null,
+      "operating_margin": null,
+      "net_margin": null,
       "fiscal_period_end": "2026-06-30",
       "available_as_of": "2026-11-24",
       "availability_source": "yahoo_current_provider_observed_at_capture",
       "fiscal_period_start": "2026-04-01",
       "period_kind": "quarter",
       "currency": "USD",
-      "debt_scope": "reported_total",
+      "debt_scope": "unavailable",
       "diluted_eps": 2.11,
       "diluted_eps_currency": "USD",
       "shares_outstanding": null,
       "share_basis": null,
       "fact_provenance": {
-        "revenue": {
-          "source": "yahoo_current_provider",
-          "fiscal_period_end": "2026-06-30",
-          "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
-        },
-        "net_income": {
-          "source": "yahoo_current_provider",
-          "fiscal_period_end": "2026-06-30",
-          "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
-        },
-        "total_debt": {
-          "source": "yahoo_current_provider",
-          "fiscal_period_end": "2026-06-30",
-          "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
-        },
-        "total_equity": {
-          "source": "yahoo_current_provider",
-          "fiscal_period_end": "2026-06-30",
-          "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
-        },
-        "free_cash_flow": {
-          "source": "yahoo_current_provider",
-          "fiscal_period_end": "2026-06-30",
-          "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
-        },
         "diluted_eps": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-06-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
-        },
-        "gross_margin": {
-          "source": "yahoo_current_provider",
-          "fiscal_period_end": "2026-06-30",
-          "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
-        },
-        "operating_margin": {
-          "source": "yahoo_current_provider",
-          "fiscal_period_end": "2026-06-30",
-          "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
-        },
-        "net_margin": {
-          "source": "yahoo_current_provider",
-          "fiscal_period_end": "2026-06-30",
-          "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         }
       }
     },
@@ -425,62 +448,62 @@
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "net_income": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "total_debt": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "total_equity": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "free_cash_flow": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "diluted_eps": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "gross_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "operating_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         },
         "net_margin": {
           "source": "yahoo_current_provider",
           "fiscal_period_end": "2026-09-30",
           "frequency": "quarter",
-          "observed_at": "2026-11-24T07:01:51.783523+00:00"
+          "observed_at": "2026-11-24T20:25:26.314387+00:00"
         }
       }
     }
   ],
   "valuation_price": {
-    "price": 336.3399963378906,
-    "price_date": "2026-11-23",
+    "price": 319.1400146484375,
+    "price_date": "2026-11-24",
     "available_as_of": "2026-11-24",
     "currency": "USD",
     "share_basis": "yahoo-listed:ETN",
@@ -527,6 +550,30 @@
   ],
   "news_headlines": [
     {
+      "title": "What Triggered The Move In Eaton Stock?",
+      "link": "https://www.trefis.com/stock/etn/articles/628633/what-triggered-the-move-in-eaton-stock/2026-11-24",
+      "publisher": "Trefis",
+      "published_at": "2026-11-24T18:32:19+00:00"
+    },
+    {
+      "title": "Can Eaton's Solid Order Backlog Sustain Its Growth Momentum?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/eatons-solid-order-backlog-sustain-165600161.html",
+      "publisher": "Zacks",
+      "published_at": "2026-11-24T16:56:00+00:00"
+    },
+    {
+      "title": "Is Buying Vertiv Stock Now Too Early?",
+      "link": "https://www.trefis.com/stock/vrt/articles/628475/is-buying-vertiv-stock-now-too-early/2026-11-24",
+      "publisher": "Trefis",
+      "published_at": "2026-11-24T11:58:08+00:00"
+    },
+    {
+      "title": "Nvidia Slides Premarket: Here Are the Other Stocks Getting Hit",
+      "link": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-24-2026/card/nvidia-slides-premarket-here-are-the-other-stocks-getting-hit-2R0qWbxfvCRdzfMv9ASw?siteid=yhoof2&yptr=yahoo",
+      "publisher": "The Wall Street Journal",
+      "published_at": "2026-11-24T11:46:56+00:00"
+    },
+    {
       "title": "Baird Just Downgraded Vertiv With a $200 Target, and It\u2019s Not About Earnings",
       "link": "https://www.tikr.com/blog/baird-just-downgraded-vertiv-with-a-200-target-and-its-not-about-earnings?ref=yahoofinance&tlnk=yf-261123-g87p3x5x",
       "publisher": "TIKR",
@@ -561,33 +608,9 @@
       "link": "https://finance.yahoo.com/technology/ai/articles/nvts-modular-cooling-solutions-capture-115200356.html",
       "publisher": "Zacks",
       "published_at": "2026-11-23T11:52:00+00:00"
-    },
-    {
-      "title": "3 Stocks Riding The AI Data Center Power Buildout",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-riding-ai-data-160704018.html",
-      "publisher": "Simply Wall St.",
-      "published_at": "2026-11-22T16:07:04+00:00"
-    },
-    {
-      "title": "Could Honeywell Be The Value Stock For Your Portfolio?",
-      "link": "https://www.trefis.com/stock/hon/articles/627213/could-honeywell-be-the-value-stock-for-your-portfolio/2026-11-20",
-      "publisher": "Trefis",
-      "published_at": "2026-11-20T18:53:21+00:00"
-    },
-    {
-      "title": "Senate Passes Landmark Permitting Bill. Here\u2019s Who Could Benefit.",
-      "link": "https://www.barrons.com/articles/senate-permitting-bill-energy-utility-stocks-d6da279b?siteid=yhoof2&yptr=yahoo",
-      "publisher": "Barrons.com",
-      "published_at": "2026-11-20T15:20:00+00:00"
-    },
-    {
-      "title": "Prediction: These Will Be the Best-Performing Industrial Stocks of 2027",
-      "link": "https://www.fool.com/investing/2026/11/20/prediction-these-will-be-the-best-performing-industrial-stocks-of-2027/",
-      "publisher": "Motley Fool",
-      "published_at": "2026-11-20T15:05:02+00:00"
     }
   ],
   "provider_capture": "current",
   "news_max_age_days": null,
-  "fetched_at": "2026-11-24T07:01:51.783523Z"
+  "fetched_at": "2026-11-24T20:25:26.314387Z"
 }
