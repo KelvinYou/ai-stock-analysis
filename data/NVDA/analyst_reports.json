@@ -2,72 +2,67 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Unavailable: deterministic context lacks validated same-share-basis TTM EPS and P/E. Provider metadata is not accepted as proof of a valuation discount; no earnings multiple is estimated.",
-    "margin_analysis": "Latest verified issuer quarter ended July26: GAAP gross margin75.0%, operating income$63.734bn. Fresh provider period label July31 is normalized, not the issuer fiscal end.",
-    "debt_analysis": "Fresh provider reported total debt$38.351bn and equity$228.984bn for the July quarter. Complete current maturity and liquidity assessment remains unavailable.",
-    "growth_outlook": "Aug26 issuer release reports revenue$96.221bn,+106%YoY,+18%QoQ; Q3 revenue$108bn is guidance, not achieved revenue. No newer earnings disclosure established by Oct30 search.",
+    "pe_assessment": "Same-basis P/E is unavailable: the pipeline has no common share-basis trailing EPS. Provider trailing 19.73x and forward 9.79x are unauthenticated and use an older financial snapshot; neither proves cheapness. Do not annualize the latest quarter.",
+    "margin_analysis": "Official Nov17 release for Oct25 quarter reports gross margin 74.8%; Q4 guide is 71\u201372%. Inference: demand remains strong, but the guided margin step-down needs explanation. Source: https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+    "debt_analysis": "Frozen provider July31 debt $38.351B/equity $228.984B is 110 days old and is superseded for current balance-sheet interpretation by the official Oct25 release: long-term debt $32.371B and equity $266.666B. Long-term debt is a partial category; cash and marketable debt securities are separate from equity investments.",
+    "growth_outlook": "Official Oct25-quarter revenue $115.844B grew 103% YoY; GAAP EPS $2.70. Q4 revenue guide $130B +/-3% includes an extra week and assumes no China Data Center compute revenue. Source: same Nov17 release; guidance is management expectation, not delivered revenue.",
     "key_risks": [
-      "Fresh daily price does not refresh the 91-day-old provider statement period.",
-      "Provider quarterly FCF$21.4bn remains below prior-quarter$48.587bn; conversion must be monitored.",
-      "AI-customer concentration and missing validated valuation limit purchase conviction."
+      "Guided gross margin decline from 74.8% to 71\u201372%; current same-basis valuation unavailable.",
+      "Management identifies competition and demand/capacity estimation risks: 10-Q filed 2026-05-20 Risk Factors and 10-K filed 2026-02-25 Risk Factors. These are management statements.",
+      "Provider financials remain July31 despite fresh capture, so they do not fully represent the newly reported quarter."
     ],
     "key_strengths": [
-      "Realized revenue and operating-profit expansion.",
-      "High gross margin and positive provider cash generation."
+      "Latest official earnings show continued strong demand and profitability.",
+      "Provider history shows five increasing quarterly revenue observations, although its exact-period YoY growth is unavailable."
     ],
-    "summary": "Rechecking current evidence preserves a conditional fundamental Buy based on realized growth and profitability, without asserting cheapness. Statement freshness and cash conversion remain material limits; a market decline supplies no new operating evidence."
+    "summary": "Fundamentals lean buy at medium confidence on observed operating strength, independently of price momentum. The latest official earnings supersede the provider July quarter, but margin guidance and unavailable same-basis valuation prevent a strong-buy conclusion."
   },
   "sentiment": {
     "signal": "neutral",
     "confidence": "medium",
     "news_tone": "mixed",
-    "news_summary": "Oct 27 Oracle availability and expansion announcement remains supportive; Oct 28 official release schedules earnings Nov 17. New Oct 29 Amazon release combines AWS 39.3% growth with TTM FCF negative $42.4 bn and approximately $220 bn capex guidance. Provider 0 m ratings remain 10 strong buy,49 buy,2 hold,1 sell; this is not evidence of fresh rating changes.",
+    "news_summary": "Reuters on November 17 reported a forecast above estimates alongside the first report after the CEO exit. The issuer reports $115.8 billion quarterly revenue and 103% growth; aggregate recommendations have shifted from 49 buys and 2 holds last month to 36 buys and 14 holds now, excluding strong buys. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=11, buy=36, hold=14, sell=2, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.investing.com/news/stock-market-news/nvidia-forecasts-quarterly-revenue-above-estimates-in-first-report-since-huangs-exit-as-ceo-5034097; https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
     "key_themes": [
-      "Deployment opportunity",
-      "AI customer cash conversion",
-      "Upcoming verified earnings date",
-      "Demand read-through is inference"
+      "Beat and raised outlook",
+      "Interim leadership",
+      "Governance and export-control uncertainty"
     ],
     "notable_headlines": [
-      "2026-10-27 | NVIDIA | NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure",
-      "2026-10-28 | NVIDIA | NVIDIA Sets Conference Call for Third-Quarter Financial Results",
-      "2026-10-29 | Amazon | Amazon.com Announces Third Quarter Results",
-      "2026-10-28 | Microsoft | Microsoft announces first quarter results",
-      "2026-10-29 | Associated Press | How major US stock indexes fared Thursday 10/29/2026",
-      "2026-10-29 | Associated Press | A historic drop for Alphabet stock drags the US market lower",
-      "2026-10-29 | Associated Press | Amazon offers cautious view after disappointing3Q results but delivers strong cloud growth"
+      "Nvidia forecasts quarterly revenue above estimates in first report since Huang\u2019s exit as CEO"
     ],
     "social_sentiment": null,
-    "summary": "Positive deployment news now coexists with greater scrutiny of customer cash returns. Amazon and Microsoft cloud growth can support an AI-demand scenario, while cash burn can pressure sector sentiment; neither proves a change in NVIDIA orders, so the updated sentiment signal is neutral rather than repeating the prior positive call."
+    "summary": "Strong results and an above-consensus outlook offset unresolved leadership and regulatory concerns. The source evidence supports mixed sentiment, not treating the earnings beat as resolution of the governance shock."
   },
   "technical": {
-    "signal": "neutral",
-    "confidence": "medium",
-    "trend": "Short-term correction with the longer-term 200-day reference still below price.",
-    "rsi_14": 34.6562,
-    "rsi_assessment": "RSI 34.6562 is weak but not conventionally oversold; it does not demonstrate a reversal.",
-    "macd_assessment": "MACD line -2.8256, signal -1.7909, histogram -1.0348; histogram is negative (weak momentum), not an independent price forecast.",
-    "volume_assessment": "Completed-bar volume 76216000 is 0.7672x its 20-bar average; interpret alongside trend and volatility.",
+    "signal": "sell",
+    "confidence": "high",
+    "trend": "Strong downtrend; below SMA20/50/200 with lower highs and lower lows.",
+    "rsi_14": 16.3144,
+    "rsi_assessment": "Extremely oversold at 16.31; this raises rebound risk but does not confirm a bottom.",
+    "macd_assessment": "MACD line -16.1525, histogram -3.9979: bearish momentum remains substantial.",
+    "volume_assessment": "Latest volume 1.69x its 20-bar average during a declining session; no observed trend reversal.",
     "support_levels": [
-      207.0184,
-      210.18
+      148.8,
+      150.33
     ],
     "resistance_levels": [
-      243.37
+      163.2,
+      170.0
     ],
-    "summary": "The close of 213.66 remains 3.72% below its 50-day average but 4.74% above its 200-day average, leaving mixed trend evidence. Negative MACD and a 7.45% twenty-bar loss outweigh a small five-bar bounce for timing; below-average volume does not confirm capitulation."
+    "summary": "Price is 23.64% below SMA200 and lost 28.18% over 20 bars, with exceptionally weak RSI and elevated selling volume. Treat the oversold reading as two-sided volatility risk, not an entry confirmation; the observed 148.80 low and recent 163.20/170.00 highs frame the immediate test."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "medium",
-    "fed_impact": "Inference: a held 3.75%-4.00% US policy range maintains a discount-rate and funding hurdle for semiconductor growth investment; no new easing was announced.",
-    "interest_rate_outlook": "Observed: the Fed held 3.75%-4.00% on 2026-10-28, with two members preferring a 25bp increase and inflation described as elevated. The latest verified BNM OPR is 2.75%, dated 2026-09-03 and checked as current on 2026-10-30. No next policy move is assumed.",
-    "fx_impact": "Observed BNM reference USD/MYR fell from 4.0818 on 2026-10-28 to 4.0664 on 2026-10-29. Inference: the stronger MYR reduces MYR translation of an unchanged USD-denominated holding over this observation interval; it does not prove a durable FX trend or a change in the underlying stock value.",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
     "sector_macro_factors": [
-      "Inference: semiconductor demand and customer investment can be rate-sensitive, but the supplied macro envelope establishes no new sector-demand change."
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow."
     ],
     "geopolitical_risks": [],
-    "summary": "The dated Fed hold and BNM OPR establish the current rate backdrop without a new policy easing or tightening event. The one-day MYR strengthening changes translation of USD exposure but supplies no durable directional stock signal; sector transmission remains conditional inference."
+    "summary": "Technology: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
   },
   "pipeline_mode": "in-session"
 }

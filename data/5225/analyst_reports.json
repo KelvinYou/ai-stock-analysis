@@ -1,68 +1,91 @@
 {
   "fundamentals": {
-    "signal": "buy",
+    "signal": "neutral",
     "confidence": "medium",
-    "pe_assessment": "Frozen October 6 snapshot: trailing P/E 30.38 x, forward P/E 27.05 x (vendor estimate), dividend yield 1.42% (vendor reported). Inference: coregrowth supports valuation despite premium; EPS/MFRS129 exceptional items are not treated as fully recurring.",
-    "margin_analysis": "Q2owners profit RM573 m +29%; excluding exceptional items RM569 m +36%, H1ex-EIprofit RM1.028 bn +22%. Q2EBITDA RM1.607 bn/revenue 7.046 bn=22.81%; excluding MFRS129 revenue growth 7%/EBITDA14% confirms underlying improvement beyond Turkish accounting.",
-    "debt_analysis": "Borrowings RM12.896 bn plus overdraft RM80 m; cash RM1.412 bn gives net debt RM11.564 bn excluding leases RM2.205 bn. H1CFO2.403 bn vs 2.481 bn; PP&E1.521 bn/intangibles 99 m/investment property 12 m givespre-financing FCF771 m. After paid finance cost 359 m/lease 271 m, surplus 141 m is positive but does not cover owners dividend 486 m.",
-    "growth_outlook": "Inference: core profit growth and EBITDA expansion support a constructive return thesis at 30.38 x trailing/27.05 x forward earnings; high valuation still needs continued delivery. Capacity expansion/acquisitions are observed, not guaranteed growth.",
+    "pe_assessment": "Provider-reported trailing P/E is 29.58 and forward P/E 25.98 at a close of MYR 7.69 (2026-11-11); provider market cap is MYR 67.95b. These are provider current-metadata figures only. The deterministic same-basis P/E could not be computed: share_basis is null on the quarterly EPS records, so no authenticated TTM EPS exists (the 2025-03-31 and 2025-06-30 quarters also lack usable EPS). Inference: a roughly 26-30x multiple is demanding against single-digit net margins, but no sector average is available and none is assumed. Valuation is an evidence gap, not a negative finding.",
+    "margin_analysis": "Latest quarter (Apr-Jun 2026, ended 2026-06-30): gross margin 72.3%, operating margin 15.2%, net margin 8.1% (net income MYR 573m on revenue MYR 7,046m). The year-ago quarter (ended 2025-06-30) was 71.2% / 14.2% / 7.0%, so operating and net margins are higher year on year, comparable-period basis. Quarterly net margin over the last six periods ranged about 7.0%-9.4% with no clean trend. Inference: margins are improving modestly but stay within a stable band.",
+    "debt_analysis": "Reported total debt (debt_scope=reported_total) is MYR 15,181m against total equity of MYR 31,305m at 2026-06-30, a debt-to-equity ratio of about 0.48 (computed). Debt was broadly flat across the last five balance sheets (MYR 15.15b-15.54b) while equity rose from MYR 30.46b (Jun 2025) to MYR 31.31b. Quarterly free cash flow was MYR 610m in the latest quarter but volatile: 181m, 965m, 586m, 173m, 610m across the last five quarters. Context from the prior pipeline briefing (2026-10-07, not independently verified here): H1 cash was only RM141m after finance and lease costs, which is a caution on cash conversion. Interest cover cannot be computed from the supplied data.",
+    "growth_outlook": "Comparable-quarter growth (Apr-Jun 2026 vs Apr-Jun 2025): revenue +11.9% (MYR 7,046m vs 6,298m) and net income +29.3% (MYR 573m vs 443m). This is one comparable year-ago pair, so it is not a multi-period trend. EPS growth cannot be assessed (no year-ago diluted EPS); latest quarterly diluted EPS is MYR 0.0648 and is not annualized. Per the prior briefing (not verified here), H1 ex-exceptional profit was up about 22%. External context supplied with the task (unverified): Phillip Capital Buy, TP RM11.03, with 2H26 earnings expected higher; news found nothing newer than May 2026. The 3Q26 result is not yet released (expected late Nov 2026), so the latest statement is 134 days old as of the cutoff. Analyst consensus counts are 5 strong buy, 17 buy, 0 hold, 0 sell, 0 strong sell, up from 16 buy and 2 hold three months ago.",
     "key_risks": [
-      "Capital intensity and working capital reduce cash conversion; dividends exceed conservative post-lease/interest H1cash.",
-      "Borrowings/leases, Turkish hyperinflation andcurrency accounting; premium valuation."
+      "Valuation is demanding on provider figures (trailing P/E about 29.6, forward about 26.0) and cannot be confirmed on a same-basis EPS; the thesis relies on continued earnings growth.",
+      "Weak cash conversion: quarterly free cash flow is volatile (MYR 173m-965m over five quarters), and the prior briefing noted only RM141m H1 cash after finance and lease costs (unverified here).",
+      "Financial evidence is stale for the cutoff: latest statement ended 2026-06-30 (134 days old) and 3Q26 results are not yet released, so a near-term print could change the picture either way.",
+      "Total debt of about MYR 15.2b is sizable, although leverage is moderate (about 0.48x equity) and has been flat.",
+      "Evidence gaps: no filing text index exists, so no management-stated principal risks could be cited; this is a data limitation, not evidence of absence of risk.",
+      "Price is below the 20, 50 and 200-day moving averages with RSI 25.5, which is a technical matter outside fundamentals but signals the market is not currently rewarding the earnings improvement."
     ],
     "key_strengths": [
-      "Q2/H1ex-EIowners profit grew 36%/22%.",
-      "Underlying EBITDA growth outruns underlying revenue growth; positivepre/post financing cashsurplus."
+      "Comparable-quarter earnings momentum: net income +29.3% and revenue +11.9% year on year in Apr-Jun 2026.",
+      "High gross margin of 72.3% with operating margin up from 14.2% to 15.2% year on year.",
+      "Moderate leverage: total debt about 0.48x equity, with equity growing across the last five reported balance sheets.",
+      "Strong sell-side positioning: 22 of 22 recommendations are buy or strong buy, with no holds or sells.",
+      "Low beta (0.156, provider-reported), consistent with a defensive healthcare operator."
     ],
-    "summary": "IHH has a positive fundamental return thesis supported by core earnings growth and improving underlying operating performance. Buy/medium incorporates its premium valuation, leveraged capital structure and thin post-lease/interest cash coverage of H1dividends."
+    "summary": "Operating fundamentals are improving (Apr-Jun 2026 revenue +11.9%, net income +29.3% year on year, margins higher, debt about 0.48x equity), but valuation rests on provider-reported P/E of about 29.6 that could not be verified on a same-basis EPS, and cash conversion is uneven. With no filing evidence, a 134-day-old statement and 3Q26 results pending in late November, neutral is the appropriate signal at medium confidence."
   },
   "sentiment": {
-    "signal": "neutral",
-    "confidence": "low",
+    "signal": "buy",
+    "confidence": "medium",
     "news_tone": "mixed",
-    "news_summary": "IHH issuer media archive records August 27 double-digit second-quarter growth, September 24 NTK Japan High Court appeal statement and September 28 Fortis forensic-audit statement. Legal and governance updates counter an exclusively bullish healthcare-growth narrative; linked statements were inaccessible, so no legal conclusions are inferred. Yahoo recommendations fetched 2026-10-07T11:50:26.470648, period 0m: strong buy 5, buy 17, hold 1, sell 0, strong sell 0. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "news_summary": "Yahoo provided no headlines, so this uses supplemental web search (not point-in-time tool data). Recent items: RHB (4 Nov 2026) kept BUY but cut TP to RM9.21 from RM9.54 ahead of 3Q26, expecting core earnings +29% YoY; ~380 job cuts announced 4 Nov 2026 across Singapore, Hong Kong and Malaysia (cost consolidation); Gleneagles Johor expansion via Afiniti Wellness acquisition (19 Oct 2026, ~350 beds); Kenanga upgrade to outperform, TP RM9.10 (23 Sep 2026) and Macquarie outperform, TP RM11.10 (22 Sep 2026); IHH appealed Tokyo District Court Fortis ruling (24 Sep 2026); 2Q PATMI reported up ~30% (27 Aug 2026). Observed events are mostly operational recovery and broker support; the Fortis legal dispute and the TP cut are the negatives. No 3Q26 results seen as of the cutoff.",
     "key_themes": [
-      "Hospital growth",
-      "Fortis audit",
-      "Japan appeal"
+      "Broker consensus unanimously Buy (22 of 22)",
+      "Singapore recovery and earnings momentum",
+      "Capacity expansion (Johor, Fortis 51% / bed targets)",
+      "Cost consolidation via job cuts",
+      "Fortis legal dispute overhang",
+      "Target prices being trimmed pre-3Q"
     ],
     "notable_headlines": [
-      "2026-09-28 | issuer/issuer-hosted evidence | IHH issuer media archive records August 27 double-digit second-quarter growth, September 24 NTK Japan High Court appeal statement and September 28 Fortis forensic-audit statement. | https://ihhmy.listedcompany.com/media_releases.html"
+      "RHB keeps BUY, cuts TP to RM9.21 from RM9.54 ahead of 3Q26 (2026-11-04)",
+      "IHH Healthcare to cut 380 jobs in Singapore, Hong Kong and Malaysia (2026-11-04)",
+      "IHH Healthcare Malaysia expands Gleneagles Hospital Johor with Afiniti Wellness acquisition (2026-10-19)",
+      "IHH Healthcare Files Appeal In Tokyo Over Fortis Legal Dispute (2026-09-24)",
+      "Kenanga upgrades IHH to outperform, TP RM9.10 (2026-09-23)",
+      "Macquarie keeps outperform, raises TP to RM11.10 (2026-09-22)",
+      "IHH Healthcare 2Q PATMI Increased 30% To RM675 Million On Higher Patient Volume (2026-08-27)"
     ],
     "social_sentiment": null,
-    "summary": "IHH issuer media archive records August 27 double-digit second-quarter growth, September 24 NTK Japan High Court appeal statement and September 28 Fortis forensic-audit statement. Legal and governance updates counter an exclusively bullish healthcare-growth narrative; linked statements were inaccessible, so no legal conclusions are inferred."
+    "summary": "Analyst ratings are 5 strongBuy / 17 buy / 0 hold / 0 sell, with holds dropping from 2 to 0 over three months, a gradually improving trend. News is mixed (cost cuts, Fortis litigation, a RHB TP trim versus recovery and expansion), and unanimous bullishness after an 18.7% drawdown is a mild contrarian caution, so the signal is a moderate buy with medium confidence. Headline evidence is web-supplemented rather than tool-provided, and a single TP cut or job-cut report is not a confirmed trend."
   },
   "technical": {
-    "signal": "neutral",
+    "signal": "sell",
     "confidence": "medium",
-    "trend": "As of 2026-10-06 close 7.9100, price is below by 2.06% versus SMA-50 8.0764 and below by 7.63% versus SMA-200 8.5633. Observed 5/20/60-bar returns are 0.51%/0.13%/-6.28%. ATR-14 is 0.2066; Bollinger lower/middle/upper are 7.5609/7.8290/8.0970, with band position 0.6511. These describe current trend and range, not entry, stop or target recommendations.",
-    "rsi_14": 58.4746,
-    "rsi_assessment": "RSI-14 is 58.4746, within the neutral 30-70 range. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
-    "macd_assessment": "MACD line -0.0657, signal line -0.0804, histogram 0.0147: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
-    "volume_assessment": "Last completed-session volume 2,522,800 versus 20-bar average 3,966,435, ratio 0.6360. Below-average turnover supplies no strong participation confirmation. Price is 16.93% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "trend": "Bearish: close 7.69 is below SMA-20 (7.854), SMA-50 (7.8474) and SMA-200 (8.4248), 18.7% under the 52-week high and 2.7% above the 52-week low. Over the last 25 bars price has stepped down from about 7.90-8.00 to 7.70 with lower highs.",
+    "rsi_14": 25.4902,
+    "rsi_assessment": "RSI-14 at 25.49 is oversold (<30). It confirms strong downside momentum but also raises the risk of a short-term relief bounce; oversold alone is not a reversal signal while price stays below all key averages.",
+    "macd_assessment": "MACD line -0.0513 is below the signal line -0.0333 with a negative histogram of -0.018, indicating bearish momentum that is still building rather than turning.",
+    "volume_assessment": "Volume does not confirm or contradict the move. The 2026-11-11 bar (247,300; ratio 0.0866 vs 20-day average 2.86M) is partial/intraday and is not read as a signal. Completed recent bars (e.g. 5.03M on 11-06, 3.65M on 11-10) show moderate to elevated participation on the declines.",
     "support_levels": [
-      7.54
+      7.4882,
+      7.6,
+      7.67
     ],
     "resistance_levels": [
-      8.15,
-      8.71
+      7.8,
+      7.98,
+      8.14
     ],
-    "summary": "A positive MACD histogram and firmer RSI suggest a tentative rebound, but price remains below SMA-50 and SMA-200. Low volume and proximity to the 52-week low do not establish a durable trend reversal."
+    "summary": "IHH (5225) is in a downtrend below SMA-20/50/200 with negative MACD and price near the lower Bollinger Band (%B 0.09; ATR-14 0.1379). RSI 25.5 is oversold, so a bounce toward 7.80-7.85 is plausible, but the structure stays bearish unless price reclaims the SMA-20/50 near 7.85. Nearby supports are the 7.60 low (11-10) and the 52-week low near 7.49."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "medium",
-    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
-    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
-    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. Inference/scenario only: a weaker MYR can help translated foreign earnings but raise imported inputs and USD debt costs; a stronger MYR reverses these effects. A spot level alone does not establish a currency tailwind; hedges and net exposure are unquantified.",
+    "confidence": "low",
+    "fed_impact": "Fed held the funds target at 3.75%-4.00% on 28 Oct 2026 (10-2 vote, two dissenters preferred a hike) after a 25bp hike on 16 Sep; the bias is hawkish. Higher USD rates raise global discount rates for long-duration defensive equities like IHH, but the effect on a low-beta (0.16) MYR-listed hospital operator is indirect. Source is secondary reporting (the Fed release text was not retrievable); no FRED macro_snapshot was available.",
+    "interest_rate_outlook": "BNM held OPR at 2.75% on 5 Nov 2026 (eighth straight hold; unchanged since the July 2025 cut). It sees 2026 GDP growth above 5%, and several houses (CIMB, Apex) expect a 25bp hike to 3.00% in 1H27. Malaysian rates are therefore flat now with a mild upward bias, a modest headwind to valuation (PE ~29.6x trailing, ~26x forward) and to the cost of IHH's MYR 15.2bn debt (a mix of currencies). Turkey's CBRT cut its policy rate 100bp to 36% on 22 Oct (CPI 29.77% in Oct, slightly above forecast), so further cuts are uncertain. The RBI hiked 25bp to 5.50% in Oct 2026. Rates are mixed across IHH's markets with no clear net direction.",
+    "fx_impact": "IHH reports in MYR but earns heavily in SGD, TRY and INR, so translation effects matter. USD/MYR ~4.06 (4 Nov close 4.0610/0660) and the ringgit firmed after the BNM hold. SGD/MYR ~3.166 on 6 Nov, with the ringgit slightly stronger versus SGD, a small translation drag on Singapore earnings (Gleneagles, Mount Elizabeth). The lira keeps depreciating structurally (market survey year-end USD/TRY ~51.6) with inflation near 30%, which erodes MYR-translated Acibadem earnings, though hyperinflation-adjusted pricing partly offsets this. The rupee is near record lows (~96.4-96.8 per USD in early Oct, close to 97), so Fortis contributions translate weaker. A firm MYR is a net translation headwind. No dated spot quotes for TRY or INR in November were found, so those levels are unverified.",
     "sector_macro_factors": [
-      "Observed: BNM describes resilient demand and persistent global cost pressure. Inference: medical-care demand is relatively less cyclical, while labor and imported equipment costs can affect margins.",
-      "Inference: regional operations create mixed translation and funding exposure; no current healthcare policy change is verified."
+      "Healthcare is defensive and low-beta; demand is largely insensitive to the rate cycle and to GDP growth above 5% in Malaysia.",
+      "Malaysia's strong domestic growth and a firm ringgit support local volumes but depress MYR-translated foreign earnings.",
+      "Turkish medical inflation near 30% supports nominal Acibadem revenue, but TRY depreciation limits MYR-reported growth.",
+      "Hawkish Fed plus a possible BNM hike in 1H27 pressure rich healthcare multiples (PE ~26-30x)."
     ],
     "geopolitical_risks": [
-      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
+      "The Iran-war-related oil shock and foreign outflows pressure the INR and EM currencies (per RBI and rupee reporting).",
+      "Turkish reserve drawdown (net reserves ex-swaps ~USD 39bn, down ~USD 4.9bn in the week of 22 Oct) is a lira stability risk.",
+      "Global risk-off episodes (e.g. 6 Nov) weakened the ringgit against USD."
     ],
-    "summary": "IHH has a relatively defensive demand profile, but macro resilience does not itself establish medical volume or margin improvement. Cost and currency effects leave the macro signal neutral."
+    "summary": "No FRED macro_snapshot was available. This view rests on dated web sources checked 2026-11-11: BNM OPR 2.75% (held 5 Nov), Fed 3.75-4.00% (held 28 Oct, hawkish dissent), USD/MYR ~4.06, SGD/MYR ~3.17, CBRT 36%, Turkish CPI 29.8%, RBI 5.50%. Macro forces are offsetting (defensive sector and strong Malaysian growth against a firm MYR, weak TRY and INR translation, and rich multiples facing hawkish rates), so the signal is neutral with low confidence. Sources: nst.com.my and thestar.com.my (BNM 5 Nov 2026), federalreserve.gov and stockanalysis.com (FOMC 28 Oct 2026), tradingeconomics.com (Turkey CPI), bernama.com and malaymail.com (ringgit), sahi.com and fxstreet.com (RBI and INR)."
   },
   "pipeline_mode": "in-session"
 }

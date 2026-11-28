@@ -2,62 +2,66 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Current Yahoo metadata quotes trailing P/E 27.12 and forward P/E 18.15, but the deterministic fundamental context cannot establish dated same-share-basis valuation. Do not label the stock cheap or derive a target from these ratios. Yahoo quarterly EPS is TWD147.127873 with no declared share basis; the October 15 official Q3 release reports NT$29.43 per ordinary share and US$4.60 per ADR. These bases must not be mixed or one quarter annualized.",
-    "margin_analysis": "For the quarter ended September 30, 2026, official margins were 66.4% gross, 58.7% operating and 51.1% net. The provider's comparable Q3 2025 margins were approximately 59.5%, 50.6% and 45.7%, supporting year-over-year improvement. Gross and operating margins were below the provider's Q2 2026 values of 67.7% and 60.3%, so improvement is not uniform sequentially.",
-    "debt_analysis": "The latest Yahoo quarter lacks debt, equity and free cash flow. The official Q3 presentation supplies NT$4,016.98bn cash and marketable securities, NT$818.38bn long-term interest-bearing debt and NT$7,043.23bn equity; long-term debt is not total debt. Official Q3 free cash flow was NT$476.56bn. The balance-sheet and cash-flow evidence is supportive, without proving unrestricted cash availability or eliminating capital-spending risk.",
-    "growth_outlook": "The deterministic comparable-quarter calculation gives Q3 revenue growth of 50.95% and net-income growth of 68.71% versus Q3 2025, consistent with the October 15 official release's rounded figures. The official Q4 revenue guidance is US$52.3bn to US$54.3bn and management expects around 44% full-year US-dollar revenue growth; these are forecasts, not realized results.",
+    "pe_assessment": "Canonical same-basis P/E unavailable, including the USD-listing/TWD-reporting basis gap. Provider trailing 23.31x/forward 15.38x are unauthenticated. Provider diluted_eps 147.15 is not directly interchangeable with TWD ordinary-share EPS or USD ADR EPS; never divide USD price by TWD EPS.",
+    "margin_analysis": "September30 gross margin 66.4%, operating margin 58.7%, net margin 51.1%. Gross/operating margins below June 67.7%/60.3%, but above year-ago 59.5%/50.6%. Quarterly FCF NT$471.303B.",
+    "debt_analysis": "Total debt NT$1.066T versus equity NT$6.998T; debt broadly stable through recent observations. Inference: measured leverage is modest, but cash, commitments and foreign-fab economics are unavailable.",
+    "growth_outlook": "Canonical revenue +50.95%, net income +68.71% YoY. Official October15 release independently states September30-quarter revenue NT$1,494.24B, net income NT$763.06B, diluted EPS NT$29.43/share or US$4.60/ADR: https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/526b65af7305df2dde6b9ece6812b1fdf1e49f9b/3Q26%20EarningsRelease.pdf. Financial period 49 days old.",
     "key_risks": [
-      "The current-provider share basis is missing and quarterly EPS differs from ordinary-share presentation; same-basis valuation remains unavailable.",
-      "Provider Q3 debt/equity/cash-flow fields are incomplete; official supplementary evidence must retain its separate source and partial-debt scope.",
-      "Capital-intensive capacity expansion and reliance on sustained leading-edge demand expose future cash flow to execution and demand risk; this is an inference, not an observed demand collapse."
+      "Sequential gross and operating-margin decline, despite year-ago improvement.",
+      "No common currency/share-basis valuation; ADR/ordinary EPS basis needs care.",
+      "No filing index: geopolitical and customer-concentration claims require other sourced layers rather than unsupported fundamental assertions."
     ],
     "key_strengths": [
-      "Comparable Q3 revenue and profit grew strongly year over year, with higher observed margins.",
-      "Official Q3 cash-flow and balance-sheet disclosures support financial capacity for ongoing investment.",
-      "Official Q4 guidance supports a continued growth outlook, conditional on management assumptions."
+      "Strong comparable growth, high margins and positive observed FCF.",
+      "Low measured debt relative to equity."
     ],
-    "summary": "Fundamentals favor a cautiously positive view based on observed comparable-quarter growth, margins and official cash generation. This is a medium-confidence fundamental buy signal, not a conclusion that today's ADR price is cheap or an immediate portfolio order. The September 30 financial period is 27 days old; current-provider observation on October 27 is not an original filing timestamp."
+    "summary": "Medium-confidence fundamental buy on growth, cash flow and balance-sheet strength. The ADR/EPS currency and share-basis mismatch prevents a verified valuation discount."
   },
   "sentiment": {
-    "signal": "buy",
-    "confidence": "medium",
-    "news_tone": "unavailable",
-    "news_summary": "No dated headlines were captured. The Yahoo current 0m table has 6 strong-buy, 14 buy and 1 hold rating, identical to 1m. This is an observed positive analyst stance, not a new upgrade wave or a measured post-earnings reaction.",
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "positive",
+    "news_summary": "TSMC reported October revenue growth of 59.7% year over year on November 10. Independent fresh coverage and dated individual rating changes are unavailable in this packet. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=6, buy=14, hold=1, sell=0, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.sec.gov/Archives/edgar/data/1046179/000104617926000796/tsm-revenue20261110.htm",
     "key_themes": [
-      "Positive captured analyst stance",
-      "Unchanged latest monthly rating distribution",
-      "Independent news tone unavailable"
+      "Strong reported monthly sales",
+      "Limited independent fresh sentiment"
     ],
-    "notable_headlines": [],
+    "notable_headlines": [
+      "TSMC October 2026 Revenue Report"
+    ],
     "social_sentiment": null,
-    "summary": "The current recommendation snapshot is predominantly positive and supports a moderate positive sentiment signal. Independent headlines and social observations are unavailable, and issuer earnings must not be counted twice as sentiment."
+    "summary": "The recent issuer sales update is positive, but no sufficiently verified fresh independent stock-specific sentiment source was established in this bounded search. Retain neutral with low confidence rather than turning strong provider ratings into a new buy signal."
   },
   "technical": {
-    "signal": "neutral",
-    "confidence": "medium",
-    "trend": "Above SMA200 but below SMA20 and SMA50; medium-term correction within a stronger long-term trend.",
-    "rsi_14": 26.2718,
-    "rsi_assessment": "Oversold does not establish a reversal.",
-    "macd_assessment": "Histogram -3.8703; negative short-term momentum.",
-    "volume_assessment": "Latest volume ratio 0.8388 is below the 20-session mean; weak participation confirmation.",
+    "signal": "sell",
+    "confidence": "high",
+    "trend": "Strong short-term breakdown below SMA20/50/200 with successive lower closes.",
+    "rsi_14": 31.233,
+    "rsi_assessment": "RSI 31.23 is near oversold; it has not supplied reversal confirmation.",
+    "macd_assessment": "MACD line -14.1280 and histogram -2.2182 remain bearish.",
+    "volume_assessment": "Latest volume 1.62x average during a sharp decline; elevated distribution confirms downside pressure.",
     "support_levels": [
-      397.1346,
-      407.13
+      351.19,
+      353.5
     ],
     "resistance_levels": [
-      487.47
+      385.47,
+      408.09
     ],
-    "summary": "Long-term relative strength coexists with short-term weakness; do not infer an actionable rebound from oversold RSI alone."
+    "summary": "TSM is 15.82% below SMA50 and 10.53% below SMA200 after losing 9.28% over five bars. Trading near the lower Bollinger band with elevated selling volume is evidence of an active decline, not a confirmed bargain entry."
   },
   "macro": {
     "signal": "neutral",
-    "confidence": "low",
-    "fed_impact": "Unavailable: no dated Fed snapshot is configured.",
-    "interest_rate_outlook": "Unavailable: no dated rate snapshot is configured.",
-    "fx_impact": "Unavailable: no dated FX snapshot is configured.",
-    "sector_macro_factors": [],
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow."
+    ],
     "geopolitical_risks": [],
-    "summary": "Macro/FX data is unavailable in the ingested evidence envelope; no directional view is assigned. Separately verified official policy context is recorded in macro-evidence.json and is not substituted for a typed source snapshot."
+    "summary": "Technology: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
   },
   "pipeline_mode": "in-session"
 }

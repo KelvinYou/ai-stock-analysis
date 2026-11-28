@@ -2,17 +2,22 @@
   "ticker": "AAPL",
   "judged_view": "neutral",
   "confidence": "medium",
-  "thesis": "Apple has delivered compounding, including nine-month FCF of $110.197bn versus $72.281bn and 26.6% operating-income growth. At 38.17x trailing and estimated 34.82x forward earnings, that quality must persist to justify the entry premium; neither side demonstrates that the premium is clearly mispriced. Neutral rests on the valuation-growth balance, not unavailable liquidity or a requirement for certain future returns.",
+  "thesis": "Apple qualifies as an intact-trend candidate, but the evidence does not show a superior entry after accounting for cash conversion and valuation uncertainty. The bear has not shown business impairment, and the bull has not shown a clear current price advantage.",
   "winning_side": "neither",
-  "strongest_counterexample": "The same-period FCF increase and $62.173bn liquid-asset surplus excluding leases support an actual cash-growth franchise; continued execution could make waiting costly even without multiple expansion.",
+  "strongest_counterexample": "Positive comparable revenue and profit growth, substantial FCF, declining debt and positive medium- and long-term price trends supply a credible trend-following case without requiring a deep discount.",
   "invalidation_conditions": [
-    "A subsequent comparable nine-month FCF below $110.197bn together with Q3 operating margin below the observed 32.62% would materially weaken the quality side of this balance.",
-    "Two further reported quarters with year-on-year operating-income growth exceeding the current 26.6%, without comparable tariff benefits, would strengthen the bull sufficiently to reopen the premium ruling."
+    "Reconsider toward buy if the next reported quarter shows higher year-over-year FCF and price sustains a new observed range high for five consecutive closes.",
+    "Reconsider toward sell if revenue declines year over year for two reports and operating margin falls below the current observation in both."
   ],
-  "evidence_gaps": [],
+  "evidence_gaps": [
+    "Authenticated current valuation and reported EPS share basis.",
+    "Durability of incremental cash conversion.",
+    "Quantified earnings impact, if any, of the service incident."
+  ],
   "decisive_factors": [
-    "Cash growth and liquidity are observed; quarterly tariff EPS adjustment cannot manufacture normalized TTM earnings.",
-    "Premium valuation remains sensitive to operating-growth moderation."
+    "Positive growth and observed deleveraging.",
+    "Quarterly FCF below the year-ago observation.",
+    "Positive trend is established but valuation protection is not."
   ],
   "pipeline_mode": "in-session"
 }

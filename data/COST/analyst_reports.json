@@ -2,67 +2,67 @@
   "fundamentals": {
     "signal": "neutral",
     "confidence": "medium",
-    "pe_assessment": "Oct6 $935.68 /FY26 EPS$20.76=45.07x; removing disclosed $0.15 tariff benefit gives EPS$20.61 and45.40x (analyst normalisation). Vendor44.49x/forward37.41x use other earnings bases. FY FCF yield2.26% versus frozen market cap is demanding.",
-    "margin_analysis": "FY operating margin=11.685/303.154=3.85%, versus10.383/275.235=3.77%. Net margin=9.226/303.154=3.04%, including membership fees in denominator.",
-    "debt_analysis": "Cash$20.207bn+short investments$1.094bn versus stated debt$6.162bn excluding leases. CFO$15.825bn less PP&E$6.435bn gives FCF$9.390bn; liquidity and cash conversion are strong.",
-    "growth_outlook": "FY sales+10.1%, adjusted comparable sales+6.6%, EPS+14.0%; tariff normalisation barely alters the operating-growth thesis.",
+    "pe_assessment": "Canonical same-basis P/E unavailable. Provider trailing 53.65x/forward 44.33x unauthenticated and not a verified valuation discount; no own-history benchmark supplied.",
+    "margin_analysis": "August31 operating margin 3.97%, versus 3.88% one year earlier; net margin 3.13%. Quarterly FCF $2.477B versus $1.901B in year-ago history. Fiscal quarter length and seasonal differences must be checked before sequential revenue comparisons.",
+    "debt_analysis": "Debt $8.576B versus equity $35.803B; slightly above year-ago $8.248B while equity also increased. Inference: measured leverage is modest; complete cash and lease liabilities unavailable.",
+    "growth_outlook": "Canonical comparable revenue +11.10%, net income +14.87% YoY. Statement August31, 79 days old; provider fiscal labels do not independently authenticate actual quarter duration.",
     "key_risks": [
-      "At45.4x normalised FY earnings, return depends on sustaining high growth or valuation premium; evidence supports quality more clearly than entry upside.",
-      "Working-capital contribution$2.328bn is part of CFO; FCF is not owner earnings after every lease obligation."
+      "Thin observed operating margin means operating-cost changes can materially affect profits (inference).",
+      "No authenticated valuation edge despite positive growth; provider multiples remain unverified.",
+      "No filing index; membership renewal and comparable-sales economics not supplied."
     ],
     "key_strengths": [
-      "Positive FCF and liquid assets well above stated debt.",
-      "Membership fees$5.907bn versus$5.323bn support recurring economics."
+      "Positive comparable revenue/profit growth and higher observed year-ago FCF.",
+      "Modest measured debt relative to equity."
     ],
-    "summary": "Costco has verified earnings growth, improving operating margin and a strong cash balance. Neutral reflects demanding entry valuation rather than missing debt or cash-flow data."
+    "summary": "Healthy observed fundamentals, but no demonstrated margin of safety at the current valuation. Neutral at medium confidence; avoid turning quality or price momentum into an unsupported cheapness claim."
   },
   "sentiment": {
     "signal": "buy",
     "confidence": "medium",
     "news_tone": "positive",
-    "news_summary": "FY2026 net sales grew 10.1%; fourth-quarter adjusted comparable sales rose 6.7%; annual earnings rose. Quarter EPS includes a nonrecurring $0.15 tariff-refund benefit; operating news does not establish valuation upside. Yahoo recommendations fetched 2026-10-07T11:50:26.786779, period 0m: strong buy 4, buy 20, hold 13, sell 1, strong sell 1. Counts reflect recommendations, not fresh rating changes or price impact.",
+    "news_summary": "Bloomberg November 17 reporting describes Mizuho raising its target from $1,100 to $1,150; the November 4 company report showed October sales growth of 12.6%. The longevity of the demand boost is unproven. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=5, buy=20, hold=15, sell=1, strong_sell=1. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.ttnews.com/articles/costco-customers-panic-buying; https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-October-Sales-Results-2026.pdf",
     "key_themes": [
-      "Membership retail",
-      "Comparable sales growth",
-      "Nonrecurring tariff refunds"
+      "Stockpiling demand",
+      "Target increase",
+      "Monthly sales strength"
     ],
     "notable_headlines": [
-      "2026-09-24 | issuer/issuer-hosted evidence | FY2026 net sales grew 10.1%; fourth-quarter adjusted comparable sales rose 6.7%; annual earnings rose. | https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Operating-Results/default.aspx"
+      "Costco benefiting as customers stock up amid outages",
+      "Costco Wholesale Corporation Reports October Sales Results"
     ],
     "social_sentiment": null,
-    "summary": "FY2026 net sales grew 10.1%; fourth-quarter adjusted comparable sales rose 6.7%; annual earnings rose. Quarter EPS includes a nonrecurring $0.15 tariff-refund benefit; operating news does not establish valuation upside."
+    "summary": "A dated analyst target increase and observed sales momentum support positive sentiment. Demand pulled forward by stockpiling may be temporary, so this is not independent proof the current valuation is attractive."
   },
   "technical": {
-    "signal": "neutral",
+    "signal": "buy",
     "confidence": "medium",
-    "trend": "As of 2026-10-06 close 935.6800, price is above by 0.33% versus SMA-50 932.5808 and below by 2.55% versus SMA-200 960.1458. Observed 5/20/60-bar returns are 1.20%/2.80%/1.16%. ATR-14 is 15.1629; Bollinger lower/middle/upper are 884.2265/909.3735/934.5205, with band position 1.0231. These describe current trend and range, not entry, stop or target recommendations.",
-    "rsi_14": 74.1367,
-    "rsi_assessment": "RSI-14 is 74.1367, overbought. This implementation uses rolling 14-bar mean gains/losses; RSI alone is not a reversal confirmation.",
-    "macd_assessment": "MACD line -1.0921, signal line -5.4599, histogram 4.3678: positive short-term momentum. MACD remains below zero, so recovery is not yet an established positive trend.",
-    "volume_assessment": "Last completed-session volume 1,899,800 versus 20-bar average 2,379,390, ratio 0.7984. Below-average turnover supplies no strong participation confirmation. Price is 14.53% below the observed 52-week high; proximity is context, not a standalone signal.",
+    "trend": "Strong rising trend above SMA20/50/200 and near the 52-week high.",
+    "rsi_14": 81.7492,
+    "rsi_assessment": "RSI 81.75 is strongly overbought; a pullback or consolidation risk is elevated despite the trend.",
+    "macd_assessment": "MACD line +37.7197 and histogram +5.3935 show strong bullish momentum.",
+    "volume_assessment": "Latest volume 1.29x average confirms participation, although the latest session closed slightly down.",
     "support_levels": [
-      883.1
+      1071.34,
+      1088.98
     ],
     "resistance_levels": [
-      937.04,
-      987.55
+      1123.67
     ],
-    "summary": "Price has only narrowly reclaimed SMA-50 and remains below SMA-200 despite a strengthening positive MACD histogram. Overbought RSI, an upper-band close and below-average volume argue for waiting for broader confirmation of the recovery."
+    "summary": "COST has gained 11.77% over 20 bars and is 13.91% above SMA200, with positive MACD and supportive volume. This is a bullish trend signal with entry-stretch risk: RSI 81.75 and proximity to the high make an immediate chase less attractive than the signal label alone suggests."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "medium",
-    "fed_impact": "Observed: the Fed raised its target range 25bp to 3.75\u20134.00% on September 16, 2026; its statement describes resilient spending and robust capital investment. Inference: the hike increases the valuation discount-rate hurdle and marginal USD financing cost; company-specific debt repricing is unquantified.",
-    "interest_rate_outlook": "Observed: Fed target 3.75\u20134.00%; BNM OPR held at 2.75% on September 3. Neither release establishes a committed future rate path. No rate-cut, further-hike, or bond-yield forecast is used.",
-    "fx_impact": "Observed: BNM USD/MYR reference 4.0858 on October 6. For an MYR-based investor, USD appreciation would raise MYR translated investment value and depreciation would lower it, all else equal. This is a scenario, not an FX forecast; company-level currency effects depend on revenue, costs and hedging.",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
     "sector_macro_factors": [
-      "Observed: Fed reports resilient spending and elevated inflation; BNM notes global cost pressure. Inference: value-oriented staple retail may remain comparatively resilient but still faces labor, merchandise and freight costs.",
-      "Inference: discount-rate pressure can affect valuation even when defensive operating demand holds; macro evidence alone does not assess its premium multiple."
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "Price pressure may support value-oriented demand while straining household budgets; neither net sales impact nor valuation support follows mechanically."
     ],
-    "geopolitical_risks": [
-      "Observed: the September 3 BNM statement identifies the Middle East conflict and prolonged geopolitical tensions as risks to growth and global cost conditions. Inference: energy, freight and demand effects depend on company exposure; no specific disruption is claimed."
-    ],
-    "summary": "Costco has a relatively resilient consumption profile under the verified spending backdrop. Cost pressure and the rate increase offset that support, leaving the macro layer neutral."
+    "geopolitical_risks": [],
+    "summary": "Consumer Defensive: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. Price pressure may support value-oriented demand while straining household budgets; neither net sales impact nor valuation support follows mechanically. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
   },
   "pipeline_mode": "in-session"
 }

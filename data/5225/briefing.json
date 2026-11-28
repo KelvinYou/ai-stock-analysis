@@ -1,31 +1,44 @@
 {
   "ticker": "5225",
-  "date": "2026-10-07",
-  "data_as_of": "2026-10-06",
+  "date": "2026-11-11",
+  "data_as_of": "2026-11-11",
   "overall_signal": "neutral",
   "conviction": {
     "score": 0.0,
     "signal_convergence": 0.2727,
-    "explanation": "Underlying hospital profit/EBITDA growth provides a substantive upside case, but 30.38x trailing earnings, material net debt and RM141m conservative cash against RM486m dividends leave owner-return compensation balanced. Growth has not yet delivered financial repair."
+    "explanation": "Evidence is split and the split is not resolved by the data. Fundamentals are neutral (medium), macro neutral (low), sentiment buy (medium, but headlines are web-sourced and unanimous sell-side buys followed an 18.7% drawdown), and technicals sell (medium). The debate converged on facts: business recovery is real, but valuation cannot be authenticated, the YoY comparison is off the weakest quarter, and the bull itself withdrew 'accelerating earnings' and 'bounded risks'. The main remaining disagreement is timing around the 3Q26 print, which is an observable event not yet available. Neutral with a near-zero score reflects offsetting evidence and low-to-medium data quality, not a view that the stock is fairly valued."
   },
-  "executive_summary": "IHH has real underlying operating progress: excluding MFRS129, revenue grew 7% and EBITDA14%, while H1 ex-exceptional profit rose 22%. RM771m pre-financing FCF confirms investment is producing some cash beyond accounting growth.\n\nAfter specified finance and lease costs, H1 cash was only RM141m against RM486m owner dividends. Net debt of RM11.564bn excludes RM2.205bn leases, and 30.38x trailing earnings requires sustained delivery. Neutral balances growth with current conversion pressure and a weak trend; unresolved governance statements support no invented legal conclusion.",
-  "bull_case": "Profitable hospital growth could improve cash conversion and reduce debt reliance if more cash is retained.",
-  "bear_case": "Capital intensity, payouts and financing costs could prevent growth reaching shareholders; admissions weakness and governance uncertainty constrain extrapolation.",
+  "executive_summary": "IHH Healthcare (5225, close RM7.69 on 2026-11-11) shows a business that is recovering while the share price is not. Observed: Apr-Jun 2026 revenue was RM7,046m (+11.9% YoY, highest of five periods) and net income RM573m (+29.3% YoY, +8.5% QoQ), with operating margin 15.2% vs 14.2% a year earlier and debt/equity about 0.48x. Price sits below the 20/50/200-day averages, MACD is negative, RSI-14 is 25.5 (oversold), and the stock is about 18.7% below its bar-derived 52-week high. Analyst ratings are 22 of 22 buy or strong buy, but the only dated November revision found was an RHB target cut.\n\nThe strongest disconfirming evidence against a bullish read: the +29.3% growth is one comparable pair measured off the weakest quarter in the series, and latest net income and margins are still below Jul-Sep 2025, so 3Q26 faces a tougher comp with a roughly +29% core-earnings expectation already public. Provider trailing P/E (about 29.6x) and forward P/E (about 26.0x) are demanding against single-digit net margins and about 7% trailing ROE, but a same-basis EPS and a sector benchmark are unavailable, so valuation is an evidence gap rather than a finding. Against a bearish read: the sequential recovery is accurate, leverage is moderate, and oversold conditions raise bounce risk, although oversold alone is not a reversal signal. Macro is offsetting (defensive sector and strong Malaysian growth vs a firm ringgit, weak lira and rupee translation, and hawkish rates) and rated low confidence.\n\nThe evidence does not support a directional view ahead of the 3Q26 results. Data caveats: market data is as of 2026-11-11 with the final bar partial; financial statements are for the quarter ended 2026-06-30 (134 days old) and 3Q26 results are due late November 2026; no filing index exists, so no management-stated risks could be cited; news was web-supplemented and the sentiment headlines are web-sourced, not provider-sourced; FRED macro data was unavailable and macro inputs are secondary web reporting. Unverified items include the RM675m vs RM573m 2Q earnings basis, H1 cash conversion, and TRY/INR November spot levels.",
+  "bull_case": "Observed: Apr-Jun 2026 revenue +11.9% and net income +29.3% YoY, net income +8.5% and EPS +8.4% QoQ, revenue at a five-period high, operating margin up 1.0 point YoY, debt/equity about 0.48x with flat debt and rising equity, low provider beta (0.156). Sell-side is 22 of 22 buy or strong buy with holds falling from 2 to 0 over three months, and the lowest dated targets found (Kenanga, RHB) sit well above spot. Operational catalysts are visible (Gleneagles Johor expansion, cost consolidation). Inference: the 26.0x forward vs 29.6x trailing P/E implies roughly 14% forward earnings growth, and the multiple has de-rated with price rather than earnings breaking. The bull's surviving case is a risk-reward and sizing argument after conceding 'accelerating earnings' and 'bounded risks', not a call that the downtrend has ended; a relief bounce is plausible given RSI 25.5, but needs reclaiming the short-term averages to be credible.",
+  "bear_case": "Observed: price below SMA-20/50/200, MACD negative and falling, lower highs over the last 25 bars, and completed recent bars show moderate to elevated volume on declines. Trailing P/E is about 29.6-30x on TTM net income of about RM2,245m, with ROE near 7% and a 1.43% dividend yield. The +29.3% YoY figure is flattered by the weakest comp, and latest net income, net margin (8.1% vs 9.4%) and EPS remain below Jul-Sep 2025, so 3Q26 faces the strongest comp with expectations already public; a meet may not move the stock and a miss may be punished. Unanimous buy ratings coincided with a drawdown, and the one dated November revision was a target cut. The 52-week low is within about 1.5x ATR-14 and is not a floor. Unquantified overhangs: Fortis Tokyo ruling (under appeal), rationale and savings of about 380 job cuts, FX translation drag from a firm MYR against weak TRY and INR, volatile quarterly FCF (RM173m-965m), and a possible BNM hike in 1H27 with a hawkish Fed. Unknown is not benign.",
   "key_uncertainties": [
-    "Cash conversion after capital investment, finance costs and leases.",
-    "Dividend restraint or retained-cash repair is prospective.",
-    "Outcome of inaccessible legal/governance statements remains unknown."
+    "Whether 2Q net income was RM573m (reconcilable with stated margin and growth) or RM675m (PATMI/core basis per web headline); the earnings base behind any P/E is unauthenticated, and same-basis TTM EPS is unavailable.",
+    "Identical Dec 2025 and Mar 2026 net income (RM528m) and EPS (0.0598) with different revenue: coincidence or provider artifact, which affects the sequential-recovery and TTM calculations.",
+    "Whether Jul-Sep 2025 was a one-off peak or a sustainable run rate, which determines how hard the 3Q26 comp is.",
+    "Whether the roughly +29% 3Q26 core-earnings expectation is on a reported or core basis, and how it compares with the RM616m comp.",
+    "Fortis Tokyo District Court ruling: financial exposure and appeal outcome are unknown.",
+    "Rationale, one-off costs and savings from the roughly 380 announced job cuts are unknown.",
+    "Net FX translation effect (firm MYR vs weak TRY and INR, small SGD drag); TRY and INR November spot levels are unverified.",
+    "Currency of broker targets: Macquarie and Kenanga predate the latest leg down, the Phillip Capital target is unverified, and horizons are unstated.",
+    "Where downside stops: nothing in the evidence caps price at the 52-week low or supplies a floor below the nearby support cluster.",
+    "Whether oversold RSI resolves into a bounce or continued decline; no reversal confirmation exists.",
+    "Cash conversion (H1 cash after finance and lease costs, per the unverified prior briefing) and sector-relative valuation cannot be assessed from supplied data.",
+    "Impact of a possible BNM hike in 1H27 and a hawkish Fed on a 26-30x multiple; macro view is low confidence and relies on secondary web sources."
   ],
   "catalysts_upcoming": [
-    "Comparable cash after the same deductions covering owner dividends with stable/lower net debt would strengthen owner economics.",
-    "Continued underlying EBITDA/profit growth alongside admissions recovery would support productive expansion."
+    "3Q26 results (due late November 2026): if reported net income and margin exceed the Jul-Sep 2025 comp (RM616m) on a clearly stated basis with improving cash conversion, the recovery thesis strengthens; if net income falls short of the roughly +29% core expectation, the bear case on a crowded, demanding multiple gains support.",
+    "Post-results broker revisions: if multiple houses cut targets after 3Q26 (as RHB did before it), the sell-side support argument weakens; if targets are held or raised after a clean print, the sentiment signal is corroborated.",
+    "Price recovery above the SMA-20/SMA-50 zone with MACD histogram turning positive would be the observable confirmation of a technical reversal; failure of the recent support cluster would confirm continuation of the downtrend.",
+    "Fortis Tokyo appeal: if a court date or ruling is disclosed with a quantified financial exposure, a currently unquantified overhang becomes measurable in either direction.",
+    "Management commentary or disclosure quantifying job-cut savings and restructuring costs: if savings are stated and flow into the next margin print, it supports continued operating margin expansion.",
+    "BNM policy path: if BNM signals or delivers a hike toward 3.00%, pressure on rich healthcare multiples and debt costs increases; if guidance stays on hold, the macro headwind is neutral."
   ],
   "risk_assessment": {
     "correlation_notes": [
       "Low beta (0.16) \u2014 historically less sensitive to broad-market moves.",
       "Sector: Healthcare \u2014 use sector-specific catalysts and risks in the thesis."
     ],
-    "max_drawdown_scenario": "Historical max drawdown: 31.5% over available price history. Projected worst case (2-sigma): ~37.2% from current $7.91.",
+    "max_drawdown_scenario": "Historical max drawdown: 30.5% over available price history. Projected worst case (2-sigma): ~34.9% from current $7.69.",
     "risk_reward_ratio": null
   },
   "action_plan": {
@@ -39,27 +52,11 @@
     "horizon": "swing (2-8 weeks)",
     "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.27). Wait for a clearer setup."
   },
-  "research_verdict": {
-    "ticker": "5225",
-    "judged_view": "neutral",
-    "confidence": "medium",
-    "thesis": "IHH has real underlying hospital growth, but the bear carries the premium shareholder-conversion objection. RM141m cash after the specified financing and leases does not cover RM486m owner dividends, with RM11.564bn net debt before leases at 30.38x trailing earnings. Underlying EBITDA and profit growth preserve upside, but financial repair or payout discipline is still prospective, making neutral more defensible than treating expansion as already owner-funded.",
-    "winning_side": "bear",
-    "strongest_counterexample": "Underlying revenue and EBITDA grew 7% and 14%, H1 ex-exceptional profit rose 22%, and RM771m pre-financing FCF demonstrates genuine operating cash before the conservative financing deductions.",
-    "invalidation_conditions": [
-      "Comparable H1 cash after the same investment/finance/lease deductions at least equal to owner dividends, with net debt no higher than RM11.564bn, would defeat the current conversion-restraint thesis.",
-      "Comparable H1 ex-exceptional profit below RM1.028bn would undermine the growth counterweight."
-    ],
-    "evidence_gaps": [],
-    "decisive_factors": [
-      "Observed dividend-cash shortfall and leases are material at the premium valuation.",
-      "MFRS129-adjusted growth supports operating quality; unresolved governance statements do not justify invented legal outcomes."
-    ]
-  },
+  "research_verdict": null,
   "agent_signal_breakdown": {
-    "fundamentals": "buy",
-    "sentiment": "neutral",
-    "technical": "neutral",
+    "fundamentals": "neutral",
+    "sentiment": "buy",
+    "technical": "sell",
     "macro": "neutral"
   },
   "synthesized_signal": "neutral",

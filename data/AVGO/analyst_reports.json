@@ -2,71 +2,68 @@
   "fundamentals": {
     "signal": "buy",
     "confidence": "medium",
-    "pe_assessment": "Unavailable: deterministic context lacks validated same-share-basis TTM EPS and P/E. Provider metadata is not accepted as proof of a valuation discount; no earnings multiple is estimated.",
-    "margin_analysis": "Sept2 issuer release for quarter ended Aug2: GAAP operating income$15.955bn; FCF$13.665bn,46%of revenue. GAAP and non-GAAP measures remain separate.",
-    "debt_analysis": "Provider reported debt$59.419bn and equity$99.690bn; latest quarter cash$23.975bn in SEC release. No claim that cash eliminates leverage or contingent support obligations.",
-    "growth_outlook": "SEC release confirms revenue$29.591bn,+86%; AI semiconductor revenue$16.7bn,+221%. Q4 revenue$34.8bn remains guidance; no later earnings established.",
+    "pe_assessment": "Canonical same-basis P/E unavailable. Provider trailing 43.63x/forward 17.60x are unauthenticated; the gap relies on forecast earnings and cannot itself establish undervaluation.",
+    "margin_analysis": "July31 operating margin 54.3%, versus 38.1% a year earlier, with five rising operating-margin observations. Net margin 44.2%; quarterly FCF $13.665B exceeds reported net income $13.088B.",
+    "debt_analysis": "Total debt $59.419B versus equity $99.690B, below debt $64.907B in April and $64.229B a year earlier. Inference: deleveraging and retained cash-generation capacity are positives; liquidity and maturity detail unavailable.",
+    "growth_outlook": "Canonical comparable-period growth: revenue +85.50%, net income +216.14% YoY. All five supplied quarterly revenue observations increase. Statement is July31, 110 days old; November capture is not proof of a newer financial filing.",
     "key_risks": [
-      "Customer concentration and continuing AI-spend dependence.",
-      "Material leverage, customer-financing and residual-support uncertainty.",
-      "Fresh quote is not updated earnings; valuation discount is not verified."
+      "110-day financial-period age; no verified newer quarter in frozen inputs.",
+      "Forecast valuation is unauthenticated, and cash/coverage/customer-concentration evidence unavailable.",
+      "No filing index: risks outside the visible financial statements remain unavailable."
     ],
     "key_strengths": [
-      "Growth accompanied by realized quarterly FCF.",
-      "FCF$13.665bn versus$7.024bn in the prior-year quarter."
+      "Strong multi-period revenue, margin and free-cash-flow observations.",
+      "Debt fell across the last two reported observations."
     ],
-    "summary": "Independent review retains a conditional fundamental Buy because current growth produces substantial cash. It does not resolve financing exposure or valuation, and reported delivery plans are not recognized revenue."
+    "summary": "Fundamentals support a medium-confidence buy on operating growth, positive cash flow and falling debt. This is an operating-quality view, not a verified price discount; the July-quarter age limits confidence."
   },
   "sentiment": {
     "signal": "neutral",
     "confidence": "medium",
     "news_tone": "mixed",
-    "news_summary": "Oct 26 official $63 bn Anthropic financing structure remains a deployment catalyst, with residual-value support and deliveries expected from 2027. Oct 29 Amazon release adds sector evidence of both strong cloud demand and substantial cash burn; no new Broadcom order reduction is established. Fresh 0 m consensus remains 8 strong buy,41 buy,2 hold.",
+    "news_summary": "Reuters and the October 26 issuer-hosted announcement describe $63 billion of third-party financing for Anthropic infrastructure using Broadcom technology. This is evidence of a funding structure, not guaranteed future revenue or proof Broadcom bears no residual risk. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=8, buy=40, hold=3, sell=0, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.fidelity.com/news/article/technology/202610261716RTRSNEWSCOMBINED_L3N46C1PP_1; https://investors.broadcom.com/node/64786/pdf",
     "key_themes": [
-      "Financing-enabled demand",
-      "Residual-value exposure",
-      "Customer cash return scrutiny",
-      "No verified new order cancellation"
+      "AI compute funding",
+      "Customer concentration",
+      "Financing interdependence"
     ],
     "notable_headlines": [
-      "2026-10-26 | Bank of America | Bank of America, Blackstone, Citi and Morgan Stanley Announce Landmark $63 Billion Financing Structure to Enable AI Compute Capacity in Partnership with Broadcom",
-      "2026-10-29 | Amazon | Amazon.com Announces Third Quarter Results",
-      "2026-10-28 | Microsoft | Microsoft announces first quarter results",
-      "2026-10-29 | Associated Press | How major US stock indexes fared Thursday 10/29/2026",
-      "2026-10-29 | Associated Press | A historic drop for Alphabet stock drags the US market lower",
-      "2026-10-29 | Associated Press | Amazon offers cautious view after disappointing3Q results but delivers strong cloud growth"
+      "Banks and investors provide $63 billion financing for Broadcom equipment deployed for Anthropic",
+      "Bank of America, Blackstone, Citi and Morgan Stanley Announce Landmark $63 Billion Financing Structure to Enable AI Compute Capacity in Partnership with Broadcom"
     ],
     "social_sentiment": null,
-    "summary": "The financing catalyst still supports the operating narrative, but new hyperscaler cash scrutiny tempers the prior positive sentiment call. Sector read-through is explicitly inference and is not evidence that Broadcom has lost orders; neutral best represents the updated mixed news balance."
+    "summary": "The Anthropic capacity deal supports a growth narrative but introduces funding and concentration questions. Broadly bullish aggregate recommendations alone do not establish a fresh sentiment turn."
   },
   "technical": {
     "signal": "neutral",
     "confidence": "medium",
-    "trend": "Improving short-term momentum inside a weak intermediate and long-term trend.",
-    "rsi_14": 41.7711,
-    "rsi_assessment": "RSI 41.7711 is weak-to-neutral rather than oversold.",
-    "macd_assessment": "MACD line -5.3931, signal -6.4359, histogram 1.0428; histogram is positive (improving momentum), not an independent price forecast.",
-    "volume_assessment": "Completed-bar volume 16920000 is 0.7825x its 20-bar average; interpret alongside trend and volatility.",
+    "trend": "Short-term recovery above SMA20, still below SMA50 and SMA200.",
+    "rsi_14": 47.3421,
+    "rsi_assessment": "RSI 47.34 is balanced; the prior oversold condition has eased without a bullish regime confirmation.",
+    "macd_assessment": "Histogram +3.3951 is improving, although the MACD line remains negative at -1.4212.",
+    "volume_assessment": "Latest volume 0.94x average; the rebound lacks decisive volume confirmation.",
     "support_levels": [
-      320.23
+      289.77,
+      327.8
     ],
     "resistance_levels": [
-      380.84,
-      431.9435
+      356.85,
+      369.82
     ],
-    "summary": "The close of 345.00 remains below the 50- and 200-day averages despite a positive MACD histogram and a 6.73% five-bar recovery. The 17.37% sixty-bar decline and volume at 0.78x average leave a durable reversal unconfirmed; ATR 11.665 describes substantial daily volatility."
+    "summary": "AVGO has recovered above its 20-day average and is only 0.77% below SMA50, but remains 6.81% below SMA200. The 2.90% five-bar gain and positive histogram are constructive while the wider trend and large ATR leave the recovery unconfirmed."
   },
   "macro": {
     "signal": "neutral",
     "confidence": "medium",
-    "fed_impact": "Inference: unchanged US policy rates maintain funding and discount-rate hurdles for semiconductor, software and customer infrastructure investment.",
-    "interest_rate_outlook": "Observed: the Fed held 3.75%-4.00% on 2026-10-28, with two members preferring a 25bp increase and inflation described as elevated. The latest verified BNM OPR is 2.75%, dated 2026-09-03 and checked as current on 2026-10-30. No next policy move is assumed.",
-    "fx_impact": "Observed BNM reference USD/MYR fell from 4.0818 on 2026-10-28 to 4.0664 on 2026-10-29. Inference: the stronger MYR reduces MYR translation of an unchanged USD-denominated holding over this observation interval; it does not prove a durable FX trend or a change in the underlying stock value.",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
     "sector_macro_factors": [
-      "Inference: financing-dependent AI deployments may be sensitive to funding conditions, but the policy hold does not establish a changed cost or a failed deployment."
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow."
     ],
     "geopolitical_risks": [],
-    "summary": "The dated Fed hold and BNM OPR establish the current rate backdrop without a new policy easing or tightening event. The one-day MYR strengthening changes translation of USD exposure but supplies no durable directional stock signal; sector transmission remains conditional inference."
+    "summary": "Technology: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
   },
   "pipeline_mode": "in-session"
 }

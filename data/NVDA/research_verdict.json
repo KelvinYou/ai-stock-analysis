@@ -1,23 +1,23 @@
 {
   "ticker": "NVDA",
-  "judged_view": "buy",
-  "confidence": "medium",
-  "thesis": "The bull carries a conditional long-horizon growth case because revenue expansion is accompanied by high realized profitability and positive cash generation. Fresh peer releases do not negate those operations or prove supplier-order losses, though they increase the importance of cash-conversion scrutiny. This is not a finding that the new price is cheap or that an immediate tactical entry is supported.",
-  "winning_side": "bull",
-  "strongest_counterexample": "Quarterly FCF fell from $48.587bn to $21.4bn, statements are91 days old, customer financing economics face new scrutiny and the current valuation remains unverified; growth can still yield poor shareholder returns.",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "The bear narrowly carries the immediate-entry objection: the bull ultimately conditions purchase on events not yet observed. Strong latest demand prevents treating the selloff as proof of a broken operating franchise, so the ruling is neutral rather than a fundamental sell.",
+  "winning_side": "bear",
+  "strongest_counterexample": "Official quarterly revenue grew 103% and management guided another increase; this is direct evidence that customers have not abandoned the franchise despite the governance shock.",
   "invalidation_conditions": [
-    "Two subsequent comparable quarters with year-over-year revenue growth at or below0% would invalidate the sustained expansion foundation.",
-    "Two consecutive reported quarters with free cash flow at or below zero would invalidate reliance on continued cash-generative operating growth."
+    "Reconsider toward buy if governance findings resolve the principal uncertainty and the next reported quarter delivers revenue within guidance without an additional guided gross-margin reduction.",
+    "Reconsider toward sell if the next reported revenue falls below the guided range and management attributes the shortfall to lost customer demand."
   ],
   "evidence_gaps": [
-    "Validated same-share-basis TTM valuation.",
-    "Updated quarterly results and complete current debt maturity/liquidity review.",
-    "Measured NVIDIA-order impact from hyperscaler cash and capex changes."
+    "Cause and durability of the guided gross-margin decline.",
+    "Governance outcome and any lasting customer or regulatory effects.",
+    "Authenticated same-basis valuation and confirmed price repair."
   ],
   "decisive_factors": [
-    "Realized quarterly revenue and operating profit are strong.",
-    "Provider FCF remains positive but fell sequentially.",
-    "Peer cloud growth and cash burn do not measure NVIDIA orders or cancellations."
+    "Latest observed operating strength conflicts with a confirmed technical decline.",
+    "The guided 74.8% to 71\u201372% gross-margin step-down is unresolved.",
+    "The bullish round-two confirmation requirements are explicitly unmet."
   ],
   "pipeline_mode": "in-session"
 }

@@ -1,18 +1,23 @@
 {
   "ticker": "JPM",
-  "judged_view": "buy",
-  "confidence": "medium",
-  "thesis": "JPMorgan supports a bounded franchise purchase with 23% normalized ROTCE, $16.9bn normalized quarterly earnings and 14.1% standardized CET1 at an estimated 13.24x forward reference. The bull decisively shows those returns already absorb the observed $2.5bn credit costs, so charging those losses against the thesis again would misstate current economics. Deposit growth and capital support resilience, while future credit deterioration and funding repricing remain genuine risks.",
-  "winning_side": "bull",
-  "strongest_counterexample": "Loan growth of 10% expands future credit exposure, card charge-offs are 3.34%, and only 4% ex-markets NII growth leaves less buffer if deposit costs rise; strong present returns do not insulate adverse-cycle shareholder losses.",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Neither side establishes a directional investment edge: the bull presents resilience observations and the bear correctly identifies underwriting gaps. Missing bank-risk evidence requires abstention, not a fabricated negative assessment or a buy based on a low provider multiple.",
+  "winning_side": "neither",
+  "strongest_counterexample": "The bank reports substantial positive earnings and equity, broadly stable recent debt and price still above SMA200; these could support a positive conclusion once bank-specific risk is properly assessed.",
   "invalidation_conditions": [
-    "Comparable-quarter normalized ROTCE below 23% with card charge-offs above 3.34% would undermine the observed return/credit compensation.",
-    "Standardized CET1 below the observed 14.1% together with normalized quarterly profit below $16.9bn would weaken the capital-supported purchase."
+    "Reconsider toward buy after current CET1, credit-quality, reserve and tangible-book figures are verified and show no deterioration against their prior comparable reports.",
+    "Reconsider toward sell if two consecutive comparable reports show worsening credit-loss measures and declining capital ratios, accompanied by lower reported earnings."
   ],
-  "evidence_gaps": [],
+  "evidence_gaps": [
+    "CET1, reserve adequacy, credit quality and provisions.",
+    "Tangible book, sustainable return profile and authenticated valuation.",
+    "Composition of the observed sequential earnings decline."
+  ],
   "decisive_factors": [
-    "Normalized income excludes significant gains and is after current credit costs.",
-    "Bank capital and franchise growth, rather than industrial FCF or a predicted NIM uplift, support the ruling."
+    "Bank-specific capital and credit evidence is missing.",
+    "Industrial FCF and debt ratios are inappropriate substitutes.",
+    "Weak near-term price momentum does not independently establish a broken bank."
   ],
   "pipeline_mode": "in-session"
 }

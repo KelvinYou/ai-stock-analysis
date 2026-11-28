@@ -1,18 +1,23 @@
 {
   "ticker": "MSFT",
-  "judged_view": "buy",
+  "judged_view": "neutral",
   "confidence": "medium",
-  "thesis": "Microsoft supports a funded-compounding purchase: operating income grew 21%, adjusted EPS 22%, and annual cash FCF remained $66.987bn despite nearly doubled capex. Rising CFO and a $36.549bn liquid surplus excluding leases give the bull measured financing and growth support at 30.63x OpenAI-adjusted FY earnings. The 6.5% FCF decline and premium valuation constrain conviction, but imperfect conversion does not outweigh the large positive cash engine.",
-  "winning_side": "bull",
-  "strongest_counterexample": "Cash FCF declined while earnings grew, and its cash-PP&E definition excludes noncash equipment and some lease demands; poor incremental cloud returns could compress the premium despite accounting growth.",
+  "thesis": "The bull establishes business quality but not a present entry valuation, and the bear establishes timing and cash-conversion concerns without showing permanent impairment. A neutral watch stance best represents that distinction; a strong MA-distance rank does not override the short-term deterioration.",
+  "winning_side": "neither",
+  "strongest_counterexample": "Revenue, operating income and adjusted EPS grew in the official release while observed leverage remained modest, leaving substantial capacity to fund growth through temporary cash-conversion pressure.",
   "invalidation_conditions": [
-    "Next comparable annual cash FCF below $66.987bn alongside no year-on-year operating-income growth would undermine the funded-compounding basis.",
-    "A comparable year with cash PP&E exceeding CFO, from $115.948bn versus $182.935bn, would invalidate the positive cash-funding foundation."
+    "Reconsider toward buy if price holds above SMA50 for five consecutive closes and the next report shows FCF above the current $18.633B observation.",
+    "Reconsider toward sell if revenue declines year over year for two reported quarters and FCF falls below the current observation in both."
   ],
-  "evidence_gaps": [],
+  "evidence_gaps": [
+    "Authenticated current valuation and benchmark.",
+    "Return and cash-conversion path of the growing investment commitments.",
+    "Verified durable earnings impact, if any, of the service disruption or new launches."
+  ],
   "decisive_factors": [
-    "CFO increased from $136.162bn to $182.935bn, establishing actual internal funding growth.",
-    "Adjusted EPS basis avoids investment-gain cheapness; technical extension argues for deliberate timing."
+    "Strong official growth and high profitability.",
+    "FCF lower than the year-ago observation with higher capex.",
+    "Price below SMA20/50 despite positive longer-term MA distance."
   ],
   "pipeline_mode": "in-session"
 }

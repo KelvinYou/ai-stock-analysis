@@ -2,17 +2,22 @@
   "ticker": "AMZN",
   "judged_view": "neutral",
   "confidence": "medium",
-  "thesis": "Amazon has a strong operating business but a presently weaker owner-cash return proposition. The bear carries the financing objection: negative $7.604bn TTM FCF and a $63.246bn increase in long-term debt coexist with material leases, while investment gains distort trailing cheapness. Rising AWS profitability and $161.403bn TTM CFO make successful reinvestment plausible, so restraint is warranted without asserting investment failure.",
-  "winning_side": "bear",
-  "strongest_counterexample": "AWS operating income rose from $10.2bn to $16.6bn and TTM CFO grew 33%; this expanding internal funding engine and $122.988bn liquidity can support cash recovery before a clear backward-looking signal appears.",
+  "thesis": "Delivered demand is strong enough to keep Amazon eligible for research, but the evidence does not establish that investment earns adequate owner returns at the current price. Positive trend evidence and negative cash evidence remain unresolved rather than canceling into a confident purchase.",
+  "winning_side": "neither",
+  "strongest_counterexample": "Operating margin improved to 13.9%, AWS grew 39.3%, and price remains above both SMA50 and SMA200; these are real operating and market positives rather than spending alone.",
   "invalidation_conditions": [
-    "A reported TTM FCF above zero using the same net-PP&E definition, with long-term debt no higher than $128.894bn, would substantially defeat the present funding-gap objection.",
-    "AWS operating income below the observed $16.6bn in a comparable quarter alongside persistently negative TTM FCF would weaken the retained upside case."
+    "Reconsider toward buy after reported trailing-year FCF turns positive and total debt does not rise against the current observation.",
+    "Reconsider toward sell if AWS revenue growth turns negative in two consecutive reports while trailing-year FCF remains negative."
   ],
-  "evidence_gaps": [],
+  "evidence_gaps": [
+    "Bridge from investment outflow to sustainable owner cash generation.",
+    "Complete liquidity, debt-maturity and financing commitments.",
+    "Authenticated valuation excluding investment-gain distortions."
+  ],
   "decisive_factors": [
-    "Capex already exceeds operating cash and debt has increased materially.",
-    "Operating growth is genuine, but 20.23x trailing earnings includes exceptional investment gains; estimated 24.47x forward is conditional."
+    "Official trailing-year FCF is negative $42.4B.",
+    "Operating margin and cloud demand improved.",
+    "No authenticated valuation or investment-return bridge."
   ],
   "pipeline_mode": "in-session"
 }
