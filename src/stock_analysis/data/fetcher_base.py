@@ -28,20 +28,30 @@ def reject_unusable_bars(ticker: str, bars: list[PriceBar]) -> list[PriceBar]:
     return audit.bars
 
 
-def has_splits_since(stock, since: date) -> bool:
-    """True if the yfinance Ticker has any split on/after ``since``.
+def _has_event_since(events, since: date) -> bool:
+    if events is None or events.empty:
+        return False
+    return any(idx.date() >= since for idx in events.index)
 
-    yfinance returns split/dividend-adjusted closes, so a split invalidates
-    previously stored historical bars — callers use this to decide whether
-    to fall back from an incremental to a full refetch.
+
+def has_adjustments_since(stock, since: date) -> bool:
+    """True if the yfinance Ticker has a split or dividend on/after ``since``.
+
+    yfinance returns split- and dividend-adjusted closes, so either event
+    rewrites every bar before its ex-date and invalidates the stored history.
+    Callers use this to fall back from an incremental to a full refetch for
+    that ticker alone, instead of rewriting every ticker on a fixed schedule.
+    A lookup failure counts as no event; the scheduled full resync is the
+    backstop for that case.
     """
-    try:
-        splits = stock.splits
-    except Exception:
-        return False
-    if splits is None or splits.empty:
-        return False
-    return any(idx.date() >= since for idx in splits.index)
+    for attribute in ("splits", "dividends"):
+        try:
+            events = getattr(stock, attribute)
+        except Exception:
+            continue
+        if _has_event_since(events, since):
+            return True
+    return False
 
 
 class BaseFetcher(ABC):

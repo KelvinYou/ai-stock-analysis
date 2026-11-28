@@ -40,7 +40,8 @@ def _fetch_one(
 
     Incremental by default: asks yfinance only for bars from the last stored date
     onward, then merges into the configured storage backend. ``full=True`` forces a
-    full history refetch (used weekly to resync dividend-adjusted historical closes).
+    full history refetch: the monthly backstop, since a split or dividend already
+    triggers one for that ticker.
 
     Returns (ok, symbol_or_ticker, newest_bar_date). Output is serialized via a
     module-level lock.
@@ -190,7 +191,7 @@ def cli():
         action="store_true",
         help=(
             "Force a full history refetch instead of the default incremental append. "
-            "Use weekly to resync dividend-adjusted historical closes."
+            "Splits and dividends already trigger one per ticker; scheduled monthly as a backstop."
         ),
     )
     parser.add_argument("--verbose", "-v", action="store_true")

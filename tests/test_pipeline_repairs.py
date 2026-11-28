@@ -179,6 +179,56 @@ def test_live_fetch_retains_history_currency_and_separate_close_without_mixing_p
     assert result.financials.share_basis is None
 
 
+def test_adjustment_events_force_full_refetch_only_when_on_or_after_last_bar():
+    from unittest.mock import Mock, PropertyMock
+
+    import pandas as pd
+
+    from stock_analysis.data.fetcher_base import has_adjustments_since
+
+    def stock(splits=(), dividends=()):
+        s = Mock()
+        s.splits = pd.Series(1.0, index=pd.to_datetime(list(splits)), dtype=float)
+        s.dividends = pd.Series(0.5, index=pd.to_datetime(list(dividends)), dtype=float)
+        return s
+
+    last_bar = date(2026, 11, 20)
+    assert not has_adjustments_since(stock(), last_bar)
+    assert not has_adjustments_since(stock(dividends=["2026-11-19"]), last_bar)
+    assert has_adjustments_since(stock(dividends=["2026-11-20"]), last_bar)
+    assert has_adjustments_since(stock(splits=["2026-11-24"]), last_bar)
+
+    # A failed lookup on one event type must not hide the other.
+    broken = stock(dividends=["2026-11-25"])
+    type(broken).splits = PropertyMock(side_effect=RuntimeError("upstream"))
+    assert has_adjustments_since(broken, last_bar)
+
+
+def test_incremental_fetch_falls_back_to_full_history_after_dividend():
+    from unittest.mock import Mock
+
+    import pandas as pd
+
+    from stock_analysis.data.us_market import USMarketFetcher
+
+    stock = Mock()
+    stock.info = {"shortName": "TEST", "currency": "USD"}
+    stock.splits = pd.Series(dtype=float)
+    stock.dividends = pd.Series([0.5], index=pd.to_datetime(["2026-11-24"]))
+    stock.quarterly_income_stmt = stock.quarterly_balance_sheet = pd.DataFrame()
+    stock.quarterly_cashflow = pd.DataFrame()
+    stock.income_stmt = stock.balance_sheet = stock.cashflow = pd.DataFrame()
+    stock.news = []
+    stock.recommendations = pd.DataFrame()
+    stock.history.return_value = pd.DataFrame(
+        {"Open": [10], "High": [11], "Low": [9], "Close": [10], "Volume": [1000]},
+        index=pd.to_datetime(["2026-11-25"]),
+    )
+    with patch("stock_analysis.data.us_market.yf.Ticker", return_value=stock):
+        USMarketFetcher(period="10y").fetch("TEST", start_date=date(2026, 11, 20))
+    stock.history.assert_any_call(period="10y")
+
+
 def test_sentiment_does_not_call_model_for_expired_news():
     import asyncio
     from unittest.mock import AsyncMock

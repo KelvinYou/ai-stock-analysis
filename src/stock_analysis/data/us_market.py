@@ -13,7 +13,7 @@ from stock_analysis.models.market_data import (
 )
 
 from .evidence import normalize_news_item
-from .fetcher_base import BaseFetcher, has_splits_since, reject_unusable_bars
+from .fetcher_base import BaseFetcher, has_adjustments_since, reject_unusable_bars
 from .live_evidence import financial_history, plain_close, stamp_current_capture
 
 
@@ -43,9 +43,9 @@ class USMarketFetcher(BaseFetcher):
             fifty_two_week_low=info.get("fiftyTwoWeekLow"),
         )
 
-        # yfinance returns split-adjusted closes, so any split since start_date
-        # invalidates stored historical prices — fall back to a full refetch.
-        if start_date is not None and has_splits_since(stock, start_date):
+        # yfinance returns split- and dividend-adjusted closes, so either event
+        # since start_date invalidates stored history — fall back to a full refetch.
+        if start_date is not None and has_adjustments_since(stock, start_date):
             start_date = None
 
         hist = (

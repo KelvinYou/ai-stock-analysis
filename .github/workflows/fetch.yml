@@ -2,16 +2,16 @@ name: Daily Market Data Fetch
 
 on:
   schedule:
-    # US: 6:30pm ET (30 min after 4pm close). Run twice so it fires post-close
-    # in both DST (22:30 UTC, Mar–Nov) and standard time (23:30 UTC, Nov–Mar).
-    - cron: '30 22 * * 1-5'
-    - cron: '30 23 * * 1-5'
-    # MY (Bursa, UTC+8): close 5pm MYT = 9am UTC. Fetch 1h later.
-    - cron: '0 10 * * 1-5'
-    # Saturday 02:00 UTC: weekly full resync for both markets. yfinance returns
-    # split/dividend-adjusted closes, so incremental appends slowly drift out of
-    # sync with the live adjustment; this refetch repairs the historical series.
-    - cron: '0 2 * * 6'
+    # One run per trading day, Tue–Sat 00:30 UTC: after the US close in both
+    # EDT (20:00 UTC) and EST (21:00 UTC), and long after Bursa (09:00 UTC).
+    # Each run re-requests the newest stored bar, so a later revision of the
+    # close is picked up the next day.
+    - cron: '30 0 * * 2-6'
+    # 1st of the month 02:00 UTC: full resync backstop. A split or dividend
+    # already forces a full refetch for that ticker (has_adjustments_since);
+    # this catches lookups that failed. It used to run weekly and rewrote every
+    # adjusted bar of every ticker, which was most of the repository's growth.
+    - cron: '0 2 1 * *'
   workflow_dispatch:
     inputs:
       full:
@@ -54,7 +54,7 @@ jobs:
         run: |
           set -euo pipefail
           FLAGS=""
-          if [ "$SCHEDULE" = "0 2 * * 6" ] || [ "$FULL_INPUT" = "true" ]; then
+          if [ "$SCHEDULE" = "0 2 1 * *" ] || [ "$FULL_INPUT" = "true" ]; then
             FLAGS="--full"
           fi
           stock-fetch --from-file tickers.txt --workers 8 $FLAGS -v
