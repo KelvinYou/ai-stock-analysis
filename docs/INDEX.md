@@ -7,7 +7,7 @@ This index routes durable project knowledge. Read only the documents relevant to
 | Task | Owner to read |
 |---|---|
 | Shared agent constraints | [AGENTS.md](../AGENTS.md) |
-| Setup, CLI usage and product workflows | [README](../README.md), [development](development.md) |
+| Setup, CLI usage, data refresh schedule, releases and product workflows | [README](../README.md), [development](development.md) |
 | Pipeline shape and generated overview | [architecture](../architecture.md), [pipeline.json](../pipeline.json) |
 | Data, agent, synthesis, memory and API invariants | [Pipeline guide](pipeline-guide.md) |
 | Backtests and portfolio comparisons | [Backtesting](backtesting.md) |

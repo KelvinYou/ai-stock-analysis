@@ -1,0 +1,49 @@
+name: Release
+
+# Publishes a GitHub Release when a version tag is pushed. The notes are the
+# tag's section of CHANGELOG.md, which carries the hand-written results
+# comparability statement, so a tag without that section fails here instead of
+# producing an empty release. Process: docs/development.md#releases.
+
+on:
+  push:
+    tags: ['v[0-9]+.[0-9]+.[0-9]+']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      # Full history: hatch-vcs and the ancestry check both need tags and main.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # CI already ran on the commit when it reached main; a tag on any other
+      # branch would publish code that never passed it.
+      - name: Require the tagged commit to be on main
+        run: git merge-base --is-ancestor "$GITHUB_SHA" origin/main
+
+      - name: Extract release notes from CHANGELOG.md
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          VERSION="${TAG#v}"
+          awk -v heading="## [${VERSION}]" '
+            index($0, heading) == 1 { found = 1; next }
+            found && /^## \[/ { exit }
+            found { print }
+          ' CHANGELOG.md > notes.md
+          if ! grep -q '[^[:space:]]' notes.md; then
+            echo "ERR: CHANGELOG.md has no section for ${VERSION}" >&2
+            exit 1
+          fi
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: gh release create "$TAG" --verify-tag --title "$TAG" --notes-file notes.md
