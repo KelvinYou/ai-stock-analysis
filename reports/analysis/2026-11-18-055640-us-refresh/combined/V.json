@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E unavailable. Provider trailing 34.62x/forward 24.32x unauthenticated; no verified sector or own-history discount can be claimed.",
+    "margin_analysis": "September30 operating margin 63.7%, compared with 65.7% year ago and 61.3% in June. Net margin 49.4%; FCF $6.893B above net income $6.002B.",
+    "debt_analysis": "Total debt $22.071B versus equity $36.111B; debt below year-ago $25.171B. Inference: observed cash generation supports resilience, but net debt and maturity structure are unavailable.",
+    "growth_outlook": "Canonical comparable revenue +13.19%, net income +17.92% YoY; five increasing quarterly revenue observations. Latest statement September30, 49 days old.",
+    "key_risks": [
+      "Year-ago operating-margin compression despite profit growth.",
+      "No authenticated price discount, net-debt or local filing-risk evidence.",
+      "No filing index; legal and regulatory risk details require sourced supplemental evidence."
+    ],
+    "key_strengths": [
+      "Consistent observed revenue growth and strong FCF conversion.",
+      "Debt below year-ago level with high observed profitability."
+    ],
+    "summary": "Fundamentals lean buy at medium confidence on consistent growth and cash generation. This does not imply the current share price is cheap or resolve technical timing."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Visa reported October 27 quarterly revenue growth of 13% and a dividend increase; November 16 Reuters reporting describes the request for approval of the merchant settlement. Final approval and financial consequences remain unresolved. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=9, buy=26, hold=4, sell=0, strong_sell=1. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.streetinsider.com/Reuters/Visa%2C%2BMastercard%2Burge%2Bapproval%2Bof%2B%2438%2Bbillion%2Bswipe%2Bfee%2Bsettlement/27353166.html; https://www.sec.gov/Archives/edgar/data/1403161/000140316126000126/q42026earningsrelease.htm",
+    "key_themes": [
+      "Payments growth",
+      "Dividend increase",
+      "Settlement approval uncertainty"
+    ],
+    "notable_headlines": [
+      "Visa, Mastercard urge approval of $38 billion swipe fee settlement",
+      "Visa Reports Fiscal Fourth Quarter and Full-Year 2026 Results"
+    ],
+    "social_sentiment": null,
+    "summary": "Operating and dividend news is positive while the merchant settlement still needs court approval. The hearing is not evidence that the litigation overhang has been eliminated."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "Long-term and intermediate uptrend above SMA50/200, with short-term consolidation near SMA20.",
+    "rsi_14": 59.3371,
+    "rsi_assessment": "RSI 59.34 is constructive without being overbought.",
+    "macd_assessment": "MACD line remains positive at +8.7298, but histogram -1.4359 shows cooling momentum.",
+    "volume_assessment": "Latest volume 0.81x average; the pullback lacks exceptional distribution volume.",
+    "support_levels": [
+      394.0,
+      416.41
+    ],
+    "resistance_levels": [
+      430.99,
+      442.23
+    ],
+    "summary": "V remains 6.23% above SMA50 and 19.98% above SMA200; its 60-bar gain is 8.99%. The positive trend supports a modest buy signal, but cooling MACD and a 1.47% five-bar decline argue for patience with entry timing rather than chasing."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "Payments depend on nominal spending and cross-border activity, but this snapshot contains neither a spending-volume forecast nor an FX forecast."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Financial Services: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. Payments depend on nominal spending and cross-border activity, but this snapshot contains neither a spending-volume forecast nor an FX forecast. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Provider-reported trailing P/E is 37.51 and forward P/E is 15.09 at a 2026-11-06 close of 293.69 (market cap about 1.40T USD). The gap between trailing and forward P/E implies the provider expects earnings to roughly 2.5x on a forward basis (inference); the forward estimate is not verified here. No sector average is available in the data, so no relative-valuation claim is made. The price is 40.7% below the 52-week high of 495.0 and only about 1.4% above the 52-week low of 289.767.",
+    "margin_analysis": "Latest quarter (FQ ended 2026-07-31): gross margin 69.1%, operating margin 54.3%, net margin 44.2%. Year over year (vs quarter ended 2025-07-31) operating margin rose from 38.1% to 54.3% and net margin from 26.0% to 44.2%, while gross margin moved from 67.1% to 69.1%. Gross margin has stayed in a 67-69% band across all five quarters, so the margin expansion is mostly operating leverage (inference).",
+    "debt_analysis": "Reported total debt is 59.42B USD against equity of 99.69B USD (debt/equity about 0.60), down from 64.23B debt and 73.28B equity a year earlier (debt_scope=reported_total). Debt fell about 7.5% YoY while equity grew about 36%. Cash and interest-coverage data are not in the evidence, so net debt and coverage cannot be assessed. Quarterly FCF of 13.67B USD is about 23% of total debt in a single quarter (inference).",
+    "growth_outlook": "Comparable quarters (FQ ended 2026-07-31 vs 2025-07-31): revenue 29.59B vs 15.95B (+85.5%), net income 13.09B vs 4.14B (+216%), FCF 13.67B vs 7.02B (+94.6%), diluted EPS 2.68 vs 0.85. Sequentially revenue rose +33.4% from 22.19B in the April quarter, and revenue has risen every quarter in the five-quarter history (15.95B, 18.02B, 19.31B, 22.19B, 29.59B). The most recent statement is about 14 weeks old and the next fiscal-year-end results are not yet in the data. Forward growth beyond this is not observable from the data; the low forward P/E hints at provider expectations of continued earnings growth (inference). Analyst consensus is strongly positive: 8 strong buy, 41 buy, 2 hold, 0 sell (stable to improved over 3 months), but no price targets are provided.",
+    "key_risks": [
+      "Valuation is not cheap on trailing earnings: trailing P/E 37.51 (provider) with the forward P/E 15.09 dependent on unverified earnings expectations.",
+      "Price is down sharply: 293.69 is 40.7% below the 52-week high of 495.0 and near the 52-week low of 289.767; beta of 1.508 implies above-market volatility. A news headline cites a roughly 22% decline over the past month, which is a headline claim, not verified data.",
+      "Growth concentration and step change: revenue +33.4% QoQ and +85.5% YoY is a very high base; any single-quarter slowdown would compress the multiple (inference). The data does not identify the source of growth.",
+      "Evidence gaps: search_filings was unavailable (available=false), so no filing-based risks are included; cash balance, interest coverage, share count and analyst price targets are missing, and only five quarters of history exist with the oldest quarter empty.",
+      "Data is provider-sourced (Yahoo) and the latest financial period ended 2026-07-31, so it may be stale relative to upcoming fiscal-year-end results."
+    ],
+    "key_strengths": [
+      "Exceptional profitability: operating margin 54.3% and net margin 44.2% in the latest quarter, up from 38.1% and 26.0% a year earlier.",
+      "Strong and growing cash generation: quarterly FCF 13.67B USD (+94.6% YoY), FCF margin about 46% of revenue (inference).",
+      "Improving balance sheet: debt fell to 59.42B USD from 64.23B a year ago while equity rose to 99.69B USD (debt/equity about 0.60).",
+      "Rapid, consistent revenue growth across five consecutive quarters, with diluted EPS 2.68 vs 0.85 a year ago.",
+      "Sell-side consensus is overwhelmingly positive (49 of 51 ratings buy or strong buy, no sells), with a 0.89% dividend yield providing a modest income component."
+    ],
+    "summary": "AVGO's latest quarter (ended 2026-07-31) shows revenue +85.5% YoY to 29.59B USD, a 54.3% operating margin, 13.67B USD FCF and a moderate debt/equity of about 0.60. The stock trades near its 52-week low at 293.69 with a 37.5 trailing but 15.1 forward P/E (provider-reported). Fundamentals are strong and valuation looks reasonable on forward numbers, but the missing filing search, cash and price-target data and the stale-by-14-weeks statement limit conviction, so the signal is buy with medium confidence."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "mixed",
+    "news_summary": "Ten dated headlines (Nov 6-7, 2026) split between a bullish AI-revenue narrative (Motley Fool: 'AI Revenue Is Exploding'; IBD: AI names rebound after sell-off) and negative items: AVGO down 22% in the past month (24/7 Wall St., Nov 6), ARK Invest selling AVGO (IBD, Stocktwits, Nov 6-7), and customer-concentration risk (TIKR: Anthropic's 'down quarter' highlights a $161B Broadcom risk). Web search (MarketBeat alert) reported AVGO down about 10% intraday on Nov 5 to roughly $291, but a Trefis page listed a conflicting Nov 5 price, so the move size is unverified; no source confirmed a cause beyond general AI-infrastructure nervousness and valuation compression.",
+    "key_themes": [
+      "AI revenue strength vs. valuation compression after a ~22% one-month drawdown",
+      "AI-infrastructure sell-off with partial rebound (IBD: Nvidia and other AI names rebound)",
+      "Customer concentration risk tied to Anthropic (TIKR headline; article body not reviewed)",
+      "Institutional trimming: ARK Invest sold AVGO while adding NVDA, AMD, GOOG",
+      "Broader AI-buildout financing scrutiny (Oracle test after AI selloff, CoreWeave in movers list)"
+    ],
+    "notable_headlines": [
+      "Cathie Wood-Led Ark Loads Up On GOOG, AMD, NVDA And Biotech Stocks \u2014 But Sells CRWV, AVGO, LLY",
+      "Nvidia Stock, Other AI Names Rebound After Sell-Off",
+      "Broadcom's AI Revenue Is Exploding. Here's What Investors Should Watch Next.",
+      "Anthropic\u2019s \u201cDown Quarter\u201d Highlights Broadcom\u2019s $161 Billion Risk",
+      "Broadcom Is Still Down 22% in the Past Month: Is AVGO Stock Really on a Road to Recovery?",
+      "Oracle Faces Major Wall Street Test After AI Selloff",
+      "Cathie Wood Makes $437 Million In Trades. Adds Nvidia, SpaceX; Offloads Broadcom"
+    ],
+    "social_sentiment": null,
+    "summary": "Headline tone is mixed: constructive AI-revenue commentary and a sector rebound on Nov 6 offset a ~22% monthly drawdown, ARK selling and Anthropic concentration concerns. Each is a single-source headline rather than a confirmed trend, and a one-day rebound does not establish reversal, so no directional view is assigned. Gaps: no analyst recommendations, hyperscaler capex commentary or OpenAI exposure detail was found; the next earnings date is only projected (about Dec 10, 2026, unconfirmed by the company)."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "Downtrend: close 293.69 is below SMA-20 (332.13), SMA-50 (347.69) and SMA-200 (366.10), with SMAs stacked in descending order. Price is 40.5% below the 52-week high (493.32) and only 1.6% above the 52-week low (288.98). The 2026-11-05 bar gapped down from 325.48 to 291.53 on 53.8M shares.",
+    "rsi_14": 34.524,
+    "rsi_assessment": "RSI-14 at 34.5 is weak but not oversold (<30 threshold); it leaves room for further downside, though momentum is approaching stretched territory.",
+    "macd_assessment": "MACD line -11.92 is below signal -8.25 with a negative histogram of -3.66, indicating bearish momentum that is still strengthening.",
+    "volume_assessment": "Latest volume of 32.38M is 1.36x the 20-day average (23.89M), and the prior bar on 2026-11-05 printed 53.8M. Heavy volume on the decline supports the selling pressure rather than contradicting it.",
+    "support_levels": [
+      289.77,
+      288.98
+    ],
+    "resistance_levels": [
+      311.52,
+      314.0,
+      321.68,
+      332.13,
+      347.69
+    ],
+    "summary": "AVGO is in a clear downtrend, below all three moving averages, with a negative and widening MACD histogram and RSI of 34.5 (not yet oversold). Price sits at the lower Bollinger Band (297.46; %B -0.05) with ATR-14 of 15.14, so a bounce is possible, but support at the 52-week low (288.98) is only about 1.6% away and a break would open further downside. Confirmation by elevated volume favors a bearish bias with medium confidence."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "The FOMC held the fed funds target range at 3.75%-4.00% on 2026-10-28 by a 10-2 vote. Governor Cook and Cleveland Fed President Hammack dissented in favor of a hike. The statement kept 'inflation remains elevated', and one report says it upgraded its growth assessment to 'strong'. The policy bias is hawkish rather than easing. That raises the discount rate applied to long-duration, high-multiple AI-semiconductor equity such as AVGO. Broadcom also carries sizeable debt (not verified in this run), so higher-for-longer rates matter for its financing costs. No file or search supplied a dated AVGO-specific rate sensitivity, so the directional effect is inferred rather than observed.",
+    "interest_rate_outlook": "The next FOMC meeting is 2026-12-08/09, with the decision on Dec 9 and a new dot plot. One October-dated source says markets were pricing a possible further 25bp hike, but I could not confirm current market pricing after the October 2026 jobs report. The October payrolls report (released 2026-11-06) showed +165k jobs, above expectations. Bond yields rose afterward and Treasuries sold off on strong data backing a Fed hike. The 10Y yield was reported at about 4.87%-4.90% on Nov 6 (4.868% in one source, 4.898% in another). Sources disagree and no primary Treasury figure was checked. The December outcome is open, with hold versus hike both plausible. The macro_snapshot in data/AVGO/fundamentals.json is null, so there is no repo-supplied macro evidence.",
+    "fx_impact": "Not materially relevant. AVGO is USD-listed and USD-reporting. No FX data was supplied and none was searched, so no FX view is assigned.",
+    "sector_macro_factors": [
+      "AI capex: search results (secondary sources, mostly 2025 to H1 2026) say hyperscalers (Microsoft, Meta, Google, Amazon, Oracle) raised FY25/FY26 capex forecasts. This supports demand for Broadcom custom AI silicon. Nothing from Nov 2026 was found, so the current capex trajectory is a gap.",
+      "Custom-silicon demand: a March 2026 report put Broadcom AI infrastructure revenue at $8.4B, with OpenAI as a sixth custom-chip customer. Google TPU co-development is mentioned. These are secondary, dated sources and were not verified against Broadcom filings.",
+      "Rate-sensitive valuation: with a hawkish Fed and a 10Y near 4.9%, high-multiple semiconductor equities face valuation pressure if yields keep rising. This is an inference from the observed yield level, not a measured AVGO effect.",
+      "Gap: no Nov 2026 semiconductor-sector macro data (SOX, DRAM/AI demand indicators) was found."
+    ],
+    "geopolitical_risks": [
+      "Export controls: a March 2026 report said the administration was drafting broad licensing requirements for nearly all AI chip exports. It was not finalized then, and the current status as of Nov 2026 is unconfirmed.",
+      "Tariffs: chips were initially exempted from reciprocal tariffs (April 2025 report), and a pause on new Section 301 tariffs on Chinese semiconductors was reported without a clear date. Current status is unconfirmed.",
+      "Huawei and Chinese AI-chip competition appears in headlines, but no dated detail was verified.",
+      "Gap: no confirmed Nov 2026 export-control, tariff or Taiwan-supply-chain developments were found."
+    ],
+    "summary": "The Fed held at 3.75%-4.00% on Oct 28 with two dissents for a hike. The strong October payrolls (+165k, Nov 6) pushed the 10Y to about 4.9% and raised the odds of a December hike (Dec 9). AI-capex and custom-silicon demand is supportive, but the evidence is dated and secondary, and the hawkish rate backdrop weighs on high-multiple valuation. The macro_snapshot is empty and several search figures conflict, so the net view is neutral with low confidence."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,67 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E and market cap unavailable; provider trailing 13.84x/forward 12.90x unauthenticated. Bank valuation requires tangible book and sustainable returns, not an industrial-company FCF multiple; these are missing.",
+    "margin_analysis": "September30 net income $15.305B and net margin 30.5%; operating/gross margins unavailable. June net income $21.155B versus current $15.305B is an observed sequential decline; its cause is unavailable. Bank cash-flow swings must not be interpreted as ordinary operating FCF trends.",
+    "debt_analysis": "Provider total debt $531.499B and equity $372.368B are observed totals, not a complete bank capital or liquidity assessment. CET1, reserve adequacy, nonperforming loans and asset/liability duration unavailable; do not classify bank leverage by industrial ratios.",
+    "growth_outlook": "Canonical exact-duration comparable growth unavailable, although history has year-ago values. Current revenue $50.172B; financial period September30, 49 days old. Do not infer a durable earnings trend from one year-ago pair.",
+    "key_risks": [
+      "Missing CET1, credit-quality, provision and reserve data prevent a full bank-risk assessment.",
+      "Sequential reported net-income decline; earnings composition not provided.",
+      "No filing index and no authenticated valuation."
+    ],
+    "key_strengths": [
+      "Positive reported earnings and equity.",
+      "Debt roughly stable relative to the preceding observation."
+    ],
+    "summary": "Neutral pending bank-specific capital, credit and valuation evidence. The lower provider P/E alone is insufficient to rank JPM as the best buy."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "negative",
+    "news_summary": "AP reported on November 16 that Chase resolved a software problem affecting transactions. The reporting did not establish a cyberattack or quantify lasting financial damage. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=5, buy=10, hold=11, sell=0, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://apnews.com/article/aeb4b0d6b6789c8c96bb2520454a6d1e",
+    "key_themes": [
+      "Resolved software incident",
+      "Operational reliability"
+    ],
+    "notable_headlines": [
+      "What to know about the online banking delays that affected major US banks"
+    ],
+    "social_sentiment": null,
+    "summary": "The resolved service problem is a negative headline but offers no established lasting earnings impact. It does not by itself justify a directional sell call, and the aggregate ratings have not changed."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Long-term trend still above SMA200, but short-term price has broken below SMA20/50.",
+    "rsi_14": 43.9974,
+    "rsi_assessment": "RSI 44.00 signals weak momentum rather than oversold conditions.",
+    "macd_assessment": "MACD line +0.2071 is near zero and histogram -0.4559 is bearish.",
+    "volume_assessment": "Latest volume 1.26x average during a down session, adding some weight to short-term distribution.",
+    "support_levels": [
+      324.2523,
+      328.74
+    ],
+    "resistance_levels": [
+      347.2,
+      359.8
+    ],
+    "summary": "JPM is just 2.23% above SMA200 after a 3.54% five-bar decline, and it has lost SMA50. The nearby 328.74 and 324.25 observed lows are relevant stabilization tests; the technical evidence does not yet favor an immediate new entry."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "Higher rates can support asset yields but also increase funding costs and credit stress; the net earnings effect is not established by this macro snapshot."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Financial Services: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. Higher rates can support asset yields but also increase funding costs and credit stress; the net earnings effect is not established by this macro snapshot. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  },
+  "pipeline_mode": "in-session"
+}

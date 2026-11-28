@@ -1,0 +1,73 @@
+{
+  "ticker": "NVDA",
+  "date": "2026-11-18",
+  "data_as_of": "2026-11-17",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.3077,
+    "explanation": "Zero directional conviction: mixed evidence or material underwriting gaps support the independent neutral judgment. Positive operating or trend evidence is acknowledged, but the debate does not establish a current directional edge. This is abstention, not a calibrated probability or a claim that risks cancel quantitatively."
+  },
+  "executive_summary": "Neutral: the November 17 official release reports October-quarter revenue of $115.844B, up 103%, while the November 17 tape remains below all principal averages with RSI 16.31 and elevated selling volume. The latest official quarter supersedes July provider data for current operating interpretation; it must not be spliced into that older quarter or annualized into a P/E. Management guides another revenue increase but lower gross margin, from 74.8% to 71\u201372%.\n\nInference: strong demand preserves the operating thesis, while the governance outcome, margin step-down and absent price repair prevent an immediate purchase case. I agree with the neutral research judgment: the strongest counterexample to waiting is the delivered growth and higher revenue guidance, but those do not resolve the entry objections. Extremely oversold conditions also make an aggressive negative thesis fragile.",
+  "bull_case": "The latest official quarter shows strong delivered revenue growth and profitability, directly contradicting an already-collapsed-demand thesis. Conditional upside remains if governance, margin guidance or the price trend improves; the bull does not claim those conditions are complete.",
+  "bear_case": "Strong revenue does not resolve the guided margin decline, governance uncertainty, absent authenticated valuation or high-volume downtrend. The prerequisites in the narrowed bullish case have not been observed.",
+  "key_uncertainties": [
+    "Cause and durability of the guided gross-margin decline.",
+    "Governance outcome and any lasting customer or regulatory effects.",
+    "Authenticated same-basis valuation and confirmed price repair."
+  ],
+  "catalysts_upcoming": [
+    "Conditional reassessment trigger: Reconsider toward buy if governance findings resolve the principal uncertainty and the next reported quarter delivers revenue within guidance without an additional guided gross-margin reduction.",
+    "Conditional reassessment trigger: Reconsider toward sell if the next reported revenue falls below the guided range and management attributes the shortfall to lost customer demand."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (2.25) \u2014 price may amplify broad-market moves.",
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 66.3% over available price history. Projected worst case (2-sigma): ~86.9% from current $155.46.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.31). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "NVDA",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "The bear narrowly carries the immediate-entry objection: the bull ultimately conditions purchase on events not yet observed. Strong latest demand prevents treating the selloff as proof of a broken operating franchise, so the ruling is neutral rather than a fundamental sell.",
+    "winning_side": "bear",
+    "strongest_counterexample": "Official quarterly revenue grew 103% and management guided another increase; this is direct evidence that customers have not abandoned the franchise despite the governance shock.",
+    "invalidation_conditions": [
+      "Reconsider toward buy if governance findings resolve the principal uncertainty and the next reported quarter delivers revenue within guidance without an additional guided gross-margin reduction.",
+      "Reconsider toward sell if the next reported revenue falls below the guided range and management attributes the shortfall to lost customer demand."
+    ],
+    "evidence_gaps": [
+      "Cause and durability of the guided gross-margin decline.",
+      "Governance outcome and any lasting customer or regulatory effects.",
+      "Authenticated same-basis valuation and confirmed price repair."
+    ],
+    "decisive_factors": [
+      "Latest observed operating strength conflicts with a confirmed technical decline.",
+      "The guided 74.8% to 71\u201372% gross-margin step-down is unresolved.",
+      "The bullish round-two confirmation requirements are explicitly unmet."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "neutral",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,112 @@
+{
+  "source": {
+    "name": "SEC XBRL CompanyFacts",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json",
+    "availability_rule": "fact filed date + one calendar day (date-only clock)",
+    "coverage_note": "Point-in-time financial facts from SEC filings; later restatements are excluded until the day after their filed date. All fiscal durations and known revisions are retained; share basis remains unverified and valuation requires a separate dated price replay."
+  },
+  "coverage": {
+    "AAPL": {
+      "status": "ok",
+      "records": 417,
+      "first_available": "2009-07-23",
+      "last_available": "2026-08-01"
+    },
+    "AMZN": {
+      "status": "ok",
+      "records": 541,
+      "first_available": "2009-07-25",
+      "last_available": "2026-08-01"
+    },
+    "AVGO": {
+      "status": "ok",
+      "records": 274,
+      "first_available": "2018-06-15",
+      "last_available": "2026-06-10"
+    },
+    "COST": {
+      "status": "ok",
+      "records": 435,
+      "first_available": "2010-03-18",
+      "last_available": "2026-06-04"
+    },
+    "ETN": {
+      "status": "ok",
+      "records": 304,
+      "first_available": "2012-11-15",
+      "last_available": "2026-08-01"
+    },
+    "GOOGL": {
+      "status": "ok",
+      "records": 253,
+      "first_available": "2015-10-30",
+      "last_available": "2026-07-24"
+    },
+    "IBM": {
+      "status": "ok",
+      "records": 322,
+      "first_available": "2009-07-29",
+      "last_available": "2026-07-24"
+    },
+    "JPM": {
+      "status": "ok",
+      "records": 228,
+      "first_available": "2009-08-11",
+      "last_available": "2026-08-07"
+    },
+    "META": {
+      "status": "ok",
+      "records": 297,
+      "first_available": "2012-08-01",
+      "last_available": "2026-07-31"
+    },
+    "MSFT": {
+      "status": "ok",
+      "records": 337,
+      "first_available": "2010-01-29",
+      "last_available": "2026-07-30"
+    },
+    "NFLX": {
+      "status": "ok",
+      "records": 425,
+      "first_available": "2009-08-01",
+      "last_available": "2026-07-18"
+    },
+    "NVDA": {
+      "status": "ok",
+      "records": 411,
+      "first_available": "2009-08-21",
+      "last_available": "2026-08-27"
+    },
+    "ORCL": {
+      "status": "ok",
+      "records": 264,
+      "first_available": "2009-09-22",
+      "last_available": "2026-06-23"
+    },
+    "TSLA": {
+      "status": "ok",
+      "records": 412,
+      "first_available": "2011-08-13",
+      "last_available": "2026-07-24"
+    },
+    "TSM": {
+      "status": "ok",
+      "records": 44,
+      "first_available": "2018-04-20",
+      "last_available": "2025-04-18"
+    },
+    "UNH": {
+      "status": "ok",
+      "records": 333,
+      "first_available": "2009-08-07",
+      "last_available": "2026-08-11"
+    },
+    "V": {
+      "status": "ok",
+      "records": 316,
+      "first_available": "2009-07-31",
+      "last_available": "2026-07-30"
+    }
+  }
+}

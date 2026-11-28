@@ -1,0 +1,72 @@
+{
+  "ticker": "JPM",
+  "date": "2026-11-18",
+  "data_as_of": "2026-11-17",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.0,
+    "explanation": "Zero directional conviction: mixed evidence or material underwriting gaps support the independent neutral judgment. Positive operating or trend evidence is acknowledged, but the debate does not establish a current directional edge. This is abstention, not a calibrated probability or a claim that risks cancel quantitatively."
+  },
+  "executive_summary": "Neutral pending bank-specific evidence: current net income of $15.305B and positive equity, broadly stable recent debt and price still above SMA200 are the strongest counterexample to abstaining. However, earnings declined sequentially from $21.155B without a supplied composition bridge, and near-term price momentum weakened below SMA20/50.\n\nInference: I agree with the low-confidence neutral research judgment because CET1, credit quality, reserve adequacy, tangible book and sustainable returns are unavailable. Industrial-company debt and FCF ratios cannot substitute for bank underwriting, and missing data are not evidence of insolvency. Supplemental reporting describes a resolved software incident without a quantified lasting loss; resolution is not an independent earnings catalyst or a verified valuation edge.",
+  "bull_case": "Positive earnings and equity, broadly stable recent debt and no verified lasting outage loss justify investigating resilience. The bull concedes bank capital, credit and tangible-book evidence must precede a confident purchase.",
+  "bear_case": "Missing CET1, reserve, credit and sustainable tangible-book-return evidence prevents underwriting the bank. The sequential earnings decline and weakening tape are unresolved, and a diversification benefit is not an entry valuation.",
+  "key_uncertainties": [
+    "CET1, reserve adequacy, credit quality and provisions.",
+    "Tangible book, sustainable return profile and authenticated valuation.",
+    "Composition of the observed sequential earnings decline."
+  ],
+  "catalysts_upcoming": [
+    "Conditional reassessment trigger: Reconsider toward buy after current CET1, credit-quality, reserve and tangible-book figures are verified and show no deterioration against their prior comparable reports.",
+    "Conditional reassessment trigger: Reconsider toward sell if two consecutive comparable reports show worsening credit-loss measures and declining capital ratios, accompanied by lower reported earnings."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Financial Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 43.6% over available price history. Projected worst case (2-sigma): ~42.0% from current $329.96.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.00). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "JPM",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Neither side establishes a directional investment edge: the bull presents resilience observations and the bear correctly identifies underwriting gaps. Missing bank-risk evidence requires abstention, not a fabricated negative assessment or a buy based on a low provider multiple.",
+    "winning_side": "neither",
+    "strongest_counterexample": "The bank reports substantial positive earnings and equity, broadly stable recent debt and price still above SMA200; these could support a positive conclusion once bank-specific risk is properly assessed.",
+    "invalidation_conditions": [
+      "Reconsider toward buy after current CET1, credit-quality, reserve and tangible-book figures are verified and show no deterioration against their prior comparable reports.",
+      "Reconsider toward sell if two consecutive comparable reports show worsening credit-loss measures and declining capital ratios, accompanied by lower reported earnings."
+    ],
+    "evidence_gaps": [
+      "CET1, reserve adequacy, credit quality and provisions.",
+      "Tangible book, sustainable return profile and authenticated valuation.",
+      "Composition of the observed sequential earnings decline."
+    ],
+    "decisive_factors": [
+      "Bank-specific capital and credit evidence is missing.",
+      "Industrial FCF and debt ratios are inappropriate substitutes.",
+      "Weak near-term price momentum does not independently establish a broken bank."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

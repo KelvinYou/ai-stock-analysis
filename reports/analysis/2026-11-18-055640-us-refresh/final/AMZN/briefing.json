@@ -1,0 +1,73 @@
+{
+  "ticker": "AMZN",
+  "date": "2026-11-18",
+  "data_as_of": "2026-11-17",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.25,
+    "explanation": "Zero directional conviction: mixed evidence or material underwriting gaps support the independent neutral judgment. Positive operating or trend evidence is acknowledged, but the debate does not establish a current directional edge. This is abstention, not a calibrated probability or a claim that risks cancel quantitatively."
+  },
+  "executive_summary": "Neutral: AWS sales grew 39.3% and operating margin improved to 13.9%, while price remains modestly above SMA50/200 with positive MACD. These are the strongest counterexample to deferring exposure. Against them, official trailing-year FCF is -$42.4B and observed debt is materially above its year-ago level. The provider quarterly FCF of -$34.837B is a separate duration and is not a substitute for the official trailing-year figure.\n\nInference: operating demand is real, but the cash-return and financing bridge required to justify ownership at the current price remains unavailable. I agree with the neutral research judgment: the surviving trend is insufficient to resolve negative owner cash and unauthenticated valuation. Supplemental reporting on Anthropic financing and a possible IPO is conditional context, not realized investment gains or proof of an Amazon funding crisis.",
+  "bull_case": "AWS demand and improving operating margin accompany the investment program, and price remains above SMA50/200. The bull concedes that staged sizing is not evidence of an edge and that the cash-conversion bridge is missing.",
+  "bear_case": "Negative trailing-year FCF and expanding debt leave the owner-return case unresolved. Constructive but modest technical evidence and prospective IPO exposure do not prove adequate investment returns or valuation support.",
+  "key_uncertainties": [
+    "Bridge from investment outflow to sustainable owner cash generation.",
+    "Complete liquidity, debt-maturity and financing commitments.",
+    "Authenticated valuation excluding investment-gain distortions."
+  ],
+  "catalysts_upcoming": [
+    "Conditional reassessment trigger: Reconsider toward buy after reported trailing-year FCF turns positive and total debt does not rise against the current observation.",
+    "Conditional reassessment trigger: Reconsider toward sell if AWS revenue growth turns negative in two consecutive reports while trailing-year FCF remains negative."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (1.50) \u2014 price may amplify broad-market moves.",
+      "Sector: Consumer Cyclical \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 56.1% over available price history. Projected worst case (2-sigma): ~63.7% from current $257.89.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.25). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "AMZN",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Delivered demand is strong enough to keep Amazon eligible for research, but the evidence does not establish that investment earns adequate owner returns at the current price. Positive trend evidence and negative cash evidence remain unresolved rather than canceling into a confident purchase.",
+    "winning_side": "neither",
+    "strongest_counterexample": "Operating margin improved to 13.9%, AWS grew 39.3%, and price remains above both SMA50 and SMA200; these are real operating and market positives rather than spending alone.",
+    "invalidation_conditions": [
+      "Reconsider toward buy after reported trailing-year FCF turns positive and total debt does not rise against the current observation.",
+      "Reconsider toward sell if AWS revenue growth turns negative in two consecutive reports while trailing-year FCF remains negative."
+    ],
+    "evidence_gaps": [
+      "Bridge from investment outflow to sustainable owner cash generation.",
+      "Complete liquidity, debt-maturity and financing commitments.",
+      "Authenticated valuation excluding investment-gain distortions."
+    ],
+    "decisive_factors": [
+      "Official trailing-year FCF is negative $42.4B.",
+      "Operating margin and cloud demand improved.",
+      "No authenticated valuation or investment-return bridge."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "buy",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

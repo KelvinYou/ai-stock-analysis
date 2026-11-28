@@ -1,0 +1,43 @@
+NVDA as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   NVDA: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings NVDA
+GOOGL as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   GOOGL: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings GOOGL
+AVGO as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   AVGO: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings AVGO
+MSFT as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   MSFT: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings MSFT
+AMZN as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   AMZN: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings AMZN
+META as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   META: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings META
+AAPL as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   AAPL: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings AAPL
+TSM as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   TSM: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings TSM
+V as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   V: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings V
+JPM as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   JPM: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings JPM
+COST as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   COST: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings COST
+UNH as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   UNH: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings UNH
+ETN as of 2026-11-18 (live): 3/4 evidence classes usable (need technical + 3 total) -> OK
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  note   ETN: no filing index, the fundamentals analyst cannot search 10-K/10-Q. Build it: SEC_USER_AGENT='<name> <email>' stock-filings ETN
+VT as of 2026-11-18 (live): 2/4 evidence classes usable (need technical + 3 total) -> INSUFFICIENT
+  gap    fundamentals/financials_missing: provider returned no statements
+  gap    sentiment/news_empty: no dated, independent headline inside the freshness window
+  repair macro/fred_primary: ok - built snapshot from FRED DFF + CPIAUCSL

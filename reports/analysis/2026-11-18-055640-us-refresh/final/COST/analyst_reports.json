@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E unavailable. Provider trailing 53.65x/forward 44.33x unauthenticated and not a verified valuation discount; no own-history benchmark supplied.",
+    "margin_analysis": "August31 operating margin 3.97%, versus 3.88% one year earlier; net margin 3.13%. Quarterly FCF $2.477B versus $1.901B in year-ago history. Fiscal quarter length and seasonal differences must be checked before sequential revenue comparisons.",
+    "debt_analysis": "Debt $8.576B versus equity $35.803B; slightly above year-ago $8.248B while equity also increased. Inference: measured leverage is modest; complete cash and lease liabilities unavailable.",
+    "growth_outlook": "Canonical comparable revenue +11.10%, net income +14.87% YoY. Statement August31, 79 days old; provider fiscal labels do not independently authenticate actual quarter duration.",
+    "key_risks": [
+      "Thin observed operating margin means operating-cost changes can materially affect profits (inference).",
+      "No authenticated valuation edge despite positive growth; provider multiples remain unverified.",
+      "No filing index; membership renewal and comparable-sales economics not supplied."
+    ],
+    "key_strengths": [
+      "Positive comparable revenue/profit growth and higher observed year-ago FCF.",
+      "Modest measured debt relative to equity."
+    ],
+    "summary": "Healthy observed fundamentals, but no demonstrated margin of safety at the current valuation. Neutral at medium confidence; avoid turning quality or price momentum into an unsupported cheapness claim."
+  },
+  "sentiment": {
+    "signal": "buy",
+    "confidence": "medium",
+    "news_tone": "positive",
+    "news_summary": "Bloomberg November 17 reporting describes Mizuho raising its target from $1,100 to $1,150; the November 4 company report showed October sales growth of 12.6%. The longevity of the demand boost is unproven. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=5, buy=20, hold=15, sell=1, strong_sell=1. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.ttnews.com/articles/costco-customers-panic-buying; https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-October-Sales-Results-2026.pdf",
+    "key_themes": [
+      "Stockpiling demand",
+      "Target increase",
+      "Monthly sales strength"
+    ],
+    "notable_headlines": [
+      "Costco benefiting as customers stock up amid outages",
+      "Costco Wholesale Corporation Reports October Sales Results"
+    ],
+    "social_sentiment": null,
+    "summary": "A dated analyst target increase and observed sales momentum support positive sentiment. Demand pulled forward by stockpiling may be temporary, so this is not independent proof the current valuation is attractive."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "Strong rising trend above SMA20/50/200 and near the 52-week high.",
+    "rsi_14": 81.7492,
+    "rsi_assessment": "RSI 81.75 is strongly overbought; a pullback or consolidation risk is elevated despite the trend.",
+    "macd_assessment": "MACD line +37.7197 and histogram +5.3935 show strong bullish momentum.",
+    "volume_assessment": "Latest volume 1.29x average confirms participation, although the latest session closed slightly down.",
+    "support_levels": [
+      1071.34,
+      1088.98
+    ],
+    "resistance_levels": [
+      1123.67
+    ],
+    "summary": "COST has gained 11.77% over 20 bars and is 13.91% above SMA200, with positive MACD and supportive volume. This is a bullish trend signal with entry-stretch risk: RSI 81.75 and proximity to the high make an immediate chase less attractive than the signal label alone suggests."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "Price pressure may support value-oriented demand while straining household budgets; neither net sales impact nor valuation support follows mechanically."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Consumer Defensive: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. Price pressure may support value-oriented demand while straining household budgets; neither net sales impact nor valuation support follows mechanically. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  },
+  "pipeline_mode": "in-session"
+}

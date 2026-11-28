@@ -1,0 +1,20 @@
+{
+  "ticker": "NFLX",
+  "judged_view": "buy",
+  "confidence": "medium",
+  "thesis": "Netflix has an operating-and-cash ownership case at an estimated 18.04x forward reference, with 13% revenue growth, 33.4% operating margin and $1.525bn Q2 FCF. The bull establishes that positive cash already follows $5.109bn content spending, preventing future commitments from being charged again to the current cash measure. Manageable stated net debt supports the case, while lower cash conversion and fee-enhanced headline valuation limit conviction.",
+  "winning_side": "bull",
+  "strongest_counterexample": "Q2 FCF fell from $2.267bn and margin from 34.1%; $25.107bn future content commitments and repurchases above quarterly FCF increase return sensitivity, while the $2.8bn fee prevents treating annual cash or trailing earnings as wholly recurring.",
+  "invalidation_conditions": [
+    "Comparable Q2 FCF at or below zero after actual content spend and capex would invalidate demonstrated owner-cash generation.",
+    "Two consecutive quarters of year-on-year revenue decline with operating margin below 33.4% would falsify the profitable-growth thesis."
+  ],
+  "evidence_gaps": [
+    "Exact cash-tax allocation associated with the termination fee is unavailable in the envelope, preventing an exact after-tax recurring H1 cash normalization."
+  ],
+  "decisive_factors": [
+    "The termination fee is outside operating income and does not carry the recurring operating thesis.",
+    "Content costs already enter current cash; future commitments remain economically material without becoming all current debt."
+  ],
+  "pipeline_mode": "in-session"
+}

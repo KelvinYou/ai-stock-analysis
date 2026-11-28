@@ -1,0 +1,20 @@
+{
+  "ticker": "TSLA",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Short-term momentum improved above SMA-20/50, but price remains below SMA-200 with negative 60/252-bar returns; dated headlines do not verify a sustained earnings recovery.",
+  "winning_side": "neither",
+  "strongest_counterexample": "The strongest counterexample is durable EU demand and commercial-truck adoption converting the recent headlines into profitable growth, which is not shown in the supplied data.",
+  "invalidation_conditions": [
+    "A close below the observed 20-bar low would weaken the short-term recovery case."
+  ],
+  "evidence_gaps": [
+    "Financial statement dates and current earnings trajectory are missing.",
+    "Headlines do not quantify repeatability or margin impact."
+  ],
+  "decisive_factors": [
+    "Positive 5/20-bar returns and MACD conflict with negative 60/252-bar returns.",
+    "Price remains 4.09% below SMA-200."
+  ],
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,66 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E unavailable. Provider trailing 33.64x/forward 20.47x unauthenticated; no sector/history discount established.",
+    "margin_analysis": "September30 operating margin 17.8%, improving from June 16.3% but below year-ago 19.6%; gross margin 34.7%, below year-ago 38.3%. Quarterly FCF $1.034B below year-ago $1.173B despite larger revenue.",
+    "debt_analysis": "Total debt $20.922B versus equity $20.976B, up from $11.221B debt year ago. Debt fell from March $21.833B, but the reason for the step-up and acquired-asset returns are unavailable.",
+    "growth_outlook": "Canonical exact-duration YoY growth unavailable. The five observed revenue figures increase, ending at $8.947B, but organic versus acquisition growth cannot be distinguished. Statement September30, 49 days old.",
+    "key_risks": [
+      "Debt nearly doubled against the year-ago observation while equity increased much less.",
+      "Gross/operating margins and FCF below year-ago observations.",
+      "No filing index; organic growth, integration returns and financing detail unavailable."
+    ],
+    "key_strengths": [
+      "Positive earnings and FCF.",
+      "Sequential margin recovery and lower debt than March."
+    ],
+    "summary": "Neutral: higher observed revenue and a sequential recovery do not yet outweigh leverage and year-ago margin/cash deterioration. The price decline is not independent proof of undervaluation."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "positive",
+    "news_summary": "Eaton November 3 issuer results reported strong orders and backlog and raised organic-growth guidance. Provider-current aggregate recommendations are positive, but independent recent rating changes are unavailable. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=5, buy=18, hold=6, sell=0, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.sec.gov/Archives/edgar/data/1551182/000155118226000037/etn09302026exhibit99.htm",
+    "key_themes": [
+      "Issuer-reported orders and backlog",
+      "Limited independent fresh sentiment"
+    ],
+    "notable_headlines": [
+      "Eaton Reports Record Third Quarter 2026 Results, with Strong Organic Growth, Accelerating Record Orders and Backlog; Raises Organic Growth Guidance"
+    ],
+    "social_sentiment": null,
+    "summary": "The issuer outlook is positive, but no verified fresh independent stock-specific sentiment source was found. Keep neutral with low confidence; missing news is not a negative signal."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "Downtrend below SMA20/50/200; a marginally positive latest close has not repaired the damage.",
+    "rsi_14": 34.8722,
+    "rsi_assessment": "RSI 34.87 is weak and approaching oversold, without confirmation of a bottom.",
+    "macd_assessment": "MACD line -16.1138 and histogram -0.8625 remain negative.",
+    "volume_assessment": "Latest volume 1.07x average is ordinary; no strong reversal-volume evidence.",
+    "support_levels": [
+      324.27,
+      331.27
+    ],
+    "resistance_levels": [
+      363.64,
+      399.3
+    ],
+    "summary": "ETN is 15.32% below SMA50 and 14.98% below SMA200, down 17.51% over 60 bars. The latest flat-to-positive session is insufficient to establish stabilization against this broader decline."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Industrials: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  }
+}

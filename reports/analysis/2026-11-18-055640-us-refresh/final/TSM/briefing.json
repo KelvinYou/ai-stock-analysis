@@ -1,0 +1,72 @@
+{
+  "ticker": "TSM",
+  "date": "2026-11-18",
+  "data_as_of": "2026-11-17",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.3333,
+    "explanation": "Zero directional conviction: mixed evidence or material underwriting gaps support the independent neutral judgment. Positive operating or trend evidence is acknowledged, but the debate does not establish a current directional edge. This is abstention, not a calibrated probability or a claim that risks cancel quantitatively."
+  },
+  "executive_summary": "Neutral: comparable revenue grew 50.95%, net income grew 68.71%, FCF is positive and observed leverage is modest. Those operating results are the strongest counterexample to the technical bear case. The November 17 tape nevertheless lost 9.28% over five bars on elevated distribution volume and remains below SMA20/50/200; sequential margins also softened despite strong year-ago comparisons.\n\nInference: I agree with the low-confidence neutral research judgment because an active decline and unresolved ADR valuation basis prevent either a bargain conclusion or a broken-franchise sell. Official quarterly EPS is NT$29.43 per ordinary share or US$4.60 per ADR; provider EPS is not interchangeable with either, and USD price must not be divided by TWD EPS. Supplemental October sales growth is positive, but independent fresh sentiment and sustained price repair remain unavailable.",
+  "bull_case": "Strong growth, high margins, positive FCF and modest measured leverage sustain the operating thesis. The bull ultimately advocates waiting for stabilization rather than reinterpreting the technical breakdown as bullish.",
+  "bear_case": "Unresolved ADR/currency valuation basis and sequential margin declines remain material even with strong year-ago growth. The high-volume decline below all principal averages is current evidence; stabilization is still unobserved.",
+  "key_uncertainties": [
+    "Authenticated common-currency, common-share-basis valuation.",
+    "Sustainable overseas-fab and investment economics.",
+    "Observed price stabilization and independently verified fresh sentiment."
+  ],
+  "catalysts_upcoming": [
+    "Conditional reassessment trigger: Reconsider toward buy after an authenticated ADR valuation bridge and five consecutive closes above SMA50, provided the next reported quarter remains FCF-positive.",
+    "Conditional reassessment trigger: Reconsider toward sell if the next two reports show year-over-year revenue decline and operating margin below the current observation."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 56.5% over available price history. Projected worst case (2-sigma): ~88.4% from current $359.69.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.33). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "TSM",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "The bear carries the near-term entry objection, while the fundamental bull case remains strong. Because the ADR valuation basis is unresolved and the active decline conflicts with delivered growth, neutral with low confidence is more defensible than either a bargain buy or a broken-business sell.",
+    "winning_side": "bear",
+    "strongest_counterexample": "Comparable revenue and profit growth, high observed margins, substantial positive FCF and modest measured leverage show that the operating franchise remains strong despite the tape.",
+    "invalidation_conditions": [
+      "Reconsider toward buy after an authenticated ADR valuation bridge and five consecutive closes above SMA50, provided the next reported quarter remains FCF-positive.",
+      "Reconsider toward sell if the next two reports show year-over-year revenue decline and operating margin below the current observation."
+    ],
+    "evidence_gaps": [
+      "Authenticated common-currency, common-share-basis valuation.",
+      "Sustainable overseas-fab and investment economics.",
+      "Observed price stabilization and independently verified fresh sentiment."
+    ],
+    "decisive_factors": [
+      "Price lost 9.28% over five bars on elevated distribution volume.",
+      "Strong operating results counter a demand-collapse inference.",
+      "ADR currency/share-basis valuation remains unavailable."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "neutral",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

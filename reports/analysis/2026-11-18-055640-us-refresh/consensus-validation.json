@@ -1,0 +1,455 @@
+{
+  "status": "pass",
+  "mode": "validation_only_not_synthesis",
+  "schema_validated_count": 13,
+  "computation_owners": [
+    "stock_analysis.synthesis.synthesizer.compute_directional_consensus",
+    "stock_analysis.synthesis.synthesizer.compute_signal_convergence",
+    "stock_analysis.synthesis.risk_checker.is_actionable"
+  ],
+  "canonicalizers": [
+    "FundamentalsAgent.canonicalize_report",
+    "SentimentAgent.canonicalize_report",
+    "canonicalize_technical_report",
+    "MacroFXAgent.canonicalize_report"
+  ],
+  "rows": [
+    {
+      "ticker": "NVDA",
+      "signals": {
+        "fundamentals": "buy",
+        "sentiment": "neutral",
+        "technical": "sell",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "high",
+        "macro": "medium"
+      },
+      "directional_consensus": -0.0769,
+      "signal_convergence": 0.3077,
+      "maximum_allowed_conviction_abs": 0.0769,
+      "is_actionable_at_maximum_conviction": false,
+      "high_divergence": true,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-11-17T21:26:00Z: Reuters via Investing.com \u2014 Nvidia forecasts quarterly revenue above estimates in first report since Huang\u2019s exit as CEO",
+              "2026-11-17: NVIDIA Investor Relations \u2014 NVIDIA Announces Financial Results for Third Quarter Fiscal 2027"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "GOOGL",
+      "signals": {
+        "fundamentals": "neutral",
+        "sentiment": "neutral",
+        "technical": "sell",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": -0.25,
+      "signal_convergence": 0.25,
+      "maximum_allowed_conviction_abs": 0.25,
+      "is_actionable_at_maximum_conviction": false,
+      "high_divergence": true,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-10-28: Reuters via Investing.com \u2014 Alphabet stock sinks as search woes cause revenue miss, cash burn worsens",
+              "2026-11-02T20:06:00Z: Reuters via Investing.com \u2014 Anthropic revenue growth slows, compute financing risks mount ahead of IPO"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "AVGO",
+      "signals": {
+        "fundamentals": "buy",
+        "sentiment": "neutral",
+        "technical": "neutral",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": 0.25,
+      "signal_convergence": 0.25,
+      "maximum_allowed_conviction_abs": 0.25,
+      "is_actionable_at_maximum_conviction": false,
+      "high_divergence": true,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-10-26T20:16:00Z: Reuters via Fidelity \u2014 Banks and investors provide $63 billion financing for Broadcom equipment deployed for Anthropic",
+              "2026-10-26: Broadcom / financing partners \u2014 Bank of America, Blackstone, Citi and Morgan Stanley Announce Landmark $63 Billion Financing Structure to Enable AI Compute Capacity in Partnership with Broadcom"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "MSFT",
+      "signals": {
+        "fundamentals": "buy",
+        "sentiment": "neutral",
+        "technical": "neutral",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": 0.25,
+      "signal_convergence": 0.25,
+      "maximum_allowed_conviction_abs": 0.25,
+      "is_actionable_at_maximum_conviction": false,
+      "high_divergence": true,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-11-17T18:10:07Z: Axios \u2014 Microsoft debuts six AI models as it pushes toward frontier",
+              "2026-11-17T19:25:00Z: CRN \u2014 Microsoft Ignite 2026: Nadella Says \u2018We Have Work To Do\u2019 After Massive Outage"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "AMZN",
+      "signals": {
+        "fundamentals": "neutral",
+        "sentiment": "neutral",
+        "technical": "buy",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": 0.25,
+      "signal_convergence": 0.25,
+      "maximum_allowed_conviction_abs": 0.25,
+      "is_actionable_at_maximum_conviction": false,
+      "high_divergence": true,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-10-29: AP \u2014 Amazon offers cautious view after disappointing 3Q results but delivers strong cloud growth",
+              "2026-11-02T20:06:00Z: Reuters via Investing.com \u2014 Anthropic revenue growth slows, compute financing risks mount ahead of IPO"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "META",
+      "signals": {
+        "fundamentals": "neutral",
+        "sentiment": "sell",
+        "technical": "neutral",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": -0.25,
+      "signal_convergence": 0.25,
+      "maximum_allowed_conviction_abs": 0.25,
+      "is_actionable_at_maximum_conviction": false,
+      "high_divergence": true,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-10-27T12:05:00Z: Reuters via Investing.com \u2014 Meta eyes record $97.5 billion equity raise to fund AI expansion",
+              "2026-10-26: SEC / Meta offering communication \u2014 Meta offering communication and prospective Class C ATM program"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "AAPL",
+      "signals": {
+        "fundamentals": "neutral",
+        "sentiment": "neutral",
+        "technical": "buy",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": 0.25,
+      "signal_convergence": 0.25,
+      "maximum_allowed_conviction_abs": 0.25,
+      "is_actionable_at_maximum_conviction": false,
+      "high_divergence": true,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-11-17T20:43:00Z: Reuters via Investing.com \u2014 Apple works to restore services after outage caused by internal update"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "TSM",
+      "signals": {
+        "fundamentals": "buy",
+        "sentiment": "neutral",
+        "technical": "sell",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "low",
+        "technical": "high",
+        "macro": "medium"
+      },
+      "directional_consensus": -0.0833,
+      "signal_convergence": 0.3333,
+      "maximum_allowed_conviction_abs": 0.0833,
+      "is_actionable_at_maximum_conviction": false,
+      "high_divergence": true,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-11-10: TSMC / SEC \u2014 TSMC October 2026 Revenue Report"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "V",
+      "signals": {
+        "fundamentals": "buy",
+        "sentiment": "neutral",
+        "technical": "buy",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": 0.5,
+      "signal_convergence": 0.5,
+      "maximum_allowed_conviction_abs": 0.5,
+      "is_actionable_at_maximum_conviction": true,
+      "high_divergence": false,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-11-16T19:09:00Z: Reuters via StreetInsider \u2014 Visa, Mastercard urge approval of $38 billion swipe fee settlement",
+              "2026-10-27: Visa / SEC \u2014 Visa Reports Fiscal Fourth Quarter and Full-Year 2026 Results"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "JPM",
+      "signals": {
+        "fundamentals": "neutral",
+        "sentiment": "neutral",
+        "technical": "neutral",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": 0.0,
+      "signal_convergence": 0.0,
+      "maximum_allowed_conviction_abs": 0.0,
+      "is_actionable_at_maximum_conviction": false,
+      "high_divergence": true,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-11-16T23:28:05Z: AP \u2014 What to know about the online banking delays that affected major US banks"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "COST",
+      "signals": {
+        "fundamentals": "neutral",
+        "sentiment": "buy",
+        "technical": "buy",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": 0.5,
+      "signal_convergence": 0.5,
+      "maximum_allowed_conviction_abs": 0.5,
+      "is_actionable_at_maximum_conviction": true,
+      "high_divergence": false,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-11-17T21:32:00Z: Bloomberg via Transport Topics \u2014 Costco benefiting as customers stock up amid outages",
+              "2026-11-04: Costco Investor Relations \u2014 Costco Wholesale Corporation Reports October Sales Results"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "UNH",
+      "signals": {
+        "fundamentals": "neutral",
+        "sentiment": "sell",
+        "technical": "sell",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "medium",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": -0.5,
+      "signal_convergence": 0.5,
+      "maximum_allowed_conviction_abs": 0.5,
+      "is_actionable_at_maximum_conviction": true,
+      "high_divergence": false,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-11-16: CMS \u2014 Crushing Fraud, Waste, & Abuse",
+              "2026-11-17: Healthcare Finance News \u2014 CMS fraud crackdown would tighten provider, payer oversight"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    },
+    {
+      "ticker": "ETN",
+      "signals": {
+        "fundamentals": "neutral",
+        "sentiment": "neutral",
+        "technical": "sell",
+        "macro": "neutral"
+      },
+      "confidences": {
+        "fundamentals": "medium",
+        "sentiment": "low",
+        "technical": "medium",
+        "macro": "medium"
+      },
+      "directional_consensus": -0.2727,
+      "signal_convergence": 0.2727,
+      "maximum_allowed_conviction_abs": 0.2727,
+      "is_actionable_at_maximum_conviction": false,
+      "high_divergence": true,
+      "canonicalization_differences_against_base_frozen_input": {
+        "sentiment": {
+          "notable_headlines": {
+            "supplied": [
+              "2026-11-03: Eaton / SEC \u2014 Eaton Reports Record Third Quarter 2026 Results, with Strong Organic Growth, Accelerating Record Orders and Backlog; Raises Organic Growth Guidance"
+            ],
+            "canonical_base_input": []
+          }
+        }
+      },
+      "supplemental_envelope_canonicalization_differences": [],
+      "provider_only_comparison_is_expected": true
+    }
+  ],
+  "limits": [
+    "No analyst signals or canonical data were changed.",
+    "Sentiment uses an explicit dated web supplemental overlay, not provider-populated news; sentiment-envelopes.json and sentiment-sources.json own that provenance. Provider-only comparison differences above are expected and superseded for output validation by the overlay check.",
+    "Maximum allowed conviction is abs(net directional consensus), not the final synthesis conviction. Passing this upper-bound test does not constitute a buy/sell recommendation or guarantee a final directional signal.",
+    "Neutral/missing reports remain in the four-role denominator; low convergence is not to be hidden or replaced by self-authored confidence.",
+    "High-divergence warning uses convergence <0.5 per wealth-manager skill. Precise execution gate is actual is_actionable code."
+  ],
+  "supplemental_provenance": {
+    "source": "sentiment-envelopes.json",
+    "canonicalization": "SentimentAgent.canonicalize_report applied to the explicit supplemental news overlay; all13 now match. Frozen provider-only headlines remain empty, as preserved above for provenance.",
+    "signals_or_confidences_changed": false
+  }
+}

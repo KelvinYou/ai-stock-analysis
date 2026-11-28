@@ -1,0 +1,93 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Same-basis dated valuation is unavailable in the pipeline context (readiness gaps: trailing_eps_with_common_share_basis_unavailable, pe_unavailable, market_cap_unavailable), so no pipeline-computed P/E is asserted. Provider metadata (Yahoo, current capture 2026-11-18, not independently authenticated) reports trailing P/E 19.65, forward P/E 9.80 and market cap ~$3.75T against a 2026-11-17 close of $155.46, which is 36% below the 52-week high of $243.37. Inference: if the provider multiples are accurate, a sub-20x trailing multiple is low relative to the company's own reported growth, but this is a provider figure, not a verified same-basis calculation.",
+    "margin_analysis": "Observed quarterly gross margin (provider statements): 72.4% (FQ ended 2025-07-31), 73.4%, 75.0%, 74.9%, 75.0% (FQ ended 2026-07-31); operating margin rose from 60.8% to 66.2% and net margin was 62.0% in the latest provider quarter. The Q3 FY27 press release (8-K exhibit, SEC, quarter ended 2026-10-25) reports GAAP gross margin 74.8% and non-GAAP 74.9%. However, the Q4 FY27 outlook guides GAAP and non-GAAP gross margin to 71.0%-72.0%, a roughly 3-point step down. Inference: margins are at a high plateau and management guidance signals compression next quarter.",
+    "debt_analysis": "debt_scope=reported_total. Provider total debt rose from $12.35B (FQ ended 2026-04-30) to $38.35B (FQ ended 2026-07-31) while total equity rose to $228.98B; inference: debt/equity about 0.17. Per the Q3 FY27 8-K balance sheet, long-term debt was about $32.4B, with cash and equivalents $29.1B, marketable debt securities $24.4B and marketable equity securities $44.2B (a total-debt figure is not explicitly stated in the release). Inference: liquidity covers debt, but the sharp debt increase in the July quarter is a change to monitor, and its purpose is not in the provided data.",
+    "growth_outlook": "The pipeline's tool-calculated YoY growth is unavailable (gap: comparable_year_ago_period_unavailable). Observed provider quarterly revenue rose sequentially across five quarters: $46.7B, $57.0B, $68.1B, $81.6B, $96.2B; diluted EPS went from $1.08 to $2.46. The Q3 FY27 8-K (filed after the statements in the pipeline snapshot, which end at FQ 2026-07-31, about 110 days old) reports revenue of $115.8B (+103% YoY, +20% QoQ), Data Center revenue of $107.6B (+110% YoY), GAAP diluted EPS of $2.70 and non-GAAP EPS of $2.68. It guides Q4 FY27 revenue to $130.0B plus or minus 3%. The ~$2.48 consensus estimate cited in news was NOT verified. Inference: top-line momentum continues, with sequential growth of roughly 12%-20% per quarter.",
+    "key_risks": [
+      "Gross-margin compression: the Q4 FY27 outlook guides GAAP/non-GAAP gross margin to 71.0%-72.0%, versus 74.8%/74.9% in Q3 FY27 (8-K, SEC).",
+      "Debt and cash-conversion volatility: provider total debt jumped from $12.35B to $38.35B, and FCF fell from $48.6B to $21.4B in the quarter ended 2026-07-31. FCF recovered to $43.8B in Q3 FY27 per the 8-K.",
+      "Export controls and China: per management's statement (10-Q filed 2026-08-26, Risk Factors), export controls have disrupted and may disrupt the supply chain and distribution and hurt demand even outside China. The 10-K filed 2026-02-25 (Business) says the Chinese government has discouraged purchases of NVIDIA data center products.",
+      "Supply/demand mismatch and supplier dependence: per the 10-K filed 2026-02-25 (Risk Factors summary), long manufacturing lead times and third-party supplier dependency could cause supply-demand mismatches. Per the 10-K (Business), the supply chain is concentrated in Asia.",
+      "Analyst sentiment softening: the current-month count of hold ratings rose to 14 (from 2 a month earlier) and buy ratings fell to 36 (from 49). Price is 36% below the 52-week high, and the fundamental data does not explain this drawdown."
+    ],
+    "key_strengths": [
+      "Q3 FY27 revenue of $115.8B (+103% YoY), with Data Center revenue of $107.6B (+110% YoY), per the 8-K (SEC).",
+      "Q4 FY27 revenue guidance of $130.0B plus or minus 3% implies continued sequential growth (inference from the guide midpoint).",
+      "Very high profitability: gross margin of ~75% across the last three provider quarters and 74.8% GAAP in Q3 FY27; operating margin of 66.2% in the quarter ended 2026-07-31.",
+      "Strong cash generation and capital return: Q3 FY27 operating cash flow of $48.3B and FCF of $43.8B; $28.1B returned to shareholders in Q3; a $150B buyback addition leaves ~$227.3B authorization remaining (8-K).",
+      "Liquid balance sheet: Q3 FY27 cash plus marketable debt securities of ~$53.5B, plus $44.2B of marketable equity securities, against ~$32.4B of long-term debt (8-K; the summation is inference)."
+    ],
+    "summary": "The Q3 FY27 8-K shows revenue of $115.8B (+103% YoY), 74.8% GAAP gross margin, $43.8B FCF, and a $130B Q4 guide, extending a five-quarter sequential growth run; provider-reported trailing P/E is ~19.7 after a 36% drawdown. Offsets are the guided gross-margin step-down to 71%-72%, the jump in debt in the July quarter, rising analyst hold counts, and export-control risk. The pipeline lacks same-basis P/E and comparable YoY growth, so the view is buy at medium confidence rather than high."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Observed events (2026-11-09 to 2026-11-17): the board opened an independent probe into Jensen Huang's affair with a woman US intelligence reportedly believes passed information to Beijing; shares fell ~4.3% on 11-09 and ~5.5% on 11-10 (CNBC), a proposed shareholder class action was filed in San Jose, and Trump said the FBI is investigating. Huang resigned as CEO and director effective immediately (8-K, 2026-11-12; SF Standard, DCD); CFO Colette Kress became interim CEO and Harvey Jones board chair. Pre-earnings, UBS cut its target $300->$240, Bernstein downgraded to a neutral-equivalent with a $200 target, Seaport kept Sell with a $130 target, while BofA held Buy/$280 (as reported by TipRanks). Shares fell in 12 of the 15 sessions before the print (Reuters via MarketScreener) and traded near $152 (TradingNews). On 2026-11-17 after the close, Q3 FY27 revenue was $115.8B (+103% y/y) vs ~$109B expected and EPS $2.68 vs $2.48; Q4 guide was $130B +/-3% vs ~$125B consensus. Nvidia said it will not reinstate Huang, and Kress said the roadmap is on track (CNN, CBS, TechCrunch). Shares rose ~1-4% after hours to ~$161.6. The $150B buyback increase was reported as a September action, not new with this print. Trefis/Fortune (2026-11-12) tied added pressure to Anthropic's IPO and Nvidia's ~$10B private-placement commitment. No dated post-earnings analyst rating or target changes and no institutional-flow data could be verified.",
+    "key_themes": [
+      "Leadership/governance shock: CEO resignation, foreign-intelligence probe, FBI inquiry, shareholder class action",
+      "Fundamental demand intact: large beat-and-raise in first report under interim CEO Kress",
+      "Pre-earnings analyst de-rating: UBS, Bernstein, Seaport target cuts/downgrade vs BofA Buy hold",
+      "Persistent selling pressure: 12 drops in 15 sessions, roughly 35% below the October high",
+      "AI-trade cross-currents: Anthropic IPO and Nvidia's private-placement exposure"
+    ],
+    "notable_headlines": [
+      "2026-11-09 CNBC: Nvidia stock falls 4% as scrutiny turns to Jensen Huang's affair with alleged Chinese spy",
+      "2026-11-09 Al Jazeera: Nvidia shares slump amid investigation into CEO Jensen Huang",
+      "2026-11-10 CNBC: Nvidia sells off for second day in fallout from Jensen Huang's affair with alleged spy",
+      "2026-11-10 The Crypto Times: Nvidia Stock (NVDA) Falls 4.27% as CEO Jensen Huang Is Sued Over Chinese Spy Affair",
+      "2026-11-11 SF Standard (title from URL slug): Jensen Huang Nvidia ouster, markets roiled",
+      "2026-11-12 SEC 8-K: NVIDIA Announces CEO Transition (Huang resigns; Colette Kress interim CEO)",
+      "2026-11-12 DataCenterDynamics: Nvidia CEO Jensen Huang resigns after multiple affairs",
+      "2026-11-12 Trefis: Anthropic IPO: Buy, Sell Or Hold Nvidia Stock?",
+      "2026-11-12 Fortune (title from URL slug): Anthropic IPO, Jensen Huang resignation, Nvidia",
+      "2026-11-12 S&P Global Market Intelligence: Nvidia earnings preview Q3 FY2027",
+      "2026-11-17 CNN: Nvidia rules out Jensen Huang's return as CEO, tells investors 'we've got this'",
+      "2026-11-17 CBS News: Nvidia records strong growth in first earnings report without Jensen Huang",
+      "2026-11-17 TechCrunch: Nvidia promises that revenue will keep soaring - for now",
+      "2026-11-17 Motley Fool: Nvidia's 103% Revenue Growth Took a Backseat to Its Internal Drama",
+      "2026-11-17 investingLive: Nvidia tops forecasts by $7 billion as Kress steers first report since Huang exit"
+    ],
+    "social_sentiment": null,
+    "summary": "News flow is mixed. A severe governance shock (CEO resignation, spy-linked probe, FBI inquiry, class action) and pre-earnings analyst downgrades drove a sharp selloff. A clear beat-and-raise on 2026-11-17 shows demand did not leave with Huang. Deeply negative positioning into a strong print is a contrarian positive, but the governance overhang, an unresolved CEO search and no verified post-earnings upgrades justify a neutral signal with medium confidence rather than a bullish call."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "low",
+    "trend": "Strong downtrend: close 155.46 (2026-11-17) is below SMA-20 (192.59), SMA-50 (211.75, -26.6%) and SMA-200 (203.60, -23.6%); 20-bar return -28.2%, 5-bar return -7.95%, and price sits 36.1% below the 52-week high of 243.37 and only 4.5% above the 52-week low of 148.80. SMA-50 is still above SMA-200 but falling toward it, so a death cross is approaching. Structure since 2026-11-12 shows lower highs (170.00, 163.20, 158.19) with a slightly higher low (150.33 vs 148.80), i.e. a tentative base, not a confirmed reversal.",
+    "rsi_14": 16.3144,
+    "rsi_assessment": "RSI-14 at 16.3 is deeply oversold (below 30 for multiple sessions, low of 15.98 on 2026-11-16, ticking up to 16.3). Extreme readings like this flag elevated odds of a relief bounce but do not by themselves mark a trend bottom; no bullish divergence is confirmed yet because price has not made a new low while RSI held higher.",
+    "macd_assessment": "MACD line -16.15 below signal -12.15 with a negative histogram (-4.00) confirms bearish momentum. The histogram narrowed for the first time from -4.22 to -4.00, an early sign that downside momentum is decelerating, but there is no bullish crossover.",
+    "volume_assessment": "Volume is heavy at 398.6M, 1.69x the 20-day average of 236.6M; the selloff since 2026-11-05 has run on persistently elevated volume, peaking at 747.7M on 2026-11-12 (low 148.80, close 166.19, a long lower wick that looks like a capitulation attempt). Follow-through after that bar failed, so high volume currently reads as distribution plus volatility rather than accumulation. ATR-14 of 11.50 (~7.4% of price) and Bollinger %B of 0.09 with price just above the widening lower band (147.20) indicate a volatility-driven, stretched move.",
+    "support_levels": [
+      148.8,
+      150.33
+    ],
+    "resistance_levels": [
+      163.2,
+      170.0,
+      179.92,
+      194.9
+    ],
+    "summary": "NVDA is in a high-volume, high-volatility downtrend below all major moving averages with bearish MACD, but RSI 16 and %B 0.09 show it is extremely oversold near the 148.80 52-week low. Early stabilization signs (higher low at 150.33, first MACD histogram uptick) are tentative and unconfirmed while lower highs persist, so the technical signal is neutral with low confidence. A hold of 148.80-150.33 and a reclaim of 163.20-170.00 would be needed to confirm a base; a close below 148.80 would resume the downtrend."
+  },
+  "macro": {
+    "signal": "sell",
+    "confidence": "medium",
+    "fed_impact": "The Fed is tightening. FRED DFF shows an effective fed funds rate of 3.88% as of 2026-11-16, and CPIAUCSL inflation was 3.72% YoY for 2026-09 (Oct-2025 CPI was never published). The FOMC raised the target range 25bp to 3.75-4.00% on 2026-09-16 and held on 2026-10-28 by a 10-2 vote, with the dissents favouring a hike. Fed funds futures implied about 85% odds of a December hike as of 2026-10-28; the next decision is due 2026-12-09. A higher-for-longer and rising discount rate weighs on long-duration, high-multiple growth equities such as NVDA. NVDA's net-cash balance sheet limits any direct borrowing-cost effect.",
+    "interest_rate_outlook": "US policy is biased toward a further 25bp hike at the 2026-12-08/09 FOMC. The November jobs report (due 2026-12-04) is the key input, and November CPI (2026-12-10) lands after the decision. BNM held the OPR at 2.75% on 2026-11-05, its eighth straight hold since the July 2025 cut. Analysts expect a 25bp hike to 3.00% in Q1 2027, and the next MPC meeting is on 2027-01-21. Both central banks lean hawkish. The USD-MYR policy gap is about 100-125bp and is stable to narrowing only if BNM hikes first.",
+    "fx_impact": "Web-sourced, because the snapshot's usd_myr is null. USD/MYR opened at about 4.07 on 2026-11-12, with a 4.07-4.08 range expected on 2026-11-13. It was near 4.06 on 2026-11-04 and about 4.04-4.05 on 2026-11-06, so the ringgit has eased slightly against the dollar in November. Commerzbank (2026-11-07) sees near-term consolidation at 4.00-4.10. For a MYR-based holder of USD-denominated NVDA, a stable-to-slightly-firmer USD is mildly supportive in MYR terms near term. An expected BNM hike in Q1 2027 is a modest MYR-appreciation risk that would erode USD returns when translated back to MYR.",
+    "sector_macro_factors": [
+      "CPI year-over-year is for 2026-09 (FRED:CPIAUCSL); inflation of 3.72% is well above the Fed's 2% target, which supports further tightening.",
+      "Semiconductor de-rating: the PHLX Semiconductor Index fell about 9-12% on 2026-11-05 (sources differ), its second-worst day on record, on doubts about returns on AI spending after the US midterms.",
+      "Yahoo Finance estimated that chip and memory stocks lost about $3.7T in market value between 2026-10-06 and 2026-11-03, amid AI-capex and neocloud-debt concerns.",
+      "Hyperscaler capex guidance is reportedly intact (Alphabet about $200B, Amazon about $220B), so the macro risk is valuation and discount rate rather than an observed demand collapse."
+    ],
+    "geopolitical_risks": [],
+    "summary": "The macro backdrop is a headwind for NVDA. The Fed is in a renewed hiking cycle (3.75-4.00% after the 2026-09-16 hike, about 85% December-hike odds as of 2026-10-28) with CPI at 3.72% YoY, and semis suffered a sharp AI-capex-driven de-rating in early November 2026. FX is roughly neutral for the MYR-based holder, with USD/MYR stable around 4.07 (2026-11-12/13) and BNM at 2.75% eyeing a Q1 2027 hike."
+  },
+  "pipeline_mode": "in-session"
+}

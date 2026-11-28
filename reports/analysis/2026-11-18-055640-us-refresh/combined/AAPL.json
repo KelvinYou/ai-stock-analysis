@@ -1,0 +1,66 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E unavailable; provider trailing 39.28x/forward 33.29x are unauthenticated. Those indicative multiples do not demonstrate a bargain, and there is no supplied historical or sector benchmark.",
+    "margin_analysis": "September30 operating margin 31.1% versus 31.6% a year earlier; quarterly FCF $25.859B versus $26.486B year ago. Gross margin 47.9%, above the year-ago 47.2% but below June 50.1%.",
+    "debt_analysis": "Total debt $80.111B versus equity $112.093B; debt declined through the supplied year from $98.657B. Inference: deleveraging is constructive, while cash and maturities are unavailable.",
+    "growth_outlook": "Canonical comparable revenue +11.72%, net income +11.81% YoY. Period September30, 49 days old; provider period labels can differ from Apple fiscal calendar. EPS absent in the tool context; do not infer it from share counts.",
+    "key_risks": [
+      "Positive earnings growth did not translate to higher year-ago quarterly FCF.",
+      "Authenticated valuation and reported EPS basis unavailable.",
+      "Management identifies macroeconomic dependence: 10-K filed 2026-11-03 Risk Factors; competition and pricing pressure: 10-K filed 2025-10-31 Risk Factors. These are risk disclosures."
+    ],
+    "key_strengths": [
+      "Positive revenue/profit growth and substantial observed FCF.",
+      "Falling debt and resilient operating margin."
+    ],
+    "summary": "A sound cash-generating business, but this evidence does not establish a compelling entry valuation. Neutral at medium confidence rather than treating business quality alone as a buy signal."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Reuters November 17 reported an internal-update outage affecting customer services and partial recovery; Apple denied a cyberattack. A single incident is insufficient evidence of structural deterioration. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=6, buy=20, hold=13, sell=3, strong_sell=3. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.investing.com/news/stock-market-news/apple-works-to-restore-services-after-outage-caused-by-internal-update-5033945",
+    "key_themes": [
+      "Service disruption",
+      "Operational recovery",
+      "Aggregate ratings slightly firmer"
+    ],
+    "notable_headlines": [
+      "Apple works to restore services after outage caused by internal update"
+    ],
+    "social_sentiment": null,
+    "summary": "The service incident is a near-term negative, but partial recovery and no verified financial loss do not establish a durable negative trend. Aggregate provider buy counts improved slightly, leaving the net signal neutral."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "Positive trend above SMA20/50/200; recent mild pullback near the upper part of the annual range.",
+    "rsi_14": 55.6942,
+    "rsi_assessment": "RSI 55.69 is moderately bullish and not overbought.",
+    "macd_assessment": "MACD line +4.0209 and histogram +0.4638 remain positive.",
+    "volume_assessment": "Latest volume 0.78x average; trend support is present but there is no fresh volume-backed breakout.",
+    "support_levels": [
+      325.33,
+      349.0648
+    ],
+    "resistance_levels": [
+      360.83
+    ],
+    "summary": "AAPL trades 3.38% above SMA50 and 16.57% above SMA200, with positive 20- and 60-bar returns and positive MACD. The trend is constructive, though being only 2.47% below the 52-week high makes this a trend-following setup rather than a deep-discount entry."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Technology: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  }
+}

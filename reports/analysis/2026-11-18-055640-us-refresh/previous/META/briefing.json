@@ -1,0 +1,84 @@
+{
+  "ticker": "META",
+  "date": "2026-11-09",
+  "data_as_of": "2026-11-06",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.1818,
+    "explanation": "Fundamentals, sentiment and technicals are each neutral and only the low-confidence macro desk leans sell, so analyst consensus is net -0.18. The Research Manager ruled neutral with low confidence (winning side: neither). Growth of 26% and a 17x forward multiple on an oversold tape are offset by negative free cash flow, doubled debt, a bearish trend and a tightening-biased rate path, with cash and 2027 capex unknown. This is a high-divergence, low-confidence setup rather than a directional call."
+  },
+  "executive_summary": "Meta's Q3 2026 revenue rose 26.1% year over year to 64.6B and Q4 guidance of 73-76B (web) implies continued strong growth, while the provider forward P/E has compressed to 17.14 and the stock closed at 610.15 on 2026-11-06 with RSI-14 at 23.9, after falling about 20% in three weeks. Against that, reported operating margin was 20.1% (40.1% a year ago, about 35% ex a 9.89B legal charge by inference), free cash flow was negative at -1.157B, total debt reached 114.84B (51.06B a year ago), and the stock sits below its 20-, 50- and 200-day averages with a widening negative MACD histogram, in a tightening-biased rate environment (10-2 Fed hold with two hike dissents on 2026-10-28).\n\nThe analyst desks were split: fundamentals, sentiment and technicals neutral (medium) and macro sell (low confidence, secondary-source data), giving low signal convergence of about 0.18. The Research Manager ruled neutral with low confidence because both bull and bear cases hinge on unknowns: cash and net debt, 2027 capex and its returns, recurrence of legal charges, and the December Fed decision. Neutral is retained; the evidence supports watching specific triggers rather than adding or reducing.",
+  "bull_case": "A 26% grower with intact 79% gross margin, Q4 guidance of 73-76B (web), a forward P/E of 17.14, price 21.8% below the 52-week high, RSI 23.9 and a sell-off that was largely sector-wide de-leveraging. If cash is ample and 2027 capex moderates, the ex-charge margin of about 35% (inference) and operating cash flow of about 32.8B (web) make the current price attractive.",
+  "bear_case": "Reported margin halved, FCF is negative (-1.157B provider basis, -2.12B management basis per web), debt more than doubled to 114.84B, legal charges recurred in consecutive quarters, 2027 capex is unguided and a new nonvoting share class raises financing questions, while price is below all three moving averages with weakening momentum and the Fed leans toward further hikes.",
+  "key_uncertainties": [
+    "Cash and securities at 2026-09-30 and net debt are unknown, so funding risk for 135-145B of 2026 capex cannot be bounded.",
+    "2027 capex, expense and revenue outlook not quantified by management (web); returns on the capex are not yet visible in free cash flow.",
+    "Whether legal charges (2.4B in Q2, 9.89B in Q3) recur; ex-charge margin of about 35% is an inference, not a reported figure.",
+    "Fed path: October CPI and the December FOMC; hike probabilities (about 85-94%) and yield levels come from conflicting secondary sources.",
+    "Invalidation: a close above 631.15 with volume and cash above debt would turn the view constructive; a close below 583.80 then 554.68 on volume above 25M, a further charge above 2B, or total debt above 130B would turn it bearish."
+  ],
+  "catalysts_upcoming": [
+    "US October CPI (reported by one secondary source as 2026-11-10; unverified): a hot print would raise December hike odds and pressure long-duration AI names.",
+    "December FOMC (date not verified in primary sources): a hike with yields above 5.3% would strengthen the bearish macro case.",
+    "Meta Q4 2026 results (date not found in the evidence): positive provider-basis FCF and revenue within or above the 73-76B guide would support the bull case.",
+    "Any Meta disclosure of cash balances, financing plans or use of the new nonvoting share class: net cash would reduce funding risk, new debt or dilution would increase it.",
+    "Technical triggers: close above SMA-200 631.15 on above-average volume (constructive) or below 583.80 (bearish)."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Sector: Communication Services \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 76.7% over available price history. Projected worst case (2-sigma): ~88.7% from current $610.15.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.18). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "META",
+    "judged_view": "neutral",
+    "confidence": "low",
+    "thesis": "Meta's top-line growth (+26.1% YoY) and compressed valuation (provider forward P/E 17.14, price 21.8% below the 52-week high) are real, but the case for adding rests on unknowns neither side could supply: cash balance and net leverage, 2027 capex and returns, the recurrence of legal charges, and the Fed path. Reported free cash flow is negative (-1.157B) and debt has more than doubled year over year while the trend is bearish and RSI is oversold, so both cases rest on the same unresolved funding and return-on-capex question.",
+    "winning_side": "neither",
+    "strongest_counterexample": "The strongest case against a neutral ruling is the bull's: revenue accelerated to 64.6B with Q4 guidance of 73-76B (web), the reported margin collapse is dominated by one identifiable 9.89B charge (ex-charge margin about 35%, inference), operating cash flow was reportedly 32.8B, and the stock fell about 20% in three weeks to RSI 23.9 on a sector-wide sell-off without any cut to growth guidance. If cash balances are large and 2027 capex is moderated, a forward multiple of 17x on a 26% grower is a clear mispricing and neutral would have missed the entry.",
+    "invalidation_conditions": [
+      "Bullish: a daily close above SMA-200 (631.15) and then SMA-20 (662.67) on volume above the 20-bar average, together with disclosure that cash and securities exceed total debt of 114.84B.",
+      "Bullish: Q4 2026 results showing free cash flow positive on the provider basis and operating margin ex-charges at or above 35% with revenue within or above the 73-76B guide.",
+      "Bearish: a daily close below 583.80 (2026-11-05 low) followed by 554.68 (Bollinger lower band) with volume above 25M shares.",
+      "Bearish: a further legal or regulatory charge above 2B in any reported quarter, or a financing announcement (including use of the new nonvoting share class) that adds dilution or total debt above 130B.",
+      "Macro: a December FOMC hike combined with a 10-year Treasury yield above 5.3% (the October peak cited by one secondary source) would worsen the discount-rate headwind."
+    ],
+    "evidence_gaps": [
+      "Cash and marketable securities at 2026-09-30, hence net debt and liquidity runway.",
+      "2027 capex, expense and revenue outlook; management gave no numbers (web).",
+      "Consensus estimates behind the forward P/E 17.14 and dated analyst reactions to Q3.",
+      "Primary macro snapshot: October CPI, December FOMC outcome and Treasury yields; current figures are from conflicting secondary sources.",
+      "Intended use of the new nonvoting share class and any financing plans."
+    ],
+    "decisive_factors": [
+      "Reported free cash flow -1.157B (provider basis; -2.12B management basis, web) against roughly 35B quarterly capex.",
+      "Total debt 114.84B versus 51.06B a year ago, with cash side unknown.",
+      "Revenue +26.1% YoY and Q4 guide of 73-76B (web) which prevents a bearish ruling.",
+      "Price below SMA-20/50/200 with MACD histogram -5.89 offset by RSI 23.9.",
+      "Hawkish-leaning Fed (10-2 hold with two hike dissents) combined with low confidence in the secondary-source macro data."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "sell"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

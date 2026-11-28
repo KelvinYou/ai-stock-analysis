@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "sell",
+    "confidence": "low",
+    "pe_assessment": "The provider-current snapshot fetched 2026-09-25 reports P/E 345.56 and forward P/E 173.00, very high against the current earnings base. These multiples require exceptional future growth that is not established by the supplied financial series.",
+    "margin_analysis": "Snapshot operating/net margins are 5.11%/4.00%, modest relative to the reported valuation; period is not dated and no trend is inferred.",
+    "debt_analysis": "Snapshot debt is $14.72B versus equity of $82.14B; FCF is positive at $6.22B. Current balance-sheet figures provide some support but do not resolve valuation sensitivity.",
+    "growth_outlook": "Revenue and net income are listed as $94.83B and $3.79B. The snapshot confirms current profitability but provides no dated multi-period growth trajectory to support the high multiples.",
+    "key_risks": [
+      "Very high P/E and forward P/E require growth not demonstrated in the packet.",
+      "Current operating/net margins are 5.11%/4.00%.",
+      "Financial periods and multi-period trajectory are not supplied."
+    ],
+    "key_strengths": [
+      "Snapshot reports positive $6.22B FCF and $3.79B net income.",
+      "Debt is below reported equity."
+    ],
+    "summary": "The current snapshot is profitable, but high multiples of 345.56/173.00 are difficult to support with 5.11% operating margin and no dated growth trajectory. This supports a cautious low-confidence fundamental sell."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "mixed",
+    "news_summary": "Sep 24 Reuters coverage says Tesla is set to formally roll out Semi trucks at a Nevada event; other headlines discuss the Oct 1 Roadster reveal, Optimus, and sales-growth expectations. Product catalysts are countered by valuation/execution questions, with no sales economics supplied; sentiment is mixed and low-confidence.",
+    "key_themes": [
+      "Semi product rollout",
+      "Roadster/Optimus product coverage",
+      "Sales-growth expectations"
+    ],
+    "notable_headlines": [
+      "2026-09-25 \u2014 Investor's Business Daily: Dow Jones Futures: Market Rally Resilient As Yields, Oil Prices Keep Rising; Tesla Touts Semi",
+      "2026-09-24 \u2014 Reuters: Tesla set to formally roll out Semi electric trucks at Nevada event",
+      "2026-09-24 \u2014 Motley Fool: Tesla's Roadster Reveal Is Oct. 1. The Real Story Is Optimus.",
+      "2026-09-24 \u2014 Simply Wall St.: Is Tesla (TSLA) Priced For Too Much Sales Growth After Recent Expansion Bets?"
+    ],
+    "social_sentiment": null,
+    "summary": "Sep 24 Reuters coverage says Tesla is set to formally roll out Semi trucks at a Nevada event; other headlines discuss the Oct 1 Roadster reveal, Optimus, and sales-growth expectations. Product catalysts are countered by valuation/execution questions, with no sales economics supplied; sentiment is mixed and low-confidence."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Price is above SMA-20/50 but 4.09% below SMA-200; 5/20-bar returns are positive while 60/252-bar returns remain negative.",
+    "rsi_14": 61.7345,
+    "rsi_assessment": "RSI 61.73 is constructive but below overbought territory.",
+    "macd_assessment": "MACD histogram +1.6970 with MACD above signal indicates improving short-term momentum.",
+    "volume_assessment": "Volume is 0.86x its 20-bar average, so the recent rise lacks strong volume confirmation.",
+    "support_levels": [
+      297.38,
+      342.53
+    ],
+    "resistance_levels": [
+      386.7,
+      432.86
+    ],
+    "summary": "Short-term recovery is above SMA-20/50 with positive momentum, but price remains below SMA-200 and longer returns are negative. The short-term rebound is real in the supplied bars, but the longer trend and low volume confirmation keep the signal mixed."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "low",
+    "fed_impact": "Federal Reserve context (effective 2026-09-17): target range 3.75%-4.00%; FOMC raised the target range by 25 basis points on 2026-09-16. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm Generic rate sensitivity does not establish this issuer's impact.",
+    "interest_rate_outlook": "One dated policy action does not establish the future rate path or issuer-specific pass-through.",
+    "fx_impact": null,
+    "sector_macro_factors": [],
+    "geopolitical_risks": [],
+    "summary": "Macro context is dated, but no company-specific effect or future policy path is established; neutral/low confidence."
+  },
+  "pipeline_mode": "in-session"
+}

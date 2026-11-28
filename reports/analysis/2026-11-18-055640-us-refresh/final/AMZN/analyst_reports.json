@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E unavailable; provider trailing 20.83x/forward 23.60x unauthenticated. Do not compare the headline P/E with peers without accounting for investment gains.",
+    "margin_analysis": "September30 operating margin 13.9% versus 9.7% one year earlier. Official release confirms operating income $28.1B and AWS sales +39.3%, while prior-year Anthropic gains distort net-income comparison: https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/",
+    "debt_analysis": "Provider total debt $271.949B versus equity $613.601B, up from $135.419B in the year-ago observation. Complete cash, debt-maturity and financing-commitment evidence unavailable.",
+    "growth_outlook": "Canonical comparable revenue +12.09%, net income -2.37% YoY. Official trailing-year FCF is -$42.4B versus +$14.8B one year earlier; this is a different duration from provider quarterly FCF -$34.837B. Missing June-quarter values must not be treated as zero. Source: same official release.",
+    "key_risks": [
+      "Material negative quarterly and trailing-year FCF during rising investment.",
+      "Debt has expanded substantially; financing returns remain unproven.",
+      "No local filing index; absent balance-sheet details limit assessment."
+    ],
+    "key_strengths": [
+      "Improving observed operating margin.",
+      "Official AWS growth and stronger operating income show demand is not absent."
+    ],
+    "summary": "Operating economics are improving, but cash outflow and expanding debt keep the fundamental view neutral. Different quarterly and trailing-year FCF measures must remain distinct."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "AP October 29 reporting paired AWS growth with a cautious outlook and cash use; Reuters November 2 highlighted Anthropic financing dependencies involving cloud partners. No verified imminent Amazon rating change was found. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=14, buy=45, hold=3, sell=0, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://apnews.com/article/2de72b65d63006a7ce85eab441e2d6b7; https://www.investing.com/news/company-news/anthropic-intensifies-ipo-preparations-for-potential-2027-listing-93CH-4992139",
+    "key_themes": [
+      "AWS momentum",
+      "Cash use",
+      "Anthropic financing"
+    ],
+    "notable_headlines": [
+      "Amazon offers cautious view after disappointing 3Q results but delivers strong cloud growth",
+      "Anthropic revenue growth slows, compute financing risks mount ahead of IPO"
+    ],
+    "social_sentiment": null,
+    "summary": "Cloud growth is a positive, but investment cash use and partner funding dependencies remain meaningful narrative offsets. The prospective Anthropic IPO is a catalyst with an uncertain net impact, not booked gains."
+  },
+  "technical": {
+    "signal": "buy",
+    "confidence": "medium",
+    "trend": "Modest positive trend above SMA20/50/200, with recent pullback to the short-term averages.",
+    "rsi_14": 52.2221,
+    "rsi_assessment": "RSI 52.22 is balanced with a slight positive bias, not overbought.",
+    "macd_assessment": "MACD line +2.4314 and histogram +0.3272 retain a modest bullish bias.",
+    "volume_assessment": "Latest volume 0.77x average; the modest positive close is not strong demand confirmation.",
+    "support_levels": [
+      229.36,
+      254.0
+    ],
+    "resistance_levels": [
+      270.05,
+      275.34
+    ],
+    "summary": "The close remains 1.21% above SMA50 and 5.36% above SMA200, with a positive MACD histogram and neutral RSI. This is a modest technical buy rather than a breakout: the five-bar loss of 4.79% and subdued volume limit confidence."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Consumer Cyclical: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,176 @@
+{
+  "status": "pass_with_warning",
+  "scope": "price_only_rule_correctness",
+  "artifact": "reports/analysis/2026-11-18-current-ranking/current-ranking.json",
+  "as_of": "2026-11-17",
+  "checks": [
+    {
+      "check": "complete_approved_universes",
+      "pass": true,
+      "detail": {
+        "broad17-20": 17,
+        "primary8-20": 8
+      }
+    },
+    {
+      "check": "frozen_input_hashes",
+      "pass": true,
+      "detail": "Artifact hashes checked against each of the 17 frozen CSV files."
+    },
+    {
+      "check": "common_completed_date",
+      "pass": true,
+      "detail": {
+        "AAPL": "2026-11-17",
+        "AMZN": "2026-11-17",
+        "AVGO": "2026-11-17",
+        "COST": "2026-11-17",
+        "ETN": "2026-11-17",
+        "GOOGL": "2026-11-17",
+        "IBM": "2026-11-17",
+        "JPM": "2026-11-17",
+        "META": "2026-11-17",
+        "MSFT": "2026-11-17",
+        "NFLX": "2026-11-17",
+        "NVDA": "2026-11-17",
+        "ORCL": "2026-11-17",
+        "TSLA": "2026-11-17",
+        "TSM": "2026-11-17",
+        "UNH": "2026-11-17",
+        "V": "2026-11-17"
+      }
+    },
+    {
+      "check": "exact_repository_rebuild",
+      "pass": true,
+      "detail": "All core fields, every rule, ranking metric, selected weight, history entry and price series match the deterministic rebuild."
+    },
+    {
+      "check": "public_artifact_validation",
+      "pass": true,
+      "detail": "Repository validation accepted complete ranking; this is artifact validation only, not a UI test."
+    },
+    {
+      "check": "broad17-20_month_end_basket",
+      "pass": true,
+      "detail": {
+        "as_of": "2026-10-30",
+        "basket": [
+          "AAPL",
+          "MSFT",
+          "V"
+        ]
+      }
+    },
+    {
+      "check": "primary8-20_month_end_basket",
+      "pass": true,
+      "detail": {
+        "as_of": "2026-10-30",
+        "basket": [
+          "MSFT",
+          "UNH",
+          "V"
+        ]
+      }
+    },
+    {
+      "check": "independent_ma_formula",
+      "pass": true,
+      "detail": {
+        "max_absolute_metric_error": 0,
+        "formula": "arithmetic average of last 21 common-session closes / arithmetic average of last 200 common-session closes - 1",
+        "ranking": "descending; top 3 at one-third each; no valuation or price-above-SMA200 filter"
+      }
+    }
+  ],
+  "ma_distance_comparison": {
+    "broad17-20": {
+      "universe_size": 17,
+      "preview_as_of": "2026-11-17",
+      "preview_ranked_top3": [
+        {
+          "ticker": "V",
+          "value": 0.20000776696807088,
+          "weight": 0.3333333333333333
+        },
+        {
+          "ticker": "MSFT",
+          "value": 0.19523868733730754,
+          "weight": 0.3333333333333333
+        },
+        {
+          "ticker": "AAPL",
+          "value": 0.1490221094016171,
+          "weight": 0.3333333333333333
+        }
+      ],
+      "last_completed_month_end": "2026-10-30",
+      "month_end_basket": [
+        "AAPL",
+        "MSFT",
+        "V"
+      ],
+      "preview_selected": [
+        "AAPL",
+        "MSFT",
+        "V"
+      ],
+      "preview_differs_from_month_end": false
+    },
+    "primary8-20": {
+      "universe_size": 8,
+      "preview_as_of": "2026-11-17",
+      "preview_ranked_top3": [
+        {
+          "ticker": "V",
+          "value": 0.20000776696807088,
+          "weight": 0.3333333333333333
+        },
+        {
+          "ticker": "MSFT",
+          "value": 0.19523868733730754,
+          "weight": 0.3333333333333333
+        },
+        {
+          "ticker": "UNH",
+          "value": 0.11597653340548697,
+          "weight": 0.3333333333333333
+        }
+      ],
+      "last_completed_month_end": "2026-10-30",
+      "month_end_basket": [
+        "MSFT",
+        "UNH",
+        "V"
+      ],
+      "preview_selected": [
+        "MSFT",
+        "UNH",
+        "V"
+      ],
+      "preview_differs_from_month_end": false
+    }
+  },
+  "critical_limits": [
+    "November 17 is a mid-month preview, not the strategy month-end rebalance instruction.",
+    "October 30 is the last completed month-end decision date; actual investor execution, holdings and transaction fills are not established by this artifact.",
+    "Universe choice changes the selected basket. Broad17 and primary8 are separate predeclared universes, not interchangeable rankings.",
+    "This audit verifies formulas and source consistency only. It makes no forecast-skill, expected-return, backtest-performance, production UI, liquidity or execution-cost claim.",
+    "The rank does not apply financial quality, valuation, individual holdings, sector concentration or a price-above-SMA200 safety filter.",
+    "The source price panel is provider-adjusted and has not been independently verified against a second price vendor.",
+    "Unmodified Node display-contract check fails its synthetic 04:00Z availability expectation for artifacts captured later that same day. The fresh ranking passes the type guard and becomes available at 12:00Z under the existing future-capture guard."
+  ],
+  "clock_sensitive_display_check": {
+    "status": "warning",
+    "source": "web/scripts/check-allocation.cjs:74-76",
+    "type_guard_passed": true,
+    "ranking_captured_at_utc": "2026-11-18T05:57:24.933998+00:00",
+    "fixture_now_utc": "2026-11-18T04:00:00.000Z",
+    "fixture_result": "unavailable",
+    "same_artifact_at_2026_11_18_12_utc": "available",
+    "cause": "The existing test builds its available-case clock as as_of+1 day at 04:00Z. The refreshed artifact was captured at 05:57Z, which is in the future relative to that test clock, so currentRankingForDate correctly refuses it. The fixture assertion expecting availability is clock-sensitive; this is not evidence that the ranking formulas or artifact type are invalid.",
+    "guard_source": "web/lib/allocation-types.ts:165",
+    "changes": "None: no code or test edits performed."
+  }
+}

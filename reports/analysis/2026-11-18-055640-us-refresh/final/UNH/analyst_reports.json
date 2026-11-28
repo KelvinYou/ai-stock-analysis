@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E unavailable. Provider trailing 22.24x/forward 16.70x unauthenticated, with no reliable normalized-earnings bridge.",
+    "margin_analysis": "September30 operating margin 5.82%, below June 7.13% and March 8.05%, though above year-ago 3.81%. Quarterly FCF $4.264B below June $10.253B and year-ago $5.055B. The reason for margin changes is not in the tool data.",
+    "debt_analysis": "Total debt $74.331B versus equity $98.096B; below year-ago $80.136B, above June $73.328B. Inference: improved year-ago debt balance is offset by recent cash/margin weakening; cash and maturity details unavailable.",
+    "growth_outlook": "Canonical comparable-growth calculation unavailable due missing exact-duration metadata. Current revenue $112.694B, net income $4.110B; financial period September30, 49 days old. Do not infer a repaired multi-year earnings trajectory from the year-ago pair.",
+    "key_risks": [
+      "Operating margin weakened in both sequential comparisons available in 2026.",
+      "FCF below previous-quarter and year-ago observations.",
+      "No filing index or medical-cost/reserve evidence; causes and normalized earnings remain unavailable."
+    ],
+    "key_strengths": [
+      "Current reported earnings and FCF remain positive.",
+      "Debt below year-ago observation and margin above the year-ago observation."
+    ],
+    "summary": "Neutral: recovery against a weak year-ago base coexists with sequential margin deterioration. A positive price trend would not resolve the missing medical-cost and reserve evidence."
+  },
+  "sentiment": {
+    "signal": "sell",
+    "confidence": "medium",
+    "news_tone": "negative",
+    "news_summary": "CMS announced the CRUSH proposal on November 16. Healthcare Finance News on November 17 describes extrapolating audit findings from payment year 2018 without a fee-for-service adjuster; the amount attributable to UnitedHealth is not established. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=6, buy=15, hold=5, sell=0, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.cms.gov/FRAUD; https://www.healthcarefinancenews.com/news/cms-fraud-crackdown-would-tighten-provider-payer-oversight",
+    "key_themes": [
+      "Medicare Advantage audit proposal",
+      "Historical payment exposure",
+      "Unknown company-specific liability"
+    ],
+    "notable_headlines": [
+      "Crushing Fraud, Waste, & Abuse",
+      "CMS fraud crackdown would tighten provider, payer oversight"
+    ],
+    "social_sentiment": null,
+    "summary": "The verified CRUSH proposal creates a fresh negative regulatory narrative for Medicare Advantage insurers. It is not a final rule, and the financial impact on UnitedHealth is unavailable, preventing a high-confidence directional conclusion."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "medium",
+    "trend": "Long-term recovery above SMA200, interrupted by a sharp short-term break below SMA20/50.",
+    "rsi_14": 39.5086,
+    "rsi_assessment": "RSI 39.51 reflects deteriorating momentum, not oversold reversal confirmation.",
+    "macd_assessment": "MACD line +1.7693 is positive but histogram -1.4774 indicates bearish short-term momentum.",
+    "volume_assessment": "Latest volume 1.62x average accompanied a sharp decline, supporting the breakdown.",
+    "support_levels": [
+      362.6,
+      387.14
+    ],
+    "resistance_levels": [
+      399.99,
+      426.55
+    ],
+    "summary": "UNH remains 6.82% above SMA200, but the latest high-volume decline took it below SMA50 and almost onto the lower Bollinger band. A positive 21/200 MA distance is lagging this sharp deterioration and should not be read as a clean immediate buy."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "Broad CPI and the policy rate do not identify medical-cost trends or reimbursement changes; those company-specific drivers need separate evidence."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Healthcare: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. Broad CPI and the policy rate do not identify medical-cost trends or reimbursement changes; those company-specific drivers need separate evidence. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  },
+  "pipeline_mode": "in-session"
+}

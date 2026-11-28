@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E unavailable; provider trailing 26.42x/forward 20.94x are unauthenticated. No sector-average or historical-multiple comparison is available, so no precise intrinsic-value discount is claimed.",
+    "margin_analysis": "September30 operating margin 49.8%, net margin 39.7%. Gross margin 67.8%, below 69.0% a year earlier; FCF $18.633B below $25.663B in the year-ago history. Official call attributes FCF pressure to higher capex: https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1",
+    "debt_analysis": "Provider total debt $57.2B versus equity $470.509B; debt below year-ago $60.556B. Inference: measured leverage is modest, but these totals alone do not cover every lease/commitment.",
+    "growth_outlook": "Canonical comparable-growth fields unavailable because earlier exact-duration metadata is missing. Official October28 earnings release independently reports revenue +19%, operating income +21%, adjusted EPS +18%, Azure +48% for September30 quarter: https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast. Financial period is 49 days old.",
+    "key_risks": [
+      "Lower quarterly FCF than year-ago observation and higher capex limit earnings-to-cash conversion.",
+      "Management states intense competition can adversely affect results: 10-Q filed 2026-10-28 Risk Factors. This is management risk disclosure, not an observed loss of competitiveness.",
+      "Same-basis valuation unavailable; no verified margin of safety."
+    ],
+    "key_strengths": [
+      "High observed operating profitability and positive FCF.",
+      "Modest measured debt relative to equity and official growth across cloud and adjusted EPS."
+    ],
+    "summary": "Medium-confidence fundamental buy: strong operating results and balance-sheet capacity outweigh current cash-conversion pressure. Evidence supports quality and growth, while valuation and investment returns remain unresolved."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Axios reported six specialized AI models at Ignite on November 17; CRN reported Nadella acknowledged infrastructure work after the disruption. Product cost-performance claims remain management assertions until independently established. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=12, buy=41, hold=5, sell=0, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.axios.com/2026/11/17/microsoft-ai-models-openai-anthropic-ignite; https://www.crn.com/news/ai/2026/microsoft-ignite-2026-nadella-says-we-have-work-to-do-on-digital-infrastructure",
+    "key_themes": [
+      "AI model launches",
+      "Service reliability",
+      "Bullish aggregate analyst ratings"
+    ],
+    "notable_headlines": [
+      "Microsoft debuts six AI models as it pushes toward frontier",
+      "Microsoft Ignite 2026: Nadella Says ‘We Have Work To Do’ After Massive Outage"
+    ],
+    "social_sentiment": null,
+    "summary": "AI launches provide a positive catalyst while the recent outage keeps reliability risk visible. The competing dated narratives leave sentiment mixed despite positive aggregate analyst recommendations."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Long-term uptrend with a short-term pullback below SMA20 and SMA50.",
+    "rsi_14": 42.0999,
+    "rsi_assessment": "RSI 42.10 is weak but not oversold; momentum has room to deteriorate further.",
+    "macd_assessment": "MACD line -0.7348 and histogram -3.2170 indicate short-term bearish momentum.",
+    "volume_assessment": "Latest volume 1.01x average, giving no exceptional capitulation or demand signal.",
+    "support_levels": [
+      484.3,
+      496.51
+    ],
+    "resistance_levels": [
+      529.66,
+      559.15
+    ],
+    "summary": "MSFT remains 14.70% above SMA200, but it has lost SMA50 and fallen 5.05% over five bars. The close near the lower Bollinger band supports watching for stabilization, not treating the positive long-term MA distance as a short-term buy trigger."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Technology: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  }
+}

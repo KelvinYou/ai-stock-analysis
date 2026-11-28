@@ -1,0 +1,32 @@
+{
+  "persona_source": "src/stock_analysis/synthesis/synthesizer.py:SynthesizerAgent.synthesize system_prompt (read verbatim)",
+  "coverage": [
+    "NVDA",
+    "GOOGL",
+    "AVGO",
+    "MSFT",
+    "AMZN",
+    "META",
+    "AAPL",
+    "TSM",
+    "V",
+    "JPM",
+    "COST",
+    "UNH",
+    "ETN"
+  ],
+  "point_in_time": "Prices through 2026-11-17; supplemental source cutoff 2026-11-18T05:56:40Z.",
+  "inputs": [
+    "combined/<T>.json",
+    "debate/results/<T>.json",
+    "verdicts/<T>.json",
+    "inputs/<T>/ frozen financial and technical facts as represented in typed reports",
+    "macro-context.json",
+    "sentiment-sources.json",
+    "sentiment-envelopes.json"
+  ],
+  "macro_supplement": "Fed October28 target held at 3.75–4.00% with two hike dissents; observed DFF 3.88% November16. October CPI +0.4% MoM/core +0.3%; October YoY unavailable, September YoY 3.72%. These facts supply no decisive stock-specific direction, no observed new easing catalyst and no FX direction forecast. USD/MYR reference 4.0922 November17 is an observation only.",
+  "provenance": "Provider news remains empty. News in summaries is explicitly supplemental; aggregate ratings are snapshots, not verified individual rating changes. Supplemental issuer guidance is not delivered revenue.",
+  "judgment_departures": [],
+  "risk_boundary": "No entry, stop or target was invented; deterministic RiskChecker owns levels and actionability. No calibrated probabilities supplied."
+}

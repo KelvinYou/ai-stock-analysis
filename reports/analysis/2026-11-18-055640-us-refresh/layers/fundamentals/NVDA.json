@@ -1,0 +1,18 @@
+{
+  "signal": "buy",
+  "confidence": "medium",
+  "pe_assessment": "Same-basis P/E is unavailable: the pipeline has no common share-basis trailing EPS. Provider trailing 19.73x and forward 9.79x are unauthenticated and use an older financial snapshot; neither proves cheapness. Do not annualize the latest quarter.",
+  "margin_analysis": "Official Nov17 release for Oct25 quarter reports gross margin 74.8%; Q4 guide is 71–72%. Inference: demand remains strong, but the guided margin step-down needs explanation. Source: https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+  "debt_analysis": "Frozen provider July31 debt $38.351B/equity $228.984B is 110 days old and is superseded for current balance-sheet interpretation by the official Oct25 release: long-term debt $32.371B and equity $266.666B. Long-term debt is a partial category; cash and marketable debt securities are separate from equity investments.",
+  "growth_outlook": "Official Oct25-quarter revenue $115.844B grew 103% YoY; GAAP EPS $2.70. Q4 revenue guide $130B +/-3% includes an extra week and assumes no China Data Center compute revenue. Source: same Nov17 release; guidance is management expectation, not delivered revenue.",
+  "key_risks": [
+    "Guided gross margin decline from 74.8% to 71–72%; current same-basis valuation unavailable.",
+    "Management identifies competition and demand/capacity estimation risks: 10-Q filed 2026-05-20 Risk Factors and 10-K filed 2026-02-25 Risk Factors. These are management statements.",
+    "Provider financials remain July31 despite fresh capture, so they do not fully represent the newly reported quarter."
+  ],
+  "key_strengths": [
+    "Latest official earnings show continued strong demand and profitability.",
+    "Provider history shows five increasing quarterly revenue observations, although its exact-period YoY growth is unavailable."
+  ],
+  "summary": "Fundamentals lean buy at medium confidence on observed operating strength, independently of price momentum. The latest official earnings supersede the provider July quarter, but margin guidance and unavailable same-basis valuation prevent a strong-buy conclusion."
+}

@@ -1,0 +1,32 @@
+{
+  "ticker": "AVGO",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Both cases rest on the same unresolved unknown: whether the 29.59B USD quarter (+85.5% YoY, +33.4% QoQ, operating margin 54.3%) is a repeatable run rate, and what the market saw in the Nov 5 gap-down (325.48 to 291.53 on 53.8M shares). The bull proved the reported quarter is strong but conceded the 15.09 forward P/E is unverified and could not name a cause for the sell-off. The bear proved the technical downtrend (below SMA-20/50/200, MACD histogram -3.66 and widening, RSI 34.5) but offered no observed fundamental deterioration, only unassessed risk. Strong reported fundamentals against a confirmed downtrend with an unidentified cause, plus a Dec 9 FOMC and a projected ~Dec 10 earnings date, do not support a directional ruling now.",
+  "winning_side": "neither",
+  "strongest_counterexample": "Against a neutral ruling, the strongest case is that the evidence tilts bull. Every observed fundamental moved the right way over the same window in which the price fell 40.7%: revenue rose in five straight quarters (15.95B to 29.59B), operating margin went from 38.1% to 54.3%, EPS from 0.85 to 2.68, FCF was 13.67B (+94.6%) and debt fell to 59.42B from 64.23B. The bear's case rests entirely on unobserved things (a cause nobody found, an unreviewed Anthropic article, unknown cash and coverage), while the only fundamentals-based signal is buy and 49 of 51 ratings are buy or strong buy with no sells. On a trailing P/E of 37.51 against a quarter whose net income is 3x the prior-year quarter, the stock sits 1.4% above its 52-week low. Declining to rule means ignoring a large observed gap between reported business performance and price. A neutral call forfeits the rebound if the Dec earnings simply confirm the run rate.",
+  "invalidation_conditions": [
+    "Upgrade toward buy if the next reported quarter shows revenue at or above 29.59B USD (no sequential decline) with operating margin of at least 50%, and the close recovers above the SMA-50 (347.69 at last observation) on volume above the 20-day average.",
+    "Downgrade toward sell if the next reported quarter shows sequential revenue decline of more than 5% from 29.59B USD, or operating margin below 45%.",
+    "Downgrade toward sell if the close falls below the 52-week low support of 288.98 and stays below it for two consecutive sessions, with volume above the 20-day average (23.89M).",
+    "Downgrade toward sell if a filing or company disclosure shows a single customer or customer group accounting for more than 30% of revenue and that customer reduces its commitment.",
+    "Neutral stance is undermined if the Dec 9 FOMC raises the target range above 4.00%, and the close then stays below SMA-20 (332.13 at last observation) for two weeks."
+  ],
+  "evidence_gaps": [
+    "Cause and true size of the Nov 5 drop: price sources conflict and no source confirmed a cause.",
+    "Source of the +33.4% sequential revenue jump and whether it repeats; no filing-based review was available (search_filings unavailable).",
+    "Cash balance, interest coverage and share count, so net debt and coverage cannot be assessed.",
+    "Analyst price targets and verified forward earnings estimates behind the 15.09 forward P/E.",
+    "Customer concentration detail (Anthropic and OpenAI exposure); the TIKR article body was not reviewed.",
+    "Macro: macro_snapshot is null, no primary Treasury figure was checked, current rate-hike market pricing and Nov 2026 hyperscaler capex and export-control status were not found; confidence is lowered accordingly.",
+    "Confirmed next earnings date (only projected near Dec 10, 2026)."
+  ],
+  "decisive_factors": [
+    "Neither side could identify the cause of the 40.7% drawdown, and both rely on inference to fill that gap.",
+    "The bull's valuation argument leans on an unverified forward P/E and a single-quarter run rate, which the bull itself conceded.",
+    "The bear's fundamental case consists of unassessed risks rather than observed deterioration, while the technical downtrend is observed and confirmed (medium-confidence sell).",
+    "Disagreement over the ATR-14 of 15.14 (about 5.2% of price) versus the 1.6% distance to support is a dispute over reading the same data, and it favors the bear on stop fragility but does not settle direction.",
+    "Dec 9 FOMC and projected ~Dec 10 earnings fall one day apart, so the debate's key unknowns resolve within weeks."
+  ],
+  "pipeline_mode": "in-session"
+}

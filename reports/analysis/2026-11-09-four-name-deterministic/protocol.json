@@ -1,0 +1,12 @@
+{
+  "status": "frozen_before_any_run",
+  "date": "2026-11-09",
+  "purpose": "Deterministic (no LLM) comparison of fixed rules vs strict equal-weight buy-and-hold on four names. Not evidence about the AI analyst layer.",
+  "tickers": ["GOOGL", "AVGO", "MSFT", "META"],
+  "selection_policy": "Four names the owner asked about after the 2026-11-05 selloff; all are current mega-cap survivors, so strict hold is expected to be strong (survivorship bias disclosed).",
+  "arms": {
+    "cross_sectional": {"start": "2019-01-01", "end": "2026-11-06", "lookback_months": 12, "top_n": 2, "cost_bps_per_side": 10},
+    "factor_per_ticker": {"start": "2019-01-01", "end": "2026-11-06", "lookback_bars": 20, "holding_bars": 20, "train_bars": 252, "test_bars": 63, "cost_bps_per_side": 10}
+  },
+  "rules": ["One run per arm; no parameter changes after seeing results.", "Results reported whether or not they beat strict hold.", "No LLM/analyst layer involved; AI-only arm not run here."]
+}

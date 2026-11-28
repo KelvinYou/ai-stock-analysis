@@ -1,0 +1,35 @@
+{
+  "ticker": "MSFT",
+  "judged_view": "buy",
+  "confidence": "low",
+  "thesis": "The bull carried the observed-evidence argument: in the quarter ended 2026-09-30 operating margin was 49.8%, net margin 39.7%, revenue about +18.8% and diluted EPS about +32% year over year (inferred), with debt about 0.12x equity. The bear's points (FCF down about 27% to $18.6B, ahead-of-revenue AI capex, OpenAI concentration of about 10.8% of quarterly revenue) are real risks, but the debate establishes risk and unknown returns rather than observed deterioration in earnings. The ruling is a modest buy at low confidence because valuation inputs and macro data are unavailable and the capex-return question is unresolved.",
+  "winning_side": "bull",
+  "strongest_counterexample": "The cash side of the business is moving the wrong way while the income statement looks strong. Net income rose about 32% while quarterly FCF fell about 27% to $18.6B (about 51% of net income), and management says capex will keep rising 'in advance of fully developed revenue streams', with impairment risk if demand is overestimated. The only current-quarter growth evidence is inferred from one year-over-year comparison, the Azure 40% figure is two filings old, and no valuation is authenticated. Reported earnings may therefore be peak-quality while the cash return on a multi-year capex commitment is unproven. A press-reported pullback from neocloud and Oracle data center deals, an observed event, could be an early sign of demand or capacity misjudgment. Analyst buy ratings are already 53 of 58 with holds rising from 2 to 5 and strong buys down from 14 to 12, so there is little positive surprise left. If the capex does not earn its return, buying on margins would be paying for earnings that do not convert to cash.",
+  "invalidation_conditions": [
+    "Quarterly free cash flow below 50% of net income for two consecutive quarters after the 2026-09-30 quarter, with capex still rising",
+    "Operating margin below 45.1% (the five-quarter low) in either of the next two reported quarters",
+    "Year-over-year quarterly revenue growth falling below 12% in either of the next two reported quarters",
+    "Gross margin below 66% for two consecutive quarters, extending the decline from 69.0% to 67.8%",
+    "An asset impairment charge related to datacenter or AI infrastructure disclosed in a 10-Q or 8-K",
+    "OpenAI receivables above $10B, or an OpenAI-related equity-method loss exceeding $1B in a single quarter",
+    "Daily close below 504.96 (the lower support) with the SMA-50 (516.65) turning down, indicating the long-term uptrend has failed",
+    "Authenticated forward P/E above 30 on a stated share basis, or holds exceeding 10 of the 58 analysts"
+  ],
+  "evidence_gaps": [
+    "Cash balance and net debt: no cash figure is in the evidence",
+    "Current-quarter Azure and Intelligent Cloud growth: the latest disclosed figures are from earlier filings",
+    "Authenticated valuation: the tool's P/E, market cap and share basis are null, and no sector comparison exists",
+    "10Y Treasury yield and rate-path pricing: macro source is not configured, so the effect of the 25bp hike to 3.88% cannot be sized",
+    "Analyst price targets: none are in the evidence",
+    "Capex amount and trajectory in dollars: the capex figure behind the FCF decline is not itemized",
+    "Whether provider fundamentals were reconciled to the 10-Q filed 2026-10-28"
+  ],
+  "decisive_factors": [
+    "Operating margin 49.8% and net margin 39.7% on $92.28B revenue, with operating margin between 45.1% and 49.8% in all five quarters",
+    "Revenue about +18.8% and diluted EPS about +32% year over year (inferred), with operating margin up about 0.9 points despite AI cost pressure",
+    "Debt about 0.12x equity, long-term debt face value down to $41.3B, only $4.4B maturing in the rest of FY2027 and management stating 12-month liquidity is sufficient, so the downside from capex is lower return rather than financial distress",
+    "Bear's central points (FCF cause, capex return, OpenAI circularity) are acknowledged unresolved and rest on risk-factor language and inference rather than observed deterioration in earnings",
+    "Both sides agree valuation is an evidence gap, not proof of cheapness, and technicals and macro give no edge, which caps the ruling at buy with low confidence"
+  ],
+  "pipeline_mode": "in-session"
+}

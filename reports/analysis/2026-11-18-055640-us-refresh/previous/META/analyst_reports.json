@@ -1,0 +1,84 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Provider-reported trailing P/E 20.82 and forward P/E 17.14 on the 2026-11-06 close of 610.15 (valuation price dated 2026-11-06, available 2026-11-07). Multiples are lower than the 27.96x/21.17x seen in the 2026-10-07 run, but the trailing figure is depressed/inflated by one-off charges and the forward figure rests on consensus estimates that are not in the evidence set (unknown). Q3 diluted EPS 3.83 is a single quarter and is not annualized.",
+    "margin_analysis": "Q3 FY2026 (period end 2026-09-30) gross margin 79.3% (Q3 2025: 82.0%), operating margin 20.1% (Q2 2026: 30.9%; Q3 2025: 40.1%), net margin 15.3%. Supplementary (web, issuer-sourced release coverage dated 2026-10-21): operating income 12.99B includes a 9.89B legal charge; excluding it operating income would be 22.88B. Inference: 22.88B / 64.601B = about 35.4% ex-charge margin, still roughly 4.7 points below the year-ago quarter, so compression is not solely the legal charge. Legal charges now appear in two consecutive quarters (Q2 2.4B per the prior run, Q3 9.89B), so treating them as non-recurring is not established.",
+    "debt_analysis": "Reported total debt 114.84B vs total equity 272.39B (about 0.42x). Total debt has risen sequentially 83.90B (Q4 2025), 86.77B (Q1 2026), 112.32B (Q2 2026), 114.84B (Q3 2026) and from 51.06B a year ago. Supplementary (web, conflicting sources): about 31B of that is finance-lease liabilities and management cites about 83.7B of funded debt. Cash and securities for Q3 are NOT in the evidence set (unknown), so net debt cannot be computed. Free cash flow is -1.157B for Q3 on the provider basis (management figure reportedly -2.12B after finance-lease principal); Q2 FCF was +1.746B and Q3 2025 +11.17B.",
+    "growth_outlook": "Q3 revenue 64.601B vs 51.242B in the comparable year-ago quarter = +26.1%; sequentially +6.2% vs 60.801B. Supplementary (web): Q4 2026 revenue guidance 73-76B (vs Q4 2025 59.893B, an implied +22% to +27%, inference); 2026 total expense guidance 175-179B; 2026 capex guidance 135-145B (narrowed from 130-145B); Q3 capex including finance leases 34.91B; no 2027 revenue/expense/capex numbers given. Revenue growth is strong, but cash returns on the capex are not yet visible in free cash flow.",
+    "key_risks": [
+      "Free cash flow turned negative (-1.157B provider basis) while quarterly capex runs about 35B and 2026 capex is guided to 135-145B; funding depends on debt/new capital.",
+      "Operating margin fell to 20.1% (30.9% in Q2, 40.1% a year ago); ex-legal margin of about 35% (inference) is still below the prior year, and legal charges have recurred in consecutive quarters.",
+      "Total debt more than doubled year over year (51.06B to 114.84B) and a new nonvoting share class was authorized (web, company release headline); no specific financing plan was disclosed, so dilution/financing terms are unknown.",
+      "2027 spending and revenue outlook not quantified by management (web); owner economics beyond 2026 cannot be assessed.",
+      "Filing-text risk search (search_filings tool) was not available in this in-session run; no risk is cited from filing passages."
+    ],
+    "key_strengths": [
+      "Revenue +26.1% year over year with Q4 guidance implying growth of roughly 22-27% (web, inference).",
+      "Gross margin remains 79.3% and ex-charge operating margin is roughly 35% (inference from web-sourced charge size).",
+      "Valuation compressed: forward P/E 17.14 and price 21.8% below the 52-week high (provider data), with equity of 272.39B.",
+      "Sell-side recommendation counts remain skewed to buy (strong buy 9, buy 46, hold 6, sell 1, strong sell 0)."
+    ],
+    "summary": "Revenue growth of 26% and a compressed forward multiple are offset by negative free cash flow, margins roughly halved versus a year ago on a reported basis, and sharply higher debt. With cash balances, the 2027 outlook and the recurrence of legal charges unknown, the evidence does not support a directional fundamental call."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Dated Meta-specific items in the provider feed are thin: MediaPost 2026-11-06 'Meta Pauses Data-Scraping Terms Following Publisher Criticism' and Motley Fool pieces dated 2026-11-06/07 (valuation/AI-stock opinion). The IBD item of 2026-11-06 quotes Dan Ives calling the tech sell-off a 'golden buying opportunity' (sector-level, one analyst). Supplementary web evidence: after the 2026-10-21 Q3 report the stock closed 648.85 on 2026-10-22 (about -7%; price table shows -6.96% vs 697.52) on spending concerns, with coverage describing AI-capex fears; a broad AI/tech sell-off on 2026-11-05 (Nasdaq reported down about 5.5%; META closed 605.08 vs 630.00, -4.0% in the provider price file). Sources conflict on several figures, and I found no dated post-Q3 analyst price-target actions for Meta (only Q2-era cuts), so analyst reaction to Q3 is an evidence gap. Recommendation counts (period 0m): strong buy 9, buy 46, hold 6, sell 1, strong sell 0, unchanged from -1m and slightly more bullish than the 2026-10-07 run (8/47/7/1/0); these are stock counts, not fresh rating changes.",
+    "key_themes": [
+      "AI capex and free-cash-flow anxiety",
+      "Sector-wide AI sell-off and de-leveraging",
+      "Legal/regulatory charges",
+      "Contrarian dip-buying calls versus risk-off tape"
+    ],
+    "notable_headlines": [
+      "2026-11-06 | MediaPost | Meta Pauses Data-Scraping Terms Following Publisher Criticism",
+      "2026-11-06 | Investor's Business Daily | Tech Stock Sell-Off 'Golden Buying Opportunity,' Says Dan Ives",
+      "2026-11-06 | Motley Fool | If I Could Buy and Hold Only 1 Artificial Intelligence (AI) Stock Through a Democratic Congress, It Would Be This One",
+      "2026-11-05 | Fortune (web) | Tech stocks are suffering the biggest selloff since Covid as investors see premature end to AI datacenter boom",
+      "2026-10-22 | Trefis/investinglive (web) | Meta shares fall about 7% on huge spending plans after Q3 results"
+    ],
+    "social_sentiment": null,
+    "summary": "Tone is mixed to negative on price action and capex worries, offset by unchanged, buy-heavy analyst counts and some contrarian dip-buying commentary. The extreme sell-side buy skew (55 of 62 ratings) is not a fresh signal, so the direction is not resolved."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "As of 2026-11-06 close 610.15 is below SMA-20 662.67 (-7.9%), SMA-50 674.77 (-9.6%) and SMA-200 631.15 (-3.3%), a bearish structure. Observed bar returns: 5-bar -0.8%, 20-bar -15.1%, 60-bar +2.6%. Price is 21.8% below the 52-week high 779.82 and 17.5% above the 52-week low 519.37. ATR-14 is 23.83 (3.9% of price); Bollinger lower/middle/upper 554.68/662.67/770.67, band position 0.257. Price fell from 762.50 (2026-10-13) to 605.08 (2026-11-05).",
+    "rsi_14": 23.9032,
+    "rsi_assessment": "RSI-14 23.90 is below 30, oversold (it was 62.4 on 2026-10-06 in the prior run). Oversold readings in a downtrend can persist; RSI alone is not a reversal confirmation.",
+    "macd_assessment": "MACD line -23.66 below signal -17.77, histogram -5.89: negative and widening momentum, bearish.",
+    "volume_assessment": "Last completed bar (2026-11-06) volume 15.68M vs 20-bar average 25.16M, ratio 0.62. Heavy selling sessions occurred earlier (51.3M on 2026-10-27, 40.6M on 2026-10-22); the latest low-volume bar closed above its 2026-11-05 close 605.08 (+0.8%) after the 2026-11-05 intraday low 583.80, which is only tentative evidence of selling exhaustion.",
+    "support_levels": [
+      583.8,
+      554.68,
+      524.08
+    ],
+    "resistance_levels": [
+      631.15,
+      662.67,
+      674.77,
+      779.82
+    ],
+    "summary": "Trend is bearish (below all three averages, negative MACD) but RSI at 23.9 is deeply oversold and the last bar held above the prior close on light volume. Conflicting trend and mean-reversion signals support neutral rather than a directional call."
+  },
+  "macro": {
+    "signal": "sell",
+    "confidence": "low",
+    "fed_impact": "Observed (web, Fed release coverage): at the 2026-10-28 meeting the FOMC held the federal funds target range at 3.75-4.00% by a 10-2 vote, with Governors Cook and Hammack dissenting in favor of a quarter-point hike; a quarter-point hike was delivered on 2026-09-16 (also in the prior run). Inference: a committee leaning toward further tightening raises the discount rate applied to long-duration, heavily capex-funded growth and the marginal cost of Meta's rising debt; company-specific repricing is unquantified. Meta's total debt is 114.84B (fundamentals data).",
+    "interest_rate_outlook": "Secondary web sources (conflicting figures) put the probability of a December 2026 hike at about 85-94%, citing a hotter September CPI; one source says the 10-year Treasury yield was about 4.99-5.04% in late October. I could not verify these against primary data; October CPI was not yet published as of this run (one source says 2026-11-10). The Fed path is therefore skewed hawkish but not confirmed.",
+    "fx_impact": "Not assessed for an MYR-based investor beyond the scenario that USD moves change translated value; no current USD/MYR reference was retrieved in this run (unknown). Meta reports in USD.",
+    "sector_macro_factors": [
+      "Observed (web): broad AI/tech sell-off on 2026-11-05 (Nasdaq reported down about 5.5%, estimates of about 2.5T of market value lost, cited causes include doubts about AI data-center spending/permitting and hedge-fund de-leveraging); sources differ on magnitudes.",
+      "Inference: higher-for-longer or rising rates plus risk-off positioning compress multiples for companies whose free cash flow is currently negative.",
+      "Advertiser demand: no new macro evidence on ad budgets was retrieved; Meta's own Q3 revenue growth of 26% (fundamentals data) shows no demand break so far."
+    ],
+    "geopolitical_risks": [
+      "Observed (web): reported pressure on AI-chip export/import conditions and election-related expectations about AI infrastructure build-out contributed to the 2026-11-05 sell-off; effects on Meta specifically are not quantified.",
+      "No supply-chain or regional disruption specific to Meta was found in this run."
+    ],
+    "summary": "The rate environment is tightening-biased (10-2 hold with two hawkish dissents, December hike reportedly mostly priced) and risk appetite for AI capex deteriorated sharply on 2026-11-05, a headwind for a company with negative free cash flow and rising debt. Confidence is low because the hike probabilities and yield levels come from conflicting secondary sources and no primary macro snapshot was available."
+  },
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,73 @@
+{
+  "ticker": "AVGO",
+  "date": "2026-11-18",
+  "data_as_of": "2026-11-17",
+  "overall_signal": "neutral",
+  "conviction": {
+    "score": 0.0,
+    "signal_convergence": 0.25,
+    "explanation": "Zero directional conviction: mixed evidence or material underwriting gaps support the independent neutral judgment. Positive operating or trend evidence is acknowledged, but the debate does not establish a current directional edge. This is abstention, not a calibrated probability or a claim that risks cancel quantitatively."
+  },
+  "executive_summary": "Neutral recovery watch: the supplied July quarter shows revenue growth of 85.50%, operating margin of 54.3%, FCF above net income and falling debt. Those are delivered operating positives, but the statement is 110 days old. Price has recovered above SMA20 and MACD momentum has improved while SMA50/200 and decisive rebound volume remain unreclaimed.\n\nInference: the strongest counterexample to waiting is this combination of operating improvement and early price repair; it preserves candidacy without authenticating current value. I agree with the neutral research judgment because newer financial continuation, liquidity and customer-financing exposure remain unavailable. The supplemental $63B third-party Anthropic infrastructure financing announcement is evidence of a structure, not guaranteed collected Broadcom revenue or proof of no residual risk.",
+  "bull_case": "Multi-period revenue and margin improvement, positive FCF and declining debt provide a delivered operating-quality case. Recovery above the short average is constructive, though neither the financing agreement nor future earnings continuation is counted as collected revenue.",
+  "bear_case": "The July-quarter statement is 110 days old and does not resolve current liquidity, financing dependencies or customer concentration. Price has not reclaimed the longer averages and rebound volume is inconclusive; quality is not an entry valuation.",
+  "key_uncertainties": [
+    "Verified newer financial quarter and current liquidity.",
+    "Cash-collection, customer-concentration and financing exposure details.",
+    "Authenticated valuation and completed longer-trend repair."
+  ],
+  "catalysts_upcoming": [
+    "Conditional reassessment trigger: Reconsider toward buy if the next reported quarter preserves positive FCF and debt does not rise, while price records five consecutive closes above SMA200.",
+    "Conditional reassessment trigger: Reconsider toward sell if the next two reported quarters show negative FCF alongside rising total debt."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "High beta (1.51) \u2014 price may amplify broad-market moves.",
+      "Sector: Technology \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 48.3% over available price history. Projected worst case (2-sigma): ~98.4% from current $341.60.",
+    "risk_reward_ratio": null
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": null,
+    "stop_loss": null,
+    "stop_rationale": null,
+    "take_profit_1": null,
+    "take_profit_2": null,
+    "target_rationale": null,
+    "horizon": "swing (2-8 weeks)",
+    "note": "Signal too mixed for precise levels (conviction +0.00, convergence 0.25). Wait for a clearer setup."
+  },
+  "research_verdict": {
+    "ticker": "AVGO",
+    "judged_view": "neutral",
+    "confidence": "medium",
+    "thesis": "Broadcom remains a credible recovery candidate, but neither side resolves the gap between strong July operations and current entry conditions. The bull establishes operating quality; the bear establishes that evidence is too old and incomplete to authenticate an immediate valuation edge.",
+    "winning_side": "neither",
+    "strongest_counterexample": "The reported sequence of rising revenue and margins, FCF above net income, falling debt and a positive short-term momentum shift is a meaningful combination of operating and market improvement.",
+    "invalidation_conditions": [
+      "Reconsider toward buy if the next reported quarter preserves positive FCF and debt does not rise, while price records five consecutive closes above SMA200.",
+      "Reconsider toward sell if the next two reported quarters show negative FCF alongside rising total debt."
+    ],
+    "evidence_gaps": [
+      "Verified newer financial quarter and current liquidity.",
+      "Cash-collection, customer-concentration and financing exposure details.",
+      "Authenticated valuation and completed longer-trend repair."
+    ],
+    "decisive_factors": [
+      "Strong delivered cash generation versus 110-day statement age.",
+      "Partial rebound remains below SMA50 and SMA200.",
+      "No authenticated current price discount."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "buy",
+    "sentiment": "neutral",
+    "technical": "neutral",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "neutral",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

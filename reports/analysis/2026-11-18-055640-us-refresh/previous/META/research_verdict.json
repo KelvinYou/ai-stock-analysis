@@ -1,0 +1,30 @@
+{
+  "ticker": "META",
+  "judged_view": "neutral",
+  "confidence": "low",
+  "thesis": "Meta's top-line growth (+26.1% YoY) and compressed valuation (provider forward P/E 17.14, price 21.8% below the 52-week high) are real, but the case for adding rests on unknowns neither side could supply: cash balance and net leverage, 2027 capex and returns, the recurrence of legal charges, and the Fed path. Reported free cash flow is negative (-1.157B) and debt has more than doubled year over year while the trend is bearish and RSI is oversold, so both cases rest on the same unresolved funding and return-on-capex question.",
+  "winning_side": "neither",
+  "strongest_counterexample": "The strongest case against a neutral ruling is the bull's: revenue accelerated to 64.6B with Q4 guidance of 73-76B (web), the reported margin collapse is dominated by one identifiable 9.89B charge (ex-charge margin about 35%, inference), operating cash flow was reportedly 32.8B, and the stock fell about 20% in three weeks to RSI 23.9 on a sector-wide sell-off without any cut to growth guidance. If cash balances are large and 2027 capex is moderated, a forward multiple of 17x on a 26% grower is a clear mispricing and neutral would have missed the entry.",
+  "invalidation_conditions": [
+    "Bullish: a daily close above SMA-200 (631.15) and then SMA-20 (662.67) on volume above the 20-bar average, together with disclosure that cash and securities exceed total debt of 114.84B.",
+    "Bullish: Q4 2026 results showing free cash flow positive on the provider basis and operating margin ex-charges at or above 35% with revenue within or above the 73-76B guide.",
+    "Bearish: a daily close below 583.80 (2026-11-05 low) followed by 554.68 (Bollinger lower band) with volume above 25M shares.",
+    "Bearish: a further legal or regulatory charge above 2B in any reported quarter, or a financing announcement (including use of the new nonvoting share class) that adds dilution or total debt above 130B.",
+    "Macro: a December FOMC hike combined with a 10-year Treasury yield above 5.3% (the October peak cited by one secondary source) would worsen the discount-rate headwind."
+  ],
+  "evidence_gaps": [
+    "Cash and marketable securities at 2026-09-30, hence net debt and liquidity runway.",
+    "2027 capex, expense and revenue outlook; management gave no numbers (web).",
+    "Consensus estimates behind the forward P/E 17.14 and dated analyst reactions to Q3.",
+    "Primary macro snapshot: October CPI, December FOMC outcome and Treasury yields; current figures are from conflicting secondary sources.",
+    "Intended use of the new nonvoting share class and any financing plans."
+  ],
+  "decisive_factors": [
+    "Reported free cash flow -1.157B (provider basis; -2.12B management basis, web) against roughly 35B quarterly capex.",
+    "Total debt 114.84B versus 51.06B a year ago, with cash side unknown.",
+    "Revenue +26.1% YoY and Q4 guide of 73-76B (web) which prevents a bearish ruling.",
+    "Price below SMA-20/50/200 with MACD histogram -5.89 offset by RSI 23.9.",
+    "Hawkish-leaning Fed (10-2 hold with two hike dissents) combined with low confidence in the secondary-source macro data."
+  ],
+  "pipeline_mode": "in-session"
+}

@@ -1,0 +1,66 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E unavailable, including the USD-listing/TWD-reporting basis gap. Provider trailing 23.31x/forward 15.38x are unauthenticated. Provider diluted_eps 147.15 is not directly interchangeable with TWD ordinary-share EPS or USD ADR EPS; never divide USD price by TWD EPS.",
+    "margin_analysis": "September30 gross margin 66.4%, operating margin 58.7%, net margin 51.1%. Gross/operating margins below June 67.7%/60.3%, but above year-ago 59.5%/50.6%. Quarterly FCF NT$471.303B.",
+    "debt_analysis": "Total debt NT$1.066T versus equity NT$6.998T; debt broadly stable through recent observations. Inference: measured leverage is modest, but cash, commitments and foreign-fab economics are unavailable.",
+    "growth_outlook": "Canonical revenue +50.95%, net income +68.71% YoY. Official October15 release independently states September30-quarter revenue NT$1,494.24B, net income NT$763.06B, diluted EPS NT$29.43/share or US$4.60/ADR: https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/526b65af7305df2dde6b9ece6812b1fdf1e49f9b/3Q26%20EarningsRelease.pdf. Financial period 49 days old.",
+    "key_risks": [
+      "Sequential gross and operating-margin decline, despite year-ago improvement.",
+      "No common currency/share-basis valuation; ADR/ordinary EPS basis needs care.",
+      "No filing index: geopolitical and customer-concentration claims require other sourced layers rather than unsupported fundamental assertions."
+    ],
+    "key_strengths": [
+      "Strong comparable growth, high margins and positive observed FCF.",
+      "Low measured debt relative to equity."
+    ],
+    "summary": "Medium-confidence fundamental buy on growth, cash flow and balance-sheet strength. The ADR/EPS currency and share-basis mismatch prevents a verified valuation discount."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "low",
+    "news_tone": "positive",
+    "news_summary": "TSMC reported October revenue growth of 59.7% year over year on November 10. Independent fresh coverage and dated individual rating changes are unavailable in this packet. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=6, buy=14, hold=1, sell=0, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.sec.gov/Archives/edgar/data/1046179/000104617926000796/tsm-revenue20261110.htm",
+    "key_themes": [
+      "Strong reported monthly sales",
+      "Limited independent fresh sentiment"
+    ],
+    "notable_headlines": [
+      "TSMC October 2026 Revenue Report"
+    ],
+    "social_sentiment": null,
+    "summary": "The recent issuer sales update is positive, but no sufficiently verified fresh independent stock-specific sentiment source was established in this bounded search. Retain neutral with low confidence rather than turning strong provider ratings into a new buy signal."
+  },
+  "technical": {
+    "signal": "sell",
+    "confidence": "high",
+    "trend": "Strong short-term breakdown below SMA20/50/200 with successive lower closes.",
+    "rsi_14": 31.233,
+    "rsi_assessment": "RSI 31.23 is near oversold; it has not supplied reversal confirmation.",
+    "macd_assessment": "MACD line -14.1280 and histogram -2.2182 remain bearish.",
+    "volume_assessment": "Latest volume 1.62x average during a sharp decline; elevated distribution confirms downside pressure.",
+    "support_levels": [
+      351.19,
+      353.5
+    ],
+    "resistance_levels": [
+      385.47,
+      408.09
+    ],
+    "summary": "TSM is 15.82% below SMA50 and 10.53% below SMA200 after losing 9.28% over five bars. Trading near the lower Bollinger band with elevated selling volume is evidence of an active decline, not a confirmed bargain entry."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Technology: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  }
+}

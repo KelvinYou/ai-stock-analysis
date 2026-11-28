@@ -1,0 +1,74 @@
+{
+  "ticker": "UNH",
+  "date": "2026-11-18",
+  "data_as_of": "2026-11-17",
+  "overall_signal": "sell",
+  "conviction": {
+    "score": -0.5,
+    "signal_convergence": 0.5,
+    "explanation": "Two of four equally weighted medium-confidence analyst roles support this direction; the other two are neutral. Conviction is capped at the observed net directional consensus of -0.50. The strongest counterexample and unresolved valuation/operating risks preclude stronger conviction. This is a thesis-strength score, not a calibrated probability."
+  },
+  "executive_summary": "Sell with measured conviction: operating margin fell sequentially from 8.05% to 7.13% to 5.82%, and quarterly FCF of $4.264B is below both the preceding and year-ago observations. The latest 1.62-times-average-volume decline broke short and intermediate averages despite price remaining above SMA200. Supplemental CMS and dated reporting add a fresh Medicare Advantage audit proposal to existing operating uncertainty.\n\nInference: I agree with the sell research judgment as a near-term risk-reduction/avoid-new-entry thesis, without assigning a company liability or permanent impairment to an unfinished proposal. The strongest counterexample is positive earnings and FCF, lower year-ago debt and margin above a weak year-ago base; these limit confidence but do not erase current sequential deterioration. Medical-cost, reserve and normalized-earnings evidence is unavailable, and the final form and UnitedHealth-specific financial effect of the proposal remain unknown.",
+  "bull_case": "Current earnings and FCF remain positive, debt is below the year-ago observation and margins exceed a weak comparison base. The regulatory proposal is not a finalized quantified loss, and recovery remains possible if operations stabilize.",
+  "bear_case": "Sequential margin deterioration and weaker FCF are observed, while a fresh audit proposal adds unquantified uncertainty. High-volume breakdown confirms current weakness; a lagging long average does not establish a recovery entry.",
+  "key_uncertainties": [
+    "Medical-cost, reserve and normalized earnings evidence.",
+    "Final form and company-specific impact of the regulatory proposal.",
+    "Cause and durability of the sequential margin deterioration.",
+    "Authenticated same-basis valuation is unavailable; provider multiples do not establish cheapness."
+  ],
+  "catalysts_upcoming": [
+    "Conditional reassessment trigger: Reconsider toward neutral or buy after two consecutive reports show sequential operating-margin and FCF improvement, with verified medical-cost and reserve data supporting that improvement.",
+    "Conditional reassessment trigger: Reconsider the regulatory component if the final rule removes the proposed retrospective exposure or verified company disclosure quantifies it as immaterial."
+  ],
+  "risk_assessment": {
+    "correlation_notes": [
+      "Low beta (0.52) \u2014 historically less sensitive to broad-market moves.",
+      "Sector: Healthcare \u2014 use sector-specific catalysts and risks in the thesis."
+    ],
+    "max_drawdown_scenario": "Historical max drawdown: 61.4% over available price history. Projected worst case (2-sigma): ~51.6% from current $389.68.",
+    "risk_reward_ratio": "N/A (bearish signal)"
+  },
+  "action_plan": {
+    "entry_limit": null,
+    "entry_rationale": "Bearish signal \u2014 do not initiate new long positions.",
+    "stop_loss": 413.6,
+    "stop_rationale": "Thesis invalidated if price breaks above $413.60.",
+    "take_profit_1": 389.68,
+    "take_profit_2": 389.55,
+    "target_rationale": "Primary: reduce/exit at/near current $389.68. Next downside watch: $389.55 (nearest support).",
+    "horizon": "swing (2-8 weeks)",
+    "note": null
+  },
+  "research_verdict": {
+    "ticker": "UNH",
+    "judged_view": "sell",
+    "confidence": "medium",
+    "thesis": "The bear carries the near-term directional case on observed sequential margin and cash weakening plus a fresh unquantified policy overhang and high-volume breakdown. This is a medium-confidence sell/avoid-new-entry research view; it does not assert a specific liability or permanent impairment from a proposal.",
+    "winning_side": "bear",
+    "strongest_counterexample": "The company still reports positive earnings and FCF, debt below the year-ago observation and operating margin above that weak base, while the proposal may change before finalization.",
+    "invalidation_conditions": [
+      "Reconsider toward neutral or buy after two consecutive reports show sequential operating-margin and FCF improvement, with verified medical-cost and reserve data supporting that improvement.",
+      "Reconsider the regulatory component if the final rule removes the proposed retrospective exposure or verified company disclosure quantifies it as immaterial."
+    ],
+    "evidence_gaps": [
+      "Medical-cost, reserve and normalized earnings evidence.",
+      "Final form and company-specific impact of the regulatory proposal.",
+      "Cause and durability of the sequential margin deterioration."
+    ],
+    "decisive_factors": [
+      "Operating margin weakened across both supplied 2026 sequential comparisons.",
+      "FCF below the preceding and year-ago observations.",
+      "The latest high-volume decline broke the short and intermediate averages."
+    ]
+  },
+  "agent_signal_breakdown": {
+    "fundamentals": "neutral",
+    "sentiment": "sell",
+    "technical": "sell",
+    "macro": "neutral"
+  },
+  "synthesized_signal": "sell",
+  "signal_gate_reasons": [],
+  "pipeline_mode": "in-session"
+}

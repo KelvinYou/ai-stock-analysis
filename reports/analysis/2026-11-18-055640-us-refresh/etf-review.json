@@ -1,0 +1,32 @@
+{
+  "ticker": "VT",
+  "mode": "ETF factual and technical review; unscored",
+  "data_as_of": "2026-11-17",
+  "stock_pipeline": "not_run_evidence_gate_failed",
+  "gap_codes": [
+    "fundamentals/financials_missing",
+    "sentiment/news_empty"
+  ],
+  "interpretation": "Company financial-statement quorum is not suitable for an ETF; failure is not evidence of fund distress. No conviction score or company-level Buy label is invented.",
+  "mandate": "Tracks FTSE Global All Cap Index across global large-, mid- and small-cap stocks.",
+  "mandate_source": "https://advisors.vanguard.com/investments/products/vt/vanguard-total-world-stock-etf",
+  "technicals": {
+    "ticker": "VT",
+    "as_of": "2026-11-17",
+    "close": 150.65,
+    "sma20": 155.4755,
+    "sma21": 155.58619,
+    "sma50": 157.5104,
+    "sma200": 152.7678,
+    "price_vs_sma20": -0.031037044421790005,
+    "price_vs_sma50": -0.04355521921092198,
+    "price_vs_sma200": -0.013862869007735812,
+    "ma_distance_21_200": 0.018448928297410738,
+    "rsi14": 34.8292,
+    "macd_histogram": -0.2883,
+    "volume_ratio": 1.116,
+    "return_5_bars": -0.0277,
+    "return_20_bars": -0.0453
+  },
+  "view": "Long-term diversified core contributions can continue if reserves, horizon and risk capacity permit. Current below-average price is not confirmation of a short-term reversal; VT is excluded from the established stock-selection universes."
+}

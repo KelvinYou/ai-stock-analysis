@@ -1,0 +1,69 @@
+{
+  "fundamentals": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E unavailable; provider trailing 21.37x/forward 17.35x unauthenticated. Net-income growth has an unusual prior-year tax base, so it is not a clean proxy for recurring earnings growth.",
+    "margin_analysis": "Provider September30 operating margin 20.1% versus 40.1% a year earlier. Official release identifies a $9.89B legal charge; excluding it operating income would be $22.88B. Official FCF including finance-lease principal is -$2.12B versus provider -$1.157B, a definition difference: https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+    "debt_analysis": "Provider total debt $114.842B versus equity $272.386B, up from $51.06B year ago. Official cash and marketable securities $82.45B; those assets must not be silently netted against a differently scoped debt measure.",
+    "growth_outlook": "Canonical revenue growth +26.07% YoY; reported net income +263.97%, heavily affected by the comparison base. Official Q4 sales guide $73\u201376B and 2026 capex $135\u2013145B are management expectations, not realized growth. Period September30, 49 days old.",
+    "key_risks": [
+      "Quarterly cash generation has weakened across the supplied observations and is now negative.",
+      "Higher debt, aggressive investment and a material legal charge complicate recurring owner earnings.",
+      "No local filing index; broad unreturned risk claims are omitted."
+    ],
+    "key_strengths": [
+      "Revenue growth remains strong.",
+      "Positive underlying operating income after separately identifying the legal charge."
+    ],
+    "summary": "Neutral: advertising revenue is strong, but negative FCF, rising leverage and non-recurring accounting effects complicate the earnings story. A low forward provider multiple does not resolve investment-return risk."
+  },
+  "sentiment": {
+    "signal": "sell",
+    "confidence": "medium",
+    "news_tone": "negative",
+    "news_summary": "Reuters October 27 reported the planned financing size at $97.5 billion; SEC offering communications substantiate multiple instruments and a future Class C ATM program. Provider aggregate recommendations remain positive but slightly softened. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=10, buy=45, hold=6, sell=1, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.investing.com/news/economy-news/meta-eyes-record-975-billion-equity-raise-to-fund-ai-expansion-4975360; https://www.sec.gov/Archives/edgar/data/1326801/000119312526431036/d116268dfwp.htm",
+    "key_themes": [
+      "Large equity financing",
+      "Dilution",
+      "AI capital intensity"
+    ],
+    "notable_headlines": [
+      "Meta eyes record $97.5 billion equity raise to fund AI expansion",
+      "Meta offering communication and prospective Class C ATM program"
+    ],
+    "social_sentiment": null,
+    "summary": "The unusually large planned equity financing adds dilution and capital-intensity pressure to the sentiment case. This negative judgment concerns the financing narrative; it does not assume every proposed tranche has closed or that operating demand has collapsed."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Below SMA20/50/200; tentative momentum recovery inside a broader correction.",
+    "rsi_14": 51.8439,
+    "rsi_assessment": "RSI 51.84 is balanced; it does not override the loss of the main averages.",
+    "macd_assessment": "Histogram +1.8949 signals recovery from prior weakness, while the MACD line remains negative at -14.6183.",
+    "volume_assessment": "Latest volume 0.55x average; limited conviction in either the latest decline or a recovery.",
+    "support_levels": [
+      583.8,
+      613.51
+    ],
+    "resistance_levels": [
+      648.45,
+      713.22
+    ],
+    "summary": "META is only 1.63% below SMA200, but 8.99% below SMA50 and down 10.86% over 20 bars. Improving momentum deserves monitoring, while an actual reclaim and hold of the averages is still absent."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Communication Services: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  },
+  "pipeline_mode": "in-session"
+}

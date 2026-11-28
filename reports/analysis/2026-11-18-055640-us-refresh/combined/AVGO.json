@@ -1,0 +1,68 @@
+{
+  "fundamentals": {
+    "signal": "buy",
+    "confidence": "medium",
+    "pe_assessment": "Canonical same-basis P/E unavailable. Provider trailing 43.63x/forward 17.60x are unauthenticated; the gap relies on forecast earnings and cannot itself establish undervaluation.",
+    "margin_analysis": "July31 operating margin 54.3%, versus 38.1% a year earlier, with five rising operating-margin observations. Net margin 44.2%; quarterly FCF $13.665B exceeds reported net income $13.088B.",
+    "debt_analysis": "Total debt $59.419B versus equity $99.690B, below debt $64.907B in April and $64.229B a year earlier. Inference: deleveraging and retained cash-generation capacity are positives; liquidity and maturity detail unavailable.",
+    "growth_outlook": "Canonical comparable-period growth: revenue +85.50%, net income +216.14% YoY. All five supplied quarterly revenue observations increase. Statement is July31, 110 days old; November capture is not proof of a newer financial filing.",
+    "key_risks": [
+      "110-day financial-period age; no verified newer quarter in frozen inputs.",
+      "Forecast valuation is unauthenticated, and cash/coverage/customer-concentration evidence unavailable.",
+      "No filing index: risks outside the visible financial statements remain unavailable."
+    ],
+    "key_strengths": [
+      "Strong multi-period revenue, margin and free-cash-flow observations.",
+      "Debt fell across the last two reported observations."
+    ],
+    "summary": "Fundamentals support a medium-confidence buy on operating growth, positive cash flow and falling debt. This is an operating-quality view, not a verified price discount; the July-quarter age limits confidence."
+  },
+  "sentiment": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "news_tone": "mixed",
+    "news_summary": "Reuters and the October 26 issuer-hosted announcement describe $63 billion of third-party financing for Anthropic infrastructure using Broadcom technology. This is evidence of a funding structure, not guaranteed future revenue or proof Broadcom bears no residual risk. Provider-current recommendation period 0m, observed 2026-11-18: strong_buy=8, buy=40, hold=3, sell=0, strong_sell=0. This is an aggregate snapshot, not verified individual rating changes. Sources: https://www.fidelity.com/news/article/technology/202610261716RTRSNEWSCOMBINED_L3N46C1PP_1; https://investors.broadcom.com/node/64786/pdf",
+    "key_themes": [
+      "AI compute funding",
+      "Customer concentration",
+      "Financing interdependence"
+    ],
+    "notable_headlines": [
+      "Banks and investors provide $63 billion financing for Broadcom equipment deployed for Anthropic",
+      "Bank of America, Blackstone, Citi and Morgan Stanley Announce Landmark $63 Billion Financing Structure to Enable AI Compute Capacity in Partnership with Broadcom"
+    ],
+    "social_sentiment": null,
+    "summary": "The Anthropic capacity deal supports a growth narrative but introduces funding and concentration questions. Broadly bullish aggregate recommendations alone do not establish a fresh sentiment turn."
+  },
+  "technical": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "trend": "Short-term recovery above SMA20, still below SMA50 and SMA200.",
+    "rsi_14": 47.3421,
+    "rsi_assessment": "RSI 47.34 is balanced; the prior oversold condition has eased without a bullish regime confirmation.",
+    "macd_assessment": "Histogram +3.3951 is improving, although the MACD line remains negative at -1.4212.",
+    "volume_assessment": "Latest volume 0.94x average; the rebound lacks decisive volume confirmation.",
+    "support_levels": [
+      289.77,
+      327.8
+    ],
+    "resistance_levels": [
+      356.85,
+      369.82
+    ],
+    "summary": "AVGO has recovered above its 20-day average and is only 0.77% below SMA50, but remains 6.81% below SMA200. The 2.90% five-bar gain and positive histogram are constructive while the wider trend and large ATR leave the recovery unconfirmed."
+  },
+  "macro": {
+    "signal": "neutral",
+    "confidence": "medium",
+    "fed_impact": "Observed FRED DFF 3.88% as of 2026-11-16; the October 28 Fed statement held its target at 3.75%-4.00% with two hike dissents. No new easing catalyst is observed. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+    "interest_rate_outlook": "Hike risk remains conditional, not a forecast. The November 10 BLS release shows October CPI +0.4% month on month and core +0.3%; October annual inflation is unavailable. The snapshot 3.72% annual figure is September. Source: https://www.bls.gov/news.release/cpi.nr0.htm",
+    "fx_impact": null,
+    "sector_macro_factors": [
+      "Snapshot annual CPI 3.72% refers to September 2026; latest October annual comparison is unavailable.",
+      "A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow."
+    ],
+    "geopolitical_risks": [],
+    "summary": "Technology: policy remains restrictive relative to low-rate conditions, but the snapshot supplies no decisive new stock-specific macro shock. A sustained 3.88% effective policy rate is a discount-rate and funding-cost hurdle; it does not establish whether this company is overvalued or whether AI demand will slow. Macro is neutral, not an endorsement; FX direction, long-bond yields and sector-specific forecasts are unavailable here."
+  }
+}
