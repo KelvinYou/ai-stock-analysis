@@ -11,7 +11,7 @@ const source = ts.transpileModule(fs.readFileSync(path.join(root, "lib/allocatio
   compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
 }).outputText;
 vm.runInNewContext(source, { exports: exportsObject });
-const { isAllocationResearch, isCurrentMomentum, currentMomentumForDate } = exportsObject;
+const { isAllocationResearch, isCurrentMomentum, currentMomentumForDate, isCurrentRanking, currentRankingForDate } = exportsObject;
 const bytes = fs.readFileSync(path.join(root, "data/allocation-research.json"));
 const hash = fs.readFileSync(path.join(root, "data/allocation-research.sha256"), "utf8").trim();
 assert.equal(crypto.createHash("sha256").update(bytes).digest("hex"), hash);
@@ -66,3 +66,32 @@ for (const corrupt of [
   assert.equal(isAllocationResearch(bad), false);
 }
 console.log(`Allocation display contract PASS: ${data.experiments.length} verified experiments, absent and zero AI remain distinct.`);
+
+// Current ranking: contract, expiry and corruption must fail closed.
+const ranking = data.current_ranking;
+assert(ranking && isCurrentRanking(ranking));
+if (ranking.status === "available") {
+  const asOf = new Date(`${ranking.as_of}T04:00:00Z`);
+  const next = new Date(asOf.getTime() + 86_400_000);
+  assert.equal(currentRankingForDate(ranking, next).status, "available");
+  assert.equal(currentRankingForDate(ranking, new Date(asOf.getTime() + 6 * 86_400_000)).status, "unavailable");
+  assert.equal(currentRankingForDate(ranking, asOf).status, "unavailable");
+  for (const corrupt of [
+    c => { const r = Object.values(c.experiments)[0].rules[0]; r.ranking[0].weight += 0.2; },
+    c => { const r = Object.values(c.experiments)[0].rules[0]; r.ranking[1].rank = 9; },
+    c => { const r = Object.values(c.experiments)[0].rules[0]; r.ranking.pop(); },
+    c => { const r = Object.values(c.experiments)[0].rules[0]; r.ranking[0].value = NaN; },
+    c => { const t = Object.keys(c.series)[0]; c.series[t].close.pop(); },
+    c => { c.scope = "buy_recommendation"; },
+    c => { c.captured_at_utc = "2026-11-11T03:00:00"; },
+    c => { const r = Object.values(c.experiments)[0].rules[0]; r.history.at(-1).selected = []; },
+    c => { const r = Object.values(c.experiments)[0].rules[0]; r.history[0].selected = ["NOPE"]; },
+    c => { const r = Object.values(c.experiments)[0].rules[0]; r.history.reverse(); },
+  ]) {
+    const bad = structuredClone(ranking);
+    corrupt(bad);
+    assert(!isCurrentRanking(bad));
+  }
+}
+assert.equal(currentRankingForDate(undefined).status, "unavailable");
+console.log("Current ranking contract PASS");

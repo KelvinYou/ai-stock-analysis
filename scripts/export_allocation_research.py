@@ -9,6 +9,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from stock_analysis.allocation_snapshot import public_current_momentum
+from stock_analysis.current_ranking import public_current_ranking
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS = ROOT / "reports/analysis"
@@ -167,6 +168,57 @@ def episodes(raw: dict, item: dict) -> dict:
     }
 
 
+def strategy_comparison(raw: dict, item: dict) -> dict:
+    """Allowlisted view of one frozen strategy comparison; period logs stay private."""
+    dates = raw["curve_dates"]
+    curves = raw["curves"]
+    rows = [raw["benchmark"], *raw["strategies"]]
+    for row in rows:
+        series = curves[row["id"]]
+        if len(series) != len(dates) or not math.isclose(
+            series[-1] / 100 - 1, row["net_compound_return"], abs_tol=1e-9
+        ):
+            raise ValueError(f"Strategy curve does not reconcile: {row['id']}")
+    keep = (
+        "id",
+        "label",
+        "family",
+        "rule",
+        "source",
+        "net_compound_return",
+        "max_drawdown",
+        "annualized_sharpe",
+        "mean_exposure",
+        "mean_monthly_turnover",
+        "excess_vs_hold",
+        "log_excess_ci_95",
+        "excess_p_value",
+        "deflated_sharpe",
+        "last_selection",
+        "holdings",
+    )
+    return {
+        "id": item["id"],
+        "label": item["label"],
+        "universe": raw["universe"],
+        "start": dates[0],
+        "end": dates[-1],
+        "periods": raw["periods"],
+        "effective_n": raw["effective_n"],
+        "cost_bps": raw["config"]["cost_bps_per_side"],
+        "top_n": raw["config"]["top_n"],
+        "n_strategies_tested": raw["n_strategies_tested"],
+        "drawdown_basis": "Daily close marks",
+        "price_basis": raw["price_basis"],
+        "notes": raw["notes"],
+        "source_sha256": item["sha256"],
+        "benchmark_id": raw["benchmark"]["id"],
+        "rows": [{k: row[k] for k in keep} for row in rows],
+        "curve_dates": dates,
+        "curves": curves,
+    }
+
+
 def export() -> dict:
     manifest = json.loads(MANIFEST.read_text())
     experiments = []
@@ -181,6 +233,14 @@ def export() -> dict:
         view = monthly(raw, item) if item["kind"] == "monthly" else episodes(raw, item)
         view["source_sha256"] = digest
         experiments.append(view)
+    comparisons = []
+    for item in manifest.get("strategy_comparisons", []):
+        path = (REPORTS / item["source"]).resolve()
+        if not path.is_relative_to(REPORTS.resolve()):
+            raise ValueError("Source must be an approved research artifact")
+        if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
+            raise ValueError(f"Source hash changed: {item['id']}")
+        comparisons.append(strategy_comparison(json.loads(path.read_text()), item))
     primary = next((view for view in experiments if view["id"] == manifest["default_id"]), None)
     if primary is None:
         raise ValueError("Default experiment missing")
@@ -209,15 +269,32 @@ def export() -> dict:
         "generated_at_utc": datetime.now(UTC).isoformat(),
         "default_id": manifest["default_id"],
         "experiments": experiments,
+        "strategy_comparisons": comparisons,
+        "current_ranking": public_current_ranking(
+            support["current_ranking"],
+            universes={c["id"]: c["universe"] for c in comparisons},
+            source_hash=support_hashes["current_ranking"],
+            today=datetime.now(UTC).date(),
+        )
+        if "current_ranking" in support
+        else {
+            "status": "unavailable",
+            "reason": "No approved current ranking is connected.",
+        },
         "current_plan": {
             "status": "unavailable",
             "reason": "No pinned same-session plan is connected.",
         },
         "current_momentum": public_current_momentum(
-            support["current_momentum"], universe=primary["universe"],
-            source_hash=support_hashes["current_momentum"], today=datetime.now(UTC).date(),
-        ) if "current_momentum" in support else {
-            "status": "unavailable", "reason": "No approved current price snapshot is connected.",
+            support["current_momentum"],
+            universe=primary["universe"],
+            source_hash=support_hashes["current_momentum"],
+            today=datetime.now(UTC).date(),
+        )
+        if "current_momentum" in support
+        else {
+            "status": "unavailable",
+            "reason": "No approved current price snapshot is connected.",
         },
         "reliability_status": "Unconfirmed",
         "promotion_ready": False,

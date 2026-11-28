@@ -4,6 +4,7 @@ import { ArrowUpRight, ArrowRight, Layers, ShieldCheck } from "lucide-react";
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, BarChart, Bar, ReferenceLine } from "recharts";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { SectionCard } from "@/components/shared/section-card";
+import { StrategyComparisonDesk } from "@/components/allocation/strategy-comparison";
 import { currentMomentumForDate, type AllocationResearch, type AllocationExperiment } from "@/lib/allocation-types";
 const pct = (n: number | null) => n === null ? "Not recorded" : `${n >= 0 ? "+" : ""}${(n * 100).toFixed(2)}%`;
 const points = (n: number) => `${n >= 0 ? "+" : ""}${(n * 100).toFixed(2)} pp`;
@@ -20,7 +21,7 @@ export function AllocationDesk({data}: {data: AllocationResearch}) {
       <div className="flex flex-wrap items-start justify-between gap-4"><div><p className="eyebrow">Portfolio research · US / USD</p><h1 className="mt-2 text-3xl font-semibold tracking-tight text-ink md:text-4xl">Allocation</h1><p className="mt-2 max-w-2xl text-sm text-graphite">Follow the price trend. See what AI keeps, what it rejects, and what the evidence supports.</p></div><span className="inline-flex items-center gap-2 rounded border bg-secondary px-3 py-2 text-xs text-ink"><ShieldCheck className="size-4" aria-hidden />Reliability unconfirmed</span></div>
       <div className="flex flex-wrap items-center gap-2 text-micro text-graphite"><span>12-month momentum</span><ArrowRight className="size-3" aria-hidden /><span>Top 3</span><ArrowRight className="size-3" aria-hidden /><span>Equal one-third sleeves</span><span className="ml-2 rounded bg-secondary px-2 py-1">Historical research · no live orders</span></div>
     </header>
-    <Tabs defaultValue="research"><TabsList aria-label="Allocation view"><TabsTrigger value="research">Historical research</TabsTrigger><TabsTrigger value="snapshot">Current snapshot</TabsTrigger></TabsList>
+    <Tabs defaultValue="research"><TabsList aria-label="Allocation view"><TabsTrigger value="research">Historical research</TabsTrigger>{data.strategy_comparisons?.length ? <TabsTrigger value="strategies">Strategy comparison</TabsTrigger> : null}<TabsTrigger value="snapshot">Current snapshot</TabsTrigger></TabsList>
       <TabsContent value="research" className="space-y-8">
         <section className="flex flex-wrap items-end justify-between gap-4"><div><label htmlFor="experiment" className="eyebrow block">Frozen experiment</label><select id="experiment" value={id} onChange={ev => setId(ev.target.value)} className="mt-2 max-w-full rounded border bg-card px-3 py-2 text-sm text-ink focus-visible:outline-action">{data.experiments.map(x => <option key={x.id} value={x.id}>{x.label}</option>)}</select></div><div className="text-right text-micro text-graphite"><p className="num">{e.start} → {e.end}</p><p>{e.periods} {e.kind === "monthly" ? "monthly periods" : "non-overlapping episodes"} · {e.cost_bps} bps / side</p></div></section>
         <div className="grid gap-5 border-y py-5 sm:grid-cols-3"><Metric label="Allocator net return" value={pct(allocator.net_return)} /><Metric label="Continuous hold" value={pct(hold.net_return)} /><Metric label="Observed excess vs hold" value={points(e.excess_vs_hold)} note="Cumulative return difference in percentage points" /></div>
@@ -31,6 +32,7 @@ export function AllocationDesk({data}: {data: AllocationResearch}) {
         <SectionCard title="Last historical selection" description={`Selected at ${e.last_selection.as_of}. This is not today's ranking or your holdings.`}><div className="flex flex-wrap gap-3">{e.last_selection.tickers.map(t => <a href={`/${t}`} key={t} className="flex items-center gap-3 rounded border px-4 py-3 text-sm text-ink hover:bg-secondary"><span className="num font-medium">{t}</span><span className="num text-graphite">33⅓%</span><ArrowUpRight className="size-3" aria-hidden /></a>)}</div></SectionCard>
         <details className="rounded border p-4"><summary className="cursor-pointer text-sm font-medium text-ink">Protocol and evidence</summary><div className="mt-4 space-y-3 text-micro text-graphite"><p>Universe: {e.universe.join(", ")}</p><p>{e.fee_basis}</p><p>Price basis: {e.price_basis.replaceAll("_", " ")}</p><ul className="space-y-2">{e.notes.map(n => <li key={n}>• {n}</li>)}</ul><p className="break-all num">Source SHA-256: {e.source_sha256}</p><a className="inline-block text-action underline underline-offset-4" href={`/allocation/evidence?id=${encodeURIComponent(e.id)}`}>Download this verified research view</a></div></details>
       </TabsContent>
+      {data.strategy_comparisons?.length ? <TabsContent value="strategies"><StrategyComparisonDesk experiments={data.strategy_comparisons} ranking={data.current_ranking} /></TabsContent> : null}
       <TabsContent value="snapshot"><CurrentSnapshot data={data} /></TabsContent>
     </Tabs>
   </div>;

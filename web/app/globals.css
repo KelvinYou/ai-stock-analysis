@@ -44,6 +44,15 @@
        colorblind-safe floor against bull/bear on the signal landscape scatter. */
     --neutral-signal: 230 35% 42%;
 
+    /* Chart series identity: categorical, never status colours. Validated with the
+       dataviz palette script (light adjacent CVD dE 9.1, normal-vision 19.6). Three
+       light slots sit under 3:1, so charts also ship direct labels and a table. */
+    --series-1: #2a78d6;
+    --series-2: #eb6834;
+    --series-3: #1baf7a;
+    --series-4: #eda100;
+    --series-5: #e87ba4;
+
     /* Semantic aliases consumed by the shadcn primitives */
     --background: var(--paper);
     --foreground: var(--ink);
@@ -85,6 +94,12 @@
     --trend-mid: 265 65% 68%;
     --trend-slow: 265 55% 54%;
     --neutral-signal: 230 55% 55%;
+
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --series-5: #d55181;
 
     --secondary: 220 12% 14%;
     --accent: 220 12% 14%;

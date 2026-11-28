@@ -59,6 +59,25 @@
       "id": "current_momentum",
       "source": "2026-10-27-current-allocation/current-momentum.json",
       "sha256": "252c8ffe1a9c2033fb13e58297b9f3606e5b3fe0d8a859a37098152cdb847277"
+    },
+    {
+      "id": "current_ranking",
+      "source": "2026-11-18-current-ranking/current-ranking.json",
+      "sha256": "2c60d6a32dc42e0bf96aed41f43f55f43a06d0019ac5171035608538c3b7b96a"
+    }
+  ],
+  "strategy_comparisons": [
+    {
+      "id": "broad17-20",
+      "label": "Seventeen-stock watchlist \u00b7 20 bps",
+      "source": "2026-11-11-strategy-comparison/broad17-20bps.json",
+      "sha256": "4ca0340f02f9734b16d5dcb455f37c75f218fdebbfafa01fbb658c319dec67a1"
+    },
+    {
+      "id": "primary8-20",
+      "label": "Eight-stock watchlist \u00b7 20 bps",
+      "source": "2026-11-11-strategy-comparison/primary8-20bps.json",
+      "sha256": "42f57781bdad1bfa9713aaace0277a3a424422caa92b9cea7b8f80c017f2109b"
     }
   ]
 }
