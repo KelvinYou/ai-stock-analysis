@@ -74,6 +74,50 @@ stocks also need thesis reviews after material filings or events. This repositor
 does not yet provide a transaction ledger or a validated long-hold thesis-change
 alert, so neither should be inferred from a briefing or a price-only P&L figure.
 
+## Compare common price-only strategies
+
+`scripts/compare_strategies.py` runs ten price-only rules (including an MA-distance variant with a top-5 sell buffer) (12m and 12-1 momentum,
+dual momentum, time-series momentum, 200-day SMA trend, MA distance, low
+volatility, short-term reversal, a technical blend) plus six fundamental rules
+(quality, revenue growth, quality + momentum, quality above the 200-day SMA, and two "buy only top-quartile quality" variants)
+against equal-weight continuous hold on one universe, with identical monthly
+dates, next-open fills and costs. The momentum arm reconciles exactly with the
+allocator report. Signals read closes at or before each decision date only.
+Interval and deflated Sharpe are computed on monthly log excess versus hold and
+deflated for the full 15-rule search.
+
+Fundamentals come from SEC CompanyFacts via `scripts/build_pit_fundamentals.py`
+(filing date plus one day, latest knowable fiscal year, up to about 18 months
+old; SEC requires a contact in `--user-agent`, never commit it). Value ratios
+are excluded: split-adjusted price bars cannot be divided by as-reported
+per-share figures. Coverage is uneven (banks lack free cash flow; TSM files
+20-F and stops in 2025), so a name is ranked on the metrics it has.
+
+```bash
+.venv/bin/python scripts/compare_strategies.py --name primary8 \
+  --tickers AVGO,COST,MSFT,NVDA,ORCL,TSM,UNH,V --start 2018-01-01 --end 2026-07-31 \
+  --fundamentals-dir reports/analysis/2026-11-11-fundamentals-pit
+.venv/bin/python scripts/export_allocation_research.py   # hashes live in config/allocation_research.json
+```
+
+The `/allocation` page shows the result under the Strategy comparison tab.
+
+### Current ranking (price rules only)
+
+After refreshing prices (`STORAGE_BACKEND=local stock-fetch ...`, with `.corp-ca.pem`
+via `CURL_CA_BUNDLE` / `SSL_CERT_FILE` behind the corporate proxy), pin today's
+ranking for every price rule and re-export:
+
+```bash
+cd scripts && ../.venv/bin/python refresh_current_ranking.py
+```
+
+It reuses the backtest signal functions, so a rule's selection matches what the
+backtest would do at that date. The pinned artifact expires after four calendar
+days; the page then shows an unavailable state rather than a stale ranking.
+Fundamental rules are not shown as current because the stored SEC history ends
+at its last build; rebuild it with `scripts/build_pit_fundamentals.py` first.
+
 ## Run backtests
 
 ```bash
