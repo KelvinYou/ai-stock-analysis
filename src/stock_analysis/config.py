@@ -50,6 +50,12 @@ class Settings(BaseModel):
     price_history_period: str = "10y"
     news_max_age_days: int = Field(default=30, ge=1)
     evidence_replay_dir: str | None = None
+    # Live runs refuse to start when too little evidence is usable (see
+    # data/preflight.py). The gate never applies to historical/replay captures.
+    evidence_gate: Literal["enforce", "off"] = "enforce"
+    min_evidence_classes: int = Field(default=3, ge=1, le=4)
+    preflight_min_price_bars: int = Field(default=200, ge=1)
+    preflight_max_bar_age_days: int = Field(default=5, ge=1)
 
     # Persistence is deliberately explicit. ``local`` keeps the historical
     # filesystem workflow available for tests and offline research; production

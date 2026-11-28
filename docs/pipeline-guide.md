@@ -47,6 +47,10 @@ The check runs at ingestion, in `DataStore` both ways, and again in
 a refetch. `scripts/audit_data_health.py [--fix]` sweeps every ticker for both
 defects plus stale briefings.
 
+### Layer 1a — Evidence preflight (`data/preflight.py`)
+
+Runs before any run row or model call. `diagnose` gives each unusable evidence class (technical, fundamentals, sentiment, macro) a reason code. For a **live** capture, `ensure_evidence` repairs deterministically: one provider refetch, and macro from FRED primary data (`DFF`, `CPIAUCSL`; TLS verification is never disabled). It then re-diagnoses and raises `InsufficientEvidenceError` unless technical is usable and at least `min_evidence_classes` (default 3) of the four classes are. Historical/replay captures are diagnosed only: never repaired (that would leak today's data into a past cutoff) and never halted (their partial evidence is the documented backtest contract). `evidence_gate="off"` disables it. In-session runs call `stock-preflight <TICKER...> [--fix]` first; exit 2 means do not run analysts. A missing filing index is an advisory, not a blocker.
+
 ### Layer 1b — Filing RAG (`filings/`)
 `stock-filings AAPL` builds a per-ticker index of 10-K/10-Q text in
 `data/<T>/filings/` (git-ignored, derived). Retrieval is hybrid: BM25 plus local

@@ -13,6 +13,7 @@ from stock_analysis.data.cloud import build_store
 from stock_analysis.data.fetcher_base import BaseFetcher
 from stock_analysis.data.live_evidence import prepare_live_evidence
 from stock_analysis.data.my_market import MYMarketFetcher
+from stock_analysis.data.preflight import ensure_evidence
 from stock_analysis.data.run_input import validate_input
 from stock_analysis.data.technicals import compute_technicals
 from stock_analysis.data.us_market import USMarketFetcher
@@ -85,6 +86,14 @@ class AnalysisPipeline:
         ticker_data = load_input() if load_input else None
         if ticker_data is None:
             ticker_data = prepare_live_evidence(self.fetcher.fetch(ticker), self.settings)
+            if self.settings.evidence_gate == "enforce":
+                # Before begin_run: an insufficient input costs no run row and no model call.
+                ticker_data, _ = ensure_evidence(
+                    ticker_data,
+                    self._requested_as_of or ticker_data.fetched_at.date(),
+                    self.settings,
+                    refetch=lambda: prepare_live_evidence(self.fetcher.fetch(ticker), self.settings),
+                )
         if not isinstance(ticker_data, TickerData):
             raise ValueError("Invalid sealed pipeline input")
         if ticker_data.info.symbol.upper() != self.fetcher.resolve_symbol(ticker).upper():
